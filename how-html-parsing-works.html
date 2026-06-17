@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font:16px/1.65 system-ui,sans-serif;max-width:780px;margin:2.5rem auto;padding:0 1rem;color:#1b1b1b}h1{line-height:1.2}h2{margin-top:1.8rem}a{color:#1457b8}.muted{color:#666;font-size:14px}.note{background:#f4f6fb;border-left:4px solid #1457b8;padding:10px 14px;border-radius:0 6px 6px 0}code{background:#f0f0f2;padding:1px 5px;border-radius:4px}nav.crumb{font-size:14px;margin-bottom:1rem}ol,ul{padding-left:1.25em}
+<title>How HTML parsing works — the HTML5 algorithm explained</title>
+<meta name="description" content="A clear reference on how an HTML parser turns markup into a DOM tree: tokenization, tree construction, insertion modes, and the HTML5 standard's defined error recovery.">
+</head><body>
+<nav class="crumb"><a href="/">VersionDude</a> / How HTML parsing works</nav>
+<h1>How HTML parsing works</h1>
+<p>An HTML parser is the component that turns a stream of HTML markup into a structured <strong>Document Object Model (DOM)</strong> tree that a browser, validator or tool can work with. What makes HTML special is that the parsing rules are <em>fully specified</em> by the WHATWG HTML Standard — including exactly how to recover from malformed input — so every conforming parser produces the same tree for the same bytes.</p>
+
+<h2>The two stages: tokenization and tree construction</h2>
+<p>HTML parsing is defined as two cooperating stages that run together:</p>
+<ol>
+<li><strong>Tokenization.</strong> A state machine reads the input character by character and emits <em>tokens</em>: start tags, end tags, comments, doctypes, character data and an end-of-file token. The tokenizer has dozens of states (data state, tag-open state, attribute-name state, and so on) and is influenced by the tree builder — for example, the content of <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> is handled by special "raw text" states.</li>
+<li><strong>Tree construction.</strong> Each token is fed to a tree builder that decides how to modify the document. The builder keeps a <em>stack of open elements</em> and a list of <em>active formatting elements</em>, and operates as a state machine of <strong>insertion modes</strong> (such as "before html", "in head", "in body", "in table").</li>
+</ol>
+
+<h2>Insertion modes and the stack of open elements</h2>
+<p>The insertion mode determines what happens to the next token. Seeing <code>&lt;table&gt;</code> switches the builder into "in table" mode; an unexpected token there may be "foster parented" out of the table rather than discarded. The stack of open elements tracks nesting, so the parser knows which element a piece of text or a child belongs to, and when an implied end tag should close an element automatically.</p>
+
+<h2>Error recovery is part of the standard</h2>
+<p>Real-world HTML is frequently malformed — unclosed tags, misnested elements, stray characters. Unlike XML, HTML does not stop on errors: the standard defines a precise, deterministic recovery for every situation. The famous "adoption agency algorithm", for instance, repairs misnested formatting elements like <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code>. Because recovery is specified rather than left to each implementation, two compliant parsers agree even on broken input.</p>
+
+<div class="note">This is why a conformance checker (a "validator") and a browser can be built on the same parsing engine: the parser produces the canonical tree, and the checker then reports where the input deviated from the rules. The HTML parser and the Validator.nu checker documented on this site are examples of exactly that design.</div>
+
+<h2>Where to read the authoritative rules</h2>
+<ul>
+<li>The WHATWG HTML Standard, <a href="https://html.spec.whatwg.org/multipage/parsing.html">section 13 "Parsing HTML documents"</a> — the normative algorithm.</li>
+<li>An open-source implementation to read alongside it: <a href="/projects/html5-parser">the HTML5 parser</a> (Java), and the <a href="/projects/validator-nu">Validator.nu</a> conformance checker built on top of it.</li>
+</ul>
+
+<p class="muted"><a href="/">← VersionDude</a> · Independent reference. We are not affiliated with the WHATWG or the projects linked above.</p>
+</body></html>
