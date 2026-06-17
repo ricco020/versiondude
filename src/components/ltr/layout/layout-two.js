@@ -1,16 +1,12 @@
-import Footertwo from "./footer-two";
-import HeaderTwo from "./header-two";
+import Footer from "./footer";
+import SiteHeader from "./site-header";
 
-
-
-
-export default function LayoutTwo({ children }) {
+export default function LayoutTwo({ children, locale = "en" }) {
   return (
-   <>
-      <HeaderTwo/>
-       {children}
-      <Footertwo/>
-   </>
-
+    <>
+      <SiteHeader locale={locale} />
+      {children}
+      <Footer locale={locale} />
+    </>
   );
 }

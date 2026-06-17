@@ -1,11 +1,14 @@
 "use client";
 import LayoutTwo from "@/components/ltr/layout/layout-two";
 import Link from "next/link";
+import { t } from "@/data/site-i18n";
 
 // Rendu d'un article dans le design d'article de la démo (post_details_block) + CTA affilié perso (Pilier 2).
 export default function ArticlePage({ article, catLabel, relatedHref, relatedLabel, home = "" }) {
+  const loc = home === "/fr" ? "fr" : home === "/es" ? "es" : "en";
+  const s = t(loc);
   return (
-    <LayoutTwo>
+    <LayoutTwo locale={loc}>
       <main className="page_main_wrapper">
         <div className="page-title">
           <div className="container">
@@ -14,7 +17,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
               <div className="col-12 col-sm-auto">
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb d-inline-block">
-                    <li className="breadcrumb-item"><Link href={home || "/"}>Home</Link></li>
+                    <li className="breadcrumb-item"><Link href={home || "/"}>{s.ui.home}</Link></li>
                     <li className="breadcrumb-item">{catLabel}</li>
                     <li className="breadcrumb-item active" aria-current="page">{article.title}</li>
                   </ol>
@@ -35,7 +38,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                   <ul className="authar-info d-flex flex-wrap">
                     <li><span className="link">VersionDude</span></li>
                     <li>{catLabel}</li>
-                    <li>{article.readingMinutes} min read</li>
+                    <li>{article.readingMinutes} {s.ui.readMin}</li>
                   </ul>
 
                   <p><strong>{article.dek}</strong></p>
@@ -62,7 +65,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
 
                   {relatedHref && (
                     <p style={{ marginTop: "1.5rem" }}>
-                      Related project: <Link href={relatedHref} className="link">{relatedLabel}</Link>
+                      {s.ui.related}: <Link href={relatedHref} className="link">{relatedLabel}</Link>
                     </p>
                   )}
                 </div>

@@ -1,17 +1,12 @@
 import Footer from "./footer";
+import SiteHeader from "./site-header";
 
-import Header from "./header";
-
-
-
-
-export default function Layout({ children }) {
+export default function Layout({ children, locale = "en" }) {
   return (
-   <>
-      <Header/>
-       {children}
-      <Footer/>
-   </>
-
+    <>
+      <SiteHeader locale={locale} />
+      {children}
+      <Footer locale={locale} />
+    </>
   );
 }

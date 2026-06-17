@@ -16,7 +16,7 @@ export default function ProjectArticle({ project, img, labels, home = "" }) {
   const loc = home === "/fr" ? "fr" : home === "/es" ? "es" : "en";
   const cta = CTA[loc];
   return (
-    <LayoutTwo>
+    <LayoutTwo locale={loc}>
       <main className="page_main_wrapper">
         <div className="page-title">
           <div className="container">

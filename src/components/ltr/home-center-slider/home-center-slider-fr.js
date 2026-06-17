@@ -31,7 +31,7 @@ const HomeCenterSlider = () => {
         {/* Slider item one */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/fr/" className="news-image">
               <img
                 src="/assets/articles/self-hosted-password-managers-body.jpg"
                 alt=""
@@ -39,13 +39,13 @@ const HomeCenterSlider = () => {
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Tooling</span>
+              <span className="post-category">Outils</span>
               <h2>
-                <a href="/articles/open-source-password-managers">The best open-source password managers</a>
+                <a href="/fr/articles/open-source-password-managers">Les meilleurs gestionnaires de mots de passe open source</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">VersionDude</span>
+                  Par <span className="editor-name">VersionDude</span>
                 </li>
                 </ul>
             </div>
@@ -55,7 +55,7 @@ const HomeCenterSlider = () => {
         {/* Slider item two */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/fr/" className="news-image">
               <img
                 src="/assets/articles/proton-mail-review-body.jpg"
                 alt=""
@@ -63,13 +63,13 @@ const HomeCenterSlider = () => {
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Tooling</span>
+              <span className="post-category">Outils</span>
               <h2>
-                <a href="/articles/self-hosted-password-managers">Self-hosted password managers</a>
+                <a href="/fr/articles/self-hosted-password-managers">Gestionnaires de mots de passe auto-hébergés</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">VersionDude</span>
+                  Par <span className="editor-name">VersionDude</span>
                 </li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@ const HomeCenterSlider = () => {
         {/* Slider item three */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/fr/" className="news-image">
               <img
                 src="/assets/articles/proton-pass-review-body.jpg"
                 alt=""
@@ -87,13 +87,13 @@ const HomeCenterSlider = () => {
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Tooling</span>
+              <span className="post-category">Outils</span>
               <h2>
-                <a href="/articles/secrets-management-tools">Secrets management tools for developers</a>
+                <a href="/fr/articles/secrets-management-tools">Outils de gestion des secrets pour développeurs</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">VersionDude</span>
+                  Par <span className="editor-name">VersionDude</span>
                 </li>
                 </ul>
             </div>
@@ -103,7 +103,7 @@ const HomeCenterSlider = () => {
         {/* Slider item four */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/fr/" className="news-image">
               <img
                 src="/assets/articles/html-validator-body.jpg"
                 alt=""
@@ -111,13 +111,13 @@ const HomeCenterSlider = () => {
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Tooling</span>
+              <span className="post-category">Outils</span>
               <h2>
-                <a href="/articles/proton-mail-review">Proton Mail review: encrypted email</a>
+                <a href="/fr/articles/proton-mail-review">Test de Proton Mail : l'email chiffré</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">VersionDude</span>
+                  Par <span className="editor-name">VersionDude</span>
                 </li>
                 </ul>
             </div>
@@ -127,7 +127,7 @@ const HomeCenterSlider = () => {
         {/* Slider item five */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/fr/" className="news-image">
               <img
                 src="/assets/articles/what-is-a-parser-body.jpg"
                 alt=""
@@ -135,13 +135,13 @@ const HomeCenterSlider = () => {
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Tooling</span>
+              <span className="post-category">Outils</span>
               <h2>
-                <a href="/articles/best-encrypted-email">The best encrypted email services</a>
+                <a href="/fr/articles/best-encrypted-email">Les meilleurs services d'email chiffré</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">VersionDude</span>
+                  Par <span className="editor-name">VersionDude</span>
                 </li>
                 </ul>
             </div>

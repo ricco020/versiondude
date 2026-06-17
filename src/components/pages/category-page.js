@@ -3,9 +3,9 @@ import LayoutTwo from "@/components/ltr/layout/layout-two";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 
-export default function ProjectsList({ locale = "en", title, intro, projects }) {
-  const p = locale === "en" ? "" : `/${locale}`;
+export default function CategoryPage({ locale = "en", categoryKey, title, items }) {
   const s = t(locale);
+  const p = locale === "en" ? "" : `/${locale}`;
   return (
     <LayoutTwo locale={locale}>
       <main className="page_main_wrapper">
@@ -24,22 +24,23 @@ export default function ProjectsList({ locale = "en", title, intro, projects }) 
             </div>
           </div>
         </div>
-        <div className="container">
-          <p className="mb-4">{intro}</p>
+        <div className="container py-4">
           <div className="row">
-            {projects.map((pr) => (
-              <div className="col-md-6 mb-4" key={pr.slug}>
-                <article className="post">
-                  <figure className="post-thumb">
-                    <Link href={`${p}/projects/${pr.slug}`}>
-                      <img src={pr.hero} className="img-fluid" alt={pr.heroAlt} width={690} height={460} />
-                    </Link>
-                  </figure>
-                  <div className="post-content pt-3">
-                    <h3 className="post-title"><Link href={`${p}/projects/${pr.slug}`}>{pr.name}</Link></h3>
-                    <p>{pr.excerpt}</p>
+            {items.map((x) => (
+              <div className="col-md-4 col-sm-6 thm-padding mb-4" key={x.slug}>
+                <div className="slider-post post-height-4">
+                  <Link href={`${p}/${x.type}/${x.slug}`} className="news-image">
+                    <img src={x.img} alt={x.alt} className="img-fluid" />
+                  </Link>
+                  <div className="post-text">
+                    <span className="post-category">{title}</span>
+                    <h4><Link href={`${p}/${x.type}/${x.slug}`}>{x.title}</Link></h4>
+                    <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
+                      <li>{s.ui.by} <span className="editor-name">VersionDude</span></li>
+                      {x.meta ? <li>{x.meta}</li> : null}
+                    </ul>
                   </div>
-                </article>
+                </div>
               </div>
             ))}
           </div>
