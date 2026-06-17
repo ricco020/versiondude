@@ -5,7 +5,7 @@ import { t } from "@/data/site-i18n";
 import { notFound } from "next/navigation";
 const CATS=["standards","parsing","tooling","archive"];
 export function generateStaticParams(){return CATS.map(cat=>({cat}));}
-export function generateMetadata({params}){if(!CATS.includes(params.cat))return{};return{title:`${categoryLabel(params.cat,"en")} — VersionDude`,robots:{index:true,follow:true},alternates:{canonical:`https://versiondude.net/categories/${params.cat}`}};}
+export function generateMetadata({params}){if(!CATS.includes(params.cat))return{};return{title:`${categoryLabel(params.cat,"en")} — VersionDude`,description:t("en").meta.catItemTpl.replace("{cat}",categoryLabel(params.cat,"en")),robots:{index:true,follow:true},alternates:{canonical:`https://versiondude.net/categories/${params.cat}`}};}
 function items(loc,cat){
   const s=t(loc);
   const arts=getArticles(loc).filter(a=>a.category===cat).map(a=>({type:"articles",slug:a.slug,href:articleHref(a.slug,loc),title:a.title,img:a.hero,alt:a.heroAlt,meta:`${a.readingMinutes} ${s.ui.readMin}`}));
