@@ -1,4 +1,6 @@
-// VersionDude — articles éditoriaux réels (EN). Contenu factuel et original.
+import FR from "./articles-fr.json";
+import ES from "./articles-es.json";
+// VersionDude — articles éditoriaux réels (EN + traductions FR/ES). Contenu factuel et original.
 // Pilier 1 (web standards / jus) : non monétisé. Pilier 2 (privacy/open-source) : CTA Proton perso.
 // Images : Pixabay, libres de droits, uniques, légendes honnêtes (vérifiées).
 
@@ -218,7 +220,22 @@ const CATS = {
   standards: 'Standards', parsing: 'Parsing', tooling: 'Tooling', archive: 'Archive',
 };
 
-export function getArticles() { return ARTICLES; }
-export function findArticleBySlug(slug) { return ARTICLES.find((x) => x.slug === slug); }
-export function categoryLabel(key) { return CATS[key] || key; }
+const TR = { fr: FR, es: ES };
+function localize(a, locale) {
+  const o = (TR[locale] || {})[a.slug];
+  if (!o) return a;
+  return { ...a, title: o.title || a.title, dek: o.dek || a.dek, paras: o.paras || a.paras,
+    list: o.list || a.list, heroAlt: o.heroAlt || a.heroAlt, bodyCaption: o.bodyCaption || a.bodyCaption };
+}
+export function getArticles(locale = "en") { return ARTICLES.map((a) => localize(a, locale)); }
+export function findArticleBySlug(slug, locale = "en") {
+  const a = ARTICLES.find((x) => x.slug === slug);
+  return a ? localize(a, locale) : undefined;
+}
+const CAT_I18N = {
+  en: CATS,
+  fr: { standards: "Standards", parsing: "Analyse", tooling: "Outils", archive: "Archive" },
+  es: { standards: "Estándares", parsing: "Análisis", tooling: "Herramientas", archive: "Archivo" },
+};
+export function categoryLabel(key, locale = "en") { return (CAT_I18N[locale] || CATS)[key] || key; }
 export const ARTICLE_SLUGS = ARTICLES.map((x) => x.slug);

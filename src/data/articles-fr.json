@@ -1,0 +1,191 @@
+{
+  "open-source-password-managers": {
+    "title": "Les meilleurs gestionnaires de mots de passe open source",
+    "dek": "Pourquoi l'open source compte pour un gestionnaire de mots de passe, et les projets dignes de confiance — de Bitwarden et KeePassXC à Proton Pass.",
+    "heroAlt": "Un cadenas sur une carte de circuit imprimé symbolisant la sécurité numérique",
+    "bodyCaption": "Un cadenas métallique, symbole de la sécurité des comptes.",
+    "paras": [
+      "Un gestionnaire de mots de passe détient les clés de toute votre vie numérique : la question de savoir si vous pouvez lui faire confiance importe donc plus que pour presque n'importe quelle autre application. Le logiciel open source répond en partie à cette question : lorsque le code est public, des chercheurs indépendants peuvent auditer la façon dont vos secrets sont stockés et chiffrés, au lieu de s'en remettre à la parole d'un éditeur.",
+      "Bitwarden est l'option open source la plus connue. Ses clients et son serveur sont publiés sous licences ouvertes et il a été audité de façon indépendante ; vous pouvez même héberger vous-même le backend si vous voulez un contrôle total. KeePassXC adopte une approche différente, entièrement locale : votre coffre-fort est un unique fichier chiffré que vous stockez et synchronisez vous-même, sans aucun composant dans le cloud.",
+      "Pour qui souhaite une cryptographie open source sans gérer sa propre infrastructure, Proton Pass est une solution managée solide. Développé par l'équipe derrière Proton Mail, il utilise le chiffrement de bout en bout et ses applications sont open source : vous bénéficiez donc d'une sécurité auditable avec le confort d'une synchronisation hébergée sur tous vos appareils.",
+      "Quel que soit votre choix, les fondamentaux restent les mêmes : un mot de passe maître long et unique, l'authentification à deux facteurs sur le coffre-fort, et des mots de passe générés uniques pour chaque site. Le bon outil est celui que vous utiliserez réellement, de façon constante."
+    ],
+    "list": [
+      "Bitwarden — open source, audité, auto-hébergement optionnel",
+      "KeePassXC — fichier de coffre-fort chiffré entièrement local",
+      "Proton Pass — applications open source, synchronisation hébergée chiffrée de bout en bout"
+    ]
+  },
+  "self-hosted-password-managers": {
+    "title": "Gestionnaires de mots de passe auto-hébergés : le contrôle total de votre coffre-fort",
+    "dek": "Héberger votre propre gestionnaire de mots de passe vous rend maître de l'endroit où vivent vos secrets — voici comment les principales options se comparent, et quand un service managé a davantage de sens.",
+    "heroAlt": "Du matériel serveur dans un centre de données",
+    "bodyCaption": "Équipements réseau et de stockage dans une baie serveur.",
+    "paras": [
+      "Auto-héberger un gestionnaire de mots de passe signifie que le coffre-fort chiffré réside sur une infrastructure que vous contrôlez plutôt que sur le cloud d'un éditeur. Pour les développeurs et les utilisateurs soucieux de leur vie privée, cela peut être séduisant : aucun tiers ne détient vos données, et c'est vous qui décidez de la politique de sauvegarde et d'accès.",
+      "Vaultwarden est la voie la plus répandue — une réimplémentation légère et compatible du serveur Bitwarden, qui tourne sans peine dans un seul conteneur sur un petit VPS ou un serveur domestique. Il fonctionne avec les applications clientes officielles de Bitwarden : vous conservez donc une expérience utilisateur soignée tout en étant propriétaire du backend.",
+      "KeePassXC est la forme la plus simple d'« auto-hébergement » : le coffre-fort n'est qu'un fichier chiffré. Vous le synchronisez avec ce en quoi vous avez déjà confiance — votre propre stockage, un disque chiffré ou un dépôt privé. Il n'y a aucun serveur à maintenir.",
+      "L'auto-hébergement n'est pas sans coût : vous devenez responsable de la disponibilité, des mises à jour et surtout des sauvegardes. Si vous perdez le fichier ou le serveur sans sauvegarde, les données sont perdues. Si cette responsabilité vous semble lourde, un service managé chiffré de bout en bout comme Proton Pass vous offre la plupart des avantages en matière de confidentialité — vos secrets sont chiffrés avant de quitter votre appareil — sans la charge opérationnelle."
+    ],
+    "list": [
+      "Vaultwarden — serveur auto-hébergé, compatible Bitwarden",
+      "KeePassXC — fichier chiffré que vous synchronisez vous-même",
+      "Proton Pass — alternative managée, chiffrée de bout en bout"
+    ]
+  },
+  "secrets-management-tools": {
+    "title": "Outils de gestion des secrets pour les développeurs",
+    "dek": "Les clés d'API, les jetons et les fichiers .env ne devraient jamais traîner en clair ni dans votre historique git. Voici comment les équipes gardent les secrets applicatifs en sécurité.",
+    "heroAlt": "Du code de programme affiché dans un terminal",
+    "bodyCaption": "Des lignes de code sur l'écran sombre d'un terminal.",
+    "paras": [
+      "Les secrets applicatifs — mots de passe de bases de données, clés d'API, jetons de signature — sont une source récurrente de fuites. Les erreurs les plus courantes consistent à les coder en dur dans les sources, à committer un fichier .env par accident, ou à les coller dans une messagerie. L'objectif de la gestion des secrets est de garder ces valeurs chiffrées, soumises au contrôle d'accès, et hors du contrôle de version.",
+      "Au niveau du projet, les bases vont déjà loin : ajoutez .env au .gitignore, committez plutôt un .env.example expurgé, et faites tourner toute clé qui a un jour transité par un dépôt public. Des outils comme git-secrets ou les hooks pre-commit peuvent bloquer les commits accidentels avant qu'ils ne surviennent.",
+      "Pour les équipes et les systèmes en production, des outils dédiés centralisent les secrets derrière l'authentification et la journalisation d'audit. HashiCorp Vault, des options cloud-natives comme AWS Secrets Manager, et des projets open source tels qu'Infisical permettent aux applications de récupérer les secrets à l'exécution plutôt que de les stocker sur disque.",
+      "Pour les secrets personnels qu'un développeur accumule — codes de récupération, identifiants de services, clés de licence — un gestionnaire de mots de passe chiffré est le bon foyer. Proton Pass, avec son chiffrement de bout en bout et la prise en charge des notes sécurisées, garde ces valeurs hors des fichiers en clair et les synchronise en toute sécurité entre vos machines."
+    ],
+    "list": [
+      "Gardez .env hors de git ; committez .env.example",
+      "Faites tourner immédiatement toute clé divulguée",
+      "Vault / Infisical pour les secrets à l'exécution",
+      "Un gestionnaire de mots de passe pour les identifiants personnels"
+    ]
+  },
+  "proton-mail-review": {
+    "title": "Test de Proton Mail : l'e-mail chiffré, en pratique",
+    "dek": "Ce que Proton Mail offre réellement — chiffrement de bout en bout, applications open source et un ancrage suisse en matière de confidentialité — et où se situent ses compromis.",
+    "heroAlt": "Une lettre manuscrite et une enveloppe sur un bureau",
+    "bodyCaption": "Une personne tapant sur le clavier d'un ordinateur portable.",
+    "paras": [
+      "Proton Mail est un service de messagerie conçu autour du chiffrement de bout en bout et à accès zéro : les messages sont stockés chiffrés d'une manière qui, par conception, empêche Proton lui-même de les lire. Il est basé en Suisse, exploité par Proton AG, et ses applications clientes sont open source, ce qui permet à la cryptographie d'être examinée de façon indépendante.",
+      "À l'usage quotidien, il se comporte comme une boîte mail normale, avec des applications web, bureau et mobile. Les messages entre utilisateurs de Proton sont automatiquement chiffrés de bout en bout ; les messages vers d'autres fournisseurs peuvent être envoyés protégés par mot de passe au besoin. Il existe une offre gratuite avec un stockage limité, et les formules payantes ajoutent des domaines personnalisés, plus de stockage et des alias supplémentaires.",
+      "Les compromis en toute honnêteté : le chiffrement de bout en bout ne s'applique pleinement qu'entre utilisateurs de Proton ou avec des messages protégés par mot de passe, et certaines fonctions de confort diffèrent des fournisseurs grand public en raison du modèle de chiffrement. Pour quiconque souhaite un e-mail que le fournisseur ne peut pas exploiter, ces compromis en valent généralement la peine.",
+      "Si vous quittez l'e-mail financé par la publicité, Proton Mail est l'une des options les plus crédibles et ouvertement auditables disponibles aujourd'hui."
+    ]
+  },
+  "best-encrypted-email": {
+    "title": "Les meilleurs services d'e-mail chiffré",
+    "dek": "Ce que signifie vraiment « e-mail chiffré », la différence entre accès zéro et bout en bout, et les services qui le font de façon crédible.",
+    "heroAlt": "Un ordinateur portable avec un graphique lumineux de cadenas de cybersécurité",
+    "bodyCaption": "Le clavier d'un ordinateur portable éclairé en bleu, évoquant la cybersécurité.",
+    "paras": [
+      "L'e-mail ordinaire est transmis avec un chiffrement de transport, mais le fournisseur stocke malgré tout vos messages sous une forme qu'il peut lire — et souvent analyser. « E-mail chiffré » signifie généralement quelque chose de plus fort : le chiffrement à accès zéro, où le fournisseur ne peut pas lire votre courrier stocké, et le chiffrement de bout en bout, où seuls l'expéditeur et le destinataire le peuvent.",
+      "Proton Mail est l'option la plus établie, avec un stockage à accès zéro, un chiffrement de bout en bout entre utilisateurs, des applications open source et un ancrage juridique suisse. Tuta (anciennement Tutanota) est un autre fournisseur open source et chiffré de bout en bout, avec sa propre approche du chiffrement des objets de message et de l'ensemble de la boîte mail.",
+      "Aucun fournisseur ne peut comme par magie chiffrer un message de bout en bout vers une personne utilisant un compte Gmail classique — c'est une limite du fonctionnement de l'e-mail, et non d'un service en particulier. L'objectif réaliste est de garder votre propre courrier stocké privé et d'obtenir un véritable chiffrement de bout en bout avec les contacts du même système ou via des messages protégés par mot de passe.",
+      "Pour la plupart des gens qui veulent une boîte mail privée que le fournisseur ne peut pas lire, Proton Mail est le point de départ crédible le plus simple."
+    ],
+    "list": [
+      "Accès zéro : le fournisseur ne peut pas lire le courrier stocké",
+      "Bout en bout : seuls l'expéditeur et le destinataire peuvent lire",
+      "Proton Mail et Tuta sont les principales options open source"
+    ]
+  },
+  "proton-pass-review": {
+    "title": "Test de Proton Pass : un gestionnaire de mots de passe open source",
+    "dek": "Le gestionnaire de mots de passe de Proton apporte le chiffrement de bout en bout, des applications open source et des alias d'e-mail intégrés — voici ce qu'il vaut.",
+    "heroAlt": "Un cadenas numérique sur un fond de politique de confidentialité",
+    "bodyCaption": "Un graphique abstrait de sécurité numérique.",
+    "paras": [
+      "Proton Pass est le gestionnaire de mots de passe de la suite Proton. Il stocke les identifiants, les notes et les détails de cartes avec un chiffrement de bout en bout, et ses applications clientes sont open source : le modèle de sécurité peut donc être audité de façon indépendante — la même philosophie qu'avec Proton Mail.",
+      "Une fonctionnalité distinctive est l'intégration des alias d'e-mail (hide-my-email) : au lieu de donner votre adresse réelle à chaque site, vous générez un alias unique qui redirige vers votre boîte de réception, ce qui limite le pistage et contient les dégâts si un site est compromis. Il inclut également un générateur standard, la saisie automatique sur les navigateurs et appareils, et la prise en charge de l'authentification à deux facteurs.",
+      "Comparé à Bitwarden, il est plus récent et son écosystème est encore en croissance, mais il bénéficie de la réputation de Proton en matière de chiffrement et d'une intégration étroite si vous utilisez déjà Proton Mail ou VPN. Il existe une offre gratuite utilisable, les formules payantes débloquant des alias illimités et des coffres-forts supplémentaires.",
+      "Pour quiconque veut un gestionnaire open source et axé sur la confidentialité, porté par une entreprise de chiffrement établie, Proton Pass est un choix convaincant."
+    ]
+  },
+  "what-is-the-dom": {
+    "title": "Qu'est-ce que le DOM ?",
+    "dek": "Le Document Object Model est l'arbre qu'un navigateur construit à partir de votre HTML — et ce à quoi votre JavaScript parle réellement.",
+    "heroAlt": "Du code HTML sur un écran",
+    "bodyCaption": "Du code source coloré affiché sur un moniteur.",
+    "paras": [
+      "Le Document Object Model, ou DOM, est la représentation en mémoire qu'un navigateur crée après avoir analysé un document HTML. Là où le HTML est du texte, le DOM est un arbre d'objets — éléments, attributs et nœuds de texte — que les programmes peuvent lire et modifier.",
+      "Lorsque le navigateur termine l'analyse d'une page, chaque balise devient un nœud doté d'un parent et d'enfants, reflétant l'imbrication de votre balisage. JavaScript interagit avec cet arbre via des API comme document.querySelector et element.appendChild ; modifier le DOM est ce qui met à jour ce que voit l'utilisateur, sans recharger la page.",
+      "Il est utile de distinguer trois idées : le code source HTML que vous écrivez, le DOM que le navigateur en construit (après application des règles standard d'analyse et de récupération d'erreurs), et les pixels rendus à l'écran. Des frameworks comme React fonctionnent en calculant efficacement les modifications de ce même DOM.",
+      "Comprendre le DOM comme un arbre — produit par un analyseur, manipulé par du script — est la base pour comprendre comment la validation, l'accessibilité et le rendu s'articulent."
+    ]
+  },
+  "html-validator": {
+    "title": "Ce que fait un validateur HTML (et pourquoi c'est important)",
+    "dek": "Un validateur HTML confronte votre balisage au standard vivant — repérant des erreurs que les navigateurs masquent mais qui nuisent à l'accessibilité et à la fiabilité.",
+    "heroAlt": "Un symbole de coche verte",
+    "bodyCaption": "Une icône de coche indiquant une vérification réussie.",
+    "paras": [
+      "Un validateur HTML analyse votre document comme le ferait un navigateur et signale où il s'écarte du standard HTML : balises non fermées, attributs mal utilisés, éléments à des endroits que la spécification n'autorise pas. Parce que les navigateurs sont délibérément tolérants, ces problèmes passent souvent inaperçus jusqu'à ce qu'ils provoquent des bugs subtils.",
+      "L'outil de référence est le Nu HTML Checker (validator.nu / validator.w3.org/nu), né du même travail de vérification de conformité documenté ailleurs sur ce site. Il applique le véritable algorithme d'analyse et les règles de schéma qui sous-tendent le standard vivant.",
+      "Un balisage valide n'est pas du pédantisme. Il améliore l'accessibilité pour les technologies d'assistance, réduit les incohérences entre navigateurs, et rend vos pages plus prévisibles pour les moteurs de recherche et les autres outils qui lisent le DOM. Corriger les avertissements du validateur est l'un des gains de qualité les moins coûteux qui soient.",
+      "Exécutez le validateur dans votre flux de travail — au commit ou en CI — et traitez les nouvelles erreurs comme des régressions, exactement comme un test qui échoue."
+    ]
+  },
+  "what-is-a-parser": {
+    "title": "Qu'est-ce qu'un analyseur (parser) ?",
+    "dek": "Un analyseur transforme un flux de caractères en données structurées exploitables par un programme — l'étape entre le texte brut et le sens.",
+    "heroAlt": "Des flux de code binaire et de code de programme",
+    "bodyCaption": "Représentation abstraite de données numériques.",
+    "paras": [
+      "Un analyseur est le composant qui lit un texte en entrée et en construit une représentation structurée. Il fonctionne généralement en deux étapes : un tokeniseur (ou lexeur) regroupe les caractères en unités significatives — balises, mots, nombres, symboles — et une étape de construction d'arbre organise ces jetons en une hiérarchie selon une grammaire.",
+      "Les analyseurs sont partout : les compilateurs analysent le code source, les navigateurs analysent le HTML et le CSS, et les applications analysent le JSON, le XML et les fichiers de configuration. La sortie est typiquement un arbre — un arbre syntaxique abstrait pour le code, ou le DOM pour une page web.",
+      "Ce qui rend l'analyse du HTML inhabituelle, c'est sa récupération d'erreurs normalisée. Le balisage du monde réel est truffé d'erreurs, aussi la spécification HTML définit-elle exactement comment un analyseur doit les traiter, et c'est pourquoi chaque navigateur moderne construit le même arbre à partir des mêmes entrées défectueuses.",
+      "Une fois que l'on voit le logiciel comme une série d'analyseurs transformant du texte en structure, une grande partie de la pile web devient plus facile à appréhender."
+    ]
+  },
+  "semantic-web": {
+    "title": "Le web sémantique, expliqué",
+    "dek": "L'idée d'un web de données — où le sens est lisible par les machines — et les standards comme RDF, OWL et les moteurs de raisonnement qui le font fonctionner.",
+    "heroAlt": "Un réseau abstrait de points connectés",
+    "bodyCaption": "Un motif abstrait de nœuds et de lignes connectés.",
+    "paras": [
+      "Le web sémantique est une extension du web dans laquelle l'information reçoit un sens bien défini, afin que les machines — et pas seulement les humains — puissent la traiter. Au lieu de pages de texte, l'objectif est un web de données, où les relations entre les choses sont explicites et interrogeables.",
+      "Il repose sur une pile de standards du W3C. RDF exprime des faits sous forme de triplets sujet–prédicat–objet ; les ontologies écrites en OWL (le Web Ontology Language) décrivent les classes et les relations d'un domaine ; et SPARQL interroge les graphes obtenus.",
+      "Les moteurs de raisonnement sont les machines qui rendent tout cela puissant. Un moteur de raisonnement tel que Pellet prend une ontologie OWL et déduit de nouveaux faits qui découlent logiquement de ceux énoncés — vérifiant la cohérence et répondant à des questions que les données brutes n'avaient jamais formulées.",
+      "Vous croisez chaque jour les descendants du web sémantique : les données structurées et le balisage schema.org qui alimentent les résultats de recherche enrichis sont une tranche pragmatique de la même idée — rendre le sens d'une page lisible par les machines."
+    ]
+  },
+  "xml-vs-html": {
+    "title": "XML vs HTML : quelle est la différence ?",
+    "dek": "Ils se ressemblent, mais XML et HTML ont été conçus pour des tâches différentes — l'un décrit des documents pour les navigateurs, l'autre transporte des données structurées.",
+    "heroAlt": "Du code de balisage dans un éditeur",
+    "bodyCaption": "Du code HTML et CSS affiché dans un éditeur de code.",
+    "paras": [
+      "HTML et XML partagent une ascendance commune dans SGML et utilisent la même syntaxe à chevrons, c'est pourquoi ils se ressemblent. Mais ils ont été conçus dans des buts différents. HTML possède un vocabulaire fixe d'éléments au sens intégré pour les navigateurs, et il est délibérément tolérant aux erreurs.",
+      "XML, à l'inverse, ne définit aucune balise propre — c'est un méta-langage permettant de créer votre propre balisage pour transporter des données structurées. Il est strict : un document qui n'est pas bien formé (chaque balise fermée, correctement imbriquée) est rejeté d'emblée, ce qui le rend fiable pour l'échange de machine à machine.",
+      "Il existe aussi XHTML, qui est du HTML exprimé selon les règles strictes de XML. Dans le développement web moderne, HTML5 est le standard pour les pages, tandis que XML et les formats qui en dérivent restent courants pour la configuration, les flux de données et le stockage de documents.",
+      "Une règle empirique utile : optez pour HTML lorsque vous décrivez un document destiné à être lu par des personnes dans un navigateur, et pour les formats de la famille XML lorsque vous échangez des données structurées entre systèmes."
+    ]
+  },
+  "ruby-on-rails-cms": {
+    "title": "Systèmes de gestion de contenu sous Ruby on Rails",
+    "dek": "Rails est plus connu pour les applications que pour les CMS, mais une lignée de systèmes de contenu basés sur Rails — depuis Railfrog — a toujours existé.",
+    "heroAlt": "Un développeur travaillant à un bureau avec un ordinateur",
+    "bodyCaption": "Du code de programme sur un écran.",
+    "paras": [
+      "Ruby on Rails a rendu le développement d'applications web célèbre pour ses conventions et sa rapidité, et au fil des ans, les développeurs ont bâti des systèmes de gestion de contenu par-dessus. Ceux-ci visent à combiner des fonctions éditoriales — pages, médias, flux de travail — avec la flexibilité d'une application Rails complète en dessous.",
+      "Railfrog a été l'un des premiers à se lancer, un CMS basé sur Rails historiquement distribué sous forme de plugin. Comme beaucoup de projets de son époque, il n'est plus activement développé, mais il fait partie de l'histoire de la façon dont la communauté Rails a abordé la gestion de contenu.",
+      "Les options plus récentes et actuellement maintenues incluent des projets comme Comfortable Mexican Sofa et Spina, qui s'intègrent en tant que moteurs (engines) dans une application Rails existante plutôt que de fonctionner comme une plateforme distincte. Ce modèle de « CMS en tant que bibliothèque » convient aux équipes qui développent déjà avec Rails.",
+      "Si vous faites votre choix aujourd'hui, pesez le besoin que vous avez d'une interface éditoriale clé en main face à la liberté de traiter le contenu comme une simple partie de votre code Rails."
+    ]
+  },
+  "character-encoding-utf-8": {
+    "title": "L'encodage de caractères et pourquoi UTF-8 l'a emporté",
+    "dek": "Le mojibake, les accents cassés et les symboles « » se ramènent tous à l'encodage. Voici ce qu'est UTF-8 et pourquoi c'est le standard par défaut du web moderne.",
+    "heroAlt": "Des lettres imprimées et des caractères de texte",
+    "bodyCaption": "Un assemblage de jetons de lettres.",
+    "paras": [
+      "Les ordinateurs stockent le texte sous forme de nombres, et un encodage de caractères est l'accord sur le nombre qui correspond à quel caractère. Lorsqu'un document est écrit avec un encodage et lu avec un autre, on obtient du mojibake — les accents brouillés et les carrés à point d'interrogation que tout le monde a déjà vus.",
+      "Les premiers encodages comme ASCII ne couvraient que l'anglais ; un patchwork d'encodages 8 bits incompatibles a suivi pour les autres langues. Unicode a résolu le problème de fond en attribuant à chaque caractère de chaque écriture un point de code unique. UTF-8 est l'encodage qui fait correspondre ces points de code à des octets.",
+      "UTF-8 l'a emporté parce qu'il est rétrocompatible avec ASCII, économe en espace pour le texte courant, et capable de représenter chaque caractère Unicode. C'est désormais le standard par défaut largement dominant sur le web, et le standard HTML recommande de le déclarer explicitement avec une balise <meta charset=\"utf-8\"> en tête de chaque document.",
+      "Le conseil pratique est simple : enregistrez vos fichiers en UTF-8, servez-les en UTF-8 et déclarez UTF-8 — faites concorder ces trois éléments et les problèmes d'encodage disparaissent."
+    ]
+  },
+  "self-hosted-cms": {
+    "title": "Les options de CMS auto-hébergés à connaître",
+    "dek": "Posséder votre plateforme de contenu, c'est garder le contrôle des données, de la personnalisation et des coûts — voici comment les principales approches auto-hébergées se comparent.",
+    "heroAlt": "Concept d'infrastructure de cloud et de serveurs",
+    "bodyCaption": "Des serveurs représentant une infrastructure cloud.",
+    "paras": [
+      "Un système de gestion de contenu auto-hébergé tourne sur une infrastructure que vous contrôlez, plutôt que sur un SaaS hébergé. L'attrait, c'est la propriété : votre contenu et vos données restent chez vous, vous pouvez personnaliser librement et vous évitez les coûts d'abonnement par utilisateur — au prix de la gestion de l'hébergement, des mises à jour et des sauvegardes par vous-même.",
+      "Le choix traditionnel est WordPress, qui propulse encore une large part du web et dispose d'un immense écosystème de plugins. Pour les développeurs qui veulent une séparation nette entre le contenu et la partie front-end, des options headless comme Strapi, Directus et Ghost exposent le contenu via une API que vous consommez depuis n'importe quel framework.",
+      "Il existe aussi une longue histoire de systèmes natifs à un framework — des gestionnaires de contenu basés sur Rails, par exemple — pour les équipes qui préfèrent traiter le contenu comme une partie de leur propre application plutôt que d'adopter une plateforme distincte.",
+      "Quel que soit votre choix, prévoyez le budget pour les fondamentaux opérationnels : sauvegardes automatisées, mises à jour de sécurité rapides et un plan de montée en charge. L'auto-hébergement récompense le contrôle par la responsabilité."
+    ]
+  }
+}

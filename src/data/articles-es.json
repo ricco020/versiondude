@@ -1,0 +1,191 @@
+{
+  "open-source-password-managers": {
+    "title": "Los mejores gestores de contraseñas de código abierto",
+    "dek": "Por qué el código abierto es importante en un gestor de contraseñas, y los proyectos en los que merece la pena confiar — desde Bitwarden y KeePassXC hasta Proton Pass.",
+    "heroAlt": "Un candado sobre una placa de circuito que representa la seguridad digital",
+    "bodyCaption": "Un candado metálico, que simboliza la seguridad de las cuentas.",
+    "paras": [
+      "Un gestor de contraseñas guarda las llaves de toda tu vida digital, así que la cuestión de si puedes confiar en él importa más que en casi cualquier otra aplicación. El software de código abierto responde a parte de esa pregunta: cuando el código es público, investigadores independientes pueden auditar cómo se almacenan y cifran tus secretos, en lugar de tener que fiarse de la palabra del fabricante.",
+      "Bitwarden es la opción de código abierto más conocida. Sus clientes y su servidor se publican bajo licencias abiertas y ha sido auditado de forma independiente; incluso puedes alojar tú mismo el backend si quieres un control total. KeePassXC adopta un enfoque distinto, totalmente local: tu bóveda es un único archivo cifrado que almacenas y sincronizas por tu cuenta, sin ningún componente en la nube.",
+      "Para quienes quieren criptografía de código abierto sin tener que gestionar su propia infraestructura, Proton Pass es una sólida opción gestionada. Está desarrollado por el equipo detrás de Proton Mail, usa cifrado de extremo a extremo y sus aplicaciones son de código abierto, así que obtienes una seguridad auditable con la comodidad de la sincronización alojada entre dispositivos.",
+      "Sea cual sea tu elección, los fundamentos son los mismos: una contraseña maestra larga y única, autenticación de dos factores en la bóveda y contraseñas generadas únicas para cada sitio. La herramienta adecuada es la que realmente vas a usar de forma constante."
+    ],
+    "list": [
+      "Bitwarden — código abierto, auditado, alojamiento propio opcional",
+      "KeePassXC — archivo de bóveda cifrado totalmente local",
+      "Proton Pass — aplicaciones de código abierto, sincronización alojada con cifrado de extremo a extremo"
+    ]
+  },
+  "self-hosted-password-managers": {
+    "title": "Gestores de contraseñas autoalojados: control total de tu bóveda",
+    "dek": "Gestionar tu propio gestor de contraseñas te pone al mando de dónde residen tus secretos — aquí tienes cómo se comparan las principales opciones y cuándo tiene más sentido un servicio gestionado.",
+    "heroAlt": "Hardware de servidores en un centro de datos",
+    "bodyCaption": "Equipos de red y almacenamiento en un rack de servidores.",
+    "paras": [
+      "Autoalojar un gestor de contraseñas significa que la bóveda cifrada reside en una infraestructura que tú controlas, en lugar de en la nube de un proveedor. Para desarrolladores y usuarios preocupados por la privacidad eso puede resultar atractivo: ningún tercero retiene tus datos y tú decides la política de copias de seguridad y de acceso.",
+      "Vaultwarden es la vía más popular: una reimplementación ligera y compatible del servidor de Bitwarden que funciona sin problemas en un solo contenedor sobre un VPS pequeño o un servidor doméstico. Es compatible con las aplicaciones cliente oficiales de Bitwarden, así que mantienes una experiencia de usuario pulida a la vez que eres dueño del backend.",
+      "KeePassXC es la forma más simple de «autoalojamiento»: la bóveda no es más que un archivo cifrado. Lo sincronizas con aquello en lo que ya confías — tu propio almacenamiento, una unidad cifrada o un repositorio privado. No hay ningún servidor que mantener.",
+      "El autoalojamiento no está exento de costes: te conviertes en responsable de la disponibilidad, las actualizaciones y, sobre todo, las copias de seguridad. Si pierdes el archivo o el servidor sin una copia, los datos desaparecen. Si esa responsabilidad te parece demasiada carga, un servicio gestionado con cifrado de extremo a extremo como Proton Pass te ofrece la mayoría de las ventajas de privacidad — tus secretos se cifran antes de salir de tu dispositivo — sin la carga operativa."
+    ],
+    "list": [
+      "Vaultwarden — servidor autoalojado compatible con Bitwarden",
+      "KeePassXC — archivo cifrado que sincronizas tú mismo",
+      "Proton Pass — alternativa gestionada con cifrado de extremo a extremo"
+    ]
+  },
+  "secrets-management-tools": {
+    "title": "Herramientas de gestión de secretos para desarrolladores",
+    "dek": "Las claves de API, los tokens y los archivos .env nunca deberían estar en texto plano ni en el historial de tu git. Aquí tienes cómo los equipos mantienen seguros los secretos de las aplicaciones.",
+    "heroAlt": "Código de programa mostrado en una terminal",
+    "bodyCaption": "Líneas de código en la pantalla de una terminal oscura.",
+    "paras": [
+      "Los secretos de las aplicaciones — contraseñas de bases de datos, claves de API, tokens de firma — son una fuente recurrente de filtraciones. Los errores más comunes son escribirlos directamente en el código fuente, subir un archivo .env por accidente o pegarlos en un chat. El objetivo de la gestión de secretos es mantener estos valores cifrados, con acceso controlado y fuera del control de versiones.",
+      "A nivel de proyecto, lo básico ya ayuda mucho: añade .env a .gitignore, sube en su lugar un .env.example censurado y rota cualquier clave que haya tocado alguna vez un repositorio público. Herramientas como git-secrets o los hooks de pre-commit pueden bloquear los commits accidentales antes de que ocurran.",
+      "Para equipos y sistemas en producción, las herramientas dedicadas centralizan los secretos detrás de autenticación y registro de auditoría. HashiCorp Vault, opciones nativas de la nube como AWS Secrets Manager y proyectos de código abierto como Infisical permiten a las aplicaciones obtener los secretos en tiempo de ejecución en lugar de almacenarlos en disco.",
+      "Para los secretos personales que un desarrollador acumula — códigos de recuperación, accesos a servicios, claves de licencia — un gestor de contraseñas cifrado es el lugar adecuado. Proton Pass, con su cifrado de extremo a extremo y su soporte para notas seguras, mantiene esos valores fuera de archivos en texto plano y sincronizados de forma segura entre tus equipos."
+    ],
+    "list": [
+      "Mantén .env fuera de git; sube .env.example",
+      "Rota de inmediato cualquier clave filtrada",
+      "Vault / Infisical para secretos en tiempo de ejecución",
+      "Un gestor de contraseñas para las credenciales personales"
+    ]
+  },
+  "proton-mail-review": {
+    "title": "Análisis de Proton Mail: el correo cifrado, en la práctica",
+    "dek": "Qué ofrece realmente Proton Mail — cifrado de extremo a extremo, aplicaciones de código abierto y una base de privacidad suiza — y dónde están sus compromisos.",
+    "heroAlt": "Una carta manuscrita y un sobre sobre un escritorio",
+    "bodyCaption": "Una persona escribiendo en el teclado de un portátil.",
+    "paras": [
+      "Proton Mail es un servicio de correo construido en torno al cifrado de extremo a extremo y de acceso cero: los mensajes se almacenan cifrados de un modo que, por diseño, el propio Proton no puede leer. Tiene su sede en Suiza, está operado por Proton AG y sus aplicaciones cliente son de código abierto, lo que permite revisar la criptografía de forma independiente.",
+      "En el uso diario se comporta como un buzón normal, con aplicaciones web, de escritorio y móviles. El correo entre usuarios de Proton se cifra automáticamente de extremo a extremo; los mensajes a otros proveedores pueden enviarse protegidos con contraseña cuando hace falta. Existe un plan gratuito con almacenamiento limitado, y los planes de pago añaden dominios personalizados, más almacenamiento y alias adicionales.",
+      "Los compromisos sinceros: el cifrado de extremo a extremo solo se aplica plenamente entre usuarios de Proton o con mensajes protegidos por contraseña, y algunas funciones de comodidad difieren de las de los proveedores mayoritarios debido al modelo de cifrado. Para quien quiere un correo que el proveedor no pueda explotar, esos compromisos suelen merecer la pena.",
+      "Si te estás alejando del correo financiado con publicidad, Proton Mail es una de las opciones más creíbles y abiertamente auditables disponibles hoy en día."
+    ]
+  },
+  "best-encrypted-email": {
+    "title": "Los mejores servicios de correo cifrado",
+    "dek": "Qué significa realmente «correo cifrado», la diferencia entre acceso cero y extremo a extremo, y los servicios que lo hacen de forma creíble.",
+    "heroAlt": "Un portátil con un gráfico luminoso de un candado de ciberseguridad",
+    "bodyCaption": "El teclado de un portátil iluminado en azul, sugiriendo ciberseguridad.",
+    "paras": [
+      "El correo electrónico corriente se transmite con cifrado de transporte, pero el proveedor sigue almacenando tus mensajes de una forma que puede leer — y a menudo escanear. «Correo cifrado» suele significar algo más fuerte: cifrado de acceso cero, donde el proveedor no puede leer el correo almacenado, y cifrado de extremo a extremo, donde solo el remitente y el destinatario pueden.",
+      "Proton Mail es la opción más consolidada, con almacenamiento de acceso cero, cifrado de extremo a extremo entre usuarios, aplicaciones de código abierto y una base legal suiza. Tuta (antes Tutanota) es otro proveedor de código abierto con cifrado de extremo a extremo, con su propio enfoque para cifrar las líneas de asunto y todo el buzón.",
+      "Ningún proveedor puede cifrar mágicamente un mensaje de extremo a extremo hacia alguien que usa una cuenta normal de Gmail — esa es una limitación de cómo funciona el correo, no de ningún servicio en concreto. El objetivo realista es mantener privado tu propio correo almacenado y conseguir un verdadero cifrado de extremo a extremo con contactos que estén en el mismo sistema o mediante mensajes protegidos con contraseña.",
+      "Para la mayoría de las personas que quieren un buzón privado que el proveedor no pueda leer, Proton Mail es el punto de partida creíble más sencillo."
+    ],
+    "list": [
+      "Acceso cero: el proveedor no puede leer el correo almacenado",
+      "Extremo a extremo: solo el remitente y el destinatario pueden leerlo",
+      "Proton Mail y Tuta son las principales opciones de código abierto"
+    ]
+  },
+  "proton-pass-review": {
+    "title": "Análisis de Proton Pass: un gestor de contraseñas de código abierto",
+    "dek": "El gestor de contraseñas de Proton incorpora cifrado de extremo a extremo, aplicaciones de código abierto y alias de correo integrados — aquí tienes cómo rinde.",
+    "heroAlt": "Un candado digital sobre un fondo de política de privacidad",
+    "bodyCaption": "Un gráfico abstracto de seguridad digital.",
+    "paras": [
+      "Proton Pass es el gestor de contraseñas de la suite de Proton. Almacena accesos, notas y datos de tarjetas con cifrado de extremo a extremo, y sus aplicaciones cliente son de código abierto, de modo que el modelo de seguridad puede auditarse de forma independiente — la misma filosofía que hay detrás de Proton Mail.",
+      "Una característica distintiva son los alias de correo integrados (oculta-mi-correo): en lugar de dar a cada sitio tu dirección real, generas un alias único que reenvía a tu bandeja de entrada, lo que limita el seguimiento y contiene los daños si un sitio sufre una filtración. También incluye un generador estándar, autocompletado en navegadores y dispositivos, y soporte para dos factores.",
+      "Comparado con Bitwarden es más nuevo y su ecosistema todavía está creciendo, pero se beneficia de la trayectoria de Proton en materia de cifrado y de una integración estrecha si ya usas Proton Mail o VPN. Hay un plan gratuito utilizable, y los planes de pago desbloquean alias ilimitados y bóvedas adicionales.",
+      "Para quien quiere un gestor de código abierto y centrado en la privacidad respaldado por una empresa de cifrado consolidada, Proton Pass es una opción convincente."
+    ]
+  },
+  "what-is-the-dom": {
+    "title": "¿Qué es el DOM?",
+    "dek": "El Modelo de Objetos del Documento es el árbol que el navegador construye a partir de tu HTML — y aquello con lo que realmente habla tu JavaScript.",
+    "heroAlt": "Código HTML en una pantalla",
+    "bodyCaption": "Código fuente coloreado mostrado en un monitor.",
+    "paras": [
+      "El Modelo de Objetos del Documento, o DOM, es la representación en memoria que un navegador crea después de analizar un documento HTML. Mientras que el HTML es texto, el DOM es un árbol de objetos — elementos, atributos y nodos de texto — que los programas pueden leer y modificar.",
+      "Cuando el navegador termina de analizar una página, cada etiqueta se convierte en un nodo con un padre e hijos, reflejando el anidamiento de tu marcado. JavaScript interactúa con este árbol a través de API como document.querySelector y element.appendChild; modificar el DOM es lo que actualiza lo que ve el usuario, sin recargar la página.",
+      "Ayuda separar tres ideas: el código fuente HTML que escribes, el DOM que el navegador construye a partir de él (tras aplicar las reglas estándar de análisis y recuperación de errores) y los píxeles renderizados en pantalla. Frameworks como React funcionan calculando de forma eficiente los cambios sobre este mismo DOM.",
+      "Entender el DOM como un árbol — producido por un analizador, manipulado por scripts — es la base para comprender cómo encajan la validación, la accesibilidad y el renderizado."
+    ]
+  },
+  "html-validator": {
+    "title": "Qué hace un validador de HTML (y por qué importa)",
+    "dek": "Un validador de HTML comprueba tu marcado frente al estándar vivo — detectando errores que los navegadores ocultan pero que perjudican la accesibilidad y la fiabilidad.",
+    "heroAlt": "Un símbolo de marca de verificación verde",
+    "bodyCaption": "Un icono de marca de verificación que indica una comprobación superada.",
+    "paras": [
+      "Un validador de HTML analiza tu documento del mismo modo que lo haría un navegador e informa de dónde se desvía del estándar HTML: etiquetas sin cerrar, atributos mal usados, elementos en lugares que la especificación no permite. Como los navegadores son deliberadamente tolerantes, estos problemas suelen pasar desapercibidos hasta que provocan errores sutiles.",
+      "La herramienta de referencia es el Nu HTML Checker (validator.nu / validator.w3.org/nu), que surgió del mismo trabajo de comprobación de conformidad documentado en otras partes de este sitio. Aplica el algoritmo de análisis real y las reglas de esquema que hay detrás del estándar vivo.",
+      "El marcado válido no es pedantería. Mejora la accesibilidad para las tecnologías de asistencia, reduce las inconsistencias entre navegadores y hace que tus páginas sean más predecibles para los motores de búsqueda y otras herramientas que leen el DOM. Corregir las advertencias del validador es una de las mejoras de calidad más baratas que existen.",
+      "Ejecuta el validador como parte de tu flujo de trabajo — en cada commit o en CI — y trata los nuevos errores como regresiones, igual que harías con una prueba fallida."
+    ]
+  },
+  "what-is-a-parser": {
+    "title": "¿Qué es un analizador (parser)?",
+    "dek": "Un analizador convierte un flujo de caracteres en datos estructurados con los que un programa puede trabajar — el paso entre el texto en bruto y el significado.",
+    "heroAlt": "Flujos de código binario y de programa",
+    "bodyCaption": "Representación abstracta de datos digitales.",
+    "paras": [
+      "Un analizador es el componente que lee el texto de entrada y construye una representación estructurada de él. Suele funcionar en dos etapas: un tokenizador (o analizador léxico) agrupa los caracteres en unidades significativas — etiquetas, palabras, números, símbolos — y una etapa de construcción del árbol organiza esos tokens en una jerarquía conforme a una gramática.",
+      "Los analizadores están por todas partes: los compiladores analizan el código fuente, los navegadores analizan HTML y CSS, y las aplicaciones analizan JSON, XML y archivos de configuración. La salida suele ser un árbol — un árbol de sintaxis abstracta para el código, o el DOM para una página web.",
+      "Lo que hace inusual el análisis de HTML es su recuperación de errores estandarizada. El marcado del mundo real está lleno de fallos, así que la especificación de HTML define exactamente cómo debe gestionarlos un analizador, y por eso todos los navegadores modernos construyen el mismo árbol a partir de la misma entrada defectuosa.",
+      "Una vez que ves el software como una serie de analizadores que convierten texto en estructura, gran parte de la pila de tecnologías web se vuelve más fácil de razonar."
+    ]
+  },
+  "semantic-web": {
+    "title": "La web semántica, explicada",
+    "dek": "La idea de una web de datos — donde el significado es legible por máquinas — y los estándares como RDF, OWL y los razonadores que la hacen funcionar.",
+    "heroAlt": "Una red abstracta de puntos conectados",
+    "bodyCaption": "Un patrón abstracto de nodos y líneas conectados.",
+    "paras": [
+      "La web semántica es una extensión de la web en la que la información recibe un significado bien definido, de modo que las máquinas — y no solo las personas — puedan procesarla. En lugar de páginas de texto, el objetivo es una web de datos, donde las relaciones entre las cosas son explícitas y consultables.",
+      "Se apoya en una pila de estándares del W3C. RDF expresa hechos como tripletas sujeto–predicado–objeto; las ontologías escritas en OWL (el Lenguaje de Ontologías Web) describen las clases y relaciones de un dominio; y SPARQL consulta los grafos resultantes.",
+      "Los razonadores son los motores que dan potencia a todo esto. Un razonador como Pellet toma una ontología OWL e infiere nuevos hechos que se desprenden lógicamente de los enunciados — comprobando la consistencia y respondiendo preguntas que los datos en bruto nunca explicitaron.",
+      "Te encuentras con los descendientes de la web semántica todos los días: los datos estructurados y el marcado de schema.org que potencian los resultados de búsqueda enriquecidos son una porción pragmática de esa misma idea — hacer que el significado de una página sea legible para las máquinas."
+    ]
+  },
+  "xml-vs-html": {
+    "title": "XML frente a HTML: ¿cuál es la diferencia?",
+    "dek": "Se parecen, pero XML y HTML se crearon para tareas distintas — uno describe documentos para los navegadores, el otro transporta datos estructurados.",
+    "heroAlt": "Código de marcado en un editor",
+    "bodyCaption": "Código HTML y CSS mostrado en un editor de código.",
+    "paras": [
+      "HTML y XML comparten ascendencia en SGML y usan la misma sintaxis de corchetes angulares, por eso se parecen. Pero se diseñaron con propósitos diferentes. HTML tiene un vocabulario fijo de elementos con un significado incorporado para los navegadores, y es deliberadamente tolerante con los errores.",
+      "XML, en cambio, no define etiquetas propias — es un metalenguaje para crear tu propio marcado y transportar datos estructurados. Es estricto: un documento que no esté bien formado (todas las etiquetas cerradas y correctamente anidadas) se rechaza sin más, lo que lo hace fiable para el intercambio entre máquinas.",
+      "También existe XHTML, que es HTML expresado bajo las reglas estrictas de XML. En el desarrollo web moderno HTML5 es el estándar para las páginas, mientras que XML y los formatos derivados de él siguen siendo comunes para la configuración, los flujos de datos y el almacenamiento de documentos.",
+      "Una regla práctica útil: recurre a HTML cuando describes un documento para que las personas lo lean en un navegador, y a los formatos de la familia XML cuando intercambias datos estructurados entre sistemas."
+    ]
+  },
+  "ruby-on-rails-cms": {
+    "title": "Sistemas de gestión de contenidos en Ruby on Rails",
+    "dek": "Rails es más conocido por las aplicaciones que por los CMS, pero siempre ha existido un linaje de sistemas de contenido basados en Rails — desde Railfrog en adelante.",
+    "heroAlt": "Un desarrollador trabajando en un escritorio con un ordenador",
+    "bodyCaption": "Código de programa en una pantalla.",
+    "paras": [
+      "Ruby on Rails hizo famoso el desarrollo de aplicaciones web por sus convenciones y su rapidez, y con los años los desarrolladores han construido sistemas de gestión de contenidos sobre él. Estos buscan combinar funciones editoriales — páginas, medios, flujo de trabajo — con la flexibilidad de una aplicación Rails completa por debajo.",
+      "Railfrog fue uno de los primeros en aparecer, un CMS basado en Rails distribuido históricamente como un plugin. Como muchos proyectos de su época ya no se desarrolla de forma activa, pero forma parte de la historia de cómo la comunidad de Rails abordó la gestión de contenidos.",
+      "Opciones posteriores y mantenidas en la actualidad incluyen proyectos como Comfortable Mexican Sofa y Spina, que se integran como engines en una aplicación Rails existente en lugar de funcionar como una plataforma aparte. Ese modelo de «CMS como librería» encaja con los equipos que ya trabajan en Rails.",
+      "Si tienes que elegir hoy, sopesa cuánto necesitas una interfaz editorial llave en mano frente a la libertad de tratar el contenido como una parte más de tu base de código Rails."
+    ]
+  },
+  "character-encoding-utf-8": {
+    "title": "La codificación de caracteres y por qué venció UTF-8",
+    "dek": "El mojibake, los acentos rotos y los símbolos «» se reducen todos a la codificación. Aquí tienes qué es UTF-8 y por qué es el predeterminado de la web moderna.",
+    "heroAlt": "Letras impresas y caracteres de texto",
+    "bodyCaption": "Una disposición de fichas con letras.",
+    "paras": [
+      "Los ordenadores almacenan el texto como números, y una codificación de caracteres es el acuerdo sobre qué número significa qué carácter. Cuando un documento se escribe con una codificación y se lee con otra, obtienes mojibake — los acentos distorsionados y las cajas con signos de interrogación que todo el mundo ha visto.",
+      "Las primeras codificaciones como ASCII solo cubrían el inglés; después llegó un mosaico de codificaciones de 8 bits incompatibles para otros idiomas. Unicode resolvió el problema de fondo asignando a cada carácter de cada escritura un punto de código único. UTF-8 es la codificación que asigna esos puntos de código a bytes.",
+      "UTF-8 venció porque es retrocompatible con ASCII, eficiente en espacio para el texto común y capaz de representar todos los caracteres Unicode. Hoy es el predeterminado abrumador en la web, y el estándar HTML recomienda declararlo explícitamente con un <meta charset=\"utf-8\"> al principio de cada documento.",
+      "El consejo práctico es simple: guarda tus archivos como UTF-8, sírvelos como UTF-8 y declara UTF-8 — haz que esas tres cosas coincidan y los problemas de codificación desaparecen."
+    ]
+  },
+  "self-hosted-cms": {
+    "title": "Opciones de CMS autoalojados que conviene conocer",
+    "dek": "Ser dueño de tu plataforma de contenidos significa tener control sobre los datos, la personalización y el coste — aquí tienes cómo se comparan los principales enfoques de autoalojamiento.",
+    "heroAlt": "Concepto de infraestructura de nube y servidores",
+    "bodyCaption": "Servidores que representan la infraestructura en la nube.",
+    "paras": [
+      "Un sistema de gestión de contenidos autoalojado se ejecuta en una infraestructura que tú controlas, en lugar de en un SaaS alojado. El atractivo es la propiedad: tu contenido y tus datos se quedan contigo, puedes personalizar con libertad y evitas los costes de suscripción por usuario — a cambio de encargarte tú mismo del alojamiento, las actualizaciones y las copias de seguridad.",
+      "La opción tradicional es WordPress, que sigue impulsando una gran parte de la web y cuenta con un enorme ecosistema de plugins. Para los desarrolladores que quieren una separación clara entre el contenido y el front end, las opciones headless como Strapi, Directus y Ghost exponen el contenido a través de una API que consumes desde cualquier framework.",
+      "También hay una larga historia de sistemas nativos de frameworks — gestores de contenido basados en Rails, por ejemplo — para los equipos que prefieren tratar el contenido como parte de su propia aplicación en lugar de adoptar una plataforma aparte.",
+      "Sea cual sea tu elección, presupuesta lo básico de la operativa: copias de seguridad automatizadas, actualizaciones de seguridad puntuales y un plan para escalar. El autoalojamiento recompensa el control con responsabilidad."
+    ]
+  }
+}
