@@ -1147,7 +1147,7 @@ export default function Home_fr() {
                   
                   {/* END OF /. POLL WIDGET */}
                   {/* START TAGS */}
-                  <Tags />
+                  <Tags locale="fr" />
                   {/* END OF /. TAGS */}
                 </StickyBox>
               </div>

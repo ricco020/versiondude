@@ -1147,7 +1147,7 @@ export default function Home_es() {
                   
                   {/* END OF /. POLL WIDGET */}
                   {/* START TAGS */}
-                  <Tags />
+                  <Tags locale="es" />
                   {/* END OF /. TAGS */}
                 </StickyBox>
               </div>
