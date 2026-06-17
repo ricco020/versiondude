@@ -3,17 +3,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/whattf/htmlparser/trunk/src/nu/validator/htmlparser/impl/Tokenizer.java", "destination": "/projects/html5-parser", "permanent": true },
-    { "source": "/whattf/htmlparser/trunk(/.*)?", "destination": "/projects/html5-parser", "permanent": true },
-    { "source": "/whattf/syntax/trunk/non-schema/java/src/org/whattf/checker/Checker.java", "destination": "/projects/validator-nu", "permanent": true },
-    { "source": "/whattf/syntax/trunk(/.*)?", "destination": "/projects/validator-nu", "permanent": true },
-    { "source": "/whattf/build/trunk(/.*)?", "destination": "/projects/validator-nu", "permanent": true },
-    { "source": "/whattf(/.*)?", "destination": "/projects/validator-nu", "permanent": true },
-    { "source": "/railfrog/cms/railfrog/trunk(/.*)?", "destination": "/projects/railfrog", "permanent": true },
-    { "source": "/railfrog(/.*)?", "destination": "/projects/railfrog", "permanent": true },
-    { "source": "/clark-parsia/pellet-devel(/.*)?", "destination": "/projects/pellet", "permanent": true },
-    { "source": "/clark-parsia(/.*)?", "destination": "/projects/pellet", "permanent": true },
-    { "source": "/terminal/bersirc(/.*)?", "destination": "/projects/bersirc", "permanent": true },
-    { "source": "/terminal(/.*)?", "destination": "/projects/bersirc", "permanent": true }
+    { "source": "/whattf/htmlparser/trunk/src/nu/validator/htmlparser/impl/Tokenizer.java", "destination": "https://versiondude.net/projects/html5-parser", "permanent": true },
+    { "source": "/whattf/htmlparser/trunk(/.*)?", "destination": "https://versiondude.net/projects/html5-parser", "permanent": true },
+    { "source": "/whattf/syntax/trunk/non-schema/java/src/org/whattf/checker/Checker.java", "destination": "https://versiondude.net/projects/validator-nu", "permanent": true },
+    { "source": "/whattf/syntax/trunk(/.*)?", "destination": "https://versiondude.net/projects/validator-nu", "permanent": true },
+    { "source": "/whattf/build/trunk(/.*)?", "destination": "https://versiondude.net/projects/validator-nu", "permanent": true },
+    { "source": "/whattf(/.*)?", "destination": "https://versiondude.net/projects/validator-nu", "permanent": true },
+    { "source": "/railfrog(/.*)?", "destination": "https://versiondude.net/projects/railfrog", "permanent": true },
+    { "source": "/clark-parsia(/.*)?", "destination": "https://versiondude.net/projects/pellet", "permanent": true },
+    { "source": "/terminal(/.*)?", "destination": "https://versiondude.net/projects/bersirc", "permanent": true },
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.versiondude.net" }], "destination": "https://versiondude.net/$1", "permanent": true },
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "svn.versiondude.net" }], "destination": "https://versiondude.net/$1", "permanent": true }
   ]
 }
