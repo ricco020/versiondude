@@ -1,4 +1,3 @@
-"use client";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -34,7 +33,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-1.jpg"
+                                  src="assets/images/620x370-1.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -67,7 +66,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-2.jpg"
+                                  src="assets/images/620x370-2.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -104,7 +103,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-3.jpg"
+                                  src="assets/images/620x370-3.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -139,7 +138,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-4.jpg"
+                                  src="assets/images/620x370-4.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -175,7 +174,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-5.jpg"
+                                  src="assets/images/620x370-5.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -208,7 +207,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-6.jpg"
+                                  src="assets/images/620x370-6.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -245,7 +244,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-7.jpg"
+                                  src="assets/images/620x370-7.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />
@@ -280,7 +279,7 @@ const NewsCarousal = () => {
                             <div className="more-post">
                               <a href="#" className="news-image">
                                 <img
-                                  src="/assets/images/620x370-8.jpg"
+                                  src="assets/images/620x370-8.jpg"
                                   alt=""
                                   className="img-fluid"
                                 />

@@ -1,4 +1,3 @@
-"use client";
 
 "use client"
 import dynamic from "next/dynamic";
@@ -38,7 +37,7 @@ const LeftCarousal = () => {
                 <div className="slider-post post-height-1">
                     <a href="#" className="news-image">
                         <img
-                            src="/assets/images/slider-520x460-1.jpg"
+                            src="assets/images/slider-520x460-1.jpg"
                             alt=""
                             className="img-fluid"
                         />
@@ -69,7 +68,7 @@ const LeftCarousal = () => {
                 <div className="slider-post post-height-1">
                     <a href="#" className="news-image">
                         <img
-                            src="/assets/images/slider-520x460-2.jpg"
+                            src="assets/images/slider-520x460-2.jpg"
                             alt=""
                             className="img-fluid"
                         />
@@ -100,7 +99,7 @@ const LeftCarousal = () => {
                 <div className="slider-post post-height-1">
                     <a href="#" className="news-image">
                         <img
-                            src="/assets/images/slider-520x460-3.jpg"
+                            src="assets/images/slider-520x460-3.jpg"
                             alt=""
                             className="img-fluid"
                         />
@@ -131,7 +130,7 @@ const LeftCarousal = () => {
                 <div className="slider-post post-height-1">
                     <a href="#" className="news-image">
                         <img
-                            src="/assets/images/slider-520x460-4.jpg"
+                            src="assets/images/slider-520x460-4.jpg"
                             alt=""
                             className="img-fluid"
                         />
@@ -162,7 +161,7 @@ const LeftCarousal = () => {
                 <div className="slider-post post-height-1">
                     <a href="#" className="news-image">
                         <img
-                            src="/assets/images/slider-520x460-5.jpg"
+                            src="assets/images/slider-520x460-5.jpg"
                             alt=""
                             className="img-fluid"
                         />

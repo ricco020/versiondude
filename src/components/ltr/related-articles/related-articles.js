@@ -1,4 +1,3 @@
-"use client";
 
 "use client"
 import dynamic from "next/dynamic";
@@ -40,7 +39,7 @@ const RelatedArticles = () => {
                                 <div className="grid-item-img">
                                     <Link href="#">
                                         <img
-                                            src="/assets/images/218x150-1.jpg"
+                                            src="assets/images/218x150-1.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />
@@ -70,7 +69,7 @@ const RelatedArticles = () => {
                                 <div className="grid-item-img">
                                     <Link href="#">
                                         <img
-                                            src="/assets/images/218x150-2.jpg"
+                                            src="assets/images/218x150-2.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />
@@ -100,7 +99,7 @@ const RelatedArticles = () => {
                                 <div className="grid-item-img">
                                     <Link href="#">
                                         <img
-                                            src="/assets/images/218x150-3.jpg"
+                                            src="assets/images/218x150-3.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />
@@ -137,7 +136,7 @@ const RelatedArticles = () => {
                                 <div className="grid-item-img">
                                     <Link href="#">
                                         <img
-                                            src="/assets/images/218x150-4.jpg"
+                                            src="assets/images/218x150-4.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />
@@ -167,7 +166,7 @@ const RelatedArticles = () => {
                                 <div className="grid-item-img">
                                     <Link href="#">
                                         <img
-                                            src="/assets/images/218x150-2.jpg"
+                                            src="assets/images/218x150-2.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />
@@ -197,7 +196,7 @@ const RelatedArticles = () => {
                                 <div className="grid-item-img">
                                     <Link href="#">
                                         <img
-                                            src="/assets/images/218x150-1.jpg"
+                                            src="assets/images/218x150-1.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />

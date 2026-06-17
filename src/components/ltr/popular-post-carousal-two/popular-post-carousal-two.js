@@ -1,4 +1,3 @@
-"use client";
 
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -37,7 +36,7 @@ const PopularPostCarousalTwo = () => {
                         <figure>
                             <a href="">
                                 <img
-                                    src="/assets/images/340x215-1.jpg"
+                                    src="assets/images/340x215-1.jpg"
                                     height={242}
                                     width={345}
                                     alt=""
@@ -77,7 +76,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-1.jpg"
+                                        src="assets/images/115x85-1.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -109,7 +108,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-2.jpg"
+                                        src="assets/images/115x85-2.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -144,7 +143,7 @@ const PopularPostCarousalTwo = () => {
                         <figure>
                             <a href="">
                                 <img
-                                    src="/assets/images/340x215-6.jpg"
+                                    src="assets/images/340x215-6.jpg"
                                     height={242}
                                     width={345}
                                     alt=""
@@ -184,7 +183,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-1.jpg"
+                                        src="assets/images/115x85-1.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -216,7 +215,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-2.jpg"
+                                        src="assets/images/115x85-2.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -256,7 +255,7 @@ const PopularPostCarousalTwo = () => {
                         <figure>
                             <a href="">
                                 <img
-                                    src="/assets/images/340x215-7.jpg"
+                                    src="assets/images/340x215-7.jpg"
                                     height={242}
                                     width={345}
                                     alt=""
@@ -296,7 +295,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-1.jpg"
+                                        src="assets/images/115x85-1.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -328,7 +327,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-2.jpg"
+                                        src="assets/images/115x85-2.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -363,7 +362,7 @@ const PopularPostCarousalTwo = () => {
                         <figure>
                             <a href="">
                                 <img
-                                    src="/assets/images/340x215-8.jpg"
+                                    src="assets/images/340x215-8.jpg"
                                     height={242}
                                     width={345}
                                     alt=""
@@ -405,7 +404,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-1.jpg"
+                                        src="assets/images/115x85-1.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />
@@ -437,7 +436,7 @@ const PopularPostCarousalTwo = () => {
                             <div className="img-wrapper">
                                 <a href="#" className="thumb">
                                     <img
-                                        src="/assets/images/115x85-2.jpg"
+                                        src="assets/images/115x85-2.jpg"
                                         alt=""
                                         className="img-fluid"
                                     />

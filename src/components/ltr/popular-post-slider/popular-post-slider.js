@@ -1,4 +1,3 @@
-"use client";
 
 "use client"
 import dynamic from "next/dynamic";
@@ -38,7 +37,7 @@ const PopularPostSlider = () => {
                             <figure>
                                 <a href="">
                                     <img
-                                        src="/assets/images/340x215-1.jpg"
+                                        src="assets/images/340x215-1.jpg"
                                         height={242}
                                         width={345}
                                         alt=""
@@ -80,7 +79,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-1.jpg"
+                                            src="assets/images/115x85-1.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -112,7 +111,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-2.jpg"
+                                            src="assets/images/115x85-2.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -144,7 +143,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-3.jpg"
+                                            src="assets/images/115x85-3.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -177,7 +176,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-4.jpg"
+                                            src="assets/images/115x85-4.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -217,7 +216,7 @@ const PopularPostSlider = () => {
                             <figure>
                                 <a href="">
                                     <img
-                                        src="/assets/images/340x215-2.jpg"
+                                        src="assets/images/340x215-2.jpg"
                                         height={242}
                                         width={345}
                                         alt=""
@@ -260,7 +259,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-4.jpg"
+                                            src="assets/images/115x85-4.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -292,7 +291,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-3.jpg"
+                                            src="assets/images/115x85-3.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -324,7 +323,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-2.jpg"
+                                            src="assets/images/115x85-2.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />
@@ -356,7 +355,7 @@ const PopularPostSlider = () => {
                                 <div className="img-wrapper">
                                     <a href="#" className="thumb">
                                         <img
-                                            src="/assets/images/115x85-1.jpg"
+                                            src="assets/images/115x85-1.jpg"
                                             alt=""
                                             className="img-fluid"
                                         />

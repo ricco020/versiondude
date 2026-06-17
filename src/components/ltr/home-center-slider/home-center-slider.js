@@ -1,4 +1,3 @@
-"use client";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -34,7 +33,7 @@ const HomeCenterSlider = () => {
           <div className="slider-post post-height-1">
             <a href="#" className="news-image">
               <img
-                src="/assets/images/masonry/slider/01.jpg"
+                src="assets/images/masonry/slider/01.jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -63,7 +62,7 @@ const HomeCenterSlider = () => {
           <div className="slider-post post-height-1">
             <a href="#" className="news-image">
               <img
-                src="/assets/images/masonry/slider/02.jpg"
+                src="assets/images/masonry/slider/02.jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -92,7 +91,7 @@ const HomeCenterSlider = () => {
           <div className="slider-post post-height-1">
             <a href="#" className="news-image">
               <img
-                src="/assets/images/masonry/slider/03.jpg"
+                src="assets/images/masonry/slider/03.jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -121,7 +120,7 @@ const HomeCenterSlider = () => {
           <div className="slider-post post-height-1">
             <a href="#" className="news-image">
               <img
-                src="/assets/images/masonry/slider/04.jpg"
+                src="assets/images/masonry/slider/04.jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -150,7 +149,7 @@ const HomeCenterSlider = () => {
           <div className="slider-post post-height-1">
             <a href="#" className="news-image">
               <img
-                src="/assets/images/masonry/slider/05.jpg"
+                src="assets/images/masonry/slider/05.jpg"
                 alt=""
                 className="img-fluid"
               />
