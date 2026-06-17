@@ -1,0 +1,109 @@
+{
+  "open-source-password-managers": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "Three open-source vaults to know", "fr": "Trois coffres open source à connaître", "es": "Tres bóvedas de código abierto que debes conocer", "n": 3},
+    {"en": "Choosing your spot on the spectrum", "fr": "Trouver sa place sur le spectre", "es": "Elige tu lugar en el espectro", "n": 1},
+    {"en": "Pitfalls and the limits of open code", "fr": "Pièges et limites du code ouvert", "es": "Trampas y límites del código abierto", "n": 2},
+    {"en": "Habits that matter more than the brand", "fr": "Des habitudes qui comptent plus que la marque", "es": "Hábitos que importan más que la marca", "n": 2}
+  ],
+  "self-hosted-password-managers": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "Vaultwarden, the popular middle road", "fr": "Vaultwarden, le juste milieu populaire", "es": "Vaultwarden, el popular término medio", "n": 2},
+    {"en": "KeePassXC and the file-based path", "fr": "KeePassXC et l'approche par fichier", "es": "KeePassXC y la vía basada en archivos", "n": 2},
+    {"en": "The true cost of hosting yourself", "fr": "Le vrai coût de l'auto-hébergement", "es": "El verdadero coste de alojarlo tú mismo", "n": 2},
+    {"en": "When a managed service makes more sense", "fr": "Quand un service géré est plus judicieux", "es": "Cuándo tiene más sentido un servicio gestionado", "n": 2}
+  ],
+  "secrets-management-tools": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "Cheap habits that prevent leaks", "fr": "Des habitudes simples qui évitent les fuites", "es": "Hábitos baratos que previenen las filtraciones", "n": 2},
+    {"en": "Rotate first, regret never", "fr": "Renouvelez d'abord, ne regrettez jamais", "es": "Rota primero, no te arrepientas nunca", "n": 1},
+    {"en": "Dedicated stores for teams and production", "fr": "Des coffres dédiés pour les équipes et la production", "es": "Almacenes dedicados para equipos y producción", "n": 2},
+    {"en": "Match the tooling to the scale", "fr": "Adapter l'outillage à l'échelle", "es": "Ajusta las herramientas a la escala", "n": 2},
+    {"en": "A layered discipline, not a product", "fr": "Une discipline en couches, pas un produit", "es": "Una disciplina por capas, no un producto", "n": 1}
+  ],
+  "proton-mail-review": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "How it feels day to day", "fr": "Ce que ça donne au quotidien", "es": "Cómo se siente en el día a día", "n": 1},
+    {"en": "Encryption, plans and the wider suite", "fr": "Chiffrement, abonnements et la suite complète", "es": "Cifrado, planes y la suite completa", "n": 3},
+    {"en": "The honest trade-offs", "fr": "Les compromis en toute honnêteté", "es": "Las concesiones, sin rodeos", "n": 3},
+    {"en": "Who it is really for", "fr": "À qui ça s'adresse vraiment", "es": "Para quién es realmente", "n": 1}
+  ],
+  "best-encrypted-email": [
+    {"en": "", "fr": "", "es": "", "n": 1},
+    {"en": "Two kinds of encryption to separate", "fr": "Deux types de chiffrement à distinguer", "es": "Dos tipos de cifrado que conviene separar", "n": 2},
+    {"en": "The leading auditable providers", "fr": "Les principaux fournisseurs auditables", "es": "Los principales proveedores auditables", "n": 2},
+    {"en": "The limit no provider can cross", "fr": "La limite qu'aucun fournisseur ne peut franchir", "es": "El límite que ningún proveedor puede cruzar", "n": 2},
+    {"en": "What to check before you commit", "fr": "Ce qu'il faut vérifier avant de s'engager", "es": "Qué comprobar antes de decidirte", "n": 2},
+    {"en": "Picking the right fit", "fr": "Choisir celui qui vous convient", "es": "Elegir la opción adecuada", "n": 1}
+  ],
+  "proton-pass-review": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "Hide-my-email aliases and the essentials", "fr": "Les alias hide-my-email et l'essentiel", "es": "Los alias hide-my-email y lo esencial", "n": 2},
+    {"en": "Where it leads and where it lags", "fr": "Là où il brille et là où il pèche", "es": "Dónde destaca y dónde se queda corto", "n": 2},
+    {"en": "Plans and honest caveats", "fr": "Abonnements et réserves en toute franchise", "es": "Planes y advertencias honestas", "n": 2},
+    {"en": "Rules no manager can enforce for you", "fr": "Des règles qu'aucun gestionnaire ne peut imposer à votre place", "es": "Reglas que ningún gestor puede imponer por ti", "n": 1},
+    {"en": "The case for choosing it", "fr": "Les arguments pour le choisir", "es": "Razones para elegirlo", "n": 1}
+  ],
+  "what-is-the-dom": [
+    {"en": "", "fr": "", "es": "", "n": 1},
+    {"en": "From text to a tree of nodes", "fr": "Du texte à un arbre de nœuds", "es": "Del texto a un árbol de nodos", "n": 2},
+    {"en": "Source, DOM and pixels are not the same", "fr": "Source, DOM et pixels ne sont pas la même chose", "es": "El código fuente, el DOM y los píxeles no son lo mismo", "n": 2},
+    {"en": "Why the live tree drifts from the file", "fr": "Pourquoi l'arbre vivant s'écarte du fichier", "es": "Por qué el árbol en vivo se aleja del archivo", "n": 1},
+    {"en": "Frameworks build on the same tree", "fr": "Les frameworks reposent sur le même arbre", "es": "Los frameworks se apoyan en el mismo árbol", "n": 2},
+    {"en": "The keystone of the front-end stack", "fr": "La clé de voûte de la stack front-end", "es": "La piedra angular del stack front-end", "n": 2}
+  ],
+  "html-validator": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "The reference tool and its scope", "fr": "L'outil de référence et son périmètre", "es": "La herramienta de referencia y su alcance", "n": 2},
+    {"en": "The real payoffs of valid markup", "fr": "Les vrais bénéfices d'un balisage valide", "es": "Las ventajas reales de un marcado válido", "n": 3},
+    {"en": "A cheap, high-leverage quality win", "fr": "Un gain de qualité à fort effet de levier et peu coûteux", "es": "Una mejora de calidad barata y de gran impacto", "n": 1},
+    {"en": "Make validation part of the workflow", "fr": "Intégrer la validation au workflow", "es": "Haz de la validación parte del flujo de trabajo", "n": 2}
+  ],
+  "what-is-a-parser": [
+    {"en": "", "fr": "", "es": "", "n": 1},
+    {"en": "Two stages: tokenize, then build a tree", "fr": "Deux étapes : tokeniser, puis construire un arbre", "es": "Dos etapas: tokenizar y luego construir un árbol", "n": 2},
+    {"en": "Parsers are everywhere", "fr": "Les parseurs sont partout", "es": "Los parsers están en todas partes", "n": 1},
+    {"en": "Why the output is a tree", "fr": "Pourquoi le résultat est un arbre", "es": "Por qué el resultado es un árbol", "n": 2},
+    {"en": "What makes HTML parsing unusual", "fr": "Ce qui rend le parsing HTML si particulier", "es": "Qué hace que el parsing de HTML sea singular", "n": 2},
+    {"en": "Forgiving versus strict, by design", "fr": "Tolérant ou strict, par conception", "es": "Tolerante frente a estricto, por diseño", "n": 1},
+    {"en": "A mental model for the whole stack", "fr": "Un modèle mental pour toute la stack", "es": "Un modelo mental para todo el stack", "n": 1}
+  ],
+  "semantic-web": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "The standards stack: RDF, OWL, SPARQL", "fr": "La pile de standards : RDF, OWL, SPARQL", "es": "La pila de estándares: RDF, OWL, SPARQL", "n": 4},
+    {"en": "Reasoners that infer new facts", "fr": "Des raisonneurs qui déduisent de nouveaux faits", "es": "Razonadores que infieren nuevos hechos", "n": 2},
+    {"en": "Why the grand vision stalled", "fr": "Pourquoi la grande vision a calé", "es": "Por qué la gran visión se estancó", "n": 1},
+    {"en": "The version that quietly succeeded", "fr": "La version qui a réussi sans bruit", "es": "La versión que triunfó en silencio", "n": 1}
+  ],
+  "xml-vs-html": [
+    {"en": "", "fr": "", "es": "", "n": 1},
+    {"en": "HTML: a fixed, forgiving vocabulary", "fr": "HTML : un vocabulaire figé et tolérant", "es": "HTML: un vocabulario fijo y tolerante", "n": 2},
+    {"en": "XML: a strict meta-language", "fr": "XML : un méta-langage strict", "es": "XML: un metalenguaje estricto", "n": 2},
+    {"en": "Two philosophies for two jobs", "fr": "Deux philosophies pour deux usages", "es": "Dos filosofías para dos tareas", "n": 1},
+    {"en": "XHTML and where things settled", "fr": "XHTML et où les choses se sont stabilisées", "es": "XHTML y dónde se asentaron las cosas", "n": 2},
+    {"en": "The wider XML ecosystem", "fr": "L'écosystème XML au sens large", "es": "El ecosistema XML en su conjunto", "n": 1},
+    {"en": "A rule of thumb by purpose", "fr": "Une règle empirique selon l'usage", "es": "Una regla práctica según el propósito", "n": 1}
+  ],
+  "ruby-on-rails-cms": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "Railfrog and the early heritage", "fr": "Railfrog et l'héritage des débuts", "es": "Railfrog y el legado de los inicios", "n": 2},
+    {"en": "The engine model of today's options", "fr": "Le modèle d'engine des options actuelles", "es": "El modelo de engine de las opciones actuales", "n": 2},
+    {"en": "Content as code, and its trade-off", "fr": "Le contenu comme code, et son compromis", "es": "El contenido como código, y su contrapartida", "n": 2},
+    {"en": "Framing the choice for your team", "fr": "Cadrer le choix pour votre équipe", "es": "Plantear la elección para tu equipo", "n": 2}
+  ],
+  "character-encoding-utf-8": [
+    {"en": "", "fr": "", "es": "", "n": 2},
+    {"en": "From ASCII to a patchwork of encodings", "fr": "De l'ASCII à un patchwork d'encodages", "es": "Del ASCII a un mosaico de codificaciones", "n": 2},
+    {"en": "How Unicode fixed the root problem", "fr": "Comment Unicode a réglé le problème de fond", "es": "Cómo Unicode resolvió el problema de raíz", "n": 2},
+    {"en": "Why UTF-8 won the web", "fr": "Pourquoi UTF-8 a conquis le web", "es": "Por qué UTF-8 conquistó la web", "n": 2},
+    {"en": "Where bugs still creep in", "fr": "Là où les bugs se glissent encore", "es": "Dónde se siguen colando los errores", "n": 2}
+  ],
+  "self-hosted-cms": [
+    {"en": "", "fr": "", "es": "", "n": 1},
+    {"en": "Ownership and its honest counterweight", "fr": "La maîtrise et son juste contrepoids", "es": "La propiedad y su honesto contrapeso", "n": 2},
+    {"en": "WordPress: ecosystem and upkeep", "fr": "WordPress : écosystème et maintenance", "es": "WordPress: ecosistema y mantenimiento", "n": 2},
+    {"en": "The headless alternative", "fr": "L'alternative headless", "es": "La alternativa headless", "n": 2},
+    {"en": "Framework-native content systems", "fr": "Les systèmes de contenu natifs aux frameworks", "es": "Sistemas de contenido nativos del framework", "n": 1},
+    {"en": "Matching the tool to your team", "fr": "Adapter l'outil à votre équipe", "es": "Ajustar la herramienta a tu equipo", "n": 2}
+  ]
+}

@@ -1,6 +1,22 @@
 import FR from "./articles-fr.json";
 import ES from "./articles-es.json";
 import ENX from "./articles-en.json";
+import SECDEF from "./article-sections-i18n.json";
+
+// Découpe le corps d'un article (déjà localisé) en sections {heading, paras} selon les intertitres.
+export function getSections(article, locale = "en") {
+  const def = SECDEF[article.slug];
+  const paras = article.paras || [];
+  if (!def) return [{ heading: "", paras }];
+  const out = []; let i = 0;
+  for (const sec of def) {
+    const h = sec[locale] || sec.en || "";
+    out.push({ heading: h, paras: paras.slice(i, i + sec.n) });
+    i += sec.n;
+  }
+  if (i < paras.length) out.push({ heading: "", paras: paras.slice(i) });
+  return out;
+}
 // VersionDude — articles éditoriaux réels (EN + traductions FR/ES). Contenu factuel et original.
 // Pilier 1 (web standards / jus) : non monétisé. Pilier 2 (privacy/open-source) : CTA Proton perso.
 // Images : Pixabay, libres de droits, uniques, légendes honnêtes (vérifiées).

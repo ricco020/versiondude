@@ -3,6 +3,7 @@ import LayoutTwo from "@/components/ltr/layout/layout-two";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 
+// Index projets : grille de cartes magazine robuste (bootstrap).
 export default function ProjectsList({ locale = "en", title, intro, projects }) {
   const p = locale === "en" ? "" : `/${locale}`;
   const s = t(locale);
@@ -24,20 +25,21 @@ export default function ProjectsList({ locale = "en", title, intro, projects }) 
             </div>
           </div>
         </div>
-        <div className="container">
-          <p className="mb-4">{intro}</p>
-          <div className="row">
+        <div className="container py-4">
+          <p className="lead text-muted mb-4">{intro}</p>
+          <div className="row g-4">
             {projects.map((pr) => (
-              <div className="col-md-6 mb-4" key={pr.slug}>
-                <article className="post">
-                  <figure className="post-thumb">
-                    <Link href={`${p}/projects/${pr.slug}`}>
-                      <img src={pr.hero} className="img-fluid" alt={pr.heroAlt} width={690} height={460} />
-                    </Link>
-                  </figure>
-                  <div className="post-content pt-3">
-                    <h3 className="post-title"><Link href={`${p}/projects/${pr.slug}`}>{pr.name}</Link></h3>
-                    <p>{pr.excerpt}</p>
+              <div className="col-md-6 col-lg-4" key={pr.slug}>
+                <article className="card h-100 border-0 shadow-sm">
+                  <Link href={`${p}/projects/${pr.slug}`}>
+                    <img src={pr.hero} className="card-img-top" alt={pr.heroAlt} style={{ height: 190, objectFit: "cover" }} />
+                  </Link>
+                  <div className="card-body">
+                    <span className="badge bg-secondary mb-2">{pr.status}</span>
+                    <h3 className="h5 card-title">
+                      <Link href={`${p}/projects/${pr.slug}`} className="text-dark text-decoration-none stretched-link">{pr.name}</Link>
+                    </h3>
+                    <p className="card-text text-muted small">{pr.excerpt}</p>
                   </div>
                 </article>
               </div>

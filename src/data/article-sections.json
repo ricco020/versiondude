@@ -1,0 +1,109 @@
+{
+  "open-source-password-managers": [
+    {"heading": "", "n": 2},
+    {"heading": "Three open-source vaults to know", "n": 3},
+    {"heading": "Choosing your spot on the spectrum", "n": 1},
+    {"heading": "Pitfalls and the limits of open code", "n": 2},
+    {"heading": "Habits that matter more than the brand", "n": 2}
+  ],
+  "self-hosted-password-managers": [
+    {"heading": "", "n": 2},
+    {"heading": "Vaultwarden, the popular middle road", "n": 2},
+    {"heading": "KeePassXC and the file-based path", "n": 2},
+    {"heading": "The true cost of hosting yourself", "n": 2},
+    {"heading": "When a managed service makes more sense", "n": 2}
+  ],
+  "secrets-management-tools": [
+    {"heading": "", "n": 2},
+    {"heading": "Cheap habits that prevent leaks", "n": 2},
+    {"heading": "Rotate first, regret never", "n": 1},
+    {"heading": "Dedicated stores for teams and production", "n": 2},
+    {"heading": "Match the tooling to the scale", "n": 2},
+    {"heading": "A layered discipline, not a product", "n": 1}
+  ],
+  "proton-mail-review": [
+    {"heading": "", "n": 2},
+    {"heading": "How it feels day to day", "n": 1},
+    {"heading": "Encryption, plans and the wider suite", "n": 3},
+    {"heading": "The honest trade-offs", "n": 3},
+    {"heading": "Who it is really for", "n": 1}
+  ],
+  "best-encrypted-email": [
+    {"heading": "", "n": 1},
+    {"heading": "Two kinds of encryption to separate", "n": 2},
+    {"heading": "The leading auditable providers", "n": 2},
+    {"heading": "The limit no provider can cross", "n": 2},
+    {"heading": "What to check before you commit", "n": 2},
+    {"heading": "Picking the right fit", "n": 1}
+  ],
+  "proton-pass-review": [
+    {"heading": "", "n": 2},
+    {"heading": "Hide-my-email aliases and the essentials", "n": 2},
+    {"heading": "Where it leads and where it lags", "n": 2},
+    {"heading": "Plans and honest caveats", "n": 2},
+    {"heading": "Rules no manager can enforce for you", "n": 1},
+    {"heading": "The case for choosing it", "n": 1}
+  ],
+  "what-is-the-dom": [
+    {"heading": "", "n": 1},
+    {"heading": "From text to a tree of nodes", "n": 2},
+    {"heading": "Source, DOM and pixels are not the same", "n": 2},
+    {"heading": "Why the live tree drifts from the file", "n": 1},
+    {"heading": "Frameworks build on the same tree", "n": 2},
+    {"heading": "The keystone of the front-end stack", "n": 2}
+  ],
+  "html-validator": [
+    {"heading": "", "n": 2},
+    {"heading": "The reference tool and its scope", "n": 2},
+    {"heading": "The real payoffs of valid markup", "n": 3},
+    {"heading": "A cheap, high-leverage quality win", "n": 1},
+    {"heading": "Make validation part of the workflow", "n": 2}
+  ],
+  "what-is-a-parser": [
+    {"heading": "", "n": 1},
+    {"heading": "Two stages: tokenize, then build a tree", "n": 2},
+    {"heading": "Parsers are everywhere", "n": 1},
+    {"heading": "Why the output is a tree", "n": 2},
+    {"heading": "What makes HTML parsing unusual", "n": 2},
+    {"heading": "Forgiving versus strict, by design", "n": 1},
+    {"heading": "A mental model for the whole stack", "n": 1}
+  ],
+  "semantic-web": [
+    {"heading": "", "n": 2},
+    {"heading": "The standards stack: RDF, OWL, SPARQL", "n": 4},
+    {"heading": "Reasoners that infer new facts", "n": 2},
+    {"heading": "Why the grand vision stalled", "n": 1},
+    {"heading": "The version that quietly succeeded", "n": 1}
+  ],
+  "xml-vs-html": [
+    {"heading": "", "n": 1},
+    {"heading": "HTML: a fixed, forgiving vocabulary", "n": 2},
+    {"heading": "XML: a strict meta-language", "n": 2},
+    {"heading": "Two philosophies for two jobs", "n": 1},
+    {"heading": "XHTML and where things settled", "n": 2},
+    {"heading": "The wider XML ecosystem", "n": 1},
+    {"heading": "A rule of thumb by purpose", "n": 1}
+  ],
+  "ruby-on-rails-cms": [
+    {"heading": "", "n": 2},
+    {"heading": "Railfrog and the early heritage", "n": 2},
+    {"heading": "The engine model of today's options", "n": 2},
+    {"heading": "Content as code, and its trade-off", "n": 2},
+    {"heading": "Framing the choice for your team", "n": 2}
+  ],
+  "character-encoding-utf-8": [
+    {"heading": "", "n": 2},
+    {"heading": "From ASCII to a patchwork of encodings", "n": 2},
+    {"heading": "How Unicode fixed the root problem", "n": 2},
+    {"heading": "Why UTF-8 won the web", "n": 2},
+    {"heading": "Where bugs still creep in", "n": 2}
+  ],
+  "self-hosted-cms": [
+    {"heading": "", "n": 1},
+    {"heading": "Ownership and its honest counterweight", "n": 2},
+    {"heading": "WordPress: ecosystem and upkeep", "n": 2},
+    {"heading": "The headless alternative", "n": 2},
+    {"heading": "Framework-native content systems", "n": 1},
+    {"heading": "Matching the tool to your team", "n": 2}
+  ]
+}

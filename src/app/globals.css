@@ -7194,3 +7194,24 @@ body.layout-rtl .style-settings-content {
 body.layout-rtl .style-settings-content ul li select {
     float: left;
 }
+/* ===== VersionDude — habillage éditorial magazine des articles ===== */
+.post_details_block h2{font-family:var(--font-cormorant-garamond),Georgia,serif;font-weight:700;font-size:1.9rem;line-height:1.2;margin:2.2rem 0 .9rem;padding-left:.85rem;border-left:4px solid #e63329;}
+.post_details_block h3{font-weight:700;font-size:1.35rem;margin:1.6rem 0 .7rem;color:#1a1a1a;}
+.post_details_block p{font-size:1.075rem;line-height:1.85;color:#2b2b2b;margin-bottom:1.15rem;}
+.post_details_block p.lead{font-size:1.28rem;line-height:1.7;color:#111;font-weight:500;margin-bottom:1.4rem;}
+.post_details_block p.lead::first-letter{font-family:var(--font-cormorant-garamond),Georgia,serif;float:left;font-size:3.6rem;line-height:.82;font-weight:700;color:#e63329;margin:.35rem .6rem 0 0;}
+.post_details_block .article_comment{border-left:4px solid #e63329;background:#faf7f7;padding:1.1rem 1.3rem;margin:1.8rem 0;font-style:italic;font-size:1.15rem;color:#333;border-radius:0 8px 8px 0;}
+.post_details_block .article_comment .customers{font-style:normal;font-weight:700;color:#e63329;margin-top:.5rem;font-size:.95rem;}
+.post_details_block .arrow_list{list-style:none;padding-left:0;margin:1.2rem 0;}
+.post_details_block .arrow_list li{position:relative;padding-left:1.7rem;margin-bottom:.6rem;line-height:1.6;}
+.post_details_block .arrow_list li::before{content:"\2192";position:absolute;left:0;color:#e63329;font-weight:700;}
+.post_details_block figure.align-left{float:left;margin:.4rem 1.5rem 1rem 0;max-width:46%;}
+.post_details_block figure.align-left img{border-radius:8px;width:100%;height:auto;}
+.post_details_block figure.align-left figcaption{font-size:.85rem;color:#777;font-style:italic;margin-top:.4rem;text-align:center;}
+.post_details_block figure.social-icon>img{border-radius:10px;width:100%;height:auto;margin-bottom:1.2rem;}
+.post_details_block .tags .badge{font-weight:500;}
+.rightSidebar .tabs-content li{display:flex;gap:.6rem;padding:.55rem 0;border-bottom:1px dashed #e3e3e3;align-items:flex-start;}
+.rightSidebar .tabs-content .count{color:#e63329;font-weight:800;font-family:var(--font-cormorant-garamond),serif;font-size:1.15rem;}
+.rightSidebar .tabs-content a{color:#222;text-decoration:none;font-weight:600;line-height:1.35;}
+.rightSidebar .tabs-content a:hover{color:#e63329;}
+@media(max-width:767px){.post_details_block figure.align-left{float:none;max-width:100%;margin:1rem 0;}.post_details_block h2{font-size:1.6rem;}}
