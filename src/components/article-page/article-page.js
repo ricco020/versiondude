@@ -99,8 +99,8 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                     ))}
 
                     {article.cta && (
-                      <aside className="article_comment" style={{ borderLeftColor: "#6d4aff", background: "#f6f4ff", fontStyle: "normal" }}>
-                        <p style={{ marginBottom: ".75rem", fontWeight: 600 }}>{article.cta.sublabel}</p>
+                      <aside className="vd-cta">
+                        <p>{article.cta.sublabel}</p>
                         <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{article.cta.label} &rarr;</a>
                       </aside>
                     )}

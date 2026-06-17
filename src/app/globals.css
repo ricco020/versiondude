@@ -7215,3 +7215,8 @@ body.layout-rtl .style-settings-content ul li select {
 .rightSidebar .tabs-content a{color:#222;text-decoration:none;font-weight:600;line-height:1.35;}
 .rightSidebar .tabs-content a:hover{color:#e63329;}
 @media(max-width:767px){.post_details_block figure.align-left{float:none;max-width:100%;margin:1rem 0;}.post_details_block h2{font-size:1.6rem;}}
+
+/* Encart CTA affilié (sans guillemet décoratif, contrairement à .article_comment) */
+.post_details_block .vd-cta{border-left:4px solid #6d4aff;background:#f6f4ff;padding:1.15rem 1.35rem;margin:1.9rem 0;border-radius:0 8px 8px 0;}
+.post_details_block .vd-cta p{font-weight:600;margin-bottom:.8rem;font-style:normal;}
+.post_details_block .vd-cta .btn{margin:0;}
