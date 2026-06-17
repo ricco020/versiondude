@@ -4,7 +4,17 @@ import Link from "next/link";
 
 // Rendu d'une page projet dans le design d'article de la démo (post_details_block).
 // project = objet localisé (content.js) ; img = {hero, body} ; labels = libellés localisés ; home = préfixe locale ("" | "/fr" | "/es").
+// Affiliate CTA (Awin cloud hosting — relevant to a developer audience deploying projects).
+const AFF_CLOUD = "https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469";
+const CTA = {
+  en: { tag: "Sponsored", title: "Deploying your own project?", text: "Reliable, developer-friendly cloud hosting to ship and scale your apps.", btn: "See cloud hosting" },
+  fr: { tag: "Sponsorisé", title: "Vous déployez votre projet ?", text: "Hébergement cloud fiable et orienté développeurs pour lancer et faire évoluer vos apps.", btn: "Voir l’hébergement cloud" },
+  es: { tag: "Patrocinado", title: "¿Despliegas tu propio proyecto?", text: "Hosting cloud fiable y orientado a desarrolladores para lanzar y escalar tus apps.", btn: "Ver hosting cloud" },
+};
+
 export default function ProjectArticle({ project, img, labels, home = "" }) {
+  const loc = home === "/fr" ? "fr" : home === "/es" ? "es" : "en";
+  const cta = CTA[loc];
   return (
     <LayoutTwo>
       <main className="page_main_wrapper">
@@ -55,6 +65,15 @@ export default function ProjectArticle({ project, img, labels, home = "" }) {
                       </li>
                     ))}
                   </ul>
+
+                  <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", background: "#f6f8ff", border: "1px solid #d9e1ff", borderRadius: 14, padding: "20px 22px", margin: "26px 0" }}>
+                    <div style={{ flex: 1, minWidth: 240 }}>
+                      <span style={{ display: "inline-block", background: "#2447f0", color: "#fff", fontWeight: 700, fontSize: 11, letterSpacing: ".5px", textTransform: "uppercase", padding: "4px 10px", borderRadius: 999 }}>{cta.tag}</span>
+                      <h3 style={{ margin: "8px 0 4px", fontSize: 19 }}>{cta.title}</h3>
+                      <p style={{ margin: 0, fontSize: 14.5, opacity: 0.8 }}>{cta.text}</p>
+                    </div>
+                    <a href={AFF_CLOUD} rel="sponsored nofollow noopener" target="_blank" style={{ background: "#2447f0", color: "#fff", borderRadius: 9, padding: "11px 20px", fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap" }}>{cta.btn}</a>
+                  </div>
 
                   <p><Link href={`${home}/projects`} className="link">&larr; {labels.projectsTitle}</Link></p>
                 </div>
