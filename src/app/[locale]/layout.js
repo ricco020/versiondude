@@ -10,6 +10,8 @@ import { routing } from '@/i18n/routing';
 import { SITE_URL, GA_ID } from '@/lib/site';
 import ImportJs from '@/components/ltr/import-js/import-js';
 import Providers from '../theme-providers';
+import Header from '@/components/ltr/layout/header';
+import Footer from '@/components/ltr/layout/footer';
 
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], display: 'swap', weight: ['300', '400', '500', '600', '700'], variable: '--font-cormorant-garamond' });
 const roboto = Roboto({ subsets: ['latin'], display: 'swap', weight: ['100', '300', '400', '500', '700', '900'], variable: '--font-roboto' });
@@ -49,7 +51,11 @@ export default async function LocaleLayout({ children, params: { locale } }) {
           </>
         )}
         <NextIntlClientProvider messages={messages}>
-          <Providers>{children}</Providers>
+          <Providers>
+            <Header />
+            <main className="page_main_wrapper">{children}</main>
+            <Footer />
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

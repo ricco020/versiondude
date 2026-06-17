@@ -7194,3 +7194,28 @@ body.layout-rtl .style-settings-content {
 body.layout-rtl .style-settings-content ul li select {
     float: left;
 }
+/* ===== VersionDude (I-News adaptation) ===== */
+:root{ --vd-brand:#e8472b; --vd-standards:#2447f0; --vd-parsing:#e8472b; --vd-tooling:#7d0ede; --vd-archive:#475569; }
+.vd-card{ display:flex; flex-direction:column; }
+.vd-card .news-image img{ border-radius:.6rem; display:block; }
+.vd-card--lead .post-text h3{ font-size:2rem; }
+.vd-hover:hover{ color:var(--vd-brand)!important; }
+.vd-cat{ position:absolute; left:.75rem; top:.75rem; color:#fff; font-size:.66rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:.28rem .6rem; border-radius:999px; }
+.vd-cat--standards{ background:var(--vd-standards); }
+.vd-cat--parsing{ background:var(--vd-parsing); }
+.vd-cat--tooling{ background:var(--vd-tooling); }
+.vd-cat--archive{ background:var(--vd-archive); }
+.vd-section-head .vd-tick{ display:inline-block; width:6px; height:1.4em; border-radius:3px; background:var(--vd-brand); }
+.vd-widget{ border:1px solid rgba(128,128,128,.2); border-radius:.8rem; }
+.vd-rank__n{ font-family:var(--font-cormorant-garamond); font-weight:700; font-size:1.6rem; color:rgba(232,71,43,.45); line-height:1; min-width:1.6em; }
+.vd-rank li + li{ border-top:1px solid rgba(128,128,128,.15); }
+.vd-cta{ background:#16181d; color:#f7f5f0; border-radius:1.2rem; }
+.vd-cta h2{ font-size:2rem; }
+.vd-btn{ background:var(--vd-brand); color:#fff; border-radius:999px; letter-spacing:.04em; }
+.vd-btn:hover{ filter:brightness(1.08); color:#fff; }
+.vd-prose{ font-size:1.1rem; line-height:1.75; }
+.vd-prose h2{ font-family:var(--font-cormorant-garamond); font-weight:700; margin-top:2rem; }
+.vd-prose code{ background:rgba(128,128,128,.15); padding:.1em .4em; border-radius:.3em; font-size:.9em; }
+.vd-prose blockquote{ border-left:3px solid var(--vd-brand); padding:.6rem 1rem; margin:1.4rem 0; background:rgba(232,71,43,.06); font-style:italic; border-radius:0 .4rem .4rem 0; }
+.vd-prose ul,.vd-prose ol{ padding-left:1.3rem; }
+.vd-prose a{ color:var(--vd-standards); }
