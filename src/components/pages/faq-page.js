@@ -1,7 +1,9 @@
 "use client";
+import { createElement } from "react";
 import LayoutTwo from "@/components/ltr/layout/layout-two";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
+import { serializeJsonLd } from "@/lib/json-ld-serialize";
 
 export default function FaqPage({ locale = "en" }) {
   const s = t(locale);
@@ -42,6 +44,19 @@ export default function FaqPage({ locale = "en" }) {
             </div></div>
           </div>
         </section>
+
+        {createElement("script", {
+          type: "application/ld+json",
+          children: serializeJsonLd({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: s.faq.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }),
+        })}
       </main>
     </LayoutTwo>
   );
