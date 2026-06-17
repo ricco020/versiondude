@@ -13,6 +13,7 @@ export function generateMetadata({ params }) {
   return {
     title: `${x.title} — VersionDude`,
     description: x.dek,
+    openGraph: { title: x.title, description: x.dek, type: 'article', images: [x.hero] },
     robots: { index: true, follow: true },
     alternates: { canonical: `https://versiondude.net/articles/${x.slug}` },
   };

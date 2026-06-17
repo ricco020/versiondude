@@ -34,7 +34,7 @@ const HomeCenterSlider = () => {
             <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
               <img
                 src="/assets/articles/self-hosted-password-managers-body.jpg"
-                alt=""
+                alt="Los mejores gestores de contraseñas de código abierto"
                 className="img-fluid"
               />
             </a>
@@ -58,7 +58,7 @@ const HomeCenterSlider = () => {
             <a href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
               <img
                 src="/assets/articles/proton-mail-review-body.jpg"
-                alt=""
+                alt="Gestores de contraseñas autoalojados"
                 className="img-fluid"
               />
             </a>
@@ -82,7 +82,7 @@ const HomeCenterSlider = () => {
             <a href="/es/articles/herramientas-de-gestion-de-secretos" className="news-image">
               <img
                 src="/assets/articles/proton-pass-review-body.jpg"
-                alt=""
+                alt="Herramientas de gestión de secretos para desarrolladores"
                 className="img-fluid"
               />
             </a>
@@ -106,7 +106,7 @@ const HomeCenterSlider = () => {
             <a href="/es/articles/analisis-proton-mail" className="news-image">
               <img
                 src="/assets/articles/html-validator-body.jpg"
-                alt=""
+                alt="Análisis de Proton Mail: correo cifrado"
                 className="img-fluid"
               />
             </a>
@@ -130,7 +130,7 @@ const HomeCenterSlider = () => {
             <a href="/es/articles/mejores-servicios-de-correo-cifrado" className="news-image">
               <img
                 src="/assets/articles/what-is-a-parser-body.jpg"
-                alt=""
+                alt="Los mejores servicios de correo cifrado"
                 className="img-fluid"
               />
             </a>

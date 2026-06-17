@@ -20,7 +20,7 @@ const NewsTicker = () => {
     <div className="container">
       <div className="newstricker_inner">
         <div className="trending">
-          <strong>Trending</strong> Now
+          <strong>Tendances</strong> Now
         </div>
         <OwlCarousel className="news-ticker owl-theme"
           loop={true}

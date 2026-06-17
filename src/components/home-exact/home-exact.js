@@ -27,6 +27,7 @@ export default function Home() {
     <Layout>
       {/* *** START PAGE MAIN CONTENT *** */}
       <main className="page_main_wrapper">
+        <h1 className="visually-hidden">VersionDude — web standards, parsers &amp; developer tooling</h1>
         {/* START NEWSTRICKER */}
         <NewsTicker />
         {/*  END OF /. NEWSTRICKER */}
@@ -144,7 +145,7 @@ export default function Home() {
                       <a href="/articles/open-source-password-managers" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt=""
+                          alt="The best open-source password managers"
                           className="img-fluid"
                         />
                       </a>
@@ -166,7 +167,7 @@ export default function Home() {
                       <a href="/articles/self-hosted-password-managers" className="news-image">
                         <img
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt=""
+                          alt="Self-hosted password managers"
                           className="img-fluid"
                         />
                       </a>
@@ -419,7 +420,7 @@ export default function Home() {
                           <img
                             src="/assets/articles/secrets-management-tools-hero.jpg"
                             width={345}
-                            alt=""
+                            alt="What is a parser?"
                             className="img-fluid"
                           />
                         </a>
@@ -451,7 +452,7 @@ export default function Home() {
                             <img
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
-                              alt=""
+                              alt="The best open-source password managers"
                             />
                             <div className="link-icon">
                               <i className="fa fa-play" />
@@ -472,7 +473,7 @@ export default function Home() {
                             <img
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
-                              alt=""
+                              alt="Self-hosted password managers"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -493,7 +494,7 @@ export default function Home() {
                             <img
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
-                              alt=""
+                              alt="Secrets management tools for developers"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -514,7 +515,7 @@ export default function Home() {
                             <img
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
-                              alt=""
+                              alt="Proton Mail review: encrypted email"
                             />
                             <div className="link-icon">
                               <i className="fa fa-play" />
@@ -535,7 +536,7 @@ export default function Home() {
                             <img
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
-                              alt=""
+                              alt="The best encrypted email services"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -556,7 +557,7 @@ export default function Home() {
                             <img
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
-                              alt=""
+                              alt="Proton Pass review"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -670,7 +671,7 @@ export default function Home() {
                       <a href="/articles/open-source-password-managers" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-body.jpg"
-                          alt=""
+                          alt="The best open-source password managers"
                           className="img-fluid w-100"
                         />
                       </a>
@@ -699,7 +700,7 @@ export default function Home() {
                           <a href="/articles/what-is-the-dom" className="thumb">
                             <img
                               src="/assets/articles/secrets-management-tools-body.jpg"
-                              alt=""
+                              alt="What is the DOM?"
                               className="img-fluid"
                             />
                             <div className="link-icon">
@@ -725,7 +726,7 @@ export default function Home() {
                           <a href="/articles/html-validator" className="thumb">
                             <img
                               src="/assets/articles/best-encrypted-email-body.jpg"
-                              alt=""
+                              alt="What an HTML validator does"
                               className="img-fluid"
                             />
                             <div className="link-icon">
@@ -751,7 +752,7 @@ export default function Home() {
                           <a href="/articles/what-is-a-parser" className="thumb">
                             <img
                               src="/assets/articles/what-is-the-dom-body.jpg"
-                              alt=""
+                              alt="What is a parser?"
                               className="img-fluid"
                             />
                             <div className="link-icon">
@@ -799,7 +800,7 @@ export default function Home() {
                         <a href="/articles/semantic-web" className="d-block mb-3">
                           <img
                             src="/assets/articles/semantic-web-body.jpg"
-                            alt=""
+                            alt="The semantic web, explained"
                             className="img-fluid w-100"
                           />
                         </a>
@@ -852,7 +853,7 @@ export default function Home() {
                         <a href="/articles/self-hosted-cms" className="d-block mb-3">
                           <img
                             src="/assets/projects/html5-parser-hero.jpg"
-                            alt=""
+                            alt="Self-hosted CMS options worth knowing"
                             className="img-fluid"
                           />
                         </a>
@@ -915,7 +916,7 @@ export default function Home() {
                           <a href="/articles/semantic-web" className="thumb">
                             <img
                               src="/assets/projects/validator-nu-hero.jpg"
-                              alt=""
+                              alt="The semantic web, explained"
                               className="img-fluid w-100"
                             />
                           </a>
@@ -943,7 +944,7 @@ export default function Home() {
                           <a href="/articles/xml-vs-html" className="thumb">
                             <img
                               src="/assets/projects/railfrog-hero.jpg"
-                              alt=""
+                              alt="XML vs HTML: what is the difference?"
                               className="img-fluid w-100"
                             />
                           </a>
@@ -971,7 +972,7 @@ export default function Home() {
                           <a href="/articles/ruby-on-rails-cms" className="thumb">
                             <img
                               src="/assets/projects/pellet-hero.jpg"
-                              alt=""
+                              alt="Ruby on Rails content-management systems"
                               className="img-fluid w-100"
                             />
                           </a>
@@ -999,7 +1000,7 @@ export default function Home() {
                           <a href="/articles/character-encoding-utf-8" className="thumb">
                             <img
                               src="/assets/projects/bersirc-hero.jpg"
-                              alt=""
+                              alt="Character encoding and why UTF-8 won"
                               className="img-fluid w-100"
                             />
                           </a>
@@ -1027,7 +1028,7 @@ export default function Home() {
                           <a href="/articles/self-hosted-cms" className="thumb">
                             <img
                               src="/assets/articles/open-source-password-managers-hero.jpg"
-                              alt=""
+                              alt="Self-hosted CMS options worth knowing"
                               className="img-fluid w-100"
                             />
                           </a>

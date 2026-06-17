@@ -46,7 +46,7 @@ const HomeFeatureCarousal = () => {
           <a href="/articles/open-source-password-managers" className="thumb">
             <img
               src="/assets/articles/self-hosted-password-managers-body.jpg"
-              alt=""
+              alt="The best open-source password managers"
               className="img-fluid"
             />
             <div className="link-icon">
@@ -66,7 +66,7 @@ const HomeFeatureCarousal = () => {
           <a href="/articles/self-hosted-password-managers" className="thumb">
             <img
               src="/assets/articles/proton-mail-review-body.jpg"
-              alt=""
+              alt="Self-hosted password managers"
               className="img-fluid"
             />
             <div className="link-icon">
@@ -86,7 +86,7 @@ const HomeFeatureCarousal = () => {
           <a href="/articles/secrets-management-tools" className="thumb">
             <img
               src="/assets/articles/proton-pass-review-body.jpg"
-              alt=""
+              alt="Secrets management tools for developers"
               className="img-fluid"
             />
             <div className="link-icon">
@@ -106,7 +106,7 @@ const HomeFeatureCarousal = () => {
           <a href="/articles/proton-mail-review" className="thumb">
             <img
               src="/assets/articles/html-validator-body.jpg"
-              alt=""
+              alt="Proton Mail review: encrypted email"
               className="img-fluid"
             />
             <div className="link-icon">
