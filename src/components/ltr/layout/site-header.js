@@ -22,8 +22,9 @@ export default function SiteHeader({ locale = "en" }) {
     <header className="site-header border-bottom bg-white">
       <nav className="custom-navbar navbar navbar-expand-lg sticky-top bg-white">
         <div className="container">
-          <Link className="navbar-brand" href={`${p}/`}>
-            <span className="fw-bold" style={{ fontSize: "1.6rem", color: "#e63329" }}>VersionDude</span>
+          <Link className="navbar-brand vd-logo" href={`${p}/`} aria-label="VersionDude">
+            <span className="vd-logo-mark">&lt;/&gt;</span>
+            <span className="vd-logo-text"><span className="vd-logo-v">Version</span><span className="vd-logo-d">Dude</span></span>
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vdNav" aria-controls="vdNav" aria-expanded="false" aria-label="Menu">
             <span className="navbar-toggler-icon" />

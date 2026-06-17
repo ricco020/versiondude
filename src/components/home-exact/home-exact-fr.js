@@ -651,7 +651,7 @@ export default function Home_fr() {
                     </div>
                     {/* View All Category button */}
                     <div className="text-center mt-3">
-                      <a href="/fr/articles/what-is-the-dom" className="fw-bold text-primary-hover">
+                      <a href="/fr/categories" className="fw-bold text-primary-hover">
                         <u>Voir toutes les catégories</u>
                       </a>
                     </div>

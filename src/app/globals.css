@@ -7220,3 +7220,18 @@ body.layout-rtl .style-settings-content ul li select {
 .post_details_block .vd-cta{border-left:4px solid #6d4aff;background:#f6f4ff;padding:1.15rem 1.35rem;margin:1.9rem 0;border-radius:0 8px 8px 0;}
 .post_details_block .vd-cta p{font-weight:600;margin-bottom:.8rem;font-style:normal;}
 .post_details_block .vd-cta .btn{margin:0;}
+
+/* ===== Uniformisation images cartes/carrousel + retrait icônes photo/vidéo ===== */
+.link-icon{display:none !important;}
+.slider-post .news-image,.post-thumb,.grid-item-img,.news-list-item .img-wrapper,.more-post .news-image,.more-post>a{display:block;overflow:hidden;border-radius:6px;}
+.slider-post .news-image{aspect-ratio:16/10;}
+.slider-post.post-height-2 .news-image{aspect-ratio:16/11;}
+.grid-item-img,.news-list-item .img-wrapper,.more-post .news-image,.more-post>a{aspect-ratio:16/10;}
+.slider-post .news-image img,.post-thumb img,.grid-item-img img,.news-list-item .img-wrapper img,.more-post img{width:100% !important;height:100% !important;object-fit:cover !important;}
+
+/* ===== Logo VersionDude (lettrage) ===== */
+.vd-logo{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;}
+.vd-logo-mark{background:#e63329;color:#fff;font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:700;font-size:.9rem;padding:.2rem .42rem;border-radius:6px;line-height:1;}
+.vd-logo-text{font-weight:800;font-size:1.5rem;letter-spacing:-.02em;line-height:1;}
+.vd-logo-v{color:#1a1a1a;}
+.vd-logo-d{color:#e63329;}

@@ -35,9 +35,9 @@ export const metadata = {
   // pour ne pas exposer du contenu dupliqué/thin (protège le jus de backlinks).
   robots: { index: false, follow: false },
   icons: {
-    icon: ['/favicon.ico?v=4'],
-    apple: ['/apple-touch-icon.png?v4'],
-    shortcut: ['/apple-touch-icon.png']
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    shortcut: ['/favicon.svg'],
+    apple: ['/favicon.svg'],
   }
 }
 {/*  END OF /. FONT DECLARATION */ }
