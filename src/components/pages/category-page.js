@@ -9,21 +9,17 @@ export default function CategoryPage({ locale = "en", categoryKey, title, items 
   return (
     <LayoutTwo locale={locale}>
       <main className="page_main_wrapper">
-        <div className="page-title">
-          <div className="container">
-            <div className="align-items-center row">
-              <div className="col"><h1 className="mb-sm-0"><strong>{title}</strong></h1></div>
-              <div className="col-12 col-sm-auto">
-                <nav aria-label="breadcrumb">
-                  <ol className="breadcrumb d-inline-block">
-                    <li className="breadcrumb-item"><Link href={`${p}/`}>{s.ui.home}</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">{title}</li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
+        <section className="inner-head bg-img" style={{ backgroundImage: "url('/assets/articles/what-is-the-dom-hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div className="container position-relative">
+            <div className="row"><div className="col-sm-12">
+              <h1 className="entry-title text-white">{title}</h1>
+              <div className="breadcrumb"><ul className="clearfix">
+                <li className="ib"><Link href={`${p}/`}>{s.ui.home}</Link></li>
+                <li className="ib current-page">{title}</li>
+              </ul></div>
+            </div></div>
           </div>
-        </div>
+        </section>
         <div className="container py-4">
           <div className="row">
             {items.map((x) => (
