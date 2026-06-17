@@ -45,7 +45,7 @@ const HomeFeatureCarousal = () => {
         <div className="img-wrapper">
           <a href="#" className="thumb">
             <img
-              src="assets/images/115x85-8.jpg"
+              src="/assets/images/115x85-8.jpg"
               alt=""
               className="img-fluid"
             />
@@ -67,7 +67,7 @@ const HomeFeatureCarousal = () => {
         <div className="img-wrapper">
           <a href="#" className="thumb">
             <img
-              src="assets/images/115x85-9.jpg"
+              src="/assets/images/115x85-9.jpg"
               alt=""
               className="img-fluid"
             />
@@ -89,7 +89,7 @@ const HomeFeatureCarousal = () => {
         <div className="img-wrapper">
           <a href="#" className="thumb">
             <img
-              src="assets/images/115x85-3.jpg"
+              src="/assets/images/115x85-3.jpg"
               alt=""
               className="img-fluid"
             />
@@ -111,7 +111,7 @@ const HomeFeatureCarousal = () => {
         <div className="img-wrapper">
           <a href="#" className="thumb">
             <img
-              src="assets/images/115x85-10.jpg"
+              src="/assets/images/115x85-10.jpg"
               alt=""
               className="img-fluid"
             />

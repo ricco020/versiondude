@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "VersionDude",
+    "tagline": "L’archive des outils open source des standards du web",
+    "description": "VersionDude documente les outils open source des standards du web et de développement dont les dépôts Subversion étaient historiquement hébergés sur ce domaine, et indique où vit chaque projet aujourd’hui."
+  },
+  "nav": {
+    "home": "Accueil",
+    "reference": "Référence",
+    "projects": "Projets",
+    "about": "À propos",
+    "browseTopics": "Parcourir les thèmes"
+  },
+  "categories": {
+    "standards": "Standards du web",
+    "parsing": "Analyse (parsing)",
+    "tooling": "Outils",
+    "archive": "Archive"
+  },
+  "home": {
+    "trending": "À la une",
+    "featured": "En vedette",
+    "reference": "Référence",
+    "latest": "Projets archivés ici",
+    "browseByTopic": "Parcourir par thème",
+    "allProjects": "Tous les projets",
+    "heroKicker": "Archive des standards du web",
+    "readReference": "Lire la référence",
+    "ctaTitle": "Une référence indépendante sur les outils des standards du web",
+    "ctaText": "Documentation en langage clair des projets open source autrefois hébergés ici — et où les retrouver aujourd’hui.",
+    "sidebarTitle": "Les plus consultés",
+    "sidebarTopics": "Thèmes"
+  },
+  "project": {
+    "currentHome": "Site actuel",
+    "status": "Statut",
+    "legacyPath": "Ancien chemin du dépôt",
+    "backToProjects": "Tous les projets",
+    "disclaimer": "Cette page est une documentation originale. Le projet est l’œuvre de ses propres auteurs et de sa communauté ; VersionDude n’en revendique ni la paternité ni l’affiliation. Le dépôt Subversion autrefois hébergé sur svn.versiondude.net n’est plus en ligne — utilisez le site actuel ci-dessus.",
+    "relatedReference": "À lire aussi"
+  },
+  "article": {
+    "minRead": "min de lecture",
+    "updated": "Référence",
+    "backHome": "VersionDude",
+    "disclaimerShort": "Référence indépendante. Nous ne sommes affiliés ni au WHATWG ni aux projets cités ci-dessus.",
+    "related": "Projets liés"
+  },
+  "footer": {
+    "about": "Une référence indépendante et originale documentant les outils open source des standards du web et de développement dont les dépôts étaient historiquement hébergés sur ce domaine. Nous n’en revendiquons ni la paternité ni l’affiliation.",
+    "explore": "Explorer",
+    "topics": "Thèmes",
+    "rights": "VersionDude. Référence indépendante — aucun pistage au-delà de statistiques de base.",
+    "noAffiliation": "Les noms de projets et les liens appartiennent à leurs propriétaires respectifs."
+  },
+  "theme": {
+    "toggle": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "lang": {
+    "label": "Langue",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}

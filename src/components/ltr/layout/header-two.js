@@ -157,12 +157,12 @@ const HeaderTwo = () => {
                         <div className="col-sm-4">
                             <Link href="/">
                                 <img
-                                    src="assets/images/logo.png"
+                                    src="/assets/images/logo.png"
                                     className="img-fluid header-logo header-logo_dark"
                                     alt=""
                                 />
                                 <img
-                                    src="assets/images/logo-white.png"
+                                    src="/assets/images/logo-white.png"
                                     className="img-fluid header-logo_white"
                                     alt=""
                                 />
@@ -171,7 +171,7 @@ const HeaderTwo = () => {
                         <div className="col-sm-8">
                             <Link href="#">
                                 <img
-                                    src="assets/images/add728x90-1.jpg"
+                                    src="/assets/images/add728x90-1.jpg"
                                     className="img-fluid"
                                     alt=""
                                 />
@@ -214,14 +214,14 @@ const HeaderTwo = () => {
                 <div className="container position-relative">
                     {/* Start Navbar Brand*/}
                     <Link className="navbar-brand d-md-none" href="/">
-                        {/* <img class="logo-dark" src="assets/images/logo.png" alt=""> */}
+                        {/* <img class="logo-dark" src="/assets/images/logo.png" alt=""> */}
                         <img
-                            src="assets/images/logo.png"
+                            src="/assets/images/logo.png"
                             className="header-logo_dark"
                             alt=""
                         />
                         <img
-                            src="assets/images/logo-white.png"
+                            src="/assets/images/logo-white.png"
                             className="header-logo_white"
                             alt=""
                         />
@@ -257,14 +257,14 @@ const HeaderTwo = () => {
                             <div className="collapse-brand flex-shrink-0">
                                 <Link href="/">
                                     <img
-                                        src="assets/images/logo.png"
+                                        src="/assets/images/logo.png"
                                         className="header-logo_dark"
                                         alt=""
                                     />
                                 </Link>
                                 <Link href="/">
                                     <img
-                                        src="assets/images/logo-white.png"
+                                        src="/assets/images/logo-white.png"
                                         className="header-logo_white"
                                         alt=""
                                     />
@@ -427,7 +427,7 @@ const HeaderTwo = () => {
                                             <Link className="video-nav-item" href="#">
                                                 <div className="img-wrapper">
                                                     <img
-                                                        src="assets/images/gallery-235x160-1.jpg"
+                                                        src="/assets/images/gallery-235x160-1.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -445,7 +445,7 @@ const HeaderTwo = () => {
                                             <Link className="video-nav-item" href="#" >
                                                 <div className="img-wrapper">
                                                     <img
-                                                        src="assets/images/gallery-235x160-2.jpg"
+                                                        src="/assets/images/gallery-235x160-2.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -463,7 +463,7 @@ const HeaderTwo = () => {
                                             <Link className="video-nav-item" href="#">
                                                 <div className="img-wrapper">
                                                     <img
-                                                        src="assets/images/gallery-235x160-3.jpg"
+                                                        src="/assets/images/gallery-235x160-3.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -480,7 +480,7 @@ const HeaderTwo = () => {
                                             <Link className="video-nav-item" href="#">
                                                 <div className="img-wrapper">
                                                     <img
-                                                        src="assets/images/gallery-235x160-4.jpg"
+                                                        src="/assets/images/gallery-235x160-4.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />
@@ -498,7 +498,7 @@ const HeaderTwo = () => {
                                             <Link className="video-nav-item" href="#">
                                                 <div className="img-wrapper">
                                                     <img
-                                                        src="assets/images/gallery-235x160-5.jpg"
+                                                        src="/assets/images/gallery-235x160-5.jpg"
                                                         alt=""
                                                         className="img-fluid"
                                                     />

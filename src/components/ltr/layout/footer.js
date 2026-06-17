@@ -12,13 +12,13 @@ const Footer = () => {
       {/* *** START FOOTER *** */}
       <footer
         className="main-footer bg-img"
-        data-image-src="assets/images/1920x1000-1.jpg"
+        data-image-src="/assets/images/1920x1000-1.jpg"
       >
         <div className="container position-relative z-1">
           <div className="g-3 row">
             <div className="col-md-3">
               <img
-                src="assets/images/logo-white.png"
+                src="/assets/images/logo-white.png"
                 alt="footer logo"
                 className="img-fluid"
               />
@@ -64,7 +64,7 @@ const Footer = () => {
                 <div className="bg-white mb-3 d-inline-block">
                   {/* Start Qr Code Image */}
                   <img
-                    src="assets/images/qr-code.png"
+                    src="/assets/images/qr-code.png"
                     className="figure-img img-fluid mb-0"
                     height={146}
                     width={146}
@@ -171,7 +171,7 @@ const Footer = () => {
                   <div className="img-wrapper">
                     <a href="#" className="thumb">
                       <img
-                        src="assets/images/115x85-1.jpg"
+                        src="/assets/images/115x85-1.jpg"
                         alt=""
                         className="img-fluid"
                       />
@@ -195,7 +195,7 @@ const Footer = () => {
                   <div className="img-wrapper">
                     <a href="#" className="thumb">
                       <img
-                        src="assets/images/115x85-2.jpg"
+                        src="/assets/images/115x85-2.jpg"
                         alt=""
                         className="img-fluid"
                       />
@@ -219,7 +219,7 @@ const Footer = () => {
                   <div className="img-wrapper">
                     <a href="#" className="thumb">
                       <img
-                        src="assets/images/115x85-3.jpg"
+                        src="/assets/images/115x85-3.jpg"
                         alt=""
                         className="img-fluid"
                       />
