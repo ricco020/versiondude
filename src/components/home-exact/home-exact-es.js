@@ -415,7 +415,7 @@ export default function Home_es() {
                   <div className="post-body py-0">
                     <article>
                       <figure>
-                        <a href="">
+                        <a href="/es/articles/what-is-a-parser">
                           <img
                             src="/assets/articles/secrets-management-tools-hero.jpg"
                             width={345}
