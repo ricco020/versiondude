@@ -447,11 +447,7 @@ export default function Home_es() {
                             Por <span className="editor-name">VersionDude</span>
                           </li>
                           </ul>
-                        <p>
-                          Sed ut perspiciatis unde omnis iste natus sit voluptatem
-                          accusantium doloremque laudantium, totamrem aperiam, eaque
-                          ipsa quae ab illo inventore
-                        </p>
+                        <p>Cómo un analizador convierte el marcado en un árbol estructurado — y la recuperación de errores normalizada que pone de acuerdo a todos los navegadores.</p>
                       </div>
                     </article>
                   </div>
@@ -865,7 +861,7 @@ export default function Home_es() {
                 </p>
               </div>
             </div>
-            <YoutubeVideo />
+            
           </div>
         </div>
         {/* END OF /. YOUTUBE VIDEO */}
@@ -1320,11 +1316,11 @@ export default function Home_es() {
                   {/* END OF /. ADVERTISEMENT */}
                   {/* START ARCHIVE */}
                   <div className="archive-wrapper">
-                    <DatePickerComponents />
+                    
                   </div>
                   {/* END OF /. ARCHIVE */}
                   {/* START POLL WIDGET */}
-                  <PollWidget />
+                  
                   {/* END OF /. POLL WIDGET */}
                   {/* START TAGS */}
                   <Tags />

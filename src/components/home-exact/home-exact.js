@@ -447,11 +447,7 @@ export default function Home() {
                             By <span className="editor-name">VersionDude</span>
                           </li>
                           </ul>
-                        <p>
-                          Sed ut perspiciatis unde omnis iste natus sit voluptatem
-                          accusantium doloremque laudantium, totamrem aperiam, eaque
-                          ipsa quae ab illo inventore
-                        </p>
+                        <p>How a parser turns raw markup into a structured tree — and the standard error recovery that makes every browser agree.</p>
                       </div>
                     </article>
                   </div>
@@ -865,7 +861,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <YoutubeVideo />
+            
           </div>
         </div>
         {/* END OF /. YOUTUBE VIDEO */}
@@ -1320,11 +1316,11 @@ export default function Home() {
                   {/* END OF /. ADVERTISEMENT */}
                   {/* START ARCHIVE */}
                   <div className="archive-wrapper">
-                    <DatePickerComponents />
+                    
                   </div>
                   {/* END OF /. ARCHIVE */}
                   {/* START POLL WIDGET */}
-                  <PollWidget />
+                  
                   {/* END OF /. POLL WIDGET */}
                   {/* START TAGS */}
                   <Tags />

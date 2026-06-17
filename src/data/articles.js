@@ -1,5 +1,6 @@
 import FR from "./articles-fr.json";
 import ES from "./articles-es.json";
+import ENX from "./articles-en.json";
 // VersionDude — articles éditoriaux réels (EN + traductions FR/ES). Contenu factuel et original.
 // Pilier 1 (web standards / jus) : non monétisé. Pilier 2 (privacy/open-source) : CTA Proton perso.
 // Images : Pixabay, libres de droits, uniques, légendes honnêtes (vérifiées).
@@ -221,16 +222,24 @@ const CATS = {
 };
 
 const TR = { fr: FR, es: ES };
+// Corps EN étoffé (8-12 paragraphes) appliqué d'abord, puis traduction par locale.
+function applyEN(a) {
+  const o = ENX[a.slug];
+  return o ? { ...a, paras: o.paras || a.paras, list: o.list || a.list } : a;
+}
 function localize(a, locale) {
   const o = (TR[locale] || {})[a.slug];
   if (!o) return a;
   return { ...a, title: o.title || a.title, dek: o.dek || a.dek, paras: o.paras || a.paras,
     list: o.list || a.list, heroAlt: o.heroAlt || a.heroAlt, bodyCaption: o.bodyCaption || a.bodyCaption };
 }
-export function getArticles(locale = "en") { return ARTICLES.map((a) => localize(a, locale)); }
+export function getArticles(locale = "en") {
+  return ARTICLES.map((a) => (locale === "en" ? applyEN(a) : localize(applyEN(a), locale)));
+}
 export function findArticleBySlug(slug, locale = "en") {
   const a = ARTICLES.find((x) => x.slug === slug);
-  return a ? localize(a, locale) : undefined;
+  if (!a) return undefined;
+  return locale === "en" ? applyEN(a) : localize(applyEN(a), locale);
 }
 const CAT_I18N = {
   en: CATS,
