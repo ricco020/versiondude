@@ -1,3 +1,4 @@
 import Home from "@/components/home-exact/home-exact-es";
-export function generateMetadata(){return{title:"VersionDude — web standards, parsers & developer tooling",robots:{index:true,follow:true},alternates:{canonical:"https://versiondude.net/es/"}};}
+import { t } from "@/data/site-i18n";
+export function generateMetadata(){const m=t("es").meta;return{title:m.homeTitle,description:m.homeDesc,robots:{index:true,follow:true},alternates:{canonical:"https://versiondude.net/es/"}};}
 export default function P(){return <Home/>;}

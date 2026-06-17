@@ -4,6 +4,7 @@ export const DEFAULT_LOCALE = "en";
 
 const T = {
   en: {
+    meta: { homeTitle: "VersionDude — web standards, parsers & developer tooling", homeDesc: "Web standards, HTML parsing and developer tooling — plus practical guides to open-source, self-hosted and privacy tools.", catDesc: "Browse VersionDude by category: web standards, HTML parsing, developer tooling and archived projects." },
     nav: { home: "Home", projects: "Projects", articles: "Guides", about: "About", contact: "Contact", faq: "FAQ" },
     cats: { standards: "Standards", parsing: "Parsing", tooling: "Tooling", archive: "Archive" },
     ui: { home: "Home", readMin: "min read", latest: "Latest articles", projects: "Projects", guides: "Guides",
@@ -45,6 +46,7 @@ const T = {
     ],
   },
   fr: {
+    meta: { homeTitle: "VersionDude — standards web, parseurs & outils pour développeurs", homeDesc: "Standards web, parsing HTML et outillage pour développeurs — plus des guides pratiques sur les outils open source, auto-hébergés et de confidentialité.", catDesc: "Parcourez VersionDude par catégorie : standards web, parsing HTML, outils pour développeurs et projets archivés." },
     nav: { home: "Accueil", projects: "Projets", articles: "Guides", about: "À propos", contact: "Contact", faq: "FAQ" },
     cats: { standards: "Standards", parsing: "Analyse", tooling: "Outils", archive: "Archive" },
     ui: { home: "Accueil", readMin: "min de lecture", latest: "Derniers articles", projects: "Projets", guides: "Guides",
@@ -86,6 +88,7 @@ const T = {
     ],
   },
   es: {
+    meta: { homeTitle: "VersionDude — estándares web, analizadores y herramientas para desarrolladores", homeDesc: "Estándares web, análisis de HTML y herramientas para desarrolladores — además de guías prácticas sobre herramientas open source, autoalojadas y de privacidad.", catDesc: "Explora VersionDude por categoría: estándares web, análisis de HTML, herramientas para desarrolladores y proyectos archivados." },
     nav: { home: "Inicio", projects: "Proyectos", articles: "Guías", about: "Acerca de", contact: "Contacto", faq: "FAQ" },
     cats: { standards: "Estándares", parsing: "Análisis", tooling: "Herramientas", archive: "Archivo" },
     ui: { home: "Inicio", readMin: "min de lectura", latest: "Últimos artículos", projects: "Proyectos", guides: "Guías",
