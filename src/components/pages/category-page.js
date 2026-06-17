@@ -36,13 +36,13 @@ export default function CategoryPage({ locale = "en", categoryKey, title, items 
                 {items.map((x) => (
                   <div className="col-md-6" key={x.slug}>
                     <article className="card h-100 border-0 shadow-sm">
-                      <Link href={`${p}/${x.type}/${x.slug}`}>
+                      <Link href={x.href}>
                         <img src={x.img} className="card-img-top" alt={x.alt} style={{ height: 200, objectFit: "cover" }} />
                       </Link>
                       <div className="card-body">
                         <span className="badge bg-danger mb-2">{title}</span>
                         <h3 className="h5 card-title">
-                          <Link href={`${p}/${x.type}/${x.slug}`} className="text-dark text-decoration-none stretched-link">{x.title}</Link>
+                          <Link href={x.href} className="text-dark text-decoration-none stretched-link">{x.title}</Link>
                         </h3>
                         {x.desc ? <p className="card-text text-muted small">{x.desc}</p> : null}
                         <div className="text-muted small">{s.ui.by} VersionDude{x.meta ? ` · ${x.meta}` : ""}</div>

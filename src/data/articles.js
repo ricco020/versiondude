@@ -238,6 +238,40 @@ const CATS = {
 };
 
 const TR = { fr: FR, es: ES };
+
+// Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
+const ART_SLUG = {
+  "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto" },
+  "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados" },
+  "secrets-management-tools": { fr: "outils-de-gestion-des-secrets", es: "herramientas-de-gestion-de-secretos" },
+  "proton-mail-review": { fr: "test-proton-mail", es: "analisis-proton-mail" },
+  "best-encrypted-email": { fr: "meilleurs-services-email-chiffre", es: "mejores-servicios-de-correo-cifrado" },
+  "proton-pass-review": { fr: "test-proton-pass", es: "analisis-proton-pass" },
+  "what-is-the-dom": { fr: "qu-est-ce-que-le-dom", es: "que-es-el-dom" },
+  "html-validator": { fr: "validateur-html", es: "validador-html" },
+  "what-is-a-parser": { fr: "qu-est-ce-qu-un-parseur", es: "que-es-un-analizador" },
+  "semantic-web": { fr: "web-semantique", es: "web-semantica" },
+  "xml-vs-html": { fr: "xml-contre-html", es: "xml-frente-a-html" },
+  "ruby-on-rails-cms": { fr: "cms-ruby-on-rails", es: "cms-ruby-on-rails-es" },
+  "character-encoding-utf-8": { fr: "encodage-des-caracteres-utf-8", es: "codificacion-de-caracteres-utf-8" },
+  "self-hosted-cms": { fr: "cms-auto-heberges", es: "cms-autoalojados" },
+};
+export function slugFor(enSlug, locale) {
+  return locale === "en" ? enSlug : (ART_SLUG[enSlug] && ART_SLUG[enSlug][locale]) || enSlug;
+}
+export function enSlugOf(locSlug, locale) {
+  if (locale === "en") return locSlug;
+  for (const en in ART_SLUG) if (ART_SLUG[en][locale] === locSlug) return en;
+  return locSlug;
+}
+// href complet localisé pour un article (slug localisé + préfixe locale)
+export function articleHref(enSlug, locale) {
+  const p = locale === "en" ? "" : `/${locale}`;
+  return `${p}/articles/${slugFor(enSlug, locale)}`;
+}
+export function localizedArticleSlugs(locale) {
+  return ARTICLES.map((a) => slugFor(a.slug, locale));
+}
 // Corps EN étoffé (8-12 paragraphes) appliqué d'abord, puis traduction par locale.
 function applyEN(a) {
   const o = ENX[a.slug];
@@ -253,7 +287,8 @@ export function getArticles(locale = "en") {
   return ARTICLES.map((a) => (locale === "en" ? applyEN(a) : localize(applyEN(a), locale)));
 }
 export function findArticleBySlug(slug, locale = "en") {
-  const a = ARTICLES.find((x) => x.slug === slug);
+  const en = enSlugOf(slug, locale); // accepte le slug localisé OU le slug EN
+  const a = ARTICLES.find((x) => x.slug === en);
   if (!a) return undefined;
   return locale === "en" ? applyEN(a) : localize(applyEN(a), locale);
 }

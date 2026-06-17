@@ -3,7 +3,7 @@ import LayoutTwo from "@/components/ltr/layout/layout-two";
 import StickyBox from "react-sticky-box";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
-import { getArticles, categoryLabel, getSections } from "@/data/articles";
+import { getArticles, categoryLabel, getSections, articleHref } from "@/data/articles";
 
 // Article fidèle au post-template démo + structure éditoriale magazine (chapô lettrine, intertitres H2,
 // citation, image légendée, sidebar onglets). Contenu réel, sans fake.
@@ -119,12 +119,12 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                       {related.map((r) => (
                         <div className="col-sm-4" key={r.slug}>
                           <div className="slider-post post-height-4">
-                            <Link href={`${p}/articles/${r.slug}`} className="news-image">
+                            <Link href={articleHref(r.slug, loc)} className="news-image">
                               <img src={r.hero} alt={r.heroAlt} className="img-fluid" />
                             </Link>
                             <div className="post-text">
                               <span className="post-category">{categoryLabel(r.category, loc)}</span>
-                              <h4><Link href={`${p}/articles/${r.slug}`}>{r.title}</Link></h4>
+                              <h4><Link href={articleHref(r.slug, loc)}>{r.title}</Link></h4>
                             </div>
                           </div>
                         </div>
@@ -151,12 +151,12 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                   <div className="tab-content" id="sideTabContent">
                     <div className="tab-pane fade show active" id="mv-pane" role="tabpanel" aria-labelledby="mv" tabIndex={0}>
                       <div className="most-viewed"><ul className="content tabs-content">
-                        {sideA.map((o, i) => (<li key={o.slug}><span className="count">{String(i + 1).padStart(2, "0")}</span><span className="text"><Link href={`${p}/articles/${o.slug}`}>{o.title}</Link></span></li>))}
+                        {sideA.map((o, i) => (<li key={o.slug}><span className="count">{String(i + 1).padStart(2, "0")}</span><span className="text"><Link href={articleHref(o.slug, loc)}>{o.title}</Link></span></li>))}
                       </ul></div>
                     </div>
                     <div className="tab-pane fade" id="pn-pane" role="tabpanel" aria-labelledby="pn" tabIndex={0}>
                       <div className="most-viewed"><ul className="content tabs-content">
-                        {sideB.map((o, i) => (<li key={o.slug}><span className="count">{String(i + 1).padStart(2, "0")}</span><span className="text"><Link href={`${p}/articles/${o.slug}`}>{o.title}</Link></span></li>))}
+                        {sideB.map((o, i) => (<li key={o.slug}><span className="count">{String(i + 1).padStart(2, "0")}</span><span className="text"><Link href={articleHref(o.slug, loc)}>{o.title}</Link></span></li>))}
                       </ul></div>
                     </div>
                   </div>

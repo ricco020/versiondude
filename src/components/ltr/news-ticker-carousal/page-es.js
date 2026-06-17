@@ -45,13 +45,13 @@ const NewsTicker = () => {
             }
           }}>
           <div className="item">
-            <a href="/es/articles/open-source-password-managers">Los mejores gestores de contraseñas de código abierto</a>
+            <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">Los mejores gestores de contraseñas de código abierto</a>
           </div>
           <div className="item">
-            <a href="/es/articles/best-encrypted-email">Los mejores servicios de correo cifrado</a>
+            <a href="/es/articles/mejores-servicios-de-correo-cifrado">Los mejores servicios de correo cifrado</a>
           </div>
           <div className="item">
-            <a href="/es/articles/what-is-the-dom">¿Qué es el DOM?</a>
+            <a href="/es/articles/que-es-el-dom">¿Qué es el DOM?</a>
           </div>
         </OwlCarousel>
       </div>

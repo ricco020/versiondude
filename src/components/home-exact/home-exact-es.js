@@ -48,7 +48,7 @@ export default function Home_es() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/es/articles/open-source-password-managers" className="news-image">
+                      <Link href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt=""
@@ -57,7 +57,7 @@ export default function Home_es() {
                       </Link>
                       <div className="post-text">
                         <span className="post-category">Estándares</span>
-                        <h4><Link href="/es/articles/open-source-password-managers">Los mejores gestores de contraseñas de código abierto</Link>
+                        <h4><Link href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">Los mejores gestores de contraseñas de código abierto</Link>
                         </h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -69,7 +69,7 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/es/articles/self-hosted-password-managers" className="news-image">
+                      <Link href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
                         <img
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt=""
@@ -78,7 +78,7 @@ export default function Home_es() {
                       </Link>
                       <div className="post-text">
                         <span className="post-category">Análisis</span>
-                        <h4><Link href="/es/articles/self-hosted-password-managers">Gestores de contraseñas autoalojados</Link>
+                        <h4><Link href="/es/articles/gestores-de-contrasenas-autoalojados">Gestores de contraseñas autoalojados</Link>
                         </h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -90,7 +90,7 @@ export default function Home_es() {
                   </div>
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/es/articles/secrets-management-tools" className="news-image">
+                      <Link href="/es/articles/herramientas-de-gestion-de-secretos" className="news-image">
                         <img
                           src="/assets/articles/secrets-management-tools-hero.jpg"
                           alt=""
@@ -99,7 +99,7 @@ export default function Home_es() {
                       </Link>
                       <div className="post-text">
                         <span className="post-category">Herramientas</span>
-                        <h4><Link href="/es/articles/secrets-management-tools">Herramientas de gestión de secretos para desarrolladores</Link>
+                        <h4><Link href="/es/articles/herramientas-de-gestion-de-secretos">Herramientas de gestión de secretos para desarrolladores</Link>
                         </h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -120,7 +120,7 @@ export default function Home_es() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
-                      <Link href="/es/articles/proton-mail-review" className="news-image">
+                      <Link href="/es/articles/analisis-proton-mail" className="news-image">
                         <img
                           src="/assets/articles/proton-mail-review-hero.jpg"
                           alt=""
@@ -129,7 +129,7 @@ export default function Home_es() {
                       </Link>
                       <div className="post-text">
                         <span className="post-category">Archivo</span>
-                        <h4><Link href="/es/articles/proton-mail-review">Análisis de Proton Mail: correo cifrado</Link>
+                        <h4><Link href="/es/articles/analisis-proton-mail">Análisis de Proton Mail: correo cifrado</Link>
                         </h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -141,7 +141,7 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/es/articles/open-source-password-managers" className="news-image">
+                      <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt=""
@@ -151,7 +151,7 @@ export default function Home_es() {
                       <div className="post-text">
                         <span className="post-category">Estándares</span>
                         <h4>
-                          <a href="/es/articles/open-source-password-managers">Los mejores gestores de contraseñas de código abierto</a>
+                          <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">Los mejores gestores de contraseñas de código abierto</a>
                         </h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -163,7 +163,7 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/es/articles/self-hosted-password-managers" className="news-image">
+                      <a href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
                         <img
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt=""
@@ -173,7 +173,7 @@ export default function Home_es() {
                       <div className="post-text">
                         <span className="post-category">Análisis</span>
                         <h4>
-                          <a href="/es/articles/self-hosted-password-managers">Gestores de contraseñas autoalojados</a>
+                          <a href="/es/articles/gestores-de-contrasenas-autoalojados">Gestores de contraseñas autoalojados</a>
                         </h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -204,7 +204,7 @@ export default function Home_es() {
                     <li className="post-grid">
                       <div className="posts-inner px-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/secrets-management-tools">Herramientas de gestión de secretos para desarrolladores</a>
+                          <a href="/es/articles/herramientas-de-gestion-de-secretos">Herramientas de gestión de secretos para desarrolladores</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -217,7 +217,7 @@ export default function Home_es() {
                     <li className="post-grid">
                       <div className="posts-inner px-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/proton-mail-review">Análisis de Proton Mail: correo cifrado</a>
+                          <a href="/es/articles/analisis-proton-mail">Análisis de Proton Mail: correo cifrado</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -230,7 +230,7 @@ export default function Home_es() {
                     <li className="d-none d-xl-block post-grid">
                       <div className="posts-inner px-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/best-encrypted-email">Los mejores servicios de correo cifrado</a>
+                          <a href="/es/articles/mejores-servicios-de-correo-cifrado">Los mejores servicios de correo cifrado</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -287,31 +287,31 @@ export default function Home_es() {
                           <li>
                             <span className="count">01</span>
                             <span className="text">
-                              <a href="/es/articles/open-source-password-managers">Los mejores gestores de contraseñas de código abierto</a>
+                              <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">Los mejores gestores de contraseñas de código abierto</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">02</span>
                             <span className="text">
-                              <a href="/es/articles/self-hosted-password-managers">Gestores de contraseñas autoalojados</a>
+                              <a href="/es/articles/gestores-de-contrasenas-autoalojados">Gestores de contraseñas autoalojados</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">03</span>
                             <span className="text">
-                              <a href="/es/articles/secrets-management-tools">Herramientas de gestión de secretos para desarrolladores</a>
+                              <a href="/es/articles/herramientas-de-gestion-de-secretos">Herramientas de gestión de secretos para desarrolladores</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">04</span>
                             <span className="text">
-                              <a href="/es/articles/proton-mail-review">Análisis de Proton Mail: correo cifrado</a>
+                              <a href="/es/articles/analisis-proton-mail">Análisis de Proton Mail: correo cifrado</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">05</span>
                             <span className="text">
-                              <a href="/es/articles/best-encrypted-email">Los mejores servicios de correo cifrado</a>
+                              <a href="/es/articles/mejores-servicios-de-correo-cifrado">Los mejores servicios de correo cifrado</a>
                             </span>
                           </li>
                         </ul>
@@ -327,7 +327,7 @@ export default function Home_es() {
                       <div className="popular-news">
                         <div className="p-post">
                           <h4>
-                            <a href="/es/articles/proton-pass-review">Análisis de Proton Pass</a>
+                            <a href="/es/articles/analisis-proton-pass">Análisis de Proton Pass</a>
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
@@ -336,7 +336,7 @@ export default function Home_es() {
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/articles/what-is-the-dom">
+                              <a href="/es/articles/que-es-el-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -352,16 +352,16 @@ export default function Home_es() {
                         </div>
                         <div className="p-post">
                           <h4>
-                            <a href="/es/articles/what-is-the-dom">¿Qué es el DOM?</a>
+                            <a href="/es/articles/que-es-el-dom">¿Qué es el DOM?</a>
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/articles/html-validator">
+                              <a href="/es/articles/validador-html">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/articles/html-validator">
+                              <a href="/es/articles/validador-html">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -377,16 +377,16 @@ export default function Home_es() {
                         </div>
                         <div className="p-post">
                           <h4>
-                            <a href="/es/articles/html-validator">Qué hace un validador de HTML</a>
+                            <a href="/es/articles/validador-html">Qué hace un validador de HTML</a>
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/articles/what-is-the-dom">
+                              <a href="/es/articles/que-es-el-dom">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/articles/what-is-the-dom">
+                              <a href="/es/articles/que-es-el-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -415,7 +415,7 @@ export default function Home_es() {
                   <div className="post-body py-0">
                     <article>
                       <figure>
-                        <a href="/es/articles/what-is-a-parser">
+                        <a href="/es/articles/que-es-un-analizador">
                           <img
                             src="/assets/articles/secrets-management-tools-hero.jpg"
                             width={345}
@@ -426,7 +426,7 @@ export default function Home_es() {
                       </figure>
                       <div className="post-info">
                         <h3 className="fs-4">
-                          <a href="/es/articles/what-is-a-parser">¿Qué es un analizador?</a>
+                          <a href="/es/articles/que-es-un-analizador">¿Qué es un analizador?</a>
                         </h3>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -447,7 +447,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/open-source-password-managers">
+                          <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">
                             <img
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
@@ -459,7 +459,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/open-source-password-managers" className="title">Los mejores gestores de contraseñas de código abierto</a>
+                          <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="title">Los mejores gestores de contraseñas de código abierto</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -468,7 +468,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/self-hosted-password-managers">
+                          <a href="/es/articles/gestores-de-contrasenas-autoalojados">
                             <img
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
@@ -480,7 +480,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/self-hosted-password-managers" className="title">Gestores de contraseñas autoalojados</a>
+                          <a href="/es/articles/gestores-de-contrasenas-autoalojados" className="title">Gestores de contraseñas autoalojados</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -489,7 +489,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/secrets-management-tools">
+                          <a href="/es/articles/herramientas-de-gestion-de-secretos">
                             <img
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
@@ -501,7 +501,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/secrets-management-tools" className="title">Herramientas de gestión de secretos para desarrolladores</a>
+                          <a href="/es/articles/herramientas-de-gestion-de-secretos" className="title">Herramientas de gestión de secretos para desarrolladores</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -510,7 +510,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/proton-mail-review">
+                          <a href="/es/articles/analisis-proton-mail">
                             <img
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
@@ -522,7 +522,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/proton-mail-review" className="title">Análisis de Proton Mail: correo cifrado</a>
+                          <a href="/es/articles/analisis-proton-mail" className="title">Análisis de Proton Mail: correo cifrado</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -531,7 +531,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/best-encrypted-email">
+                          <a href="/es/articles/mejores-servicios-de-correo-cifrado">
                             <img
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
@@ -543,7 +543,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/best-encrypted-email" className="title">Los mejores servicios de correo cifrado</a>
+                          <a href="/es/articles/mejores-servicios-de-correo-cifrado" className="title">Los mejores servicios de correo cifrado</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -552,7 +552,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/proton-pass-review">
+                          <a href="/es/articles/analisis-proton-pass">
                             <img
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
@@ -564,7 +564,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/proton-pass-review" className="title">Análisis de Proton Pass</a>
+                          <a href="/es/articles/analisis-proton-pass" className="title">Análisis de Proton Pass</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -667,7 +667,7 @@ export default function Home_es() {
                   </div>
                   <div className="panel_body">
                     <div className="more-post">
-                      <a href="/es/articles/open-source-password-managers" className="news-image">
+                      <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-body.jpg"
                           alt=""
@@ -696,7 +696,7 @@ export default function Home_es() {
                     <div className="mt-4 news-list">
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/es/articles/what-is-the-dom" className="thumb">
+                          <a href="/es/articles/que-es-el-dom" className="thumb">
                             <img
                               src="/assets/articles/secrets-management-tools-body.jpg"
                               alt=""
@@ -709,7 +709,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h5>
-                            <a href="/es/articles/what-is-the-dom" className="title">¿Qué es el DOM?</a>
+                            <a href="/es/articles/que-es-el-dom" className="title">¿Qué es el DOM?</a>
                           </h5>
                           <div className="reviews-reatting">
                             <i className="fas fa-star" />
@@ -722,7 +722,7 @@ export default function Home_es() {
                       </div>
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/es/articles/html-validator" className="thumb">
+                          <a href="/es/articles/validador-html" className="thumb">
                             <img
                               src="/assets/articles/best-encrypted-email-body.jpg"
                               alt=""
@@ -735,7 +735,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h5>
-                            <a href="/es/articles/html-validator" className="title">Qué hace un validador de HTML</a>
+                            <a href="/es/articles/validador-html" className="title">Qué hace un validador de HTML</a>
                           </h5>
                           <div className="reviews-reatting">
                             <i className="fas fa-star" />
@@ -748,7 +748,7 @@ export default function Home_es() {
                       </div>
                       <div className="news-list-item p-0">
                         <div className="img-wrapper">
-                          <a href="/es/articles/what-is-a-parser" className="thumb">
+                          <a href="/es/articles/que-es-un-analizador" className="thumb">
                             <img
                               src="/assets/articles/what-is-the-dom-body.jpg"
                               alt=""
@@ -761,7 +761,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h5>
-                            <a href="/es/articles/what-is-a-parser" className="title">¿Qué es un analizador?</a>
+                            <a href="/es/articles/que-es-un-analizador" className="title">¿Qué es un analizador?</a>
                           </h5>
                           <div className="reviews-reatting">
                             <i className="fas fa-star" />
@@ -796,7 +796,7 @@ export default function Home_es() {
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/es/articles/semantic-web" className="d-block mb-3">
+                        <a href="/es/articles/web-semantica" className="d-block mb-3">
                           <img
                             src="/assets/articles/semantic-web-body.jpg"
                             alt=""
@@ -804,7 +804,7 @@ export default function Home_es() {
                           />
                         </a>
                         <h5>
-                          <a href="/es/articles/semantic-web">La web semántica, explicada</a>
+                          <a href="/es/articles/web-semantica">La web semántica, explicada</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -818,21 +818,21 @@ export default function Home_es() {
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
-                          <a href="/es/articles/xml-vs-html">XML vs HTML: ¿cuál es la diferencia?</a>
+                          <a href="/es/articles/xml-frente-a-html">XML vs HTML: ¿cuál es la diferencia?</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
-                          <a href="/es/articles/ruby-on-rails-cms">CMS en Ruby on Rails</a>
+                          <a href="/es/articles/cms-ruby-on-rails-es">CMS en Ruby on Rails</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
                       </div>
                       <div className="py-3 pb-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/character-encoding-utf-8">La codificación de caracteres y por qué ganó UTF-8</a>
+                          <a href="/es/articles/codificacion-de-caracteres-utf-8">La codificación de caracteres y por qué ganó UTF-8</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -849,7 +849,7 @@ export default function Home_es() {
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/es/articles/self-hosted-cms" className="d-block mb-3">
+                        <a href="/es/articles/cms-autoalojados" className="d-block mb-3">
                           <img
                             src="/assets/projects/html5-parser-hero.jpg"
                             alt=""
@@ -857,7 +857,7 @@ export default function Home_es() {
                           />
                         </a>
                         <h5>
-                          <a href="/es/articles/self-hosted-cms">CMS autoalojados que conviene conocer</a>
+                          <a href="/es/articles/cms-autoalojados">CMS autoalojados que conviene conocer</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
@@ -912,7 +912,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/semantic-web" className="thumb">
+                          <a href="/es/articles/web-semantica" className="thumb">
                             <img
                               src="/assets/projects/validator-nu-hero.jpg"
                               alt=""
@@ -922,7 +922,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/semantic-web" className="title">La web semántica, explicada</a>
+                            <a href="/es/articles/web-semantica" className="title">La web semántica, explicada</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
@@ -940,7 +940,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/xml-vs-html" className="thumb">
+                          <a href="/es/articles/xml-frente-a-html" className="thumb">
                             <img
                               src="/assets/projects/railfrog-hero.jpg"
                               alt=""
@@ -950,7 +950,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/xml-vs-html" className="title">XML vs HTML: ¿cuál es la diferencia?</a>
+                            <a href="/es/articles/xml-frente-a-html" className="title">XML vs HTML: ¿cuál es la diferencia?</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
@@ -968,7 +968,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/ruby-on-rails-cms" className="thumb">
+                          <a href="/es/articles/cms-ruby-on-rails-es" className="thumb">
                             <img
                               src="/assets/projects/pellet-hero.jpg"
                               alt=""
@@ -978,7 +978,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/ruby-on-rails-cms" className="title">CMS en Ruby on Rails</a>
+                            <a href="/es/articles/cms-ruby-on-rails-es" className="title">CMS en Ruby on Rails</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
@@ -996,7 +996,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/character-encoding-utf-8" className="thumb">
+                          <a href="/es/articles/codificacion-de-caracteres-utf-8" className="thumb">
                             <img
                               src="/assets/projects/bersirc-hero.jpg"
                               alt=""
@@ -1006,7 +1006,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/character-encoding-utf-8" className="title">La codificación de caracteres y por qué ganó UTF-8</a>
+                            <a href="/es/articles/codificacion-de-caracteres-utf-8" className="title">La codificación de caracteres y por qué ganó UTF-8</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
@@ -1024,7 +1024,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/self-hosted-cms" className="thumb">
+                          <a href="/es/articles/cms-autoalojados" className="thumb">
                             <img
                               src="/assets/articles/open-source-password-managers-hero.jpg"
                               alt=""
@@ -1034,7 +1034,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/self-hosted-cms" className="title">CMS autoalojados que conviene conocer</a>
+                            <a href="/es/articles/cms-autoalojados" className="title">CMS autoalojados que conviene conocer</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
@@ -1062,28 +1062,28 @@ export default function Home_es() {
                             <ul>
                               <li>
                                 <div className="share transition">
-                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico fb">
+                                  <a href="/es/articles/que-es-el-dom" target="_blank" className="ico fb">
                                     <i className="fab fa-facebook-f" />
                                   </a>
-                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico tw">
+                                  <a href="/es/articles/que-es-el-dom" target="_blank" className="ico tw">
                                     <i className="fab fa-twitter" />
                                   </a>
-                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico rs">
+                                  <a href="/es/articles/que-es-el-dom" target="_blank" className="ico rs">
                                     <i className="fas fa-rss" />
                                   </a>
-                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico pin">
+                                  <a href="/es/articles/que-es-el-dom" target="_blank" className="ico pin">
                                     <i className="fab fa-pinterest-p" />
                                   </a>
                                   <i className="ti ti-share ico-share" />
                                 </div>
                               </li>
                               <li>
-                                <a href="/es/articles/what-is-the-dom">
+                                <a href="/es/articles/que-es-el-dom">
                                   <i className="ti ti-heart" />
                                 </a>
                               </li>
                               <li>
-                                <a href="/es/articles/what-is-the-dom">
+                                <a href="/es/articles/que-es-el-dom">
                                   <i className="ti ti-twitter" />
                                 </a>
                               </li>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
+import { articleHref } from "@/data/articles";
 
 // Tags réels = catégories + thèmes, liens vers les pages catégorie (locale-aware). Plus de href="#".
 const Tags = ({ locale = "en" }) => {
@@ -11,10 +12,10 @@ const Tags = ({ locale = "en" }) => {
     { label: s.cats.tooling, href: `${p}/categories/tooling` },
     { label: s.cats.archive, href: `${p}/categories/archive` },
     { label: "HTML", href: `${p}/categories/standards` },
-    { label: "DOM", href: `${p}/articles/what-is-the-dom` },
-    { label: "Proton", href: `${p}/articles/proton-mail-review` },
-    { label: "Open source", href: `${p}/articles/open-source-password-managers` },
-    { label: "Privacy", href: `${p}/articles/best-encrypted-email` },
+    { label: "DOM", href: articleHref("what-is-the-dom", locale) },
+    { label: "Proton", href: articleHref("proton-mail-review", locale) },
+    { label: "Open source", href: articleHref("open-source-password-managers", locale) },
+    { label: "Privacy", href: articleHref("best-encrypted-email", locale) },
   ];
   return (
     <div className="panel_inner mb-0">

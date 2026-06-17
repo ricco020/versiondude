@@ -129,3 +129,9 @@ const T = {
 };
 
 export function t(locale) { return T[locale] || T.en; }
+
+export const CONSENT = {
+  en: { text: "We use cookies and analytics to understand how this site is used. You can accept or decline.", accept: "Accept", decline: "Decline", more: "Privacy" },
+  fr: { text: "Nous utilisons des cookies et des statistiques pour comprendre l'usage du site. Vous pouvez accepter ou refuser.", accept: "Accepter", decline: "Refuser", more: "Confidentialité" },
+  es: { text: "Usamos cookies y analítica para entender cómo se usa el sitio. Puedes aceptar o rechazar.", accept: "Aceptar", decline: "Rechazar", more: "Privacidad" },
+};

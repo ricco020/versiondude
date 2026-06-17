@@ -43,7 +43,7 @@ const HomeFeatureCarousal = () => {
     >
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="/fr/articles/open-source-password-managers" className="thumb">
+          <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="thumb">
             <img
               src="/assets/articles/self-hosted-password-managers-body.jpg"
               alt=""
@@ -57,13 +57,13 @@ const HomeFeatureCarousal = () => {
         <div className="post-info-2">
           <span className="post-category">Outils</span>
           <h5 className="mb-0">
-            <a href="/fr/articles/open-source-password-managers" className="title">Les meilleurs gestionnaires de mots de passe open source</a>
+            <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="title">Les meilleurs gestionnaires de mots de passe open source</a>
           </h5>
         </div>
       </div>
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="/fr/articles/self-hosted-password-managers" className="thumb">
+          <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="thumb">
             <img
               src="/assets/articles/proton-mail-review-body.jpg"
               alt=""
@@ -77,13 +77,13 @@ const HomeFeatureCarousal = () => {
         <div className="post-info-2">
           <span className="post-category">Outils</span>
           <h5 className="mb-0">
-            <a href="/fr/articles/self-hosted-password-managers" className="title">Gestionnaires de mots de passe auto-hébergés</a>
+            <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="title">Gestionnaires de mots de passe auto-hébergés</a>
           </h5>
         </div>
       </div>
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="/fr/articles/secrets-management-tools" className="thumb">
+          <a href="/fr/articles/outils-de-gestion-des-secrets" className="thumb">
             <img
               src="/assets/articles/proton-pass-review-body.jpg"
               alt=""
@@ -97,13 +97,13 @@ const HomeFeatureCarousal = () => {
         <div className="post-info-2">
           <span className="post-category">Outils</span>
           <h5 className="mb-0">
-            <a href="/fr/articles/secrets-management-tools" className="title">Outils de gestion des secrets pour développeurs</a>
+            <a href="/fr/articles/outils-de-gestion-des-secrets" className="title">Outils de gestion des secrets pour développeurs</a>
           </h5>
         </div>
       </div>
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="/fr/articles/proton-mail-review" className="thumb">
+          <a href="/fr/articles/test-proton-mail" className="thumb">
             <img
               src="/assets/articles/html-validator-body.jpg"
               alt=""
@@ -117,7 +117,7 @@ const HomeFeatureCarousal = () => {
         <div className="post-info-2">
           <span className="post-category">Outils</span>
           <h5 className="mb-0">
-            <a href="/fr/articles/proton-mail-review" className="title">Test de Proton Mail : l'email chiffré</a>
+            <a href="/fr/articles/test-proton-mail" className="title">Test de Proton Mail : l'email chiffré</a>
           </h5>
         </div>
       </div>

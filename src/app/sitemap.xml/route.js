@@ -1,4 +1,4 @@
-import { ARTICLE_SLUGS } from "@/data/articles";
+import { ARTICLE_SLUGS, slugFor } from "@/data/articles";
 import { PROJECT_SLUGS } from "@/data/content";
 
 const BASE = "https://versiondude.net";
@@ -15,7 +15,11 @@ function paths() {
 
 export function GET() {
   const body = paths().map((path) => {
-    const en = `${BASE}${path || "/"}`, fr = `${BASE}/fr${path}`, es = `${BASE}/es${path}`;
+    const m = path.match(/^\/articles\/(.+)$/);
+    const slug = m ? m[1] : null;
+    const en = `${BASE}${path || "/"}`;
+    const fr = slug ? `${BASE}/fr/articles/${slugFor(slug,"fr")}` : `${BASE}/fr${path}`;
+    const es = slug ? `${BASE}/es/articles/${slugFor(slug,"es")}` : `${BASE}/es${path}`;
     const alts = [["en", en], ["fr", fr], ["es", es], ["x-default", en]]
       .map(([l, u]) => `<xhtml:link rel="alternate" hreflang="${l}" href="${u}"/>`).join("");
     return [en, fr, es].map((u) =>
