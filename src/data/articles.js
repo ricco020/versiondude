@@ -42,6 +42,19 @@ const PROTON = {
   },
 };
 
+// Pilier 1 (dev / web) — offre affiliée DEV : hébergement cloud/VPS (Infomaniak via Awin,
+// publisher 979469 / merchant 19231, validé réseau). Branché uniquement sur les articles
+// où l'hébergement est réellement pertinent (self-hosting / déploiement), jamais en générique.
+const DEV_CLOUD = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak' },
+  sublabel: {
+    en: 'Self-hosting needs a reliable home with full runtime and network control. Infomaniak — a Swiss, privacy-respecting provider — offers VPS and cloud servers to host your CMS or app.',
+    fr: 'L’auto-hébergement demande un foyer fiable avec un contrôle total du runtime et du réseau. Infomaniak — hébergeur suisse, respectueux de la vie privée — propose des VPS et serveurs cloud pour héberger votre CMS ou votre app.',
+    es: 'El autoalojamiento necesita un hogar fiable con control total del runtime y la red. Infomaniak — proveedor suizo, respetuoso con la privacidad — ofrece VPS y servidores cloud para alojar tu CMS o tu app.',
+  },
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
@@ -218,6 +231,7 @@ export const ARTICLES = [
       'If you are choosing today, weigh how much you need a turnkey editorial interface versus the freedom to treat content as just another part of your Rails codebase.',
     ],
     related: 'railfrog',
+    cta: DEV_CLOUD,
   }),
   a({
     slug: 'character-encoding-utf-8', category: 'standards', readingMinutes: 5,
@@ -246,6 +260,7 @@ export const ARTICLES = [
       'Whichever you pick, budget for the operational basics: automated backups, timely security updates, and a plan for scaling. Self-hosting rewards control with responsibility.',
     ],
     related: 'railfrog',
+    cta: DEV_CLOUD,
   }),
 ];
 
