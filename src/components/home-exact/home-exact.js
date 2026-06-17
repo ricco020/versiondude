@@ -52,7 +52,7 @@ export default function Home() {
                       <Link href="/articles/open-source-password-managers" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt=""
+                          alt="The best open-source password managers"
                           className="img-fluid"
                         />
                       </Link>
@@ -73,7 +73,7 @@ export default function Home() {
                       <Link href="/articles/self-hosted-password-managers" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt=""
+                          alt="Self-hosted password managers"
                           className="img-fluid"
                         />
                       </Link>
@@ -94,7 +94,7 @@ export default function Home() {
                       <Link href="/articles/secrets-management-tools" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/secrets-management-tools-hero.jpg"
-                          alt=""
+                          alt="Secrets management tools for developers"
                           className="img-fluid"
                         />
                       </Link>
@@ -124,7 +124,7 @@ export default function Home() {
                       <Link href="/articles/proton-mail-review" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/proton-mail-review-hero.jpg"
-                          alt=""
+                          alt="Proton Mail review: encrypted email"
                           className="img-fluid"
                         />
                       </Link>

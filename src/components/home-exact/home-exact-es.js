@@ -52,7 +52,7 @@ export default function Home_es() {
                       <Link href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt=""
+                          alt="Los mejores gestores de contraseñas de código abierto"
                           className="img-fluid"
                         />
                       </Link>
@@ -73,7 +73,7 @@ export default function Home_es() {
                       <Link href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt=""
+                          alt="Gestores de contraseñas autoalojados"
                           className="img-fluid"
                         />
                       </Link>
@@ -94,7 +94,7 @@ export default function Home_es() {
                       <Link href="/es/articles/herramientas-de-gestion-de-secretos" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/secrets-management-tools-hero.jpg"
-                          alt=""
+                          alt="Herramientas de gestión de secretos para desarrolladores"
                           className="img-fluid"
                         />
                       </Link>
@@ -124,7 +124,7 @@ export default function Home_es() {
                       <Link href="/es/articles/analisis-proton-mail" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/proton-mail-review-hero.jpg"
-                          alt=""
+                          alt="Análisis de Proton Mail: correo cifrado"
                           className="img-fluid"
                         />
                       </Link>

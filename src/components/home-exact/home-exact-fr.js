@@ -52,7 +52,7 @@ export default function Home_fr() {
                       <Link href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt=""
+                          alt="Les meilleurs gestionnaires de mots de passe open source"
                           className="img-fluid"
                         />
                       </Link>
@@ -73,7 +73,7 @@ export default function Home_fr() {
                       <Link href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt=""
+                          alt="Gestionnaires de mots de passe auto-hébergés"
                           className="img-fluid"
                         />
                       </Link>
@@ -94,7 +94,7 @@ export default function Home_fr() {
                       <Link href="/fr/articles/outils-de-gestion-des-secrets" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/secrets-management-tools-hero.jpg"
-                          alt=""
+                          alt="Outils de gestion des secrets pour développeurs"
                           className="img-fluid"
                         />
                       </Link>
@@ -124,7 +124,7 @@ export default function Home_fr() {
                       <Link href="/fr/articles/test-proton-mail" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/proton-mail-review-hero.jpg"
-                          alt=""
+                          alt="Test de Proton Mail : l'email chiffré"
                           className="img-fluid"
                         />
                       </Link>
