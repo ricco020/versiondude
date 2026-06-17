@@ -7242,3 +7242,19 @@ body.layout-rtl .style-settings-content ul li select {
 
 /* ===== Header : container cohérent sur TOUTES les pages (neutralise l'élargissement home-nine) ===== */
 .site-header .container, body.home-nine .site-header .container { max-width: 1170px !important; margin-left: auto !important; margin-right: auto !important; padding-left: 1rem !important; padding-right: 1rem !important; }
+
+/* ===== Latest articles : retrait du badge "trending" (éclair rouge déco) sur les vignettes ===== */
+.articles-list .trending-post,
+.news-list-item .trending-post { display: none !important; }
+
+/* ===== Espacement au-dessus des blocs de section (sidebar + colonne) ===== */
+.articles-wrapper .panel_inner { margin-top: 2.2rem; }
+.articles-wrapper .leftSidebar > div > .panel_inner:first-child,
+.articles-wrapper .rightSidebar > div > .panel_inner:first-child { margin-top: 0; }
+.articles-wrapper .post-inner + .post-inner,
+.articles-wrapper .post-body > .post-inner { margin-top: 2.2rem; }
+
+/* ===== Related project : images de tailles homogènes (scope strict, NE touche pas au hero) ===== */
+.post-inner-2 .slider-post .news-image { display: block; overflow: hidden; border-radius: 6px; aspect-ratio: 16/10; }
+.post-inner-2 .slider-post .news-image img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+.post-inner-2 .slider-post.post-height-4 { height: auto; }
