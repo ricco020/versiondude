@@ -5,26 +5,11 @@ import React, { useEffect, useState } from 'react';
 import { WiDayLightning } from 'weather-icons-react';
 import ThemeChanger from '../style-selectors/style-selector';
 const HomeLinks = [
-    { href: '/', text: 'Home – Layout 1', badge: 'NEW' },
-    { href: '/home-two', text: 'Home – Layout 2', badge: 'POPULAR' },
-    { href: '/home-three', text: 'Home – (Box) Layout 3' },
-    { href: '/home-four', text: 'Home – Layout 4' },
-    { href: '/home-five', text: 'Home – Layout 5' },
-    { href: '/home-six', text: 'Home – Layout 6' },
-    { href: '/home-seven', text: 'Home – Layout 7' },
-    { href: '/home-eight', text: 'Home – Layout 8' },
-    { href: '/home-nine', text: 'Home – Layout 9' },
-    { href: '/category-style', text: 'Category - layout 1' },
-    { href: '/category-style-two', text: 'Category - layout 2' },
-    { href: '/category-style-three', text: 'Category - layout 3' },
-    { href: '/post-template', text: 'Post - layout 1' },
-    { href: '/post-template-two', text: 'Post - layout 2' },
-    { href: '/post-template-three', text: 'Post - layout 3' },
-    { href: '/about', text: 'About Us' },
-    { href: '/typography', text: 'Typography' },
-    { href: '/contact', text: 'Contact' },
-    { href: '/faq', text: 'Faq' },
-   
+    { href: '/', text: 'Home' },
+    { href: '/projects', text: 'Projects' },
+    { href: '/articles/open-source-password-managers', text: 'Password Managers' },
+    { href: '/articles/best-encrypted-email', text: 'Encrypted Email' },
+    { href: '/articles/what-is-the-dom', text: 'Web Standards' },
 ];
 const Header = () => {
     const [isSidebarActive, setSidebarActive] = useState(false);
@@ -217,16 +202,8 @@ const Header = () => {
                                     </div>
                                     {/* Start logo */}
                                     <Link href="/" className="header-logo">
-                                        <img
-                                            src="assets/images/logo.png"
-                                            className="header-logo_dark"
-                                            alt=""
-                                        />
-                                        <img
-                                            src="assets/images/logo-white.png"
-                                            className="header-logo_white"
-                                            alt=""
-                                        />
+                                        <span className="fw-bold" style={{fontSize:"1.6rem",color:"#e63329"}}>VersionDude</span>
+                                        
                                     </Link>
                                     {/* Start language dropdown */}
                                     <div className="dropdown language-dropdown">
@@ -293,17 +270,9 @@ const Header = () => {
                     <div className="container position-relative">
                         {/* Start Navbar Brand*/}
                         <Link className="navbar-brand d-md-none" href="/">
-                            {/* <img class="logo-dark" src="assets/images/logo.png" alt=""> */}
-                            <img
-                                src="assets/images/logo.png"
-                                className="header-logo_dark"
-                                alt=""
-                            />
-                            <img
-                                src="assets/images/logo-white.png"
-                                className="header-logo_white"
-                                alt=""
-                            />
+                            {/* <img class="logo-dark" src="/assets/images/logo.png" alt=""> */}
+                            <span className="fw-bold" style={{fontSize:"1.6rem",color:"#e63329"}}>VersionDude</span>
+                            
                         </Link>
                         {/* End Navbar Brand*/}
                         {/* Start Search Button */}
@@ -336,18 +305,10 @@ const Header = () => {
                                 {/* Start Brand Logo For Mobile */}
                                 <div className="collapse-brand flex-shrink-0">
                                     <Link href="/">
-                                        <img
-                                            src="assets/images/logo.png"
-                                            className="header-logo_dark"
-                                            alt=""
-                                        />
+                                        <span className="fw-bold" style={{fontSize:"1.6rem",color:"#e63329"}}>VersionDude</span>
                                     </Link>
                                     <Link href="/">
-                                        <img
-                                            src="assets/images/logo-white.png"
-                                            className="header-logo_white"
-                                            alt=""
-                                        />
+                                        
                                     </Link>
                                 </div>
                                 {/* End Brand Logo For Mobile */}
@@ -507,7 +468,7 @@ const Header = () => {
                                                 <Link className="video-nav-item" href="#">
                                                     <div className="img-wrapper">
                                                         <img
-                                                            src="assets/images/gallery-235x160-1.jpg"
+                                                            src="/assets/images/gallery-235x160-1.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -525,7 +486,7 @@ const Header = () => {
                                                 <Link className="video-nav-item" href="#" >
                                                     <div className="img-wrapper">
                                                         <img
-                                                            src="assets/images/gallery-235x160-2.jpg"
+                                                            src="/assets/images/gallery-235x160-2.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -543,7 +504,7 @@ const Header = () => {
                                                 <Link className="video-nav-item" href="#">
                                                     <div className="img-wrapper">
                                                         <img
-                                                            src="assets/images/gallery-235x160-3.jpg"
+                                                            src="/assets/images/gallery-235x160-3.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -560,7 +521,7 @@ const Header = () => {
                                                 <Link className="video-nav-item" href="#">
                                                     <div className="img-wrapper">
                                                         <img
-                                                            src="assets/images/gallery-235x160-4.jpg"
+                                                            src="/assets/images/gallery-235x160-4.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -578,7 +539,7 @@ const Header = () => {
                                                 <Link className="video-nav-item" href="#">
                                                     <div className="img-wrapper">
                                                         <img
-                                                            src="assets/images/gallery-235x160-5.jpg"
+                                                            src="/assets/images/gallery-235x160-5.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -705,7 +666,7 @@ const Header = () => {
                     <div className="d-flex flex-column h-100">
                         <div className="">
                             <Link href="/" className="d-inline-block my-3">
-                                <img src="assets/images/logo-white.png" alt="" height={50} />
+                                
                             </Link>
                             <p>
                                 It is a long established fact that a reader will be distracted by the
@@ -739,7 +700,7 @@ const Header = () => {
                             <li className="col-6">
                                 <Link href="#" className="insta_effect d-inline-block position-relative">
                                     <img
-                                        src="assets/images/instagram-1.jpg"
+                                        src="/assets/images/instagram-1.jpg"
                                         className="img-fluid"
                                         alt=""
                                     />
@@ -748,7 +709,7 @@ const Header = () => {
                             <li className="col-6">
                                 <Link href="#" className="insta_effect d-inline-block position-relative">
                                     <img
-                                        src="assets/images/instagram-2.jpg"
+                                        src="/assets/images/instagram-2.jpg"
                                         className="img-fluid"
                                         alt=""
                                     />
@@ -757,7 +718,7 @@ const Header = () => {
                             <li className="col-6">
                                 <Link href="#" className="insta_effect d-inline-block position-relative">
                                     <img
-                                        src="assets/images/instagram-3.jpg"
+                                        src="/assets/images/instagram-3.jpg"
                                         className="img-fluid"
                                         alt=""
                                     />
@@ -766,7 +727,7 @@ const Header = () => {
                             <li className="col-6">
                                 <Link href="#" className="insta_effect d-inline-block position-relative">
                                     <img
-                                        src="assets/images/instagram-4.jpg"
+                                        src="/assets/images/instagram-4.jpg"
                                         className="img-fluid"
                                         alt=""
                                     />

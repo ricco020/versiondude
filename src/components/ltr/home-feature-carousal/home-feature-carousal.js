@@ -43,9 +43,9 @@ const HomeFeatureCarousal = () => {
     >
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="#" className="thumb">
+          <a href="/articles/open-source-password-managers" className="thumb">
             <img
-              src="assets/images/115x85-8.jpg"
+              src="/assets/articles/self-hosted-password-managers-body.jpg"
               alt=""
               className="img-fluid"
             />
@@ -55,19 +55,17 @@ const HomeFeatureCarousal = () => {
           </a>
         </div>
         <div className="post-info-2">
-          <span className="post-category">Fashion</span>
+          <span className="post-category">Tooling</span>
           <h5 className="mb-0">
-            <a href="#" className="title">
-              Lorem ipsum dolor sit amet, consectetur adipiscing.
-            </a>
+            <a href="/articles/open-source-password-managers" className="title">The best open-source password managers</a>
           </h5>
         </div>
       </div>
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="#" className="thumb">
+          <a href="/articles/self-hosted-password-managers" className="thumb">
             <img
-              src="assets/images/115x85-9.jpg"
+              src="/assets/articles/proton-mail-review-body.jpg"
               alt=""
               className="img-fluid"
             />
@@ -77,19 +75,17 @@ const HomeFeatureCarousal = () => {
           </a>
         </div>
         <div className="post-info-2">
-          <span className="post-category">Sports</span>
+          <span className="post-category">Tooling</span>
           <h5 className="mb-0">
-            <a href="#" className="title">
-              Proin quis massa tincidunt justo cursus dapibus.
-            </a>
+            <a href="/articles/self-hosted-password-managers" className="title">Self-hosted password managers</a>
           </h5>
         </div>
       </div>
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="#" className="thumb">
+          <a href="/articles/secrets-management-tools" className="thumb">
             <img
-              src="assets/images/115x85-3.jpg"
+              src="/assets/articles/proton-pass-review-body.jpg"
               alt=""
               className="img-fluid"
             />
@@ -99,19 +95,17 @@ const HomeFeatureCarousal = () => {
           </a>
         </div>
         <div className="post-info-2">
-          <span className="post-category">Travel</span>
+          <span className="post-category">Tooling</span>
           <h5 className="mb-0">
-            <a href="#" className="title">
-              Nulla hendrerit dui in erat varius vestibulum.
-            </a>
+            <a href="/articles/secrets-management-tools" className="title">Secrets management tools for developers</a>
           </h5>
         </div>
       </div>
       <div className="news-list-item">
         <div className="img-wrapper">
-          <a href="#" className="thumb">
+          <a href="/articles/proton-mail-review" className="thumb">
             <img
-              src="assets/images/115x85-10.jpg"
+              src="/assets/articles/html-validator-body.jpg"
               alt=""
               className="img-fluid"
             />
@@ -121,11 +115,9 @@ const HomeFeatureCarousal = () => {
           </a>
         </div>
         <div className="post-info-2">
-          <span className="post-category">Business</span>
+          <span className="post-category">Tooling</span>
           <h5 className="mb-0">
-            <a href="#" className="title">
-              Maecenas dictum lacus in bibendum commodo.
-            </a>
+            <a href="/articles/proton-mail-review" className="title">Proton Mail review: encrypted email</a>
           </h5>
         </div>
       </div>

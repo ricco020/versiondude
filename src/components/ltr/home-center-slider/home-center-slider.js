@@ -31,25 +31,21 @@ const HomeCenterSlider = () => {
         {/* Slider item one */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="#" className="news-image">
+            <a href="/" className="news-image">
               <img
-                src="assets/images/masonry/slider/01.jpg"
+                src="/assets/articles/self-hosted-password-managers-body.jpg"
                 alt=""
                 className="img-fluid"
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Business</span>
+              <span className="post-category">Tooling</span>
               <h2>
-                <a href="#">
-                  It is a long established fact that a reader will be
-                  distracted by the readable content of a page when
-                  looking at its layout.
-                </a>
+                <a href="/articles/open-source-password-managers">The best open-source password managers</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">David hall</span>
+                  By <span className="editor-name">VersionDude</span>
                 </li>
                 <li>Aug 16, 2023</li>
               </ul>
@@ -60,25 +56,21 @@ const HomeCenterSlider = () => {
         {/* Slider item two */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="#" className="news-image">
+            <a href="/" className="news-image">
               <img
-                src="assets/images/masonry/slider/02.jpg"
+                src="/assets/articles/proton-mail-review-body.jpg"
                 alt=""
                 className="img-fluid"
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Politics</span>
+              <span className="post-category">Tooling</span>
               <h2>
-                <a href="#">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration
-                  in some form, by injected humour, or randomised words.
-                </a>
+                <a href="/articles/self-hosted-password-managers">Self-hosted password managers</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">David hall</span>
+                  By <span className="editor-name">VersionDude</span>
                 </li>
                 <li>Aug 16, 2023</li>
               </ul>
@@ -89,25 +81,21 @@ const HomeCenterSlider = () => {
         {/* Slider item three */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="#" className="news-image">
+            <a href="/" className="news-image">
               <img
-                src="assets/images/masonry/slider/03.jpg"
+                src="/assets/articles/proton-pass-review-body.jpg"
                 alt=""
                 className="img-fluid"
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Photography</span>
+              <span className="post-category">Tooling</span>
               <h2>
-                <a href="#">
-                  All the Lorem Ipsum generators on the Internet tend to
-                  repeat predefined chunks as necessary, making this the
-                  first true generator on the Internet.
-                </a>
+                <a href="/articles/secrets-management-tools">Secrets management tools for developers</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">David hall</span>
+                  By <span className="editor-name">VersionDude</span>
                 </li>
                 <li>Aug 16, 2023</li>
               </ul>
@@ -118,25 +106,21 @@ const HomeCenterSlider = () => {
         {/* Slider item four */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="#" className="news-image">
+            <a href="/" className="news-image">
               <img
-                src="assets/images/masonry/slider/04.jpg"
+                src="/assets/articles/html-validator-body.jpg"
                 alt=""
                 className="img-fluid"
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Travel</span>
+              <span className="post-category">Tooling</span>
               <h2>
-                <a href="#">
-                  Various versions have evolved over the years,
-                  sometimes by accident, sometimes on purpose (injected
-                  humour and the like).
-                </a>
+                <a href="/articles/proton-mail-review">Proton Mail review: encrypted email</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">David hall</span>
+                  By <span className="editor-name">VersionDude</span>
                 </li>
                 <li>Aug 16, 2023</li>
               </ul>
@@ -147,25 +131,21 @@ const HomeCenterSlider = () => {
         {/* Slider item five */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="#" className="news-image">
+            <a href="/" className="news-image">
               <img
-                src="assets/images/masonry/slider/05.jpg"
+                src="/assets/articles/what-is-a-parser-body.jpg"
                 alt=""
                 className="img-fluid"
               />
             </a>
             <div className="post-text">
-              <span className="post-category">Business</span>
+              <span className="post-category">Tooling</span>
               <h2>
-                <a href="#">
-                  {" "}
-                  It was popularised in the 1960s with the release of
-                  Letraset sheets containing Lorem Ipsum passages
-                </a>
+                <a href="/articles/best-encrypted-email">The best encrypted email services</a>
               </h2>
               <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                 <li>
-                  By <span className="editor-name">David hall</span>
+                  By <span className="editor-name">VersionDude</span>
                 </li>
                 <li>Aug 16, 2023</li>
               </ul>

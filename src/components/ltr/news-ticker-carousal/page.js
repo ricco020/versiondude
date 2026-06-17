@@ -45,21 +45,13 @@ const NewsTicker = () => {
             }
           }}>
           <div className="item">
-            <a href="#">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </a>
+            <a href="/articles/open-source-password-managers">The best open-source password managers</a>
           </div>
           <div className="item">
-            <a href="#">
-              It is a long established fact that a reader will be distracted by
-              the readable.
-            </a>
+            <a href="/articles/best-encrypted-email">The best encrypted email services</a>
           </div>
           <div className="item">
-            <a href="#">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </a>
+            <a href="/articles/what-is-the-dom">What is the DOM?</a>
           </div>
         </OwlCarousel>
       </div>

@@ -45,7 +45,7 @@ const page = () => {
                                         <div className="slider-post post-height-2">
                                             <a href="#" className="news-image">
                                                 <img
-                                                    src="assets/images/slider-520x230-6.jpg"
+                                                    src="/assets/images/slider-520x230-6.jpg"
                                                     alt=""
                                                     className="img-fluid"
                                                 />
@@ -73,7 +73,7 @@ const page = () => {
                                         <div className="slider-post post-height-2">
                                             <a href="#" className="news-image">
                                                 <img
-                                                    src="assets/images/slider-260x230-7.jpg"
+                                                    src="/assets/images/slider-260x230-7.jpg"
                                                     alt=""
                                                     className="img-fluid"
                                                 />
@@ -98,7 +98,7 @@ const page = () => {
                                         <div className="slider-post post-height-2">
                                             <a href="#" className="news-image">
                                                 <img
-                                                    src="assets/images/slider-260x230-8.jpg"
+                                                    src="/assets/images/slider-260x230-8.jpg"
                                                     alt=""
                                                     className="img-fluid"
                                                 />
@@ -214,7 +214,7 @@ const page = () => {
                                 {/* START ADVERTISEMENT */}
                                 <div className="add-inner">
                                     <img
-                                        src="assets/images/add728x90-1.jpg"
+                                        src="/assets/images/add728x90-1.jpg"
                                         className="img-fluid"
                                         alt=""
                                     />
@@ -318,7 +318,7 @@ const page = () => {
                                         <div className="more-post">
                                             <a href="#" className="news-image">
                                                 <img
-                                                    src="assets/images/340x215-5.jpg"
+                                                    src="/assets/images/340x215-5.jpg"
                                                     alt=""
                                                     className="img-fluid"
                                                 />
@@ -351,7 +351,7 @@ const page = () => {
                                                 <div className="img-wrapper">
                                                     <a href="#" className="thumb">
                                                         <img
-                                                            src="assets/images/115x85-5.jpg"
+                                                            src="/assets/images/115x85-5.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -379,7 +379,7 @@ const page = () => {
                                                 <div className="img-wrapper">
                                                     <a href="#" className="thumb">
                                                         <img
-                                                            src="assets/images/115x85-6.jpg"
+                                                            src="/assets/images/115x85-6.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -407,7 +407,7 @@ const page = () => {
                                                 <div className="img-wrapper">
                                                     <a href="#" className="thumb">
                                                         <img
-                                                            src="assets/images/115x85-7.jpg"
+                                                            src="/assets/images/115x85-7.jpg"
                                                             alt=""
                                                             className="img-fluid"
                                                         />
@@ -738,7 +738,7 @@ const page = () => {
                                                     <figure className="posts-thumb">
                                                         <span className="post-category">National</span>
                                                         <a href="#">
-                                                            <img src="assets/images/378x270-1.jpg" alt="" />
+                                                            <img src="/assets/images/378x270-1.jpg" alt="" />
                                                         </a>
                                                     </figure>
                                                     <div className="posts-inner">
@@ -771,7 +771,7 @@ const page = () => {
                                                         <div className="post-author">
                                                             <figure className="d-md-inline-block d-none post-author-avatar">
                                                                 <img
-                                                                    src="assets/images/avatar-1.jpg"
+                                                                    src="/assets/images/avatar-1.jpg"
                                                                     alt="Post Author Avatar"
                                                                 />
                                                             </figure>
@@ -887,7 +887,7 @@ const page = () => {
                                     {/* START ADVERTISEMENT */}
                                     <div className="add-inner">
                                         <img
-                                            src="assets/images/add728x90-1.jpg"
+                                            src="/assets/images/add728x90-1.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />
@@ -977,7 +977,7 @@ const page = () => {
                                                     <div className="games-result-team-logo">
                                                         <a href="#">
                                                             <img
-                                                                src="assets/images/game_results_logo_1.png"
+                                                                src="/assets/images/game_results_logo_1.png"
                                                                 className="img-fluid"
                                                                 alt=""
                                                             />
@@ -1010,7 +1010,7 @@ const page = () => {
                                                     <div className="games-result-team-logo">
                                                         <a href="#">
                                                             <img
-                                                                src="assets/images/game_results_logo_2.png"
+                                                                src="/assets/images/game_results_logo_2.png"
                                                                 className="img-fluid"
                                                                 alt=""
                                                             />
@@ -1136,7 +1136,7 @@ const page = () => {
                                     {/* START ADVERTISEMENT */}
                                     <div className="add-inner">
                                         <img
-                                            src="assets/images/add320x270-1.jpg"
+                                            src="/assets/images/add320x270-1.jpg"
                                             className="img-fluid"
                                             alt=""
                                         />

@@ -1,3 +1,4 @@
+import './globals.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "@icon/themify-icons/themify-icons.css"
 import { Cormorant_Garamond, Roboto, Source_Sans_3 } from 'next/font/google'
@@ -5,7 +6,6 @@ import Script from 'next/script'
 
 import ImportJs from '@/components/ltr/import-js/import-js';
 import Providers from './theme-providers';
-import StyleSelectors from '@/components/rtl/style-selector/style-selector';
 
 const GA_ID = 'G-EGDNJHLQ0J';
 
@@ -48,7 +48,6 @@ export default function RootLayout({ children }) {
       <body className={`${cormorant.variable} ${roboto.variable} ${sourceSans.variable}`}>
         <Providers>
           {children}
-          <StyleSelectors/>
         </Providers>
 
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
