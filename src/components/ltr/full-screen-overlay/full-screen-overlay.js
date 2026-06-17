@@ -1,3 +1,4 @@
+"use client";
 function fullScreenSearch() {
     const alignSearchBar = () => {
       const wHeight = window.innerHeight;

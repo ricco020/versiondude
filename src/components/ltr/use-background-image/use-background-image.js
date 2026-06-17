@@ -1,3 +1,4 @@
+"use client";
 // useBackgroundImageLoader.js
 import { useEffect } from 'react';
 
