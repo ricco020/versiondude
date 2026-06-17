@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { t, LOCALES } from "@/data/site-i18n";
+import { slugFor, enSlugOf } from "@/data/articles";
 
 export default function SiteHeader({ locale = "en" }) {
   const s = t(locale);
@@ -10,7 +11,16 @@ export default function SiteHeader({ locale = "en" }) {
   // base path without any locale prefix
   let base = pathname;
   for (const l of LOCALES) { if (l !== "en" && (base === `/${l}` || base.startsWith(`/${l}/`))) { base = base.slice(l.length + 1) || "/"; break; } }
-  const localeHref = (l) => (l === "en" ? (base || "/") : `/${l}${base === "/" ? "" : base}`);
+  // Les slugs d'articles sont localisés → traduire le slug vers la locale cible, sinon 404.
+  const artMatch = base.match(/^\/articles\/(.+)$/);
+  const enArtSlug = artMatch ? enSlugOf(decodeURIComponent(artMatch[1]), locale) : null;
+  const localeHref = (l) => {
+    if (enArtSlug) {
+      const pre = l === "en" ? "" : `/${l}`;
+      return `${pre}/articles/${slugFor(enArtSlug, l)}`;
+    }
+    return l === "en" ? (base || "/") : `/${l}${base === "/" ? "" : base}`;
+  };
   const nav = [
     { href: `${p}/`, text: s.nav.home },
     { href: `${p}/projects`, text: s.nav.projects },

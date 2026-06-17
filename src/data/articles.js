@@ -22,8 +22,24 @@ export function getSections(article, locale = "en") {
 // Images : Pixabay, libres de droits, uniques, légendes honnêtes (vérifiées).
 
 const PROTON = {
-  pass: { url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294', label: 'Try Proton Pass', sublabel: 'Open-source, end-to-end encrypted password manager from the makers of Proton Mail.' },
-  mail: { url: 'https://go.getproton.me/aff_c?offer_id=7&aff_id=18294', label: 'Try Proton Mail', sublabel: 'End-to-end encrypted, Swiss-based email built on open-source cryptography.' },
+  pass: {
+    url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294',
+    label: { en: 'Try Proton Pass', fr: 'Essayer Proton Pass', es: 'Probar Proton Pass' },
+    sublabel: {
+      en: 'Open-source, end-to-end encrypted password manager from the makers of Proton Mail.',
+      fr: 'Gestionnaire de mots de passe open source, chiffré de bout en bout, par les créateurs de Proton Mail.',
+      es: 'Gestor de contraseñas open source, cifrado de extremo a extremo, de los creadores de Proton Mail.',
+    },
+  },
+  mail: {
+    url: 'https://go.getproton.me/aff_c?offer_id=7&aff_id=18294',
+    label: { en: 'Try Proton Mail', fr: 'Essayer Proton Mail', es: 'Probar Proton Mail' },
+    sublabel: {
+      en: 'End-to-end encrypted, Swiss-based email built on open-source cryptography.',
+      fr: 'Email chiffré de bout en bout, basé en Suisse, bâti sur une cryptographie open source.',
+      es: 'Correo cifrado de extremo a extremo, con sede en Suiza, basado en criptografía open source.',
+    },
+  },
 };
 
 const a = (o) => o;

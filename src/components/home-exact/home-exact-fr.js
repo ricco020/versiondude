@@ -1057,30 +1057,19 @@ export default function Home_fr() {
                             <ul>
                               <li>
                                 <div className="share transition">
-                                  <a href="/fr/articles/qu-est-ce-que-le-dom" target="_blank" className="ico fb">
+                                  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" className="ico fb">
                                     <i className="fab fa-facebook-f" />
                                   </a>
-                                  <a href="/fr/articles/qu-est-ce-que-le-dom" target="_blank" className="ico tw">
+                                  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fversiondude.net%2F&text=VersionDude" target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="ico tw">
                                     <i className="fab fa-twitter" />
                                   </a>
-                                  <a href="/fr/articles/qu-est-ce-que-le-dom" target="_blank" className="ico rs">
-                                    <i className="fas fa-rss" />
+                                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" className="ico rs">
+                                    <i className="fab fa-linkedin-in" />
                                   </a>
-                                  <a href="/fr/articles/qu-est-ce-que-le-dom" target="_blank" className="ico pin">
+                                  <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest" className="ico pin">
                                     <i className="fab fa-pinterest-p" />
                                   </a>
-                                  <i className="ti ti-share ico-share" />
                                 </div>
-                              </li>
-                              <li>
-                                <a href="/fr/articles/qu-est-ce-que-le-dom">
-                                  <i className="ti ti-heart" />
-                                </a>
-                              </li>
-                              <li>
-                                <a href="/fr/articles/qu-est-ce-que-le-dom">
-                                  <i className="ti ti-twitter" />
-                                </a>
                               </li>
                             </ul>
                           </div>

@@ -7201,6 +7201,9 @@ body.layout-rtl .style-settings-content ul li select {
 .post_details_block p.lead{font-size:1.28rem;line-height:1.7;color:#111;font-weight:500;margin-bottom:1.4rem;}
 .post_details_block p.lead::first-letter{font-family:var(--font-cormorant-garamond),Georgia,serif;float:left;font-size:3.6rem;line-height:.82;font-weight:700;color:#e63329;margin:.35rem .6rem 0 0;}
 .post_details_block .article_comment{border-left:4px solid #e63329;background:#faf7f7;padding:1.1rem 1.3rem;margin:1.8rem 0;font-style:italic;font-size:1.15rem;color:#333;border-radius:0 8px 8px 0;}
+/* on masque le glyphe guillemet FA (left:15px) qui chevauchait le texte : la bordure rouge sert déjà de repère visuel */
+.post_details_block .article_comment::before{display:none;}
+.post_details_block .article_comment p{padding-left:0;}
 .post_details_block .article_comment .customers{font-style:normal;font-weight:700;color:#e63329;margin-top:.5rem;font-size:.95rem;}
 .post_details_block .arrow_list{list-style:none;padding-left:0;margin:1.2rem 0;}
 .post_details_block .arrow_list li{position:relative;padding-left:1.7rem;margin-bottom:.6rem;line-height:1.6;}
@@ -7221,13 +7224,14 @@ body.layout-rtl .style-settings-content ul li select {
 .post_details_block .vd-cta p{font-weight:600;margin-bottom:.8rem;font-style:normal;}
 .post_details_block .vd-cta .btn{margin:0;}
 
-/* ===== Uniformisation images cartes/carrousel + retrait icônes photo/vidéo ===== */
+/* ===== Uniformisation images cartes/grilles/listes + retrait icônes photo/vidéo =====
+   NB : on NE touche PAS au hero (.slider-post / .slider-right-post) : ses hauteurs
+   (post-height-1/2/4 + home-nine) sont gérées nativement par le template et doivent
+   rester intactes pour aligner carousel gauche et colonne droite. */
 .link-icon{display:none !important;}
-.slider-post .news-image,.post-thumb,.grid-item-img,.news-list-item .img-wrapper,.more-post .news-image,.more-post>a{display:block;overflow:hidden;border-radius:6px;}
-.slider-post .news-image{aspect-ratio:16/10;}
-.slider-post.post-height-2 .news-image{aspect-ratio:16/11;}
+.post-thumb,.grid-item-img,.news-list-item .img-wrapper,.more-post .news-image,.more-post>a{display:block;overflow:hidden;border-radius:6px;}
 .grid-item-img,.news-list-item .img-wrapper,.more-post .news-image,.more-post>a{aspect-ratio:16/10;}
-.slider-post .news-image img,.post-thumb img,.grid-item-img img,.news-list-item .img-wrapper img,.more-post img{width:100% !important;height:100% !important;object-fit:cover !important;}
+.post-thumb img,.grid-item-img img,.news-list-item .img-wrapper img,.more-post img{width:100% !important;height:100% !important;object-fit:cover !important;}
 
 /* ===== Logo VersionDude (lettrage) ===== */
 .vd-logo{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;}

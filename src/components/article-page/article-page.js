@@ -100,8 +100,8 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
 
                     {article.cta && (
                       <aside className="vd-cta">
-                        <p>{article.cta.sublabel}</p>
-                        <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{article.cta.label} &rarr;</a>
+                        <p>{article.cta.sublabel[loc] || article.cta.sublabel.en}</p>
+                        <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{article.cta.label[loc] || article.cta.label.en} &rarr;</a>
                       </aside>
                     )}
 
@@ -139,8 +139,8 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
               <StickyBox offsetTop={20}>
                 {article.cta && (
                   <div className="add-inner text-center p-4 mb-3" style={{ background: "#f6f4ff", borderRadius: 12 }}>
-                    <p className="fw-semibold mb-2">{article.cta.sublabel}</p>
-                    <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary btn-sm">{article.cta.label}</a>
+                    <p className="fw-semibold mb-2">{article.cta.sublabel[loc] || article.cta.sublabel.en}</p>
+                    <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary btn-sm">{article.cta.label[loc] || article.cta.label.en}</a>
                   </div>
                 )}
                 <div className="tabs-wrapper">
