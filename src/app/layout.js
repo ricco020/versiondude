@@ -29,11 +29,18 @@ export const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
 })
 export const metadata = {
-  title: 'VersionDude',
-  description: 'VersionDude — web standards, parsers and developer tooling.',
-  // Contenu démo factice en attendant le vrai contenu : on empêche l'indexation
-  // pour ne pas exposer du contenu dupliqué/thin (protège le jus de backlinks).
-  robots: { index: false, follow: false },
+  metadataBase: new URL('https://versiondude.net'),
+  title: { default: 'VersionDude — web standards, parsers & developer tooling', template: '%s' },
+  description: 'VersionDude — web standards, HTML parsing and developer tooling, plus practical guides to open-source, self-hosted and privacy tools.',
+  robots: { index: true, follow: true },
+  openGraph: {
+    siteName: 'VersionDude',
+    type: 'website',
+    title: 'VersionDude — web standards, parsers & developer tooling',
+    description: 'Web standards, HTML parsing and developer tooling, plus practical guides to open-source, self-hosted and privacy tools.',
+    images: ['/assets/articles/what-is-the-dom-hero.jpg'],
+  },
+  twitter: { card: 'summary_large_image', title: 'VersionDude', description: 'Web standards, parsers & developer tooling.' },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
     shortcut: ['/favicon.svg'],
