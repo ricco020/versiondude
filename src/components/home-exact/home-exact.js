@@ -812,10 +812,7 @@ export default function Home() {
                             <span className="post-category mb-0">Standards</span>
                           </li>
                           </ul>
-                        <p>
-                          To understand the new politics stance and other pro
-                          nationals of recent…
-                        </p>
+                        <p>Practical, independent guidance on the tools developers and privacy-minded readers actually use.</p>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
@@ -865,10 +862,7 @@ export default function Home() {
                             <span className="post-category mb-0">Parsing</span>
                           </li>
                           </ul>
-                        <p>
-                          To understand the new politics stance and other pro
-                          nationals of recent…
-                        </p>
+                        <p>Practical, independent guidance on the tools developers and privacy-minded readers actually use.</p>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">

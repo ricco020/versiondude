@@ -812,10 +812,7 @@ export default function Home_fr() {
                             <span className="post-category mb-0">Standards</span>
                           </li>
                           </ul>
-                        <p>
-                          To understand the new politics stance and other pro
-                          nationals of recent…
-                        </p>
+                        <p>Des conseils pratiques et indépendants sur les outils que les développeurs et les lecteurs soucieux de leur vie privée utilisent vraiment.</p>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
@@ -845,7 +842,7 @@ export default function Home_fr() {
                   <div className="panel_inner mb-0">
                     <div className="panel_header">
                       <h4>
-                        <strong>EDITOR'S</strong> PICKS
+                        <strong>CHOIX</strong> DE LA RÉDACTION
                       </h4>
                     </div>
                     <div className="panel_body">
@@ -865,10 +862,7 @@ export default function Home_fr() {
                             <span className="post-category mb-0">Analyse</span>
                           </li>
                           </ul>
-                        <p>
-                          To understand the new politics stance and other pro
-                          nationals of recent…
-                        </p>
+                        <p>Des conseils pratiques et indépendants sur les outils que les développeurs et les lecteurs soucieux de leur vie privée utilisent vraiment.</p>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">

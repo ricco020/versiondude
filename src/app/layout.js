@@ -42,9 +42,9 @@ export const metadata = {
   },
   twitter: { card: 'summary_large_image', title: 'VersionDude', description: 'Web standards, parsers & developer tooling.' },
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    shortcut: ['/favicon.svg'],
-    apple: ['/favicon.svg'],
+    icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/favicon.svg', type: 'image/svg+xml' }],
+    shortcut: ['/favicon.ico'],
+    apple: ['/apple-touch-icon.png'],
   }
 }
 {/*  END OF /. FONT DECLARATION */ }

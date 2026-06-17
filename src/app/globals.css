@@ -7235,3 +7235,6 @@ body.layout-rtl .style-settings-content ul li select {
 .vd-logo-text{font-weight:800;font-size:1.5rem;letter-spacing:-.02em;line-height:1;}
 .vd-logo-v{color:#1a1a1a;}
 .vd-logo-d{color:#e63329;}
+
+/* ===== Header : container cohérent sur TOUTES les pages (neutralise l'élargissement home-nine) ===== */
+.site-header .container, body.home-nine .site-header .container { max-width: 1170px !important; margin-left: auto !important; margin-right: auto !important; padding-left: 1rem !important; padding-right: 1rem !important; }
