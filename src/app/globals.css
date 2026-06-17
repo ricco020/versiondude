@@ -7254,7 +7254,12 @@ body.layout-rtl .style-settings-content ul li select {
 .articles-wrapper .post-inner + .post-inner,
 .articles-wrapper .post-body > .post-inner { margin-top: 2.2rem; }
 
-/* ===== Related project : images de tailles homogènes (scope strict, NE touche pas au hero) ===== */
-.post-inner-2 .slider-post .news-image { display: block; overflow: hidden; border-radius: 6px; aspect-ratio: 16/10; }
+/* ===== Related project : vignettes homogènes ET assez hautes pour que le titre
+   en surimpression (jusqu'à 3 lignes) tienne sans déborder (scope strict hors hero) ===== */
+.post-inner-2 .slider-post { height: auto !important; }
+.post-inner-2 .slider-post .news-image { display: block; overflow: hidden; border-radius: 6px; height: 200px; position: relative; }
 .post-inner-2 .slider-post .news-image img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
-.post-inner-2 .slider-post.post-height-4 { height: auto; }
+/* dégradé + titre lisibles, ancrés en bas de la vignette */
+.post-inner-2 .slider-post .post-text { padding: 18px 16px; }
+.post-inner-2 .slider-post .post-text h4 { font-size: 1rem; line-height: 1.3; }
+.post-inner-2 .slider-post .post-category { margin-bottom: .35rem; }
