@@ -46,7 +46,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                 <div className="post_details_inner">
                   <div className="post_details_block">
                     <figure className="social-icon">
-                      <img src={article.hero} className="img-fluid" alt={article.heroAlt} />
+                      <img loading="lazy" decoding="async" src={article.hero} className="img-fluid" alt={article.heroAlt} />
                       <div>
                         <span className="ico fb"><i className="fab fa-facebook-f" /></span>
                         <span className="ico tw"><i className="fab fa-twitter" /></span>
@@ -73,7 +73,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                           if (si === 1 && pi === 0) {
                             blocks.unshift(
                               <figure className="align-left" key="img">
-                                <img src={article.body} alt={article.bodyCaption} />
+                                <img loading="lazy" decoding="async" src={article.body} alt={article.bodyCaption} />
                                 <figcaption>{article.bodyCaption}</figcaption>
                               </figure>
                             );
@@ -120,7 +120,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                         <div className="col-sm-4" key={r.slug}>
                           <div className="slider-post post-height-4">
                             <Link href={articleHref(r.slug, loc)} className="news-image">
-                              <img src={r.hero} alt={r.heroAlt} className="img-fluid" />
+                              <img loading="lazy" decoding="async" src={r.hero} alt={r.heroAlt} className="img-fluid" />
                             </Link>
                             <div className="post-text">
                               <span className="post-category">{categoryLabel(r.category, loc)}</span>

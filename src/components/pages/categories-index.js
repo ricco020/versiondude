@@ -43,7 +43,7 @@ export default function CategoriesIndex({ locale = "en" }) {
               <div className="col-md-6 col-lg-3" key={c.key}>
                 <Link href={`${p}/categories/${c.key}`} className="text-decoration-none">
                   <article className="card border-0 shadow-sm h-100">
-                    <img src={c.img} className="card-img-top" alt={c.label} style={{ height: 150, objectFit: "cover" }} />
+                    <img loading="lazy" decoding="async" src={c.img} className="card-img-top" alt={c.label} style={{ height: 150, objectFit: "cover" }} />
                     <div className="card-body text-center">
                       <h3 className="h5 mb-1 text-dark">{c.label}</h3>
                       <span className="text-muted small">{c.count} {s.nav.articles}</span>

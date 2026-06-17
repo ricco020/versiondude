@@ -291,7 +291,7 @@ const Header = () => {
                     <div className="container position-relative">
                         {/* Start Navbar Brand*/}
                         <Link className="navbar-brand d-md-none" href="/rtl/home">
-                            {/* <img class="logo-dark" src="../../assets/images/logo.png" alt=""> */}
+                            {/* <img loading="lazy" decoding="async" class="logo-dark" src="../../assets/images/logo.png" alt=""> */}
                             <img
                                 src="../../assets/images/logo.png"
                                 className="header-logo_dark"
@@ -702,7 +702,7 @@ const Header = () => {
                     <div className="d-flex flex-column h-100">
                         <div className="">
                             <Link href="/rtl/home" className="d-inline-block my-3">
-                                <img src="../../assets/images/logo-white.png" alt="" height={50} />
+                                <img loading="lazy" decoding="async" src="../../assets/images/logo-white.png" alt="" height={50} />
                             </Link>
                             <p>
                                 It is a long established fact that a reader will be distracted by the

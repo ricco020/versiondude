@@ -8,7 +8,7 @@ function Card({ href, img, alt, category, title, meta, big }) {
   return (
     <div className={`slider-post ${big ? "post-height-2" : "post-height-4"}`}>
       <Link href={href} className="news-image">
-        <img src={img} alt={alt} className="img-fluid" />
+        <img loading="lazy" decoding="async" src={img} alt={alt} className="img-fluid" />
       </Link>
       <div className="post-text">
         <span className="post-category">{category}</span>

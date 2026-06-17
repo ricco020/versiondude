@@ -32,7 +32,7 @@ export default function ProjectsList({ locale = "en", title, intro, projects }) 
               <div className="col-md-6 col-lg-4" key={pr.slug}>
                 <article className="card h-100 border-0 shadow-sm">
                   <Link href={`${p}/projects/${pr.slug}`}>
-                    <img src={pr.hero} className="card-img-top" alt={pr.heroAlt} style={{ height: 190, objectFit: "cover" }} />
+                    <img loading="lazy" decoding="async" src={pr.hero} className="card-img-top" alt={pr.heroAlt} style={{ height: 190, objectFit: "cover" }} />
                   </Link>
                   <div className="card-body">
                     <span className="badge bg-secondary mb-2">{pr.status}</span>

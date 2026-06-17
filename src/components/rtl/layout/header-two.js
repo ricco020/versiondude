@@ -215,7 +215,7 @@ const HeaderTwo = () => {
                 <div className="container position-relative">
                     {/* Start Navbar Brand*/}
                     <Link className="navbar-brand d-md-none" href="/rtl/home">
-                        {/* <img class="logo-dark" src="../../assets/images/logo.png" alt=""> */}
+                        {/* <img loading="lazy" decoding="async" class="logo-dark" src="../../assets/images/logo.png" alt=""> */}
                         <img
                             src="../../assets/images/logo.png"
                             className="header-logo_dark"

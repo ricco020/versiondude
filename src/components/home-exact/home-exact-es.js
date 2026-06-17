@@ -50,7 +50,7 @@ export default function Home_es() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
                       <Link href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -71,7 +71,7 @@ export default function Home_es() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
                       <Link href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -92,7 +92,7 @@ export default function Home_es() {
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
                       <Link href="/es/articles/herramientas-de-gestion-de-secretos" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/secrets-management-tools-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -122,7 +122,7 @@ export default function Home_es() {
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
                       <Link href="/es/articles/analisis-proton-mail" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/proton-mail-review-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -143,7 +143,7 @@ export default function Home_es() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
                       <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt="Los mejores gestores de contraseñas de código abierto"
                           className="img-fluid"
@@ -165,7 +165,7 @@ export default function Home_es() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
                       <a href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt="Gestores de contraseñas autoalojados"
                           className="img-fluid"
@@ -417,7 +417,7 @@ export default function Home_es() {
                     <article>
                       <figure>
                         <a href="/es/articles/que-es-un-analizador">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src="/assets/articles/secrets-management-tools-hero.jpg"
                             width={345}
                             alt="¿Qué es un analizador?"
@@ -449,7 +449,7 @@ export default function Home_es() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
                               alt="Los mejores gestores de contraseñas de código abierto"
@@ -470,7 +470,7 @@ export default function Home_es() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/es/articles/gestores-de-contrasenas-autoalojados">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
                               alt="Gestores de contraseñas autoalojados"
@@ -491,7 +491,7 @@ export default function Home_es() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/es/articles/herramientas-de-gestion-de-secretos">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
                               alt="Herramientas de gestión de secretos para desarrolladores"
@@ -512,7 +512,7 @@ export default function Home_es() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/es/articles/analisis-proton-mail">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
                               alt="Análisis de Proton Mail: correo cifrado"
@@ -533,7 +533,7 @@ export default function Home_es() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/es/articles/mejores-servicios-de-correo-cifrado">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
                               alt="Los mejores servicios de correo cifrado"
@@ -554,7 +554,7 @@ export default function Home_es() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/es/articles/analisis-proton-pass">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
                               alt="Análisis de Proton Pass"
@@ -669,7 +669,7 @@ export default function Home_es() {
                   <div className="panel_body">
                     <div className="more-post">
                       <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-body.jpg"
                           alt="Los mejores gestores de contraseñas de código abierto"
                           className="img-fluid w-100"
@@ -698,7 +698,7 @@ export default function Home_es() {
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
                           <a href="/es/articles/que-es-el-dom" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/secrets-management-tools-body.jpg"
                               alt="¿Qué es el DOM?"
                               className="img-fluid"
@@ -724,7 +724,7 @@ export default function Home_es() {
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
                           <a href="/es/articles/validador-html" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/best-encrypted-email-body.jpg"
                               alt="Qué hace un validador de HTML"
                               className="img-fluid"
@@ -750,7 +750,7 @@ export default function Home_es() {
                       <div className="news-list-item p-0">
                         <div className="img-wrapper">
                           <a href="/es/articles/que-es-un-analizador" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-the-dom-body.jpg"
                               alt="¿Qué es un analizador?"
                               className="img-fluid"
@@ -798,7 +798,7 @@ export default function Home_es() {
                     <div className="panel_body">
                       <div className="border-bottom">
                         <a href="/es/articles/web-semantica" className="d-block mb-3">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src="/assets/articles/semantic-web-body.jpg"
                             alt="La web semántica, explicada"
                             className="img-fluid w-100"
@@ -851,7 +851,7 @@ export default function Home_es() {
                     <div className="panel_body">
                       <div className="border-bottom">
                         <a href="/es/articles/cms-autoalojados" className="d-block mb-3">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src="/assets/projects/html5-parser-hero.jpg"
                             alt="CMS autoalojados que conviene conocer"
                             className="img-fluid"
@@ -914,7 +914,7 @@ export default function Home_es() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/es/articles/web-semantica" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/validator-nu-hero.jpg"
                               alt="La web semántica, explicada"
                               className="img-fluid w-100"
@@ -942,7 +942,7 @@ export default function Home_es() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/es/articles/xml-frente-a-html" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/railfrog-hero.jpg"
                               alt="XML vs HTML: ¿cuál es la diferencia?"
                               className="img-fluid w-100"
@@ -970,7 +970,7 @@ export default function Home_es() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/es/articles/cms-ruby-on-rails-es" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/pellet-hero.jpg"
                               alt="CMS en Ruby on Rails"
                               className="img-fluid w-100"
@@ -998,7 +998,7 @@ export default function Home_es() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/es/articles/codificacion-de-caracteres-utf-8" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/bersirc-hero.jpg"
                               alt="La codificación de caracteres y por qué ganó UTF-8"
                               className="img-fluid w-100"
@@ -1026,7 +1026,7 @@ export default function Home_es() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/es/articles/cms-autoalojados" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/open-source-password-managers-hero.jpg"
                               alt="CMS autoalojados que conviene conocer"
                               className="img-fluid w-100"

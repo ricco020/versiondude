@@ -32,7 +32,7 @@ const HomeCenterSlider = () => {
         <div className="item">
           <div className="slider-post post-height-1">
             <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/assets/articles/self-hosted-password-managers-body.jpg"
                 alt="Los mejores gestores de contraseñas de código abierto"
                 className="img-fluid"
@@ -56,7 +56,7 @@ const HomeCenterSlider = () => {
         <div className="item">
           <div className="slider-post post-height-1">
             <a href="/es/articles/gestores-de-contrasenas-autoalojados" className="news-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/assets/articles/proton-mail-review-body.jpg"
                 alt="Gestores de contraseñas autoalojados"
                 className="img-fluid"
@@ -80,7 +80,7 @@ const HomeCenterSlider = () => {
         <div className="item">
           <div className="slider-post post-height-1">
             <a href="/es/articles/herramientas-de-gestion-de-secretos" className="news-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/assets/articles/proton-pass-review-body.jpg"
                 alt="Herramientas de gestión de secretos para desarrolladores"
                 className="img-fluid"
@@ -104,7 +104,7 @@ const HomeCenterSlider = () => {
         <div className="item">
           <div className="slider-post post-height-1">
             <a href="/es/articles/analisis-proton-mail" className="news-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/assets/articles/html-validator-body.jpg"
                 alt="Análisis de Proton Mail: correo cifrado"
                 className="img-fluid"
@@ -128,7 +128,7 @@ const HomeCenterSlider = () => {
         <div className="item">
           <div className="slider-post post-height-1">
             <a href="/es/articles/mejores-servicios-de-correo-cifrado" className="news-image">
-              <img
+              <img loading="lazy" decoding="async"
                 src="/assets/articles/what-is-a-parser-body.jpg"
                 alt="Los mejores servicios de correo cifrado"
                 className="img-fluid"

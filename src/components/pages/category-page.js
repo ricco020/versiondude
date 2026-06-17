@@ -37,7 +37,7 @@ export default function CategoryPage({ locale = "en", categoryKey, title, items 
                   <div className="col-md-6" key={x.slug}>
                     <article className="card h-100 border-0 shadow-sm">
                       <Link href={x.href}>
-                        <img src={x.img} className="card-img-top" alt={x.alt} style={{ height: 200, objectFit: "cover" }} />
+                        <img loading="lazy" decoding="async" src={x.img} className="card-img-top" alt={x.alt} style={{ height: 200, objectFit: "cover" }} />
                       </Link>
                       <div className="card-body">
                         <span className="badge bg-danger mb-2">{title}</span>
@@ -60,7 +60,7 @@ export default function CategoryPage({ locale = "en", categoryKey, title, items 
                 {side.map((o) => (
                   <div className="d-flex gap-3 mb-3" key={o.slug}>
                     <Link href={`${p}/articles/${o.slug}`} className="flex-shrink-0">
-                      <img src={o.hero} alt={o.heroAlt} width={84} height={60} style={{ objectFit: "cover", borderRadius: 6 }} />
+                      <img loading="lazy" decoding="async" src={o.hero} alt={o.heroAlt} width={84} height={60} style={{ objectFit: "cover", borderRadius: 6 }} />
                     </Link>
                     <div>
                       <span className="badge bg-light text-danger border small">{categoryLabel(o.category, locale)}</span>

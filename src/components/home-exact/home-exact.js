@@ -50,7 +50,7 @@ export default function Home() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
                       <Link href="/articles/open-source-password-managers" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -71,7 +71,7 @@ export default function Home() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
                       <Link href="/articles/self-hosted-password-managers" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -92,7 +92,7 @@ export default function Home() {
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
                       <Link href="/articles/secrets-management-tools" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/secrets-management-tools-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -122,7 +122,7 @@ export default function Home() {
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
                       <Link href="/articles/proton-mail-review" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/proton-mail-review-hero.jpg"
                           alt=""
                           className="img-fluid"
@@ -143,7 +143,7 @@ export default function Home() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
                       <a href="/articles/open-source-password-managers" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt="The best open-source password managers"
                           className="img-fluid"
@@ -165,7 +165,7 @@ export default function Home() {
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
                       <a href="/articles/self-hosted-password-managers" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt="Self-hosted password managers"
                           className="img-fluid"
@@ -417,7 +417,7 @@ export default function Home() {
                     <article>
                       <figure>
                         <a href="/articles/what-is-a-parser">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src="/assets/articles/secrets-management-tools-hero.jpg"
                             width={345}
                             alt="What is a parser?"
@@ -449,7 +449,7 @@ export default function Home() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/articles/open-source-password-managers">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
                               alt="The best open-source password managers"
@@ -470,7 +470,7 @@ export default function Home() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/articles/self-hosted-password-managers">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
                               alt="Self-hosted password managers"
@@ -491,7 +491,7 @@ export default function Home() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/articles/secrets-management-tools">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
                               alt="Secrets management tools for developers"
@@ -512,7 +512,7 @@ export default function Home() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/articles/proton-mail-review">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
                               alt="Proton Mail review: encrypted email"
@@ -533,7 +533,7 @@ export default function Home() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/articles/best-encrypted-email">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
                               alt="The best encrypted email services"
@@ -554,7 +554,7 @@ export default function Home() {
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
                           <a href="/articles/proton-pass-review">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
                               alt="Proton Pass review"
@@ -669,7 +669,7 @@ export default function Home() {
                   <div className="panel_body">
                     <div className="more-post">
                       <a href="/articles/open-source-password-managers" className="news-image">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-body.jpg"
                           alt="The best open-source password managers"
                           className="img-fluid w-100"
@@ -698,7 +698,7 @@ export default function Home() {
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
                           <a href="/articles/what-is-the-dom" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/secrets-management-tools-body.jpg"
                               alt="What is the DOM?"
                               className="img-fluid"
@@ -724,7 +724,7 @@ export default function Home() {
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
                           <a href="/articles/html-validator" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/best-encrypted-email-body.jpg"
                               alt="What an HTML validator does"
                               className="img-fluid"
@@ -750,7 +750,7 @@ export default function Home() {
                       <div className="news-list-item p-0">
                         <div className="img-wrapper">
                           <a href="/articles/what-is-a-parser" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-the-dom-body.jpg"
                               alt="What is a parser?"
                               className="img-fluid"
@@ -798,7 +798,7 @@ export default function Home() {
                     <div className="panel_body">
                       <div className="border-bottom">
                         <a href="/articles/semantic-web" className="d-block mb-3">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src="/assets/articles/semantic-web-body.jpg"
                             alt="The semantic web, explained"
                             className="img-fluid w-100"
@@ -851,7 +851,7 @@ export default function Home() {
                     <div className="panel_body">
                       <div className="border-bottom">
                         <a href="/articles/self-hosted-cms" className="d-block mb-3">
-                          <img
+                          <img loading="lazy" decoding="async"
                             src="/assets/projects/html5-parser-hero.jpg"
                             alt="Self-hosted CMS options worth knowing"
                             className="img-fluid"
@@ -914,7 +914,7 @@ export default function Home() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/articles/semantic-web" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/validator-nu-hero.jpg"
                               alt="The semantic web, explained"
                               className="img-fluid w-100"
@@ -942,7 +942,7 @@ export default function Home() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/articles/xml-vs-html" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/railfrog-hero.jpg"
                               alt="XML vs HTML: what is the difference?"
                               className="img-fluid w-100"
@@ -970,7 +970,7 @@ export default function Home() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/articles/ruby-on-rails-cms" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/pellet-hero.jpg"
                               alt="Ruby on Rails content-management systems"
                               className="img-fluid w-100"
@@ -998,7 +998,7 @@ export default function Home() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/articles/character-encoding-utf-8" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/projects/bersirc-hero.jpg"
                               alt="Character encoding and why UTF-8 won"
                               className="img-fluid w-100"
@@ -1026,7 +1026,7 @@ export default function Home() {
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
                           <a href="/articles/self-hosted-cms" className="thumb">
-                            <img
+                            <img loading="lazy" decoding="async"
                               src="/assets/articles/open-source-password-managers-hero.jpg"
                               alt="Self-hosted CMS options worth knowing"
                               className="img-fluid w-100"

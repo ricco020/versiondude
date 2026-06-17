@@ -44,7 +44,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/self-hosted-password-managers-body.jpg"
               alt="Les meilleurs gestionnaires de mots de passe open source"
               className="img-fluid"
@@ -64,7 +64,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/proton-mail-review-body.jpg"
               alt="Gestionnaires de mots de passe auto-hébergés"
               className="img-fluid"
@@ -84,7 +84,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/fr/articles/outils-de-gestion-des-secrets" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/proton-pass-review-body.jpg"
               alt="Outils de gestion des secrets pour développeurs"
               className="img-fluid"
@@ -104,7 +104,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/fr/articles/test-proton-mail" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/html-validator-body.jpg"
               alt="Test de Proton Mail : l'email chiffré"
               className="img-fluid"

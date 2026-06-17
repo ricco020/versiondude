@@ -43,7 +43,7 @@ export default function ProjectArticle({ project, img, labels, home = "" }) {
               <div className="post_details_inner">
                 <div className="post_details_block">
                   <figure>
-                    <img src={img.hero} className="img-fluid" alt={project.heroAlt} width={690} height={460} />
+                    <img loading="lazy" decoding="async" src={img.hero} className="img-fluid" alt={project.heroAlt} width={690} height={460} />
                   </figure>
                   <ul className="authar-info d-flex flex-wrap">
                     <li><span className="link">VersionDude</span></li>
@@ -53,7 +53,7 @@ export default function ProjectArticle({ project, img, labels, home = "" }) {
                   {project.body.map((para, i) => (<p key={i}>{para}</p>))}
 
                   <figure className="align-left">
-                    <img src={img.body} alt={project.bodyCaption} width={300} height={362} />
+                    <img loading="lazy" decoding="async" src={img.body} alt={project.bodyCaption} width={300} height={362} />
                     <figcaption>{project.bodyCaption}</figcaption>
                   </figure>
 

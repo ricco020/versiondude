@@ -44,7 +44,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/articles/open-source-password-managers" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/self-hosted-password-managers-body.jpg"
               alt="The best open-source password managers"
               className="img-fluid"
@@ -64,7 +64,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/articles/self-hosted-password-managers" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/proton-mail-review-body.jpg"
               alt="Self-hosted password managers"
               className="img-fluid"
@@ -84,7 +84,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/articles/secrets-management-tools" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/proton-pass-review-body.jpg"
               alt="Secrets management tools for developers"
               className="img-fluid"
@@ -104,7 +104,7 @@ const HomeFeatureCarousal = () => {
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href="/articles/proton-mail-review" className="thumb">
-            <img
+            <img loading="lazy" decoding="async"
               src="/assets/articles/html-validator-body.jpg"
               alt="Proton Mail review: encrypted email"
               className="img-fluid"
