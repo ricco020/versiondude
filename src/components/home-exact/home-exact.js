@@ -583,72 +583,15 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                {/* START ADVERTISEMENT */}
-                <div className="add-inner">
-                  
-                </div>
-                {/* END OF /. ADVERTISEMENT */}
+                
               </StickyBox>
             </div>
             {/* END OF /. MAIN CONTENT */}
             {/* START SIDE CONTENT */}
             <div className="col-sm-5 col-md-4 col-xl-3 rightSidebar">
               <StickyBox>
-                {/* START SOCIAL COUNTER TEXT */}
-                <div className="align-items-center d-flex fs-6 justify-content-center mb-1 text-center social-counter-total">
-                  <i className="fa-solid fa-heart text-primary me-1" /> Join{" "}
-                  <span className="fw-bold mx-1">2.5M</span> Followers
-                </div>
-                {/* END OF /. SOCIAL COUNTER TEXT */}
-                {/* START SOCIAL ICON */}
-                <div className="social-media-inner">
-                  <ul className="g-1 row social-media">
-                    <li className="col-4">
-                      <a href="/" className="rss">
-                        <i className="fas fa-rss" />
-                        <div>2,035</div>
-                        <p>Subscribers</p>
-                      </a>
-                    </li>
-                    <li className="col-4">
-                      <a href="/" className="fb">
-                        <i className="fab fa-facebook-f" />
-                        <div>3,794</div>
-                        <p>Fans</p>
-                      </a>
-                    </li>
-                    <li className="col-4">
-                      <a href="/" className="insta">
-                        <i className="fab fa-instagram" />
-                        <div>941</div>
-                        <p>Followers</p>
-                      </a>
-                    </li>
-                    <li className="col-4">
-                      <a href="/" className="you_tube">
-                        <i className="fab fa-youtube" />
-                        <div>7,820</div>
-                        <p>Subscribers</p>
-                      </a>
-                    </li>
-                    <li className="col-4">
-                      <a href="/" className="twitter">
-                        <i className="fab fa-twitter" />
-                        <div>1,562</div>
-                        <p>Followers</p>
-                      </a>
-                    </li>
-                    <li className="col-4">
-                      <a href="/" className="pint">
-                        <i className="fab fa-pinterest-p" />
-                        <div>1,310</div>
-                        <p>Followers</p>
-                      </a>
-                    </li>
-                  </ul>{" "}
-                  {/* /.social icon */}
-                </div>
-                {/* END OF /. SOCIAL ICON */}
+                
+                
                 {/* START TRENDING TOPICS */}
                 <div className="panel_inner review-inner">
                   <div className="panel_header">
@@ -849,22 +792,7 @@ export default function Home() {
             {/* END OF /. SIDE CONTENT */}
           </div>
         </div>
-        {/* START YOUTUBE VIDEO */}
-        <div className="mb-4 py-5 position-relative video-section">
-          <div className="container">
-            <div className="row justify-content-center mb-5">
-              <div className="col-md-6 text-center">
-                <h3 className="text-white">Latest Video News</h3>
-                <p className="text-white mb-0">
-                  It is a long established fact that a reader will be distracted by
-                  the readable content of a page when looking at its layout.{" "}
-                </p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        {/* END OF /. YOUTUBE VIDEO */}
+        
         <section className="articles-wrapper">
           <div className="container">
             <div className="row gx-lg-5">
@@ -1203,117 +1131,13 @@ export default function Home() {
                     {/* /.Post footer*/}
                   </div>
                   {/* END OF /. POST CATEGORY STYLE FOUR (Latest articles ) */}
-                  {/* START ADVERTISEMENT */}
-                  <div className="add-inner mb-0">
-                    
-                  </div>
-                  {/* END OF /. ADVERTISEMENT */}
+                  
                 </StickyBox>
               </div>
               <div className="col-sm-5 col-md-4 col-xl-3 rightSidebar">
                 <StickyBox>
-                  {/* START WEATHER */}
-                  <div className="weather-wrapper-2 weather-bg-2">
-                    <div className="weather-temperature">
-                      <div className="weather-now">
-                        <span className="big-degrees">39</span>
-                        <span className="circle">°</span>
-                        <span className="weather-unit">C</span>
-                      </div>
-                      <div className="weather-icon-2">
-                        <SunnyWeather />
-                      </div>
-                    </div>
-                    <div className="weather-info">
-                      <div className="weather-name"></div>
-                      <span>
-                         <sup>°</sup>
-                      </span>
-                      <span></span>
-                    </div>
-                    <div className="weather-week-2">
-                      <div className="weather-days">
-                        <div className="day-0">Sun</div>
-                        <div className="day-icon">
-                          <i className="wi wi-day-sunny" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-0">45</span>
-                          <span className="td-circle">°</span>
-                        </div>
-                      </div>
-                      <div className="weather-days">
-                        <div className="day-1">Mon</div>
-                        <div className="day-icon">
-                          <i className="wi wi-day-cloudy-high" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-1">21</span>
-                          <span className="circle">°</span>
-                        </div>
-                      </div>
-                      <div className="weather-days">
-                        <div className="day-2">Tue</div>
-                        <div className="day-icon">
-                          <i className="wi wi-day-sleet" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-2">29</span>
-                          <span className="circle">°</span>
-                        </div>
-                      </div>
-                      <div className="weather-days">
-                        <div className="day-3">Wed</div>
-                        <div className="day-icon">
-                          <i className="wi wi-day-lightning" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-3">19</span>
-                          <span className="circle">°</span>
-                        </div>
-                      </div>
-                      <div className="weather-days">
-                        <div className="day-4">Thu</div>
-                        <div className="day-icon">
-                          <i className="wi wi-sleet" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-4">54</span>
-                          <span className="circle">°</span>
-                        </div>
-                      </div>
-                      <div className="weather-days">
-                        <div className="day-4">Fri</div>
-                        <div className="day-icon">
-                          <i className="wi wi-smog" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-5">68</span>
-                          <span className="circle">°</span>
-                        </div>
-                      </div>
-                      <div className="weather-days">
-                        <div className="day-4">Sat</div>
-                        <div className="day-icon">
-                          <i className="wi wi-lightning" />
-                        </div>
-                        <div className="day-degrees">
-                          <span className="degrees-6">28</span>
-                          <span className="circle">°</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="weather-footer">
-                      <div className="weather-date">Saturday, March 26th</div>
-                      <div className="weather-city">San Francisco, CA</div>
-                    </div>
-                  </div>
-                  {/* END OF /. WEATHER */}
-                  {/* START ADVERTISEMENT */}
-                  <div className="add-inner">
-                    
-                  </div>
-                  {/* END OF /. ADVERTISEMENT */}
+                  
+                  
                   {/* START ARCHIVE */}
                   <div className="archive-wrapper">
                     
