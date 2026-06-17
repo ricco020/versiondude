@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "VersionDude",
+    "tagline": "The archive of open-source web-standards tooling",
+    "description": "VersionDude documents the open-source web-standards and developer tools whose Subversion repositories were historically hosted on this domain, and points to where each project lives today."
+  },
+  "nav": {
+    "home": "Home",
+    "reference": "Reference",
+    "projects": "Projects",
+    "about": "About",
+    "browseTopics": "Browse topics"
+  },
+  "categories": {
+    "standards": "Web Standards",
+    "parsing": "Parsing",
+    "tooling": "Tooling",
+    "archive": "Archive"
+  },
+  "home": {
+    "trending": "In focus",
+    "featured": "Featured",
+    "reference": "Reference",
+    "latest": "Projects archived here",
+    "browseByTopic": "Browse by topic",
+    "allProjects": "All projects",
+    "heroKicker": "Web-standards archive",
+    "readReference": "Read the reference",
+    "ctaTitle": "An independent reference for web-standards tooling",
+    "ctaText": "Plain-language documentation of the open-source projects once hosted here — and where to find them today.",
+    "sidebarTitle": "Most referenced",
+    "sidebarTopics": "Topics"
+  },
+  "project": {
+    "currentHome": "Current home",
+    "status": "Status",
+    "legacyPath": "Legacy repository path",
+    "backToProjects": "All projects",
+    "disclaimer": "This page is original documentation. The project is the work of its own authors and community; VersionDude claims no authorship of, or affiliation with, it. The Subversion repository once hosted at svn.versiondude.net is no longer online — use the current home above.",
+    "relatedReference": "Related reading"
+  },
+  "article": {
+    "minRead": "min read",
+    "updated": "Reference",
+    "backHome": "VersionDude",
+    "disclaimerShort": "Independent reference. We are not affiliated with the WHATWG or the projects linked above.",
+    "related": "Related projects"
+  },
+  "footer": {
+    "about": "An independent, original reference documenting the open-source web-standards and developer tools whose repositories were historically hosted on this domain. We claim no authorship of, or affiliation with, those projects.",
+    "explore": "Explore",
+    "topics": "Topics",
+    "rights": "VersionDude. Independent reference — no tracking beyond basic analytics.",
+    "noAffiliation": "Project names and links belong to their respective owners."
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "lang": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français",
+    "es": "Español"
+  }
+}
