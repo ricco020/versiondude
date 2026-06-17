@@ -141,7 +141,7 @@ export default function Home() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/" className="news-image">
+                      <a href="/articles/open-source-password-managers" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt=""
@@ -163,7 +163,7 @@ export default function Home() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/" className="news-image">
+                      <a href="/articles/self-hosted-password-managers" className="news-image">
                         <img
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt=""
@@ -287,42 +287,31 @@ export default function Home() {
                           <li>
                             <span className="count">01</span>
                             <span className="text">
-                              <a href="/">
-                                South Africa bounce back on eventful day
-                              </a>
+                              <a href="/articles/open-source-password-managers">The best open-source password managers</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">02</span>
                             <span className="text">
-                              <a href="/">
-                                Steyn ruled out of series with shoulder fracture
-                              </a>
+                              <a href="/articles/self-hosted-password-managers">Self-hosted password managers</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">03</span>
                             <span className="text">
-                              <a href="/">
-                                BCCI asks ECB to bear expenses of team's India tour
-                              </a>
+                              <a href="/articles/secrets-management-tools">Secrets management tools for developers</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">04</span>
                             <span className="text">
-                              <a href="/">
-                                Duminy, Elgar tons set Australia huge target
-                              </a>
+                              <a href="/articles/proton-mail-review">Proton Mail review: encrypted email</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">05</span>
                             <span className="text">
-                              <a href="/">
-                                English spinners are third-class citizens, says
-                                Graeme Swann
-                              </a>
+                              <a href="/articles/best-encrypted-email">The best encrypted email services</a>
                             </span>
                           </li>
                         </ul>
@@ -342,12 +331,12 @@ export default function Home() {
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/">
+                              <a href="/categories/standards">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/">
+                              <a href="/articles/what-is-the-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -367,12 +356,12 @@ export default function Home() {
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/">
+                              <a href="/articles/html-validator">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/">
+                              <a href="/articles/html-validator">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -392,12 +381,12 @@ export default function Home() {
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/">
+                              <a href="/articles/what-is-the-dom">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/">
+                              <a href="/articles/what-is-the-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -458,7 +447,7 @@ export default function Home() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/">
+                          <a href="/articles/open-source-password-managers">
                             <img
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
@@ -479,7 +468,7 @@ export default function Home() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/">
+                          <a href="/articles/self-hosted-password-managers">
                             <img
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
@@ -500,7 +489,7 @@ export default function Home() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/">
+                          <a href="/articles/secrets-management-tools">
                             <img
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
@@ -521,7 +510,7 @@ export default function Home() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/">
+                          <a href="/articles/proton-mail-review">
                             <img
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
@@ -542,7 +531,7 @@ export default function Home() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/">
+                          <a href="/articles/best-encrypted-email">
                             <img
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
@@ -563,7 +552,7 @@ export default function Home() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/">
+                          <a href="/articles/proton-pass-review">
                             <img
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
@@ -662,7 +651,7 @@ export default function Home() {
                     </div>
                     {/* View All Category button */}
                     <div className="text-center mt-3">
-                      <a href="/" className="fw-bold text-primary-hover">
+                      <a href="/articles/what-is-the-dom" className="fw-bold text-primary-hover">
                         <u>View all categories</u>
                       </a>
                     </div>
@@ -678,7 +667,7 @@ export default function Home() {
                   </div>
                   <div className="panel_body">
                     <div className="more-post">
-                      <a href="/" className="news-image">
+                      <a href="/articles/open-source-password-managers" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-body.jpg"
                           alt=""
@@ -700,14 +689,14 @@ export default function Home() {
                           </li>
                           </ul>
                         <h4 className="mb-0">
-                          Quisque tincidunt metus a lacinia faucibus.
+                          What is the DOM?
                         </h4>
                       </div>
                     </div>
                     <div className="mt-4 news-list">
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/articles/open-source-password-managers" className="thumb">
+                          <a href="/articles/what-is-the-dom" className="thumb">
                             <img
                               src="/assets/articles/secrets-management-tools-body.jpg"
                               alt=""
@@ -733,7 +722,7 @@ export default function Home() {
                       </div>
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/articles/self-hosted-password-managers" className="thumb">
+                          <a href="/articles/html-validator" className="thumb">
                             <img
                               src="/assets/articles/best-encrypted-email-body.jpg"
                               alt=""
@@ -759,7 +748,7 @@ export default function Home() {
                       </div>
                       <div className="news-list-item p-0">
                         <div className="img-wrapper">
-                          <a href="/articles/secrets-management-tools" className="thumb">
+                          <a href="/articles/what-is-a-parser" className="thumb">
                             <img
                               src="/assets/articles/what-is-the-dom-body.jpg"
                               alt=""
@@ -807,7 +796,7 @@ export default function Home() {
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/" className="d-block mb-3">
+                        <a href="/articles/semantic-web" className="d-block mb-3">
                           <img
                             src="/assets/articles/semantic-web-body.jpg"
                             alt=""
@@ -860,7 +849,7 @@ export default function Home() {
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/" className="d-block mb-3">
+                        <a href="/articles/self-hosted-cms" className="d-block mb-3">
                           <img
                             src="/assets/projects/html5-parser-hero.jpg"
                             alt=""
@@ -923,7 +912,7 @@ export default function Home() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/articles/proton-mail-review" className="thumb">
+                          <a href="/articles/semantic-web" className="thumb">
                             <img
                               src="/assets/projects/validator-nu-hero.jpg"
                               alt=""
@@ -951,7 +940,7 @@ export default function Home() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/articles/best-encrypted-email" className="thumb">
+                          <a href="/articles/xml-vs-html" className="thumb">
                             <img
                               src="/assets/projects/railfrog-hero.jpg"
                               alt=""
@@ -979,7 +968,7 @@ export default function Home() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/articles/proton-pass-review" className="thumb">
+                          <a href="/articles/ruby-on-rails-cms" className="thumb">
                             <img
                               src="/assets/projects/pellet-hero.jpg"
                               alt=""
@@ -1007,7 +996,7 @@ export default function Home() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/articles/what-is-the-dom" className="thumb">
+                          <a href="/articles/character-encoding-utf-8" className="thumb">
                             <img
                               src="/assets/projects/bersirc-hero.jpg"
                               alt=""
@@ -1035,7 +1024,7 @@ export default function Home() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/articles/html-validator" className="thumb">
+                          <a href="/articles/self-hosted-cms" className="thumb">
                             <img
                               src="/assets/articles/open-source-password-managers-hero.jpg"
                               alt=""
@@ -1065,32 +1054,7 @@ export default function Home() {
                       <div className="row thm-margin">
                         <div className="col-md-8 thm-padding">
                           {/* pagination */}
-                          <ul className="pagination">
-                            <li className="disabled">
-                              <span className="ti ti-angle-left" />
-                            </li>
-                            <li className="active">
-                              <span>1</span>
-                            </li>
-                            <li>
-                              <a href="/">2</a>
-                            </li>
-                            <li>
-                              <a href="/">3</a>
-                            </li>
-                            <li className="disabled">
-                              <span className="extend">...</span>
-                            </li>
-                            <li></li>
-                            <li>
-                              <a href="/">12</a>
-                            </li>
-                            <li>
-                              <a href="/">
-                                <i className="ti ti-angle-right" />
-                              </a>
-                            </li>
-                          </ul>{" "}
+                          {" "}
                           {/* /.pagination */}
                         </div>
                         <div className="col-md-4 d-md-block d-none thm-padding">
@@ -1098,28 +1062,28 @@ export default function Home() {
                             <ul>
                               <li>
                                 <div className="share transition">
-                                  <a href="/" target="_blank" className="ico fb">
+                                  <a href="/articles/what-is-the-dom" target="_blank" className="ico fb">
                                     <i className="fab fa-facebook-f" />
                                   </a>
-                                  <a href="/" target="_blank" className="ico tw">
+                                  <a href="/articles/what-is-the-dom" target="_blank" className="ico tw">
                                     <i className="fab fa-twitter" />
                                   </a>
-                                  <a href="/" target="_blank" className="ico rs">
+                                  <a href="/articles/what-is-the-dom" target="_blank" className="ico rs">
                                     <i className="fas fa-rss" />
                                   </a>
-                                  <a href="/" target="_blank" className="ico pin">
+                                  <a href="/articles/what-is-the-dom" target="_blank" className="ico pin">
                                     <i className="fab fa-pinterest-p" />
                                   </a>
                                   <i className="ti ti-share ico-share" />
                                 </div>
                               </li>
                               <li>
-                                <a href="/">
+                                <a href="/articles/what-is-the-dom">
                                   <i className="ti ti-heart" />
                                 </a>
                               </li>
                               <li>
-                                <a href="/">
+                                <a href="/articles/what-is-the-dom">
                                   <i className="ti ti-twitter" />
                                 </a>
                               </li>

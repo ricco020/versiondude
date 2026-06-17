@@ -31,7 +31,7 @@ const HomeCenterSlider = () => {
         {/* Slider item one */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/articles/open-source-password-managers" className="news-image">
               <img
                 src="/assets/articles/self-hosted-password-managers-body.jpg"
                 alt=""
@@ -55,7 +55,7 @@ const HomeCenterSlider = () => {
         {/* Slider item two */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/articles/self-hosted-password-managers" className="news-image">
               <img
                 src="/assets/articles/proton-mail-review-body.jpg"
                 alt=""
@@ -79,7 +79,7 @@ const HomeCenterSlider = () => {
         {/* Slider item three */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/articles/secrets-management-tools" className="news-image">
               <img
                 src="/assets/articles/proton-pass-review-body.jpg"
                 alt=""
@@ -103,7 +103,7 @@ const HomeCenterSlider = () => {
         {/* Slider item four */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/articles/proton-mail-review" className="news-image">
               <img
                 src="/assets/articles/html-validator-body.jpg"
                 alt=""
@@ -127,7 +127,7 @@ const HomeCenterSlider = () => {
         {/* Slider item five */}
         <div className="item">
           <div className="slider-post post-height-1">
-            <a href="/" className="news-image">
+            <a href="/articles/best-encrypted-email" className="news-image">
               <img
                 src="/assets/articles/what-is-a-parser-body.jpg"
                 alt=""

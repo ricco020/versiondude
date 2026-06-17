@@ -141,7 +141,7 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/es/" className="news-image">
+                      <a href="/es/articles/open-source-password-managers" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt=""
@@ -163,7 +163,7 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/es/" className="news-image">
+                      <a href="/es/articles/self-hosted-password-managers" className="news-image">
                         <img
                           src="/assets/articles/self-hosted-password-managers-hero.jpg"
                           alt=""
@@ -287,42 +287,31 @@ export default function Home_es() {
                           <li>
                             <span className="count">01</span>
                             <span className="text">
-                              <a href="/es/">
-                                South Africa bounce back on eventful day
-                              </a>
+                              <a href="/es/articles/open-source-password-managers">Los mejores gestores de contraseñas de código abierto</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">02</span>
                             <span className="text">
-                              <a href="/es/">
-                                Steyn ruled out of series with shoulder fracture
-                              </a>
+                              <a href="/es/articles/self-hosted-password-managers">Gestores de contraseñas autoalojados</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">03</span>
                             <span className="text">
-                              <a href="/es/">
-                                BCCI asks ECB to bear expenses of team's India tour
-                              </a>
+                              <a href="/es/articles/secrets-management-tools">Herramientas de gestión de secretos para desarrolladores</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">04</span>
                             <span className="text">
-                              <a href="/es/">
-                                Duminy, Elgar tons set Australia huge target
-                              </a>
+                              <a href="/es/articles/proton-mail-review">Análisis de Proton Mail: correo cifrado</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">05</span>
                             <span className="text">
-                              <a href="/es/">
-                                English spinners are third-class citizens, says
-                                Graeme Swann
-                              </a>
+                              <a href="/es/articles/best-encrypted-email">Los mejores servicios de correo cifrado</a>
                             </span>
                           </li>
                         </ul>
@@ -342,12 +331,12 @@ export default function Home_es() {
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/">
+                              <a href="/es/categories/standards">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/">
+                              <a href="/es/articles/what-is-the-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -367,12 +356,12 @@ export default function Home_es() {
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/">
+                              <a href="/es/articles/html-validator">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/">
+                              <a href="/es/articles/html-validator">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -392,12 +381,12 @@ export default function Home_es() {
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/">
+                              <a href="/es/articles/what-is-the-dom">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/">
+                              <a href="/es/articles/what-is-the-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -458,7 +447,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/">
+                          <a href="/es/articles/open-source-password-managers">
                             <img
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
@@ -479,7 +468,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/">
+                          <a href="/es/articles/self-hosted-password-managers">
                             <img
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
@@ -500,7 +489,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/">
+                          <a href="/es/articles/secrets-management-tools">
                             <img
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
@@ -521,7 +510,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/">
+                          <a href="/es/articles/proton-mail-review">
                             <img
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
@@ -542,7 +531,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/">
+                          <a href="/es/articles/best-encrypted-email">
                             <img
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
@@ -563,7 +552,7 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/">
+                          <a href="/es/articles/proton-pass-review">
                             <img
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
@@ -662,7 +651,7 @@ export default function Home_es() {
                     </div>
                     {/* View All Category button */}
                     <div className="text-center mt-3">
-                      <a href="/es/" className="fw-bold text-primary-hover">
+                      <a href="/es/articles/what-is-the-dom" className="fw-bold text-primary-hover">
                         <u>Ver todas las categorías</u>
                       </a>
                     </div>
@@ -678,7 +667,7 @@ export default function Home_es() {
                   </div>
                   <div className="panel_body">
                     <div className="more-post">
-                      <a href="/es/" className="news-image">
+                      <a href="/es/articles/open-source-password-managers" className="news-image">
                         <img
                           src="/assets/articles/open-source-password-managers-body.jpg"
                           alt=""
@@ -700,14 +689,14 @@ export default function Home_es() {
                           </li>
                           </ul>
                         <h4 className="mb-0">
-                          Quisque tincidunt metus a lacinia faucibus.
+                          ¿Qué es el DOM?
                         </h4>
                       </div>
                     </div>
                     <div className="mt-4 news-list">
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/es/articles/open-source-password-managers" className="thumb">
+                          <a href="/es/articles/what-is-the-dom" className="thumb">
                             <img
                               src="/assets/articles/secrets-management-tools-body.jpg"
                               alt=""
@@ -733,7 +722,7 @@ export default function Home_es() {
                       </div>
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/es/articles/self-hosted-password-managers" className="thumb">
+                          <a href="/es/articles/html-validator" className="thumb">
                             <img
                               src="/assets/articles/best-encrypted-email-body.jpg"
                               alt=""
@@ -759,7 +748,7 @@ export default function Home_es() {
                       </div>
                       <div className="news-list-item p-0">
                         <div className="img-wrapper">
-                          <a href="/es/articles/secrets-management-tools" className="thumb">
+                          <a href="/es/articles/what-is-a-parser" className="thumb">
                             <img
                               src="/assets/articles/what-is-the-dom-body.jpg"
                               alt=""
@@ -807,7 +796,7 @@ export default function Home_es() {
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/es/" className="d-block mb-3">
+                        <a href="/es/articles/semantic-web" className="d-block mb-3">
                           <img
                             src="/assets/articles/semantic-web-body.jpg"
                             alt=""
@@ -860,7 +849,7 @@ export default function Home_es() {
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/es/" className="d-block mb-3">
+                        <a href="/es/articles/self-hosted-cms" className="d-block mb-3">
                           <img
                             src="/assets/projects/html5-parser-hero.jpg"
                             alt=""
@@ -923,7 +912,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/proton-mail-review" className="thumb">
+                          <a href="/es/articles/semantic-web" className="thumb">
                             <img
                               src="/assets/projects/validator-nu-hero.jpg"
                               alt=""
@@ -951,7 +940,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/best-encrypted-email" className="thumb">
+                          <a href="/es/articles/xml-vs-html" className="thumb">
                             <img
                               src="/assets/projects/railfrog-hero.jpg"
                               alt=""
@@ -979,7 +968,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/proton-pass-review" className="thumb">
+                          <a href="/es/articles/ruby-on-rails-cms" className="thumb">
                             <img
                               src="/assets/projects/pellet-hero.jpg"
                               alt=""
@@ -1007,7 +996,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/what-is-the-dom" className="thumb">
+                          <a href="/es/articles/character-encoding-utf-8" className="thumb">
                             <img
                               src="/assets/projects/bersirc-hero.jpg"
                               alt=""
@@ -1035,7 +1024,7 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/html-validator" className="thumb">
+                          <a href="/es/articles/self-hosted-cms" className="thumb">
                             <img
                               src="/assets/articles/open-source-password-managers-hero.jpg"
                               alt=""
@@ -1065,32 +1054,7 @@ export default function Home_es() {
                       <div className="row thm-margin">
                         <div className="col-md-8 thm-padding">
                           {/* pagination */}
-                          <ul className="pagination">
-                            <li className="disabled">
-                              <span className="ti ti-angle-left" />
-                            </li>
-                            <li className="active">
-                              <span>1</span>
-                            </li>
-                            <li>
-                              <a href="/es/">2</a>
-                            </li>
-                            <li>
-                              <a href="/es/">3</a>
-                            </li>
-                            <li className="disabled">
-                              <span className="extend">...</span>
-                            </li>
-                            <li></li>
-                            <li>
-                              <a href="/es/">12</a>
-                            </li>
-                            <li>
-                              <a href="/es/">
-                                <i className="ti ti-angle-right" />
-                              </a>
-                            </li>
-                          </ul>{" "}
+                          {" "}
                           {/* /.pagination */}
                         </div>
                         <div className="col-md-4 d-md-block d-none thm-padding">
@@ -1098,28 +1062,28 @@ export default function Home_es() {
                             <ul>
                               <li>
                                 <div className="share transition">
-                                  <a href="/es/" target="_blank" className="ico fb">
+                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico fb">
                                     <i className="fab fa-facebook-f" />
                                   </a>
-                                  <a href="/es/" target="_blank" className="ico tw">
+                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico tw">
                                     <i className="fab fa-twitter" />
                                   </a>
-                                  <a href="/es/" target="_blank" className="ico rs">
+                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico rs">
                                     <i className="fas fa-rss" />
                                   </a>
-                                  <a href="/es/" target="_blank" className="ico pin">
+                                  <a href="/es/articles/what-is-the-dom" target="_blank" className="ico pin">
                                     <i className="fab fa-pinterest-p" />
                                   </a>
                                   <i className="ti ti-share ico-share" />
                                 </div>
                               </li>
                               <li>
-                                <a href="/es/">
+                                <a href="/es/articles/what-is-the-dom">
                                   <i className="ti ti-heart" />
                                 </a>
                               </li>
                               <li>
-                                <a href="/es/">
+                                <a href="/es/articles/what-is-the-dom">
                                   <i className="ti ti-twitter" />
                                 </a>
                               </li>

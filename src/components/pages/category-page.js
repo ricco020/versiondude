@@ -1,34 +1,14 @@
 "use client";
 import LayoutTwo from "@/components/ltr/layout/layout-two";
-import StickyBox from "react-sticky-box";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 import { getArticles, categoryLabel } from "@/data/articles";
 
-// Design fidèle à category-style de la démo : page-title + "une" en overlay + grille + sidebar.
+// Page catégorie : grille de cartes robuste (bootstrap), rendu fiable. + sidebar derniers articles.
 export default function CategoryPage({ locale = "en", categoryKey, title, items }) {
   const s = t(locale);
   const p = locale === "en" ? "" : `/${locale}`;
-  const featured = items.slice(0, 4);
-  const grid = items.slice(4);
-  const side = getArticles(locale).filter((a) => a.category !== categoryKey).slice(0, 5);
-
-  const Overlay = ({ x }) => (
-    <div className="slider-post post-height-2">
-      <Link href={`${p}/${x.type}/${x.slug}`} className="news-image">
-        <img src={x.img} alt={x.alt} className="img-fluid" />
-      </Link>
-      <div className="post-text">
-        <span className="post-category">{title}</span>
-        <h4><Link href={`${p}/${x.type}/${x.slug}`}>{x.title}</Link></h4>
-        <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-          <li>{s.ui.by} <span className="editor-name">VersionDude</span></li>
-          {x.meta ? <li>{x.meta}</li> : null}
-        </ul>
-      </div>
-    </div>
-  );
-
+  const side = getArticles(locale).filter((a) => a.category !== categoryKey).slice(0, 6);
   return (
     <LayoutTwo locale={locale}>
       <main className="page_main_wrapper">
@@ -48,55 +28,47 @@ export default function CategoryPage({ locale = "en", categoryKey, title, items 
           </div>
         </div>
 
-        {/* FEATURED OVERLAY ROW */}
-        <section className="slider-inner">
-          <div className="container">
-            <div className="row thm-margin">
-              {featured.map((x, i) => (
-                <div className={i === 0 ? "col-md-6 thm-padding" : "col-md-6 col-lg-2 thm-padding"} key={x.slug}><Overlay x={x} /></div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <div className="container">
-          <div className="row row-m">
+        <div className="container py-4">
+          <div className="row g-4">
             {/* GRID */}
-            <div className="col-md-8 col-p main-content">
-              <div className="row">
-                {grid.length === 0 && <div className="col-12"><p className="text-muted">{title}</p></div>}
-                {grid.map((x) => (
-                  <div className="col-sm-6 thm-padding mb-4" key={x.slug}>
-                    <div className="slider-post post-height-4">
-                      <Link href={`${p}/${x.type}/${x.slug}`} className="news-image">
-                        <img src={x.img} alt={x.alt} className="img-fluid" />
+            <div className="col-lg-8">
+              <div className="row g-4">
+                {items.map((x) => (
+                  <div className="col-md-6" key={x.slug}>
+                    <article className="card h-100 border-0 shadow-sm">
+                      <Link href={`${p}/${x.type}/${x.slug}`}>
+                        <img src={x.img} className="card-img-top" alt={x.alt} style={{ height: 200, objectFit: "cover" }} />
                       </Link>
-                      <div className="post-text">
-                        <span className="post-category">{title}</span>
-                        <h4><Link href={`${p}/${x.type}/${x.slug}`}>{x.title}</Link></h4>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>{s.ui.by} <span className="editor-name">VersionDude</span></li>
-                        </ul>
+                      <div className="card-body">
+                        <span className="badge bg-danger mb-2">{title}</span>
+                        <h3 className="h5 card-title">
+                          <Link href={`${p}/${x.type}/${x.slug}`} className="text-dark text-decoration-none stretched-link">{x.title}</Link>
+                        </h3>
+                        {x.desc ? <p className="card-text text-muted small">{x.desc}</p> : null}
+                        <div className="text-muted small">{s.ui.by} VersionDude{x.meta ? ` · ${x.meta}` : ""}</div>
                       </div>
-                    </div>
+                    </article>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* SIDEBAR */}
-            <div className="col-md-4 col-p rightSidebar">
-              <StickyBox offsetTop={20}>
-                <div className="tabs-wrapper">
-                  <h4 className="widget-title border-bottom pb-2 mb-3">{s.ui.latest}</h4>
-                  <div className="most-viewed"><ul className="content tabs-content">
-                    {side.map((o, i) => (
-                      <li key={o.slug}><span className="count">{String(i + 1).padStart(2, "0")}</span>
-                        <span className="text"><Link href={`${p}/articles/${o.slug}`}>{o.title}</Link></span></li>
-                    ))}
-                  </ul></div>
-                </div>
-              </StickyBox>
+            <div className="col-lg-4">
+              <div className="bg-light p-3 rounded">
+                <h4 className="h6 border-bottom pb-2 mb-3">{s.ui.latest}</h4>
+                {side.map((o) => (
+                  <div className="d-flex gap-3 mb-3" key={o.slug}>
+                    <Link href={`${p}/articles/${o.slug}`} className="flex-shrink-0">
+                      <img src={o.hero} alt={o.heroAlt} width={84} height={60} style={{ objectFit: "cover", borderRadius: 6 }} />
+                    </Link>
+                    <div>
+                      <span className="badge bg-light text-danger border small">{categoryLabel(o.category, locale)}</span>
+                      <h5 className="h6 mb-0 mt-1"><Link href={`${p}/articles/${o.slug}`} className="text-dark text-decoration-none">{o.title}</Link></h5>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
