@@ -275,5 +275,29 @@
    "Choisir parmi ces modèles revient vraiment à faire correspondre l'outil à votre équipe et à vos objectifs. Un groupe non technique qui publie des articles sera peut-être le mieux servi par l'expérience mature et tout-en-un de WordPress ; une équipe de développement voulant un contrôle total du front-end pourra préférer un CMS headless ; et une équipe vivant déjà dans un framework pourra favoriser un système natif, intégré à l'application. Il n'y a pas d'option unique meilleure, seulement le meilleur ajustement pour une situation donnée.",
    "Quel que soit le chemin choisi, prévoyez le budget des bases opérationnelles dès le départ plutôt qu'après coup. Mettez en place des sauvegardes automatisées et testées, appliquez promptement les mises à jour de sécurité, et ayez un plan pour gérer la croissance du trafic et du contenu. L'auto-hébergement vous récompense véritablement par le contrôle et la propriété, mais il exige de la responsabilité en retour, et les sites qui prospèrent sont ceux dont les propriétaires prennent ce marché au sérieux."
   ]
+ },
+ "what-is-a-vps": {
+  "title": "Qu'est-ce qu'un VPS ? Guide clair pour les développeurs",
+  "dek": "Un VPS (serveur privé virtuel) vous donne une part privée d'un vrai serveur — votre propre OS, un accès root et des ressources garanties. Ce que ça veut dire, en quoi il diffère du mutualisé et du cloud, et quand en avoir un.",
+  "heroAlt": "Une main insérant un module serveur dans un rack de data center éclairé en bleu",
+  "bodyCaption": "Gros plan d'une carte électronique serveur avec puces CPU et mémoire.",
+  "paras": [
+   "VPS signifie Virtual Private Server (serveur privé virtuel) — une part privée d'un serveur physique qui se comporte comme une machine bien à vous. Vous disposez de votre propre système d'exploitation, d'un accès root (administrateur) et d'une part garantie de CPU, de mémoire et de stockage, le tout à un prix mensuel prévisible. C'est l'entre-deux entre l'hébergement mutualisé bon marché et un serveur dédié complet.",
+   "En coulisses, l'hébergeur fait tourner un serveur physique puissant et le découpe, par virtualisation, en plusieurs machines virtuelles isolées. Chaque VPS a son propre OS et ses ressources cloisonnées de ses voisins : le pic de trafic ou le plantage d'un autre client ne fait pas tomber votre site comme cela peut arriver en mutualisé.",
+   "Cette isolation est tout l'intérêt. Sur un VPS, vous pouvez installer presque n'importe quoi — un serveur web, une base de données, des workers en arrière-plan, un moteur de conteneurs — et le configurer exactement comme vous voulez, puisque vous avez le root. Vous êtes responsable de cet environnement : plus de pouvoir, mais aussi plus de responsabilité que sur les plateformes managées.",
+   "Face au mutualisé, un VPS offre des ressources dédiées et garanties et un accès root, au lieu d'un panneau de contrôle verrouillé sur un serveur bondé d'autres sites. Le mutualisé est moins cher et plus simple, mais vous ne pouvez pas installer de paquets système, ajuster la pile, ni échapper à un voisin bruyant.",
+   "Face au cloud, la frontière est plus floue : un serveur cloud est essentiellement un VPS que vous pouvez redimensionner et facturer à l'heure, souvent entouré de services managés. Un VPS classique est en général un forfait fixe à prix fixe. Pour la plupart des petits projets, un VPS simple est plus simple et moins cher qu'un compte cloud tentaculaire.",
+   "Les développeurs choisissent un VPS quand ils ont dépassé le mutualisé ou veulent un contrôle total. Usages courants : héberger des applis web et des API, faire tourner une base de données, auto-héberger des outils, des environnements de préproduction, des bots et des tâches cron, ou apprendre l'administration de serveurs Linux sur le terrain.",
+   "Le compromis, c'est la maintenance : avec le root, vous assumez aussi les mises à jour, le durcissement sécurité, les sauvegardes et la disponibilité. Un VPS récompense le contrôle par la responsabilité ; il convient donc à qui est à l'aise en ligne de commande — ou prêt à apprendre.",
+   "C'est pourquoi les hébergeurs proposent des offres infogérées et non infogérées. La non infogérée est moins chère et vous laisse un serveur nu à gérer vous-même ; l'infogérée ajoute support, mises à jour et parfois un panneau de contrôle, à un prix plus élevé. Choisissez selon la quantité d'administration que vous voulez assumer.",
+   "Alors, un VPS est-il fait pour vous ? Si vous avez besoin du root, de ressources garanties, ou de faire tourner quelque chose qu'interdit le mutualisé — et que vous êtes à l'aise pour maintenir une machine Linux — un VPS est la montée en gamme naturelle, à coût prévisible. Si vous voulez juste un site simple en ligne sans tracas, l'hébergement managé peut rester plus adapté."
+  ],
+  "list": [
+   "Applis web & API nécessitant un contrôle total",
+   "Bases de données (PostgreSQL, MySQL, Redis)",
+   "Outils auto-hébergés, bots et tâches cron",
+   "Environnements de préproduction et projets perso",
+   "Apprendre l'administration de serveurs Linux"
+  ]
  }
 }

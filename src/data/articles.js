@@ -58,6 +58,27 @@ const DEV_CLOUD = {
 const a = (o) => o;
 
 export const ARTICLES = [
+  // ---------- PILIER 1 — dev monétisable (hébergement) ----------
+  a({
+    slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 6,
+    title: 'What is a VPS? A plain-English guide for developers',
+    dek: 'A VPS (Virtual Private Server) gives you a private slice of a real server — your own OS, root access and guaranteed resources. What that means, how it differs from shared and cloud hosting, and when you need one.',
+    hero: '/assets/articles/what-is-a-vps-hero.jpg', heroAlt: 'A hand inserting a server module into a blue-lit data-centre rack',
+    body: '/assets/articles/what-is-a-vps-body.jpg', bodyCaption: 'A close-up of a server circuit board with CPU and memory chips.',
+    paras: [
+      'VPS stands for Virtual Private Server — a private slice of a physical server that behaves like a machine of your own. You get your own operating system, root (administrator) access, and a guaranteed share of CPU, memory and storage, all for a predictable monthly price. It is the middle ground between cheap shared hosting and a full dedicated server.',
+      'Under the hood, a hosting provider runs one powerful physical server and uses virtualization to split it into several isolated virtual machines. Each VPS has its own OS and resources walled off from its neighbours, so another customer’s traffic spike or crash does not drag your site down the way it can on shared hosting.',
+      'That isolation is the whole point. On a VPS you can install almost anything — a web server, a database, background workers, a container runtime — and configure it exactly how you want, because you have root. You are responsible for that environment, which is more power and more responsibility than managed platforms give you.',
+      'Compared with shared hosting, a VPS gives you dedicated, guaranteed resources and root access instead of a locked-down control panel on a server crowded with other sites. Shared hosting is cheaper and simpler, but you cannot install system packages, tune the stack, or escape a noisy neighbour.',
+      'Compared with cloud hosting, the line is blurrier: a cloud server is essentially a VPS you can resize and bill by the hour, often with extra managed services around it. A traditional VPS is usually a fixed plan at a fixed price. For most small projects a straightforward VPS is simpler and cheaper than a sprawling cloud account.',
+      'Developers reach for a VPS when they have outgrown shared hosting or want full control. Common uses include hosting web apps and APIs, running a database, self-hosting tools, staging environments, bots and cron jobs, or learning Linux server administration hands-on.',
+      'The trade-off is maintenance: with root access you also own updates, security hardening, backups and uptime. A VPS rewards control with responsibility, so it suits people comfortable on the command line — or willing to learn.',
+      'That responsibility is why providers offer managed and unmanaged plans. Unmanaged is cheaper and gives you a bare server to run yourself; managed adds support, updates and sometimes a control panel, for a higher price. Pick based on how much server administration you want to do.',
+      'So is a VPS right for you? If you need root, guaranteed resources, or to run something shared hosting forbids — and you are comfortable maintaining a Linux box — a VPS is the natural step up, at a predictable cost. If you just want a simple site live with minimal fuss, managed hosting may still fit better.',
+    ],
+    list: ['Web apps & APIs that need full control', 'Databases (PostgreSQL, MySQL, Redis)', 'Self-hosted tools, bots and cron jobs', 'Staging environments and side projects', 'Learning Linux server administration'],
+    cta: DEV_CLOUD,
+  }),
   // ---------- PILIER 2 — monétisable (Proton) ----------
   a({
     slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6,
@@ -272,6 +293,7 @@ const TR = { fr: FR, es: ES };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps" },
   "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto" },
   "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados" },
   "secrets-management-tools": { fr: "outils-de-gestion-des-secrets", es: "herramientas-de-gestion-de-secretos" },

@@ -275,5 +275,29 @@
    "Elegir entre estos modelos realmente se reduce a ajustar la herramienta a tu equipo y tus objetivos. A un grupo no técnico que publica artículos puede servirle mejor la experiencia madura y todo en uno de WordPress; un equipo de desarrollo que quiere control total sobre el front-end puede preferir un CMS headless; y un equipo que ya vive en un framework puede favorecer un sistema nativo, dentro de la aplicación. No hay una única mejor opción, solo el mejor ajuste para una situación dada.",
    "Sea cual sea el camino que elijas, presupuesta lo básico operativo desde el principio en lugar de como una ocurrencia tardía. Configura copias de seguridad automatizadas y probadas, aplica las actualizaciones de seguridad con prontitud y ten un plan para gestionar el crecimiento del tráfico y del contenido. El autoalojamiento te recompensa genuinamente con control y propiedad, pero pide responsabilidad a cambio, y los sitios que prosperan son aquellos cuyos dueños se toman ese trato en serio."
   ]
+ },
+ "what-is-a-vps": {
+  "title": "¿Qué es un VPS? Guía clara para desarrolladores",
+  "dek": "Un VPS (servidor privado virtual) te da una porción privada de un servidor real — tu propio sistema operativo, acceso root y recursos garantizados. Qué significa, en qué se diferencia del compartido y el cloud, y cuándo necesitas uno.",
+  "heroAlt": "Una mano insertando un módulo de servidor en un rack de centro de datos iluminado en azul",
+  "bodyCaption": "Primer plano de una placa de circuito de servidor con chips de CPU y memoria.",
+  "paras": [
+   "VPS significa Virtual Private Server (servidor privado virtual) — una porción privada de un servidor físico que se comporta como una máquina propia. Tienes tu propio sistema operativo, acceso root (administrador) y una parte garantizada de CPU, memoria y almacenamiento, todo por un precio mensual previsible. Es el punto medio entre el alojamiento compartido barato y un servidor dedicado completo.",
+   "Por dentro, el proveedor ejecuta un servidor físico potente y, mediante virtualización, lo divide en varias máquinas virtuales aisladas. Cada VPS tiene su propio SO y sus recursos separados de los vecinos, así que el pico de tráfico o la caída de otro cliente no arrastra tu sitio como puede ocurrir en el compartido.",
+   "Ese aislamiento es lo esencial. En un VPS puedes instalar casi cualquier cosa — un servidor web, una base de datos, procesos en segundo plano, un runtime de contenedores — y configurarlo exactamente como quieras, porque tienes root. Eres responsable de ese entorno: más poder, pero también más responsabilidad que en las plataformas gestionadas.",
+   "Frente al compartido, un VPS ofrece recursos dedicados y garantizados y acceso root, en lugar de un panel de control bloqueado en un servidor lleno de otros sitios. El compartido es más barato y simple, pero no puedes instalar paquetes del sistema, ajustar la pila ni escapar de un vecino ruidoso.",
+   "Frente al cloud, la línea es más difusa: un servidor cloud es esencialmente un VPS que puedes redimensionar y facturar por horas, a menudo rodeado de servicios gestionados. Un VPS clásico suele ser un plan fijo a precio fijo. Para la mayoría de proyectos pequeños, un VPS sencillo es más simple y barato que una cuenta cloud enorme.",
+   "Los desarrolladores eligen un VPS cuando han superado el compartido o quieren control total. Usos comunes: alojar apps web y APIs, ejecutar una base de datos, autoalojar herramientas, entornos de staging, bots y tareas cron, o aprender administración de servidores Linux en la práctica.",
+   "El compromiso es el mantenimiento: con root también asumes actualizaciones, endurecimiento de seguridad, copias de seguridad y disponibilidad. Un VPS recompensa el control con responsabilidad; conviene a quien se siente cómodo en la línea de comandos — o está dispuesto a aprender.",
+   "Por eso los proveedores ofrecen planes gestionados y no gestionados. El no gestionado es más barato y te deja un servidor desnudo para administrarlo tú; el gestionado añade soporte, actualizaciones y a veces un panel de control, a un precio mayor. Elige según cuánta administración quieras hacer.",
+   "Entonces, ¿es un VPS adecuado para ti? Si necesitas root, recursos garantizados, o ejecutar algo que el compartido prohíbe — y te sientes cómodo manteniendo una máquina Linux — un VPS es el paso natural, a un coste previsible. Si solo quieres un sitio sencillo en línea sin complicaciones, el alojamiento gestionado puede encajar mejor."
+  ],
+  "list": [
+   "Apps web y APIs que necesitan control total",
+   "Bases de datos (PostgreSQL, MySQL, Redis)",
+   "Herramientas autoalojadas, bots y tareas cron",
+   "Entornos de staging y proyectos personales",
+   "Aprender administración de servidores Linux"
+  ]
  }
 }
