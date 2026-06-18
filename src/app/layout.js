@@ -30,6 +30,7 @@ export const sourceSans = Source_Sans_3({
 })
 export const metadata = {
   metadataBase: new URL('https://versiondude.net'),
+  verification: { google: 'juQltVxW7UYV3-1SweRtjy1z9ISX5I92ehRzwjsh2Us' },
   title: { default: 'VersionDude — web standards, parsers & developer tooling', template: '%s' },
   description: 'VersionDude — web standards, HTML parsing and developer tooling, plus practical guides to open-source, self-hosted and privacy tools.',
   robots: { index: true, follow: true },
