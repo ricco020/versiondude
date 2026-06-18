@@ -60,6 +60,26 @@ const a = (o) => o;
 export const ARTICLES = [
   // ---------- PILIER 1 — dev monétisable (hébergement) ----------
   a({
+    slug: 'what-is-a-cdn', category: 'tooling', readingMinutes: 6,
+    title: 'What is a CDN? Content Delivery Networks explained',
+    dek: 'A CDN (Content Delivery Network) is a worldwide network of servers that caches copies of your site close to users, so pages load faster and your origin server is shielded. What a CDN is, how it works, and when you need one.',
+    hero: '/assets/articles/what-is-a-cdn-hero.jpg', heroAlt: 'A globe overlaid with networked hexagonal nodes representing a worldwide network',
+    body: '/assets/articles/what-is-a-cdn-body.jpg', bodyCaption: 'A network switch with fibre patch cables in a data centre.',
+    paras: [
+      'A CDN — Content Delivery Network — is a globally distributed network of servers that store cached copies of your website’s content and serve them to visitors from a location physically close to them. Instead of every request travelling to your single origin server (which might be in one country), a visitor in another continent is served by a nearby CDN “edge” server. The result is faster page loads, less load on your origin, and better resilience.',
+      'The core problem a CDN solves is distance. Data travels at a finite speed, so a user far from your server experiences higher latency on every request. By placing copies of your static assets — images, CSS, JavaScript, videos — in dozens or hundreds of points of presence worldwide, a CDN cuts that distance dramatically for most visitors.',
+      'When someone visits your site through a CDN, their request first reaches the nearest edge server. If that server already has a cached copy of the requested file (a “cache hit”), it returns it immediately without contacting your origin. If it does not (a “cache miss”), it fetches the file from your origin once, serves it, and stores it for the next visitor in that region.',
+      'This caching layer is why CDNs are so effective: after the first request in a region, subsequent visitors are served from the edge at high speed, and your origin server only handles a small fraction of total traffic. Cache rules (TTLs) and cache invalidation let you control how long copies live and when they refresh.',
+      'Beyond speed, a modern CDN does more: it absorbs traffic spikes and DDoS attacks (the edge soaks up the load instead of your origin), terminates HTTPS/TLS close to users, compresses and optimises assets, and often adds a web application firewall. For a global audience, these benefits compound.',
+      'Typical reasons to put a CDN in front of a site include serving a worldwide audience, hosting heavy media, surviving traffic surges, and improving Core Web Vitals (faster loading helps both users and SEO). Even a modest site benefits from offloading static assets to an edge network.',
+      'A key point of confusion: a CDN does not replace your hosting. It sits in front of your origin server and caches what that origin produces — you still need a reliable host for the origin itself, especially for anything dynamic (databases, APIs, server-side logic) that the CDN cannot simply cache.',
+      'For dynamic content, CDNs increasingly offer edge compute and smart caching, but the origin remains the source of truth. A common, robust setup is a solid origin server (a VPS or cloud server you control) with a CDN layered in front for static assets and global delivery.',
+      'So do you need a CDN? If your audience is local and your traffic is light, your host alone may be enough. If you serve users across regions, host media, or care about speed and resilience, a CDN is one of the highest-impact, lowest-effort upgrades — and it pairs naturally with a well-chosen origin host.',
+    ],
+    list: ['Faster loads via nearby edge servers', 'Less load on your origin (caching)', 'Absorbs traffic spikes & DDoS', 'HTTPS termination + asset optimisation', 'Better Core Web Vitals / SEO'],
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 6,
     title: 'What is a VPS? A plain-English guide for developers',
     dek: 'A VPS (Virtual Private Server) gives you a private slice of a real server — your own OS, root access and guaranteed resources. What that means, how it differs from shared and cloud hosting, and when you need one.',
@@ -293,6 +313,7 @@ const TR = { fr: FR, es: ES };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn" },
   "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps" },
   "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto" },
   "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados" },

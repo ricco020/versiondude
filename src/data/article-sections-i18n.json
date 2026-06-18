@@ -538,5 +538,49 @@
    "es": "¿Es un VPS adecuado para ti?",
    "n": 1
   }
+ ],
+ "what-is-a-cdn": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "n": 1
+  },
+  {
+   "en": "Why a CDN: the distance problem",
+   "fr": "Pourquoi un CDN : le problème de la distance",
+   "es": "Por qué un CDN: el problema de la distancia",
+   "n": 1
+  },
+  {
+   "en": "How a CDN works",
+   "fr": "Comment fonctionne un CDN",
+   "es": "Cómo funciona un CDN",
+   "n": 2
+  },
+  {
+   "en": "More than just speed",
+   "fr": "Plus que la vitesse",
+   "es": "Más que velocidad",
+   "n": 1
+  },
+  {
+   "en": "When you need a CDN",
+   "fr": "Quand vous avez besoin d'un CDN",
+   "es": "Cuándo necesitas un CDN",
+   "n": 1
+  },
+  {
+   "en": "A CDN is not your host",
+   "fr": "Un CDN ne remplace pas l'hébergement",
+   "es": "Un CDN no es tu alojamiento",
+   "n": 2
+  },
+  {
+   "en": "Do you need one?",
+   "fr": "En avez-vous besoin ?",
+   "es": "¿Lo necesitas?",
+   "n": 1
+  }
  ]
 }

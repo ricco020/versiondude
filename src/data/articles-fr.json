@@ -299,5 +299,29 @@
    "Environnements de préproduction et projets perso",
    "Apprendre l'administration de serveurs Linux"
   ]
+ },
+ "what-is-a-cdn": {
+  "title": "Qu'est-ce qu'un CDN ? Les réseaux de diffusion de contenu expliqués",
+  "dek": "Un CDN (réseau de diffusion de contenu) est un réseau mondial de serveurs qui met en cache des copies de votre site au plus près des visiteurs, pour des pages plus rapides et un serveur d'origine protégé. Ce qu'est un CDN, comment il fonctionne, et quand en avoir besoin.",
+  "heroAlt": "Un globe recouvert de nœuds hexagonaux en réseau représentant un réseau mondial",
+  "bodyCaption": "Un switch réseau avec des câbles fibre dans un data center.",
+  "paras": [
+   "Un CDN — Content Delivery Network, réseau de diffusion de contenu — est un réseau de serveurs réparti dans le monde qui stocke des copies en cache du contenu de votre site et les sert aux visiteurs depuis un emplacement physiquement proche d'eux. Au lieu que chaque requête voyage jusqu'à votre unique serveur d'origine (peut-être dans un seul pays), un visiteur d'un autre continent est servi par un serveur « edge » proche. Résultat : des pages plus rapides, moins de charge sur l'origine, et une meilleure résilience.",
+   "Le problème central qu'un CDN résout est la distance. Les données voyagent à une vitesse finie : un utilisateur loin de votre serveur subit une latence plus élevée à chaque requête. En plaçant des copies de vos ressources statiques — images, CSS, JavaScript, vidéos — dans des dizaines ou des centaines de points de présence dans le monde, un CDN réduit fortement cette distance pour la plupart des visiteurs.",
+   "Quand quelqu'un visite votre site via un CDN, sa requête atteint d'abord le serveur edge le plus proche. Si ce serveur a déjà une copie en cache du fichier demandé (un « cache hit »), il la renvoie immédiatement sans contacter l'origine. Sinon (un « cache miss »), il récupère le fichier depuis l'origine une seule fois, le sert, et le stocke pour le prochain visiteur de cette région.",
+   "Cette couche de cache explique l'efficacité des CDN : après la première requête dans une région, les visiteurs suivants sont servis depuis l'edge à grande vitesse, et votre serveur d'origine ne traite qu'une petite fraction du trafic total. Les règles de cache (TTL) et l'invalidation permettent de contrôler la durée de vie des copies et leur rafraîchissement.",
+   "Au-delà de la vitesse, un CDN moderne fait plus : il absorbe les pics de trafic et les attaques DDoS (l'edge encaisse la charge au lieu de l'origine), termine le HTTPS/TLS près des utilisateurs, compresse et optimise les ressources, et ajoute souvent un pare-feu applicatif. Pour une audience mondiale, ces bénéfices se cumulent.",
+   "Les raisons typiques de mettre un CDN devant un site : servir une audience mondiale, héberger des médias lourds, survivre aux pics de trafic, et améliorer les Core Web Vitals (un chargement plus rapide aide les utilisateurs comme le SEO). Même un site modeste profite de décharger ses ressources statiques sur un réseau edge.",
+   "Point de confusion important : un CDN ne remplace pas votre hébergement. Il se place devant votre serveur d'origine et met en cache ce qu'il produit — il vous faut toujours un hébergement fiable pour l'origine elle-même, surtout pour le dynamique (bases de données, API, logique serveur) que le CDN ne peut pas simplement mettre en cache.",
+   "Pour le contenu dynamique, les CDN proposent de plus en plus du edge compute et du cache intelligent, mais l'origine reste la source de vérité. Un montage courant et robuste : un bon serveur d'origine (un VPS ou serveur cloud que vous contrôlez) avec un CDN devant pour les ressources statiques et la diffusion mondiale.",
+   "Alors, avez-vous besoin d'un CDN ? Si votre audience est locale et votre trafic léger, votre hébergement seul peut suffire. Si vous servez des utilisateurs sur plusieurs régions, hébergez des médias, ou tenez à la vitesse et à la résilience, un CDN est l'une des améliorations les plus impactantes et les moins coûteuses — et il se marie naturellement avec un bon hébergement d'origine."
+  ],
+  "list": [
+   "Chargement plus rapide via les serveurs edge proches",
+   "Moins de charge sur l'origine (cache)",
+   "Absorbe pics de trafic & DDoS",
+   "Terminaison HTTPS + optimisation des ressources",
+   "Meilleurs Core Web Vitals / SEO"
+  ]
  }
 }

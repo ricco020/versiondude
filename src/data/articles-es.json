@@ -299,5 +299,29 @@
    "Entornos de staging y proyectos personales",
    "Aprender administración de servidores Linux"
   ]
+ },
+ "what-is-a-cdn": {
+  "title": "¿Qué es una CDN? Las redes de distribución de contenido explicadas",
+  "dek": "Una CDN (red de distribución de contenido) es una red mundial de servidores que cachea copias de tu sitio cerca de los visitantes, para páginas más rápidas y un servidor de origen protegido. Qué es una CDN, cómo funciona, y cuándo la necesitas.",
+  "heroAlt": "Un globo terráqueo cubierto de nodos hexagonales en red que representan una red mundial",
+  "bodyCaption": "Un switch de red con cables de fibra en un centro de datos.",
+  "paras": [
+   "Una CDN — Content Delivery Network, red de distribución de contenido — es una red de servidores distribuida por el mundo que almacena copias en caché del contenido de tu sitio y las sirve a los visitantes desde una ubicación físicamente cercana. En lugar de que cada petición viaje hasta tu único servidor de origen (quizá en un solo país), a un visitante de otro continente lo sirve un servidor «edge» cercano. Resultado: páginas más rápidas, menos carga en el origen y mayor resiliencia.",
+   "El problema central que resuelve una CDN es la distancia. Los datos viajan a una velocidad finita: un usuario lejos de tu servidor sufre más latencia en cada petición. Al colocar copias de tus recursos estáticos — imágenes, CSS, JavaScript, vídeos — en decenas o cientos de puntos de presencia por el mundo, una CDN reduce mucho esa distancia para la mayoría de los visitantes.",
+   "Cuando alguien visita tu sitio a través de una CDN, su petición llega primero al servidor edge más cercano. Si ese servidor ya tiene una copia en caché del archivo pedido (un «cache hit»), la devuelve de inmediato sin contactar con el origen. Si no (un «cache miss»), obtiene el archivo del origen una sola vez, lo sirve y lo almacena para el siguiente visitante de esa región.",
+   "Esta capa de caché explica la eficacia de las CDN: tras la primera petición en una región, los visitantes siguientes se sirven desde el edge a gran velocidad, y tu servidor de origen solo gestiona una pequeña fracción del tráfico total. Las reglas de caché (TTL) y la invalidación permiten controlar cuánto viven las copias y cuándo se refrescan.",
+   "Más allá de la velocidad, una CDN moderna hace más: absorbe picos de tráfico y ataques DDoS (el edge aguanta la carga en vez del origen), termina el HTTPS/TLS cerca de los usuarios, comprime y optimiza recursos, y a menudo añade un firewall de aplicaciones. Para una audiencia global, estos beneficios se acumulan.",
+   "Razones típicas para poner una CDN delante de un sitio: servir a una audiencia mundial, alojar medios pesados, sobrevivir a picos de tráfico y mejorar los Core Web Vitals (cargar más rápido ayuda a usuarios y SEO). Incluso un sitio modesto se beneficia de descargar sus recursos estáticos a una red edge.",
+   "Punto de confusión importante: una CDN no reemplaza tu alojamiento. Se sitúa delante de tu servidor de origen y cachea lo que este produce — sigues necesitando un alojamiento fiable para el origen en sí, sobre todo para lo dinámico (bases de datos, APIs, lógica de servidor) que la CDN no puede simplemente cachear.",
+   "Para el contenido dinámico, las CDN ofrecen cada vez más edge compute y caché inteligente, pero el origen sigue siendo la fuente de verdad. Un montaje común y robusto: un buen servidor de origen (un VPS o servidor cloud que controlas) con una CDN delante para los recursos estáticos y la entrega global.",
+   "Entonces, ¿necesitas una CDN? Si tu audiencia es local y tu tráfico ligero, tu alojamiento solo puede bastar. Si sirves a usuarios de varias regiones, alojas medios, o te importan la velocidad y la resiliencia, una CDN es una de las mejoras de mayor impacto y menor esfuerzo — y combina de forma natural con un buen alojamiento de origen."
+  ],
+  "list": [
+   "Carga más rápida vía servidores edge cercanos",
+   "Menos carga en el origen (caché)",
+   "Absorbe picos de tráfico y DDoS",
+   "Terminación HTTPS + optimización de recursos",
+   "Mejores Core Web Vitals / SEO"
+  ]
  }
 }
