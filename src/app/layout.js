@@ -52,6 +52,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/assets/articles/self-hosted-password-managers-body.jpg" fetchPriority="high" />
+      </head>
       <ImportJs />
       <body className={`${cormorant.variable} ${roboto.variable} ${sourceSans.variable}`}>
         <Providers>

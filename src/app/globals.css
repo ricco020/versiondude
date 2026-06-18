@@ -7263,3 +7263,10 @@ body.layout-rtl .style-settings-content ul li select {
 .post-inner-2 .slider-post .post-text { padding: 18px 16px; }
 .post-inner-2 .slider-post .post-text h4 { font-size: 1rem; line-height: 1.3; }
 .post-inner-2 .slider-post .post-category { margin-bottom: .35rem; }
+
+/* === Hero central STATIQUE : pleine hauteur colonne (perf + image grande) === */
+.slider-inner .slider-wrapper { height: 100%; }
+#owl-slider.owl-static, #owl-slider.owl-static .item, #owl-slider.owl-static .slider-post { height: 100%; }
+#owl-slider.owl-static .slider-post { min-height: 460px; }
+#owl-slider.owl-static .news-image { display: block; height: 100%; }
+#owl-slider.owl-static .item img { width: 100%; height: 100%; object-fit: cover; }

@@ -9,7 +9,7 @@ import useRemoveBodyClass from "@/components/ltr/useEffect-hook/useEffect-hook";
 import DatePickerComponents from "@/components/ltr/date-picker/date-picker";
 import PollWidget from "@/components/ltr/poll-widget/poll";
 import HomeFeatureCarousal from "@/components/ltr/home-feature-carousal/home-feature-carousal";
-import HomeCenterSlider from "@/components/ltr/home-center-slider/home-center-slider";
+import HomeCenterStatic from "@/components/ltr/home-center-slider/home-center-static";
 import Tags from "@/components/ltr/tags/tags";
 import { useEffect } from "react";
 import Link from "next/link";
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
               <div className="col-md-6 col-xxl-4 thm-padding">
                 <div className="slider-wrapper">
-                  <HomeCenterSlider />
+                  <HomeCenterStatic />
                 </div>
               </div>
               <div className="col-md-6 col-xxl-4 thm-padding">
