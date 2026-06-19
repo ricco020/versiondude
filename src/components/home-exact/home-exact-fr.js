@@ -790,7 +790,7 @@ export default function Home_fr() {
                 <StickyBox>
                   {/* START TECH & INNOVATION */}
                   <div className="panel_inner">
-                    <div className="panel_header">
+                    <div className="panel_header" style={{ marginTop: "2.5rem" }}>
                       <h4>
                         <strong>Outils &amp;</strong> Standards
                       </h4>
@@ -895,7 +895,7 @@ export default function Home_fr() {
                   {/* START POST CATEGORY STYLE FOUR (Latest articles ) */}
                   <div className="post-inner">
                     {/*post header*/}
-                    <div className="post-head">
+                    <div className="post-head" style={{ marginTop: "2.5rem" }}>
                       <h2 className="title">
                         <strong>Derniers</strong> articles
                       </h2>
