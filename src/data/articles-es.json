@@ -323,5 +323,29 @@
    "Terminación HTTPS + optimización de recursos",
    "Mejores Core Web Vitals / SEO"
   ]
+ },
+ "ssh-key-management": {
+  "title": "Gestión de claves SSH: una guía práctica",
+  "dek": "Las claves SSH sustituyen las contraseñas por algo mucho más robusto, pero solo si las proteges, las separas y las rotas. Una guía clara, en lenguaje sencillo, para gestionar tus claves SSH con seguridad.",
+  "heroAlt": "Código fuente en una pantalla oscura con números de línea",
+  "bodyCaption": "Un candado de latón y su llave reposando sobre un montón de cadenas de acero.",
+  "paras": [
+   "La gestión de claves SSH consiste en generar, proteger, distribuir y retirar los pares de claves criptográficas que usas para iniciar sesión en servidores a través de SSH. Bien hecha, sustituye las frágiles contraseñas por claves mucho más difíciles de adivinar, y te permite revocar el acceso de forma limpia cuando se pierde un portátil o se marcha un colaborador externo. Mal hecha (claves sin frase de contraseña, copiadas entre máquinas, nunca rotadas), se convierte sin que te des cuenta en una de las puertas más anchas hacia tu infraestructura.",
+   "El motivo por el que merece atención es que una clave SSH es una credencial permanente. A diferencia de una contraseña que escribes, una clave privada reside en un archivo en disco y concede acceso mientras la clave pública correspondiente siga en el archivo authorized_keys de un servidor. Una sola clave desprotegida, filtrada desde una copia de seguridad o una máquina comprometida, puede entregarle a un atacante el mismo alcance que tú tienes, y por eso precisamente las claves de los desarrolladores y de CI/CD son un objetivo tan codiciado.",
+   "Un par de claves SSH tiene dos mitades. La clave privada permanece en tu máquina y nunca debe salir de ella; la clave pública se copia a cada servidor al que quieras acceder, donde reside en ~/.ssh/authorized_keys. Cuando te conectas, el servidor reta a tu cliente a demostrar que posee la clave privada, sin que la clave en sí llegue nunca a cruzar la red. Por tanto, poseer ese archivo privado lo es todo.",
+   "La práctica moderna prefiere el algoritmo Ed25519 (corto, rápido y robusto) frente a las claves RSA más antiguas, aunque una clave RSA de 3072 bits o más sigue siendo aceptable allí donde Ed25519 no es compatible. Generas un par con ssh-keygen, y la opción más importante de todas es una frase de contraseña: cifra la clave privada en disco, de modo que un archivo de clave robado resulte inútil para quien no conozca también la frase.",
+   "Un puñado de buenos hábitos cubre la mayor parte del riesgo. Establece siempre una frase de contraseña y deja que ssh-agent mantenga la clave descifrada en memoria, de forma que la escribas una vez por sesión en lugar de prescindir de ella. Usa una clave distinta por dispositivo en lugar de copiar una misma clave privada entre portátiles, así podrás revocar una sola máquina sin afectar a las demás. Y dale a los sistemas de CI y a los servidores sus propias claves, nunca la tuya personal.",
+   "El acceso se concede por completo en función de lo que haya en el archivo authorized_keys de cada servidor, así que es ahí donde realmente ocurre la gestión. Revísalo periódicamente, elimina las claves de personas y máquinas que ya no necesiten acceso, y mantén en cada clave un comentario corto y con nombre para saber de un vistazo de quién es. Más allá de unos pocos servidores, una herramienta de gestión de configuración o una autoridad de certificación SSH escala esto mucho mejor que editar archivos a mano.",
+   "La rotación cierra el círculo. Planifica reemplazar las claves de forma periódica, e inmediatamente cada vez que se pierda un dispositivo, exista la posibilidad de que se haya visto una frase de contraseña o se marche alguien con acceso. Como revocar una clave consiste simplemente en quitar su mitad pública de authorized_keys, las claves que están nombradas e inventariadas resultan muchísimo más fáciles de retirar que las anónimas que ya no puedes rastrear.",
+   "El archivo de la clave privada en sí debe permanecer en el dispositivo que lo usa, protegido por su frase de contraseña y por los propios permisos de archivo del sistema operativo, no sincronizado por ahí en carpetas de nube en texto plano. Pero las frases de contraseña que desbloquean esas claves, junto con los códigos de recuperación y alguna que otra clave que realmente debas respaldar, sí necesitan un hogar seguro, y un archivo de texto plano o una app de notas no lo es.",
+   "Un gestor de contraseñas con cifrado de extremo a extremo es el lugar adecuado para esos secretos: las frases de contraseña, los códigos de recuperación y cualquier material de clave exportado se cifran antes de salir de tu dispositivo y se sincronizan de forma segura entre las máquinas que posees. Mantiene fuera de la vista la parte de la seguridad SSH que ha de memorizar el ser humano, sin la carga operativa de gestionar tu propio servidor de bóveda."
+  ],
+  "list": [
+   "Protege siempre las claves privadas con una frase de contraseña",
+   "Prefiere Ed25519; usa una clave distinta por dispositivo",
+   "Da a los sistemas de CI y a los servidores sus propias claves",
+   "Audita authorized_keys y elimina los accesos obsoletos",
+   "Rota las claves de forma periódica y cuando se pierda un dispositivo"
+  ]
  }
 }

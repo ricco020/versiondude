@@ -323,5 +323,29 @@
    "Terminaison HTTPS + optimisation des ressources",
    "Meilleurs Core Web Vitals / SEO"
   ]
+ },
+ "ssh-key-management": {
+  "title": "Gestion des clés SSH : guide pratique",
+  "dek": "Les clés SSH remplacent les mots de passe par quelque chose de bien plus solide — à condition de les protéger, de les cloisonner et de les renouveler. Un guide clair pour gérer ses clés SSH en toute sécurité.",
+  "heroAlt": "Code source sur un écran sombre avec numéros de ligne",
+  "bodyCaption": "Un cadenas en laiton et sa clé posés sur un amas de chaînes en acier.",
+  "paras": [
+   "La gestion des clés SSH consiste à générer, protéger, distribuer et mettre hors service les paires de clés cryptographiques qui vous servent à vous connecter à des serveurs via SSH. Bien menée, elle remplace les mots de passe fragiles par des clés bien plus difficiles à deviner, et permet de révoquer un accès proprement lorsqu’un portable est perdu ou qu’un prestataire s’en va. Mal menée — des clés sans phrase secrète, recopiées d’une machine à l’autre, jamais renouvelées —, elle devient en silence l’une des portes les plus grandes ouvertes sur votre infrastructure.",
+   "Si le sujet mérite qu’on s’y attarde, c’est qu’une clé SSH est un identifiant permanent. Contrairement à un mot de passe que vous tapez, une clé privée réside dans un fichier sur le disque et donne accès tant que la clé publique correspondante figure dans le fichier authorized_keys d’un serveur. Une seule clé non protégée, fuitée depuis une sauvegarde ou une machine compromise, peut offrir à un attaquant la même portée que la vôtre — et c’est précisément pour cela que les clés des développeurs et des chaînes CI/CD sont une cible si convoitée.",
+   "Une paire de clés SSH comporte deux moitiés. La clé privée reste sur votre machine et ne doit jamais la quitter ; la clé publique est copiée sur chaque serveur que vous souhaitez atteindre, où elle se loge dans ~/.ssh/authorized_keys. Lors de la connexion, le serveur met votre client au défi de prouver qu’il détient la clé privée, sans que cette clé ne transite jamais sur le réseau. La possession de ce fichier privé est donc tout ce qui compte.",
+   "Les pratiques modernes privilégient l’algorithme Ed25519 — court, rapide et robuste — aux anciennes clés RSA, même si du RSA de 3072 bits ou plus reste acceptable là où Ed25519 n’est pas pris en charge. On génère une paire avec ssh-keygen, et l’option la plus importante de toutes est une phrase secrète : elle chiffre la clé privée sur le disque, de sorte qu’un fichier de clé volé soit inutilisable pour quiconque ne connaît pas aussi la phrase.",
+   "Une poignée de bonnes habitudes couvre l’essentiel du risque. Définissez toujours une phrase secrète, et laissez ssh-agent conserver la clé déchiffrée en mémoire pour ne la saisir qu’une fois par session, plutôt que de vous en passer. Utilisez une clé distincte par appareil au lieu de recopier une même clé privée d’un portable à l’autre, afin de pouvoir révoquer une seule machine sans perturber les autres. Et attribuez aux systèmes CI et aux serveurs leurs propres clés, jamais la vôtre.",
+   "L’accès est entièrement déterminé par le contenu du fichier authorized_keys de chaque serveur ; c’est donc là que la gestion se joue réellement. Passez-le en revue régulièrement, retirez les clés des personnes et des machines qui n’ont plus besoin d’accès, et conservez sur chaque clé un commentaire court et nommé pour savoir d’un coup d’œil à qui elle appartient. Au-delà de quelques serveurs, un outil de gestion de configuration ou une autorité de certification SSH passe bien mieux à l’échelle que l’édition manuelle des fichiers.",
+   "Le renouvellement boucle la boucle. Prévoyez de remplacer les clés selon un calendrier, et sans délai dès qu’un appareil est perdu, qu’une phrase secrète a pu être vue, ou qu’une personne disposant d’un accès s’en va. Comme révoquer une clé revient simplement à retirer sa moitié publique du fichier authorized_keys, des clés nommées et inventoriées sont nettement plus faciles à mettre hors service que des clés anonymes dont vous avez perdu la trace.",
+   "Le fichier de clé privée lui-même doit rester sur l’appareil qui l’utilise, protégé par sa phrase secrète et par les permissions de fichier propres au système d’exploitation — et non synchronisé un peu partout dans des dossiers cloud en clair. Mais les phrases secrètes qui déverrouillent ces clés, de même que les codes de récupération et la clé que vous devez parfois vraiment sauvegarder, ont bel et bien besoin d’un abri sûr, et un fichier en texte clair ou une application de notes n’en est pas un.",
+   "Un gestionnaire de mots de passe chiffré de bout en bout est le bon endroit pour ces secrets : les phrases secrètes, les codes de récupération et tout matériel de clé exporté sont chiffrés avant de quitter votre appareil et synchronisés en toute sécurité entre les machines qui vous appartiennent. Il garde hors de vue la part mémorisable de la sécurité SSH, sans la charge opérationnelle qu’impose l’exploitation de votre propre serveur de coffre-fort."
+  ],
+  "list": [
+   "Protégez toujours vos clés privées par une phrase secrète",
+   "Préférez Ed25519 ; utilisez une clé distincte par appareil",
+   "Attribuez aux systèmes CI et aux serveurs leurs propres clés",
+   "Auditez authorized_keys et supprimez les accès obsolètes",
+   "Renouvelez les clés selon un calendrier et lors de la perte d’un appareil"
+  ]
  }
 }

@@ -1,5 +1,8 @@
 import FR from "./articles-fr.json";
 import ES from "./articles-es.json";
+import DE from "./articles-de.json";
+import IT from "./articles-it.json";
+import PT from "./articles-pt.json";
 import ENX from "./articles-en.json";
 import SECDEF from "./article-sections-i18n.json";
 
@@ -24,20 +27,26 @@ export function getSections(article, locale = "en") {
 const PROTON = {
   pass: {
     url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294',
-    label: { en: 'Try Proton Pass', fr: 'Essayer Proton Pass', es: 'Probar Proton Pass' },
+    label: { en: 'Try Proton Pass', fr: 'Essayer Proton Pass', es: 'Probar Proton Pass', de: 'Proton Pass testen', it: 'Prova Proton Pass', pt: 'Experimentar o Proton Pass' },
     sublabel: {
       en: 'Open-source, end-to-end encrypted password manager from the makers of Proton Mail.',
       fr: 'Gestionnaire de mots de passe open source, chiffré de bout en bout, par les créateurs de Proton Mail.',
       es: 'Gestor de contraseñas open source, cifrado de extremo a extremo, de los creadores de Proton Mail.',
+      de: 'Open-Source-Passwortmanager mit Ende-zu-Ende-Verschlüsselung von den Machern von Proton Mail.',
+      it: 'Gestore di password open source con cifratura end-to-end, dai creatori di Proton Mail.',
+      pt: 'Gestor de palavras-passe open source com cifragem ponta a ponta, dos criadores do Proton Mail.',
     },
   },
   mail: {
     url: 'https://go.getproton.me/aff_c?offer_id=7&aff_id=18294',
-    label: { en: 'Try Proton Mail', fr: 'Essayer Proton Mail', es: 'Probar Proton Mail' },
+    label: { en: 'Try Proton Mail', fr: 'Essayer Proton Mail', es: 'Probar Proton Mail', de: 'Proton Mail testen', it: 'Prova Proton Mail', pt: 'Experimentar o Proton Mail' },
     sublabel: {
       en: 'End-to-end encrypted, Swiss-based email built on open-source cryptography.',
       fr: 'Email chiffré de bout en bout, basé en Suisse, bâti sur une cryptographie open source.',
       es: 'Correo cifrado de extremo a extremo, con sede en Suiza, basado en criptografía open source.',
+      de: 'Ende-zu-Ende-verschlüsselte E-Mail aus der Schweiz, auf Basis von Open-Source-Kryptografie.',
+      it: 'Email cifrata end-to-end, con sede in Svizzera, basata su crittografia open source.',
+      pt: 'Email cifrado ponta a ponta, sediado na Suíça, construído sobre criptografia open source.',
     },
   },
 };
@@ -47,11 +56,14 @@ const PROTON = {
 // où l'hébergement est réellement pertinent (self-hosting / déploiement), jamais en générique.
 const DEV_CLOUD = {
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
-  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak' },
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Self-hosting needs a reliable home with full runtime and network control. Infomaniak — a Swiss, privacy-respecting provider — offers VPS and cloud servers to host your CMS or app.',
     fr: 'L’auto-hébergement demande un foyer fiable avec un contrôle total du runtime et du réseau. Infomaniak — hébergeur suisse, respectueux de la vie privée — propose des VPS et serveurs cloud pour héberger votre CMS ou votre app.',
     es: 'El autoalojamiento necesita un hogar fiable con control total del runtime y la red. Infomaniak — proveedor suizo, respetuoso con la privacidad — ofrece VPS y servidores cloud para alojar tu CMS o tu app.',
+    de: 'Selbst-Hosting braucht ein zuverlässiges Zuhause mit voller Kontrolle über Laufzeit und Netzwerk. Infomaniak — ein schweizerischer, datenschutzfreundlicher Anbieter — bietet VPS und Cloud-Server, um Ihr CMS oder Ihre App zu hosten.',
+    it: "L'auto-hosting richiede una base affidabile con pieno controllo di runtime e rete. Infomaniak — provider svizzero attento alla privacy — offre VPS e server cloud per ospitare il tuo CMS o la tua app.",
+    pt: 'A auto-hospedagem precisa de uma base fiável com controlo total do runtime e da rede. A Infomaniak — fornecedor suíço, respeitador da privacidade — oferece VPS e servidores cloud para alojar o seu CMS ou a sua app.',
   },
 };
 
@@ -143,6 +155,26 @@ export const ARTICLES = [
       'For the personal secrets a developer accumulates — recovery codes, service logins, license keys — an encrypted password manager is the right home. Proton Pass, with its end-to-end encryption and secure note support, keeps those values out of plain-text files and synced safely across your machines.',
     ],
     list: ['Keep .env out of git; commit .env.example', 'Rotate any leaked key immediately', 'Vault / Infisical for runtime secrets', 'A password manager for personal credentials'],
+    cta: PROTON.pass,
+  }),
+  a({
+    slug: 'ssh-key-management', category: 'tooling', readingMinutes: 6,
+    title: 'SSH key management: a practical guide',
+    dek: 'SSH keys replace passwords with something far stronger — but only if you protect, separate and rotate them. A plain-English guide to managing SSH keys safely.',
+    hero: '/assets/articles/ssh-key-management-hero.jpg', heroAlt: 'Source code on a dark screen with line numbers',
+    body: '/assets/articles/ssh-key-management-body.jpg', bodyCaption: 'A brass padlock and its key resting on a pile of steel chains.',
+    paras: [
+      'SSH key management is the practice of generating, protecting, distributing and retiring the cryptographic key pairs you use to log into servers over SSH. Done well, it replaces fragile passwords with keys that are far harder to guess, and lets you revoke access cleanly when a laptop is lost or a contractor leaves. Done badly — keys with no passphrase, copied between machines, never rotated — it quietly becomes one of the widest doors into your infrastructure.',
+      'The reason it deserves attention is that an SSH key is a standing credential. Unlike a password you type, a private key sits in a file on disk and grants access for as long as the matching public key stays in a server’s authorized_keys file. A single unprotected key, leaked from a backup or a compromised machine, can hand an attacker the same reach you have — which is exactly why developer and CI/CD keys are such a prized target.',
+      'An SSH key pair has two halves. The private key stays on your machine and must never leave it; the public key is copied to each server you want to reach, where it lives in ~/.ssh/authorized_keys. When you connect, the server challenges your client to prove it holds the private key, without the key itself ever crossing the network. Possession of that private file is therefore everything.',
+      'Modern practice favours the Ed25519 algorithm — short, fast and strong — over older RSA keys, though 3072-bit-or-larger RSA remains acceptable where Ed25519 is not supported. You generate a pair with ssh-keygen, and the single most important option is a passphrase: it encrypts the private key on disk, so that a stolen key file is useless to anyone who does not also know the phrase.',
+      'A handful of habits cover most of the risk. Always set a passphrase, and let ssh-agent hold the decrypted key in memory so you type it once per session rather than disabling it. Use a separate key per device instead of copying one private key across laptops, so you can revoke a single machine without disrupting the others. And give CI systems and servers their own keys, never your personal one.',
+      'Access is granted entirely by what sits in each server’s authorized_keys file, so that file is where management really happens. Review it periodically, remove keys for people and machines that no longer need access, and keep a short, named comment on each key so you can tell at a glance whose it is. Beyond a few servers, a configuration-management tool or an SSH certificate authority scales this far better than hand-editing files.',
+      'Rotation closes the loop. Plan to replace keys on a schedule, and immediately whenever a device is lost, a passphrase may have been seen, or someone with access leaves. Because revoking a key is simply removing its public half from authorized_keys, keys that are named and inventoried are dramatically easier to retire than anonymous ones you can no longer account for.',
+      'The private key file itself should stay on the device that uses it, protected by its passphrase and the operating system’s own file permissions — not synced around in plain cloud folders. But the passphrases that unlock those keys, along with recovery codes and the occasional key you genuinely must back up, do need a safe home, and a plain-text file or a notes app is not it.',
+      'An end-to-end encrypted password manager is the right place for those secrets: the passphrases, the recovery codes and any exported key material are encrypted before they leave your device and synced safely across the machines you own. It keeps the human-memorable part of SSH security out of plain sight, without the operational burden of running your own vault server.',
+    ],
+    list: ['Always protect private keys with a passphrase', 'Prefer Ed25519; use a separate key per device', 'Give CI systems and servers their own keys', 'Audit authorized_keys and remove stale access', 'Rotate keys on a schedule and when a device is lost'],
     cta: PROTON.pass,
   }),
   a({
@@ -309,26 +341,27 @@ const CATS = {
   standards: 'Standards', parsing: 'Parsing', tooling: 'Tooling', archive: 'Archive',
 };
 
-const TR = { fr: FR, es: ES };
+const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
-  "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn" },
-  "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps" },
-  "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto" },
-  "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados" },
-  "secrets-management-tools": { fr: "outils-de-gestion-des-secrets", es: "herramientas-de-gestion-de-secretos" },
-  "proton-mail-review": { fr: "test-proton-mail", es: "analisis-proton-mail" },
-  "best-encrypted-email": { fr: "meilleurs-services-email-chiffre", es: "mejores-servicios-de-correo-cifrado" },
-  "proton-pass-review": { fr: "test-proton-pass", es: "analisis-proton-pass" },
-  "what-is-the-dom": { fr: "qu-est-ce-que-le-dom", es: "que-es-el-dom" },
-  "html-validator": { fr: "validateur-html", es: "validador-html" },
-  "what-is-a-parser": { fr: "qu-est-ce-qu-un-parseur", es: "que-es-un-analizador" },
-  "semantic-web": { fr: "web-semantique", es: "web-semantica" },
-  "xml-vs-html": { fr: "xml-contre-html", es: "xml-frente-a-html" },
-  "ruby-on-rails-cms": { fr: "cms-ruby-on-rails", es: "cms-ruby-on-rails-es" },
-  "character-encoding-utf-8": { fr: "encodage-des-caracteres-utf-8", es: "codificacion-de-caracteres-utf-8" },
-  "self-hosted-cms": { fr: "cms-auto-heberges", es: "cms-autoalojados" },
+  "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn", de: "was-ist-ein-cdn", it: "che-cos-e-una-cdn", pt: "o-que-e-uma-cdn" },
+  "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps", de: "was-ist-ein-vps", it: "che-cos-e-un-vps", pt: "o-que-e-um-vps" },
+  "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto", de: "beste-open-source-passwortmanager", it: "migliori-gestori-password-open-source", pt: "melhores-gestores-de-palavras-passe-open-source" },
+  "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados", de: "selbstgehostete-passwortmanager", it: "gestori-password-self-hosted", pt: "gestores-de-palavras-passe-auto-hospedados" },
+  "secrets-management-tools": { fr: "outils-de-gestion-des-secrets", es: "herramientas-de-gestion-de-secretos", de: "secrets-management-werkzeuge", it: "strumenti-gestione-segreti", pt: "ferramentas-de-gestao-de-segredos" },
+  "ssh-key-management": { fr: "gestion-des-cles-ssh", es: "gestion-de-claves-ssh", de: "ssh-schluessel-verwaltung", it: "gestione-delle-chiavi-ssh", pt: "gestao-de-chaves-ssh" },
+  "proton-mail-review": { fr: "test-proton-mail", es: "analisis-proton-mail", de: "proton-mail-test", it: "recensione-proton-mail", pt: "analise-proton-mail" },
+  "best-encrypted-email": { fr: "meilleurs-services-email-chiffre", es: "mejores-servicios-de-correo-cifrado", de: "beste-verschluesselte-email-dienste", it: "migliori-servizi-email-cifrata", pt: "melhores-servicos-de-email-cifrado" },
+  "proton-pass-review": { fr: "test-proton-pass", es: "analisis-proton-pass", de: "proton-pass-test", it: "recensione-proton-pass", pt: "analise-proton-pass" },
+  "what-is-the-dom": { fr: "qu-est-ce-que-le-dom", es: "que-es-el-dom", de: "was-ist-das-dom", it: "che-cos-e-il-dom", pt: "o-que-e-o-dom" },
+  "html-validator": { fr: "validateur-html", es: "validador-html", de: "html-validator", it: "validatore-html", pt: "validador-html" },
+  "what-is-a-parser": { fr: "qu-est-ce-qu-un-parseur", es: "que-es-un-analizador", de: "was-ist-ein-parser", it: "che-cos-e-un-parser", pt: "o-que-e-um-analisador" },
+  "semantic-web": { fr: "web-semantique", es: "web-semantica", de: "semantisches-web", it: "web-semantico", pt: "web-semantica" },
+  "xml-vs-html": { fr: "xml-contre-html", es: "xml-frente-a-html", de: "xml-vs-html", it: "xml-contro-html", pt: "xml-vs-html" },
+  "ruby-on-rails-cms": { fr: "cms-ruby-on-rails", es: "cms-ruby-on-rails-es", de: "ruby-on-rails-cms", it: "cms-ruby-on-rails", pt: "cms-ruby-on-rails" },
+  "character-encoding-utf-8": { fr: "encodage-des-caracteres-utf-8", es: "codificacion-de-caracteres-utf-8", de: "zeichenkodierung-utf-8", it: "codifica-dei-caratteri-utf-8", pt: "codificacao-de-caracteres-utf-8" },
+  "self-hosted-cms": { fr: "cms-auto-heberges", es: "cms-autoalojados", de: "selbstgehostete-cms", it: "cms-self-hosted", pt: "cms-auto-hospedados" },
 };
 export function slugFor(enSlug, locale) {
   return locale === "en" ? enSlug : (ART_SLUG[enSlug] && ART_SLUG[enSlug][locale]) || enSlug;
@@ -370,6 +403,9 @@ const CAT_I18N = {
   en: CATS,
   fr: { standards: "Standards", parsing: "Analyse", tooling: "Outils", archive: "Archive" },
   es: { standards: "Estándares", parsing: "Análisis", tooling: "Herramientas", archive: "Archivo" },
+  de: { standards: "Standards", parsing: "Parsing", tooling: "Werkzeuge", archive: "Archiv" },
+  it: { standards: "Standard", parsing: "Parsing", tooling: "Strumenti", archive: "Archivio" },
+  pt: { standards: "Padrões", parsing: "Análise", tooling: "Ferramentas", archive: "Arquivo" },
 };
 export function categoryLabel(key, locale = "en") { return (CAT_I18N[locale] || CATS)[key] || key; }
 export const ARTICLE_SLUGS = ARTICLES.map((x) => x.slug);
