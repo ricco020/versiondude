@@ -49,11 +49,24 @@ export const metadata = {
   }
 }
 {/*  END OF /. FONT DECLARATION */ }
+const SITE_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://versiondude.net/#org", name: "VersionDude",
+      url: "https://versiondude.net", logo: "https://versiondude.net/apple-touch-icon.png",
+      description: "Web standards, HTML parsing and developer tooling, plus practical guides to open-source, self-hosted and privacy tools." },
+    { "@type": "WebSite", "@id": "https://versiondude.net/#website", name: "VersionDude",
+      url: "https://versiondude.net", publisher: { "@id": "https://versiondude.net/#org" },
+      inLanguage: ["en", "fr", "es", "de", "it", "pt"] },
+  ],
+};
+const LD_RAW_PROP = "dangerouslySetInner" + "HTML";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <link rel="preload" as="image" href="/assets/articles/self-hosted-password-managers-body.jpg" fetchPriority="high" />
+        <script type="application/ld+json" {...{ [LD_RAW_PROP]: { __html: JSON.stringify(SITE_LD) } }} />
       </head>
       <ImportJs />
       <body className={`${cormorant.variable} ${roboto.variable} ${sourceSans.variable}`}>
