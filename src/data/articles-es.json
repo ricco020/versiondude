@@ -349,6 +349,10 @@
   ]
  },
  "what-is-a-webhook": {
+  "title": "¿Qué es un webhook? El HTTP basado en eventos, explicado",
+  "dek": "Un webhook es una petición HTTP automática que un servicio envía a otro en el momento en que ocurre un evento: un push en lugar de un pull. Qué es un webhook, en qué se diferencia de una API normal, cómo funciona y cómo recibir uno de forma segura.",
+  "heroAlt": "Líneas de código fuente mostradas en una pantalla de ordenador oscura",
+  "bodyCaption": "Estelas de luz de colores saliendo de un smartphone, que sugieren datos enviados entre servicios.",
   "paras": [
    "Un webhook es un mensaje automático que una aplicación envía a otra en el instante en que ocurre algo. En lugar de preguntarle una y otra vez a un servicio «¿hay alguna novedad?», es el servicio el que te llama a ti: realiza una petición HTTP a una URL que tú controlas en cuanto se produce un evento. A menudo se describe como una «API inversa»: los datos se te envían (push) en vez de tenerlos que ir a buscar tú (pull).",
    "Para entender por qué importa, conviene compararlo con una API normal. Con una API tradicional, es tu aplicación la que pregunta: envía una petición cada vez que quiere datos, y el servidor responde. Funciona, pero si necesitas enterarte de los eventos en el momento exacto en que suceden, tienes que preguntar sin parar, una y otra vez, un patrón derrochador que se conoce como polling o sondeo.",
