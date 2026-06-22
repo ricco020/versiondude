@@ -347,5 +347,25 @@
    "Audite o authorized_keys e remova acessos obsoletos",
    "Renove as chaves de forma calendarizada e quando perde um dispositivo"
   ]
+ },
+ "what-is-a-webhook": {
+  "paras": [
+   "Um webhook é uma mensagem automática que uma aplicação envia a outra no instante em que algo acontece. Em vez de você perguntar repetidamente a um serviço «já há novidades?», é o serviço que o contacta a si — faz um pedido HTTP a um URL que você controla assim que um evento ocorre. As pessoas descrevem-no muitas vezes como uma «API invertida»: os dados são-lhe empurrados, em vez de ser você a ir buscá-los.",
+   "Para perceber por que isto importa, compare-o com uma API normal. Com uma API tradicional, é a sua aplicação que pergunta: envia um pedido sempre que quer dados, e o servidor responde. Funciona, mas se precisa de saber dos eventos no momento exato em que acontecem, tem de continuar a perguntar vezes sem conta — um padrão desperdiçador chamado sondagem (polling).",
+   "Um webhook inverte o sentido. Em vez de a sua aplicação verificar um serviço de pagamentos a cada minuto à procura de novos pagamentos, é o serviço de pagamentos que envia uma mensagem ao seu URL no instante em que um pagamento é bem-sucedido. Sem pedidos desperdiçados e quase sem atraso. A contrapartida é que agora tem de ter algo a correr que fique à escuta dessas mensagens recebidas.",
+   "Mecanicamente, um webhook é simples. Regista um URL — o seu «endpoint» — junto do fornecedor e indica-lhe quais os eventos que lhe interessam. Quando um desses eventos é despoletado, o fornecedor envia um pedido HTTP POST ao seu endpoint, com um corpo (geralmente em JSON) que descreve o que aconteceu. O seu servidor recebe esse pedido e faz o que o evento exigir.",
+   "Espera-se que o seu endpoint responda rapidamente com um estado de sucesso (um código 2xx) para confirmar que recebeu a mensagem. Se o seu endpoint estiver em baixo ou devolver um erro, a maioria dos fornecedores volta a tentar a entrega várias vezes ao longo de um período, pelo que uma falha breve não significa que o evento se perca para sempre.",
+   "Os webhooks estão por todo o lado assim que se começa a reparar. Um fornecedor de pagamentos avisa a sua aplicação de que uma cobrança passou; um servidor de código despoleta um deploy quando você faz push de um commit; uma ferramenta de chat publica uma mensagem quando um build termina; uma plataforma de comércio eletrónico notifica o seu sistema de uma nova encomenda. Onde quer que um serviço precise de dizer a outro que «aconteceu algo», um webhook encaixa-se naturalmente.",
+   "Como o seu endpoint é um URL público, qualquer pessoa que o descubra pode tentar enviar pedidos falsos, por isso a verificação é importante. Os fornecedores sérios assinam cada pedido com um segredo partilhado — incluem um cabeçalho de assinatura que você recalcula e compara. Se não corresponder, rejeita o pedido. Sirva sempre o endpoint por HTTPS para que o payload não possa ser lido nem adulterado em trânsito.",
+   "Mais alguns hábitos tornam o tratamento de webhooks robusto. Valide o payload antes de agir sobre ele, e trate a entrega como sendo «pelo menos uma vez»: por causa das repetições, o mesmo evento pode chegar duas vezes, por isso torne o seu handler idempotente — processar um duplicado deve ser inofensivo. Confirme depressa e empurre qualquer trabalho lento para uma tarefa em segundo plano, para nunca exceder o tempo de espera de quem envia.",
+   "Há um senão que liga tudo isto: um webhook só funciona se o seu endpoint estiver acessível publicamente e online de forma fiável. Quem envia não consegue chegar a um script no seu portátil nem a um servidor que adormece. Receber webhooks em produção significa ter um servidor sempre ligado que você controla — e é exatamente aí que entra um alojamento de confiança."
+  ],
+  "list": [
+   "Orientado a eventos: o servidor empurra, você não faz sondagem",
+   "Entregue como um pedido HTTP POST com um payload em JSON",
+   "Verifique cada pedido com um segredo assinado por HTTPS",
+   "Responda 2xx depressa; trate as repetições de forma idempotente",
+   "Precisa de um endpoint público e sempre online para os receber"
+  ]
  }
 }

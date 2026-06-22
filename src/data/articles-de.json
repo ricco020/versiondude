@@ -347,5 +347,25 @@
    "authorized_keys prüfen und veraltete Zugänge entfernen",
    "Schlüssel nach Zeitplan austauschen und wenn ein Gerät verloren geht"
   ]
+ },
+ "what-is-a-webhook": {
+  "paras": [
+   "Ein Webhook ist eine automatisierte Nachricht, die eine Anwendung in dem Moment an eine andere sendet, in dem etwas passiert. Statt einen Dienst immer wieder zu fragen „Gibt es schon etwas Neues?“, ruft der Dienst Sie an – er stellt eine HTTP-Anfrage an eine URL, die Sie kontrollieren, sobald ein Ereignis eintritt. Oft wird das als „umgekehrte API“ beschrieben: Die Daten werden zu Ihnen gepusht, statt dass Sie sie abrufen.",
+   "Um zu verstehen, warum das wichtig ist, lohnt der Vergleich mit einer gewöhnlichen API. Bei einer klassischen API ist Ihre App diejenige, die fragt: Sie schickt eine Anfrage, wann immer sie Daten braucht, und der Server antwortet. Das funktioniert, aber wenn Sie von Ereignissen genau in dem Augenblick erfahren müssen, in dem sie geschehen, müssen Sie immer wieder nachfragen – ein verschwenderisches Muster, das man Polling nennt.",
+   "Ein Webhook dreht die Richtung um. Statt dass Ihre App im Minutentakt einen Zahlungsdienst nach neuen Zahlungen abfragt, sendet der Zahlungsdienst in dem Moment eine Nachricht an Ihre URL, in dem eine Zahlung erfolgreich ist. Keine verschwendeten Anfragen und so gut wie keine Verzögerung. Der Haken ist, dass Sie nun etwas betreiben müssen, das auf diese eingehenden Nachrichten lauscht.",
+   "Technisch ist ein Webhook einfach. Sie registrieren beim Anbieter eine URL – Ihren „Endpoint“ – und teilen ihm mit, welche Ereignisse Sie interessieren. Wenn ein solches Ereignis eintritt, sendet der Anbieter eine HTTP-POST-Anfrage an Ihren Endpoint, mit einem Body (meist JSON), der beschreibt, was passiert ist. Ihr Server empfängt diese Anfrage und tut, was das Ereignis erfordert.",
+   "Von Ihrem Endpoint wird erwartet, dass er schnell mit einem Erfolgsstatus (einem 2xx-Code) antwortet, um zu bestätigen, dass er die Nachricht erhalten hat. Ist Ihr Endpoint nicht erreichbar oder gibt einen Fehler zurück, versuchen die meisten Anbieter die Zustellung über einen gewissen Zeitraum mehrfach erneut – ein kurzer Ausfall bedeutet also nicht, dass das Ereignis endgültig verloren ist.",
+   "Webhooks sind überall, sobald man darauf achtet. Ein Zahlungsanbieter meldet Ihrer App, dass eine Abbuchung durchgegangen ist; ein Code-Hoster stößt ein Deployment an, wenn Sie einen Commit pushen; ein Chat-Tool postet eine Nachricht, sobald ein Build fertig ist; eine E-Commerce-Plattform benachrichtigt Ihr System über eine neue Bestellung. Überall dort, wo ein Dienst einem anderen mitteilen muss, dass „etwas passiert ist“, passt ein Webhook ganz natürlich.",
+   "Weil Ihr Endpoint eine öffentliche URL ist, könnte jeder, der sie entdeckt, versuchen, gefälschte Anfragen zu senden – Verifizierung ist daher wichtig. Seriöse Anbieter signieren jede Anfrage mit einem gemeinsamen Secret: Sie fügen einen Signatur-Header bei, den Sie neu berechnen und vergleichen. Stimmt er nicht überein, weisen Sie die Anfrage ab. Stellen Sie den Endpoint immer über HTTPS bereit, damit die Payload unterwegs weder gelesen noch manipuliert werden kann.",
+   "Ein paar weitere Gewohnheiten machen die Verarbeitung von Webhooks robust. Validieren Sie die Payload, bevor Sie darauf reagieren, und behandeln Sie die Zustellung als „mindestens einmal“: Wegen der erneuten Zustellversuche kann dasselbe Ereignis zweimal eintreffen, machen Sie Ihren Handler also idempotent – ein Duplikat zu verarbeiten sollte folgenlos sein. Bestätigen Sie schnell und lagern Sie langsame Arbeit in einen Hintergrundjob aus, damit Sie den Absender nie in einen Timeout laufen lassen.",
+   "Ein Vorbehalt fasst alles zusammen: Ein Webhook funktioniert nur, wenn Ihr Endpoint öffentlich erreichbar und zuverlässig online ist. Der Absender erreicht weder ein Skript auf Ihrem Laptop noch einen Server, der in den Ruhezustand geht. Webhooks in der Produktion zu empfangen bedeutet, einen ständig laufenden Server zu betreiben, den Sie kontrollieren – und genau hier kommt ein verlässlicher Host ins Spiel."
+  ],
+  "list": [
+   "Ereignisgesteuert: Der Server pusht, Sie pollen nicht",
+   "Wird als HTTP-POST mit einer JSON-Payload zugestellt",
+   "Jede Anfrage per signiertem Secret über HTTPS verifizieren",
+   "Schnell mit 2xx antworten; erneute Zustellungen idempotent behandeln",
+   "Braucht einen öffentlichen, ständig erreichbaren Endpoint zum Empfangen"
+  ]
  }
 }

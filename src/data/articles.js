@@ -111,6 +111,26 @@ export const ARTICLES = [
     list: ['Web apps & APIs that need full control', 'Databases (PostgreSQL, MySQL, Redis)', 'Self-hosted tools, bots and cron jobs', 'Staging environments and side projects', 'Learning Linux server administration'],
     cta: DEV_CLOUD,
   }),
+  a({
+    slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6,
+    title: 'What is a webhook? Event-driven HTTP, explained',
+    dek: 'A webhook is an automated HTTP request one service sends to another the moment an event happens — a push instead of a poll. What a webhook is, how it differs from a normal API, how it works, and how to receive one securely.',
+    hero: '/assets/articles/what-is-a-webhook-hero.jpg', heroAlt: 'Lines of source code shown on a dark computer screen',
+    body: '/assets/articles/what-is-a-webhook-body.jpg', bodyCaption: 'Coloured light trails streaming from a smartphone, suggesting data sent between services.',
+    paras: [
+      'A webhook is an automated message that one application sends to another the instant something happens. Instead of you repeatedly asking a service “anything new yet?”, the service calls you — it makes an HTTP request to a URL you control as soon as an event occurs. People often describe it as a “reverse API”: the data is pushed to you, rather than pulled by you.',
+      'To see why that matters, compare it with a normal API. With a traditional API, your app is the one that asks: it sends a request whenever it wants data, and the server answers. That works, but if you need to know about events the moment they happen, you have to keep asking over and over — a wasteful pattern called polling.',
+      'A webhook flips the direction. Rather than your app checking a payment service every minute for new payments, the payment service sends a message to your URL the instant a payment succeeds. No wasted requests, and almost no delay. The trade-off is that you now have to run something that listens for those incoming messages.',
+      'Mechanically, a webhook is simple. You register a URL — your “endpoint” — with the provider and tell it which events you care about. When such an event fires, the provider sends an HTTP POST request to your endpoint, with a body (usually JSON) describing what happened. Your server receives that request and does whatever the event calls for.',
+      'Your endpoint is expected to reply quickly with a success status (a 2xx code) to acknowledge that it received the message. If your endpoint is down or returns an error, most providers will retry delivery several times over a period, so a brief outage does not mean the event is lost for good.',
+      'Webhooks are everywhere once you look. A payment provider tells your app a charge went through; a code host triggers a deploy when you push a commit; a chat tool posts a message when a build finishes; an e-commerce platform notifies your system of a new order. Anywhere one service needs to tell another that “something happened”, a webhook is a natural fit.',
+      'Because your endpoint is a public URL, anyone who discovers it could try to send fake requests, so verification matters. Reputable providers sign each request with a shared secret — they include a signature header you recalculate and compare. If it does not match, you reject the request. Always serve the endpoint over HTTPS so the payload cannot be read or tampered with in transit.',
+      'A few more habits make webhook handling robust. Validate the payload before acting on it, and treat delivery as “at least once”: because of retries the same event can arrive twice, so make your handler idempotent — processing a duplicate should be harmless. Acknowledge fast and push any slow work to a background job, so you never time out the sender.',
+      'One catch ties it all together: a webhook only works if your endpoint is publicly reachable and reliably online. The sender cannot reach a script on your laptop or a server that sleeps. Receiving webhooks in production means running an always-on server you control — which is exactly where a dependable host comes in.',
+    ],
+    list: ['Event-driven: the server pushes, you do not poll', 'Delivered as an HTTP POST with a JSON payload', 'Verify each request with a signed secret over HTTPS', 'Reply 2xx fast; handle retries idempotently', 'Needs a public, always-on endpoint to receive them'],
+    cta: DEV_CLOUD,
+  }),
   // ---------- PILIER 2 — monétisable (Proton) ----------
   a({
     slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6,

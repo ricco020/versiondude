@@ -896,5 +896,61 @@
    "pt": "Onde guardar as chaves e as frases-passe",
    "n": 2
   }
+ ],
+ "what-is-a-webhook": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Webhook vs API: push, not pull",
+   "fr": "Webhook vs API : push, pas pull",
+   "es": "Webhook vs API: push, no pull",
+   "de": "Webhook vs. API: Push statt Pull",
+   "it": "Webhook vs API: push, non pull",
+   "pt": "Webhook vs API: push, não pull",
+   "n": 2
+  },
+  {
+   "en": "How a webhook works",
+   "fr": "Comment fonctionne un webhook",
+   "es": "Cómo funciona un webhook",
+   "de": "Wie ein Webhook funktioniert",
+   "it": "Come funziona un webhook",
+   "pt": "Como funciona um webhook",
+   "n": 2
+  },
+  {
+   "en": "What webhooks are used for",
+   "fr": "À quoi servent les webhooks",
+   "es": "Para qué sirven los webhooks",
+   "de": "Wofür Webhooks verwendet werden",
+   "it": "A cosa servono i webhook",
+   "pt": "Para que servem os webhooks",
+   "n": 1
+  },
+  {
+   "en": "Receiving a webhook securely",
+   "fr": "Recevoir un webhook en toute sécurité",
+   "es": "Recibir un webhook de forma segura",
+   "de": "Einen Webhook sicher empfangen",
+   "it": "Ricevere un webhook in modo sicuro",
+   "pt": "Receber um webhook em segurança",
+   "n": 2
+  },
+  {
+   "en": "Webhooks need a reachable endpoint",
+   "fr": "Un webhook exige un endpoint accessible",
+   "es": "Un webhook necesita un endpoint accesible",
+   "de": "Webhooks brauchen einen erreichbaren Endpunkt",
+   "it": "Un webhook richiede un endpoint raggiungibile",
+   "pt": "Um webhook precisa de um endpoint acessível",
+   "n": 1
+  }
  ]
 }

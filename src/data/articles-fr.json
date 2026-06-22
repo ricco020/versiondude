@@ -347,5 +347,25 @@
    "Auditez authorized_keys et supprimez les accès obsolètes",
    "Renouvelez les clés selon un calendrier et lors de la perte d’un appareil"
   ]
+ },
+ "what-is-a-webhook": {
+  "paras": [
+   "Un webhook est un message automatique qu'une application envoie à une autre à l'instant même où quelque chose se produit. Au lieu de demander sans cesse à un service « est-ce qu'il y a du nouveau ? », c'est le service qui vous appelle : il envoie une requête HTTP vers une URL que vous contrôlez dès qu'un événement survient. On le décrit souvent comme une « API inversée » : la donnée vous est poussée, au lieu d'être tirée par vous.",
+   "Pour comprendre pourquoi cela compte, comparons avec une API classique. Avec une API traditionnelle, c'est votre application qui demande : elle envoie une requête chaque fois qu'elle veut des données, et le serveur répond. Cela fonctionne, mais si vous avez besoin de connaître les événements à l'instant où ils se produisent, vous devez interroger encore et encore — un schéma coûteux appelé polling (scrutation).",
+   "Un webhook inverse le sens. Plutôt que votre application interroge un service de paiement chaque minute pour détecter de nouveaux paiements, c'est le service de paiement qui envoie un message à votre URL à l'instant où un paiement réussit. Aucune requête gaspillée, et quasiment aucun délai. La contrepartie, c'est que vous devez désormais faire tourner quelque chose qui écoute ces messages entrants.",
+   "Sur le plan technique, un webhook est simple. Vous enregistrez une URL — votre « endpoint » — auprès du fournisseur et vous lui indiquez quels événements vous intéressent. Lorsqu'un tel événement se déclenche, le fournisseur envoie une requête HTTP POST à votre endpoint, avec un corps (généralement en JSON) qui décrit ce qui s'est passé. Votre serveur reçoit cette requête et fait ce que l'événement appelle.",
+   "Votre endpoint est censé répondre rapidement par un statut de succès (un code 2xx) pour accuser réception du message. Si votre endpoint est hors service ou renvoie une erreur, la plupart des fournisseurs réessaieront la livraison plusieurs fois sur une certaine période : une brève panne ne signifie donc pas que l'événement est définitivement perdu.",
+   "Les webhooks sont partout dès qu'on y prête attention. Un prestataire de paiement signale à votre application qu'un paiement est passé ; un hébergeur de code déclenche un déploiement quand vous poussez un commit ; un outil de chat publie un message quand un build se termine ; une plateforme e-commerce notifie votre système d'une nouvelle commande. Partout où un service a besoin de dire à un autre que « quelque chose s'est passé », le webhook s'impose naturellement.",
+   "Parce que votre endpoint est une URL publique, quiconque la découvre pourrait tenter d'envoyer de fausses requêtes : la vérification est donc essentielle. Les fournisseurs sérieux signent chaque requête à l'aide d'un secret partagé — ils incluent un en-tête de signature que vous recalculez et comparez. S'il ne correspond pas, vous rejetez la requête. Servez toujours l'endpoint en HTTPS pour que la charge utile ne puisse être ni lue ni altérée en transit.",
+   "Quelques bonnes habitudes supplémentaires rendent le traitement des webhooks robuste. Validez la charge utile avant d'agir, et considérez la livraison comme « au moins une fois » : à cause des réessais, un même événement peut arriver deux fois ; rendez donc votre gestionnaire idempotent — traiter un doublon doit rester sans conséquence. Accusez réception rapidement et déportez tout traitement lent vers une tâche d'arrière-plan, afin de ne jamais provoquer de timeout côté émetteur.",
+   "Un dernier point relie tout cela : un webhook ne fonctionne que si votre endpoint est joignable publiquement et fiablement en ligne. L'émetteur ne peut atteindre ni un script sur votre ordinateur portable, ni un serveur en veille. Recevoir des webhooks en production suppose de faire tourner un serveur toujours disponible que vous contrôlez — et c'est précisément là qu'un hébergeur fiable entre en jeu."
+  ],
+  "list": [
+   "Piloté par les événements : le serveur pousse, vous n'interrogez pas en boucle",
+   "Livré sous forme de requête HTTP POST avec une charge utile JSON",
+   "Vérifiez chaque requête avec un secret signé, en HTTPS",
+   "Répondez 2xx rapidement ; gérez les réessais de façon idempotente",
+   "Nécessite un endpoint public et toujours en ligne pour les recevoir"
+  ]
  }
 }

@@ -347,5 +347,25 @@
    "Controlla authorized_keys e rimuovi gli accessi obsoleti",
    "Ruota le chiavi secondo una cadenza e quando un dispositivo viene perso"
   ]
+ },
+ "what-is-a-webhook": {
+  "paras": [
+   "Un webhook è un messaggio automatico che un'applicazione invia a un'altra nell'istante stesso in cui accade qualcosa. Invece di chiedere ripetutamente a un servizio «c'è qualcosa di nuovo?», è il servizio a chiamare te: effettua una richiesta HTTP verso un URL che controlli non appena si verifica un evento. Spesso lo si descrive come una «API al contrario»: i dati ti vengono inviati (push), anziché essere recuperati da te (pull).",
+   "Per capire perché questo conta, mettilo a confronto con una normale API. Con un'API tradizionale è la tua app a fare le domande: invia una richiesta ogni volta che vuole dei dati, e il server risponde. Funziona, ma se hai bisogno di sapere di un evento nell'istante in cui accade, devi continuare a chiedere all'infinito — uno schema dispendioso chiamato polling.",
+   "Un webhook inverte la direzione. Invece che la tua app interroghi un servizio di pagamento ogni minuto in cerca di nuovi pagamenti, è il servizio di pagamento a inviare un messaggio al tuo URL nell'istante in cui un pagamento va a buon fine. Nessuna richiesta sprecata, e quasi nessun ritardo. In cambio, ora devi far girare qualcosa che resti in ascolto di questi messaggi in arrivo.",
+   "Dal punto di vista meccanico, un webhook è semplice. Registri presso il fornitore un URL — il tuo «endpoint» — e gli indichi quali eventi ti interessano. Quando un evento di quel tipo si verifica, il fornitore invia una richiesta HTTP POST al tuo endpoint, con un corpo (di solito in JSON) che descrive ciò che è accaduto. Il tuo server riceve la richiesta ed esegue ciò che l'evento richiede.",
+   "Ci si aspetta che il tuo endpoint risponda rapidamente con uno stato di successo (un codice 2xx) per confermare di aver ricevuto il messaggio. Se il tuo endpoint è offline o restituisce un errore, la maggior parte dei fornitori riprova a consegnarlo più volte nell'arco di un certo periodo, così che una breve interruzione non significhi la perdita definitiva dell'evento.",
+   "I webhook sono dappertutto, una volta che cominci a notarli. Un fornitore di pagamenti avvisa la tua app che un addebito è andato a buon fine; un hosting di codice avvia un deploy quando fai il push di un commit; uno strumento di chat pubblica un messaggio quando una build termina; una piattaforma di e-commerce notifica al tuo sistema un nuovo ordine. Ovunque un servizio debba dire a un altro che «è successo qualcosa», un webhook è la soluzione naturale.",
+   "Poiché il tuo endpoint è un URL pubblico, chiunque lo scopra potrebbe provare a inviare richieste false, quindi la verifica è importante. I fornitori affidabili firmano ogni richiesta con un secret condiviso: includono un header di firma che tu ricalcoli e confronti. Se non corrisponde, rifiuti la richiesta. Esponi sempre l'endpoint su HTTPS, così che il payload non possa essere letto né manomesso durante il transito.",
+   "Qualche altra buona abitudine rende robusta la gestione dei webhook. Convalida il payload prima di agire in base ad esso, e tratta la consegna come «almeno una volta»: a causa dei tentativi ripetuti, lo stesso evento può arrivare due volte, quindi rendi il tuo handler idempotente — elaborare un duplicato dev'essere innocuo. Conferma in fretta e sposta qualsiasi lavoro lento in un job in background, così da non mandare mai in timeout il mittente.",
+   "Un'insidia lega insieme tutto questo: un webhook funziona solo se il tuo endpoint è raggiungibile pubblicamente e online in modo affidabile. Il mittente non può raggiungere uno script sul tuo portatile né un server che va in sospensione. Ricevere webhook in produzione significa far girare un server sempre attivo che controlli tu — ed è esattamente qui che entra in gioco un hosting affidabile."
+  ],
+  "list": [
+   "Orientato agli eventi: è il server a fare il push, non sei tu a fare polling",
+   "Consegnato come una richiesta HTTP POST con un payload JSON",
+   "Verifica ogni richiesta con un secret firmato, su HTTPS",
+   "Rispondi in fretta con un 2xx; gestisci i tentativi ripetuti in modo idempotente",
+   "Richiede un endpoint pubblico e sempre attivo per riceverli"
+  ]
  }
 }
