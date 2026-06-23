@@ -1,10 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 const LOCALE = "de";
-// Featured : 1 rangée scrollable (scrollbar masquée). 1ère carte = plus récent FIXE (eager/LCP),
-// les autres TOURNENT par visite. Tri date desc (fil d'actu : nouveaux en haut).
+// Featured : 1 rangée scrollable (scrollbar masquée) + flèches gauche/droite. Tri date desc.
 const HomeFeatureCarousal = () => {
+  const scroller = useRef(null);
+  const scroll = (dir) => { if (scroller.current) scroller.current.scrollBy({ left: dir * 340, behavior: "smooth" }); };
   const pool = [...getArticles(LOCALE)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
   const head = pool[0];
   const [rest, setRest] = useState(pool.slice(1, 6));
@@ -32,8 +33,12 @@ const HomeFeatureCarousal = () => {
     </div>
   );
   return (
-    <div className="featured-scroll">
-      {all.map((a, i) => <Card a={a} priority={i === 0} key={a.slug} />)}
+    <div className="featured-wrap">
+      <button type="button" className="feat-arrow feat-arrow-left" aria-label="Prev" onClick={() => scroll(-1)}>&#8249;</button>
+      <div className="featured-scroll" ref={scroller}>
+        {all.map((a, i) => <Card a={a} priority={i === 0} key={a.slug} />)}
+      </div>
+      <button type="button" className="feat-arrow feat-arrow-right" aria-label="Next" onClick={() => scroll(1)}>&#8250;</button>
     </div>
   );
 };
