@@ -13,6 +13,7 @@ import HomeCenterStatic from "@/components/ltr/home-center-slider/home-center-st
 import Tags from "@/components/ltr/tags/tags";
 import { useEffect } from "react";
 import Link from "next/link";
+import { getArticles } from "@/data/articles";
 export default function Home() {
   useEffect(() => {
     // Your logic for setting dir attribute using JavaScript
@@ -23,6 +24,8 @@ export default function Home() {
   useRemoveBodyClass(['home-nine'], ['home-six', 'home-seven', 'home-two', 'boxed-layout', 'layout-rtl']);
   {/* *** IMPORT BACKGROUND IMAGE *** */ }
   useBackgroundImageLoader()
+  const L = [...getArticles("en")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  const cap = (x)=> x ? x.charAt(0).toUpperCase()+x.slice(1) : "";
   return (
     <Layout>
       {/* *** START PAGE MAIN CONTENT *** */}
@@ -49,64 +52,43 @@ export default function Home() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/articles/open-source-password-managers" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt="The best open-source password managers"
-                          className="img-fluid"
-                        />
+                      <Link href={`/articles/${L[0].slug}`} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[0].hero} alt={L[0].title} className="img-fluid" />
                       </Link>
                       <div className="post-text">
-                        <span className="post-category">Standards</span>
-                        <h4><Link href="/articles/open-source-password-managers">The best open-source password managers</Link>
-                        </h4>
+                        <span className="post-category">{cap(L[0].category)}</span>
+                        <h4><Link href={`/articles/${L[0].slug}`}>{L[0].title}</Link></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            By <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>By <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/articles/self-hosted-password-managers" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt="Self-hosted password managers"
-                          className="img-fluid"
-                        />
+                      <Link href={`/articles/${L[1].slug}`} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[1].hero} alt={L[1].title} className="img-fluid" />
                       </Link>
                       <div className="post-text">
-                        <span className="post-category">Parsing</span>
-                        <h4><Link href="/articles/self-hosted-password-managers">Self-hosted password managers</Link>
-                        </h4>
+                        <span className="post-category">{cap(L[1].category)}</span>
+                        <h4><Link href={`/articles/${L[1].slug}`}>{L[1].title}</Link></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            By <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>By <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/articles/secrets-management-tools" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/secrets-management-tools-hero.jpg"
-                          alt="Secrets management tools for developers"
-                          className="img-fluid"
-                        />
+                      <Link href={`/articles/${L[2].slug}`} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[2].hero} alt={L[2].title} className="img-fluid" />
                       </Link>
                       <div className="post-text">
-                        <span className="post-category">Tooling</span>
-                        <h4><Link href="/articles/secrets-management-tools">Secrets management tools for developers</Link>
-                        </h4>
+                        <span className="post-category">{cap(L[2].category)}</span>
+                        <h4><Link href={`/articles/${L[2].slug}`}>{L[2].title}</Link></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            By <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>By <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -121,66 +103,43 @@ export default function Home() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
-                      <Link href="/articles/proton-mail-review" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/proton-mail-review-hero.jpg"
-                          alt="Proton Mail review: encrypted email"
-                          className="img-fluid"
-                        />
+                      <Link href={`/articles/${L[3].slug}`} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[3].hero} alt={L[3].title} className="img-fluid" />
                       </Link>
                       <div className="post-text">
-                        <span className="post-category">Archive</span>
-                        <h4><Link href="/articles/proton-mail-review">Proton Mail review: encrypted email</Link>
-                        </h4>
+                        <span className="post-category">{cap(L[3].category)}</span>
+                        <h4><Link href={`/articles/${L[3].slug}`}>{L[3].title}</Link></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            By <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>By <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/articles/open-source-password-managers" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt="The best open-source password managers"
-                          className="img-fluid"
-                        />
-                      </a>
+                      <Link href={`/articles/${L[4].slug}`} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[4].hero} alt={L[4].title} className="img-fluid" />
+                      </Link>
                       <div className="post-text">
-                        <span className="post-category">Standards</span>
-                        <h4>
-                          <a href="/articles/open-source-password-managers">The best open-source password managers</a>
-                        </h4>
+                        <span className="post-category">{cap(L[4].category)}</span>
+                        <h4><Link href={`/articles/${L[4].slug}`}>{L[4].title}</Link></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            By <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>By <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/articles/self-hosted-password-managers" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt="Self-hosted password managers"
-                          className="img-fluid"
-                        />
-                      </a>
+                      <Link href={`/articles/${L[5].slug}`} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[5].hero} alt={L[5].title} className="img-fluid" />
+                      </Link>
                       <div className="post-text">
-                        <span className="post-category">Parsing</span>
-                        <h4>
-                          <a href="/articles/self-hosted-password-managers">Self-hosted password managers</a>
-                        </h4>
+                        <span className="post-category">{cap(L[5].category)}</span>
+                        <h4><Link href={`/articles/${L[5].slug}`}>{L[5].title}</Link></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            By <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>By <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
