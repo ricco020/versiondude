@@ -3,126 +3,32 @@ import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import 'animate.css/animate.css'
+import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 
-if (typeof window !== "undefined") {
-  window.$ = window.jQuery = require("jquery");
-}
-// This is for Next.js. On Rect JS remove this line
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
-
-
+if (typeof window !== "undefined") { window.$ = window.jQuery = require("jquery"); }
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
+const LOCALE = "fr";
 
 const HomeFeatureCarousal = () => {
-  
+  const items = getArticles(LOCALE).slice().sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(0, 6);
   return (
-    <OwlCarousel className="owl-theme featured-carousel"
-      loop={true}
-      margin={10}
-      nav={false}
-      dots={false}
-      responsive={{
-        0: {
-          items: 1,
-          autoplay: true
-        },
-        576: {
-          items: 2
-        },
-        768: {
-          items: 2.5
-        },
-        992: {
-          items: 3.5
-        },
-        1200: {
-          items: 4
-        }
-      }}
-    >
-      <div className="news-list-item">
-        <div className="img-wrapper">
-          <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="thumb">
-            <img loading="lazy" decoding="async"
-              src="/assets/articles/self-hosted-password-managers-body.jpg"
-              alt="Les meilleurs gestionnaires de mots de passe open source"
-              className="img-fluid"
-            />
-            <div className="link-icon">
-              <i className="fa fa-camera" />
-            </div>
-          </a>
+    <OwlCarousel className="owl-theme featured-carousel" loop={true} margin={10} nav={false} dots={false}
+      responsive={{ 0: { items: 1, autoplay: true }, 576: { items: 2 }, 768: { items: 2.5 }, 992: { items: 3.5 }, 1200: { items: 4 } }}>
+      {items.map((a) => (
+        <div className="news-list-item" key={a.slug}>
+          <div className="img-wrapper">
+            <a href={articleHref(a.slug, LOCALE)} className="thumb">
+              <img loading="lazy" decoding="async" src={a.body || a.hero} alt={a.title} className="img-fluid" />
+              <div className="link-icon"><i className="fa fa-camera" /></div>
+            </a>
+          </div>
+          <div className="post-info-2">
+            <span className="post-category">{categoryLabel(a.category, LOCALE)}</span>
+            <h5 className="mb-0"><a href={articleHref(a.slug, LOCALE)} className="title">{a.title}</a></h5>
+          </div>
         </div>
-        <div className="post-info-2">
-          <span className="post-category">Outils</span>
-          <h5 className="mb-0">
-            <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="title">Les meilleurs gestionnaires de mots de passe open source</a>
-          </h5>
-        </div>
-      </div>
-      <div className="news-list-item">
-        <div className="img-wrapper">
-          <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="thumb">
-            <img loading="lazy" decoding="async"
-              src="/assets/articles/proton-mail-review-body.jpg"
-              alt="Gestionnaires de mots de passe auto-hébergés"
-              className="img-fluid"
-            />
-            <div className="link-icon">
-              <i className="fa fa-camera" />
-            </div>
-          </a>
-        </div>
-        <div className="post-info-2">
-          <span className="post-category">Outils</span>
-          <h5 className="mb-0">
-            <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="title">Gestionnaires de mots de passe auto-hébergés</a>
-          </h5>
-        </div>
-      </div>
-      <div className="news-list-item">
-        <div className="img-wrapper">
-          <a href="/fr/articles/outils-de-gestion-des-secrets" className="thumb">
-            <img loading="lazy" decoding="async"
-              src="/assets/articles/proton-pass-review-body.jpg"
-              alt="Outils de gestion des secrets pour développeurs"
-              className="img-fluid"
-            />
-            <div className="link-icon">
-              <i className="fa fa-camera" />
-            </div>
-          </a>
-        </div>
-        <div className="post-info-2">
-          <span className="post-category">Outils</span>
-          <h5 className="mb-0">
-            <a href="/fr/articles/outils-de-gestion-des-secrets" className="title">Outils de gestion des secrets pour développeurs</a>
-          </h5>
-        </div>
-      </div>
-      <div className="news-list-item">
-        <div className="img-wrapper">
-          <a href="/fr/articles/test-proton-mail" className="thumb">
-            <img loading="lazy" decoding="async"
-              src="/assets/articles/html-validator-body.jpg"
-              alt="Test de Proton Mail : l'email chiffré"
-              className="img-fluid"
-            />
-            <div className="link-icon">
-              <i className="fa fa-camera" />
-            </div>
-          </a>
-        </div>
-        <div className="post-info-2">
-          <span className="post-category">Outils</span>
-          <h5 className="mb-0">
-            <a href="/fr/articles/test-proton-mail" className="title">Test de Proton Mail : l'email chiffré</a>
-          </h5>
-        </div>
-      </div>
+      ))}
     </OwlCarousel>
   );
 };
-
 export default HomeFeatureCarousal;

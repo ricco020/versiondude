@@ -13,6 +13,7 @@ import HomeCenterSlider from "@/components/ltr/home-center-slider/home-center-sl
 import Tags from "@/components/ltr/tags/tags";
 import { useEffect } from "react";
 import Link from "next/link";
+import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 export default function Home_fr() {
   useEffect(() => {
     // Your logic for setting dir attribute using JavaScript
@@ -23,6 +24,7 @@ export default function Home_fr() {
   useRemoveBodyClass(['home-nine'], ['home-six', 'home-seven', 'home-two', 'boxed-layout', 'layout-rtl']);
   {/* *** IMPORT BACKGROUND IMAGE *** */ }
   useBackgroundImageLoader()
+  const L = [...getArticles("fr")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(6);
   return (
     <Layout locale="fr">
       {/* *** START PAGE MAIN CONTENT *** */}
@@ -49,64 +51,43 @@ export default function Home_fr() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt="Les meilleurs gestionnaires de mots de passe open source"
-                          className="img-fluid"
-                        />
-                      </Link>
+                      <a href={articleHref(L[0].slug,"fr")} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[0].hero} alt={L[0].title} className="img-fluid" />
+                      </a>
                       <div className="post-text">
-                        <span className="post-category">Standards</span>
-                        <h4><Link href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source">Les meilleurs gestionnaires de mots de passe open source</Link>
-                        </h4>
+                        <span className="post-category">{categoryLabel(L[0].category,"fr")}</span>
+                        <h4><a href={articleHref(L[0].slug,"fr")}>{L[0].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt="Gestionnaires de mots de passe auto-hébergés"
-                          className="img-fluid"
-                        />
-                      </Link>
+                      <a href={articleHref(L[1].slug,"fr")} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[1].hero} alt={L[1].title} className="img-fluid" />
+                      </a>
                       <div className="post-text">
-                        <span className="post-category">Analyse</span>
-                        <h4><Link href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges">Gestionnaires de mots de passe auto-hébergés</Link>
-                        </h4>
+                        <span className="post-category">{categoryLabel(L[1].category,"fr")}</span>
+                        <h4><a href={articleHref(L[1].slug,"fr")}>{L[1].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
-                      <Link href="/fr/articles/outils-de-gestion-des-secrets" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/secrets-management-tools-hero.jpg"
-                          alt="Outils de gestion des secrets pour développeurs"
-                          className="img-fluid"
-                        />
-                      </Link>
+                      <a href={articleHref(L[2].slug,"fr")} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[2].hero} alt={L[2].title} className="img-fluid" />
+                      </a>
                       <div className="post-text">
-                        <span className="post-category">Outils</span>
-                        <h4><Link href="/fr/articles/outils-de-gestion-des-secrets">Outils de gestion des secrets pour développeurs</Link>
-                        </h4>
+                        <span className="post-category">{categoryLabel(L[2].category,"fr")}</span>
+                        <h4><a href={articleHref(L[2].slug,"fr")}>{L[2].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -121,66 +102,43 @@ export default function Home_fr() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
-                      <Link href="/fr/articles/test-proton-mail" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/proton-mail-review-hero.jpg"
-                          alt="Test de Proton Mail : l'email chiffré"
-                          className="img-fluid"
-                        />
-                      </Link>
+                      <a href={articleHref(L[3].slug,"fr")} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[3].hero} alt={L[3].title} className="img-fluid" />
+                      </a>
                       <div className="post-text">
-                        <span className="post-category">Archive</span>
-                        <h4><Link href="/fr/articles/test-proton-mail">Test de Proton Mail : l'email chiffré</Link>
-                        </h4>
+                        <span className="post-category">{categoryLabel(L[3].category,"fr")}</span>
+                        <h4><a href={articleHref(L[3].slug,"fr")}>{L[3].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt="Les meilleurs gestionnaires de mots de passe open source"
-                          className="img-fluid"
-                        />
+                      <a href={articleHref(L[4].slug,"fr")} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[4].hero} alt={L[4].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">Standards</span>
-                        <h4>
-                          <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source">Les meilleurs gestionnaires de mots de passe open source</a>
-                        </h4>
+                        <span className="post-category">{categoryLabel(L[4].category,"fr")}</span>
+                        <h4><a href={articleHref(L[4].slug,"fr")}>{L[4].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                          alt="Gestionnaires de mots de passe auto-hébergés"
-                          className="img-fluid"
-                        />
+                      <a href={articleHref(L[5].slug,"fr")} className="news-image">
+                        <img loading="lazy" decoding="async" src={L[5].hero} alt={L[5].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">Analyse</span>
-                        <h4>
-                          <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges">Gestionnaires de mots de passe auto-hébergés</a>
-                        </h4>
+                        <span className="post-category">{categoryLabel(L[5].category,"fr")}</span>
+                        <h4><a href={articleHref(L[5].slug,"fr")}>{L[5].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
                       </div>
                     </div>
                   </div>

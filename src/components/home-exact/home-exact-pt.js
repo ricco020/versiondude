@@ -1,6 +1,6 @@
 "use client"
 import StickyBox from "react-sticky-box";
-import NewsTicker from "@/components/ltr/news-ticker-carousal/page-es";
+import NewsTicker from "@/components/ltr/news-ticker-carousal/page-pt";
 import SunnyWeather from "@/components/ltr/sunny-wether/sunny-weather";
 import { useBackgroundImageLoader } from "@/components/ltr/use-background-image/use-background-image";
 import Layout from "@/components/ltr/layout/layout";
@@ -8,13 +8,13 @@ import YoutubeVideo from "@/components/ltr/youtube-video/youtube-video";
 import useRemoveBodyClass from "@/components/ltr/useEffect-hook/useEffect-hook";
 import DatePickerComponents from "@/components/ltr/date-picker/date-picker";
 import PollWidget from "@/components/ltr/poll-widget/poll";
-import HomeFeatureCarousal from "@/components/ltr/home-feature-carousal/home-feature-carousal-es";
-import HomeCenterSlider from "@/components/ltr/home-center-slider/home-center-slider-es";
+import HomeFeatureCarousal from "@/components/ltr/home-feature-carousal/home-feature-carousal-pt";
+import HomeCenterSlider from "@/components/ltr/home-center-slider/home-center-slider-pt";
 import Tags from "@/components/ltr/tags/tags";
 import { useEffect } from "react";
 import Link from "next/link";
 import { getArticles, articleHref, categoryLabel } from "@/data/articles";
-export default function Home_es() {
+export default function Home_pt() {
   useEffect(() => {
     // Your logic for setting dir attribute using JavaScript
     // For example:
@@ -24,12 +24,12 @@ export default function Home_es() {
   useRemoveBodyClass(['home-nine'], ['home-six', 'home-seven', 'home-two', 'boxed-layout', 'layout-rtl']);
   {/* *** IMPORT BACKGROUND IMAGE *** */ }
   useBackgroundImageLoader()
-  const L = [...getArticles("es")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(6);
+  const L = [...getArticles("pt")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(6);
   return (
-    <Layout locale="es">
+    <Layout locale="pt">
       {/* *** START PAGE MAIN CONTENT *** */}
       <main className="page_main_wrapper">
-        <h1 className="visually-hidden">VersionDude — estándares web, parsers y herramientas dev</h1>
+        <h1 className="visually-hidden">VersionDude — padrões web, analisadores e ferramentas para programadores</h1>
         {/* START NEWSTRICKER */}
         <NewsTicker />
         {/*  END OF /. NEWSTRICKER */}
@@ -51,12 +51,12 @@ export default function Home_es() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <a href={articleHref(L[0].slug,"es")} className="news-image">
+                      <a href={articleHref(L[0].slug,"pt")} className="news-image">
                         <img loading="lazy" decoding="async" src={L[0].hero} alt={L[0].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[0].category,"es")}</span>
-                        <h4><a href={articleHref(L[0].slug,"es")}>{L[0].title}</a></h4>
+                        <span className="post-category">{categoryLabel(L[0].category,"pt")}</span>
+                        <h4><a href={articleHref(L[0].slug,"pt")}>{L[0].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Por <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -65,12 +65,12 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <a href={articleHref(L[1].slug,"es")} className="news-image">
+                      <a href={articleHref(L[1].slug,"pt")} className="news-image">
                         <img loading="lazy" decoding="async" src={L[1].hero} alt={L[1].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[1].category,"es")}</span>
-                        <h4><a href={articleHref(L[1].slug,"es")}>{L[1].title}</a></h4>
+                        <span className="post-category">{categoryLabel(L[1].category,"pt")}</span>
+                        <h4><a href={articleHref(L[1].slug,"pt")}>{L[1].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Por <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -79,12 +79,12 @@ export default function Home_es() {
                   </div>
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
-                      <a href={articleHref(L[2].slug,"es")} className="news-image">
+                      <a href={articleHref(L[2].slug,"pt")} className="news-image">
                         <img loading="lazy" decoding="async" src={L[2].hero} alt={L[2].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[2].category,"es")}</span>
-                        <h4><a href={articleHref(L[2].slug,"es")}>{L[2].title}</a></h4>
+                        <span className="post-category">{categoryLabel(L[2].category,"pt")}</span>
+                        <h4><a href={articleHref(L[2].slug,"pt")}>{L[2].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Por <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -102,12 +102,12 @@ export default function Home_es() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href={articleHref(L[3].slug,"es")} className="news-image">
+                      <a href={articleHref(L[3].slug,"pt")} className="news-image">
                         <img loading="lazy" decoding="async" src={L[3].hero} alt={L[3].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[3].category,"es")}</span>
-                        <h4><a href={articleHref(L[3].slug,"es")}>{L[3].title}</a></h4>
+                        <span className="post-category">{categoryLabel(L[3].category,"pt")}</span>
+                        <h4><a href={articleHref(L[3].slug,"pt")}>{L[3].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Por <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -116,12 +116,12 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href={articleHref(L[4].slug,"es")} className="news-image">
+                      <a href={articleHref(L[4].slug,"pt")} className="news-image">
                         <img loading="lazy" decoding="async" src={L[4].hero} alt={L[4].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[4].category,"es")}</span>
-                        <h4><a href={articleHref(L[4].slug,"es")}>{L[4].title}</a></h4>
+                        <span className="post-category">{categoryLabel(L[4].category,"pt")}</span>
+                        <h4><a href={articleHref(L[4].slug,"pt")}>{L[4].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Por <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -130,12 +130,12 @@ export default function Home_es() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href={articleHref(L[5].slug,"es")} className="news-image">
+                      <a href={articleHref(L[5].slug,"pt")} className="news-image">
                         <img loading="lazy" decoding="async" src={L[5].hero} alt={L[5].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[5].category,"es")}</span>
-                        <h4><a href={articleHref(L[5].slug,"es")}>{L[5].title}</a></h4>
+                        <span className="post-category">{categoryLabel(L[5].category,"pt")}</span>
+                        <h4><a href={articleHref(L[5].slug,"pt")}>{L[5].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Por <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -155,7 +155,7 @@ export default function Home_es() {
               <StickyBox >
                 <div className="panel_header">
                   <h4>
-                    <strong>Top </strong> Stories
+                    <strong>Top </strong> Histórias
                   </h4>
                 </div>
                 <div className="border-bottom posts">
@@ -163,40 +163,40 @@ export default function Home_es() {
                     <li className="post-grid">
                       <div className="posts-inner px-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/herramientas-de-gestion-de-secretos">Herramientas de gestión de secretos para desarrolladores</a>
+                          <a href="/pt/articles/ferramentas-de-gestao-de-segredos">Ferramentas de gestão de segredos para programadores</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
-                            <span className="post-category">Herramientas</span>
+                            <span className="post-category">Ferramentas</span>
                           </li>
                           </ul>
-                        <p>Por qué importa el código abierto en un gestor de contraseñas, y los proyectos en los que confiar.</p>
+                        <p>Porque é que o open source importa num gestor de palavras-passe, e os projetos em que confiar.</p>
                       </div>
                     </li>
                     <li className="post-grid">
                       <div className="posts-inner px-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/analisis-proton-mail">Análisis de Proton Mail: correo cifrado</a>
+                          <a href="/pt/articles/analise-proton-mail">Análise do Proton Mail: o email cifrado</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
-                            <span className="post-category">Archivo</span>
+                            <span className="post-category">Arquivo</span>
                           </li>
                           </ul>
-                        <p>Qué significa realmente el correo cifrado, y los servicios que lo hacen con credibilidad.</p>
+                        <p>O que significa realmente o email cifrado, e os serviços que o fazem a sério.</p>
                       </div>
                     </li>
                     <li className="d-none d-xl-block post-grid">
                       <div className="posts-inner px-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/mejores-servicios-de-correo-cifrado">Los mejores servicios de correo cifrado</a>
+                          <a href="/pt/articles/melhores-servicos-de-email-cifrado">Os melhores serviços de email cifrado</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
-                            <span className="post-category">Estándares</span>
+                            <span className="post-category">Padrões</span>
                           </li>
                           </ul>
-                        <p>El Document Object Model es el árbol que un navegador construye a partir de tu HTML.</p>
+                        <p>O Document Object Model é a árvore que um navegador constrói a partir do seu HTML.</p>
                       </div>
                     </li>
                   </ul>
@@ -215,7 +215,7 @@ export default function Home_es() {
                         aria-controls="most-viewed-pane"
                         aria-selected="true"
                       >
-                        Lo más visto
+                        Mais lidos
                       </button>
                     </li>
                     <li className="nav-item" role="presentation">
@@ -246,31 +246,31 @@ export default function Home_es() {
                           <li>
                             <span className="count">01</span>
                             <span className="text">
-                              <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">Los mejores gestores de contraseñas de código abierto</a>
+                              <a href="/pt/articles/melhores-gestores-de-palavras-passe-open-source">Os melhores gestores de palavras-passe open source</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">02</span>
                             <span className="text">
-                              <a href="/es/articles/gestores-de-contrasenas-autoalojados">Gestores de contraseñas autoalojados</a>
+                              <a href="/pt/articles/gestores-de-palavras-passe-auto-hospedados">Gestores de palavras-passe auto-hospedados</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">03</span>
                             <span className="text">
-                              <a href="/es/articles/herramientas-de-gestion-de-secretos">Herramientas de gestión de secretos para desarrolladores</a>
+                              <a href="/pt/articles/ferramentas-de-gestao-de-segredos">Ferramentas de gestão de segredos para programadores</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">04</span>
                             <span className="text">
-                              <a href="/es/articles/analisis-proton-mail">Análisis de Proton Mail: correo cifrado</a>
+                              <a href="/pt/articles/analise-proton-mail">Análise do Proton Mail: o email cifrado</a>
                             </span>
                           </li>
                           <li>
                             <span className="count">05</span>
                             <span className="text">
-                              <a href="/es/articles/mejores-servicios-de-correo-cifrado">Los mejores servicios de correo cifrado</a>
+                              <a href="/pt/articles/melhores-servicos-de-email-cifrado">Os melhores serviços de email cifrado</a>
                             </span>
                           </li>
                         </ul>
@@ -286,16 +286,16 @@ export default function Home_es() {
                       <div className="popular-news">
                         <div className="p-post">
                           <h4>
-                            <a href="/es/articles/analisis-proton-pass">Análisis de Proton Pass</a>
+                            <a href="/pt/articles/analise-proton-pass">Análise do Proton Pass</a>
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/categories/standards">
+                              <a href="/pt/categories/standards">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/articles/que-es-el-dom">
+                              <a href="/pt/articles/o-que-e-o-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -311,16 +311,16 @@ export default function Home_es() {
                         </div>
                         <div className="p-post">
                           <h4>
-                            <a href="/es/articles/que-es-el-dom">¿Qué es el DOM?</a>
+                            <a href="/pt/articles/o-que-e-o-dom">O que é o DOM?</a>
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/articles/validador-html">
+                              <a href="/pt/articles/validador-html">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/articles/validador-html">
+                              <a href="/pt/articles/validador-html">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -336,16 +336,16 @@ export default function Home_es() {
                         </div>
                         <div className="p-post">
                           <h4>
-                            <a href="/es/articles/validador-html">Qué hace un validador de HTML</a>
+                            <a href="/pt/articles/validador-html">O que faz um validador HTML</a>
                           </h4>
                           <ul className="authar-info d-flex flex-wrap justify-content-center">
                             <li className="date">
-                              <a href="/es/articles/que-es-el-dom">
+                              <a href="/pt/articles/o-que-e-o-dom">
                                 <i className="ti ti ti-timer" /> 
                               </a>
                             </li>
                             <li className="like">
-                              <a href="/es/articles/que-es-el-dom">
+                              <a href="/pt/articles/o-que-e-o-dom">
                                 <i className="ti ti ti-thumb-up" />
                                 15 likes
                               </a>
@@ -374,28 +374,28 @@ export default function Home_es() {
                   <div className="post-body py-0">
                     <article>
                       <figure>
-                        <a href="/es/articles/que-es-un-analizador">
+                        <a href="/pt/articles/o-que-e-um-analisador">
                           <img loading="lazy" decoding="async"
                             src="/assets/articles/secrets-management-tools-hero.jpg"
                             width={345}
-                            alt="¿Qué es un analizador?"
+                            alt="O que é um analisador?"
                             className="img-fluid"
                           />
                         </a>
                       </figure>
                       <div className="post-info">
                         <h3 className="fs-4">
-                          <a href="/es/articles/que-es-un-analizador">¿Qué es un analizador?</a>
+                          <a href="/pt/articles/o-que-e-um-analisador">O que é um analisador?</a>
                         </h3>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
-                            <span className="post-category mb-0">Análisis</span>
+                            <span className="post-category mb-0">Análise</span>
                           </li>
                           <li>
                             Por <span className="editor-name">VersionDude</span>
                           </li>
                           </ul>
-                        <p>Cómo un analizador convierte el marcado en un árbol estructurado — y la recuperación de errores normalizada que pone de acuerdo a todos los navegadores.</p>
+                        <p>Como um analisador transforma markup bruto numa árvore estruturada — e a recuperação de erros normalizada que põe todos os navegadores de acordo.</p>
                       </div>
                     </article>
                   </div>
@@ -406,11 +406,11 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto">
+                          <a href="/pt/articles/melhores-gestores-de-palavras-passe-open-source">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
-                              alt="Los mejores gestores de contraseñas de código abierto"
+                              alt="Os melhores gestores de palavras-passe open source"
                             />
                             <div className="link-icon">
                               <i className="fa fa-play" />
@@ -418,7 +418,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="title">Los mejores gestores de contraseñas de código abierto</a>
+                          <a href="/pt/articles/melhores-gestores-de-palavras-passe-open-source" className="title">Os melhores gestores de palavras-passe open source</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -427,11 +427,11 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/gestores-de-contrasenas-autoalojados">
+                          <a href="/pt/articles/gestores-de-palavras-passe-auto-hospedados">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
-                              alt="Gestores de contraseñas autoalojados"
+                              alt="Gestores de palavras-passe auto-hospedados"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -439,7 +439,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/gestores-de-contrasenas-autoalojados" className="title">Gestores de contraseñas autoalojados</a>
+                          <a href="/pt/articles/gestores-de-palavras-passe-auto-hospedados" className="title">Gestores de palavras-passe auto-hospedados</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -448,11 +448,11 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/herramientas-de-gestion-de-secretos">
+                          <a href="/pt/articles/ferramentas-de-gestao-de-segredos">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
-                              alt="Herramientas de gestión de secretos para desarrolladores"
+                              alt="Ferramentas de gestão de segredos para programadores"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -460,7 +460,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/herramientas-de-gestion-de-secretos" className="title">Herramientas de gestión de secretos para desarrolladores</a>
+                          <a href="/pt/articles/ferramentas-de-gestao-de-segredos" className="title">Ferramentas de gestão de segredos para programadores</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -469,11 +469,11 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/analisis-proton-mail">
+                          <a href="/pt/articles/analise-proton-mail">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-the-dom-hero.jpg"
                               className="img-fluid"
-                              alt="Análisis de Proton Mail: correo cifrado"
+                              alt="Análise do Proton Mail: o email cifrado"
                             />
                             <div className="link-icon">
                               <i className="fa fa-play" />
@@ -481,7 +481,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/analisis-proton-mail" className="title">Análisis de Proton Mail: correo cifrado</a>
+                          <a href="/pt/articles/analise-proton-mail" className="title">Análise do Proton Mail: o email cifrado</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -490,11 +490,11 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/mejores-servicios-de-correo-cifrado">
+                          <a href="/pt/articles/melhores-servicos-de-email-cifrado">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/html-validator-hero.jpg"
                               className="img-fluid"
-                              alt="Los mejores servicios de correo cifrado"
+                              alt="Os melhores serviços de email cifrado"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -502,7 +502,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/mejores-servicios-de-correo-cifrado" className="title">Los mejores servicios de correo cifrado</a>
+                          <a href="/pt/articles/melhores-servicos-de-email-cifrado" className="title">Os melhores serviços de email cifrado</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -511,11 +511,11 @@ export default function Home_es() {
                     <div className="col-6 col-md-4 col-sm-6">
                       <div className="grid-item mb-0">
                         <div className="grid-item-img">
-                          <a href="/es/articles/analisis-proton-pass">
+                          <a href="/pt/articles/analise-proton-pass">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-a-parser-hero.jpg"
                               className="img-fluid"
-                              alt="Análisis de Proton Pass"
+                              alt="Análise do Proton Pass"
                             />
                             <div className="link-icon">
                               <i className="fa fa-camera" />
@@ -523,7 +523,7 @@ export default function Home_es() {
                           </a>
                         </div>
                         <h5>
-                          <a href="/es/articles/analisis-proton-pass" className="title">Análisis de Proton Pass</a>
+                          <a href="/pt/articles/analise-proton-pass" className="title">Análise do Proton Pass</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -544,7 +544,7 @@ export default function Home_es() {
                 <div className="panel_inner review-inner">
                   <div className="panel_header">
                     <h4>
-                      <strong>Explorar</strong> categorías
+                      <strong>Explorar</strong> as categorias
                     </h4>
                   </div>
                   <div className="panel_body">
@@ -554,10 +554,10 @@ export default function Home_es() {
                       data-image-src="/assets/articles/semantic-web-hero.jpg"
                     >
                       <a
-                        href="/es/categories/standards"
+                        href="/pt/categories/standards"
                         className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
                       >
-                        Standards
+                        Padrões
                       </a>
                     </div>
                     {/* Category item */}
@@ -566,7 +566,7 @@ export default function Home_es() {
                       data-image-src="/assets/articles/xml-vs-html-hero.jpg"
                     >
                       <a
-                        href="/es/categories/parsing"
+                        href="/pt/categories/parsing"
                         className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
                       >
                         Parsing
@@ -578,7 +578,7 @@ export default function Home_es() {
                       data-image-src="/assets/articles/ruby-on-rails-cms-hero.jpg"
                     >
                       <a
-                        href="/es/categories/tooling"
+                        href="/pt/categories/tooling"
                         className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
                       >
                         Tooling
@@ -590,10 +590,10 @@ export default function Home_es() {
                       data-image-src="/assets/articles/character-encoding-utf-8-hero.jpg"
                     >
                       <a
-                        href="/es/categories/archive"
+                        href="/pt/categories/archive"
                         className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
                       >
-                        Archive
+                        Arquivo
                       </a>
                     </div>
                     {/* Category item */}
@@ -602,16 +602,16 @@ export default function Home_es() {
                       data-image-src="/assets/articles/self-hosted-cms-hero.jpg"
                     >
                       <a
-                        href="/es/categories/standards"
+                        href="/pt/categories/standards"
                         className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
                       >
-                        Standards
+                        Padrões
                       </a>
                     </div>
                     {/* View All Category button */}
                     <div className="text-center mt-3">
-                      <a href="/es/categories" className="fw-bold text-primary-hover">
-                        <u>Ver todas las categorías</u>
+                      <a href="/pt/categories" className="fw-bold text-primary-hover">
+                        <u>Ver todas as categorias</u>
                       </a>
                     </div>
                   </div>
@@ -621,15 +621,15 @@ export default function Home_es() {
                 <div className="panel_inner review-inner">
                   <div className="panel_header">
                     <h4>
-                      <strong>Últimos</strong> Reviews
+                      <strong>Últimas</strong> análises
                     </h4>
                   </div>
                   <div className="panel_body">
                     <div className="more-post">
-                      <a href="/es/articles/mejores-gestores-de-contrasenas-de-codigo-abierto" className="news-image">
+                      <a href="/pt/articles/melhores-gestores-de-palavras-passe-open-source" className="news-image">
                         <img loading="lazy" decoding="async"
                           src="/assets/articles/open-source-password-managers-body.jpg"
-                          alt="Los mejores gestores de contraseñas de código abierto"
+                          alt="Os melhores gestores de palavras-passe open source"
                           className="img-fluid w-100"
                         />
                       </a>
@@ -641,24 +641,24 @@ export default function Home_es() {
                         <i className="fa fa-star-o" />
                       </div>
                       <div className="post-text">
-                        {/* <span class="post-category">Herramientas</span> */}
+                        {/* <span class="post-category">Ferramentas</span> */}
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-1">
                           <li>
-                            <span className="post-category mb-0">Archivo</span>
+                            <span className="post-category mb-0">Arquivo</span>
                           </li>
                           </ul>
                         <h4 className="mb-0">
-                          ¿Qué es el DOM?
+                          O que é o DOM?
                         </h4>
                       </div>
                     </div>
                     <div className="mt-4 news-list">
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/es/articles/que-es-el-dom" className="thumb">
+                          <a href="/pt/articles/o-que-e-o-dom" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/secrets-management-tools-body.jpg"
-                              alt="¿Qué es el DOM?"
+                              alt="O que é o DOM?"
                               className="img-fluid"
                             />
                             <div className="link-icon">
@@ -668,7 +668,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h5>
-                            <a href="/es/articles/que-es-el-dom" className="title">¿Qué es el DOM?</a>
+                            <a href="/pt/articles/o-que-e-o-dom" className="title">O que é o DOM?</a>
                           </h5>
                           <div className="reviews-reatting">
                             <i className="fas fa-star" />
@@ -681,10 +681,10 @@ export default function Home_es() {
                       </div>
                       <div className="news-list-item p-0 mb-4">
                         <div className="img-wrapper">
-                          <a href="/es/articles/validador-html" className="thumb">
+                          <a href="/pt/articles/validador-html" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/best-encrypted-email-body.jpg"
-                              alt="Qué hace un validador de HTML"
+                              alt="O que faz um validador HTML"
                               className="img-fluid"
                             />
                             <div className="link-icon">
@@ -694,7 +694,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h5>
-                            <a href="/es/articles/validador-html" className="title">Qué hace un validador de HTML</a>
+                            <a href="/pt/articles/validador-html" className="title">O que faz um validador HTML</a>
                           </h5>
                           <div className="reviews-reatting">
                             <i className="fas fa-star" />
@@ -707,10 +707,10 @@ export default function Home_es() {
                       </div>
                       <div className="news-list-item p-0">
                         <div className="img-wrapper">
-                          <a href="/es/articles/que-es-un-analizador" className="thumb">
+                          <a href="/pt/articles/o-que-e-um-analisador" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/what-is-the-dom-body.jpg"
-                              alt="¿Qué es un analizador?"
+                              alt="O que é um analisador?"
                               className="img-fluid"
                             />
                             <div className="link-icon">
@@ -720,7 +720,7 @@ export default function Home_es() {
                         </div>
                         <div className="post-info-2">
                           <h5>
-                            <a href="/es/articles/que-es-un-analizador" className="title">¿Qué es un analizador?</a>
+                            <a href="/pt/articles/o-que-e-um-analisador" className="title">O que é um analisador?</a>
                           </h5>
                           <div className="reviews-reatting">
                             <i className="fas fa-star" />
@@ -750,45 +750,45 @@ export default function Home_es() {
                   <div className="panel_inner">
                     <div className="panel_header" style={{ marginTop: "2.5rem" }}>
                       <h4>
-                        <strong>Herramientas &amp;</strong> Estándares
+                        <strong>Ferramentas &amp;</strong> Padrões
                       </h4>
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/es/articles/web-semantica" className="d-block mb-3">
+                        <a href="/pt/articles/web-semantica" className="d-block mb-3">
                           <img loading="lazy" decoding="async"
                             src="/assets/articles/semantic-web-body.jpg"
-                            alt="La web semántica, explicada"
+                            alt="A web semântica, explicada"
                             className="img-fluid w-100"
                           />
                         </a>
                         <h5>
-                          <a href="/es/articles/web-semantica">La web semántica, explicada</a>
+                          <a href="/pt/articles/web-semantica">A web semântica, explicada</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
-                            <span className="post-category mb-0">Estándares</span>
+                            <span className="post-category mb-0">Padrões</span>
                           </li>
                           </ul>
-                        <p>Consejos prácticos e independientes sobre las herramientas que los desarrolladores y los lectores preocupados por su privacidad usan de verdad.</p>
+                        <p>Conselhos práticos e independentes sobre as ferramentas que os programadores e os leitores atentos à privacidade realmente usam.</p>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
-                          <a href="/es/articles/xml-frente-a-html">XML vs HTML: ¿cuál es la diferencia?</a>
+                          <a href="/pt/articles/xml-vs-html">XML vs HTML: qual é a diferença?</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
-                          <a href="/es/articles/cms-ruby-on-rails-es">CMS en Ruby on Rails</a>
+                          <a href="/pt/articles/cms-ruby-on-rails">Os CMS em Ruby on Rails</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
                       </div>
                       <div className="py-3 pb-0">
                         <h6 className="posts-title">
-                          <a href="/es/articles/codificacion-de-caracteres-utf-8">La codificación de caracteres y por qué ganó UTF-8</a>
+                          <a href="/pt/articles/codificacao-de-caracteres-utf-8">A codificação de caracteres e porque o UTF-8 venceu</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -800,45 +800,45 @@ export default function Home_es() {
                   <div className="panel_inner mb-0">
                     <div className="panel_header">
                       <h4>
-                        <strong>SELECCIÓN</strong> EDITORIAL
+                        <strong>ESCOLHAS</strong> DA REDAÇÃO
                       </h4>
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/es/articles/cms-autoalojados" className="d-block mb-3">
+                        <a href="/pt/articles/cms-auto-hospedados" className="d-block mb-3">
                           <img loading="lazy" decoding="async"
                             src="/assets/projects/html5-parser-hero.jpg"
-                            alt="CMS autoalojados que conviene conocer"
+                            alt="Os CMS auto-hospedados a conhecer"
                             className="img-fluid"
                           />
                         </a>
                         <h5>
-                          <a href="/es/articles/cms-autoalojados">CMS autoalojados que conviene conocer</a>
+                          <a href="/pt/articles/cms-auto-hospedados">Os CMS auto-hospedados a conhecer</a>
                         </h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>
-                            <span className="post-category mb-0">Análisis</span>
+                            <span className="post-category mb-0">Análise</span>
                           </li>
                           </ul>
-                        <p>Consejos prácticos e independientes sobre las herramientas que los desarrolladores y los lectores preocupados por su privacidad usan de verdad.</p>
+                        <p>Conselhos práticos e independentes sobre as ferramentas que os programadores e os leitores atentos à privacidade realmente usam.</p>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
-                          <a href="/es/projects/html5-parser">Analizador HTML5 (htmlparser)</a>
+                          <a href="/pt/projects/html5-parser">Analisador HTML5 (htmlparser)</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
                       </div>
                       <div className="border-bottom py-3">
                         <h6 className="posts-title">
-                          <a href="/es/projects/validator-nu">Validator.nu</a>
+                          <a href="/pt/projects/validator-nu">Validator.nu</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
                       </div>
                       <div className="py-3 pb-0">
                         <h6 className="posts-title">
-                          <a href="/es/projects/railfrog">Railfrog</a>
+                          <a href="/pt/projects/railfrog">Railfrog</a>
                         </h6>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
                           </ul>
@@ -855,7 +855,7 @@ export default function Home_es() {
                     {/*post header*/}
                     <div className="post-head" style={{ marginTop: "2.5rem" }}>
                       <h2 className="title">
-                        <strong>Últimos</strong> articles
+                        <strong>Últimos</strong> artigos
                       </h2>
                     </div>
                     {/* post body */}
@@ -865,27 +865,27 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/web-semantica" className="thumb">
+                          <a href="/pt/articles/web-semantica" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/projects/validator-nu-hero.jpg"
-                              alt="La web semántica, explicada"
+                              alt="A web semântica, explicada"
                               className="img-fluid w-100"
                             />
                           </a>
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/web-semantica" className="title">La web semántica, explicada</a>
+                            <a href="/pt/articles/web-semantica" className="title">A web semântica, explicada</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
-                              <span className="post-category mb-0">Herramientas</span>
+                              <span className="post-category mb-0">Ferramentas</span>
                             </li>
                             <li>
                               Por <span className="editor-name">VersionDude</span>
                             </li>
                             </ul>
-                          <p className="d-lg-block d-none">Un validador de HTML comprueba tu marcado frente al estándar vivo.</p>
+                          <p className="d-lg-block d-none">Um validador HTML verifica o seu markup face ao living standard.</p>
                         </div>
                       </div>
                       <div className="news-list-item articles-list">
@@ -893,27 +893,27 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/xml-frente-a-html" className="thumb">
+                          <a href="/pt/articles/xml-vs-html" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/projects/railfrog-hero.jpg"
-                              alt="XML vs HTML: ¿cuál es la diferencia?"
+                              alt="XML vs HTML: qual é a diferença?"
                               className="img-fluid w-100"
                             />
                           </a>
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/xml-frente-a-html" className="title">XML vs HTML: ¿cuál es la diferencia?</a>
+                            <a href="/pt/articles/xml-vs-html" className="title">XML vs HTML: qual é a diferença?</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
-                              <span className="post-category mb-0">Archivo</span>
+                              <span className="post-category mb-0">Arquivo</span>
                             </li>
                             <li>
                               Por <span className="editor-name">VersionDude</span>
                             </li>
                             </ul>
-                          <p className="d-lg-block d-none">Cómo un analizador convierte texto sin formato en datos estructurados utilizables.</p>
+                          <p className="d-lg-block d-none">Como um analisador transforma texto bruto em dados estruturados e utilizáveis.</p>
                         </div>
                       </div>
                       <div className="news-list-item articles-list">
@@ -921,27 +921,27 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/cms-ruby-on-rails-es" className="thumb">
+                          <a href="/pt/articles/cms-ruby-on-rails" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/projects/pellet-hero.jpg"
-                              alt="CMS en Ruby on Rails"
+                              alt="Os CMS em Ruby on Rails"
                               className="img-fluid w-100"
                             />
                           </a>
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/cms-ruby-on-rails-es" className="title">CMS en Ruby on Rails</a>
+                            <a href="/pt/articles/cms-ruby-on-rails" className="title">Os CMS em Ruby on Rails</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
-                              <span className="post-category mb-0">Estándares</span>
+                              <span className="post-category mb-0">Padrões</span>
                             </li>
                             <li>
                               Por <span className="editor-name">VersionDude</span>
                             </li>
                             </ul>
-                          <p className="d-lg-block d-none">La idea de una web de datos, donde el significado es legible por máquinas.</p>
+                          <p className="d-lg-block d-none">A ideia de uma web de dados, onde o significado é legível por máquinas.</p>
                         </div>
                       </div>
                       <div className="news-list-item articles-list">
@@ -949,27 +949,27 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/codificacion-de-caracteres-utf-8" className="thumb">
+                          <a href="/pt/articles/codificacao-de-caracteres-utf-8" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/projects/bersirc-hero.jpg"
-                              alt="La codificación de caracteres y por qué ganó UTF-8"
+                              alt="A codificação de caracteres e porque o UTF-8 venceu"
                               className="img-fluid w-100"
                             />
                           </a>
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/codificacion-de-caracteres-utf-8" className="title">La codificación de caracteres y por qué ganó UTF-8</a>
+                            <a href="/pt/articles/codificacao-de-caracteres-utf-8" className="title">A codificação de caracteres e porque o UTF-8 venceu</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
-                              <span className="post-category mb-0">Análisis</span>
+                              <span className="post-category mb-0">Análise</span>
                             </li>
                             <li>
                               Por <span className="editor-name">VersionDude</span>
                             </li>
                             </ul>
-                          <p className="d-lg-block d-none">Mantén las claves de API y los secretos cifrados, con acceso controlado y fuera de git.</p>
+                          <p className="d-lg-block d-none">Mantenha as chaves de API e os segredos cifrados, com acesso controlado e fora do git.</p>
                         </div>
                       </div>
                       <div className="news-list-item articles-list">
@@ -977,27 +977,27 @@ export default function Home_es() {
                           <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
                             <i className="fa-solid fa-bolt-lightning" />
                           </div>
-                          <a href="/es/articles/cms-autoalojados" className="thumb">
+                          <a href="/pt/articles/cms-auto-hospedados" className="thumb">
                             <img loading="lazy" decoding="async"
                               src="/assets/articles/open-source-password-managers-hero.jpg"
-                              alt="CMS autoalojados que conviene conocer"
+                              alt="Os CMS auto-hospedados a conhecer"
                               className="img-fluid w-100"
                             />
                           </a>
                         </div>
                         <div className="post-info-2">
                           <h4>
-                            <a href="/es/articles/cms-autoalojados" className="title">CMS autoalojados que conviene conocer</a>
+                            <a href="/pt/articles/cms-auto-hospedados" className="title">Os CMS auto-hospedados a conhecer</a>
                           </h4>
                           <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                             <li>
-                              <span className="post-category mb-0">Herramientas</span>
+                              <span className="post-category mb-0">Ferramentas</span>
                             </li>
                             <li>
                               Por <span className="editor-name">VersionDude</span>
                             </li>
                             </ul>
-                          <p className="d-lg-block d-none">Alojar tu propio gestor de contraseñas te pone al mando de tu bóveda.</p>
+                          <p className="d-lg-block d-none">Alojar o seu próprio gestor de palavras-passe é manter o controlo do seu cofre.</p>
                         </div>
                       </div>
                     </div>{" "}
@@ -1053,7 +1053,7 @@ export default function Home_es() {
                   
                   {/* END OF /. POLL WIDGET */}
                   {/* START TAGS */}
-                  <Tags locale="es" />
+                  <Tags locale="pt" />
                   {/* END OF /. TAGS */}
                 </StickyBox>
               </div>

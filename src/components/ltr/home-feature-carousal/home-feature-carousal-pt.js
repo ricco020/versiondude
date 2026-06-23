@@ -7,7 +7,7 @@ import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 
 if (typeof window !== "undefined") { window.$ = window.jQuery = require("jquery"); }
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
-const LOCALE = "es";
+const LOCALE = "pt";
 
 const HomeFeatureCarousal = () => {
   const items = getArticles(LOCALE).slice().sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(0, 6);

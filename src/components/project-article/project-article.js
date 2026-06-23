@@ -10,11 +10,14 @@ const CTA = {
   en: { tag: "Sponsored", title: "Deploying your own project?", text: "Reliable, developer-friendly cloud hosting to ship and scale your apps.", btn: "See cloud hosting" },
   fr: { tag: "Sponsorisé", title: "Vous déployez votre projet ?", text: "Hébergement cloud fiable et orienté développeurs pour lancer et faire évoluer vos apps.", btn: "Voir l’hébergement cloud" },
   es: { tag: "Patrocinado", title: "¿Despliegas tu propio proyecto?", text: "Hosting cloud fiable y orientado a desarrolladores para lanzar y escalar tus apps.", btn: "Ver hosting cloud" },
+  de: { tag: "Gesponsert", title: "Eigenes Projekt am Start?", text: "Zuverlässiges, entwicklerfreundliches Cloud-Hosting, um Ihre Apps auszuliefern und zu skalieren.", btn: "Cloud-Hosting ansehen" },
+  it: { tag: "Sponsorizzato", title: "Stai distribuendo il tuo progetto?", text: "Hosting cloud affidabile e a misura di sviluppatore per pubblicare e scalare le tue app.", btn: "Scopri l’hosting cloud" },
+  pt: { tag: "Patrocinado", title: "A lançar o seu próprio projeto?", text: "Alojamento cloud fiável e orientado a programadores para publicar e escalar as suas apps.", btn: "Ver alojamento cloud" },
 };
 
 export default function ProjectArticle({ project, img, labels, home = "" }) {
-  const loc = home === "/fr" ? "fr" : home === "/es" ? "es" : "en";
-  const cta = CTA[loc];
+  const loc = home && home !== "/" ? home.replace(/^\//, "") : "en";
+  const cta = CTA[loc] || CTA.en;
   return (
     <LayoutTwo locale={loc}>
       <main className="page_main_wrapper">

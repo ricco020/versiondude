@@ -24,7 +24,7 @@ export default function Home() {
   useRemoveBodyClass(['home-nine'], ['home-six', 'home-seven', 'home-two', 'boxed-layout', 'layout-rtl']);
   {/* *** IMPORT BACKGROUND IMAGE *** */ }
   useBackgroundImageLoader()
-  const L = [...getArticles("en")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||"")));
+  const L = [...getArticles("en")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(6);
   const cap = (x)=> x ? x.charAt(0).toUpperCase()+x.slice(1) : "";
   return (
     <Layout>
