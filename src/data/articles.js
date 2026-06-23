@@ -131,6 +131,26 @@ export const ARTICLES = [
     list: ['Event-driven: the server pushes, you do not poll', 'Delivered as an HTTP POST with a JSON payload', 'Verify each request with a signed secret over HTTPS', 'Reply 2xx fast; handle retries idempotently', 'Needs a public, always-on endpoint to receive them'],
     cta: DEV_CLOUD,
   }),
+  a({
+    slug: 'what-is-a-docker-container', category: 'tooling', readingMinutes: 6,
+    title: 'What is a Docker container? A clear, practical explainer',
+    dek: 'A Docker container packages an app with everything it needs to run, so it behaves the same on any machine. What a container is, how it differs from a virtual machine, image vs container, and where containers fit in real projects.',
+    hero: '/assets/articles/what-is-a-docker-container-hero.jpg', heroAlt: 'Stacks of colourful shipping containers, a visual metaphor for software containers',
+    body: '/assets/articles/what-is-a-docker-container-body.jpg', bodyCaption: 'Servers in a data centre — where containers actually run in production.',
+    paras: [
+      'A Docker container is a lightweight, self-contained package that bundles an application together with everything it needs to run — its code, runtime, system libraries and settings — so it behaves the same way on any machine. It is the practical answer to the classic “but it works on my machine” problem: ship the container, and it runs identically on a colleague’s laptop, a test server, or in production.',
+      'The most common confusion is between a container and a virtual machine. A virtual machine emulates an entire computer, including its own full operating system running on top of a hypervisor. That makes VMs powerful but heavy: each one carries a whole OS, takes gigabytes, and is slow to boot.',
+      'A container works differently. Instead of bundling a whole operating system, it shares the host machine’s OS kernel and isolates only the application and its dependencies. The result is dramatically lighter: containers are megabytes rather than gigabytes, start in seconds, and you can run many more of them on the same hardware. The trade-off is that they are isolated, but not as strongly separated as VMs.',
+      'To use Docker well, you need one key distinction: image versus container. A Docker image is a read-only blueprint — a snapshot of the app plus its dependencies, built in layers. A container is a running instance of that image. From a single image you can launch many identical containers, which is exactly what makes scaling predictable.',
+      'In practice, you describe how to build the image in a file called a Dockerfile, build it once, and then run it. Under the hood Docker uses built-in Linux kernel features — namespaces and cgroups — to give each container its own isolated view of processes, filesystem and resources, without the overhead of a separate operating system.',
+      'Developers reach for containers because they solve real, everyday problems: a consistent environment from a laptop to production, simple and repeatable deployments, microservices where each service runs in its own container, clean continuous-integration pipelines, and easy scaling — spin up more identical containers when traffic rises.',
+      'Running one container is easy; running many across several servers needs orchestration. Docker Compose coordinates multiple containers on a single host, which is ideal for local development and small setups. For large, fault-tolerant systems, Kubernetes schedules and manages containers across a whole cluster of machines.',
+      'Containers are not a cure-all. Because they share the host kernel, their isolation is weaker than a VM’s, so they are not a hard security boundary on their own. They are also ephemeral by default — any data you want to keep must live in a mounted volume — and at scale the orchestration layer adds real operational complexity.',
+      'Finally, a container has to run somewhere. On your own machine for development that is Docker Desktop, but in production it needs a reliable server you control — a VPS or cloud host where your containers stay up. A solid host is the foundation the whole setup sits on.',
+    ],
+    list: ['Bundles an app with all its dependencies', 'Shares the host OS kernel — far lighter than a VM', 'Image = blueprint, container = running instance', 'Consistent from laptop to production', 'Orchestrated at scale with Kubernetes'],
+    cta: DEV_CLOUD,
+  }),
   // ---------- PILIER 2 — monétisable (Proton) ----------
   a({
     slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6,

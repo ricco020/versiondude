@@ -371,5 +371,29 @@
    "Schnell mit 2xx antworten; erneute Zustellungen idempotent behandeln",
    "Braucht einen öffentlichen, ständig erreichbaren Endpoint zum Empfangen"
   ]
+ },
+ "what-is-a-docker-container": {
+  "title": "Was ist ein Docker-Container? Eine klare, praxisnahe Erklärung",
+  "dek": "Ein Docker-Container verpackt eine Anwendung mit allem, was sie zum Laufen braucht, sodass sie sich auf jeder Maschine gleich verhält. Was ein Container ist, wie er sich von einer virtuellen Maschine unterscheidet, Image vs. Container und wo Container in echten Projekten ihren Platz haben.",
+  "heroAlt": "Stapel bunter Frachtcontainer als anschauliches Sinnbild für Software-Container",
+  "bodyCaption": "Server in einem Rechenzentrum – dort, wo Container in der Produktion tatsächlich laufen.",
+  "paras": [
+   "Ein Docker-Container ist ein leichtgewichtiges, in sich geschlossenes Paket, das eine Anwendung zusammen mit allem bündelt, was sie zum Laufen braucht – ihren Code, die Laufzeitumgebung, Systembibliotheken und Einstellungen – sodass sie sich auf jeder Maschine gleich verhält. Er ist die praktische Antwort auf das altbekannte Problem „bei mir läuft es doch“: Sie liefern den Container aus, und er läuft identisch auf dem Laptop einer Kollegin, auf einem Testserver oder in der Produktion.",
+   "Am häufigsten wird ein Container mit einer virtuellen Maschine verwechselt. Eine virtuelle Maschine emuliert einen kompletten Computer, samt eigenem, vollständigem Betriebssystem, das auf einem Hypervisor läuft. Das macht VMs mächtig, aber schwergewichtig: Jede schleppt ein ganzes Betriebssystem mit sich, belegt Gigabytes und startet langsam.",
+   "Ein Container funktioniert anders. Statt ein ganzes Betriebssystem mitzubringen, teilt er sich den Kernel des Host-Betriebssystems und isoliert nur die Anwendung und ihre Abhängigkeiten. Das Ergebnis ist deutlich schlanker: Container messen sich in Megabytes statt in Gigabytes, starten in Sekunden, und Sie können viel mehr davon auf derselben Hardware betreiben. Der Kompromiss ist, dass sie zwar isoliert, aber nicht so streng voneinander getrennt sind wie VMs.",
+   "Um Docker gut zu nutzen, brauchen Sie eine entscheidende Unterscheidung: Image gegenüber Container. Ein Docker-Image ist eine schreibgeschützte Vorlage – eine Momentaufnahme der Anwendung samt ihren Abhängigkeiten, in Schichten aufgebaut. Ein Container ist eine laufende Instanz dieses Images. Aus einem einzigen Image können Sie viele identische Container starten, und genau das macht die Skalierung berechenbar.",
+   "In der Praxis beschreiben Sie in einer Datei namens Dockerfile, wie das Image gebaut wird, bauen es einmal und führen es dann aus. Unter der Haube nutzt Docker eingebaute Funktionen des Linux-Kernels – Namespaces und cgroups –, um jedem Container eine eigene, isolierte Sicht auf Prozesse, Dateisystem und Ressourcen zu geben, ganz ohne den Overhead eines separaten Betriebssystems.",
+   "Entwickler greifen zu Containern, weil sie echte, alltägliche Probleme lösen: eine einheitliche Umgebung vom Laptop bis zur Produktion, einfache und wiederholbare Deployments, Microservices, bei denen jeder Dienst in seinem eigenen Container läuft, saubere Continuous-Integration-Pipelines und müheloses Skalieren – einfach weitere identische Container hochfahren, wenn der Andrang steigt.",
+   "Einen einzelnen Container zu betreiben ist einfach; viele über mehrere Server zu betreiben verlangt Orchestrierung. Docker Compose koordiniert mehrere Container auf einem einzigen Host und eignet sich ideal für die lokale Entwicklung und kleine Setups. Für große, ausfallsichere Systeme plant und verwaltet Kubernetes Container über einen ganzen Cluster von Maschinen hinweg.",
+   "Container sind kein Allheilmittel. Weil sie sich den Host-Kernel teilen, ist ihre Isolation schwächer als die einer VM, und für sich allein bilden sie keine harte Sicherheitsgrenze. Außerdem sind sie standardmäßig flüchtig – alle Daten, die Sie behalten wollen, müssen in einem eingebundenen Volume liegen –, und in großem Maßstab bringt die Orchestrierungsschicht echte betriebliche Komplexität mit sich.",
+   "Schließlich muss ein Container irgendwo laufen. Auf Ihrer eigenen Maschine für die Entwicklung ist das Docker Desktop, doch in der Produktion braucht er einen zuverlässigen Server, den Sie kontrollieren – einen VPS oder Cloud-Host, auf dem Ihre Container am Laufen bleiben. Ein solider Host ist das Fundament, auf dem das ganze Setup ruht."
+  ],
+  "list": [
+   "Bündelt eine Anwendung mit all ihren Abhängigkeiten",
+   "Teilt sich den Host-Kernel – weit schlanker als eine VM",
+   "Image = Vorlage, Container = laufende Instanz",
+   "Einheitlich vom Laptop bis zur Produktion",
+   "In großem Maßstab mit Kubernetes orchestriert"
+  ]
  }
 }

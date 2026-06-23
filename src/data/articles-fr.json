@@ -371,5 +371,29 @@
    "Répondez 2xx rapidement ; gérez les réessais de façon idempotente",
    "Nécessite un endpoint public et toujours en ligne pour les recevoir"
   ]
+ },
+ "what-is-a-docker-container": {
+  "title": "Qu'est-ce qu'un conteneur Docker ? Une explication claire et concrète",
+  "dek": "Un conteneur Docker empaquette une application avec tout ce dont elle a besoin pour fonctionner, afin qu'elle se comporte de la même façon sur n'importe quelle machine. Ce qu'est un conteneur, en quoi il diffère d'une machine virtuelle, image contre conteneur, et la place des conteneurs dans les projets réels.",
+  "heroAlt": "Des piles de conteneurs maritimes colorés, métaphore visuelle des conteneurs logiciels",
+  "bodyCaption": "Des serveurs dans un centre de données — là où les conteneurs tournent réellement en production.",
+  "paras": [
+   "Un conteneur Docker est un paquet léger et autonome qui regroupe une application avec tout ce dont elle a besoin pour fonctionner — son code, son environnement d'exécution, les bibliothèques système et les réglages — afin qu'elle se comporte de manière identique sur n'importe quelle machine. C'est la réponse concrète au fameux problème du « pourtant ça marche sur ma machine » : on livre le conteneur, et il s'exécute à l'identique sur le portable d'un collègue, sur un serveur de test ou en production.",
+   "La confusion la plus répandue oppose le conteneur à la machine virtuelle. Une machine virtuelle émule un ordinateur entier, avec son propre système d'exploitation complet qui tourne au-dessus d'un hyperviseur. Cela rend les VM puissantes mais lourdes : chacune embarque tout un OS, pèse plusieurs gigaoctets et démarre lentement.",
+   "Un conteneur fonctionne autrement. Au lieu d'embarquer un système d'exploitation entier, il partage le noyau (kernel) de l'OS de la machine hôte et n'isole que l'application et ses dépendances. Le résultat est nettement plus léger : les conteneurs se mesurent en mégaoctets plutôt qu'en gigaoctets, démarrent en quelques secondes, et l'on peut en faire tourner bien davantage sur le même matériel. La contrepartie, c'est qu'ils sont isolés, mais pas aussi fortement séparés que des VM.",
+   "Pour bien utiliser Docker, il faut maîtriser une distinction essentielle : l'image contre le conteneur. Une image Docker est un modèle en lecture seule — un instantané de l'application et de ses dépendances, construit par couches. Un conteneur est une instance en cours d'exécution de cette image. À partir d'une seule image, on peut lancer de nombreux conteneurs identiques, et c'est précisément ce qui rend la montée en charge prévisible.",
+   "En pratique, on décrit la façon de construire l'image dans un fichier appelé Dockerfile, on la construit une fois, puis on l'exécute. En coulisses, Docker s'appuie sur des fonctionnalités intégrées au noyau Linux — namespaces et cgroups — pour donner à chaque conteneur sa propre vue isolée des processus, du système de fichiers et des ressources, sans le surcoût d'un système d'exploitation séparé.",
+   "Les développeurs adoptent les conteneurs parce qu'ils résolvent des problèmes réels et quotidiens : un environnement cohérent du portable à la production, des déploiements simples et reproductibles, des microservices où chaque service tourne dans son propre conteneur, des pipelines d'intégration continue propres, et une mise à l'échelle facile — il suffit de démarrer davantage de conteneurs identiques quand le trafic augmente.",
+   "Faire tourner un seul conteneur est simple ; en faire tourner beaucoup sur plusieurs serveurs réclame de l'orchestration. Docker Compose coordonne plusieurs conteneurs sur un même hôte, ce qui est idéal pour le développement local et les petites configurations. Pour les systèmes vastes et tolérants aux pannes, Kubernetes planifie et gère les conteneurs à l'échelle d'un cluster de machines tout entier.",
+   "Les conteneurs ne sont pas une solution miracle. Comme ils partagent le noyau de l'hôte, leur isolation est plus faible que celle d'une VM : ils ne constituent donc pas à eux seuls une frontière de sécurité étanche. Ils sont aussi éphémères par défaut — toute donnée que l'on veut conserver doit résider dans un volume monté — et, à grande échelle, la couche d'orchestration ajoute une réelle complexité opérationnelle.",
+   "Enfin, un conteneur doit bien s'exécuter quelque part. Sur votre propre machine, pour le développement, c'est Docker Desktop, mais en production il lui faut un serveur fiable que vous contrôlez — un VPS ou un hébergement cloud où vos conteneurs restent en ligne. Un hébergement solide est la fondation sur laquelle repose l'ensemble du dispositif."
+  ],
+  "list": [
+   "Empaquette une application avec toutes ses dépendances",
+   "Partage le noyau de l'OS hôte — bien plus léger qu'une VM",
+   "Image = modèle, conteneur = instance en cours d'exécution",
+   "Cohérent du portable à la production",
+   "Orchestré à grande échelle avec Kubernetes"
+  ]
  }
 }

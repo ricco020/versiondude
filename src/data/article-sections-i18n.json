@@ -952,5 +952,61 @@
    "pt": "Um webhook precisa de um endpoint acessível",
    "n": 1
   }
+ ],
+ "what-is-a-docker-container": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Container vs virtual machine",
+   "fr": "Conteneur vs machine virtuelle",
+   "es": "Contenedor vs máquina virtual",
+   "de": "Container vs. virtuelle Maschine",
+   "it": "Container vs macchina virtuale",
+   "pt": "Contentor vs máquina virtual",
+   "n": 2
+  },
+  {
+   "en": "Image vs container, and how it works",
+   "fr": "Image vs conteneur, et comment ça marche",
+   "es": "Imagen vs contenedor, y cómo funciona",
+   "de": "Image vs. Container, und wie es funktioniert",
+   "it": "Immagine vs container, e come funziona",
+   "pt": "Imagem vs contentor, e como funciona",
+   "n": 2
+  },
+  {
+   "en": "Why developers use containers",
+   "fr": "Pourquoi les devs utilisent les conteneurs",
+   "es": "Por qué los desarrolladores usan contenedores",
+   "de": "Warum Entwickler Container nutzen",
+   "it": "Perché gli sviluppatori usano i container",
+   "pt": "Porque os programadores usam contentores",
+   "n": 1
+  },
+  {
+   "en": "From one container to many",
+   "fr": "D'un conteneur à plusieurs",
+   "es": "De un contenedor a muchos",
+   "de": "Von einem Container zu vielen",
+   "it": "Da un container a molti",
+   "pt": "De um contentor a muitos",
+   "n": 2
+  },
+  {
+   "en": "Containers need somewhere to run",
+   "fr": "Un conteneur doit s'exécuter quelque part",
+   "es": "Los contenedores necesitan dónde ejecutarse",
+   "de": "Container brauchen einen Ort zum Laufen",
+   "it": "I container hanno bisogno di un posto dove girare",
+   "pt": "Os contentores precisam de onde correr",
+   "n": 1
+  }
  ]
 }

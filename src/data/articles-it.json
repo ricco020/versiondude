@@ -371,5 +371,29 @@
    "Rispondi in fretta con un 2xx; gestisci i tentativi ripetuti in modo idempotente",
    "Richiede un endpoint pubblico e sempre attivo per riceverli"
   ]
+ },
+ "what-is-a-docker-container": {
+  "title": "Che cos'è un container Docker? Una spiegazione chiara e concreta",
+  "dek": "Un container Docker racchiude un'applicazione con tutto ciò che le serve per funzionare, così si comporta allo stesso modo su qualsiasi macchina. Che cos'è un container, in cosa differisce da una macchina virtuale, immagine contro container, e dove i container trovano posto nei progetti reali.",
+  "heroAlt": "Pile di container marittimi colorati, una metafora visiva dei container software",
+  "bodyCaption": "Server in un data center, dove i container girano davvero in produzione.",
+  "paras": [
+   "Un container Docker è un pacchetto leggero e autosufficiente che raccoglie un'applicazione insieme a tutto ciò che le serve per funzionare — il suo codice, il runtime, le librerie di sistema e le impostazioni — così che si comporti allo stesso modo su qualsiasi macchina. È la risposta concreta al classico problema del «ma sul mio computer funziona»: distribuisci il container e gira in modo identico sul portatile di un collega, su un server di test o in produzione.",
+   "La confusione più comune è quella tra container e macchina virtuale. Una macchina virtuale emula un intero computer, compreso un proprio sistema operativo completo che gira sopra un hypervisor. Questo rende le VM potenti ma pesanti: ciascuna porta con sé un intero sistema operativo, occupa gigabyte ed è lenta ad avviarsi.",
+   "Un container funziona diversamente. Invece di racchiudere un intero sistema operativo, condivide il kernel del sistema operativo della macchina host e isola soltanto l'applicazione e le sue dipendenze. Il risultato è enormemente più leggero: i container pesano megabyte anziché gigabyte, si avviano in pochi secondi e se ne possono far girare molti di più sullo stesso hardware. Il compromesso è che sono isolati, ma non separati in modo così netto come le VM.",
+   "Per usare bene Docker serve una distinzione chiave: immagine contro container. Un'immagine Docker è un progetto in sola lettura — un'istantanea dell'applicazione e delle sue dipendenze, costruita per strati. Un container è un'istanza in esecuzione di quell'immagine. Da una sola immagine puoi avviare molti container identici, ed è esattamente ciò che rende la scalabilità prevedibile.",
+   "In pratica descrivi come costruire l'immagine in un file chiamato Dockerfile, la compili una volta e poi la esegui. Sotto il cofano Docker sfrutta funzionalità integrate nel kernel Linux — namespaces e cgroups — per dare a ciascun container una propria vista isolata di processi, filesystem e risorse, senza il peso di un sistema operativo separato.",
+   "Gli sviluppatori scelgono i container perché risolvono problemi reali di tutti i giorni: un ambiente coerente dal portatile alla produzione, deployment semplici e ripetibili, microservizi in cui ogni servizio gira nel proprio container, pipeline di integrazione continua pulite e una scalabilità facile — basta avviare altri container identici quando il traffico cresce.",
+   "Far girare un solo container è facile; farne girare molti su più server richiede orchestrazione. Docker Compose coordina più container su un singolo host, il che è ideale per lo sviluppo locale e per configurazioni piccole. Per sistemi grandi e tolleranti ai guasti, Kubernetes pianifica e gestisce i container attraverso un intero cluster di macchine.",
+   "I container non sono una panacea. Poiché condividono il kernel dell'host, il loro isolamento è più debole di quello di una VM, quindi da soli non costituiscono una vera barriera di sicurezza. Sono inoltre effimeri per impostazione predefinita — qualsiasi dato che vuoi conservare deve risiedere in un volume montato — e su larga scala lo strato di orchestrazione aggiunge una concreta complessità operativa.",
+   "Infine, un container deve pur girare da qualche parte. Sulla tua macchina, per lo sviluppo, c'è Docker Desktop, ma in produzione serve un server affidabile che controlli tu — un VPS o un host cloud dove i tuoi container restino attivi. Un host solido è la base su cui poggia l'intera configurazione."
+  ],
+  "list": [
+   "Racchiude un'applicazione con tutte le sue dipendenze",
+   "Condivide il kernel del sistema operativo dell'host — molto più leggero di una VM",
+   "Immagine = progetto, container = istanza in esecuzione",
+   "Coerente dal portatile alla produzione",
+   "Orchestrato su larga scala con Kubernetes"
+  ]
  }
 }

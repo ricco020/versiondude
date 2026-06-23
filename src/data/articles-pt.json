@@ -371,5 +371,29 @@
    "Responda 2xx depressa; trate as repetições de forma idempotente",
    "Precisa de um endpoint público e sempre online para os receber"
   ]
+ },
+ "what-is-a-docker-container": {
+  "title": "O que é um contentor Docker? Uma explicação clara e prática",
+  "dek": "Um contentor Docker empacota uma aplicação com tudo o que ela precisa para correr, de modo que se comporte da mesma forma em qualquer máquina. O que é um contentor, em que difere de uma máquina virtual, a distinção entre imagem e contentor, e onde os contentores se encaixam em projetos reais.",
+  "heroAlt": "Pilhas de contentores de carga coloridos, metáfora visual para os contentores de software",
+  "bodyCaption": "Servidores num centro de dados — onde os contentores correm realmente em produção.",
+  "paras": [
+   "Um contentor Docker é um pacote leve e autónomo que reúne uma aplicação com tudo o que ela precisa para correr — o seu código, o ambiente de execução, as bibliotecas de sistema e as configurações —, de modo que se comporte da mesma forma em qualquer máquina. É a resposta prática ao clássico problema do «mas funciona na minha máquina»: basta entregar o contentor para que corra de forma idêntica no portátil de um colega, num servidor de testes ou em produção.",
+   "A confusão mais frequente é entre um contentor e uma máquina virtual. Uma máquina virtual emula um computador inteiro, incluindo o seu próprio sistema operativo completo a correr por cima de um hipervisor. Isso torna as máquinas virtuais poderosas, mas pesadas: cada uma carrega um sistema operativo inteiro, ocupa gigabytes e arranca lentamente.",
+   "Um contentor funciona de outra maneira. Em vez de empacotar todo um sistema operativo, partilha o núcleo (kernel) do sistema da máquina anfitriã e isola apenas a aplicação e as suas dependências. O resultado é radicalmente mais leve: os contentores medem-se em megabytes em vez de gigabytes, arrancam em segundos, e pode correr muitos mais no mesmo hardware. O compromisso é que ficam isolados, mas não tão estritamente separados como as máquinas virtuais.",
+   "Para usar bem o Docker, precisa de dominar uma distinção essencial: imagem versus contentor. Uma imagem Docker é um modelo só de leitura — uma fotografia da aplicação e das suas dependências, construída por camadas. Um contentor é uma instância em execução dessa imagem. A partir de uma única imagem pode lançar muitos contentores idênticos, e é exatamente isso que torna a escalabilidade previsível.",
+   "Na prática, descreve a forma de construir a imagem num ficheiro chamado Dockerfile, constrói-a uma vez e depois corre-a. Nos bastidores, o Docker recorre a funcionalidades integradas no núcleo do Linux — os namespaces e os cgroups — para dar a cada contentor a sua própria visão isolada dos processos, do sistema de ficheiros e dos recursos, sem o peso de um sistema operativo à parte.",
+   "Os programadores recorrem aos contentores porque resolvem problemas reais do dia a dia: um ambiente coerente do portátil até à produção, implementações simples e repetíveis, microsserviços em que cada serviço corre no seu próprio contentor, pipelines de integração contínua bem limpas, e uma escalabilidade fácil — basta arrancar mais contentores idênticos quando o tráfego aumenta.",
+   "Correr um único contentor é fácil; correr muitos espalhados por vários servidores exige orquestração. O Docker Compose coordena vários contentores num único anfitrião, o que é ideal para o desenvolvimento local e para configurações pequenas. Para sistemas grandes e tolerantes a falhas, o Kubernetes agenda e gere os contentores ao longo de todo um cluster de máquinas.",
+   "Os contentores não são uma panaceia. Como partilham o núcleo do anfitrião, o seu isolamento é mais fraco do que o de uma máquina virtual, pelo que não constituem, por si sós, uma fronteira de segurança rígida. São também efémeros por predefinição — quaisquer dados que queira conservar têm de residir num volume montado — e, em grande escala, a camada de orquestração acrescenta uma complexidade operacional real.",
+   "Por fim, um contentor tem de correr algures. Na sua própria máquina, para desenvolvimento, isso é o Docker Desktop, mas em produção precisa de um servidor fiável que controle — um VPS ou um anfitrião na nuvem onde os seus contentores se mantenham ativos. Um anfitrião sólido é o alicerce sobre o qual toda a montagem assenta."
+  ],
+  "list": [
+   "Empacota uma aplicação com todas as suas dependências",
+   "Partilha o núcleo do sistema anfitrião — muito mais leve do que uma máquina virtual",
+   "Imagem = modelo, contentor = instância em execução",
+   "Coerente do portátil até à produção",
+   "Orquestrado em grande escala com o Kubernetes"
+  ]
  }
 }
