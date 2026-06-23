@@ -4,6 +4,7 @@ import StickyBox from "react-sticky-box";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 import { getArticles, categoryLabel, getSections, articleHref } from "@/data/articles";
+import ShareButtons from "@/components/ShareButtons";
 
 // Article fidèle au post-template démo + structure éditoriale magazine (chapô lettrine, intertitres H2,
 // citation, image légendée, sidebar onglets). Contenu réel, sans fake.
@@ -92,6 +93,8 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                       <li>{catLabel}</li>
                       <li>{article.readingMinutes} {s.ui.readMin}</li>
                     </ul>
+
+                    <ShareButtons title={article.title} locale={loc} />
 
                     <p className="lead">{article.dek}</p>
 
