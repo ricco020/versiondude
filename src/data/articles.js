@@ -72,7 +72,7 @@ const a = (o) => o;
 export const ARTICLES = [
   // ---------- PILIER 1 — dev monétisable (hébergement) ----------
   a({
-    slug: 'what-is-a-cdn', category: 'tooling', readingMinutes: 6,
+    slug: 'what-is-a-cdn', category: 'tooling', readingMinutes: 6, date: '2026-06-20',
     title: 'What is a CDN? Content Delivery Networks explained',
     dek: 'A CDN (Content Delivery Network) is a worldwide network of servers that caches copies of your site close to users, so pages load faster and your origin server is shielded. What a CDN is, how it works, and when you need one.',
     hero: '/assets/articles/what-is-a-cdn-hero.jpg', heroAlt: 'A globe overlaid with networked hexagonal nodes representing a worldwide network',
@@ -92,7 +92,7 @@ export const ARTICLES = [
     cta: DEV_CLOUD,
   }),
   a({
-    slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 6,
+    slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 6, date: '2026-06-20',
     title: 'What is a VPS? A plain-English guide for developers',
     dek: 'A VPS (Virtual Private Server) gives you a private slice of a real server — your own OS, root access and guaranteed resources. What that means, how it differs from shared and cloud hosting, and when you need one.',
     hero: '/assets/articles/what-is-a-vps-hero.jpg', heroAlt: 'A hand inserting a server module into a blue-lit data-centre rack',
@@ -112,7 +112,7 @@ export const ARTICLES = [
     cta: DEV_CLOUD,
   }),
   a({
-    slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6,
+    slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6, date: '2026-06-22',
     title: 'What is a webhook? Event-driven HTTP, explained',
     dek: 'A webhook is an automated HTTP request one service sends to another the moment an event happens — a push instead of a poll. What a webhook is, how it differs from a normal API, how it works, and how to receive one securely.',
     hero: '/assets/articles/what-is-a-webhook-hero.jpg', heroAlt: 'Lines of source code shown on a dark computer screen',
@@ -132,7 +132,7 @@ export const ARTICLES = [
     cta: DEV_CLOUD,
   }),
   a({
-    slug: 'what-is-a-docker-container', category: 'tooling', readingMinutes: 6,
+    slug: 'what-is-a-docker-container', category: 'tooling', readingMinutes: 6, date: '2026-06-23',
     title: 'What is a Docker container? A clear, practical explainer',
     dek: 'A Docker container packages an app with everything it needs to run, so it behaves the same on any machine. What a container is, how it differs from a virtual machine, image vs container, and where containers fit in real projects.',
     hero: '/assets/articles/what-is-a-docker-container-hero.jpg', heroAlt: 'Stacks of colourful shipping containers, a visual metaphor for software containers',
@@ -153,7 +153,7 @@ export const ARTICLES = [
   }),
   // ---------- PILIER 2 — monétisable (Proton) ----------
   a({
-    slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6,
+    slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
     title: 'The best open-source password managers',
     dek: 'Why open-source matters for a password manager, and the projects worth trusting — from Bitwarden and KeePassXC to Proton Pass.',
     hero: '/assets/articles/open-source-password-managers-hero.jpg', heroAlt: 'A padlock on a circuit board representing digital security',
@@ -168,7 +168,7 @@ export const ARTICLES = [
     cta: PROTON.pass,
   }),
   a({
-    slug: 'self-hosted-password-managers', category: 'tooling', readingMinutes: 6,
+    slug: 'self-hosted-password-managers', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
     title: 'Self-hosted password managers: full control of your vault',
     dek: 'Running your own password manager puts you in charge of where secrets live — here is how the main options compare, and when a managed service makes more sense.',
     hero: '/assets/articles/self-hosted-password-managers-hero.jpg', heroAlt: 'Server hardware in a data centre',
@@ -183,7 +183,7 @@ export const ARTICLES = [
     cta: PROTON.pass,
   }),
   a({
-    slug: 'secrets-management-tools', category: 'tooling', readingMinutes: 6,
+    slug: 'secrets-management-tools', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
     title: 'Secrets management tools for developers',
     dek: 'API keys, tokens and .env files should never sit in plain text or in your git history. Here is how teams keep application secrets safe.',
     hero: '/assets/articles/secrets-management-tools-hero.jpg', heroAlt: 'Program code displayed in a terminal',
@@ -198,7 +198,7 @@ export const ARTICLES = [
     cta: PROTON.pass,
   }),
   a({
-    slug: 'ssh-key-management', category: 'tooling', readingMinutes: 6,
+    slug: 'ssh-key-management', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
     title: 'SSH key management: a practical guide',
     dek: 'SSH keys replace passwords with something far stronger — but only if you protect, separate and rotate them. A plain-English guide to managing SSH keys safely.',
     hero: '/assets/articles/ssh-key-management-hero.jpg', heroAlt: 'Source code on a dark screen with line numbers',
@@ -218,7 +218,7 @@ export const ARTICLES = [
     cta: PROTON.pass,
   }),
   a({
-    slug: 'proton-mail-review', category: 'tooling', readingMinutes: 5,
+    slug: 'proton-mail-review', category: 'tooling', readingMinutes: 5, date: '2026-06-17',
     title: 'Proton Mail review: encrypted email, in practice',
     dek: 'What Proton Mail actually offers — end-to-end encryption, open-source apps and a Swiss privacy base — and where its trade-offs lie.',
     hero: '/assets/articles/proton-mail-review-hero.jpg', heroAlt: 'A handwritten letter and envelope on a desk',
@@ -232,7 +232,7 @@ export const ARTICLES = [
     cta: PROTON.mail,
   }),
   a({
-    slug: 'best-encrypted-email', category: 'tooling', readingMinutes: 6,
+    slug: 'best-encrypted-email', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
     title: 'The best encrypted email services',
     dek: 'What "encrypted email" really means, the difference between zero-access and end-to-end, and the services that do it credibly.',
     hero: '/assets/articles/best-encrypted-email-hero.jpg', heroAlt: 'A laptop with a glowing cyber-security padlock graphic',
@@ -247,7 +247,7 @@ export const ARTICLES = [
     cta: PROTON.mail,
   }),
   a({
-    slug: 'proton-pass-review', category: 'tooling', readingMinutes: 5,
+    slug: 'proton-pass-review', category: 'tooling', readingMinutes: 5, date: '2026-06-17',
     title: 'Proton Pass review: an open-source password manager',
     dek: 'Proton’s password manager brings end-to-end encryption, open-source apps and integrated email aliases — here is how it holds up.',
     hero: '/assets/articles/proton-pass-review-hero.jpg', heroAlt: 'A digital padlock over a privacy-policy background',
@@ -262,7 +262,7 @@ export const ARTICLES = [
   }),
   // ---------- PILIER 1 — web standards (jus, non monétisé) ----------
   a({
-    slug: 'what-is-the-dom', category: 'parsing', readingMinutes: 5,
+    slug: 'what-is-the-dom', category: 'parsing', readingMinutes: 5, date: '2026-06-17',
     title: 'What is the DOM?',
     dek: 'The Document Object Model is the tree a browser builds from your HTML — and the thing your JavaScript actually talks to.',
     hero: '/assets/articles/what-is-the-dom-hero.jpg', heroAlt: 'HTML code on a screen',
@@ -276,7 +276,7 @@ export const ARTICLES = [
     related: 'html5-parser',
   }),
   a({
-    slug: 'html-validator', category: 'standards', readingMinutes: 5,
+    slug: 'html-validator', category: 'standards', readingMinutes: 5, date: '2026-06-17',
     title: 'What an HTML validator does (and why it matters)',
     dek: 'An HTML validator checks your markup against the living standard — catching errors that browsers hide but that hurt accessibility and reliability.',
     hero: '/assets/articles/html-validator-hero.jpg', heroAlt: 'A green check mark symbol',
@@ -290,7 +290,7 @@ export const ARTICLES = [
     related: 'validator-nu',
   }),
   a({
-    slug: 'what-is-a-parser', category: 'parsing', readingMinutes: 5,
+    slug: 'what-is-a-parser', category: 'parsing', readingMinutes: 5, date: '2026-06-17',
     title: 'What is a parser?',
     dek: 'A parser turns a stream of characters into structured data a program can work with — the step between raw text and meaning.',
     hero: '/assets/articles/what-is-a-parser-hero.jpg', heroAlt: 'Streams of binary and program code',
@@ -304,7 +304,7 @@ export const ARTICLES = [
     related: 'html5-parser',
   }),
   a({
-    slug: 'semantic-web', category: 'standards', readingMinutes: 6,
+    slug: 'semantic-web', category: 'standards', readingMinutes: 6, date: '2026-06-17',
     title: 'The semantic web, explained',
     dek: 'The idea of a web of data — where meaning is machine-readable — and the standards like RDF, OWL and reasoners that make it work.',
     hero: '/assets/articles/semantic-web-hero.jpg', heroAlt: 'An abstract network of connected points',
@@ -318,7 +318,7 @@ export const ARTICLES = [
     related: 'pellet',
   }),
   a({
-    slug: 'xml-vs-html', category: 'standards', readingMinutes: 5,
+    slug: 'xml-vs-html', category: 'standards', readingMinutes: 5, date: '2026-06-17',
     title: 'XML vs HTML: what is the difference?',
     dek: 'They look alike, but XML and HTML were built for different jobs — one describes documents for browsers, the other carries structured data.',
     hero: '/assets/articles/xml-vs-html-hero.jpg', heroAlt: 'Markup code in an editor',
@@ -332,7 +332,7 @@ export const ARTICLES = [
     related: 'validator-nu',
   }),
   a({
-    slug: 'ruby-on-rails-cms', category: 'archive', readingMinutes: 5,
+    slug: 'ruby-on-rails-cms', category: 'archive', readingMinutes: 5, date: '2026-06-17',
     title: 'Ruby on Rails content-management systems',
     dek: 'Rails is better known for apps than for CMSes, but a lineage of Rails-based content systems — from Railfrog onward — has always existed.',
     hero: '/assets/articles/ruby-on-rails-cms-hero.jpg', heroAlt: 'A developer working at a desk with a computer',
@@ -347,7 +347,7 @@ export const ARTICLES = [
     cta: DEV_CLOUD,
   }),
   a({
-    slug: 'character-encoding-utf-8', category: 'standards', readingMinutes: 5,
+    slug: 'character-encoding-utf-8', category: 'standards', readingMinutes: 5, date: '2026-06-17',
     title: 'Character encoding and why UTF-8 won',
     dek: 'Mojibake, broken accents and "" symbols all come down to encoding. Here is what UTF-8 is and why it is the default of the modern web.',
     hero: '/assets/articles/character-encoding-utf-8-hero.jpg', heroAlt: 'Printed letters and text characters',
@@ -361,7 +361,7 @@ export const ARTICLES = [
     related: 'validator-nu',
   }),
   a({
-    slug: 'self-hosted-cms', category: 'tooling', readingMinutes: 5,
+    slug: 'self-hosted-cms', category: 'tooling', readingMinutes: 5, date: '2026-06-17',
     title: 'Self-hosted CMS options worth knowing',
     dek: 'Owning your content platform means control over data, customisation and cost — here is how the main self-hosted approaches compare.',
     hero: '/assets/articles/self-hosted-cms-hero.jpg', heroAlt: 'Cloud and server infrastructure concept',
