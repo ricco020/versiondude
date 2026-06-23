@@ -18,7 +18,7 @@ const HomeFeatureCarousal = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const Card = ({ a, priority }) => (
-    <div className="col-6 col-md-4 col-xl-2">
+    <div className="col-12 col-sm-6 col-lg-4">
       <div className="news-list-item">
         <div className="img-wrapper">
           <a href={articleHref(a.slug, LOCALE)} className="thumb">

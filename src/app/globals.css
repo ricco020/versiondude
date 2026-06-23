@@ -7312,3 +7312,10 @@ body.layout-rtl .style-settings-content ul li select {
 #owl-slider.owl-static .slider-post { min-height: 460px; }
 #owl-slider.owl-static .news-image { display: block; height: 100%; }
 #owl-slider.owl-static .item img { width: 100%; height: 100%; object-fit: cover; }
+
+/* News ticker défilant (CSS, sans owl) — mission affichage I-News Eric 2026-06-23 */
+@keyframes itTickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.it-ticker-mask { flex:1; overflow:hidden; -webkit-mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent); mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent); }
+.it-ticker-track { display:inline-flex; gap:30px; white-space:nowrap; animation: itTickerScroll 38s linear infinite; will-change: transform; }
+.it-ticker-mask:hover .it-ticker-track { animation-play-state: paused; }
+.it-ticker-track .item a { color: inherit; }
