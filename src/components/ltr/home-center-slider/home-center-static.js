@@ -1,20 +1,24 @@
-// Hero central STATIQUE (SSR) — remplace le carousel Owl client (LCP tardif). Garde id="owl-slider" (CSS existant).
-const HomeCenterStatic = () => (
-  <div id="owl-slider" className="owl-theme owl-static">
-    <div className="item">
-      <div className="slider-post post-height-1">
-        <a href="/articles/open-source-password-managers" className="news-image">
-          <img loading="eager" fetchPriority="high" decoding="async"
-            src="/assets/articles/self-hosted-password-managers-body.jpg"
-            alt="The best open-source password managers" className="img-fluid" />
-        </a>
-        <div className="post-text">
-          <span className="post-category">Tooling</span>
-          <h2><a href="/articles/open-source-password-managers">The best open-source password managers</a></h2>
-          <ul className="align-items-center authar-info d-flex flex-wrap gap-1"><li>By <span className="editor-name">VersionDude</span></li></ul>
+// Hero central STATIQUE + DYNAMIQUE (SSR, sans Owl) — article le plus récent. Pas de carousel.
+import { getArticles, articleHref, categoryLabel } from "@/data/articles";
+const LOCALE = "en";
+const HomeCenterStatic = () => {
+  const list = [...getArticles(LOCALE)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+  const a = list[0];
+  if (!a) return null;
+  return (
+    <div id="owl-slider" className="owl-static">
+      <div className="item">
+        <div className="slider-post post-height-1">
+          <a href={articleHref(a.slug, LOCALE)} className="news-image">
+            <img loading="eager" fetchPriority="high" decoding="async" src={a.hero || a.body} alt={a.title} className="img-fluid" width="900" height="500" />
+          </a>
+          <div className="post-text">
+            <span className="post-category">{categoryLabel(a.category, LOCALE)}</span>
+            <h2><a href={articleHref(a.slug, LOCALE)}>{a.title}</a></h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 export default HomeCenterStatic;
