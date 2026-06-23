@@ -431,7 +431,13 @@ function localize(a, locale) {
     list: o.list || a.list, heroAlt: o.heroAlt || a.heroAlt, bodyCaption: o.bodyCaption || a.bodyCaption };
 }
 export function getArticles(locale = "en") {
-  return ARTICLES.map((a) => (locale === "en" ? applyEN(a) : localize(applyEN(a), locale)));
+  // GARDE-FOU anti-mélange de langues : sur une locale non-EN, on EXCLUT les articles
+  // non traduits (pas de title dans TR[locale]) — un article EN-only ne doit jamais
+  // apparaître (titre anglais) sur une page FR/ES/DE/IT/PT. Eric 2026-06-23.
+  const base = locale === "en"
+    ? ARTICLES
+    : ARTICLES.filter((a) => (TR[locale] || {})[a.slug] && (TR[locale])[a.slug].title);
+  return base.map((a) => (locale === "en" ? applyEN(a) : localize(applyEN(a), locale)));
 }
 export function findArticleBySlug(slug, locale = "en") {
   const en = enSlugOf(slug, locale); // accepte le slug localisé OU le slug EN
