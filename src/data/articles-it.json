@@ -395,5 +395,29 @@
    "Coerente dal portatile alla produzione",
    "Orchestrato su larga scala con Kubernetes"
   ]
+ },
+ "what-is-devops": {
+  "title": "Cos'è il DevOps? Cultura, pratiche e strumenti spiegati",
+  "dek": "Il DevOps unisce lo sviluppo software e le operations IT in un unico flusso di lavoro automatizzato e collaborativo, così che i team rilascino più in fretta e in modo più affidabile. Cos'è il DevOps, le pratiche fondamentali (CI/CD, infrastructure as code), la cultura che lo anima e gli strumenti più diffusi.",
+  "heroAlt": "Ingranaggi metallici incastrati, a simboleggiare l'automazione e il DevOps",
+  "bodyCaption": "Uno sviluppatore al lavoro — il DevOps fonde chi costruisce il software con chi lo fa funzionare.",
+  "paras": [
+   "Il DevOps è un modo di costruire e far funzionare il software che fonde due mondi: lo sviluppo software (Dev) e le operations IT (Ops). L'obiettivo è semplice — rilasciare il software più in fretta e in modo più affidabile facendo lavorare come un'unica squadra chi scrive il codice e chi lo fa girare, il tutto sostenuto da una forte automazione. Più che un singolo strumento, è un modo di lavorare.",
+   "Per capire cos'è davvero il DevOps, aiuta sapere cosa ha sostituito. Tradizionalmente, gli sviluppatori scrivevano il codice e poi lo «lanciavano oltre il muro» a un team di operations separato, incaricato di metterlo in produzione e mantenerlo attivo. Quel passaggio di consegne era lento e pieno di attriti: quando qualcosa si rompeva, ciascuna parte dava la colpa all'altra. Il DevOps abbatte quel muro.",
+   "Al suo posto, un unico team condivide la responsabilità dell'intero ciclo di vita — costruire, testare, rilasciare e far funzionare il software in produzione. Le stesse persone che scrivono una funzionalità contribuiscono a rilasciarla e a mantenerla in salute. Questa responsabilità condivisa, unita all'automazione, è il cuore del DevOps.",
+   "A farlo funzionare è un piccolo insieme di pratiche fondamentali. La più importante è una pipeline CI/CD che automatizza la build, il test e il deploy di ogni modifica. Accanto a essa ci sono l'infrastructure as code (definire i server in file versionati invece che a mano) e il monitoraggio continuo, perché i team individuino i problemi in fretta.",
+   "Il CI/CD è il motore. L'integrazione continua costruisce e testa automaticamente ogni modifica al codice; la distribuzione o il deployment continuo la rilascia nel momento in cui supera i controlli. L'infrastructure as code significa che i tuoi server e le tue reti sono descritti in file che puoi revisionare e riprodurre, invece di essere assemblati manualmente e poi dimenticati.",
+   "Ma il DevOps è una cultura prima ancora che un insieme di strumenti. Si regge sulla collaborazione, sulla responsabilità condivisa, sul feedback rapido e su un approccio senza colpe di fronte ai guasti — correggere il processo, non punire la persona. I team che adottano gli strumenti senza la cultura raramente ne raccolgono i benefici; è la mentalità a far rendere l'automazione.",
+   "La catena di strumenti riflette queste pratiche: il controllo di versione con Git, i container con Docker e l'orchestrazione con Kubernetes, server di CI come GitHub Actions, GitLab CI o Jenkins, oltre al monitoraggio e all'infrastruttura cloud. Nessun singolo strumento «è» il DevOps — sono tasselli che sostengono il flusso di lavoro.",
+   "Il guadagno è concreto: rilasci più rapidi, più frequenti e più affidabili, con i problemi colti in anticipo invece che in produzione. L'insidia è che il DevOps è un cambiamento nel modo di lavorare di un team, non un prodotto che puoi comprare. Aggiungere strumenti senza cambiare la cultura è il modo più comune in cui fallisce.",
+   "Infine, tutto questo gira su un'infrastruttura. Le pipeline CI/CD hanno bisogno di runner per le build, e la tua applicazione in produzione ha bisogno di un server affidabile e sempre attivo. Un host solido — un VPS o un server cloud che controlli tu — è il terreno su cui poggia l'intero flusso di lavoro DevOps."
+  ],
+  "list": [
+   "Unisce sviluppo e operations in un unico flusso di lavoro",
+   "Il CI/CD automatizza build, test e deploy",
+   "Infrastructure as code + monitoraggio continuo",
+   "Una cultura di responsabilità condivisa, non solo strumenti",
+   "Rilasci più rapidi, più frequenti e più affidabili"
+  ]
  }
 }

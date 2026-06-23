@@ -1008,5 +1008,61 @@
    "pt": "Os contentores precisam de onde correr",
    "n": 1
   }
+ ],
+ "what-is-devops": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What DevOps actually is",
+   "fr": "Ce qu'est vraiment le DevOps",
+   "es": "Qué es realmente DevOps",
+   "de": "Was DevOps wirklich ist",
+   "it": "Cos'è davvero il DevOps",
+   "pt": "O que é realmente o DevOps",
+   "n": 2
+  },
+  {
+   "en": "The core practices",
+   "fr": "Les pratiques clés",
+   "es": "Las prácticas clave",
+   "de": "Die Kernpraktiken",
+   "it": "Le pratiche fondamentali",
+   "pt": "As práticas fundamentais",
+   "n": 2
+  },
+  {
+   "en": "A culture, not just tools",
+   "fr": "Une culture, pas que des outils",
+   "es": "Una cultura, no solo herramientas",
+   "de": "Eine Kultur, nicht nur Tools",
+   "it": "Una cultura, non solo strumenti",
+   "pt": "Uma cultura, não só ferramentas",
+   "n": 1
+  },
+  {
+   "en": "The DevOps toolchain",
+   "fr": "La chaîne d'outils DevOps",
+   "es": "La cadena de herramientas DevOps",
+   "de": "Die DevOps-Toolchain",
+   "it": "La toolchain DevOps",
+   "pt": "A cadeia de ferramentas DevOps",
+   "n": 2
+  },
+  {
+   "en": "Where it runs",
+   "fr": "Où ça tourne",
+   "es": "Dónde se ejecuta",
+   "de": "Wo es läuft",
+   "it": "Dove gira",
+   "pt": "Onde corre",
+   "n": 1
+  }
  ]
 }

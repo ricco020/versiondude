@@ -151,6 +151,26 @@ export const ARTICLES = [
     list: ['Bundles an app with all its dependencies', 'Shares the host OS kernel — far lighter than a VM', 'Image = blueprint, container = running instance', 'Consistent from laptop to production', 'Orchestrated at scale with Kubernetes'],
     cta: DEV_CLOUD,
   }),
+  a({
+    slug: 'what-is-devops', category: 'tooling', readingMinutes: 6, date: '2026-06-23',
+    title: 'What is DevOps? Culture, Practices & Tools Explained',
+    dek: 'DevOps combines software development and IT operations into one automated, collaborative workflow so teams ship faster and more reliably. What DevOps is, the core practices (CI/CD, infrastructure as code), the culture behind it, and the common tools.',
+    hero: '/assets/articles/what-is-devops-hero.jpg', heroAlt: 'Interlocking metal gears, representing automation and DevOps',
+    body: '/assets/articles/what-is-devops-body.jpg', bodyCaption: 'A developer at work — DevOps merges the people who build software with those who run it.',
+    paras: [
+      'DevOps is a way of building and running software that merges two worlds: software development (Dev) and IT operations (Ops). The goal is simple — ship software faster and more reliably by making the people who write code and the people who run it work as one team, supported by heavy automation. It is less a single tool than a way of working.',
+      'To see what DevOps actually is, it helps to know what it replaced. Traditionally, developers wrote code and then “threw it over the wall” to a separate operations team to deploy and keep running. That hand-off was slow and full of friction: when something broke, each side blamed the other. DevOps tears down that wall.',
+      'Instead, one team shares responsibility for the whole lifecycle — building, testing, releasing, and running the software in production. The same people who write a feature help ship it and keep it healthy. That shared ownership, combined with automation, is the heart of DevOps.',
+      'A handful of core practices make it work. The biggest is a CI/CD pipeline that automates building, testing, and deploying every change. Alongside it sit infrastructure as code (defining servers in version-controlled files instead of by hand) and continuous monitoring so teams see problems quickly.',
+      'CI/CD is the engine. Continuous integration builds and tests every code change automatically; continuous delivery or deployment ships it the moment it passes. Infrastructure as code means your servers and networks are described in files you can review and reproduce, instead of clicked together manually and forgotten.',
+      'But DevOps is a culture before it is a toolset. It runs on collaboration, shared ownership, fast feedback, and a blameless approach to failure — fixing the process, not punishing the person. Teams that adopt the tools without the culture rarely get the benefits; the mindset is what makes the automation pay off.',
+      'The toolchain reflects those practices: version control with Git, containers with Docker and orchestration with Kubernetes, CI servers like GitHub Actions, GitLab CI or Jenkins, plus monitoring and cloud infrastructure. No single tool “is” DevOps — they are pieces that support the workflow.',
+      'The payoff is real: faster, more frequent, and more reliable releases, with problems caught early instead of in production. The catch is that DevOps is a shift in how a team works, not a product you can buy. Bolting on tools without changing the culture is the most common way it fails.',
+      'Finally, all of this runs on infrastructure. CI/CD pipelines need build runners, and your deployed app needs a reliable, always-on server. A solid host — a VPS or cloud server you control — is the ground the whole DevOps workflow stands on.',
+    ],
+    list: ['Combines development and operations into one workflow', 'CI/CD automates build, test and deploy', 'Infrastructure as code + continuous monitoring', 'A culture of shared ownership, not just tools', 'Faster, more frequent, more reliable releases'],
+    cta: DEV_CLOUD,
+  }),
   // ---------- PILIER 2 — monétisable (Proton) ----------
   a({
     slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
@@ -385,6 +405,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-devops": { fr: "qu-est-ce-que-le-devops", es: "que-es-el-devops", de: "was-ist-devops", it: "cos-e-il-devops", pt: "o-que-e-o-devops" },
   "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn", de: "was-ist-ein-cdn", it: "che-cos-e-una-cdn", pt: "o-que-e-uma-cdn" },
   "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps", de: "was-ist-ein-vps", it: "che-cos-e-un-vps", pt: "o-que-e-um-vps" },
   "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto", de: "beste-open-source-passwortmanager", it: "migliori-gestori-password-open-source", pt: "melhores-gestores-de-palavras-passe-open-source" },

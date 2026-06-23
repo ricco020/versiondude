@@ -395,5 +395,29 @@
    "Einheitlich vom Laptop bis zur Produktion",
    "In großem Maßstab mit Kubernetes orchestriert"
   ]
+ },
+ "what-is-devops": {
+  "title": "Was ist DevOps? Kultur, Praktiken und Werkzeuge erklärt",
+  "dek": "DevOps führt Softwareentwicklung und IT-Betrieb zu einem automatisierten, gemeinschaftlichen Arbeitsablauf zusammen, damit Teams schneller und zuverlässiger ausliefern. Was DevOps ist, die zentralen Praktiken (CI/CD, Infrastructure as Code), die Kultur dahinter und die gängigen Werkzeuge.",
+  "heroAlt": "Ineinandergreifende Metallzahnräder als Sinnbild für Automatisierung und DevOps",
+  "bodyCaption": "Ein Entwickler bei der Arbeit – DevOps verbindet jene, die Software bauen, mit jenen, die sie betreiben.",
+  "paras": [
+   "DevOps ist eine Art, Software zu bauen und zu betreiben, die zwei Welten verschmilzt: die Softwareentwicklung (Dev) und den IT-Betrieb (Ops). Das Ziel ist einfach – Software schneller und zuverlässiger auszuliefern, indem jene, die den Code schreiben, und jene, die ihn betreiben, als ein einziges Team arbeiten, getragen von viel Automatisierung. Es ist weniger ein einzelnes Werkzeug als vielmehr eine Arbeitsweise.",
+   "Um zu verstehen, was DevOps wirklich ist, hilft es zu wissen, was es abgelöst hat. Traditionell schrieben Entwickler den Code und warfen ihn dann „über die Mauer“ an ein getrenntes Betriebsteam, das ihn ausrollen und am Laufen halten musste. Diese Übergabe war langsam und voller Reibung: Ging etwas kaputt, schob jede Seite der anderen die Schuld zu. DevOps reißt diese Mauer ein.",
+   "Stattdessen teilt sich ein Team die Verantwortung für den gesamten Lebenszyklus – Bauen, Testen, Ausliefern und Betreiben der Software in der Produktion. Dieselben Leute, die ein Feature schreiben, helfen es auszuliefern und gesund zu halten. Diese geteilte Verantwortung, kombiniert mit Automatisierung, ist das Herz von DevOps.",
+   "Eine Handvoll zentraler Praktiken macht das möglich. Die wichtigste ist eine CI/CD-Pipeline, die das Bauen, Testen und Ausrollen jeder Änderung automatisiert. Daneben stehen Infrastructure as Code (Server in versionierten Dateien zu definieren statt von Hand) und kontinuierliches Monitoring, damit Teams Probleme rasch erkennen.",
+   "CI/CD ist der Motor. Continuous Integration baut und testet jede Codeänderung automatisch; Continuous Delivery oder Deployment liefert sie aus, sobald sie besteht. Infrastructure as Code bedeutet, dass Ihre Server und Netzwerke in Dateien beschrieben sind, die Sie prüfen und reproduzieren können, statt sie manuell zusammenzuklicken und zu vergessen.",
+   "Doch DevOps ist eine Kultur, bevor es ein Werkzeugkasten ist. Es lebt von Zusammenarbeit, geteilter Verantwortung, schnellem Feedback und einem schuldfreien Umgang mit Fehlern – den Prozess zu reparieren, nicht die Person zu bestrafen. Teams, die die Werkzeuge ohne die Kultur übernehmen, ziehen selten den Nutzen daraus; die Haltung ist es, die die Automatisierung erst auszahlen lässt.",
+   "Der Werkzeugkasten spiegelt diese Praktiken wider: Versionsverwaltung mit Git, Container mit Docker und Orchestrierung mit Kubernetes, CI-Server wie GitHub Actions, GitLab CI oder Jenkins, dazu Monitoring und Cloud-Infrastruktur. Kein einzelnes Werkzeug „ist“ DevOps – sie sind Bausteine, die den Arbeitsablauf stützen.",
+   "Der Ertrag ist real: schnellere, häufigere und zuverlässigere Releases, bei denen Probleme früh statt erst in der Produktion auffallen. Der Haken ist, dass DevOps eine Veränderung der Arbeitsweise eines Teams ist und kein Produkt, das man kaufen kann. Werkzeuge anzuflanschen, ohne die Kultur zu ändern, ist die häufigste Art, wie es scheitert.",
+   "Schließlich läuft all das auf Infrastruktur. CI/CD-Pipelines brauchen Build-Runner, und Ihre ausgerollte Anwendung braucht einen zuverlässigen, stets verfügbaren Server. Ein solider Host – ein VPS oder Cloud-Server, den Sie kontrollieren – ist der Boden, auf dem der gesamte DevOps-Arbeitsablauf steht."
+  ],
+  "list": [
+   "Verbindet Entwicklung und Betrieb zu einem einzigen Arbeitsablauf",
+   "CI/CD automatisiert Bauen, Testen und Ausliefern",
+   "Infrastructure as Code + kontinuierliches Monitoring",
+   "Eine Kultur geteilter Verantwortung, nicht nur Werkzeuge",
+   "Schnellere, häufigere und zuverlässigere Releases"
+  ]
  }
 }

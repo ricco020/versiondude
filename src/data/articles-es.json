@@ -395,5 +395,29 @@
    "Coherente desde el portátil hasta producción",
    "Orquestado a gran escala con Kubernetes"
   ]
+ },
+ "what-is-devops": {
+  "title": "¿Qué es DevOps? Cultura, prácticas y herramientas explicadas",
+  "dek": "DevOps une el desarrollo de software y las operaciones de TI en un único flujo de trabajo automatizado y colaborativo, para que los equipos publiquen más rápido y con mayor fiabilidad. Qué es DevOps, las prácticas clave (CI/CD, infraestructura como código), la cultura que hay detrás y las herramientas habituales.",
+  "heroAlt": "Engranajes metálicos entrelazados, que representan la automatización y DevOps",
+  "bodyCaption": "Una persona desarrollando software: DevOps une a quienes construyen el software con quienes lo mantienen en marcha.",
+  "paras": [
+   "DevOps es una forma de construir y operar software que fusiona dos mundos: el desarrollo de software (Dev) y las operaciones de TI (Ops). El objetivo es sencillo: publicar software más rápido y con mayor fiabilidad haciendo que quienes escriben el código y quienes lo mantienen en marcha trabajen como un solo equipo, apoyados en una fuerte automatización. Más que una herramienta concreta, es una manera de trabajar.",
+   "Para entender qué es DevOps en realidad, ayuda saber a qué vino a sustituir. Tradicionalmente, los desarrolladores escribían el código y luego lo «lanzaban por encima del muro» a un equipo de operaciones separado para que lo desplegara y lo mantuviera funcionando. Ese traspaso era lento y estaba lleno de fricción: cuando algo se rompía, cada lado culpaba al otro. DevOps derriba ese muro.",
+   "En su lugar, un mismo equipo comparte la responsabilidad de todo el ciclo de vida: construir, probar, publicar y operar el software en producción. Las mismas personas que escriben una funcionalidad ayudan a publicarla y a mantenerla sana. Esa responsabilidad compartida, combinada con la automatización, es el corazón de DevOps.",
+   "Un puñado de prácticas clave hacen que funcione. La principal es una canalización (pipeline) de CI/CD que automatiza la construcción, las pruebas y el despliegue de cada cambio. Junto a ella están la infraestructura como código (definir los servidores en archivos versionados en lugar de a mano) y la monitorización continua, para que los equipos detecten los problemas pronto.",
+   "CI/CD es el motor. La integración continua construye y prueba cada cambio de código de forma automática; la entrega o el despliegue continuos lo publican en cuanto pasa las pruebas. La infraestructura como código significa que tus servidores y redes se describen en archivos que puedes revisar y reproducir, en lugar de montarse a mano clic a clic y luego olvidarse.",
+   "Pero DevOps es una cultura antes que un conjunto de herramientas. Se sostiene sobre la colaboración, la responsabilidad compartida, el feedback rápido y un enfoque sin culpas (blameless) ante los fallos: corregir el proceso en lugar de castigar a la persona. Los equipos que adoptan las herramientas sin la cultura rara vez obtienen los beneficios; es la mentalidad lo que hace que la automatización rinda de verdad.",
+   "El conjunto de herramientas refleja esas prácticas: control de versiones con Git, contenedores con Docker y orquestación con Kubernetes, servidores de CI como GitHub Actions, GitLab CI o Jenkins, además de monitorización e infraestructura en la nube. Ninguna herramienta por sí sola «es» DevOps: son piezas que dan soporte al flujo de trabajo.",
+   "La recompensa es real: publicaciones más rápidas, más frecuentes y más fiables, con los problemas detectados pronto en lugar de en producción. La trampa está en que DevOps es un cambio en la forma de trabajar de un equipo, no un producto que puedas comprar. Acoplar herramientas sin cambiar la cultura es la forma más habitual en que fracasa.",
+   "Por último, todo esto se sostiene sobre la infraestructura. Las canalizaciones de CI/CD necesitan ejecutores de compilación, y tu aplicación desplegada necesita un servidor fiable y siempre disponible. Un buen alojamiento —un VPS o servidor en la nube que controles— es el suelo sobre el que se asienta todo el flujo de trabajo de DevOps."
+  ],
+  "list": [
+   "Une el desarrollo y las operaciones en un único flujo de trabajo",
+   "CI/CD automatiza la construcción, las pruebas y el despliegue",
+   "Infraestructura como código + monitorización continua",
+   "Una cultura de responsabilidad compartida, no solo herramientas",
+   "Publicaciones más rápidas, más frecuentes y más fiables"
+  ]
  }
 }

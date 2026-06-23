@@ -395,5 +395,29 @@
    "Coerente do portátil até à produção",
    "Orquestrado em grande escala com o Kubernetes"
   ]
+ },
+ "what-is-devops": {
+  "title": "O que é o DevOps? A cultura, as práticas e as ferramentas explicadas",
+  "dek": "O DevOps funde o desenvolvimento de software e as operações de TI num único fluxo de trabalho automatizado e colaborativo, para que as equipas entreguem mais depressa e de forma mais fiável. O que é o DevOps, as práticas essenciais (CI/CD, infraestrutura como código), a cultura que o sustenta e as ferramentas habituais.",
+  "heroAlt": "Engrenagens metálicas encaixadas, representando a automatização e o DevOps",
+  "bodyCaption": "Um programador ao trabalho — o DevOps aproxima quem constrói o software de quem o faz funcionar.",
+  "paras": [
+   "O DevOps é uma forma de construir e fazer funcionar software que reúne dois mundos: o desenvolvimento de software (Dev) e as operações de TI (Ops). O objetivo é simples — entregar software mais depressa e de forma mais fiável, fazendo com que quem escreve o código e quem o faz funcionar trabalhem como uma só equipa, apoiados por uma forte automatização. É menos uma ferramenta isolada do que uma maneira de trabalhar.",
+   "Para perceber o que o DevOps realmente é, ajuda saber o que veio substituir. Tradicionalmente, os programadores escreviam o código e depois «atiravam-no por cima do muro» para uma equipa de operações separada, encarregada de o implementar e de o manter a funcionar. Essa passagem de testemunho era lenta e cheia de atritos: quando algo falhava, cada lado culpava o outro. O DevOps deita abaixo esse muro.",
+   "Em vez disso, uma única equipa partilha a responsabilidade por todo o ciclo de vida — construir, testar, lançar e fazer funcionar o software em produção. As mesmas pessoas que escrevem uma funcionalidade ajudam a entregá-la e a mantê-la saudável. Essa responsabilidade partilhada, combinada com a automatização, é o coração do DevOps.",
+   "Um punhado de práticas essenciais fá-lo funcionar. A maior é uma pipeline de CI/CD que automatiza a construção, os testes e a implementação de cada alteração. A par dela situam-se a infraestrutura como código (definir os servidores em ficheiros sob controlo de versões, em vez de à mão) e a monitorização contínua, para que as equipas detetem os problemas rapidamente.",
+   "O CI/CD é o motor. A integração contínua constrói e testa automaticamente cada alteração ao código; a entrega ou a implementação contínua coloca-a em produção assim que passa nos testes. A infraestrutura como código significa que os seus servidores e redes são descritos em ficheiros que pode rever e reproduzir, em vez de montados manualmente clique a clique e depois esquecidos.",
+   "Mas o DevOps é uma cultura antes de ser um conjunto de ferramentas. Assenta na colaboração, na responsabilidade partilhada, no feedback rápido e numa abordagem sem culpa perante as falhas — corrigir o processo, em vez de punir a pessoa. As equipas que adotam as ferramentas sem a cultura raramente colhem os benefícios; é a mentalidade que faz a automatização compensar.",
+   "A cadeia de ferramentas reflete essas práticas: o controlo de versões com Git, os contentores com Docker e a orquestração com Kubernetes, servidores de CI como o GitHub Actions, o GitLab CI ou o Jenkins, além da monitorização e da infraestrutura na nuvem. Nenhuma ferramenta isolada «é» o DevOps — são peças que apoiam o fluxo de trabalho.",
+   "O retorno é real: lançamentos mais rápidos, mais frequentes e mais fiáveis, com os problemas apanhados cedo em vez de em produção. O senão é que o DevOps é uma mudança na forma como uma equipa trabalha, não um produto que se possa comprar. Acrescentar ferramentas sem mudar a cultura é a forma mais comum de o fazer fracassar.",
+   "Por fim, tudo isto assenta numa infraestrutura. As pipelines de CI/CD precisam de runners de construção, e a sua aplicação implementada precisa de um servidor fiável e sempre disponível. Um alojamento sólido — um VPS ou um servidor na nuvem que controla — é o terreno sobre o qual assenta todo o fluxo de trabalho DevOps."
+  ],
+  "list": [
+   "Reúne o desenvolvimento e as operações num único fluxo de trabalho",
+   "O CI/CD automatiza a construção, os testes e a implementação",
+   "Infraestrutura como código + monitorização contínua",
+   "Uma cultura de responsabilidade partilhada, não apenas ferramentas",
+   "Lançamentos mais rápidos, mais frequentes e mais fiáveis"
+  ]
  }
 }

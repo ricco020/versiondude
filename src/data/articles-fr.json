@@ -395,5 +395,29 @@
    "Cohérent du portable à la production",
    "Orchestré à grande échelle avec Kubernetes"
   ]
+ },
+ "what-is-devops": {
+  "title": "Qu'est-ce que le DevOps ? La culture, les pratiques et les outils expliqués",
+  "dek": "Le DevOps réunit le développement logiciel et l'exploitation informatique dans un même flux de travail automatisé et collaboratif, pour que les équipes livrent plus vite et plus sûrement. Ce qu'est le DevOps, ses pratiques fondamentales (CI/CD, infrastructure as code), la culture qui le porte et les outils les plus courants.",
+  "heroAlt": "Des engrenages métalliques imbriqués, symbole de l'automatisation et du DevOps",
+  "bodyCaption": "Un développeur au travail — le DevOps réunit ceux qui construisent les logiciels et ceux qui les font tourner.",
+  "paras": [
+   "Le DevOps est une façon de construire et de faire tourner les logiciels qui fait fusionner deux mondes : le développement logiciel (Dev) et l'exploitation informatique (Ops). L'objectif est simple — livrer plus vite et plus sûrement en faisant travailler comme une seule équipe ceux qui écrivent le code et ceux qui le font tourner, le tout soutenu par une automatisation poussée. C'est moins un outil unique qu'une manière de travailler.",
+   "Pour bien saisir ce qu'est réellement le DevOps, il aide de savoir ce qu'il a remplacé. Traditionnellement, les développeurs écrivaient le code puis le « jetaient par-dessus le mur » à une équipe d'exploitation distincte, chargée de le déployer et de le maintenir en marche. Ce passage de relais était lent et plein de frictions : quand quelque chose cassait, chaque camp rejetait la faute sur l'autre. Le DevOps abat ce mur.",
+   "À la place, une seule équipe partage la responsabilité de tout le cycle de vie — construire, tester, livrer et faire tourner le logiciel en production. Les personnes mêmes qui écrivent une fonctionnalité aident à la livrer et à la garder en bonne santé. Cette responsabilité partagée, combinée à l'automatisation, est le cœur du DevOps.",
+   "Une poignée de pratiques fondamentales le font fonctionner. La plus importante est un pipeline CI/CD qui automatise la construction, les tests et le déploiement de chaque changement. À ses côtés se trouvent l'infrastructure as code (définir les serveurs dans des fichiers versionnés plutôt qu'à la main) et la surveillance continue, pour que les équipes repèrent vite les problèmes.",
+   "Le CI/CD en est le moteur. L'intégration continue construit et teste automatiquement chaque modification de code ; la livraison ou le déploiement continu l'expédie dès qu'elle passe les tests. L'infrastructure as code signifie que vos serveurs et vos réseaux sont décrits dans des fichiers que vous pouvez relire et reproduire, au lieu d'être assemblés à la main à coups de clics puis oubliés.",
+   "Mais le DevOps est une culture avant d'être une boîte à outils. Il repose sur la collaboration, la responsabilité partagée, des retours rapides et une approche sans blâme de l'échec — corriger le processus plutôt que punir la personne. Les équipes qui adoptent les outils sans la culture en tirent rarement les bénéfices ; c'est l'état d'esprit qui fait que l'automatisation porte ses fruits.",
+   "La chaîne d'outils reflète ces pratiques : la gestion de versions avec Git, les conteneurs avec Docker et l'orchestration avec Kubernetes, des serveurs d'intégration continue comme GitHub Actions, GitLab CI ou Jenkins, sans oublier la surveillance et l'infrastructure cloud. Aucun outil à lui seul n'« est » le DevOps — ce sont des pièces qui soutiennent le flux de travail.",
+   "Le gain est réel : des livraisons plus rapides, plus fréquentes et plus fiables, avec des problèmes détectés tôt plutôt qu'en production. Le revers, c'est que le DevOps est un changement dans la façon de travailler d'une équipe, pas un produit que l'on peut acheter. Greffer des outils sans changer la culture est la manière la plus courante dont il échoue.",
+   "Enfin, tout cela repose sur une infrastructure. Les pipelines CI/CD ont besoin de machines pour exécuter les builds, et votre application déployée a besoin d'un serveur fiable, disponible en permanence. Un hébergement solide — un VPS ou un serveur cloud que vous maîtrisez — est le terrain sur lequel repose tout le flux de travail DevOps."
+  ],
+  "list": [
+   "Réunit le développement et l'exploitation dans un même flux de travail",
+   "Le CI/CD automatise la construction, les tests et le déploiement",
+   "Infrastructure as code + surveillance continue",
+   "Une culture de responsabilité partagée, pas seulement des outils",
+   "Des livraisons plus rapides, plus fréquentes et plus fiables"
+  ]
  }
 }
