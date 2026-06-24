@@ -1,0 +1,47 @@
+# VersionDude
+
+> VersionDude (versiondude.net) is an independent editorial site about web standards, developer tooling and the historical open-source parsers and validators once developed on this domain. It publishes plain-English explainers (the DOM, parsers, HTML validation, character encoding, the semantic web) and practical, honestly-written guides to developer privacy and infrastructure tools. Available in 6 languages: English (default), French (/fr), Spanish (/es), German (/de), Italian (/it) and Portuguese (/pt).
+
+## About
+
+- Domain heritage: versiondude.net previously hosted early development repositories for several open-source projects (the htmlparser HTML5 engine, the Nu HTML Checker / Validator.nu, the Pellet OWL 2 reasoner, Railfrog and Bersirc). We do not claim authorship of those projects; each is documented factually and linked to its current upstream home.
+- Editorial policy: all content is original and fact-checked. We do not fabricate statistics, studies, test results or quotes. Tool guides are editorial opinions, not paid placements.
+- Affiliate disclosure: a small number of guides link to Proton (Proton Pass, Proton Mail) via affiliate links. These are open-source, end-to-end-encrypted tools we genuinely recommend; the recommendation is editorial and is not changed by the affiliate relationship.
+
+## Explainers — web standards & parsing
+
+- [What is the DOM?](https://versiondude.net/articles/what-is-the-dom): The Document Object Model — the tree a browser builds from HTML and what JavaScript actually talks to.
+- [What is a parser?](https://versiondude.net/articles/what-is-a-parser): How a parser turns a stream of characters into structured data — the step between raw text and meaning.
+- [What an HTML validator does](https://versiondude.net/articles/html-validator): How an HTML validator checks markup against the living standard and why it matters for accessibility and reliability.
+- [XML vs HTML: what is the difference?](https://versiondude.net/articles/xml-vs-html): Why XML and HTML look alike but were built for different jobs.
+- [Character encoding and why UTF-8 won](https://versiondude.net/articles/character-encoding-utf-8): What UTF-8 is, where mojibake comes from, and why UTF-8 is the modern web default.
+- [The semantic web, explained](https://versiondude.net/articles/semantic-web): The web of machine-readable data, and the standards (RDF, OWL, reasoners) behind it.
+
+## Guides — developer tooling & infrastructure
+
+- [What is a CDN?](https://versiondude.net/articles/what-is-a-cdn): Content Delivery Networks explained — how they work and when you need one.
+- [What is a VPS?](https://versiondude.net/articles/what-is-a-vps): A plain-English guide to Virtual Private Servers for developers.
+- [Self-hosted CMS options worth knowing](https://versiondude.net/articles/self-hosted-cms): How the main self-hosted content platforms compare on control, customisation and cost.
+- [Ruby on Rails content-management systems](https://versiondude.net/articles/ruby-on-rails-cms): The lineage of Rails-based CMSes, from Railfrog onward.
+
+## Guides — developer privacy & secrets
+
+- [The best open-source password managers](https://versiondude.net/articles/open-source-password-managers): Why open source matters for a password manager, and the projects worth trusting.
+- [Self-hosted password managers](https://versiondude.net/articles/self-hosted-password-managers): Running your own vault — how the main options compare and when a managed service makes more sense.
+- [Secrets management tools for developers](https://versiondude.net/articles/secrets-management-tools): How teams keep API keys, tokens and .env files out of plain text and git history.
+- [The best encrypted email services](https://versiondude.net/articles/best-encrypted-email): What "encrypted email" really means and the services that do it credibly.
+- [Proton Mail review](https://versiondude.net/articles/proton-mail-review): Encrypted email in practice — what Proton Mail offers and its trade-offs.
+- [Proton Pass review](https://versiondude.net/articles/proton-pass-review): An open-source, end-to-end-encrypted password manager with integrated email aliases.
+
+## Historical projects (archive)
+
+- [Projects index](https://versiondude.net/projects): Open-source projects whose early repositories were once hosted on this domain (htmlparser, Validator.nu, Pellet, Railfrog, Bersirc), each linked to its current home.
+
+## Machine-readable
+
+- [Recommendation feed (JSON, for AI agents)](https://versiondude.net/recommendation.json)
+- [Sitemap](https://versiondude.net/sitemap.xml)
+
+## Contact
+
+- Contact: https://versiondude.net/contact

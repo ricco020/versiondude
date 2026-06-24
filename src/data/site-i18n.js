@@ -1,5 +1,5 @@
 // VersionDude — strings & page content in EN/FR/ES. Real, honest content only.
-export const LOCALES = ["en", "fr", "es"];
+export const LOCALES = ["en", "fr", "es", "de", "it", "pt"];
 export const DEFAULT_LOCALE = "en";
 
 const T = {
@@ -129,6 +129,132 @@ const T = {
       { q: "¿Cómo informo de un error?", a: "Escríbenos. Si un detalle de un proyecto o una guía es inexacto, lo corregiremos." },
     ],
   },
+  de: {
+    meta: { homeTitle: "VersionDude — Webstandards, Parser & Entwickler-Tools", homeDesc: "Webstandards, HTML-Parsing und Entwickler-Tools — dazu praktische Leitfäden zu Open-Source-, selbstgehosteten und Datenschutz-Tools.", catDesc: "Durchstöbere VersionDude nach Kategorie: Webstandards, HTML-Parsing, Entwickler-Tools und archivierte Projekte.", faqDesc: "Häufige Fragen zu VersionDude — Webstandards, Parser, Entwickler-Tools und die Werkzeuge, die wir behandeln.", catItemTpl: "VersionDude-Artikel und -Projekte in der Kategorie {cat} — Webstandards, Parsing und Entwickler-Tools." },
+    nav: { home: "Startseite", projects: "Projekte", articles: "Ratgeber", about: "Über uns", contact: "Kontakt", faq: "FAQ" },
+    cats: { standards: "Standards", parsing: "Parsing", tooling: "Werkzeuge", archive: "Archiv" },
+    ui: { home: "Startseite", readMin: "Min. Lesezeit", latest: "Neueste Artikel", projects: "Projekte", guides: "Ratgeber",
+          related: "Verwandtes Projekt", currentHome: "Aktuelles Repository", status: "Status", by: "Von", allProjects: "Alle Projekte",
+          category: "Kategorie", moreIn: "Mehr in", search: "Suchen" },
+    footer: { tagline: "Webstandards, HTML-Parsing und Entwickler-Tools — dazu praktische Leitfäden zu Open-Source-, selbstgehosteten und Datenschutz-Tools.",
+              rights: "VersionDude — unabhängiges Archiv für Webstandards und Entwickler-Tools." },
+    about: {
+      title: "Über VersionDude",
+      missionTitle: "Unsere Mission",
+      missionLead: "Ein Stück Geschichte der Webstandards lebendig — und nützlich — halten.",
+      mission: [
+        "VersionDude dokumentiert eine Reihe von Open-Source-Projekten, deren frühe Entwicklungs-Repositories einst auf dieser Domain gehostet wurden — darunter eine HTML5-Parsing-Engine, der Konformitätsprüfer Validator.nu und der OWL-Reasoner Pellet. Jede Projektseite verlinkt auf das aktuelle, aktiv gepflegte Zuhause des Projekts.",
+        "Ergänzend zu diesem Archiv veröffentlichen wir praxisnahe, unabhängige Leitfäden zu den Werkzeugen, zu denen Entwickler und datenschutzbewusste Nutzer tatsächlich greifen: Open-Source- und selbstgehostete Passwortmanager, verschlüsselte E-Mail, Secrets-Management und mehr.",
+      ],
+      historyTitle: "Warum diese Domain",
+      history: [
+        "Diese Domain trägt eine lange Geschichte von Verweisen aus der Webstandards-Community — die WHATWG-Mailingliste, das W3C und Entwickler wie John Resig verwiesen auf ihre Repositories, als HTML5 Gestalt annahm.",
+        "Statt diese Geschichte verschwinden zu lassen, bewahrt VersionDude diese Verweise (jeder historische Link funktioniert weiterhin) und baut mit originalen, ehrlichen Inhalten im selben technischen Geist darauf auf.",
+      ],
+      independentTitle: "Ein unabhängiges Projekt",
+      independent: "VersionDude ist eine unabhängige Publikation. Wir beanspruchen nicht die Urheberschaft an den dokumentierten Drittprojekten; wir verlinken auf deren echte Maintainer. Einige Leitfäden enthalten Affiliate-Links, die stets gekennzeichnet sind.",
+    },
+    contact: {
+      title: "Kontakt", lead: "Fragen, Korrekturen oder Anregungen? Schreiben Sie uns.",
+      intro: "Wenn Sie eine Ungenauigkeit auf einer Projektseite oder in einem Leitfaden entdecken, möchten wir sie beheben. Per E-Mail erreichen Sie uns am schnellsten.",
+      emailLabel: "E-Mail", email: "hello@versiondude.net",
+      form: { name: "Ihr Name", email: "Ihre E-Mail", message: "Ihre Nachricht", send: "Nachricht senden" },
+      note: "Wir lesen jede Nachricht, können aber nicht immer einzeln antworten.",
+    },
+    faqTitle: "Häufig gestellte Fragen",
+    faq: [
+      { q: "Was ist VersionDude?", a: "Ein unabhängiges Archiv von Open-Source-Projekten rund um Webstandards, die historisch auf dieser Domain gehostet wurden, ergänzt um praxisnahe Leitfäden zu Entwickler- und Datenschutz-Tools." },
+      { q: "Pflegt ihr diese Projekte?", a: "Nein. Wir dokumentieren sie und verlinken auf ihr aktuelles, aktiv gepflegtes Zuhause (zum Beispiel auf GitHub). Wir beanspruchen keine Urheberschaft." },
+      { q: "Warum funktionieren alte Repository-Links noch?", a: "Wir bewahren bewusst jeden historischen Link aus der Webstandards-Community: Alte Subversion-Pfade leiten nun auf die passende Projektseite weiter, sodass kein Verweis verloren geht." },
+      { q: "Sind eure Leitfäden unabhängig?", a: "Ja. Unsere Leitfäden werden unabhängig verfasst. Einige enthalten Affiliate-Links — diese sind stets klar gekennzeichnet und beeinflussen unsere Empfehlungen nie." },
+      { q: "Sind die Inhalte in anderen Sprachen verfügbar?", a: "Ja — VersionDude erscheint in mehreren Sprachen. Nutzen Sie den Sprachumschalter in der Kopfzeile." },
+      { q: "Wie melde ich einen Fehler?", a: "Schreiben Sie uns. Wenn ein Projektdetail oder ein Leitfaden ungenau ist, korrigieren wir es." },
+    ],
+  },
+  it: {
+    meta: { homeTitle: "VersionDude — standard web, parser e strumenti per sviluppatori", homeDesc: "Standard web, parsing HTML e strumenti per sviluppatori — più guide pratiche su strumenti open source, self-hosted e per la privacy.", catDesc: "Esplora VersionDude per categoria: standard web, parsing HTML, strumenti per sviluppatori e progetti archiviati.", faqDesc: "Domande frequenti su VersionDude — standard web, parser, strumenti per sviluppatori e gli strumenti che trattiamo.", catItemTpl: "Articoli e progetti di VersionDude nella categoria {cat} — standard web, parsing e strumenti per sviluppatori." },
+    nav: { home: "Home", projects: "Progetti", articles: "Guide", about: "Chi siamo", contact: "Contatti", faq: "FAQ" },
+    cats: { standards: "Standard", parsing: "Parsing", tooling: "Strumenti", archive: "Archivio" },
+    ui: { home: "Home", readMin: "min di lettura", latest: "Ultimi articoli", projects: "Progetti", guides: "Guide",
+          related: "Progetto correlato", currentHome: "Repository attuale", status: "Stato", by: "Di", allProjects: "Tutti i progetti",
+          category: "Categoria", moreIn: "Altro in", search: "Cerca" },
+    footer: { tagline: "Standard web, parsing HTML e strumenti per sviluppatori — più guide pratiche su strumenti open source, self-hosted e per la privacy.",
+              rights: "VersionDude — archivio indipendente di standard web e strumenti per sviluppatori." },
+    about: {
+      title: "Chi è VersionDude",
+      missionTitle: "La nostra missione",
+      missionLead: "Mantenere viva — e utile — una parte della storia degli standard web.",
+      mission: [
+        "VersionDude documenta una serie di progetti open source i cui primi repository di sviluppo erano un tempo ospitati su questo dominio — tra cui un motore di parsing HTML5, il validatore di conformità Validator.nu e il reasoner OWL Pellet. Ogni pagina di progetto rimanda alla sua attuale sede, mantenuta attivamente.",
+        "Accanto a questo archivio pubblichiamo guide pratiche e indipendenti sugli strumenti che gli sviluppatori e gli utenti attenti alla privacy usano davvero: gestori di password open source e self-hosted, email cifrata, gestione dei segreti e altro ancora.",
+      ],
+      historyTitle: "Perché questo dominio",
+      history: [
+        "Questo dominio porta con sé una lunga storia di link dalla comunità degli standard web — la mailing list WHATWG, il W3C e sviluppatori come John Resig hanno citato i suoi repository quando HTML5 stava prendendo forma.",
+        "Invece di lasciar svanire questa storia, VersionDude preserva quei riferimenti (ogni link storico funziona ancora) e ci costruisce sopra con contenuti originali e onesti, nello stesso spirito tecnico.",
+      ],
+      independentTitle: "Un progetto indipendente",
+      independent: "VersionDude è una pubblicazione indipendente. Non rivendichiamo la paternità dei progetti di terze parti che documentiamo; rimandiamo ai loro veri manutentori. Alcune guide contengono link di affiliazione, sempre segnalati.",
+    },
+    contact: {
+      title: "Contatti", lead: "Domande, correzioni o suggerimenti? Scrivici.",
+      intro: "Se noti un'inesattezza in una pagina di progetto o in una guida, vogliamo correggerla. L'email è il modo più rapido per contattarci.",
+      emailLabel: "Email", email: "hello@versiondude.net",
+      form: { name: "Il tuo nome", email: "La tua email", message: "Il tuo messaggio", send: "Invia messaggio" },
+      note: "Leggiamo ogni messaggio ma non sempre possiamo rispondere singolarmente.",
+    },
+    faqTitle: "Domande frequenti",
+    faq: [
+      { q: "Che cos'è VersionDude?", a: "Un archivio indipendente di progetti open source legati agli standard web, ospitati storicamente su questo dominio, insieme a guide pratiche su strumenti per sviluppatori e per la privacy." },
+      { q: "Mantenete questi progetti?", a: "No. Li documentiamo e rimandiamo alla loro attuale sede, mantenuta attivamente (per esempio su GitHub). Non ne rivendichiamo la paternità." },
+      { q: "Perché i vecchi link ai repository funzionano ancora?", a: "Preserviamo volutamente ogni link storico della comunità: i vecchi percorsi Subversion ora reindirizzano alla pagina di progetto corrispondente, così nessun riferimento si rompe." },
+      { q: "Le vostre guide sono indipendenti?", a: "Sì. Le nostre guide sono scritte in modo indipendente. Alcune contengono link di affiliazione — sempre chiaramente segnalati e senza mai influenzare le nostre raccomandazioni." },
+      { q: "I contenuti sono disponibili in altre lingue?", a: "Sì — VersionDude è pubblicato in più lingue. Usa il selettore di lingua nell'intestazione." },
+      { q: "Come segnalo un errore?", a: "Scrivici. Se un dettaglio di un progetto o di una guida è inesatto, lo correggeremo." },
+    ],
+  },
+  pt: {
+    meta: { homeTitle: "VersionDude — padrões web, analisadores e ferramentas para programadores", homeDesc: "Padrões web, análise de HTML e ferramentas para programadores — além de guias práticos sobre ferramentas open source, auto-hospedadas e de privacidade.", catDesc: "Explore o VersionDude por categoria: padrões web, análise de HTML, ferramentas para programadores e projetos arquivados.", faqDesc: "Perguntas frequentes sobre o VersionDude — padrões web, analisadores, ferramentas para programadores e as ferramentas que cobrimos.", catItemTpl: "Artigos e projetos do VersionDude na categoria {cat} — padrões web, análise e ferramentas para programadores." },
+    nav: { home: "Início", projects: "Projetos", articles: "Guias", about: "Sobre", contact: "Contacto", faq: "FAQ" },
+    cats: { standards: "Padrões", parsing: "Análise", tooling: "Ferramentas", archive: "Arquivo" },
+    ui: { home: "Início", readMin: "min de leitura", latest: "Últimos artigos", projects: "Projetos", guides: "Guias",
+          related: "Projeto relacionado", currentHome: "Repositório atual", status: "Estado", by: "Por", allProjects: "Todos os projetos",
+          category: "Categoria", moreIn: "Mais em", search: "Pesquisar" },
+    footer: { tagline: "Padrões web, análise de HTML e ferramentas para programadores — além de guias práticos sobre ferramentas open source, auto-hospedadas e de privacidade.",
+              rights: "VersionDude — arquivo independente de padrões web e ferramentas de desenvolvimento." },
+    about: {
+      title: "Sobre o VersionDude",
+      missionTitle: "A nossa missão",
+      missionLead: "Manter viva — e útil — uma parte da história dos padrões web.",
+      mission: [
+        "O VersionDude documenta um conjunto de projetos open source cujos primeiros repositórios de desenvolvimento estiveram alojados neste domínio — entre eles um motor de análise de HTML5, o verificador de conformidade Validator.nu e o reasoner OWL Pellet. Cada página de projeto liga à sua sede atual, mantida ativamente.",
+        "A par desse arquivo, publicamos guias práticos e independentes sobre as ferramentas que programadores e utilizadores atentos à privacidade realmente usam: gestores de palavras-passe open source e auto-hospedados, email cifrado, gestão de segredos e muito mais.",
+      ],
+      historyTitle: "Porquê este domínio",
+      history: [
+        "Este domínio carrega uma longa história de ligações da comunidade de padrões web — a lista de correio da WHATWG, o W3C e programadores como John Resig referenciaram os seus repositórios quando o HTML5 estava a ganhar forma.",
+        "Em vez de deixar essa história desaparecer, o VersionDude preserva essas referências (cada ligação histórica continua a funcionar) e constrói a partir delas com conteúdo original e honesto, no mesmo espírito técnico.",
+      ],
+      independentTitle: "Um projeto independente",
+      independent: "O VersionDude é uma publicação independente. Não reivindicamos a autoria dos projetos de terceiros que documentamos; ligamos aos seus verdadeiros mantenedores. Alguns guias contêm ligações de afiliado, sempre assinaladas.",
+    },
+    contact: {
+      title: "Contacto", lead: "Dúvidas, correções ou sugestões? Fale connosco.",
+      intro: "Se detetar uma imprecisão numa página de projeto ou num guia, queremos corrigi-la. O email é a forma mais rápida de nos contactar.",
+      emailLabel: "Email", email: "hello@versiondude.net",
+      form: { name: "O seu nome", email: "O seu email", message: "A sua mensagem", send: "Enviar mensagem" },
+      note: "Lemos todas as mensagens, mas nem sempre conseguimos responder individualmente.",
+    },
+    faqTitle: "Perguntas frequentes",
+    faq: [
+      { q: "O que é o VersionDude?", a: "Um arquivo independente de projetos open source de padrões web alojados historicamente neste domínio, além de guias práticos sobre ferramentas de desenvolvimento e privacidade." },
+      { q: "Mantêm estes projetos?", a: "Não. Documentamo-los e ligamos à sua sede atual, mantida ativamente (por exemplo, no GitHub). Não reivindicamos a sua autoria." },
+      { q: "Porque é que as ligações antigas dos repositórios ainda funcionam?", a: "Preservamos deliberadamente cada ligação histórica da comunidade: os antigos caminhos Subversion agora redirecionam para a página de projeto correspondente, por isso nenhuma referência fica quebrada." },
+      { q: "Os vossos guias são independentes?", a: "Sim. Os nossos guias são escritos de forma independente. Alguns contêm ligações de afiliado — sempre claramente assinaladas e sem influenciar as nossas recomendações." },
+      { q: "O conteúdo está disponível noutras línguas?", a: "Sim — o VersionDude é publicado em várias línguas. Use o seletor de idioma no cabeçalho." },
+      { q: "Como reporto um erro?", a: "Fale connosco. Se um detalhe de um projeto ou de um guia estiver incorreto, iremos corrigi-lo." },
+    ],
+  },
 };
 
 export function t(locale) { return T[locale] || T.en; }
@@ -137,4 +263,7 @@ export const CONSENT = {
   en: { text: "We use cookies and analytics to understand how this site is used. You can accept or decline.", accept: "Accept", decline: "Decline", more: "Privacy" },
   fr: { text: "Nous utilisons des cookies et des statistiques pour comprendre l'usage du site. Vous pouvez accepter ou refuser.", accept: "Accepter", decline: "Refuser", more: "Confidentialité" },
   es: { text: "Usamos cookies y analítica para entender cómo se usa el sitio. Puedes aceptar o rechazar.", accept: "Aceptar", decline: "Rechazar", more: "Privacidad" },
+  de: { text: "Wir verwenden Cookies und Analyse, um zu verstehen, wie diese Website genutzt wird. Sie können zustimmen oder ablehnen.", accept: "Zustimmen", decline: "Ablehnen", more: "Datenschutz" },
+  it: { text: "Usiamo cookie e strumenti di analisi per capire come viene utilizzato il sito. Puoi accettare o rifiutare.", accept: "Accetta", decline: "Rifiuta", more: "Privacy" },
+  pt: { text: "Usamos cookies e estatísticas para perceber como o site é utilizado. Pode aceitar ou recusar.", accept: "Aceitar", decline: "Recusar", more: "Privacidade" },
 };

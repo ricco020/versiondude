@@ -212,7 +212,208 @@ const es = {
   ],
 };
 
-const CONTENT = { en, fr, es };
+const de = {
+  projectsTitle: 'Projekte',
+  projectsIntro: 'Historische Open-Source-Projekte, deren frühe Entwicklungs-Repositories einst auf dieser Domain gehostet wurden. Jedes verlinkt auf sein aktuelles Zuhause.',
+  statusLabel: 'Status',
+  currentHomeLabel: 'Aktuelles Repository',
+  projects: [
+    {
+      slug: 'html5-parser', name: 'HTML5-Parser (htmlparser)', category: 'parsing',
+      excerpt: 'Eine frühe HTML5-Parsing-Engine in Java mit SAX- und DOM-Schnittstellen — die Engine hinter dem Nu HTML Checker.',
+      heroAlt: 'Computercode auf einem Bildschirm', bodyCaption: 'Codezeilen auf einem Bildschirm.',
+      body: [
+        'Das Projekt htmlparser ist eine in Java geschriebene HTML5-Parsing-Engine, die SAX- und DOM-Schnittstellen bereitstellt. Frühe Entwicklungs-Repositories waren hier unter /whattf/htmlparser/trunk/ gehostet.',
+        'Der Parser wurde zur Engine hinter dem Nu HTML Checker (validator.nu) und implementiert den HTML5-Tokenisierungs- und Baum-Konstruktions-Algorithmus, der Browser darin übereinstimmen lässt, wie Markup gelesen wird.',
+      ],
+      status: 'Anderswo gepflegt',
+      currentHome: [{ label: 'github.com/validator/htmlparser', url: 'https://github.com/validator/htmlparser' }],
+    },
+    {
+      slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
+      excerpt: 'Der HTML5-Konformitätsprüfer — seine Syntax-Schemata und sein Checker-Werkzeug wurden in hier gehosteten Repositories entwickelt.',
+      heroAlt: 'Ein Laptop, der Codezeilen anzeigt', bodyCaption: 'Quellcode in einem Code-Editor.',
+      body: [
+        'Validator.nu ist ein HTML5-Konformitätsprüfer. Seine Syntax-Schemata, sein Checker (/whattf/syntax/, org.whattf.checker) und sein Build-Werkzeug wurden in hier gehosteten Repositories entwickelt.',
+        'Er wird heute als Nu HTML Checker gepflegt und wird breit genutzt, um Webdokumente gegen den Living Standard zu validieren.',
+      ],
+      status: 'Anderswo gepflegt',
+      currentHome: [
+        { label: 'validator.nu', url: 'https://validator.nu/' },
+        { label: 'github.com/validator/validator', url: 'https://github.com/validator/validator' },
+      ],
+    },
+    {
+      slug: 'railfrog', name: 'Railfrog', category: 'archive',
+      excerpt: 'Ein Content-Management-System auf Ruby-on-Rails-Basis, das historisch per script/plugin von diesem Host installiert wurde.',
+      heroAlt: 'Ein Softwareentwickler bei der Arbeit am Computer', bodyCaption: 'Webentwicklungs-Code: HTML, CSS und PHP.',
+      body: [
+        'Railfrog war ein Content-Management-System auf Ruby-on-Rails-Basis. Es wurde historisch per script/plugin install von /railfrog/cms/railfrog/trunk installiert.',
+        'Das Projekt wird nicht mehr aktiv entwickelt; der Link unten verweist auf eine historische Referenz.',
+      ],
+      status: 'Eingestellt',
+      currentHome: [{ label: 'ruby-toolbox.com/projects/railfrog', url: 'https://www.ruby-toolbox.com/projects/railfrog/railfrog' }],
+    },
+    {
+      slug: 'pellet', name: 'Pellet (OWL-2-Reasoner)', category: 'tooling',
+      excerpt: 'Ein OWL-2-DL-Reasoner; Entwicklungs-Builds waren einst hier gehostet, heute von Stardog Union gepflegt.',
+      heroAlt: 'Ein abstrakter, leuchtender Netzwerk-Hintergrund', bodyCaption: 'Helle grüne Schnüre, an Knoten verbunden, bilden ein abstraktes Netzwerk.',
+      body: [
+        'Pellet ist ein OWL-2-DL-Reasoner. Entwicklungs-Builds (Clark & Parsia, /clark-parsia/pellet-devel/) waren einst hier gehostet.',
+        'Er wird heute von Stardog Union gepflegt und dient dazu, über Ontologien des semantischen Webs zu schließen.',
+      ],
+      status: 'Anderswo gepflegt',
+      currentHome: [{ label: 'github.com/stardog-union/pellet', url: 'https://github.com/stardog-union/pellet' }],
+    },
+    {
+      slug: 'bersirc', name: 'Bersirc', category: 'archive',
+      excerpt: 'Ein quelloffener IRC-Client für Windows auf Basis des Claro-GUI-Toolkits; seine Dateien waren einst hier gehostet.',
+      heroAlt: 'Online-Kommunikation an einem Computer', bodyCaption: 'Eine Person, die an einem Laptop am Schreibtisch tippt.',
+      body: [
+        'Bersirc war ein quelloffener IRC-Client für Windows (auf Basis des Claro-GUI-Toolkits). Seine Dateien waren einst unter /terminal/bersirc/ gehostet.',
+        'Das Projekt ist eingestellt; der Link unten verweist auf eine historische Referenz.',
+      ],
+      status: 'Eingestellt',
+      currentHome: [{ label: 'sourceforge.net/projects/bersirc', url: 'https://sourceforge.net/projects/bersirc/' }],
+    },
+  ],
+};
+
+const it = {
+  projectsTitle: 'Progetti',
+  projectsIntro: 'Progetti open source storici i cui primi repository di sviluppo erano un tempo ospitati su questo dominio. Ognuno rimanda alla sua sede attuale.',
+  statusLabel: 'Stato',
+  currentHomeLabel: 'Repository attuale',
+  projects: [
+    {
+      slug: 'html5-parser', name: 'Parser HTML5 (htmlparser)', category: 'parsing',
+      excerpt: "Un primo motore di parsing HTML5 in Java con interfacce SAX e DOM — il motore dietro il Nu HTML Checker.",
+      heroAlt: 'Codice informatico su uno schermo', bodyCaption: 'Righe di codice mostrate su uno schermo.',
+      body: [
+        "Il progetto htmlparser è un motore di parsing HTML5 scritto in Java che fornisce interfacce SAX e DOM. I primi repository di sviluppo erano ospitati qui sotto /whattf/htmlparser/trunk/.",
+        "Il parser è diventato il motore del Nu HTML Checker (validator.nu), implementando l'algoritmo di tokenizzazione e costruzione dell'albero di HTML5 che mette d'accordo i browser su come leggere il markup.",
+      ],
+      status: 'Mantenuto altrove',
+      currentHome: [{ label: 'github.com/validator/htmlparser', url: 'https://github.com/validator/htmlparser' }],
+    },
+    {
+      slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
+      excerpt: 'Il validatore di conformità HTML5 — i suoi schemi di sintassi e i suoi strumenti sono stati sviluppati in repository ospitati qui.',
+      heroAlt: 'Un portatile che mostra righe di codice', bodyCaption: 'Codice sorgente in un editor di codice.',
+      body: [
+        'Validator.nu è un validatore di conformità HTML5. I suoi schemi di sintassi, il suo checker (/whattf/syntax/, org.whattf.checker) e i suoi strumenti di build sono stati sviluppati in repository ospitati qui.',
+        'Oggi è mantenuto come Nu HTML Checker ed è ampiamente usato per validare i documenti web rispetto al living standard.',
+      ],
+      status: 'Mantenuto altrove',
+      currentHome: [
+        { label: 'validator.nu', url: 'https://validator.nu/' },
+        { label: 'github.com/validator/validator', url: 'https://github.com/validator/validator' },
+      ],
+    },
+    {
+      slug: 'railfrog', name: 'Railfrog', category: 'archive',
+      excerpt: 'Un sistema di gestione dei contenuti in Ruby on Rails, installato storicamente via script/plugin da questo host.',
+      heroAlt: 'Uno sviluppatore software al lavoro', bodyCaption: 'Codice web: HTML, CSS e PHP.',
+      body: [
+        'Railfrog era un sistema di gestione dei contenuti in Ruby on Rails. Storicamente si installava con script/plugin install da /railfrog/cms/railfrog/trunk.',
+        'Il progetto non è più sviluppato attivamente; il link qui sotto rimanda a un riferimento storico.',
+      ],
+      status: 'Dismesso',
+      currentHome: [{ label: 'ruby-toolbox.com/projects/railfrog', url: 'https://www.ruby-toolbox.com/projects/railfrog/railfrog' }],
+    },
+    {
+      slug: 'pellet', name: 'Pellet (reasoner OWL 2)', category: 'tooling',
+      excerpt: 'Un reasoner OWL 2 DL; le sue build di sviluppo erano ospitate qui, oggi mantenuto da Stardog Union.',
+      heroAlt: 'Uno sfondo astratto di rete luminosa', bodyCaption: 'Corde verdi unite da nodi, che formano una rete astratta.',
+      body: [
+        'Pellet è un reasoner OWL 2 DL. Le sue build di sviluppo (Clark & Parsia, /clark-parsia/pellet-devel/) erano un tempo ospitate qui.',
+        'Oggi è mantenuto da Stardog Union ed è usato per ragionare sulle ontologie del web semantico.',
+      ],
+      status: 'Mantenuto altrove',
+      currentHome: [{ label: 'github.com/stardog-union/pellet', url: 'https://github.com/stardog-union/pellet' }],
+    },
+    {
+      slug: 'bersirc', name: 'Bersirc', category: 'archive',
+      excerpt: 'Un client IRC open source per Windows basato sul toolkit Claro; i suoi file erano ospitati qui.',
+      heroAlt: 'Comunicazione online su un computer', bodyCaption: 'Una persona che digita su un portatile alla scrivania.',
+      body: [
+        'Bersirc era un client IRC open source per Windows (basato sul toolkit grafico Claro). I suoi file erano ospitati sotto /terminal/bersirc/.',
+        'Il progetto è dismesso; il link qui sotto rimanda a un riferimento storico.',
+      ],
+      status: 'Dismesso',
+      currentHome: [{ label: 'sourceforge.net/projects/bersirc', url: 'https://sourceforge.net/projects/bersirc/' }],
+    },
+  ],
+};
+
+const pt = {
+  projectsTitle: 'Projetos',
+  projectsIntro: 'Projetos open source históricos cujos primeiros repositórios de desenvolvimento estiveram outrora alojados neste domínio. Cada um liga à sua sede atual.',
+  statusLabel: 'Estado',
+  currentHomeLabel: 'Repositório atual',
+  projects: [
+    {
+      slug: 'html5-parser', name: 'Analisador HTML5 (htmlparser)', category: 'parsing',
+      excerpt: 'Um motor de análise de HTML5 em Java com interfaces SAX e DOM — o motor por trás do Nu HTML Checker.',
+      heroAlt: 'Código informático num ecrã', bodyCaption: 'Linhas de código apresentadas num ecrã.',
+      body: [
+        'O projeto htmlparser é um motor de análise de HTML5 escrito em Java que fornece interfaces SAX e DOM. Os primeiros repositórios de desenvolvimento estiveram alojados aqui em /whattf/htmlparser/trunk/.',
+        'O analisador tornou-se o motor do Nu HTML Checker (validator.nu), implementando o algoritmo de tokenização e construção de árvore do HTML5 que põe os navegadores de acordo sobre como ler o markup.',
+      ],
+      status: 'Mantido noutro lugar',
+      currentHome: [{ label: 'github.com/validator/htmlparser', url: 'https://github.com/validator/htmlparser' }],
+    },
+    {
+      slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
+      excerpt: 'O verificador de conformidade HTML5 — os seus esquemas de sintaxe e ferramentas foram desenvolvidos em repositórios alojados aqui.',
+      heroAlt: 'Um portátil a mostrar linhas de código', bodyCaption: 'Código-fonte num editor de código.',
+      body: [
+        'O Validator.nu é um verificador de conformidade HTML5. Os seus esquemas de sintaxe, o seu verificador (/whattf/syntax/, org.whattf.checker) e as suas ferramentas de build foram desenvolvidos em repositórios alojados aqui.',
+        'Hoje é mantido como Nu HTML Checker e é amplamente usado para validar documentos web face ao living standard.',
+      ],
+      status: 'Mantido noutro lugar',
+      currentHome: [
+        { label: 'validator.nu', url: 'https://validator.nu/' },
+        { label: 'github.com/validator/validator', url: 'https://github.com/validator/validator' },
+      ],
+    },
+    {
+      slug: 'railfrog', name: 'Railfrog', category: 'archive',
+      excerpt: 'Um sistema de gestão de conteúdos em Ruby on Rails, instalado historicamente via script/plugin a partir deste host.',
+      heroAlt: 'Um programador de software a trabalhar', bodyCaption: 'Código web: HTML, CSS e PHP.',
+      body: [
+        'O Railfrog era um sistema de gestão de conteúdos em Ruby on Rails. Historicamente instalava-se com script/plugin install a partir de /railfrog/cms/railfrog/trunk.',
+        'O projeto já não é desenvolvido ativamente; a ligação abaixo aponta para uma referência histórica.',
+      ],
+      status: 'Descontinuado',
+      currentHome: [{ label: 'ruby-toolbox.com/projects/railfrog', url: 'https://www.ruby-toolbox.com/projects/railfrog/railfrog' }],
+    },
+    {
+      slug: 'pellet', name: 'Pellet (reasoner OWL 2)', category: 'tooling',
+      excerpt: 'Um reasoner OWL 2 DL; as suas builds de desenvolvimento estiveram alojadas aqui, hoje mantido pela Stardog Union.',
+      heroAlt: 'Um fundo abstrato de rede luminosa', bodyCaption: 'Cordas verdes unidas por nós, formando uma rede abstrata.',
+      body: [
+        'O Pellet é um reasoner OWL 2 DL. As suas builds de desenvolvimento (Clark & Parsia, /clark-parsia/pellet-devel/) estiveram outrora alojadas aqui.',
+        'Hoje é mantido pela Stardog Union e serve para raciocinar sobre ontologias da web semântica.',
+      ],
+      status: 'Mantido noutro lugar',
+      currentHome: [{ label: 'github.com/stardog-union/pellet', url: 'https://github.com/stardog-union/pellet' }],
+    },
+    {
+      slug: 'bersirc', name: 'Bersirc', category: 'archive',
+      excerpt: 'Um cliente IRC open source para Windows baseado no toolkit Claro; os seus ficheiros estiveram alojados aqui.',
+      heroAlt: 'Comunicação online num computador', bodyCaption: 'Uma pessoa a escrever num portátil na secretária.',
+      body: [
+        'O Bersirc era um cliente IRC open source para Windows (baseado no toolkit gráfico Claro). Os seus ficheiros estiveram alojados em /terminal/bersirc/.',
+        'O projeto está descontinuado; a ligação abaixo aponta para uma referência histórica.',
+      ],
+      status: 'Descontinuado',
+      currentHome: [{ label: 'sourceforge.net/projects/bersirc', url: 'https://sourceforge.net/projects/bersirc/' }],
+    },
+  ],
+};
+
+const CONTENT = { en, fr, es, de, it, pt };
 
 export function getContent(locale) {
   return CONTENT[locale] || CONTENT.en;

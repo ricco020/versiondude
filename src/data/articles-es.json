@@ -419,5 +419,29 @@
    "Una cultura de responsabilidad compartida, no solo herramientas",
    "Publicaciones más rápidas, más frecuentes y más fiables"
   ]
+ },
+ "what-is-an-api": {
+  "title": "¿Qué es una API? Una explicación clara y práctica",
+  "dek": "Una API (Interfaz de Programación de Aplicaciones) es un contrato que permite que un software solicite datos o acciones a otro, sin saber cómo funciona internamente. Qué es una API, cómo funciona una solicitud y respuesta, los estilos comunes como REST y GraphQL, y por qué los desarrolladores las utilizan.",
+  "heroAlt": "Pantalla de un portátil mostrando código fuente en un editor de código",
+  "bodyCaption": "Un desarrollador en acción — la mayoría del software moderno se comunica con otros programas a través de APIs.",
+  "paras": [
+   "Una API — abreviatura de Interfaz de Programación de Aplicaciones — es un conjunto de reglas que permite que un programa hable con otro. Define cómo solicitar datos o una acción, qué debes enviar y qué recibes a cambio, para que dos piezas de software puedan trabajar juntas sin que ninguna sepa cómo está construida la otra por dentro. Es el contrato entre ellas.",
+   "Una analogía común es el menú de un restaurante. El menú enumera lo que puedes pedir y el costo de cada plato, haces un pedido y la cocina lo prepara — pero nunca necesitas ver la cocina ni saber cómo se hace la comida. Una API es ese menú para el software: te dice qué puedes solicitar y cómo, y oculta todo lo que hay detrás.",
+   "Más precisamente, una API expone un conjunto de operaciones que un servicio está dispuesto a realizar. Un servicio meteorológico podría ofrecer una operación que devuelva el pronóstico para una ciudad; un servicio de pagos podría ofrecer una que cobre una tarjeta. Llamas a la operación con los datos de entrada que espera, y el servicio realiza el trabajo y devuelve un resultado. Los detalles internos permanecen privados y pueden cambiar libremente, siempre que se mantenga el contrato.",
+   "En la web, la mayoría de las APIs funcionan sobre el mismo protocolo que las páginas web: HTTP. Tu programa envía una solicitud a una URL llamada endpoint, generalmente con un método que indica la intención — GET para leer datos, POST para crearlos, PUT o PATCH para actualizar, DELETE para eliminar. La solicitud puede llevar parámetros y un cuerpo; el servidor la procesa y envía una respuesta.",
+   "Esa respuesta tiene dos partes importantes: un código de estado y una carga útil. El código de estado es un número corto que indica cómo fue — 200 significa éxito, 404 significa que no se encontró el recurso, 500 significa que el servidor encontró un error. La carga útil es el propio dato, hoy en día casi siempre formateado como JSON, un formato de texto ligero que es fácil de leer y escribir para los programas.",
+   "Las APIs vienen en algunos estilos comunes. REST es el más extendido: organiza todo en torno a recursos dirigidos por URLs y se apoya en los métodos estándar de HTTP. GraphQL adopta un enfoque diferente, permitiendo que el cliente pida exactamente los campos que necesita en una sola consulta, lo que evita la sobrecarga de datos. Los sistemas más antiguos pueden usar SOAP, y las aplicaciones en tiempo real a menudo añaden WebSockets para una conexión continua bidireccional.",
+   "Muchas APIs están protegidas, porque exponen datos y acciones reales. La autenticación prueba quién está llamando — a menudo con una clave de API o un token como OAuth — y la limitación de tasa limita cuántas solicitudes puede hacer un cliente en un período, para que un solo cliente no pueda saturar el servicio. Las APIs públicas publican documentación que describe cada endpoint, sus entradas y sus respuestas.",
+   "Los desarrolladores confían en las APIs porque permiten construir sobre servicios existentes en lugar de reinventarlos. Puedes añadir mapas, pagos, correo electrónico, inicio de sesión o IA a una aplicación llamando a la API de otro. También permiten que los grandes sistemas se dividan en servicios más pequeños que se comunican entre sí, y son la forma en que una aplicación móvil o un front end de una sola página obtiene datos de un backend.",
+   "Finalmente, una API tiene que ejecutarse en algún lugar. El servicio detrás de ella — el backend que recibe solicitudes y devuelve respuestas — necesita un servidor confiable y siempre activo. Para tus propias APIs, eso significa un host que controles: un VPS o servidor en la nube donde el backend permanezca activo y accesible. Un host sólido es la base sobre la que se asienta toda la interfaz."
+  ],
+  "list": [
+   "Un contrato que permite que un programa solicite datos o acciones a otro",
+   "Las APIs web utilizan HTTP: endpoint, método, solicitud, respuesta",
+   "Las respuestas llevan un código de estado y datos, usualmente como JSON",
+   "Estilos comunes: REST, GraphQL, SOAP, WebSockets",
+   "Protegidas por autenticación y límites de tasa, descritas en la documentación"
+  ]
  }
 }

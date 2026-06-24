@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // Locales with a URL prefix. English is the default and lives at the root (no prefix).
-const PREFIXED = ["fr", "es"];
+const PREFIXED = ["fr", "es", "de", "it", "pt"];
 // Fresh cookie name on purpose: voids any stale NEXT_LOCALE that an earlier
 // build may have pinned to "en" and wrongly blocked detection.
 const COOKIE = "wlocale";

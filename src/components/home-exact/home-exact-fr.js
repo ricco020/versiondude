@@ -376,7 +376,7 @@ export default function Home_fr() {
                       <figure>
                         <a href="/fr/articles/qu-est-ce-qu-un-parseur">
                           <img loading="lazy" decoding="async"
-                            src="/assets/articles/secrets-management-tools-hero.jpg"
+                            src="/assets/articles/what-is-a-parser-hero.jpg"
                             width={345}
                             alt="Qu'est-ce qu'un parseur ?"
                             className="img-fluid"
@@ -408,7 +408,7 @@ export default function Home_fr() {
                         <div className="grid-item-img">
                           <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/proton-mail-review-hero.jpg"
+                              src="/assets/articles/open-source-password-managers-hero.jpg"
                               className="img-fluid"
                               alt="Les meilleurs gestionnaires de mots de passe open source"
                             />
@@ -429,7 +429,7 @@ export default function Home_fr() {
                         <div className="grid-item-img">
                           <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/best-encrypted-email-hero.jpg"
+                              src="/assets/articles/self-hosted-password-managers-hero.jpg"
                               className="img-fluid"
                               alt="Gestionnaires de mots de passe auto-hébergés"
                             />
@@ -450,7 +450,7 @@ export default function Home_fr() {
                         <div className="grid-item-img">
                           <a href="/fr/articles/outils-de-gestion-des-secrets">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/proton-pass-review-hero.jpg"
+                              src="/assets/articles/secrets-management-tools-hero.jpg"
                               className="img-fluid"
                               alt="Outils de gestion des secrets pour développeurs"
                             />
@@ -471,7 +471,7 @@ export default function Home_fr() {
                         <div className="grid-item-img">
                           <a href="/fr/articles/test-proton-mail">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/what-is-the-dom-hero.jpg"
+                              src="/assets/articles/proton-mail-review-hero.jpg"
                               className="img-fluid"
                               alt="Test de Proton Mail : l'email chiffré"
                             />
@@ -492,7 +492,7 @@ export default function Home_fr() {
                         <div className="grid-item-img">
                           <a href="/fr/articles/meilleurs-services-email-chiffre">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/html-validator-hero.jpg"
+                              src="/assets/articles/best-encrypted-email-hero.jpg"
                               className="img-fluid"
                               alt="Les meilleurs services d'email chiffré"
                             />
@@ -513,7 +513,7 @@ export default function Home_fr() {
                         <div className="grid-item-img">
                           <a href="/fr/articles/test-proton-pass">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/what-is-a-parser-hero.jpg"
+                              src="/assets/articles/proton-pass-review-hero.jpg"
                               className="img-fluid"
                               alt="Test de Proton Pass"
                             />
@@ -628,7 +628,7 @@ export default function Home_fr() {
                     <div className="more-post">
                       <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="news-image">
                         <img loading="lazy" decoding="async"
-                          src="/assets/articles/open-source-password-managers-body.jpg"
+                          src="/assets/articles/open-source-password-managers-hero.jpg"
                           alt="Les meilleurs gestionnaires de mots de passe open source"
                           className="img-fluid w-100"
                         />
@@ -657,7 +657,7 @@ export default function Home_fr() {
                         <div className="img-wrapper">
                           <a href="/fr/articles/qu-est-ce-que-le-dom" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/secrets-management-tools-body.jpg"
+                              src="/assets/articles/what-is-the-dom-hero.jpg"
                               alt="Qu'est-ce que le DOM ?"
                               className="img-fluid"
                             />
@@ -683,7 +683,7 @@ export default function Home_fr() {
                         <div className="img-wrapper">
                           <a href="/fr/articles/validateur-html" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/best-encrypted-email-body.jpg"
+                              src="/assets/articles/html-validator-hero.jpg"
                               alt="À quoi sert un validateur HTML"
                               className="img-fluid"
                             />
@@ -709,7 +709,7 @@ export default function Home_fr() {
                         <div className="img-wrapper">
                           <a href="/fr/articles/qu-est-ce-qu-un-parseur" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/what-is-the-dom-body.jpg"
+                              src="/assets/articles/what-is-a-parser-hero.jpg"
                               alt="Qu'est-ce qu'un parseur ?"
                               className="img-fluid"
                             />
@@ -757,7 +757,7 @@ export default function Home_fr() {
                       <div className="border-bottom">
                         <a href="/fr/articles/web-semantique" className="d-block mb-3">
                           <img loading="lazy" decoding="async"
-                            src="/assets/articles/semantic-web-body.jpg"
+                            src="/assets/articles/semantic-web-hero.jpg"
                             alt="Le web sémantique, expliqué"
                             className="img-fluid w-100"
                           />
@@ -807,7 +807,7 @@ export default function Home_fr() {
                       <div className="border-bottom">
                         <a href="/fr/articles/cms-auto-heberges" className="d-block mb-3">
                           <img loading="lazy" decoding="async"
-                            src="/assets/projects/html5-parser-hero.jpg"
+                            src="/assets/articles/self-hosted-cms-hero.jpg"
                             alt="Les CMS auto-hébergés à connaître"
                             className="img-fluid"
                           />
@@ -867,7 +867,7 @@ export default function Home_fr() {
                           </div>
                           <a href="/fr/articles/web-semantique" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/projects/validator-nu-hero.jpg"
+                              src="/assets/articles/semantic-web-hero.jpg"
                               alt="Le web sémantique, expliqué"
                               className="img-fluid w-100"
                             />
@@ -895,7 +895,7 @@ export default function Home_fr() {
                           </div>
                           <a href="/fr/articles/xml-contre-html" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/projects/railfrog-hero.jpg"
+                              src="/assets/articles/xml-vs-html-hero.jpg"
                               alt="XML vs HTML : quelle différence ?"
                               className="img-fluid w-100"
                             />
@@ -923,7 +923,7 @@ export default function Home_fr() {
                           </div>
                           <a href="/fr/articles/cms-ruby-on-rails" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/projects/pellet-hero.jpg"
+                              src="/assets/articles/ruby-on-rails-cms-hero.jpg"
                               alt="Les CMS en Ruby on Rails"
                               className="img-fluid w-100"
                             />
@@ -951,7 +951,7 @@ export default function Home_fr() {
                           </div>
                           <a href="/fr/articles/encodage-des-caracteres-utf-8" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/projects/bersirc-hero.jpg"
+                              src="/assets/articles/character-encoding-utf-8-hero.jpg"
                               alt="L'encodage des caractères et pourquoi UTF-8 a gagné"
                               className="img-fluid w-100"
                             />
@@ -979,7 +979,7 @@ export default function Home_fr() {
                           </div>
                           <a href="/fr/articles/cms-auto-heberges" className="thumb">
                             <img loading="lazy" decoding="async"
-                              src="/assets/articles/open-source-password-managers-hero.jpg"
+                              src="/assets/articles/self-hosted-cms-hero.jpg"
                               alt="Les CMS auto-hébergés à connaître"
                               className="img-fluid w-100"
                             />

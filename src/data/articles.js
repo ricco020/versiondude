@@ -171,6 +171,26 @@ export const ARTICLES = [
     list: ['Combines development and operations into one workflow', 'CI/CD automates build, test and deploy', 'Infrastructure as code + continuous monitoring', 'A culture of shared ownership, not just tools', 'Faster, more frequent, more reliable releases'],
     cta: DEV_CLOUD,
   }),
+  a({
+    slug: 'what-is-an-api', category: 'tooling', readingMinutes: 6, date: '2026-06-24',
+    title: 'What is an API? A clear, practical explainer',
+    dek: 'An API (Application Programming Interface) is a contract that lets one piece of software ask another for data or actions, without knowing how it works inside. What an API is, how a request and response work, the common styles like REST and GraphQL, and why developers build on them.',
+    hero: '/assets/articles/what-is-an-api-hero.jpg', heroAlt: 'A laptop screen showing source code in a code editor',
+    body: '/assets/articles/what-is-an-api-body.jpg', bodyCaption: 'A developer at work — most modern software talks to other software through APIs.',
+    paras: [
+      'An API — short for Application Programming Interface — is a set of rules that lets one program talk to another. It defines how you ask for data or an action, what you have to send, and what you get back, so two pieces of software can work together without either one knowing how the other is built inside. It is the contract between them.',
+      'A common analogy is a restaurant menu. The menu lists what you can order and what each dish costs, you place an order, and the kitchen prepares it — but you never need to see the kitchen or know how the cooking is done. An API is that menu for software: it tells you what you can request and how, and hides everything behind it.',
+      'More precisely, an API exposes a set of operations a service is willing to perform. A weather service might offer an operation that returns the forecast for a city; a payment service might offer one that charges a card. You call the operation with the inputs it expects, and the service does the work and hands back a result. The internals stay private and can change freely, as long as the contract holds.',
+      'On the web, most APIs work over the same protocol as web pages: HTTP. Your program sends a request to a URL called an endpoint, usually with a method that signals intent — GET to read data, POST to create it, PUT or PATCH to update, DELETE to remove. The request can carry parameters and a body; the server processes it and sends back a response.',
+      'That response has two important parts: a status code and a payload. The status code is a short number that says how it went — 200 means success, 404 means the thing was not found, 500 means the server hit an error. The payload is the data itself, today almost always formatted as JSON, a lightweight text format that is easy for programs to read and write.',
+      'APIs come in a few common styles. REST is the most widespread: it organises everything around resources addressed by URLs and leans on the standard HTTP methods. GraphQL takes a different approach, letting the client ask for exactly the fields it needs in a single query, which avoids over-fetching. Older systems may use SOAP, and real-time apps often add WebSockets for a continuous two-way connection.',
+      'Many APIs are protected, because they expose real data and actions. Authentication proves who is calling — often with an API key or a token such as OAuth — and rate limiting caps how many requests a caller can make in a window, so one client cannot overwhelm the service. Public APIs publish documentation describing every endpoint, its inputs, and its responses.',
+      'Developers rely on APIs because they let you build on top of existing services instead of reinventing them. You can add maps, payments, email, login, or AI to an app by calling someone else’s API. They also let large systems split into smaller services that talk to each other, and they are how a mobile app or single-page front end fetches data from a backend.',
+      'Finally, an API has to run somewhere. The service behind it — the backend that receives requests and returns responses — needs a reliable, always-on server. For your own APIs, that means a host you control: a VPS or cloud server where the backend stays up and reachable. A solid host is the foundation the whole interface sits on.',
+    ],
+    list: ['A contract that lets one program ask another for data or actions', 'Web APIs use HTTP: endpoint, method, request, response', 'Responses carry a status code and data, usually as JSON', 'Common styles: REST, GraphQL, SOAP, WebSockets', 'Protected by authentication and rate limits, described in docs'],
+    cta: DEV_CLOUD,
+  }),
   // ---------- PILIER 2 — monétisable (Proton) ----------
   a({
     slug: 'open-source-password-managers', category: 'tooling', readingMinutes: 6, date: '2026-06-17',
@@ -405,6 +425,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-an-api": { fr: "qu-est-ce-qu-une-api", es: "que-es-una-api", de: "was-ist-eine-api", it: "che-cos-e-un-api", pt: "o-que-e-uma-api" },
   "what-is-devops": { fr: "qu-est-ce-que-le-devops", es: "que-es-el-devops", de: "was-ist-devops", it: "cos-e-il-devops", pt: "o-que-e-o-devops" },
   "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn", de: "was-ist-ein-cdn", it: "che-cos-e-una-cdn", pt: "o-que-e-uma-cdn" },
   "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps", de: "was-ist-ein-vps", it: "che-cos-e-un-vps", pt: "o-que-e-um-vps" },

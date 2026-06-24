@@ -1064,5 +1064,61 @@
    "pt": "Onde corre",
    "n": 1
   }
+ ],
+ "what-is-an-api": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What an API actually is",
+   "fr": "Ce qu'est vraiment une API",
+   "es": "Qué es realmente una API",
+   "de": "Was eine API wirklich ist",
+   "it": "Cos'è davvero un'API",
+   "pt": "O que é realmente uma API",
+   "n": 2
+  },
+  {
+   "en": "How a request and response work",
+   "fr": "Comment fonctionnent requête et réponse",
+   "es": "Cómo funcionan la petición y la respuesta",
+   "de": "Wie Anfrage und Antwort funktionieren",
+   "it": "Come funzionano richiesta e risposta",
+   "pt": "Como funcionam o pedido e a resposta",
+   "n": 2
+  },
+  {
+   "en": "Common API styles",
+   "fr": "Les styles d'API courants",
+   "es": "Los estilos de API más comunes",
+   "de": "Gängige API-Stile",
+   "it": "Gli stili di API più comuni",
+   "pt": "Os estilos de API mais comuns",
+   "n": 2
+  },
+  {
+   "en": "Why developers rely on APIs",
+   "fr": "Pourquoi les développeurs s'appuient sur les API",
+   "es": "Por qué los desarrolladores dependen de las API",
+   "de": "Warum Entwickler auf APIs setzen",
+   "it": "Perché gli sviluppatori si affidano alle API",
+   "pt": "Porque é que os programadores dependem das APIs",
+   "n": 1
+  },
+  {
+   "en": "Where APIs run",
+   "fr": "Où tournent les API",
+   "es": "Dónde se ejecutan las API",
+   "de": "Wo APIs laufen",
+   "it": "Dove girano le API",
+   "pt": "Onde correm as APIs",
+   "n": 1
+  }
  ]
 }
