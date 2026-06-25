@@ -426,6 +426,8 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
   "what-is-an-api": { fr: "qu-est-ce-qu-une-api", es: "que-es-una-api", de: "was-ist-eine-api", it: "che-cos-e-un-api", pt: "o-que-e-uma-api" },
+  "what-is-a-webhook": { fr: "qu-est-ce-qu-un-webhook", es: "que-es-un-webhook", de: "was-ist-ein-webhook", it: "che-cos-e-un-webhook", pt: "o-que-e-um-webhook" },
+  "what-is-a-docker-container": { fr: "qu-est-ce-qu-un-conteneur-docker", es: "que-es-un-contenedor-docker", de: "was-ist-ein-docker-container", it: "che-cos-e-un-container-docker", pt: "o-que-e-um-container-docker" },
   "what-is-devops": { fr: "qu-est-ce-que-le-devops", es: "que-es-el-devops", de: "was-ist-devops", it: "cos-e-il-devops", pt: "o-que-e-o-devops" },
   "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn", de: "was-ist-ein-cdn", it: "che-cos-e-una-cdn", pt: "o-que-e-uma-cdn" },
   "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps", de: "was-ist-ein-vps", it: "che-cos-e-un-vps", pt: "o-que-e-um-vps" },
