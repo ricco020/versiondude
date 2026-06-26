@@ -298,6 +298,24 @@
    "Répartition de charge entre back-ends identiques",
    "Mise en cache et compression pour soulager le back-end",
    "Limitation de débit, WAF et masquage des serveurs back-end"
+  ],
+  "faq": [
+   {
+    "q": "Quelle est la différence entre un proxy inverse et un proxy direct ?",
+    "a": "Un proxy direct se place devant les clients et émet des requêtes vers internet en leur nom, masquant qui pose la question. Un proxy inverse est l'image miroir : il se place devant les serveurs, fait face aux clients et masque le back-end. Même rôle d'intermédiaire, mais de l'autre côté de la conversation."
+   },
+   {
+    "q": "Un proxy inverse, est-ce la même chose qu'un répartiteur de charge ?",
+    "a": "Pas tout à fait. La répartition de charge — distribuer les requêtes entre plusieurs back-ends — n'est qu'une des tâches qu'un proxy inverse sait faire. Un proxy inverse gère aussi le routage, la terminaison TLS, la mise en cache et la sécurité ; un répartiteur de charge n'est donc qu'une fonctionnalité parmi d'autres du rôle plus large de proxy inverse."
+   },
+   {
+    "q": "Quels logiciels utilise-t-on pour faire tourner un proxy inverse ?",
+    "a": "Les choix courants sont Nginx et HAProxy (établis et éprouvés de longue date), Caddy (apprécié pour le HTTPS automatique) et Traefik (conçu pour les conteneurs et Kubernetes). Apache sait aussi le faire avec mod_proxy, et les options managées comme les répartiteurs de charge cloud ou Cloudflare sont des proxys inverses que quelqu'un d'autre fait tourner pour vous."
+   },
+   {
+    "q": "Ai-je besoin d'un proxy inverse ?",
+    "a": "Si vous auto-hébergez plus d'un service, voulez gérer le HTTPS proprement à un seul endroit, ou avez besoin d'une adresse unique devant plusieurs applis, un proxy inverse comme Nginx ou Caddy est la réponse standard. Pour une seule appli simple, c'est facultatif, mais presque toutes les piles de production en utilisent un."
+   }
   ]
  },
  "what-is-a-vps": {

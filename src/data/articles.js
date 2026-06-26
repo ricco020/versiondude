@@ -143,6 +143,12 @@ export const ARTICLES = [
       'So would you run one yourself? If you self-host more than a single service, want HTTPS handled cleanly, or need one address in front of several apps, a reverse proxy like Nginx or Caddy is the standard answer — and it needs a server you control to run on. It is a small, stable piece of infrastructure that quietly does a lot, which is exactly why almost every production stack has one.',
     ],
     list: ['One domain in front of several apps or microservices', 'Automatic HTTPS / TLS termination (Caddy, Nginx)', 'Load balancing across identical backends', 'Caching and compression to spare the backend', 'Rate limiting, WAF and hiding backend servers'],
+    faq: [
+      { q: 'What is the difference between a reverse proxy and a forward proxy?', a: 'A forward proxy sits in front of clients and makes requests to the internet on their behalf, hiding who is asking. A reverse proxy is the mirror image: it sits in front of servers, facing the clients, and hides the backend. Same go-between role, opposite side of the conversation.' },
+      { q: 'Is a reverse proxy the same as a load balancer?', a: 'Not exactly. Load balancing — spreading requests across several backends — is just one of the jobs a reverse proxy can do. A reverse proxy also handles routing, TLS termination, caching and security, so a load balancer is really one feature of the broader reverse-proxy role.' },
+      { q: 'Which software is used to run a reverse proxy?', a: 'Common choices are Nginx and HAProxy (long-standing and battle-tested), Caddy (popular for automatic HTTPS), and Traefik (built for containers and Kubernetes). Apache can also do it with mod_proxy, and managed options like cloud load balancers or Cloudflare are reverse proxies someone else runs for you.' },
+      { q: 'Do I need a reverse proxy?', a: 'If you self-host more than one service, want HTTPS handled cleanly in one place, or need a single address in front of several apps, a reverse proxy like Nginx or Caddy is the standard answer. For a single simple app it is optional, but almost every production stack uses one.' },
+    ],
     cta: REVERSE_PROXY_CTA,
   }),
   a({
@@ -507,7 +513,8 @@ function localize(a, locale) {
   const o = (TR[locale] || {})[a.slug];
   if (!o) return a;
   return { ...a, title: o.title || a.title, dek: o.dek || a.dek, paras: o.paras || a.paras,
-    list: o.list || a.list, heroAlt: o.heroAlt || a.heroAlt, bodyCaption: o.bodyCaption || a.bodyCaption };
+    list: o.list || a.list, heroAlt: o.heroAlt || a.heroAlt, bodyCaption: o.bodyCaption || a.bodyCaption,
+    faq: o.faq || a.faq };
 }
 export function getArticles(locale = "en") {
   // GARDE-FOU anti-mélange de langues : sur une locale non-EN, on EXCLUT les articles

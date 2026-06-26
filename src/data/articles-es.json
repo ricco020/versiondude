@@ -298,6 +298,24 @@
    "Balanceo de carga entre back-ends idénticos",
    "Caché y compresión para aliviar el back-end",
    "Limitación de tasa, WAF y ocultación de los servidores back-end"
+  ],
+  "faq": [
+   {
+    "q": "¿Cuál es la diferencia entre un proxy inverso y un proxy directo?",
+    "a": "Un proxy directo se sitúa delante de los clientes y hace peticiones a internet en su nombre, ocultando quién pregunta. Un proxy inverso es la imagen reflejada: se sitúa delante de los servidores, de cara a los clientes, y oculta el back-end. El mismo papel de intermediario, pero en el lado opuesto de la conversación."
+   },
+   {
+    "q": "¿Es lo mismo un proxy inverso que un balanceador de carga?",
+    "a": "No exactamente. El balanceo de carga —repartir las peticiones entre varios back-ends— es solo una de las tareas que puede hacer un proxy inverso. Un proxy inverso también se encarga del enrutamiento, la terminación TLS, la caché y la seguridad, así que un balanceador de carga no es más que una de las funciones del papel más amplio del proxy inverso."
+   },
+   {
+    "q": "¿Qué software se usa para ejecutar un proxy inverso?",
+    "a": "Las opciones habituales son Nginx y HAProxy (consolidados y probados durante años), Caddy (popular por su HTTPS automático) y Traefik (pensado para contenedores y Kubernetes). Apache también puede hacerlo con mod_proxy, y las opciones gestionadas como los balanceadores de carga en la nube o Cloudflare son proxys inversos que ejecuta otra persona por ti."
+   },
+   {
+    "q": "¿Necesito un proxy inverso?",
+    "a": "Si alojas por tu cuenta más de un servicio, quieres gestionar el HTTPS de forma limpia en un solo lugar, o necesitas una única dirección delante de varias aplicaciones, un proxy inverso como Nginx o Caddy es la respuesta estándar. Para una sola aplicación sencilla es opcional, pero casi todos los entornos de producción usan uno."
+   }
   ]
  },
  "what-is-a-vps": {

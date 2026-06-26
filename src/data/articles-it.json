@@ -298,6 +298,24 @@
    "Bilanciamento del carico tra back-end identici",
    "Caching e compressione per alleggerire il back-end",
    "Limitazione di frequenza, WAF e occultamento dei server back-end"
+  ],
+  "faq": [
+   {
+    "q": "Qual è la differenza tra un reverse proxy e un forward proxy?",
+    "a": "Un forward proxy si trova davanti ai client e invia richieste a internet per loro conto, nascondendo chi sta chiedendo. Un reverse proxy è l'immagine speculare: si trova davanti ai server, rivolto verso i client, e nasconde il back-end. Stesso ruolo di intermediario, ma sul lato opposto della conversazione."
+   },
+   {
+    "q": "Un reverse proxy è la stessa cosa di un bilanciatore di carico?",
+    "a": "Non esattamente. Il bilanciamento del carico — distribuire le richieste tra più back-end — è solo uno dei compiti che un reverse proxy può svolgere. Un reverse proxy gestisce anche il routing, la terminazione TLS, il caching e la sicurezza, quindi un bilanciatore di carico è in realtà solo una funzione del ruolo più ampio del reverse proxy."
+   },
+   {
+    "q": "Quale software si usa per far funzionare un reverse proxy?",
+    "a": "Le scelte più comuni sono Nginx e HAProxy (affermati e collaudati da tempo), Caddy (apprezzato per l'HTTPS automatico) e Traefik (pensato per container e Kubernetes). Anche Apache può farlo con mod_proxy, e le opzioni gestite come i bilanciatori di carico cloud o Cloudflare sono reverse proxy che qualcun altro fa funzionare per te."
+   },
+   {
+    "q": "Ho bisogno di un reverse proxy?",
+    "a": "Se ospiti in self-hosting più di un servizio, vuoi gestire l'HTTPS in modo pulito in un unico punto, o hai bisogno di un singolo indirizzo davanti a più app, un reverse proxy come Nginx o Caddy è la risposta standard. Per una singola app semplice è facoltativo, ma quasi ogni stack di produzione ne usa uno."
+   }
   ]
  },
  "what-is-a-vps": {

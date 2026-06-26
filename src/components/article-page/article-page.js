@@ -47,6 +47,14 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
           { "@type": "ListItem", "position": 3, "name": article.title, "item": artUrl },
         ],
       },
+      ...(article.faq && article.faq.length ? [{
+        "@type": "FAQPage",
+        "mainEntity": article.faq.map((f) => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a },
+        })),
+      }] : []),
     ],
   };
   // Nom de prop calculé pour éviter le faux positif du scanner XSS (payload 100% contrôlé).
@@ -141,6 +149,18 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                         <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{article.cta.label[loc] || article.cta.label.en} &rarr;</a>
                       </aside>
                     )}
+
+                    {article.faq && article.faq.length ? (
+                      <section className="vd-faq mt-4">
+                        <h2 style={{ borderLeft: "none", paddingLeft: 0 }}>{s.ui.faq || "FAQ"}</h2>
+                        {article.faq.map((f, fi) => (
+                          <div key={fi} className="vd-faq-item">
+                            <h3 style={{ fontSize: "1.2rem", marginBottom: ".35rem" }}>{f.q}</h3>
+                            <p>{f.a}</p>
+                          </div>
+                        ))}
+                      </section>
+                    ) : null}
 
                     <div className="tags d-flex flex-wrap gap-2 align-items-center mt-4">
                       <strong>#</strong>

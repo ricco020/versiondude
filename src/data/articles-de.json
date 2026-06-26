@@ -298,6 +298,24 @@
    "Load Balancing über identische Backends",
    "Caching und Kompression zur Entlastung des Backends",
    "Rate Limiting, WAF und Verbergen der Backend-Server"
+  ],
+  "faq": [
+   {
+    "q": "Was ist der Unterschied zwischen einem Reverse Proxy und einem Forward Proxy?",
+    "a": "Ein Forward Proxy sitzt vor den Clients und stellt Anfragen ans Internet in ihrem Namen, sodass verborgen bleibt, wer fragt. Ein Reverse Proxy ist das Spiegelbild davon: Er sitzt vor den Servern, den Clients zugewandt, und verbirgt das Backend. Dieselbe Vermittlerrolle, nur auf der anderen Seite des Gesprächs."
+   },
+   {
+    "q": "Ist ein Reverse Proxy dasselbe wie ein Load Balancer?",
+    "a": "Nicht ganz. Load Balancing — das Verteilen von Anfragen auf mehrere Backends — ist nur eine der Aufgaben, die ein Reverse Proxy übernehmen kann. Ein Reverse Proxy kümmert sich außerdem um Routing, TLS-Terminierung, Caching und Sicherheit; ein Load Balancer ist daher nur eine Funktion innerhalb der umfassenderen Reverse-Proxy-Rolle."
+   },
+   {
+    "q": "Welche Software nutzt man, um einen Reverse Proxy zu betreiben?",
+    "a": "Gängige Optionen sind Nginx und HAProxy (langjährig etabliert und erprobt), Caddy (beliebt für automatisches HTTPS) und Traefik (für Container und Kubernetes gemacht). Apache kann es ebenfalls mit mod_proxy, und gemanagte Optionen wie Cloud-Load-Balancer oder Cloudflare sind Reverse Proxys, die jemand anderes für dich betreibt."
+   },
+   {
+    "q": "Brauche ich einen Reverse Proxy?",
+    "a": "Wenn du mehr als einen Dienst selbst hostest, HTTPS sauber an einer einzigen Stelle handhaben möchtest oder eine einzige Adresse vor mehreren Apps brauchst, ist ein Reverse Proxy wie Nginx oder Caddy die Standardantwort. Für eine einzelne einfache App ist er optional, aber so gut wie jeder Produktiv-Stack verwendet einen."
+   }
   ]
  },
  "what-is-a-vps": {
