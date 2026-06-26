@@ -276,6 +276,30 @@
    "Welchen Weg Sie auch wählen, planen Sie die operativen Grundlagen von Anfang an ein statt im Nachhinein. Richten Sie automatisierte, getestete Backups ein, spielen Sie Sicherheitsupdates prompt ein, und haben Sie einen Plan, um wachsenden Traffic und Inhalt zu bewältigen. Selbsthosting belohnt Sie wahrhaftig mit Kontrolle und Eigentümerschaft, aber es verlangt im Gegenzug Verantwortung, und die Websites, die gedeihen, sind jene, deren Eigentümer dieses Tauschgeschäft ernst nehmen."
   ]
  },
+ "what-is-a-reverse-proxy": {
+  "title": "Was ist ein Reverse Proxy? Ein verständlicher Leitfaden für Entwickler",
+  "dek": "Ein Reverse Proxy sitzt vor deinen Servern und nimmt jede eingehende Anfrage zuerst entgegen — Routing, HTTPS, Caching und Schutz an einer Stelle. Was er leistet, wie er sich von einem Forward Proxy unterscheidet und mit welchen Tools du einen betreibst.",
+  "heroAlt": "Moderne rackmontierte Servereinheiten in einem Rechenzentrum",
+  "bodyCaption": "Blaue Ethernet-Kabel in einem Netzwerk-Switch — die Routing-Ebene, vor der ein Reverse Proxy sitzt.",
+  "paras": [
+   "Ein Reverse Proxy ist ein Server, der vor einem oder mehreren Backend-Servern sitzt und jede eingehende Anfrage entgegennimmt, bevor diese sie erreichen. Der Client — ein Browser oder eine App — spricht immer nur mit dem Proxy; der Proxy entscheidet, welches Backend antworten soll, leitet die Anfrage weiter und schickt die Antwort zurück. Nach außen wirkt es wie ein einziger Server, selbst wenn im Hintergrund mehrere arbeiten.",
+   "Der Name ergibt mehr Sinn im Vergleich zum Gegenstück. Ein Forward Proxy sitzt vor den Clients und spricht in deren Namen mit dem Internet, wobei er verbirgt, wer die Anfrage stellt — das Modell hinter Web-Filtern in Unternehmen und vielen VPNs. Ein Reverse Proxy macht das genaue Spiegelbild: Er sitzt vor den Servern und wendet sich den Clients zu, wobei er das Backend verbirgt. Dieselbe Vermittler-Idee, nur auf der anderen Seite des Gesprächs.",
+   "Seine erste Aufgabe ist das Routing. Eine einzige öffentliche Domain und IP-Adresse kann viele verschiedene Anwendungen nach außen vertreten: Anfragen an /api gehen an einen Dienst, /blog an einen anderen, alles Übrige an einen dritten — ohne dass der Besucher je die Ports oder Maschinen darunter sieht. Genau dieser einzelne Einstiegspunkt erlaubt es dir, ein Dutzend kleiner Dienste zu betreiben und der Welt trotzdem eine saubere Adresse zu präsentieren.",
+   "Über das Routing hinaus ist der Reverse Proxy der Ort, an dem die übergreifenden Aufgaben einmal erledigt werden statt in jeder App. Er terminiert TLS, sodass die HTTPS-Zertifikate an einer Stelle liegen statt in jedem einzelnen Dienst. Er kann Anfragen über mehrere identische Backends verteilen (Load Balancing), häufige Antworten zwischenspeichern, damit das Backend nicht zweimal für dasselbe belastet wird, und Antworten komprimieren, um Bandbreite zu sparen — alles transparent für die dahinterliegenden Apps.",
+   "Er ist außerdem eine natürliche Sicherheitsgrenze. Da die Backends nie direkt im Internet stehen, bleiben ihre echten Adressen und ihr Software-Stack verborgen, was die Angriffsfläche verkleinert. Der Proxy wird zur einzigen Stelle, an der man Rate Limits durchsetzt, missbräuchlichen Datenverkehr blockiert, eine Web Application Firewall (WAF) anbindet oder einen sich fehlverhaltenden Client abschneidet — Kontrollen, die man sonst jedem Dienst einzeln aufsetzen müsste.",
+   "Eine Handvoll Tools dominiert diesen Bereich. Nginx und HAProxy sind die altbewährten, kampferprobten Klassiker; Caddy ist beliebt, um automatisches HTTPS nahezu ohne Konfiguration zum Laufen zu bringen; und Traefik ist für Container- und Kubernetes-Umgebungen gebaut, in denen Backends kommen und gehen. Apache kann die Aufgabe ebenfalls per mod_proxy übernehmen, und gemanagte Optionen — Cloud-Load-Balancer oder ein Dienst wie Cloudflare — sind im Grunde Reverse Proxys, die jemand anderes für dich betreibt.",
+   "In der Praxis begegnet dir ein Reverse Proxy immer dann, wenn ein Server mehr als eine Sache tun muss. Typische Aufbauten sind: mehrere Websites von einer einzigen Maschine ausliefern, HTTPS vor eine App setzen, die nur einfaches HTTP spricht, interne Microservices unter einer aufgeräumten Domain bereitstellen oder den Datenverkehr für mehr Ausfallsicherheit über mehrere Kopien einer App verteilen. Self-Hoster verlassen sich ständig darauf, um viele Tools hinter einer einzigen Adresse zu betreiben.",
+   "Es hilft, den Reverse Proxy gegen seine Nachbarn einzuordnen. Ein Load Balancer ist eigentlich nur eine Funktion, die ein Reverse Proxy bieten kann: das Verteilen von Anfragen auf Backends. Ein API-Gateway ist ein spezialisierter Reverse Proxy für APIs, der obendrauf Authentifizierung, Rate Limiting und das Formen von Anfragen hinzufügt. Die Begriffe überschneiden sich, weil sie alle Spielarten derselben Idee sind — eine schlaue Eingangstür vor deinen Diensten.",
+   "Solltest du also selbst einen betreiben? Wenn du mehr als einen einzigen Dienst selbst hostest, HTTPS sauber abgewickelt haben möchtest oder eine einzige Adresse vor mehreren Apps brauchst, ist ein Reverse Proxy wie Nginx oder Caddy die Standardantwort — und er braucht einen Server, den du selbst kontrollierst, um zu laufen. Es ist ein kleines, stabiles Stück Infrastruktur, das im Stillen viel leistet, und genau deshalb hat fast jeder Produktions-Stack einen."
+  ],
+  "list": [
+   "Eine Domain vor mehreren Apps oder Microservices",
+   "Automatisches HTTPS / TLS-Terminierung (Caddy, Nginx)",
+   "Load Balancing über identische Backends",
+   "Caching und Kompression zur Entlastung des Backends",
+   "Rate Limiting, WAF und Verbergen der Backend-Server"
+  ]
+ },
  "what-is-a-vps": {
   "title": "Was ist ein VPS? Ein klarer Leitfaden für Entwickler",
   "dek": "Ein VPS (Virtual Private Server) gibt Ihnen einen privaten Anteil eines echten Servers – Ihr eigenes OS, Root-Zugriff und garantierte Ressourcen. Was das bedeutet, wie er sich von Shared- und Cloud-Hosting unterscheidet und wann Sie einen brauchen.",

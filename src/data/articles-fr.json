@@ -276,6 +276,30 @@
    "Quel que soit le chemin choisi, prévoyez le budget des bases opérationnelles dès le départ plutôt qu'après coup. Mettez en place des sauvegardes automatisées et testées, appliquez promptement les mises à jour de sécurité, et ayez un plan pour gérer la croissance du trafic et du contenu. L'auto-hébergement vous récompense véritablement par le contrôle et la propriété, mais il exige de la responsabilité en retour, et les sites qui prospèrent sont ceux dont les propriétaires prennent ce marché au sérieux."
   ]
  },
+ "what-is-a-reverse-proxy": {
+  "title": "Qu'est-ce qu'un proxy inverse ? Le guide clair pour les développeurs",
+  "dek": "Un proxy inverse se place devant vos serveurs et traite chaque requête entrante en premier — routage, HTTPS, mise en cache et protection au même endroit. Ce qu'il fait, en quoi il diffère d'un proxy direct, et les outils pour en faire tourner un.",
+  "heroAlt": "Des serveurs montés en rack dans un data center moderne",
+  "bodyCaption": "Des câbles Ethernet bleus branchés sur un switch réseau — la couche de routage devant laquelle se place un proxy inverse.",
+  "paras": [
+   "Un proxy inverse est un serveur qui se place devant un ou plusieurs serveurs back-end et traite chaque requête entrante avant eux. Le client — un navigateur ou une application — ne dialogue jamais qu'avec le proxy ; c'est le proxy qui décide quel back-end doit répondre, transmet la requête et renvoie la réponse. Vu de l'extérieur, on dirait un seul serveur, même quand plusieurs travaillent en coulisses.",
+   "Le nom prend tout son sens face à son contraire. Un proxy direct se place devant les clients et dialogue avec internet en leur nom, masquant qui émet la requête — c'est le modèle des filtres web d'entreprise et de beaucoup de VPN. Un proxy inverse fait l'inverse exact : il se place devant les serveurs et fait face aux clients, en masquant le back-end. Même idée d'intermédiaire, mais de l'autre côté de la conversation.",
+   "Sa première mission, c'est le routage. Un seul domaine public et une seule adresse IP peuvent servir de façade à de nombreuses applications : les requêtes vers /api vont à un service, /blog à un autre, le reste à un troisième, sans que le visiteur voie jamais les ports ni les machines en dessous. C'est ce point d'entrée unique qui vous permet de faire tourner une dizaine de petits services tout en présentant au monde une seule adresse propre.",
+   "Au-delà du routage, le proxy inverse est l'endroit où le travail transversal se fait une seule fois au lieu d'être répété dans chaque appli. Il termine TLS, donc les certificats HTTPS vivent à un seul endroit plutôt que dans chaque service. Il peut répartir la charge entre plusieurs back-ends identiques, mettre en cache les réponses courantes pour ne pas solliciter deux fois le back-end pour la même chose, et compresser les réponses pour économiser de la bande passante — le tout de façon transparente pour les applis derrière lui.",
+   "C'est aussi une frontière de sécurité naturelle. Comme les back-ends ne sont jamais exposés directement à internet, leurs adresses réelles et leur pile logicielle restent cachées, réduisant ce qu'un attaquant peut voir. Le proxy devient le point unique où appliquer des limites de débit, bloquer le trafic abusif, brancher un pare-feu applicatif web (WAF) ou couper un client malveillant — des contrôles qu'il faudrait sinon greffer séparément sur chaque service.",
+   "Une poignée d'outils dominent ce terrain. Nginx et HAProxy sont les valeurs sûres, éprouvées de longue date ; Caddy est apprécié pour obtenir du HTTPS automatique avec quasiment aucune configuration ; et Traefik est conçu pour les environnements à conteneurs et Kubernetes, où les back-ends apparaissent et disparaissent. Apache sait aussi le faire avec mod_proxy, et les options managées — répartiteurs de charge cloud, ou un service comme Cloudflare — sont au fond des proxys inverses que quelqu'un d'autre fait tourner pour vous.",
+   "En pratique, on croise un proxy inverse dès qu'un serveur doit faire plus d'une chose. Cas courants : servir plusieurs sites web depuis une même machine, mettre du HTTPS devant une appli qui ne parle que le HTTP simple, exposer des microservices internes sous un seul domaine bien rangé, ou répartir le trafic sur quelques copies d'une appli pour plus de résilience. Les adeptes de l'auto-hébergement s'en servent en permanence pour faire tourner de nombreux outils derrière une seule adresse.",
+   "Il est utile de situer le proxy inverse par rapport à ses voisins. Un répartiteur de charge n'est en réalité qu'une fonction parmi celles qu'un proxy inverse peut offrir : répartir les requêtes entre les back-ends. Une passerelle d'API (API gateway) est un proxy inverse spécialisé pour les API, qui ajoute par-dessus l'authentification, la limitation de débit et la mise en forme des requêtes. Les termes se recoupent parce qu'ils sont tous des variantes de la même idée — une porte d'entrée intelligente devant vos services.",
+   "Alors, faut-il en faire tourner un soi-même ? Si vous auto-hébergez plus d'un seul service, voulez gérer le HTTPS proprement, ou avez besoin d'une seule adresse devant plusieurs applis, un proxy inverse comme Nginx ou Caddy est la réponse standard — et il lui faut un serveur que vous contrôlez pour tourner. C'est une brique d'infrastructure petite et stable qui fait discrètement beaucoup, et c'est précisément pour ça que presque toute pile de production en a une."
+  ],
+  "list": [
+   "Un seul domaine devant plusieurs applis ou microservices",
+   "HTTPS / terminaison TLS automatique (Caddy, Nginx)",
+   "Répartition de charge entre back-ends identiques",
+   "Mise en cache et compression pour soulager le back-end",
+   "Limitation de débit, WAF et masquage des serveurs back-end"
+  ]
+ },
  "what-is-a-vps": {
   "title": "Qu'est-ce qu'un VPS ? Guide clair pour les développeurs",
   "dek": "Un VPS (serveur privé virtuel) vous donne une part privée d'un vrai serveur — votre propre OS, un accès root et des ressources garanties. Ce que ça veut dire, en quoi il diffère du mutualisé et du cloud, et quand en avoir un.",

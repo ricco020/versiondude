@@ -276,6 +276,30 @@
    "Sea cual sea el camino que elijas, presupuesta lo básico operativo desde el principio en lugar de como una ocurrencia tardía. Configura copias de seguridad automatizadas y probadas, aplica las actualizaciones de seguridad con prontitud y ten un plan para gestionar el crecimiento del tráfico y del contenido. El autoalojamiento te recompensa genuinamente con control y propiedad, pero pide responsabilidad a cambio, y los sitios que prosperan son aquellos cuyos dueños se toman ese trato en serio."
   ]
  },
+ "what-is-a-reverse-proxy": {
+  "title": "¿Qué es un proxy inverso? Una guía clara para desarrolladores",
+  "dek": "Un proxy inverso se sitúa delante de tus servidores y gestiona primero cada petición entrante — enrutado, HTTPS, caché y protección en un solo lugar. Qué hace, en qué se diferencia de un proxy directo y las herramientas para poner uno en marcha.",
+  "heroAlt": "Servidores montados en rack en un data center moderno",
+  "bodyCaption": "Cables Ethernet azules conectados a un switch de red — la capa de enrutado delante de la que se sitúa un proxy inverso.",
+  "paras": [
+   "Un proxy inverso es un servidor que se sitúa delante de uno o varios servidores back-end y gestiona cada petición entrante antes que ellos. El cliente — un navegador o una aplicación — solo habla con el proxy; es el proxy quien decide qué back-end debe responder, reenvía la petición y devuelve la respuesta. Desde fuera parece un único servidor, aunque sean varios los que trabajan por detrás.",
+   "El nombre cobra más sentido junto a su opuesto. Un proxy directo se sitúa delante de los clientes y habla con internet en su nombre, ocultando quién hace la petición — el modelo de los filtros web corporativos y de muchas VPN. Un proxy inverso hace justo lo contrario: se sitúa delante de los servidores y da la cara a los clientes, ocultando el back-end. La misma idea de intermediario, pero en el otro lado de la conversación.",
+   "Su primera tarea es el enrutado. Un único dominio público y una sola dirección IP pueden dar la cara por muchas aplicaciones distintas: las peticiones a /api van a un servicio, las de /blog a otro y el resto a un tercero, todo sin que el visitante vea nunca los puertos ni las máquinas que hay debajo. Es ese punto de entrada único lo que te permite ejecutar una docena de servicios pequeños y aun así presentar al mundo una sola dirección limpia.",
+   "Más allá del enrutado, el proxy inverso es donde el trabajo transversal se hace una vez en lugar de en cada aplicación. Termina TLS, así que los certificados HTTPS viven en un solo sitio en lugar de dentro de cada servicio. Puede balancear la carga entre varios back-ends idénticos, cachear las respuestas comunes para no golpear dos veces al back-end por lo mismo y comprimir las respuestas para ahorrar ancho de banda — todo de forma transparente para las aplicaciones que tiene detrás.",
+   "También es una frontera de seguridad natural. Como los back-ends nunca quedan expuestos directamente a internet, sus direcciones reales y su pila de software permanecen ocultas, reduciendo lo que un atacante puede ver. El proxy se convierte en el único lugar donde aplicar límites de tasa, bloquear tráfico abusivo, acoplar un cortafuegos de aplicaciones web (WAF) o cortar a un cliente que se porta mal — controles que de otro modo tendrías que añadir por separado a cada servicio.",
+   "Un puñado de herramientas domina este terreno. Nginx y HAProxy son las opciones veteranas y probadas a fondo; Caddy es popular para conseguir HTTPS automático casi sin configuración; y Traefik está pensado para entornos con contenedores y Kubernetes, donde los back-ends aparecen y desaparecen. Apache también puede hacerlo con mod_proxy, y las opciones gestionadas — balanceadores de carga en la nube, o un servicio como Cloudflare — son en el fondo proxies inversos que otro gestiona por ti.",
+   "En la práctica te topas con un proxy inverso siempre que un servidor tiene que hacer más de una cosa. Montajes habituales: servir varios sitios web desde una sola máquina, poner HTTPS delante de una aplicación que solo habla HTTP simple, exponer microservicios internos bajo un único dominio ordenado, o repartir el tráfico entre unas cuantas copias de una aplicación para ganar resiliencia. Quienes se autoalojan se apoyan en él constantemente para ejecutar muchas herramientas tras una sola dirección.",
+   "Ayuda situar el proxy inverso frente a sus vecinos. Un balanceador de carga no es más que una de las funciones que un proxy inverso puede ofrecer: repartir las peticiones entre los back-ends. Una pasarela de API (API gateway) es un proxy inverso especializado para API, que añade por encima autenticación, limitación de tasa y modelado de peticiones. Los términos se solapan porque todos son variaciones de la misma idea — una puerta de entrada inteligente delante de tus servicios.",
+   "Entonces, ¿deberías montar uno tú mismo? Si te autoalojas más de un solo servicio, quieres gestionar el HTTPS de forma limpia, o necesitas una sola dirección delante de varias aplicaciones, un proxy inverso como Nginx o Caddy es la respuesta estándar — y necesita un servidor que controles para funcionar. Es una pieza de infraestructura pequeña y estable que hace mucho sin hacer ruido, y por eso casi todo stack de producción tiene uno."
+  ],
+  "list": [
+   "Un solo dominio delante de varias aplicaciones o microservicios",
+   "HTTPS / terminación TLS automática (Caddy, Nginx)",
+   "Balanceo de carga entre back-ends idénticos",
+   "Caché y compresión para aliviar el back-end",
+   "Limitación de tasa, WAF y ocultación de los servidores back-end"
+  ]
+ },
  "what-is-a-vps": {
   "title": "¿Qué es un VPS? Guía clara para desarrolladores",
   "dek": "Un VPS (servidor privado virtual) te da una porción privada de un servidor real — tu propio sistema operativo, acceso root y recursos garantizados. Qué significa, en qué se diferencia del compartido y el cloud, y cuándo necesitas uno.",

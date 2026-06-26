@@ -276,6 +276,30 @@
    "Qualunque sia il percorso scelto, prevedi il budget delle basi operative fin dall'inizio anziché dopo. Predisponi backup automatizzati e testati, applica prontamente gli aggiornamenti di sicurezza, e abbi un piano per gestire la crescita del traffico e del contenuto. L'auto-ospitaggio ti ricompensa veramente con il controllo e la proprietà, ma esige responsabilità in cambio, e i siti che prosperano sono quelli i cui proprietari prendono sul serio questo scambio."
   ]
  },
+ "what-is-a-reverse-proxy": {
+  "title": "Che cos'è un reverse proxy? Una guida chiara per gli sviluppatori",
+  "dek": "Un reverse proxy si colloca davanti ai tuoi server e gestisce per prima ogni richiesta in entrata — instradamento, HTTPS, caching e protezione in un unico punto. Cosa fa, in cosa differisce da un forward proxy e gli strumenti per metterne in piedi uno.",
+  "heroAlt": "Moderne unità server montate a rack in un data center",
+  "bodyCaption": "Cavi Ethernet blu collegati a uno switch di rete — il livello di instradamento davanti al quale si colloca un reverse proxy.",
+  "paras": [
+   "Un reverse proxy è un server che si colloca davanti a uno o più server back-end e gestisce ogni richiesta in entrata prima che arrivi a loro. Il client — un browser o un'app — parla sempre e solo con il proxy; è il proxy a decidere quale back-end debba rispondere, a inoltrare la richiesta e a restituire la risposta. Dall'esterno sembra un unico server, anche quando dietro ne lavorano diversi.",
+   "Il nome acquista più senso accanto al suo opposto. Un forward proxy si colloca davanti ai client e dialoga con internet per loro conto, nascondendo chi sta facendo la richiesta — il modello dietro i filtri web aziendali e molte VPN. Un reverse proxy fa l'esatto contrario: si colloca davanti ai server e si rivolge ai client, nascondendo il back-end. Stessa idea di intermediario, ma sul lato opposto della conversazione.",
+   "Il suo primo compito è l'instradamento. Un solo dominio pubblico e un solo indirizzo IP possono fare da facciata a molte applicazioni diverse: le richieste verso /api vanno a un servizio, /blog a un altro, tutto il resto a un terzo, senza che il visitatore veda mai le porte o le macchine sottostanti. È proprio questo punto d'ingresso unico a permetterti di far girare una dozzina di piccoli servizi presentando comunque al mondo un solo indirizzo pulito.",
+   "Oltre all'instradamento, il reverse proxy è il punto in cui il lavoro trasversale viene svolto una volta sola anziché in ogni app. Termina TLS, così i certificati HTTPS vivono in un unico posto invece che dentro ciascun servizio. Può bilanciare il carico tra più back-end identici, mettere in cache le risposte più comuni per non sollecitare due volte il back-end per la stessa cosa e comprimere le risposte per risparmiare banda — il tutto in modo trasparente per le app che ha dietro.",
+   "È anche un confine di sicurezza naturale. Poiché i back-end non sono mai esposti direttamente a internet, i loro indirizzi reali e il loro stack software restano nascosti, riducendo ciò che un attaccante può vedere. Il proxy diventa l'unico punto in cui imporre limiti di frequenza, bloccare il traffico abusivo, agganciare un web application firewall (WAF) o tagliare fuori un client che si comporta male — controlli che altrimenti dovresti applicare separatamente a ogni servizio.",
+   "Una manciata di strumenti domina questo ambito. Nginx e HAProxy sono le scelte consolidate e ampiamente collaudate; Caddy è apprezzato per ottenere HTTPS automatico con quasi nessuna configurazione; e Traefik è pensato per ambienti a container e Kubernetes, dove i back-end compaiono e scompaiono. Anche Apache può farlo con mod_proxy, e le opzioni gestite — bilanciatori di carico cloud, o un servizio come Cloudflare — sono in sostanza reverse proxy che qualcun altro gestisce per te.",
+   "In pratica incontri un reverse proxy ogni volta che un server deve fare più di una cosa. Configurazioni comuni: servire più siti web da un'unica macchina, mettere HTTPS davanti a un'app che parla solo HTTP semplice, esporre microservizi interni sotto un unico dominio ordinato, o distribuire il traffico su qualche copia di un'app per maggiore resilienza. Chi fa self-hosting vi si appoggia di continuo per far girare molti strumenti dietro un solo indirizzo.",
+   "È utile collocare il reverse proxy rispetto ai suoi vicini. Un bilanciatore di carico è in realtà solo una delle funzioni che un reverse proxy può offrire: distribuire le richieste tra i back-end. Un API gateway è un reverse proxy specializzato per le API, che aggiunge in cima autenticazione, limitazione di frequenza e modellazione delle richieste. I termini si sovrappongono perché sono tutti varianti della stessa idea — una porta d'ingresso intelligente davanti ai tuoi servizi.",
+   "Quindi dovresti gestirne uno tu stesso? Se fai self-hosting di più di un singolo servizio, vuoi gestire l'HTTPS in modo pulito, o ti serve un solo indirizzo davanti a più app, un reverse proxy come Nginx o Caddy è la risposta standard — e per funzionare ha bisogno di un server che controlli tu. È un piccolo e stabile pezzo di infrastruttura che fa molto in silenzio, ed è esattamente per questo che quasi ogni stack di produzione ne ha uno."
+  ],
+  "list": [
+   "Un solo dominio davanti a più app o microservizi",
+   "HTTPS / terminazione TLS automatica (Caddy, Nginx)",
+   "Bilanciamento del carico tra back-end identici",
+   "Caching e compressione per alleggerire il back-end",
+   "Limitazione di frequenza, WAF e occultamento dei server back-end"
+  ]
+ },
  "what-is-a-vps": {
   "title": "Che cos'è un VPS? Guida chiara per gli sviluppatori",
   "dek": "Un VPS (server privato virtuale) ti dà una porzione privata di un vero server — il tuo OS, l'accesso root e risorse garantite. Cosa significa, in cosa differisce dal condiviso e dal cloud, e quando averne uno.",

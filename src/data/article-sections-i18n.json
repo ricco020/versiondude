@@ -1120,5 +1120,79 @@
    "pt": "Onde correm as APIs",
    "n": 1
   }
+ ],
+ "what-is-a-reverse-proxy": [
+  {
+   "n": 1,
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": ""
+  },
+  {
+   "n": 1,
+   "en": "Reverse proxy vs forward proxy",
+   "fr": "Proxy inverse vs proxy direct",
+   "es": "Proxy inverso vs proxy directo",
+   "de": "Reverse Proxy vs Forward Proxy",
+   "it": "Reverse proxy vs forward proxy",
+   "pt": "Proxy inverso vs proxy direto"
+  },
+  {
+   "n": 2,
+   "en": "What a reverse proxy actually does",
+   "fr": "Ce que fait vraiment un proxy inverse",
+   "es": "Qué hace realmente un proxy inverso",
+   "de": "Was ein Reverse Proxy tatsächlich tut",
+   "it": "Cosa fa davvero un reverse proxy",
+   "pt": "O que um proxy inverso realmente faz"
+  },
+  {
+   "n": 1,
+   "en": "A natural security boundary",
+   "fr": "Une frontière de sécurité naturelle",
+   "es": "Una frontera de seguridad natural",
+   "de": "Eine natürliche Sicherheitsgrenze",
+   "it": "Un confine di sicurezza naturale",
+   "pt": "Uma fronteira de segurança natural"
+  },
+  {
+   "n": 1,
+   "en": "The tools that run reverse proxies",
+   "fr": "Les outils qui font tourner les proxys inverses",
+   "es": "Las herramientas que ejecutan proxys inversos",
+   "de": "Die Tools, die Reverse Proxys betreiben",
+   "it": "Gli strumenti che gestiscono i reverse proxy",
+   "pt": "As ferramentas que executam proxies inversos"
+  },
+  {
+   "n": 1,
+   "en": "Common reverse-proxy setups",
+   "fr": "Cas d'usage courants du proxy inverse",
+   "es": "Configuraciones habituales de proxy inverso",
+   "de": "Typische Reverse-Proxy-Setups",
+   "it": "Configurazioni comuni di reverse proxy",
+   "pt": "Configurações comuns de proxy inverso"
+  },
+  {
+   "n": 1,
+   "en": "Reverse proxy vs load balancer vs API gateway",
+   "fr": "Proxy inverse vs load balancer vs passerelle API",
+   "es": "Proxy inverso vs balanceador de carga vs API gateway",
+   "de": "Reverse Proxy vs Load Balancer vs API-Gateway",
+   "it": "Reverse proxy vs load balancer vs API gateway",
+   "pt": "Proxy inverso vs balanceador de carga vs API gateway"
+  },
+  {
+   "n": 1,
+   "en": "Should you run one yourself?",
+   "fr": "Faut-il en gérer un soi-même ?",
+   "es": "¿Deberías gestionar uno tú mismo?",
+   "de": "Sollten Sie selbst einen betreiben?",
+   "it": "Dovresti gestirne uno tu stesso?",
+   "pt": "Deve gerir um você mesmo?"
+  }
  ]
 }

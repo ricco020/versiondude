@@ -67,6 +67,20 @@ const DEV_CLOUD = {
   },
 };
 
+// Reverse-proxy article: same Infomaniak offer, angle tuned to the topic (run Nginx/Caddy/Traefik on a server you control).
+const REVERSE_PROXY_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'Running your own reverse proxy (Nginx, Caddy, Traefik) means running a server you fully control. Infomaniak — a Swiss, privacy-respecting host — offers VPS and cloud servers to put one in front of your apps.',
+    fr: 'Faire tourner son propre reverse proxy (Nginx, Caddy, Traefik), c’est gérer un serveur que l’on contrôle entièrement. Infomaniak — hébergeur suisse, respectueux de la vie privée — propose des VPS et serveurs cloud pour en placer un devant vos applications.',
+    es: 'Ejecutar tu propio proxy inverso (Nginx, Caddy, Traefik) significa gestionar un servidor que controlas por completo. Infomaniak — proveedor suizo, respetuoso con la privacidad — ofrece VPS y servidores cloud para colocar uno delante de tus aplicaciones.',
+    de: 'Einen eigenen Reverse Proxy (Nginx, Caddy, Traefik) zu betreiben heißt, einen Server zu betreiben, den Sie vollständig kontrollieren. Infomaniak — ein schweizerischer, datenschutzfreundlicher Anbieter — bietet VPS und Cloud-Server, um einen vor Ihre Apps zu stellen.',
+    it: "Gestire il proprio reverse proxy (Nginx, Caddy, Traefik) significa gestire un server che controlli completamente. Infomaniak — provider svizzero attento alla privacy — offre VPS e server cloud per metterne uno davanti alle tue applicazioni.",
+    pt: 'Gerir o seu próprio proxy inverso (Nginx, Caddy, Traefik) significa gerir um servidor que controla totalmente. A Infomaniak — fornecedor suíço, respeitador da privacidade — oferece VPS e servidores cloud para colocar um à frente das suas aplicações.',
+  },
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
@@ -110,6 +124,26 @@ export const ARTICLES = [
     ],
     list: ['Web apps & APIs that need full control', 'Databases (PostgreSQL, MySQL, Redis)', 'Self-hosted tools, bots and cron jobs', 'Staging environments and side projects', 'Learning Linux server administration'],
     cta: DEV_CLOUD,
+  }),
+  a({
+    slug: 'what-is-a-reverse-proxy', category: 'tooling', readingMinutes: 6, date: '2026-06-26',
+    title: 'What is a reverse proxy? A plain-English guide for developers',
+    dek: 'A reverse proxy sits in front of your servers and handles every incoming request first — routing, HTTPS, caching and protection in one place. What it does, how it differs from a forward proxy, and the tools that run one.',
+    hero: '/assets/articles/what-is-a-reverse-proxy-hero.jpg', heroAlt: 'Modern rack-mounted server units in a data centre',
+    body: '/assets/articles/what-is-a-reverse-proxy-body.jpg', bodyCaption: 'Blue Ethernet cables plugged into a network switch — the routing layer a reverse proxy sits in front of.',
+    paras: [
+      'A reverse proxy is a server that sits in front of one or more backend servers and handles every incoming request before they do. The client — a browser or an app — only ever talks to the proxy; the proxy decides which backend should answer, forwards the request, and sends the response back. To the outside world it looks like a single server, even when several are doing the work behind it.',
+      'The name makes more sense next to its opposite. A forward proxy sits in front of clients and speaks to the wider internet on their behalf, hiding who is making the request — the model behind corporate web filters and many VPNs. A reverse proxy does the mirror image: it sits in front of servers and faces the clients, hiding the backend. Same go-between idea, opposite side of the conversation.',
+      'Its first job is routing. One public domain and IP address can front many different applications: requests for /api go to one service, /blog to another, everything else to a third, all without the visitor ever seeing the ports or machines underneath. That single entry point is what lets you run a dozen small services and still present one clean address to the world.',
+      'On top of routing, a reverse proxy is where the cross-cutting work gets done once instead of in every app. It terminates TLS, so HTTPS certificates live in one place rather than inside each service. It can load-balance requests across several identical backends, cache common responses so the backend is not hit twice for the same thing, and compress replies to save bandwidth — all transparently to the apps behind it.',
+      'It is also a natural security boundary. Because backends never face the internet directly, their real addresses and software stay hidden, shrinking what an attacker can see. The proxy becomes the single place to enforce rate limits, block abusive traffic, attach a web application firewall, or cut off a misbehaving client — controls you would otherwise have to bolt onto every service separately.',
+      'A handful of tools dominate this space. Nginx and HAProxy are the long-standing, battle-tested choices; Caddy is popular for getting automatic HTTPS working with almost no configuration; and Traefik is built for container and Kubernetes setups where backends come and go. Apache can do the job too with mod_proxy, and managed options — cloud load balancers, or a service like Cloudflare — are essentially reverse proxies someone else runs for you.',
+      'In practice you meet a reverse proxy whenever one server has to do more than one thing. Common setups include serving several websites from a single machine, putting HTTPS in front of an app that only speaks plain HTTP, exposing internal microservices under one tidy domain, or spreading traffic across a few copies of an app for resilience. Self-hosters lean on it constantly to run many tools behind one address.',
+      'It helps to place a reverse proxy against its neighbours. A load balancer is really just one feature a reverse proxy can provide: spreading requests across backends. An API gateway is a specialised reverse proxy for APIs, adding authentication, rate limiting and request shaping on top. The terms overlap because they are all variations on the same idea — a smart front door in front of your services.',
+      'So would you run one yourself? If you self-host more than a single service, want HTTPS handled cleanly, or need one address in front of several apps, a reverse proxy like Nginx or Caddy is the standard answer — and it needs a server you control to run on. It is a small, stable piece of infrastructure that quietly does a lot, which is exactly why almost every production stack has one.',
+    ],
+    list: ['One domain in front of several apps or microservices', 'Automatic HTTPS / TLS termination (Caddy, Nginx)', 'Load balancing across identical backends', 'Caching and compression to spare the backend', 'Rate limiting, WAF and hiding backend servers'],
+    cta: REVERSE_PROXY_CTA,
   }),
   a({
     slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6, date: '2026-06-22',
@@ -431,6 +465,7 @@ const ART_SLUG = {
   "what-is-devops": { fr: "qu-est-ce-que-le-devops", es: "que-es-el-devops", de: "was-ist-devops", it: "cos-e-il-devops", pt: "o-que-e-o-devops" },
   "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn", de: "was-ist-ein-cdn", it: "che-cos-e-una-cdn", pt: "o-que-e-uma-cdn" },
   "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps", de: "was-ist-ein-vps", it: "che-cos-e-un-vps", pt: "o-que-e-um-vps" },
+  "what-is-a-reverse-proxy": { fr: "qu-est-ce-qu-un-proxy-inverse", es: "que-es-un-proxy-inverso", de: "was-ist-ein-reverse-proxy", it: "che-cos-e-un-reverse-proxy", pt: "o-que-e-um-proxy-reverso" },
   "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto", de: "beste-open-source-passwortmanager", it: "migliori-gestori-password-open-source", pt: "melhores-gestores-de-palavras-passe-open-source" },
   "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados", de: "selbstgehostete-passwortmanager", it: "gestori-password-self-hosted", pt: "gestores-de-palavras-passe-auto-hospedados" },
   "secrets-management-tools": { fr: "outils-de-gestion-des-secrets", es: "herramientas-de-gestion-de-secretos", de: "secrets-management-werkzeuge", it: "strumenti-gestione-segreti", pt: "ferramentas-de-gestao-de-segredos" },
