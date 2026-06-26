@@ -1,43 +1,52 @@
 "use client"
 import StickyBox from "react-sticky-box";
 import NewsTicker from "@/components/ltr/news-ticker-carousal/page-fr";
-import SunnyWeather from "@/components/ltr/sunny-wether/sunny-weather";
 import { useBackgroundImageLoader } from "@/components/ltr/use-background-image/use-background-image";
 import Layout from "@/components/ltr/layout/layout";
-import YoutubeVideo from "@/components/ltr/youtube-video/youtube-video";
 import useRemoveBodyClass from "@/components/ltr/useEffect-hook/useEffect-hook";
-import DatePickerComponents from "@/components/ltr/date-picker/date-picker";
-import PollWidget from "@/components/ltr/poll-widget/poll";
 import HomeFeatureCarousal from "@/components/ltr/home-feature-carousal/home-feature-carousal-fr";
 import HomeCenterSlider from "@/components/ltr/home-center-slider/home-center-slider-fr";
 import Tags from "@/components/ltr/tags/tags";
 import { useEffect } from "react";
-import Link from "next/link";
 import { getArticles, articleHref, categoryLabel } from "@/data/articles";
-export default function Home_fr() {
+
+const LOC = "fr";
+
+export default function Home() {
   useEffect(() => {
-    // Your logic for setting dir attribute using JavaScript
-    // For example:
     document.documentElement.removeAttribute('dir', 'rtl');
   }, []);
-  {/* *** ADD AND REMOVE CLASS ON BODY TAG *** */ }
   useRemoveBodyClass(['home-nine'], ['home-six', 'home-seven', 'home-two', 'boxed-layout', 'layout-rtl']);
-  {/* *** IMPORT BACKGROUND IMAGE *** */ }
-  useBackgroundImageLoader()
-  const L = [...getArticles("fr")].sort((a,b)=>String(b.date||"").localeCompare(String(a.date||""))).slice(6);
+  useBackgroundImageLoader();
+
+  // Liste COMPLETE triee par date desc : la home pioche dans A a des index/slices DIFFERENTS
+  // par section => le recent circule + un MAXIMUM d'articles distincts est lie (chemins de crawl).
+  const A = [...getArticles(LOC)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+  // POST BLOCK historique : 6 cartes a partir de l'index 6 (decale du hero/feature).
+  const L = A.slice(6);
+  const href = (s) => articleHref(s, LOC);
+  const cat = (k) => categoryLabel(k, LOC);
+
+  // slices par section (chevauchement minimal pour couvrir le plus d'articles)
+  const topStories  = A.slice(0, 3);                 // Top Stories
+  const mostViewed  = A.slice(0, 5);                 // onglet Most Viewed
+  const popularNews = A.slice(3, 6);                 // onglet Popular news
+  const featured    = A[0];                          // gros article en tete (Popular)
+  const grid        = A.slice(0, 6);                 // news-grid-2
+  const reviews     = A.slice(6, 10);                // Latest Reviews (1 grande + 3 liste)
+  const toolFeed    = A.filter((a) => a.category === "tooling" || a.category === "standards");
+  const toolsStacks = (toolFeed.length ? toolFeed : A).slice(0, 4); // Tooling & Standards
+  const editorPick  = A[A.length - 1];               // Editor's Picks = l'article le plus profond (le fait remonter)
+  const latest      = A;                              // Latest articles = TOUT le catalogue (max chemins de crawl, recent en tete)
+
   return (
     <Layout locale="fr">
       {/* *** START PAGE MAIN CONTENT *** */}
       <main className="page_main_wrapper">
-        <h1 className="visually-hidden">VersionDude — standards du web, parsers & outils dev</h1>
-        {/* START NEWSTRICKER */}
+        <h1 className="visually-hidden">VersionDude — web standards, parsers &amp; developer tooling</h1>
         <NewsTicker />
-        {/*  END OF /. NEWSTRICKER */}
         {/* START FEATURE SECTION */}
-        <div
-          className="bg-img feature-section py-4 py-lg-3 py-xl-4"
-          data-image-src="/assets/images/bg-shape.png"
-        >
+        <div className="bg-img feature-section py-4 py-lg-3 py-xl-4" data-image-src="/assets/images/bg-shape.png">
           <div className="container">
             <HomeFeatureCarousal />
           </div>
@@ -51,12 +60,12 @@ export default function Home_fr() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <a href={articleHref(L[0].slug,"fr")} className="news-image">
+                      <a href={href(L[0].slug)} className="news-image">
                         <img loading="lazy" decoding="async" src={L[0].hero} alt={L[0].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[0].category,"fr")}</span>
-                        <h4><a href={articleHref(L[0].slug,"fr")}>{L[0].title}</a></h4>
+                        <span className="post-category">{cat(L[0].category)}</span>
+                        <h4><a href={href(L[0].slug)}>{L[0].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Par <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -65,12 +74,12 @@ export default function Home_fr() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-4">
-                      <a href={articleHref(L[1].slug,"fr")} className="news-image">
+                      <a href={href(L[1].slug)} className="news-image">
                         <img loading="lazy" decoding="async" src={L[1].hero} alt={L[1].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[1].category,"fr")}</span>
-                        <h4><a href={articleHref(L[1].slug,"fr")}>{L[1].title}</a></h4>
+                        <span className="post-category">{cat(L[1].category)}</span>
+                        <h4><a href={href(L[1].slug)}>{L[1].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Par <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -79,12 +88,12 @@ export default function Home_fr() {
                   </div>
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-4">
-                      <a href={articleHref(L[2].slug,"fr")} className="news-image">
+                      <a href={href(L[2].slug)} className="news-image">
                         <img loading="lazy" decoding="async" src={L[2].hero} alt={L[2].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[2].category,"fr")}</span>
-                        <h4><a href={articleHref(L[2].slug,"fr")}>{L[2].title}</a></h4>
+                        <span className="post-category">{cat(L[2].category)}</span>
+                        <h4><a href={href(L[2].slug)}>{L[2].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Par <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -102,12 +111,12 @@ export default function Home_fr() {
                 <div className="row slider-right-post thm-margin">
                   <div className="col-md-12 col-sm-12 d-md-block d-none thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href={articleHref(L[3].slug,"fr")} className="news-image">
+                      <a href={href(L[3].slug)} className="news-image">
                         <img loading="lazy" decoding="async" src={L[3].hero} alt={L[3].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[3].category,"fr")}</span>
-                        <h4><a href={articleHref(L[3].slug,"fr")}>{L[3].title}</a></h4>
+                        <span className="post-category">{cat(L[3].category)}</span>
+                        <h4><a href={href(L[3].slug)}>{L[3].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Par <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -116,12 +125,12 @@ export default function Home_fr() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href={articleHref(L[4].slug,"fr")} className="news-image">
+                      <a href={href(L[4].slug)} className="news-image">
                         <img loading="lazy" decoding="async" src={L[4].hero} alt={L[4].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[4].category,"fr")}</span>
-                        <h4><a href={articleHref(L[4].slug,"fr")}>{L[4].title}</a></h4>
+                        <span className="post-category">{cat(L[4].category)}</span>
+                        <h4><a href={href(L[4].slug)}>{L[4].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Par <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -130,12 +139,12 @@ export default function Home_fr() {
                   </div>
                   <div className="col-6 col-sm-6 thm-padding">
                     <div className="slider-post post-height-2">
-                      <a href={articleHref(L[5].slug,"fr")} className="news-image">
+                      <a href={href(L[5].slug)} className="news-image">
                         <img loading="lazy" decoding="async" src={L[5].hero} alt={L[5].title} className="img-fluid" />
                       </a>
                       <div className="post-text">
-                        <span className="post-category">{categoryLabel(L[5].category,"fr")}</span>
-                        <h4><a href={articleHref(L[5].slug,"fr")}>{L[5].title}</a></h4>
+                        <span className="post-category">{cat(L[5].category)}</span>
+                        <h4><a href={href(L[5].slug)}>{L[5].title}</a></h4>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
                           <li>Par <span className="editor-name">VersionDude</span></li>
                         </ul>
@@ -152,213 +161,62 @@ export default function Home_fr() {
           <div className="row gx-lg-5">
             {/* START MAIN CONTENT */}
             <div className="col-md-3 leftSidebar d-none d-xl-block">
-              <StickyBox >
+              <StickyBox>
                 <div className="panel_header">
-                  <h4>
-                    <strong>Top </strong> Stories
-                  </h4>
+                  <h4><strong>Top </strong> Stories</h4>
                 </div>
                 <div className="border-bottom posts">
                   <ul>
-                    <li className="post-grid">
-                      <div className="posts-inner px-0">
-                        <h6 className="posts-title">
-                          <a href="/fr/articles/outils-de-gestion-des-secrets">Outils de gestion des secrets pour développeurs</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            <span className="post-category">Outils</span>
-                          </li>
+                    {topStories.map((a, i) => (
+                      <li className={i === 2 ? "d-none d-xl-block post-grid" : "post-grid"} key={a.slug}>
+                        <div className="posts-inner px-0">
+                          <h6 className="posts-title"><a href={href(a.slug)}>{a.title}</a></h6>
+                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
+                            <li><span className="post-category">{cat(a.category)}</span></li>
                           </ul>
-                        <p>Pourquoi l'open source compte pour un gestionnaire de mots de passe, et les projets dignes de confiance.</p>
-                      </div>
-                    </li>
-                    <li className="post-grid">
-                      <div className="posts-inner px-0">
-                        <h6 className="posts-title">
-                          <a href="/fr/articles/test-proton-mail">Test de Proton Mail : l'email chiffré</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            <span className="post-category">Archive</span>
-                          </li>
-                          </ul>
-                        <p>Ce que signifie vraiment l'email chiffré, et les services qui le font sérieusement.</p>
-                      </div>
-                    </li>
-                    <li className="d-none d-xl-block post-grid">
-                      <div className="posts-inner px-0">
-                        <h6 className="posts-title">
-                          <a href="/fr/articles/meilleurs-services-email-chiffre">Les meilleurs services d'email chiffré</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            <span className="post-category">Standards</span>
-                          </li>
-                          </ul>
-                        <p>Le Document Object Model est l'arbre qu'un navigateur construit à partir de votre HTML.</p>
-                      </div>
-                    </li>
+                          <p>{a.dek}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 {/* START NAV TABS */}
                 <div className="tabs-wrapper">
                   <ul className="nav nav-tabs" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
-                      <button
-                        className="nav-link border-0 active"
-                        id="most-viewed"
-                        data-bs-toggle="tab"
-                        data-bs-target="#most-viewed-pane"
-                        type="button"
-                        role="tab"
-                        aria-controls="most-viewed-pane"
-                        aria-selected="true"
-                      >
-                        Les plus lus
-                      </button>
+                      <button className="nav-link border-0 active" id="most-viewed" data-bs-toggle="tab" data-bs-target="#most-viewed-pane" type="button" role="tab" aria-controls="most-viewed-pane" aria-selected="true">Les plus lus</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                      <button
-                        className="nav-link border-0"
-                        id="popular-news"
-                        data-bs-toggle="tab"
-                        data-bs-target="#popular-news-pane"
-                        type="button"
-                        role="tab"
-                        aria-controls="popular-news-pane"
-                        aria-selected="false"
-                      >
-                        Populaires
-                      </button>
+                      <button className="nav-link border-0" id="popular-news" data-bs-toggle="tab" data-bs-target="#popular-news-pane" type="button" role="tab" aria-controls="popular-news-pane" aria-selected="false">Populaires</button>
                     </li>
                   </ul>
                   <div className="tab-content" id="myTabContent">
-                    <div
-                      className="tab-pane fade show active"
-                      id="most-viewed-pane"
-                      role="tabpanel"
-                      aria-labelledby="most-viewed"
-                      tabIndex={0}
-                    >
+                    <div className="tab-pane fade show active" id="most-viewed-pane" role="tabpanel" aria-labelledby="most-viewed" tabIndex={0}>
                       <div className="most-viewed">
                         <ul id="most-today" className="content tabs-content">
-                          <li>
-                            <span className="count">01</span>
-                            <span className="text">
-                              <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source">Les meilleurs gestionnaires de mots de passe open source</a>
-                            </span>
-                          </li>
-                          <li>
-                            <span className="count">02</span>
-                            <span className="text">
-                              <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges">Gestionnaires de mots de passe auto-hébergés</a>
-                            </span>
-                          </li>
-                          <li>
-                            <span className="count">03</span>
-                            <span className="text">
-                              <a href="/fr/articles/outils-de-gestion-des-secrets">Outils de gestion des secrets pour développeurs</a>
-                            </span>
-                          </li>
-                          <li>
-                            <span className="count">04</span>
-                            <span className="text">
-                              <a href="/fr/articles/test-proton-mail">Test de Proton Mail : l'email chiffré</a>
-                            </span>
-                          </li>
-                          <li>
-                            <span className="count">05</span>
-                            <span className="text">
-                              <a href="/fr/articles/meilleurs-services-email-chiffre">Les meilleurs services d'email chiffré</a>
-                            </span>
-                          </li>
+                          {mostViewed.map((a, i) => (
+                            <li key={a.slug}>
+                              <span className="count">{String(i + 1).padStart(2, "0")}</span>
+                              <span className="text"><a href={href(a.slug)}>{a.title}</a></span>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>
-                    <div
-                      className="tab-pane fade"
-                      id="popular-news-pane"
-                      role="tabpanel"
-                      aria-labelledby="popular-news"
-                      tabIndex={0}
-                    >
+                    <div className="tab-pane fade" id="popular-news-pane" role="tabpanel" aria-labelledby="popular-news" tabIndex={0}>
                       <div className="popular-news">
-                        <div className="p-post">
-                          <h4>
-                            <a href="/fr/articles/test-proton-pass">Test de Proton Pass</a>
-                          </h4>
-                          <ul className="authar-info d-flex flex-wrap justify-content-center">
-                            <li className="date">
-                              <a href="/fr/categories/standards">
-                                <i className="ti ti ti-timer" /> 
-                              </a>
-                            </li>
-                            <li className="like">
-                              <a href="/fr/articles/qu-est-ce-que-le-dom">
-                                <i className="ti ti ti-thumb-up" />
-                                15 likes
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="reatting-2">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star-half-alt" />
-                            <i className="far fa-star" />
+                        {popularNews.map((a) => (
+                          <div className="p-post" key={a.slug}>
+                            <h4><a href={href(a.slug)}>{a.title}</a></h4>
+                            <ul className="authar-info d-flex flex-wrap justify-content-center">
+                              <li className="date"><a href={href(a.slug)}><i className="ti ti ti-timer" /> </a></li>
+                              <li className="like"><a href={href(a.slug)}><i className="ti ti ti-thumb-up" />{cat(a.category)}</a></li>
+                            </ul>
+                            <div className="reatting-2">
+                              <i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star-half-alt" /><i className="far fa-star" />
+                            </div>
                           </div>
-                        </div>
-                        <div className="p-post">
-                          <h4>
-                            <a href="/fr/articles/qu-est-ce-que-le-dom">Qu'est-ce que le DOM ?</a>
-                          </h4>
-                          <ul className="authar-info d-flex flex-wrap justify-content-center">
-                            <li className="date">
-                              <a href="/fr/articles/validateur-html">
-                                <i className="ti ti ti-timer" /> 
-                              </a>
-                            </li>
-                            <li className="like">
-                              <a href="/fr/articles/validateur-html">
-                                <i className="ti ti ti-thumb-up" />
-                                15 likes
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="reatting-2">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star-half-alt" />
-                            <i className="far fa-star" />
-                          </div>
-                        </div>
-                        <div className="p-post">
-                          <h4>
-                            <a href="/fr/articles/validateur-html">À quoi sert un validateur HTML</a>
-                          </h4>
-                          <ul className="authar-info d-flex flex-wrap justify-content-center">
-                            <li className="date">
-                              <a href="/fr/articles/qu-est-ce-que-le-dom">
-                                <i className="ti ti ti-timer" /> 
-                              </a>
-                            </li>
-                            <li className="like">
-                              <a href="/fr/articles/qu-est-ce-que-le-dom">
-                                <i className="ti ti ti-thumb-up" />
-                                15 likes
-                              </a>
-                            </li>
-                          </ul>
-                          <div className="reatting-2">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star-half-alt" />
-                            <i className="far fa-star" />
-                          </div>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -368,251 +226,67 @@ export default function Home_fr() {
             </div>
             <div className="col-sm-7 col-md-8 col-xl-6 border-start border-end main-content">
               <StickyBox>
-                {/* START POST CATEGORY STYLE ONE (Populaires) */}
+                {/* START POST CATEGORY STYLE ONE (Popular news) */}
                 <div className="post-inner">
-                  {/* post body */}
                   <div className="post-body py-0">
                     <article>
                       <figure>
-                        <a href="/fr/articles/qu-est-ce-qu-un-parseur">
-                          <img loading="lazy" decoding="async"
-                            src="/assets/articles/what-is-a-parser-hero.jpg"
-                            width={345}
-                            alt="Qu'est-ce qu'un parseur ?"
-                            className="img-fluid"
-                          />
+                        <a href={href(featured.slug)}>
+                          <img loading="lazy" decoding="async" src={featured.hero} width={345} alt={featured.title} className="img-fluid" />
                         </a>
                       </figure>
                       <div className="post-info">
-                        <h3 className="fs-4">
-                          <a href="/fr/articles/qu-est-ce-qu-un-parseur">Qu'est-ce qu'un parseur ?</a>
-                        </h3>
+                        <h3 className="fs-4"><a href={href(featured.slug)}>{featured.title}</a></h3>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            <span className="post-category mb-0">Analyse</span>
-                          </li>
-                          <li>
-                            Par <span className="editor-name">VersionDude</span>
-                          </li>
-                          </ul>
-                        <p>Comment un parseur transforme le balisage brut en arbre structuré — et la récupération d'erreurs normalisée qui met tous les navigateurs d'accord.</p>
+                          <li><span className="post-category mb-0">{cat(featured.category)}</span></li>
+                          <li>Par <span className="editor-name">VersionDude</span></li>
+                        </ul>
+                        <p>{featured.dek}</p>
                       </div>
                     </article>
                   </div>
                 </div>
-                {/* END OF /. POST CATEGORY STYLE ONE (Populaires) */}
+                {/* END OF /. POST CATEGORY STYLE ONE */}
                 <div className="news-grid-2 border-top pt-4 mb-4">
                   <div className="row gx-3 gx-lg-4 gy-4">
-                    <div className="col-6 col-md-4 col-sm-6">
-                      <div className="grid-item mb-0">
-                        <div className="grid-item-img">
-                          <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/open-source-password-managers-hero.jpg"
-                              className="img-fluid"
-                              alt="Les meilleurs gestionnaires de mots de passe open source"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-play" />
-                            </div>
-                          </a>
+                    {grid.map((a, i) => (
+                      <div className="col-6 col-md-4 col-sm-6" key={a.slug}>
+                        <div className="grid-item mb-0">
+                          <div className="grid-item-img">
+                            <a href={href(a.slug)}>
+                              <img loading="lazy" decoding="async" src={a.hero} className="img-fluid" alt={a.title} />
+                              <div className="link-icon"><i className={i % 2 ? "fa fa-camera" : "fa fa-play"} /></div>
+                            </a>
+                          </div>
+                          <h5><a href={href(a.slug)} className="title">{a.title}</a></h5>
+                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0"></ul>
                         </div>
-                        <h5>
-                          <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="title">Les meilleurs gestionnaires de mots de passe open source</a>
-                        </h5>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
                       </div>
-                    </div>
-                    <div className="col-6 col-md-4 col-sm-6">
-                      <div className="grid-item mb-0">
-                        <div className="grid-item-img">
-                          <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/self-hosted-password-managers-hero.jpg"
-                              className="img-fluid"
-                              alt="Gestionnaires de mots de passe auto-hébergés"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-camera" />
-                            </div>
-                          </a>
-                        </div>
-                        <h5>
-                          <a href="/fr/articles/gestionnaires-de-mots-de-passe-auto-heberges" className="title">Gestionnaires de mots de passe auto-hébergés</a>
-                        </h5>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                    </div>
-                    <div className="col-6 col-md-4 col-sm-6">
-                      <div className="grid-item mb-0">
-                        <div className="grid-item-img">
-                          <a href="/fr/articles/outils-de-gestion-des-secrets">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/secrets-management-tools-hero.jpg"
-                              className="img-fluid"
-                              alt="Outils de gestion des secrets pour développeurs"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-camera" />
-                            </div>
-                          </a>
-                        </div>
-                        <h5>
-                          <a href="/fr/articles/outils-de-gestion-des-secrets" className="title">Outils de gestion des secrets pour développeurs</a>
-                        </h5>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                    </div>
-                    <div className="col-6 col-md-4 col-sm-6">
-                      <div className="grid-item mb-0">
-                        <div className="grid-item-img">
-                          <a href="/fr/articles/test-proton-mail">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/proton-mail-review-hero.jpg"
-                              className="img-fluid"
-                              alt="Test de Proton Mail : l'email chiffré"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-play" />
-                            </div>
-                          </a>
-                        </div>
-                        <h5>
-                          <a href="/fr/articles/test-proton-mail" className="title">Test de Proton Mail : l'email chiffré</a>
-                        </h5>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                    </div>
-                    <div className="col-6 col-md-4 col-sm-6">
-                      <div className="grid-item mb-0">
-                        <div className="grid-item-img">
-                          <a href="/fr/articles/meilleurs-services-email-chiffre">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/best-encrypted-email-hero.jpg"
-                              className="img-fluid"
-                              alt="Les meilleurs services d'email chiffré"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-camera" />
-                            </div>
-                          </a>
-                        </div>
-                        <h5>
-                          <a href="/fr/articles/meilleurs-services-email-chiffre" className="title">Les meilleurs services d'email chiffré</a>
-                        </h5>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                    </div>
-                    <div className="col-6 col-md-4 col-sm-6">
-                      <div className="grid-item mb-0">
-                        <div className="grid-item-img">
-                          <a href="/fr/articles/test-proton-pass">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/proton-pass-review-hero.jpg"
-                              className="img-fluid"
-                              alt="Test de Proton Pass"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-camera" />
-                            </div>
-                          </a>
-                        </div>
-                        <h5>
-                          <a href="/fr/articles/test-proton-pass" className="title">Test de Proton Pass</a>
-                        </h5>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
-                
               </StickyBox>
             </div>
             {/* END OF /. MAIN CONTENT */}
             {/* START SIDE CONTENT */}
             <div className="col-sm-5 col-md-4 col-xl-3 rightSidebar">
               <StickyBox>
-                
-                
                 {/* START TRENDING TOPICS */}
                 <div className="panel_inner review-inner">
                   <div className="panel_header">
-                    <h4>
-                      <strong>Parcourir</strong> les catégories
-                    </h4>
+                    <h4><strong>Parcourir</strong> les catégories</h4>
                   </div>
                   <div className="panel_body">
-                    {/* Category item */}
-                    <div
-                      className="text-center mb-2 card-bg-scale position-relative overflow-hidden bg-dark-overlay bg-img p-3"
-                      data-image-src="/assets/articles/semantic-web-hero.jpg"
-                    >
-                      <a
-                        href="/fr/categories/standards"
-                        className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
-                      >
-                        Standards
-                      </a>
-                    </div>
-                    {/* Category item */}
-                    <div
-                      className="text-center mb-2 card-bg-scale position-relative overflow-hidden bg-dark-overlay bg-img p-3"
-                      data-image-src="/assets/articles/xml-vs-html-hero.jpg"
-                    >
-                      <a
-                        href="/fr/categories/parsing"
-                        className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
-                      >
-                        Parsing
-                      </a>
-                    </div>
-                    {/* Category item */}
-                    <div
-                      className="text-center mb-2 card-bg-scale position-relative overflow-hidden bg-dark-overlay bg-img p-3"
-                      data-image-src="/assets/articles/ruby-on-rails-cms-hero.jpg"
-                    >
-                      <a
-                        href="/fr/categories/tooling"
-                        className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
-                      >
-                        Tooling
-                      </a>
-                    </div>
-                    {/* Category item */}
-                    <div
-                      className="text-center mb-2 card-bg-scale position-relative overflow-hidden bg-dark-overlay bg-img p-3"
-                      data-image-src="/assets/articles/character-encoding-utf-8-hero.jpg"
-                    >
-                      <a
-                        href="/fr/categories/archive"
-                        className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
-                      >
-                        Archive
-                      </a>
-                    </div>
-                    {/* Category item */}
-                    <div
-                      className="text-center mb-2 card-bg-scale position-relative overflow-hidden bg-dark-overlay bg-img p-3"
-                      data-image-src="/assets/articles/self-hosted-cms-hero.jpg"
-                    >
-                      <a
-                        href="/fr/categories/standards"
-                        className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white"
-                      >
-                        Standards
-                      </a>
-                    </div>
-                    {/* View All Category button */}
+                    {["standards", "parsing", "tooling", "archive"].map((k) => {
+                      const pic = A.find((a) => a.category === k) || A[0];
+                      return (
+                        <div className="text-center mb-2 card-bg-scale position-relative overflow-hidden bg-dark-overlay bg-img p-3" data-image-src={pic.hero} key={k}>
+                          <a href={LOC === "en" ? `/categories/${k}` : `/${LOC}/categories/${k}`} className="btn-link fs-5 fw-bold stretched-link text-decoration-none text-white">{cat(k)}</a>
+                        </div>
+                      );
+                    })}
                     <div className="text-center mt-3">
-                      <a href="/fr/categories" className="fw-bold text-primary-hover">
-                        <u>Voir toutes les catégories</u>
-                      </a>
+                      <a href={LOC === "en" ? "/categories" : `/${LOC}/categories`} className="fw-bold text-primary-hover"><u>Voir toutes les catégories</u></a>
                     </div>
                   </div>
                 </div>
@@ -620,117 +294,42 @@ export default function Home_fr() {
                 {/* START LATEST REVIEWS */}
                 <div className="panel_inner review-inner">
                   <div className="panel_header">
-                    <h4>
-                      <strong>Derniers</strong> Reviews
-                    </h4>
+                    <h4><strong>Derniers</strong> Reviews</h4>
                   </div>
                   <div className="panel_body">
+                    {reviews[0] && (
                     <div className="more-post">
-                      <a href="/fr/articles/meilleurs-gestionnaires-mots-de-passe-open-source" className="news-image">
-                        <img loading="lazy" decoding="async"
-                          src="/assets/articles/open-source-password-managers-hero.jpg"
-                          alt="Les meilleurs gestionnaires de mots de passe open source"
-                          className="img-fluid w-100"
-                        />
+                      <a href={href(reviews[0].slug)} className="news-image">
+                        <img loading="lazy" decoding="async" src={reviews[0].hero} alt={reviews[0].title} className="img-fluid w-100" />
                       </a>
                       <div className="reatting">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star-half-o" />
-                        <i className="fa fa-star-o" />
+                        <i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star" /><i className="fa fa-star-half-o" /><i className="fa fa-star-o" />
                       </div>
                       <div className="post-text">
-                        {/* <span class="post-category">Outils</span> */}
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-1">
-                          <li>
-                            <span className="post-category mb-0">Archive</span>
-                          </li>
-                          </ul>
-                        <h4 className="mb-0">
-                          Qu'est-ce que le DOM ?
-                        </h4>
+                          <li><span className="post-category mb-0">{cat(reviews[0].category)}</span></li>
+                        </ul>
+                        <h4 className="mb-0"><a href={href(reviews[0].slug)}>{reviews[0].title}</a></h4>
                       </div>
                     </div>
+                    )}
                     <div className="mt-4 news-list">
-                      <div className="news-list-item p-0 mb-4">
-                        <div className="img-wrapper">
-                          <a href="/fr/articles/qu-est-ce-que-le-dom" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/what-is-the-dom-hero.jpg"
-                              alt="Qu'est-ce que le DOM ?"
-                              className="img-fluid"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-camera" />
+                      {reviews.slice(1, 4).map((a, i) => (
+                        <div className={i === 2 ? "news-list-item p-0" : "news-list-item p-0 mb-4"} key={a.slug}>
+                          <div className="img-wrapper">
+                            <a href={href(a.slug)} className="thumb">
+                              <img loading="lazy" decoding="async" src={a.hero} alt={a.title} className="img-fluid" />
+                              <div className="link-icon"><i className={i % 2 ? "fa fa-play" : "fa fa-camera"} /></div>
+                            </a>
+                          </div>
+                          <div className="post-info-2">
+                            <h5><a href={href(a.slug)} className="title">{a.title}</a></h5>
+                            <div className="reviews-reatting">
+                              <i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star" /><i className="fas fa-star-half-alt" /><i className="far fa-star" />
                             </div>
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h5>
-                            <a href="/fr/articles/qu-est-ce-que-le-dom" className="title">Qu'est-ce que le DOM ?</a>
-                          </h5>
-                          <div className="reviews-reatting">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star-half-alt" />
-                            <i className="far fa-star" />
                           </div>
                         </div>
-                      </div>
-                      <div className="news-list-item p-0 mb-4">
-                        <div className="img-wrapper">
-                          <a href="/fr/articles/validateur-html" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/html-validator-hero.jpg"
-                              alt="À quoi sert un validateur HTML"
-                              className="img-fluid"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-play" />
-                            </div>
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h5>
-                            <a href="/fr/articles/validateur-html" className="title">À quoi sert un validateur HTML</a>
-                          </h5>
-                          <div className="reviews-reatting">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star-half-alt" />
-                            <i className="far fa-star" />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="news-list-item p-0">
-                        <div className="img-wrapper">
-                          <a href="/fr/articles/qu-est-ce-qu-un-parseur" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/what-is-a-parser-hero.jpg"
-                              alt="Qu'est-ce qu'un parseur ?"
-                              className="img-fluid"
-                            />
-                            <div className="link-icon">
-                              <i className="fa fa-camera" />
-                            </div>
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h5>
-                            <a href="/fr/articles/qu-est-ce-qu-un-parseur" className="title">Qu'est-ce qu'un parseur ?</a>
-                          </h5>
-                          <div className="reviews-reatting">
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star" />
-                            <i className="fas fa-star-half-alt" />
-                            <i className="far fa-star" />
-                          </div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -740,108 +339,66 @@ export default function Home_fr() {
             {/* END OF /. SIDE CONTENT */}
           </div>
         </div>
-        
+
         <section className="articles-wrapper">
           <div className="container">
             <div className="row gx-lg-5">
               <div className="col-md-3 leftSidebar d-none d-xl-block">
                 <StickyBox>
-                  {/* START TECH & INNOVATION */}
+                  {/* START TOOLING & STANDARDS */}
                   <div className="panel_inner">
                     <div className="panel_header" style={{ marginTop: "2.5rem" }}>
-                      <h4>
-                        <strong>Outils &amp;</strong> Standards
-                      </h4>
+                      <h4><strong>Outils &amp;</strong> Standards</h4>
                     </div>
                     <div className="panel_body">
+                      {toolsStacks[0] && (
                       <div className="border-bottom">
-                        <a href="/fr/articles/web-semantique" className="d-block mb-3">
-                          <img loading="lazy" decoding="async"
-                            src="/assets/articles/semantic-web-hero.jpg"
-                            alt="Le web sémantique, expliqué"
-                            className="img-fluid w-100"
-                          />
+                        <a href={href(toolsStacks[0].slug)} className="d-block mb-3">
+                          <img loading="lazy" decoding="async" src={toolsStacks[0].hero} alt={toolsStacks[0].title} className="img-fluid w-100" />
                         </a>
-                        <h5>
-                          <a href="/fr/articles/web-semantique">Le web sémantique, expliqué</a>
-                        </h5>
+                        <h5><a href={href(toolsStacks[0].slug)}>{toolsStacks[0].title}</a></h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            <span className="post-category mb-0">Standards</span>
-                          </li>
-                          </ul>
-                        <p>Des conseils pratiques et indépendants sur les outils que les développeurs et les lecteurs soucieux de leur vie privée utilisent vraiment.</p>
+                          <li><span className="post-category mb-0">{cat(toolsStacks[0].category)}</span></li>
+                        </ul>
+                        <p>{toolsStacks[0].dek}</p>
                       </div>
-                      <div className="border-bottom py-3">
-                        <h6 className="posts-title">
-                          <a href="/fr/articles/xml-contre-html">XML vs HTML : quelle différence ?</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                      <div className="border-bottom py-3">
-                        <h6 className="posts-title">
-                          <a href="/fr/articles/cms-ruby-on-rails">Les CMS en Ruby on Rails</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
-                      <div className="py-3 pb-0">
-                        <h6 className="posts-title">
-                          <a href="/fr/articles/encodage-des-caracteres-utf-8">L'encodage des caractères et pourquoi UTF-8 a gagné</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
-                      </div>
+                      )}
+                      {toolsStacks.slice(1, 4).map((a, i) => (
+                        <div className={i === 2 ? "py-3 pb-0" : "border-bottom py-3"} key={a.slug}>
+                          <h6 className="posts-title"><a href={href(a.slug)}>{a.title}</a></h6>
+                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0"></ul>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  {/* END OF /. TECH & INNOVATION */}
+                  {/* END OF /. TOOLING & STANDARDS */}
                   {/* START EDITOR'S PICKS */}
                   <div className="panel_inner mb-0">
                     <div className="panel_header">
-                      <h4>
-                        <strong>CHOIX</strong> DE LA RÉDACTION
-                      </h4>
+                      <h4><strong>CHOIX</strong> DE LA RÉDACTION</h4>
                     </div>
                     <div className="panel_body">
                       <div className="border-bottom">
-                        <a href="/fr/articles/cms-auto-heberges" className="d-block mb-3">
-                          <img loading="lazy" decoding="async"
-                            src="/assets/articles/self-hosted-cms-hero.jpg"
-                            alt="Les CMS auto-hébergés à connaître"
-                            className="img-fluid"
-                          />
+                        <a href={href(editorPick.slug)} className="d-block mb-3">
+                          <img loading="lazy" decoding="async" src={editorPick.hero} alt={editorPick.title} className="img-fluid" />
                         </a>
-                        <h5>
-                          <a href="/fr/articles/cms-auto-heberges">Les CMS auto-hébergés à connaître</a>
-                        </h5>
+                        <h5><a href={href(editorPick.slug)}>{editorPick.title}</a></h5>
                         <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                          <li>
-                            <span className="post-category mb-0">Analyse</span>
-                          </li>
-                          </ul>
-                        <p>Des conseils pratiques et indépendants sur les outils que les développeurs et les lecteurs soucieux de leur vie privée utilisent vraiment.</p>
+                          <li><span className="post-category mb-0">{cat(editorPick.category)}</span></li>
+                        </ul>
+                        <p>{editorPick.dek}</p>
                       </div>
                       <div className="border-bottom py-3">
-                        <h6 className="posts-title">
-                          <a href="/fr/projects/html5-parser">Parseur HTML5 (htmlparser)</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
+                        <h6 className="posts-title"><a href={LOC === "en" ? "/projects/html5-parser" : `/${LOC}/projects/html5-parser`}>HTML5 Parser (htmlparser)</a></h6>
+                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0"></ul>
                       </div>
                       <div className="border-bottom py-3">
-                        <h6 className="posts-title">
-                          <a href="/fr/projects/validator-nu">Validator.nu</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
+                        <h6 className="posts-title"><a href={LOC === "en" ? "/projects/validator-nu" : `/${LOC}/projects/validator-nu`}>Validator.nu</a></h6>
+                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0"></ul>
                       </div>
                       <div className="py-3 pb-0">
-                        <h6 className="posts-title">
-                          <a href="/fr/projects/railfrog">Railfrog</a>
-                        </h6>
-                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0">
-                          </ul>
+                        <h6 className="posts-title"><a href={LOC === "en" ? "/projects/railfrog" : `/${LOC}/projects/railfrog`}>Railfrog</a></h6>
+                        <ul className="align-items-center authar-info d-flex flex-wrap gap-1 mb-0"></ul>
                       </div>
                     </div>
                   </div>
@@ -850,183 +407,45 @@ export default function Home_fr() {
               </div>
               <div className="col-sm-7 col-md-8 col-xl-6 border-start border-end main-content">
                 <StickyBox>
-                  {/* START POST CATEGORY STYLE FOUR (Latest articles ) */}
+                  {/* START POST CATEGORY STYLE FOUR (Latest articles) */}
                   <div className="post-inner">
-                    {/*post header*/}
                     <div className="post-head" style={{ marginTop: "2.5rem" }}>
-                      <h2 className="title">
-                        <strong>Derniers</strong> articles
-                      </h2>
+                      <h2 className="title"><strong>Derniers</strong> articles</h2>
                     </div>
-                    {/* post body */}
                     <div className="post-body">
-                      <div className="news-list-item articles-list">
-                        <div className="img-wrapper">
-                          <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
-                            <i className="fa-solid fa-bolt-lightning" />
+                      {latest.map((a) => (
+                        <div className="news-list-item articles-list" key={a.slug}>
+                          <div className="img-wrapper">
+                            <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
+                              <i className="fa-solid fa-bolt-lightning" />
+                            </div>
+                            <a href={href(a.slug)} className="thumb">
+                              <img loading="lazy" decoding="async" src={a.hero} alt={a.title} className="img-fluid w-100" />
+                            </a>
                           </div>
-                          <a href="/fr/articles/web-semantique" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/semantic-web-hero.jpg"
-                              alt="Le web sémantique, expliqué"
-                              className="img-fluid w-100"
-                            />
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h4>
-                            <a href="/fr/articles/web-semantique" className="title">Le web sémantique, expliqué</a>
-                          </h4>
-                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                            <li>
-                              <span className="post-category mb-0">Outils</span>
-                            </li>
-                            <li>
-                              Par <span className="editor-name">VersionDude</span>
-                            </li>
+                          <div className="post-info-2">
+                            <h4><a href={href(a.slug)} className="title">{a.title}</a></h4>
+                            <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
+                              <li><span className="post-category mb-0">{cat(a.category)}</span></li>
+                              <li>Par <span className="editor-name">VersionDude</span></li>
                             </ul>
-                          <p className="d-lg-block d-none">Un validateur HTML vérifie votre balisage face au standard vivant.</p>
-                        </div>
-                      </div>
-                      <div className="news-list-item articles-list">
-                        <div className="img-wrapper">
-                          <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
-                            <i className="fa-solid fa-bolt-lightning" />
+                            <p className="d-lg-block d-none">{a.dek}</p>
                           </div>
-                          <a href="/fr/articles/xml-contre-html" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/xml-vs-html-hero.jpg"
-                              alt="XML vs HTML : quelle différence ?"
-                              className="img-fluid w-100"
-                            />
-                          </a>
                         </div>
-                        <div className="post-info-2">
-                          <h4>
-                            <a href="/fr/articles/xml-contre-html" className="title">XML vs HTML : quelle différence ?</a>
-                          </h4>
-                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                            <li>
-                              <span className="post-category mb-0">Archive</span>
-                            </li>
-                            <li>
-                              Par <span className="editor-name">VersionDude</span>
-                            </li>
-                            </ul>
-                          <p className="d-lg-block d-none">Comment un parseur transforme du texte brut en données structurées exploitables.</p>
-                        </div>
-                      </div>
-                      <div className="news-list-item articles-list">
-                        <div className="img-wrapper">
-                          <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
-                            <i className="fa-solid fa-bolt-lightning" />
-                          </div>
-                          <a href="/fr/articles/cms-ruby-on-rails" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/ruby-on-rails-cms-hero.jpg"
-                              alt="Les CMS en Ruby on Rails"
-                              className="img-fluid w-100"
-                            />
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h4>
-                            <a href="/fr/articles/cms-ruby-on-rails" className="title">Les CMS en Ruby on Rails</a>
-                          </h4>
-                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                            <li>
-                              <span className="post-category mb-0">Standards</span>
-                            </li>
-                            <li>
-                              Par <span className="editor-name">VersionDude</span>
-                            </li>
-                            </ul>
-                          <p className="d-lg-block d-none">L'idée d'un web de données, où le sens est lisible par les machines.</p>
-                        </div>
-                      </div>
-                      <div className="news-list-item articles-list">
-                        <div className="img-wrapper">
-                          <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
-                            <i className="fa-solid fa-bolt-lightning" />
-                          </div>
-                          <a href="/fr/articles/encodage-des-caracteres-utf-8" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/character-encoding-utf-8-hero.jpg"
-                              alt="L'encodage des caractères et pourquoi UTF-8 a gagné"
-                              className="img-fluid w-100"
-                            />
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h4>
-                            <a href="/fr/articles/encodage-des-caracteres-utf-8" className="title">L'encodage des caractères et pourquoi UTF-8 a gagné</a>
-                          </h4>
-                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                            <li>
-                              <span className="post-category mb-0">Analyse</span>
-                            </li>
-                            <li>
-                              Par <span className="editor-name">VersionDude</span>
-                            </li>
-                            </ul>
-                          <p className="d-lg-block d-none">Gardez clés d'API et secrets chiffrés, à accès contrôlé et hors de git.</p>
-                        </div>
-                      </div>
-                      <div className="news-list-item articles-list">
-                        <div className="img-wrapper">
-                          <div className="align-items-center bg-primary d-flex justify-content-center position-absolute rounded-circle text-white trending-post z-1">
-                            <i className="fa-solid fa-bolt-lightning" />
-                          </div>
-                          <a href="/fr/articles/cms-auto-heberges" className="thumb">
-                            <img loading="lazy" decoding="async"
-                              src="/assets/articles/self-hosted-cms-hero.jpg"
-                              alt="Les CMS auto-hébergés à connaître"
-                              className="img-fluid w-100"
-                            />
-                          </a>
-                        </div>
-                        <div className="post-info-2">
-                          <h4>
-                            <a href="/fr/articles/cms-auto-heberges" className="title">Les CMS auto-hébergés à connaître</a>
-                          </h4>
-                          <ul className="align-items-center authar-info d-flex flex-wrap gap-1">
-                            <li>
-                              <span className="post-category mb-0">Outils</span>
-                            </li>
-                            <li>
-                              Par <span className="editor-name">VersionDude</span>
-                            </li>
-                            </ul>
-                          <p className="d-lg-block d-none">Héberger son propre gestionnaire de mots de passe, c'est garder la main sur son coffre.</p>
-                        </div>
-                      </div>
+                      ))}
                     </div>{" "}
-                    {/* /. post body */}
-                    {/*Post footer*/}
                     <div className="post-footer">
                       <div className="row thm-margin">
-                        <div className="col-md-8 thm-padding">
-                          {/* pagination */}
-                          {" "}
-                          {/* /.pagination */}
-                        </div>
+                        <div className="col-md-8 thm-padding">{" "}</div>
                         <div className="col-md-4 d-md-block d-none thm-padding">
                           <div className="social">
                             <ul>
                               <li>
                                 <div className="share transition">
-                                  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" className="ico fb">
-                                    <i className="fab fa-facebook-f" />
-                                  </a>
-                                  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fversiondude.net%2F&text=VersionDude" target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="ico tw">
-                                    <i className="fab fa-twitter" />
-                                  </a>
-                                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" className="ico rs">
-                                    <i className="fab fa-linkedin-in" />
-                                  </a>
-                                  <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest" className="ico pin">
-                                    <i className="fab fa-pinterest-p" />
-                                  </a>
+                                  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" className="ico fb"><i className="fab fa-facebook-f" /></a>
+                                  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fversiondude.net%2F&text=VersionDude" target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="ico tw"><i className="fab fa-twitter" /></a>
+                                  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" className="ico rs"><i className="fab fa-linkedin-in" /></a>
+                                  <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fversiondude.net%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest" className="ico pin"><i className="fab fa-pinterest-p" /></a>
                                 </div>
                               </li>
                             </ul>
@@ -1034,27 +453,14 @@ export default function Home_fr() {
                         </div>
                       </div>
                     </div>{" "}
-                    {/* /.Post footer*/}
                   </div>
-                  {/* END OF /. POST CATEGORY STYLE FOUR (Latest articles ) */}
-                  
+                  {/* END OF /. POST CATEGORY STYLE FOUR */}
                 </StickyBox>
               </div>
               <div className="col-sm-5 col-md-4 col-xl-3 rightSidebar">
                 <StickyBox>
-                  
-                  
-                  {/* START ARCHIVE */}
-                  <div className="archive-wrapper">
-                    
-                  </div>
-                  {/* END OF /. ARCHIVE */}
-                  {/* START POLL WIDGET */}
-                  
-                  {/* END OF /. POLL WIDGET */}
-                  {/* START TAGS */}
+                  <div className="archive-wrapper"></div>
                   <Tags locale="fr" />
-                  {/* END OF /. TAGS */}
                 </StickyBox>
               </div>
             </div>
@@ -1062,8 +468,6 @@ export default function Home_fr() {
         </section>
       </main>
       {/* *** END OF /. PAGE MAIN CONTENT *** */}
-
     </Layout>
-
-  )
+  );
 }
