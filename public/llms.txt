@@ -23,6 +23,7 @@
 - [What is a VPS?](https://versiondude.net/articles/what-is-a-vps): A plain-English guide to Virtual Private Servers for developers.
 - [Self-hosted CMS options worth knowing](https://versiondude.net/articles/self-hosted-cms): How the main self-hosted content platforms compare on control, customisation and cost.
 - [Ruby on Rails content-management systems](https://versiondude.net/articles/ruby-on-rails-cms): The lineage of Rails-based CMSes, from Railfrog onward.
+- [What is a reverse proxy?](https://versiondude.net/articles/what-is-a-reverse-proxy): A plain-English guide — how a reverse proxy routes requests, terminates HTTPS, caches and secures, and how it differs from a forward proxy, a load balancer and an API gateway.
 
 ## Guides — developer privacy & secrets
 
