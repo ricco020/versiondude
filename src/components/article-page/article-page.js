@@ -31,6 +31,8 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
         "headline": article.title,
         "description": article.dek,
         "image": SITE + article.hero,
+        "datePublished": article.date,
+        "dateModified": article.dateModified || article.date,
         "inLanguage": loc,
         "author": { "@type": "Organization", "name": "VersionDude" },
         "publisher": { "@type": "Organization", "name": "VersionDude" },
