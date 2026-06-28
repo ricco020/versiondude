@@ -81,6 +81,20 @@ const REVERSE_PROXY_CTA = {
   },
 };
 
+// Git article: same Infomaniak offer, angle tuned to self-hosting a Git server / remote repos.
+const GIT_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'Want your own remote instead of relying on GitHub? Self-hosting Git (with Gitea or GitLab) needs a server you control. Infomaniak — a Swiss, privacy-respecting provider — offers VPS and cloud servers to host your repositories.',
+    fr: 'Vous voulez votre propre dépôt distant plutôt que de dépendre de GitHub ? Auto-héberger Git (avec Gitea ou GitLab) demande un serveur que vous contrôlez. Infomaniak — hébergeur suisse, respectueux de la vie privée — propose des VPS et serveurs cloud pour héberger vos dépôts.',
+    es: '¿Quieres tu propio remoto en vez de depender de GitHub? Autoalojar Git (con Gitea o GitLab) necesita un servidor que controlas. Infomaniak — proveedor suizo, respetuoso con la privacidad — ofrece VPS y servidores cloud para alojar tus repositorios.',
+    de: 'Sie möchten ein eigenes Remote statt von GitHub abhängig zu sein? Git selbst zu hosten (mit Gitea oder GitLab) braucht einen Server, den Sie kontrollieren. Infomaniak — ein schweizerischer, datenschutzfreundlicher Anbieter — bietet VPS und Cloud-Server, um Ihre Repositories zu hosten.',
+    it: 'Vuoi un tuo remote invece di dipendere da GitHub? Auto-ospitare Git (con Gitea o GitLab) richiede un server che controlli. Infomaniak — provider svizzero attento alla privacy — offre VPS e server cloud per ospitare i tuoi repository.',
+    pt: 'Quer o seu próprio remoto em vez de depender do GitHub? Auto-hospedar Git (com Gitea ou GitLab) precisa de um servidor que controla. A Infomaniak — fornecedor suíço, respeitador da privacidade — oferece VPS e servidores cloud para alojar os seus repositórios.',
+  },
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
@@ -150,6 +164,32 @@ export const ARTICLES = [
       { q: 'Do I need a reverse proxy?', a: 'If you self-host more than one service, want HTTPS handled cleanly in one place, or need a single address in front of several apps, a reverse proxy like Nginx or Caddy is the standard answer. For a single simple app it is optional, but almost every production stack uses one.' },
     ],
     cta: REVERSE_PROXY_CTA,
+  }),
+  a({
+    slug: 'what-is-git', category: 'tooling', readingMinutes: 6, date: '2026-06-28',
+    title: 'What is Git? Version control explained',
+    dek: 'Git is a distributed version control system that tracks every change to your code and lets many people work on it together without overwriting each other. What Git is, the core concepts, how it differs from GitHub, and the basic commands.',
+    hero: '/assets/articles/what-is-git-hero.jpg', heroAlt: 'A code editor showing a Git side panel with the current branch, local and remote branches, and a commit history of merged branches',
+    body: '/assets/articles/what-is-git-body.jpg', bodyCaption: 'A developer working at a desktop computer, editing source code of the kind Git tracks.',
+    paras: [
+      'Git is a version control system — a tool that records every change made to a set of files over time, so you can see what changed, who changed it, and go back to any earlier state. In practice that set of files is usually a software project’s source code. Git was created in 2005 by Linus Torvalds, the founder of Linux, to manage the Linux kernel’s development, and it has since become the standard way developers track and share their work.',
+      'What makes Git distinctive is that it is distributed. In an older, centralised system like Subversion (SVN), there is one central server that holds the full history, and each developer checks out only a snapshot of the files. Git works differently: when you clone a repository, you download the entire project along with its complete history onto your own machine.',
+      'That means every developer has a full copy of the repository, not just the latest files. You can commit changes, inspect history and create branches entirely offline, without talking to a server. A central copy (often on a service like GitHub) is still useful for sharing, but it is a convenience, not a single point of failure — if it disappeared, every clone would still hold the full history.',
+      'To use Git you need a few core concepts. A repository (or “repo”) is the project folder Git is tracking, including its history. A commit is a saved snapshot of your changes at a point in time, each with a message describing what you did. Before you commit, you place changes into a staging area, which lets you choose exactly what goes into the next snapshot rather than committing everything at once.',
+      'The other essential ideas are branches and remotes. A branch is an independent line of work: you can branch off to build a feature or fix a bug without touching the main code, then merge your branch back in when it is ready. A remote is a copy of the repository hosted elsewhere — you push your commits up to it to share them, and pull others’ commits down to stay in sync.',
+      'Developers rely on Git for several concrete reasons. It keeps a complete, reviewable history of a project; it lets a whole team work on the same codebase in parallel without overwriting each other; branches make it safe to experiment because the main code is untouched until you merge; and if a change breaks something, you can revert to a known-good commit. For almost any project that lives in code, those are everyday needs.',
+      'A common source of confusion is the difference between Git and GitHub. Git is the version control tool itself — software that runs on your computer and manages the history. GitHub is a website that hosts Git repositories online, adding collaboration features like pull requests, issue tracking and access control on top. GitLab and Bitbucket are similar hosting services. You can use Git with no account anywhere; the hosts are optional places to store and share your remotes.',
+      'In day-to-day use you drive Git with a handful of commands. You start a project with git init, or copy an existing one with git clone. You stage changes with git add, save a snapshot with git commit, send your commits to a remote with git push, and fetch others’ work with git pull. Around those, git status shows what has changed and git branch and git merge handle separate lines of work — a small core that covers most everyday tasks.',
+      'So do you need Git? If you write code at all — even alone on a small project — Git gives you a reliable history, an undo button across your whole project, and a safe way to experiment on branches. The moment more than one person is involved, it becomes essential. It has a learning curve, but it is the foundation almost every modern software team is built on, and you can host your own remotes on a server you control.',
+    ],
+    list: ['Distributed: every clone holds the full history', 'Commits = saved snapshots with a message', 'Branches let you work in parallel safely', 'Push/pull sync your work with a remote', 'Git is the tool; GitHub/GitLab host the repos'],
+    faq: [
+      { q: 'Is Git the same as GitHub?', a: 'No. Git is the version control software that runs on your machine and tracks your project’s history. GitHub is a website that hosts Git repositories online and adds collaboration features like pull requests and issue tracking. GitLab and Bitbucket are similar hosts. You can use Git without GitHub, and the hosting service is optional.' },
+      { q: 'Is Git hard to learn?', a: 'Git has a learning curve, and some advanced operations can be confusing at first. But the everyday workflow rests on a small set of commands — add, commit, push, pull, branch and merge — that most people pick up quickly. You do not need to master every feature to use Git productively.' },
+      { q: 'What is a commit?', a: 'A commit is a saved snapshot of your changes at a point in time, each with a short message describing what you did. Commits build up the project’s history, so you can see how the code evolved and return to any earlier state if needed.' },
+      { q: 'Do I need Git for solo projects?', a: 'It is not required, but it is genuinely useful even alone. Git gives you a full history of your work, an undo button across the whole project, and branches to try ideas safely. It also makes it easy to back up your code to a remote and to collaborate later if the project grows.' },
+    ],
+    cta: GIT_CTA,
   }),
   a({
     slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6, date: '2026-06-22',
@@ -472,6 +512,7 @@ const ART_SLUG = {
   "what-is-a-cdn": { fr: "qu-est-ce-qu-un-cdn", es: "que-es-una-cdn", de: "was-ist-ein-cdn", it: "che-cos-e-una-cdn", pt: "o-que-e-uma-cdn" },
   "what-is-a-vps": { fr: "qu-est-ce-qu-un-vps", es: "que-es-un-vps", de: "was-ist-ein-vps", it: "che-cos-e-un-vps", pt: "o-que-e-um-vps" },
   "what-is-a-reverse-proxy": { fr: "qu-est-ce-qu-un-proxy-inverse", es: "que-es-un-proxy-inverso", de: "was-ist-ein-reverse-proxy", it: "che-cos-e-un-reverse-proxy", pt: "o-que-e-um-proxy-reverso" },
+  "what-is-git": { fr: "qu-est-ce-que-git", es: "que-es-git", de: "was-ist-git", it: "che-cos-e-git", pt: "o-que-e-o-git" },
   "open-source-password-managers": { fr: "meilleurs-gestionnaires-mots-de-passe-open-source", es: "mejores-gestores-de-contrasenas-de-codigo-abierto", de: "beste-open-source-passwortmanager", it: "migliori-gestori-password-open-source", pt: "melhores-gestores-de-palavras-passe-open-source" },
   "self-hosted-password-managers": { fr: "gestionnaires-de-mots-de-passe-auto-heberges", es: "gestores-de-contrasenas-autoalojados", de: "selbstgehostete-passwortmanager", it: "gestori-password-self-hosted", pt: "gestores-de-palavras-passe-auto-hospedados" },
   "secrets-management-tools": { fr: "outils-de-gestion-des-secrets", es: "herramientas-de-gestion-de-secretos", de: "secrets-management-werkzeuge", it: "strumenti-gestione-segreti", pt: "ferramentas-de-gestao-de-segredos" },

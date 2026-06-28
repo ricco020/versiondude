@@ -366,6 +366,30 @@
    "Mejores Core Web Vitals / SEO"
   ]
  },
+ "what-is-git": {
+  "title": "¿Qué es Git? El control de versiones explicado",
+  "dek": "Git es un sistema de control de versiones distribuido que registra cada cambio en tu código y permite que varias personas trabajen en él juntas sin pisarse. Qué es Git, sus conceptos clave, en qué se diferencia de GitHub y los comandos básicos.",
+  "heroAlt": "Un editor de código que muestra un panel lateral de Git con la rama actual, las ramas locales y remotas, y un historial de commits de ramas fusionadas",
+  "bodyCaption": "Un desarrollador trabajando en un ordenador de sobremesa, editando código fuente del tipo que Git registra.",
+  "paras": [
+   "Git es un sistema de control de versiones — una herramienta que registra cada cambio realizado en un conjunto de archivos a lo largo del tiempo, para que puedas ver qué cambió, quién lo cambió y volver a cualquier estado anterior. En la práctica, ese conjunto de archivos suele ser el código fuente de un proyecto de software. Git fue creado en 2005 por Linus Torvalds, el fundador de Linux, para gestionar el desarrollo del núcleo de Linux, y desde entonces se ha convertido en la forma estándar de seguir y compartir el trabajo.",
+   "Lo que distingue a Git es que es distribuido. En un sistema más antiguo y centralizado como Subversion (SVN), hay un servidor central que guarda todo el historial, y cada desarrollador solo descarga una instantánea de los archivos. Git funciona de otra forma: cuando clonas un repositorio, descargas el proyecto completo junto con todo su historial en tu propia máquina.",
+   "Eso significa que cada desarrollador tiene una copia completa del repositorio, no solo los archivos más recientes. Puedes hacer commits, inspeccionar el historial y crear ramas totalmente sin conexión, sin hablar con un servidor. Una copia central (a menudo en un servicio como GitHub) sigue siendo útil para compartir, pero es una comodidad, no un único punto de fallo — si desapareciera, cada clon seguiría teniendo el historial completo.",
+   "Para usar Git necesitas unos cuantos conceptos clave. Un repositorio (o «repo») es la carpeta del proyecto que Git registra, con su historial. Un commit es una instantánea guardada de tus cambios en un momento dado, cada una con un mensaje que describe lo que hiciste. Antes de hacer commit, colocas los cambios en un área de staging (índice), que te permite elegir exactamente qué entra en la siguiente instantánea en vez de confirmarlo todo de golpe.",
+   "Las otras ideas esenciales son las ramas y los remotos. Una rama es una línea de trabajo independiente: puedes crear una rama para desarrollar una función o corregir un error sin tocar el código principal, y luego fusionar tu rama cuando esté lista. Un remoto es una copia del repositorio alojada en otro lugar — subes (push) tus commits para compartirlos y bajas (pull) los de otros para mantenerte sincronizado.",
+   "Los desarrolladores confían en Git por varias razones concretas. Conserva un historial completo y revisable de un proyecto; permite que todo un equipo trabaje en el mismo código en paralelo sin pisarse; las ramas hacen seguro experimentar porque el código principal queda intacto hasta que fusionas; y si un cambio rompe algo, puedes volver a un commit correcto conocido. Para casi cualquier proyecto que viva en código, esas son necesidades del día a día.",
+   "Una fuente común de confusión es la diferencia entre Git y GitHub. Git es la herramienta de control de versiones en sí — software que se ejecuta en tu ordenador y gestiona el historial. GitHub es un sitio web que aloja repositorios Git en línea, añadiendo encima funciones de colaboración como pull requests, seguimiento de incidencias y control de acceso. GitLab y Bitbucket son servicios de alojamiento similares. Puedes usar Git sin cuenta en ningún sitio; los servicios de alojamiento son lugares opcionales para guardar y compartir tus remotos.",
+   "En el uso diario manejas Git con un puñado de comandos. Inicias un proyecto con git init, o copias uno existente con git clone. Añades tus cambios con git add, guardas una instantánea con git commit, envías tus commits a un remoto con git push y traes el trabajo de otros con git pull. Alrededor de eso, git status muestra qué ha cambiado, y git branch y git merge gestionan líneas de trabajo separadas — un pequeño núcleo que cubre la mayoría de las tareas cotidianas.",
+   "Entonces, ¿necesitas Git? Si escribes código — incluso solo en un proyecto pequeño — Git te da un historial fiable, un botón de deshacer para todo tu proyecto y una forma segura de experimentar en ramas. En cuanto hay más de una persona, se vuelve esencial. Tiene una curva de aprendizaje, pero es la base sobre la que se construye casi todo equipo de software moderno, y puedes alojar tus propios remotos en un servidor que controlas."
+  ],
+  "list": [
+   "Distribuido: cada clon tiene todo el historial",
+   "Commits = instantáneas guardadas con un mensaje",
+   "Las ramas permiten trabajar en paralelo sin riesgo",
+   "Push/pull sincronizan tu trabajo con un remoto",
+   "Git es la herramienta; GitHub/GitLab alojan los repos"
+  ]
+ },
  "ssh-key-management": {
   "title": "Gestión de claves SSH: una guía práctica",
   "dek": "Las claves SSH sustituyen las contraseñas por algo mucho más robusto, pero solo si las proteges, las separas y las rotas. Una guía clara, en lenguaje sencillo, para gestionar tus claves SSH con seguridad.",

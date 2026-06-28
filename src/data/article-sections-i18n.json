@@ -859,6 +859,71 @@
    "n": 1
   }
  ],
+ "what-is-git": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Git is distributed, not centralised",
+   "fr": "Git est distribué, pas centralisé",
+   "es": "Git es distribuido, no centralizado",
+   "de": "Git ist verteilt, nicht zentralisiert",
+   "it": "Git è distribuito, non centralizzato",
+   "pt": "O Git é distribuído, não centralizado",
+   "n": 2
+  },
+  {
+   "en": "The core concepts: commits, branches, remotes",
+   "fr": "Les concepts clés : commits, branches, dépôts distants",
+   "es": "Los conceptos clave: commits, ramas, remotos",
+   "de": "Die Kernkonzepte: Commits, Branches, Remotes",
+   "it": "I concetti chiave: commit, branch, remote",
+   "pt": "Os conceitos centrais: commits, ramos, remotos",
+   "n": 2
+  },
+  {
+   "en": "Why developers rely on Git",
+   "fr": "Pourquoi les développeurs comptent sur Git",
+   "es": "Por qué los desarrolladores confían en Git",
+   "de": "Warum Entwickler auf Git setzen",
+   "it": "Perché gli sviluppatori si affidano a Git",
+   "pt": "Por que os programadores confiam no Git",
+   "n": 1
+  },
+  {
+   "en": "Git is not GitHub",
+   "fr": "Git n'est pas GitHub",
+   "es": "Git no es GitHub",
+   "de": "Git ist nicht GitHub",
+   "it": "Git non è GitHub",
+   "pt": "Git não é o GitHub",
+   "n": 1
+  },
+  {
+   "en": "The basic commands",
+   "fr": "Les commandes de base",
+   "es": "Los comandos básicos",
+   "de": "Die grundlegenden Befehle",
+   "it": "I comandi di base",
+   "pt": "Os comandos básicos",
+   "n": 1
+  },
+  {
+   "en": "Do you need Git?",
+   "fr": "Avez-vous besoin de Git ?",
+   "es": "¿Necesitas Git?",
+   "de": "Brauchen Sie Git?",
+   "it": "Hai bisogno di Git?",
+   "pt": "Precisa do Git?",
+   "n": 1
+  }
+ ],
  "ssh-key-management": [
   {
    "en": "",

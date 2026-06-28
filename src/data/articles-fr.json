@@ -366,6 +366,30 @@
    "Meilleurs Core Web Vitals / SEO"
   ]
  },
+ "what-is-git": {
+  "title": "Qu'est-ce que Git ? Le contrôle de version expliqué",
+  "dek": "Git est un système de contrôle de version distribué qui suit chaque modification de votre code et permet à plusieurs personnes d'y travailler ensemble sans s'écraser mutuellement. Ce qu'est Git, ses concepts clés, en quoi il diffère de GitHub, et les commandes de base.",
+  "heroAlt": "Un éditeur de code affichant un panneau Git latéral avec la branche courante, les branches locales et distantes, et un historique de commits de branches fusionnées",
+  "bodyCaption": "Un développeur travaillant sur un ordinateur de bureau, éditant du code source du type que Git suit.",
+  "paras": [
+   "Git est un système de contrôle de version — un outil qui enregistre chaque modification apportée à un ensemble de fichiers au fil du temps, pour voir ce qui a changé, qui l'a changé, et revenir à n'importe quel état antérieur. En pratique, cet ensemble de fichiers est généralement le code source d'un projet logiciel. Git a été créé en 2005 par Linus Torvalds, le fondateur de Linux, pour gérer le développement du noyau Linux, et il est depuis devenu la façon standard de suivre et partager son travail.",
+   "Ce qui distingue Git, c'est qu'il est distribué. Dans un système plus ancien et centralisé comme Subversion (SVN), il y a un serveur central qui détient tout l'historique, et chaque développeur ne récupère qu'un instantané des fichiers. Git fonctionne différemment : quand vous clonez un dépôt, vous téléchargez l'intégralité du projet ainsi que son historique complet sur votre propre machine.",
+   "Cela signifie que chaque développeur possède une copie complète du dépôt, pas seulement les derniers fichiers. Vous pouvez commiter des modifications, inspecter l'historique et créer des branches entièrement hors ligne, sans communiquer avec un serveur. Une copie centrale (souvent sur un service comme GitHub) reste utile pour partager, mais c'est un confort, pas un point unique de défaillance — si elle disparaissait, chaque clone détiendrait encore l'historique complet.",
+   "Pour utiliser Git, il faut quelques concepts clés. Un dépôt (ou « repo ») est le dossier de projet que Git suit, avec son historique. Un commit est un instantané sauvegardé de vos modifications à un instant donné, chacun avec un message décrivant ce que vous avez fait. Avant de commiter, vous placez les modifications dans une zone de staging (index), qui vous permet de choisir exactement ce qui entre dans le prochain instantané plutôt que de tout commiter d'un coup.",
+   "Les autres idées essentielles sont les branches et les dépôts distants (remotes). Une branche est une ligne de travail indépendante : vous pouvez créer une branche pour développer une fonctionnalité ou corriger un bug sans toucher au code principal, puis fusionner votre branche quand elle est prête. Un remote est une copie du dépôt hébergée ailleurs — vous y poussez (push) vos commits pour les partager, et vous tirez (pull) ceux des autres pour rester synchronisé.",
+   "Les développeurs comptent sur Git pour plusieurs raisons concrètes. Il conserve un historique complet et consultable d'un projet ; il permet à toute une équipe de travailler sur le même code en parallèle sans s'écraser ; les branches rendent l'expérimentation sûre car le code principal reste intact jusqu'à la fusion ; et si une modification casse quelque chose, vous pouvez revenir à un commit sain connu. Pour presque tout projet qui vit dans du code, ce sont des besoins quotidiens.",
+   "Une confusion fréquente porte sur la différence entre Git et GitHub. Git est l'outil de contrôle de version lui-même — un logiciel qui tourne sur votre ordinateur et gère l'historique. GitHub est un site web qui héberge des dépôts Git en ligne, en ajoutant par-dessus des fonctions de collaboration comme les pull requests, le suivi des tickets et le contrôle d'accès. GitLab et Bitbucket sont des services d'hébergement similaires. Vous pouvez utiliser Git sans compte nulle part ; les hébergeurs sont des endroits optionnels pour stocker et partager vos remotes.",
+   "Au quotidien, vous pilotez Git avec une poignée de commandes. Vous démarrez un projet avec git init, ou copiez un projet existant avec git clone. Vous indexez vos modifications avec git add, sauvegardez un instantané avec git commit, envoyez vos commits vers un remote avec git push, et récupérez le travail des autres avec git pull. Autour de cela, git status montre ce qui a changé, et git branch et git merge gèrent les lignes de travail séparées — un petit noyau qui couvre la plupart des tâches courantes.",
+   "Alors, avez-vous besoin de Git ? Si vous écrivez du code — même seul sur un petit projet — Git vous offre un historique fiable, un bouton d'annulation pour tout votre projet, et un moyen sûr d'expérimenter sur des branches. Dès que plus d'une personne est impliquée, il devient essentiel. Il a une courbe d'apprentissage, mais c'est le socle sur lequel presque toute équipe logicielle moderne est bâtie, et vous pouvez héberger vos propres remotes sur un serveur que vous contrôlez."
+  ],
+  "list": [
+   "Distribué : chaque clone détient tout l'historique",
+   "Commits = instantanés sauvegardés avec un message",
+   "Les branches permettent de travailler en parallèle sans risque",
+   "Push/pull synchronisent votre travail avec un remote",
+   "Git est l'outil ; GitHub/GitLab hébergent les dépôts"
+  ]
+ },
  "ssh-key-management": {
   "title": "Gestion des clés SSH : guide pratique",
   "dek": "Les clés SSH remplacent les mots de passe par quelque chose de bien plus solide — à condition de les protéger, de les cloisonner et de les renouveler. Un guide clair pour gérer ses clés SSH en toute sécurité.",
