@@ -1,4 +1,4 @@
-// Hero central STATIQUE + DYNAMIQUE (SSR, sans Owl) — article le plus récent. Pas de carousel.
+// Hero central STATIQUE + DYNAMIQUE (SSR, sans Owl) - article le plus récent. Pas de carousel.
 import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 const LOCALE = "es";
 const HomeCenterStatic = () => {

@@ -4,7 +4,7 @@ import ProjectsList from "@/components/projects-list/projects-list";
 export function generateMetadata() {
   const c = getContent("en");
   return {
-    title: `${c.projectsTitle} — VersionDude`,
+    title: `${c.projectsTitle} - VersionDude`,
     description: c.projectsIntro,
     robots: { index: true, follow: true },
     alternates: { canonical: "https://versiondude.net/projects" },

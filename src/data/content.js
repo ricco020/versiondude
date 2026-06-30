@@ -1,4 +1,4 @@
-// VersionDude — source unique du contenu éditorial réel, en EN/FR/ES.
+// VersionDude - source unique du contenu éditorial réel, en EN/FR/ES.
 // Tout est factuel et original. Nous ne revendiquons PAS la paternité des projets
 // tiers documentés ci-dessous ; chacun renvoie à son vrai dépôt actuel.
 // Images : libres de droits (Pixabay), uniques par projet, légendes littérales honnêtes.
@@ -19,7 +19,7 @@ const en = {
   projects: [
     {
       slug: 'html5-parser', name: 'HTML5 Parser (htmlparser)', category: 'parsing',
-      excerpt: 'An early Java HTML5 parsing engine with SAX and DOM interfaces — the engine behind the Nu HTML Checker.',
+      excerpt: 'An early Java HTML5 parsing engine with SAX and DOM interfaces - the engine behind the Nu HTML Checker.',
       heroAlt: 'Computer code on a screen', bodyCaption: 'Lines of code displayed on a screen.',
       body: [
         'The htmlparser project is an HTML5 parsing engine written in Java that provides SAX and DOM interfaces. Early development repositories were hosted here under /whattf/htmlparser/trunk/.',
@@ -30,7 +30,7 @@ const en = {
     },
     {
       slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
-      excerpt: 'The HTML5 conformance checker — its syntax schemas and checker tooling were developed in repositories hosted here.',
+      excerpt: 'The HTML5 conformance checker - its syntax schemas and checker tooling were developed in repositories hosted here.',
       heroAlt: 'A laptop displaying lines of code', bodyCaption: 'Source code shown in a code editor.',
       body: [
         'Validator.nu is an HTML5 conformance checker. Its syntax schemas, checker (/whattf/syntax/, org.whattf.checker) and build tooling were developed in repositories hosted here.',
@@ -86,7 +86,7 @@ const fr = {
   projects: [
     {
       slug: 'html5-parser', name: 'Parseur HTML5 (htmlparser)', category: 'parsing',
-      excerpt: 'Un moteur d’analyse HTML5 en Java (interfaces SAX et DOM) — le moteur derrière le Nu HTML Checker.',
+      excerpt: 'Un moteur d’analyse HTML5 en Java (interfaces SAX et DOM) - le moteur derrière le Nu HTML Checker.',
       heroAlt: 'Du code informatique à l’écran', bodyCaption: 'Des lignes de code affichées à l’écran.',
       body: [
         'Le projet htmlparser est un moteur d’analyse HTML5 écrit en Java qui fournit des interfaces SAX et DOM. Ses premiers dépôts de développement étaient hébergés ici sous /whattf/htmlparser/trunk/.',
@@ -97,7 +97,7 @@ const fr = {
     },
     {
       slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
-      excerpt: 'Le validateur de conformité HTML5 — ses schémas de syntaxe et son outillage ont été développés dans des dépôts hébergés ici.',
+      excerpt: 'Le validateur de conformité HTML5 - ses schémas de syntaxe et son outillage ont été développés dans des dépôts hébergés ici.',
       heroAlt: 'Un ordinateur portable affichant du code', bodyCaption: 'Du code source dans un éditeur.',
       body: [
         'Validator.nu est un validateur de conformité HTML5. Ses schémas de syntaxe, son vérificateur (/whattf/syntax/, org.whattf.checker) et son outillage de build ont été développés dans des dépôts hébergés ici.',
@@ -153,7 +153,7 @@ const es = {
   projects: [
     {
       slug: 'html5-parser', name: 'Analizador HTML5 (htmlparser)', category: 'parsing',
-      excerpt: 'Un motor de análisis HTML5 en Java (interfaces SAX y DOM) — el motor tras el Nu HTML Checker.',
+      excerpt: 'Un motor de análisis HTML5 en Java (interfaces SAX y DOM) - el motor tras el Nu HTML Checker.',
       heroAlt: 'Código informático en una pantalla', bodyCaption: 'Líneas de código en una pantalla.',
       body: [
         'El proyecto htmlparser es un motor de análisis HTML5 escrito en Java que ofrece interfaces SAX y DOM. Sus primeros repositorios de desarrollo se alojaron aquí bajo /whattf/htmlparser/trunk/.',
@@ -164,7 +164,7 @@ const es = {
     },
     {
       slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
-      excerpt: 'El validador de conformidad HTML5 — sus esquemas de sintaxis y herramientas se desarrollaron en repositorios alojados aquí.',
+      excerpt: 'El validador de conformidad HTML5 - sus esquemas de sintaxis y herramientas se desarrollaron en repositorios alojados aquí.',
       heroAlt: 'Un portátil mostrando código', bodyCaption: 'Código fuente en un editor de código.',
       body: [
         'Validator.nu es un validador de conformidad HTML5. Sus esquemas de sintaxis, su verificador (/whattf/syntax/, org.whattf.checker) y sus herramientas de compilación se desarrollaron en repositorios alojados aquí.',
@@ -220,7 +220,7 @@ const de = {
   projects: [
     {
       slug: 'html5-parser', name: 'HTML5-Parser (htmlparser)', category: 'parsing',
-      excerpt: 'Eine frühe HTML5-Parsing-Engine in Java mit SAX- und DOM-Schnittstellen — die Engine hinter dem Nu HTML Checker.',
+      excerpt: 'Eine frühe HTML5-Parsing-Engine in Java mit SAX- und DOM-Schnittstellen - die Engine hinter dem Nu HTML Checker.',
       heroAlt: 'Computercode auf einem Bildschirm', bodyCaption: 'Codezeilen auf einem Bildschirm.',
       body: [
         'Das Projekt htmlparser ist eine in Java geschriebene HTML5-Parsing-Engine, die SAX- und DOM-Schnittstellen bereitstellt. Frühe Entwicklungs-Repositories waren hier unter /whattf/htmlparser/trunk/ gehostet.',
@@ -231,7 +231,7 @@ const de = {
     },
     {
       slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
-      excerpt: 'Der HTML5-Konformitätsprüfer — seine Syntax-Schemata und sein Checker-Werkzeug wurden in hier gehosteten Repositories entwickelt.',
+      excerpt: 'Der HTML5-Konformitätsprüfer - seine Syntax-Schemata und sein Checker-Werkzeug wurden in hier gehosteten Repositories entwickelt.',
       heroAlt: 'Ein Laptop, der Codezeilen anzeigt', bodyCaption: 'Quellcode in einem Code-Editor.',
       body: [
         'Validator.nu ist ein HTML5-Konformitätsprüfer. Seine Syntax-Schemata, sein Checker (/whattf/syntax/, org.whattf.checker) und sein Build-Werkzeug wurden in hier gehosteten Repositories entwickelt.',
@@ -287,7 +287,7 @@ const it = {
   projects: [
     {
       slug: 'html5-parser', name: 'Parser HTML5 (htmlparser)', category: 'parsing',
-      excerpt: "Un primo motore di parsing HTML5 in Java con interfacce SAX e DOM — il motore dietro il Nu HTML Checker.",
+      excerpt: "Un primo motore di parsing HTML5 in Java con interfacce SAX e DOM - il motore dietro il Nu HTML Checker.",
       heroAlt: 'Codice informatico su uno schermo', bodyCaption: 'Righe di codice mostrate su uno schermo.',
       body: [
         "Il progetto htmlparser è un motore di parsing HTML5 scritto in Java che fornisce interfacce SAX e DOM. I primi repository di sviluppo erano ospitati qui sotto /whattf/htmlparser/trunk/.",
@@ -298,7 +298,7 @@ const it = {
     },
     {
       slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
-      excerpt: 'Il validatore di conformità HTML5 — i suoi schemi di sintassi e i suoi strumenti sono stati sviluppati in repository ospitati qui.',
+      excerpt: 'Il validatore di conformità HTML5 - i suoi schemi di sintassi e i suoi strumenti sono stati sviluppati in repository ospitati qui.',
       heroAlt: 'Un portatile che mostra righe di codice', bodyCaption: 'Codice sorgente in un editor di codice.',
       body: [
         'Validator.nu è un validatore di conformità HTML5. I suoi schemi di sintassi, il suo checker (/whattf/syntax/, org.whattf.checker) e i suoi strumenti di build sono stati sviluppati in repository ospitati qui.',
@@ -354,7 +354,7 @@ const pt = {
   projects: [
     {
       slug: 'html5-parser', name: 'Analisador HTML5 (htmlparser)', category: 'parsing',
-      excerpt: 'Um motor de análise de HTML5 em Java com interfaces SAX e DOM — o motor por trás do Nu HTML Checker.',
+      excerpt: 'Um motor de análise de HTML5 em Java com interfaces SAX e DOM - o motor por trás do Nu HTML Checker.',
       heroAlt: 'Código informático num ecrã', bodyCaption: 'Linhas de código apresentadas num ecrã.',
       body: [
         'O projeto htmlparser é um motor de análise de HTML5 escrito em Java que fornece interfaces SAX e DOM. Os primeiros repositórios de desenvolvimento estiveram alojados aqui em /whattf/htmlparser/trunk/.',
@@ -365,7 +365,7 @@ const pt = {
     },
     {
       slug: 'validator-nu', name: 'Validator.nu', category: 'standards',
-      excerpt: 'O verificador de conformidade HTML5 — os seus esquemas de sintaxe e ferramentas foram desenvolvidos em repositórios alojados aqui.',
+      excerpt: 'O verificador de conformidade HTML5 - os seus esquemas de sintaxe e ferramentas foram desenvolvidos em repositórios alojados aqui.',
       heroAlt: 'Um portátil a mostrar linhas de código', bodyCaption: 'Código-fonte num editor de código.',
       body: [
         'O Validator.nu é um verificador de conformidade HTML5. Os seus esquemas de sintaxe, o seu verificador (/whattf/syntax/, org.whattf.checker) e as suas ferramentas de build foram desenvolvidos em repositórios alojados aqui.',

@@ -1,7 +1,7 @@
 import LayoutTwo from "@/components/ltr/layout/layout-two";
 import Link from "next/link";
 
-export const metadata = { title: "Page not found — VersionDude", robots: { index: false } };
+export const metadata = { title: "Page not found - VersionDude", robots: { index: false } };
 
 export default function NotFound() {
   return (

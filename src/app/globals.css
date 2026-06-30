@@ -1664,7 +1664,7 @@ figure img {
    Template default = white title overlaid on the image (.post-text absolute,
    color:#fff). In the related grid the image didn't fill, so the white title
    landed on empty white space = invisible (Eric report 2026-06-19). Fix: a
-   clean card — image on top (fixed height), then the title in DARK text BELOW,
+   clean card - image on top (fixed height), then the title in DARK text BELOW,
    exactly like the readable sidebar list.                                     */
 .post-inner-2 .slider-post.post-height-4 {
     height: auto;
@@ -7236,7 +7236,7 @@ body.layout-rtl .style-settings-content {
 body.layout-rtl .style-settings-content ul li select {
     float: left;
 }
-/* ===== VersionDude — habillage éditorial magazine des articles ===== */
+/* ===== VersionDude - habillage éditorial magazine des articles ===== */
 .post_details_block h2{font-family:var(--font-cormorant-garamond),Georgia,serif;font-weight:700;font-size:1.9rem;line-height:1.2;margin:2.2rem 0 .9rem;padding-left:.85rem;border-left:4px solid #e63329;}
 .post_details_block h3{font-weight:700;font-size:1.35rem;margin:1.6rem 0 .7rem;color:#1a1a1a;}
 .post_details_block p{font-size:1.075rem;line-height:1.85;color:#2b2b2b;margin-bottom:1.15rem;}
@@ -7313,7 +7313,7 @@ body.layout-rtl .style-settings-content ul li select {
 #owl-slider.owl-static .news-image { display: block; height: 100%; }
 #owl-slider.owl-static .item img { width: 100%; height: 100%; object-fit: cover; }
 
-/* News ticker défilant (CSS, sans owl) — mission affichage I-News Eric 2026-06-23 */
+/* News ticker défilant (CSS, sans owl) - mission affichage I-News Eric 2026-06-23 */
 .v-tick-mask { flex:1; height:34px; overflow:hidden; }
 .v-tick-track { list-style:none; margin:0; padding:0; animation: vTick6 21s ease-in-out infinite; will-change: transform; }
 .v-tick-mask:hover .v-tick-track { animation-play-state: paused; }
@@ -7329,7 +7329,7 @@ body.layout-rtl .style-settings-content ul li select {
   100% { transform: translateY(-204px); }
 }
 
-/* Featured : 1 rangée scrollable horizontalement, scrollbar masquée — Eric 2026-06-23 */
+/* Featured : 1 rangée scrollable horizontalement, scrollbar masquée - Eric 2026-06-23 */
 @keyframes featMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .feat-marquee-mask { overflow:hidden; -webkit-mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent); }
 .feat-marquee-track { display:flex; gap:14px; width:max-content; animation: featMarquee 60s linear infinite; will-change: transform; }

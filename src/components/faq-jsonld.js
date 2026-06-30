@@ -1,5 +1,5 @@
 // Server component: renders FAQPage structured data into the initial HTML
-// (reliable for Googlebot — unlike a "use client" component's script).
+// (reliable for Googlebot - unlike a "use client" component's script).
 import { createElement } from "react";
 import { t } from "@/data/site-i18n";
 import { serializeJsonLd } from "@/lib/json-ld-serialize";

@@ -43,7 +43,7 @@ export default function Home() {
     <Layout locale="pt">
       {/* *** START PAGE MAIN CONTENT *** */}
       <main className="page_main_wrapper">
-        <h1 className="visually-hidden">VersionDude — web standards, parsers &amp; developer tooling</h1>
+        <h1 className="visually-hidden">VersionDude - web standards, parsers &amp; developer tooling</h1>
         <NewsTicker />
         {/* START FEATURE SECTION */}
         <div className="bg-img feature-section py-4 py-lg-3 py-xl-4" data-image-src="/assets/images/bg-shape.png">

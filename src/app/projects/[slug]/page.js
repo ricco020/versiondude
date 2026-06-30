@@ -12,7 +12,7 @@ export function generateMetadata({ params }) {
   const p = findProject("en", params.slug);
   if (!p) return {};
   return {
-    title: `${p.name} — VersionDude`,
+    title: `${p.name} - VersionDude`,
     description: p.excerpt,
     openGraph: { title: p.name, description: p.excerpt, images: [projectImages(p.slug).hero] },
     robots: { index: true, follow: true },

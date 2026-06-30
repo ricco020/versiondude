@@ -1,4 +1,4 @@
-// Featured : défilement HORIZONTAL automatique (marquee CSS), SANS flèches — Eric 2026-06-23. Tri date desc, nouveaux en tête.
+// Featured : défilement HORIZONTAL automatique (marquee CSS), SANS flèches - Eric 2026-06-23. Tri date desc, nouveaux en tête.
 import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 const LOCALE = "es";
 const HomeFeatureCarousal = () => {

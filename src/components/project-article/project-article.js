@@ -4,8 +4,10 @@ import Link from "next/link";
 
 // Rendu d'une page projet dans le design d'article de la démo (post_details_block).
 // project = objet localisé (content.js) ; img = {hero, body} ; labels = libellés localisés ; home = préfixe locale ("" | "/fr" | "/es").
-// Affiliate CTA (Awin cloud hosting — relevant to a developer audience deploying projects).
-const AFF_CLOUD = "https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469";
+// Affiliate CTA - DigitalOcean (Awin mid=123996, deeplink Eric 2026-06-29, vérifié →
+// digitalocean.com). Developer cloud (Droplets/App Platform) = match exact de la copie
+// "ship & scale your apps", mieux aligné que l'hébergement mutualisé pour une audience dev.
+const AFF_CLOUD = "https://www.awin1.com/cread.php?awinmid=123996&awinaffid=979469&clickref=versiondude-project";
 const CTA = {
   en: { tag: "Sponsored", title: "Deploying your own project?", text: "Reliable, developer-friendly cloud hosting to ship and scale your apps.", btn: "See cloud hosting" },
   fr: { tag: "Sponsorisé", title: "Vous déployez votre projet ?", text: "Hébergement cloud fiable et orienté développeurs pour lancer et faire évoluer vos apps.", btn: "Voir l’hébergement cloud" },

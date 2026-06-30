@@ -11,7 +11,7 @@ export function generateMetadata({ params }) {
   const x = findArticleBySlug(params.slug);
   if (!x) return {};
   return {
-    title: `${x.title} — VersionDude`,
+    title: `${x.title} - VersionDude`,
     description: x.dek,
     openGraph: { title: x.title, description: x.dek, type: 'article', images: [x.hero] },
     robots: { index: true, follow: true },

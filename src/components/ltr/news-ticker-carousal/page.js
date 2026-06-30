@@ -1,4 +1,4 @@
-// Tendances : ticker VERTICAL pas-à-pas avec pause entre chaque (sans owl/jQuery) — Eric 2026-06-23.
+// Tendances : ticker VERTICAL pas-à-pas avec pause entre chaque (sans owl/jQuery) - Eric 2026-06-23.
 import { getArticles, articleHref } from "@/data/articles";
 const LOCALE = "en";
 const NewsTicker = () => {

@@ -20,7 +20,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
   const tags = [catLabel, "open source", "web", "VersionDude"];
   let pIndex = 0; // pour placer image + liste + citation à des endroits variés
 
-  // JSON-LD (GEO/SEO) : Article + BreadcrumbList — émis sur chaque article (calqué jumeau vuetelemetry).
+  // JSON-LD (GEO/SEO) : Article + BreadcrumbList - émis sur chaque article (calqué jumeau vuetelemetry).
   const SITE = "https://versiondude.net";
   const artUrl = SITE + articleHref(article.slug, loc);
   const jsonLd = {
@@ -137,7 +137,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                         {si === sections.length - 2 && sec.paras.length > 0 ? (
                           <div className="article_comment">
                             <p>{sec.paras[sec.paras.length - 1]}</p>
-                            <div className="customers">— VersionDude</div>
+                            <div className="customers">- VersionDude</div>
                           </div>
                         ) : null}
                       </div>
