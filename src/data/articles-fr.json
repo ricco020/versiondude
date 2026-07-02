@@ -509,5 +509,30 @@
    "Styles courants : REST, GraphQL, SOAP, WebSockets",
    "Protégées par l'authentification et les limites de débit, décrites dans la documentation"
   ]
+ },
+ "opera-paste-protect-clickfix-clipboard-2026": {
+  "title": "Opera Paste Protect : la défense du navigateur contre les attaques ClickFix par presse-papiers",
+  "dek": "Opera a lancé Paste Protect, présenté comme la première défense native dans un grand navigateur contre les attaques par presse-papiers comme ClickFix et le pastejacking. En quoi consistent ces attaques, ce que fait Paste Protect et comment vous protéger dans n'importe quel navigateur.",
+  "heroAlt": "Une personne travaillant sur un ordinateur portable qui affiche du code source coloré dans un éditeur",
+  "bodyCaption": "Une alerte de sécurité rouge par-dessus des lignes de code à l'écran. Paste Protect affiche un avertissement de ce type lorsqu'il bloque une commande suspecte issue du presse-papiers.",
+  "paras": [
+   "Opera a lancé une fonctionnalité baptisée Paste Protect, qu'il décrit comme la première défense native dans un grand navigateur contre les attaques par presse-papiers. Annoncée le 2 juillet 2026, elle vise une catégorie d'attaque connue sous le nom de ClickFix, ainsi que le clipboard hijacking et le pastejacking, et elle est intégrée aux navigateurs de bureau d'Opera et activée par défaut, si bien que les utilisateurs sont protégés sans aucune configuration.",
+   "ClickFix est une attaque d'ingénierie sociale qui retourne une habitude anodine contre vous. Elle commence généralement par quelque chose de petit et d'ordinaire : une vidéo qui ne veut pas se lancer, ou un CAPTCHA qui n'arrive pas tout à fait à confirmer que vous êtes humain. Une fenêtre pop-up propose alors une solution et vous invite à copier une courte commande pour la coller dans le terminal de votre ordinateur ou dans la boîte d'exécution.",
+   "La commande, bien sûr, est malveillante, et en la collant puis en l'exécutant vous infectez votre propre machine. L'astuce fonctionne parce que l'étape dangereuse ressemble à un dépannage de routine, et parce que le presse-papiers est un angle mort que les navigateurs n'ont historiquement pas inspecté. Selon la société de cybersécurité Huntress, ClickFix représente désormais plus de la moitié de ce type d'activité de chargement de logiciels malveillants, ce qui rend une défense au niveau du navigateur si importante.",
+   "Paste Protect ajoute ce qu'Opera appelle l'injection protection : elle surveille en temps réel l'activité du presse-papiers à la recherche de commandes potentiellement malveillantes, que vous les ayez copiées vous-même ou qu'un site web les y ait placées. Elle utilise des techniques de détection adaptées à Windows, macOS et Linux pour repérer les schémas associés aux scripts malveillants, plutôt que de s'appuyer sur une seule règle générique.",
+   "Parce qu'elle est native et activée par défaut, la protection s'applique sans extension ni configuration. Cela compte pour les personnes les plus exposées à ClickFix, qui ne sont généralement pas celles qui fouillent dans les paramètres à la recherche d'une option de sécurité. La défense les rejoint là où l'attaque se produit, au moment du collage.",
+   "Lorsque Paste Protect détecte une menace, l'action de copie est immédiatement bloquée, un avertissement s'affiche et explique ce qui s'est passé, et une icône rouge apparaît dans la barre d'adresse. Les utilisateurs peuvent voir les 120 premiers caractères du contenu bloqué, ce qui leur donne un contexte plutôt qu'un refus vide.",
+   "Opera prend aussi en compte les usages légitimes. Les développeurs qui travaillent avec des sources de confiance, et qui copient régulièrement des commandes depuis de la documentation ou leurs propres outils, peuvent passer outre un blocage ou marquer certains sites comme sûrs. Cela évite que la fonctionnalité ne devienne un obstacle pour les personnes dont le travail quotidien consiste à coller de vraies commandes.",
+   "La portée plus large tient au fait qu'un grand navigateur traite enfin le presse-papiers comme une surface de sécurité. Le copier-coller a été accordé une confiance implicite pendant des décennies, et les attaquants ont discrètement exploité cette confiance. Si le fait qu'Opera soit le premier ici incite d'autres navigateurs à ajouter une protection similaire, le presse-papiers deviendra une voie un peu moins libre pour ce type d'attaque sur le web.",
+   "Vous n'avez pas besoin de changer de navigateur pour rester en sécurité, car la règle sous-jacente est simple : ne collez jamais une commande issue d'une page web dans votre terminal, votre boîte d'exécution ou votre console de développement, à moins de la comprendre parfaitement et de faire confiance à la source. Si un site vous demande de copier quelque chose et de l'exécuter pour réparer une vidéo ou prouver que vous êtes humain, considérez cela comme un signal d'alarme. Une fonctionnalité de navigateur est un filet de sécurité utile, mais c'est cette habitude qui constitue la vraie défense."
+  ],
+  "list": [
+   "Opera Paste Protect a été lancé le 2 juillet 2026, activé par défaut dans le navigateur de bureau",
+   "Il est présenté comme la première défense native dans un grand navigateur contre les attaques par presse-papiers",
+   "Il vise ClickFix, le clipboard hijacking et le pastejacking",
+   "ClickFix vous piège pour vous faire coller une commande malveillante dans votre terminal",
+   "Selon Huntress, ClickFix représente plus de la moitié de cette activité de chargement de logiciels malveillants",
+   "La défense universelle : ne jamais coller une commande issue d'un site web dans un terminal auquel vous ne faites pas confiance"
+  ]
  }
 }

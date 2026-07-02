@@ -509,5 +509,30 @@
    "Push/Pull synchronisieren deine Arbeit mit einem Remote",
    "Git ist das Werkzeug; GitHub/GitLab hosten die Repos"
   ]
+ },
+ "opera-paste-protect-clickfix-clipboard-2026": {
+  "title": "Opera Paste Protect: der Browserschutz gegen ClickFix-Angriffe über die Zwischenablage",
+  "dek": "Opera hat Paste Protect vorgestellt, das als erste native Verteidigung in einem großen Browser gegen auf der Zwischenablage basierende Angriffe wie ClickFix und Pastejacking angepriesen wird. Was diese Angriffe sind, was Paste Protect leistet und wie Sie sich in jedem Browser schützen.",
+  "heroAlt": "Eine Person arbeitet an einem Laptop, der in einem Editor bunten Quellcode anzeigt",
+  "bodyCaption": "Eine rote Sicherheitswarnung über Codezeilen auf einem Bildschirm. Paste Protect zeigt eine solche Warnung an, wenn es einen verdächtigen Befehl aus der Zwischenablage blockiert.",
+  "paras": [
+   "Opera hat eine Funktion namens Paste Protect eingeführt, die es als erste native Verteidigung in einem großen Browser gegen auf der Zwischenablage basierende Angriffe beschreibt. Am 2. Juli 2026 angekündigt, richtet sie sich gegen eine Angriffsart namens ClickFix sowie gegen Clipboard-Hijacking und Pastejacking. Sie ist in Operas Desktop-Browser integriert und standardmäßig aktiviert, sodass Nutzer ohne jede Einrichtung geschützt sind.",
+   "ClickFix ist ein Social-Engineering-Angriff, der eine ganz normale Gewohnheit gegen Sie wendet. Er beginnt meist mit etwas Kleinem und Alltäglichem: einem Video, das nicht abspielt, oder einem CAPTCHA, das nicht so recht bestätigen will, dass Sie ein Mensch sind. Ein Pop-up bietet dann eine Lösung an und fordert Sie auf, einen kurzen Befehl zu kopieren und ihn in das Terminal Ihres Computers oder in das Ausführen-Feld einzufügen.",
+   "Der Befehl ist natürlich bösartig, und indem Sie ihn einfügen und ausführen, infizieren Sie Ihren eigenen Rechner. Die Masche funktioniert, weil der gefährliche Schritt wie eine ganz normale Fehlerbehebung aussieht und weil die Zwischenablage ein blinder Fleck ist, den Browser bislang nicht überprüft haben. Laut dem Cybersicherheitsunternehmen Huntress macht ClickFix inzwischen mehr als die Hälfte dieser Art von Malware-ladender Aktivität aus, was eine Verteidigung auf Browserebene so bedeutsam macht.",
+   "Paste Protect fügt hinzu, was Opera als Injection Protection bezeichnet: Es überwacht die Aktivität der Zwischenablage in Echtzeit auf potenziell bösartige Befehle, unabhängig davon, ob Sie sie selbst kopiert haben oder eine Website sie dort platziert hat. Es nutzt auf Windows, macOS und Linux zugeschnittene Erkennungstechniken, um die für bösartige Skripte typischen Muster zu erkennen, statt sich auf eine einzige generische Regel zu verlassen.",
+   "Weil der Schutz nativ und standardmäßig aktiv ist, greift er ohne Erweiterung oder Konfiguration. Das ist wichtig für die Menschen, die durch ClickFix am stärksten gefährdet sind und die typischerweise nicht diejenigen sind, die in den Einstellungen nach einem Sicherheitsschalter suchen. Die Verteidigung findet sie dort, wo der Angriff passiert, im Moment des Einfügens.",
+   "Wenn Paste Protect eine Bedrohung erkennt, wird die Kopieraktion sofort blockiert, eine Warnung erscheint und erklärt, was passiert ist, und ein rotes Symbol taucht in der Adressleiste auf. Nutzer können die ersten 120 Zeichen des blockierten Inhalts sehen, sodass sie Kontext erhalten statt einer bloßen Ablehnung.",
+   "Opera berücksichtigt auch die legitime Nutzung. Entwickler, die mit vertrauenswürdigen Quellen arbeiten und routinemäßig Befehle aus Dokumentationen oder ihren eigenen Werkzeugen kopieren, können eine Blockade außer Kraft setzen oder bestimmte Websites als sicher markieren. So wird verhindert, dass die Funktion zum Hindernis für jene wird, deren tägliche Arbeit das Einfügen echter Befehle umfasst.",
+   "Die weiter reichende Bedeutung liegt darin, dass ein großer Browser die Zwischenablage überhaupt als Sicherheitsfläche behandelt. Dem Kopieren und Einfügen wurde jahrzehntelang stillschweigend vertraut, und Angreifer haben dieses Vertrauen leise ausgenutzt. Wenn Operas Vorreiterrolle hier andere Browser dazu bewegt, einen ähnlichen Schutz hinzuzufügen, wird die Zwischenablage im gesamten Web zu einer etwas weniger freien Bahn für diese Art von Angriff.",
+   "Sie müssen nicht den Browser wechseln, um sicher zu bleiben, denn die zugrunde liegende Regel ist einfach: Fügen Sie niemals einen Befehl von einer Webseite in Ihr Terminal, Ihr Ausführen-Feld oder Ihre Entwicklerkonsole ein, es sei denn, Sie verstehen ihn vollständig und vertrauen der Quelle. Wenn eine Website Ihnen sagt, Sie sollten etwas kopieren und ausführen, um ein Video zu reparieren oder zu beweisen, dass Sie ein Mensch sind, betrachten Sie das als Warnsignal. Eine Browserfunktion ist ein nützliches Sicherheitsnetz, doch diese Gewohnheit ist die eigentliche Verteidigung."
+  ],
+  "list": [
+   "Opera Paste Protect wurde am 2. Juli 2026 eingeführt, im Desktop-Browser standardmäßig aktiviert",
+   "Es wird als erste native Verteidigung in einem großen Browser gegen Angriffe über die Zwischenablage angepriesen",
+   "Richtet sich gegen ClickFix, Clipboard-Hijacking und Pastejacking",
+   "ClickFix bringt Sie mit einer List dazu, einen bösartigen Befehl in Ihr Terminal einzufügen",
+   "Laut Huntress macht ClickFix mehr als die Hälfte dieser Malware-ladenden Aktivität aus",
+   "Die universelle Verteidigung: Fügen Sie niemals einen Befehl von einer Website in ein Terminal ein, dem Sie nicht vertrauen"
+  ]
  }
 }

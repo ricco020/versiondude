@@ -98,6 +98,15 @@ const GIT_CTA = {
 const a = (o) => o;
 
 export const ARTICLES = [
+  a({
+    slug: 'opera-paste-protect-clickfix-clipboard-2026', category: 'tooling', readingMinutes: 6, date: '2026-07-02',
+    title: "Opera Paste Protect: the browser defense against ClickFix clipboard attacks",
+    dek: "Opera has launched Paste Protect, billed as the first native defense in a major browser against clipboard-based attacks like ClickFix and pastejacking. What the attacks are, what Paste Protect does, and how to protect yourself in any browser.",
+    hero: '/assets/articles/opera-paste-protect-clickfix-clipboard-2026-hero.jpg', heroAlt: "A person working on a laptop that shows colourful source code in an editor",
+    body: '/assets/articles/opera-paste-protect-clickfix-clipboard-2026-body.jpg', bodyCaption: "A red Security Alert warning over lines of code on a screen. Paste Protect shows a warning like this when it blocks a suspicious clipboard command.",
+    paras: ENX['opera-paste-protect-clickfix-clipboard-2026'].paras,
+    list: ENX['opera-paste-protect-clickfix-clipboard-2026'].list,
+  }),
   // ---------- PILIER 1 - dev monétisable (hébergement) ----------
   a({
     slug: 'what-is-a-cdn', category: 'tooling', readingMinutes: 6, date: '2026-06-20',
@@ -506,6 +515,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
   "what-is-an-api": { fr: "qu-est-ce-qu-une-api", es: "que-es-una-api", de: "was-ist-eine-api", it: "che-cos-e-un-api", pt: "o-que-e-uma-api" },
+  "opera-paste-protect-clickfix-clipboard-2026": { fr: "opera-paste-protect-attaques-presse-papiers-2026", es: "opera-paste-protect-ataques-portapapeles-2026", de: "opera-paste-protect-zwischenablage-angriffe-2026", it: "opera-paste-protect-attacchi-appunti-2026", pt: "opera-paste-protect-ataques-area-transferencia-2026" },
   "what-is-a-webhook": { fr: "qu-est-ce-qu-un-webhook", es: "que-es-un-webhook", de: "was-ist-ein-webhook", it: "che-cos-e-un-webhook", pt: "o-que-e-um-webhook" },
   "what-is-a-docker-container": { fr: "qu-est-ce-qu-un-conteneur-docker", es: "que-es-un-contenedor-docker", de: "was-ist-ein-docker-container", it: "che-cos-e-un-container-docker", pt: "o-que-e-um-container-docker" },
   "what-is-devops": { fr: "qu-est-ce-que-le-devops", es: "que-es-el-devops", de: "was-ist-devops", it: "cos-e-il-devops", pt: "o-que-e-o-devops" },

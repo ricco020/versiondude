@@ -1259,5 +1259,61 @@
    "it": "Dovresti gestirne uno tu stesso?",
    "pt": "Deve gerir um você mesmo?"
   }
+ ],
+ "opera-paste-protect-clickfix-clipboard-2026": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "How ClickFix and pastejacking attacks work",
+   "fr": "Comment fonctionnent les attaques ClickFix et pastejacking",
+   "es": "Cómo funcionan los ataques ClickFix y pastejacking",
+   "de": "Wie ClickFix- und Pastejacking-Angriffe funktionieren",
+   "it": "Come funzionano gli attacchi ClickFix e pastejacking",
+   "pt": "Como funcionam os ataques ClickFix e pastejacking",
+   "n": 2
+  },
+  {
+   "en": "What Opera's Paste Protect does",
+   "fr": "Ce que fait le Paste Protect d'Opera",
+   "es": "Qué hace el Paste Protect de Opera",
+   "de": "Was Operas Paste Protect leistet",
+   "it": "Cosa fa il Paste Protect di Opera",
+   "pt": "O que faz o Paste Protect da Opera",
+   "n": 2
+  },
+  {
+   "en": "What happens when a paste is blocked",
+   "fr": "Ce qui se passe quand un collage est bloqué",
+   "es": "Qué ocurre cuando se bloquea un pegado",
+   "de": "Was passiert, wenn ein Einfügen blockiert wird",
+   "it": "Cosa succede quando un incollaggio viene bloccato",
+   "pt": "O que acontece quando uma colagem é bloqueada",
+   "n": 2
+  },
+  {
+   "en": "Why a browser shipping this matters",
+   "fr": "Pourquoi il est important qu'un navigateur propose cela",
+   "es": "Por qué importa que un navegador incorpore esto",
+   "de": "Warum es zählt, dass ein Browser dies mitbringt",
+   "it": "Perché conta che un browser porti tutto questo",
+   "pt": "Por que importa que um navegador traga isto",
+   "n": 1
+  },
+  {
+   "en": "Protecting yourself, whatever browser you use",
+   "fr": "Se protéger, quel que soit le navigateur que vous utilisez",
+   "es": "Protegerte, sea cual sea el navegador que uses",
+   "de": "Sich schützen, egal welchen Browser Sie nutzen",
+   "it": "Proteggerti, qualunque browser tu usi",
+   "pt": "Proteger-se, seja qual for o navegador que usa",
+   "n": 1
+  }
  ]
 }

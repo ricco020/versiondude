@@ -509,5 +509,30 @@
    "Push/pull sincronizzano il tuo lavoro con un remote",
    "Git è lo strumento; GitHub/GitLab ospitano i repository"
   ]
+ },
+ "opera-paste-protect-clickfix-clipboard-2026": {
+  "title": "Opera Paste Protect: la difesa del browser contro gli attacchi ClickFix tramite appunti",
+  "dek": "Opera ha lanciato Paste Protect, presentato come la prima difesa nativa in un grande browser contro gli attacchi basati sugli appunti come ClickFix e il pastejacking. Cosa sono questi attacchi, cosa fa Paste Protect e come proteggerti in qualsiasi browser.",
+  "heroAlt": "Una persona che lavora a un portatile che mostra codice sorgente colorato in un editor",
+  "bodyCaption": "Un avviso di sicurezza rosso sopra alcune righe di codice su uno schermo. Paste Protect mostra un avviso di questo tipo quando blocca un comando sospetto proveniente dagli appunti.",
+  "paras": [
+   "Opera ha lanciato una funzione chiamata Paste Protect, che descrive come la prima difesa nativa in un grande browser contro gli attacchi basati sugli appunti. Annunciata il 2 luglio 2026, prende di mira una categoria di attacco nota come ClickFix, insieme al clipboard hijacking e al pastejacking, ed è integrata nei browser desktop di Opera e attiva per impostazione predefinita, così gli utenti sono protetti senza alcuna configurazione.",
+   "ClickFix è un attacco di ingegneria sociale che rivolta contro di te un'abitudine normale. Di solito comincia con qualcosa di piccolo e ordinario: un video che non parte, o un CAPTCHA che non riesce del tutto a confermare che sei umano. Una finestra pop-up offre allora una soluzione e ti dice di copiare un breve comando e di incollarlo nel terminale del tuo computer o nella finestra di esecuzione.",
+   "Il comando, naturalmente, è dannoso, e incollandolo ed eseguendolo infetti la tua stessa macchina. Il trucco funziona perché il passaggio pericoloso sembra una normale risoluzione dei problemi, e perché gli appunti sono un punto cieco che i browser storicamente non hanno ispezionato. Secondo l'azienda di cybersicurezza Huntress, ClickFix rappresenta ormai più della metà di questo tipo di attività di caricamento di malware, ed è ciò che rende significativa una difesa a livello di browser.",
+   "Paste Protect aggiunge ciò che Opera chiama injection protection: monitora l'attività degli appunti in tempo reale alla ricerca di comandi potenzialmente dannosi, che tu li abbia copiati personalmente o che un sito web li abbia inseriti lì. Utilizza tecniche di rilevamento su misura per Windows, macOS e Linux per individuare i modelli associati agli script dannosi, anziché affidarsi a una singola regola generica.",
+   "Poiché è nativa e attiva per impostazione predefinita, la protezione si applica senza estensioni né configurazioni. Questo conta per le persone più esposte a ClickFix, che di norma non sono quelle che frugano tra le impostazioni in cerca di un'opzione di sicurezza. La difesa le raggiunge dove avviene l'attacco, nel momento dell'incollaggio.",
+   "Quando Paste Protect rileva una minaccia, l'azione di copia viene bloccata immediatamente, compare un avviso che spiega cosa è successo e appare un'icona rossa nella barra degli indirizzi. Gli utenti possono vedere i primi 120 caratteri del contenuto bloccato, così ottengono un contesto invece di un rifiuto vuoto.",
+   "Opera tiene conto anche dell'uso legittimo. Gli sviluppatori che lavorano con fonti attendibili, e che copiano abitualmente comandi dalla documentazione o dai propri strumenti, possono ignorare un blocco o contrassegnare determinati siti come sicuri. Questo evita che la funzione diventi un ostacolo per le persone il cui lavoro quotidiano consiste nell'incollare comandi reali.",
+   "Il significato più ampio è che un grande browser stia finalmente trattando gli appunti come una superficie di sicurezza. Il copia e incolla ha goduto di una fiducia implicita per decenni, e gli aggressori hanno sfruttato in silenzio quella fiducia. Se il fatto che Opera sia il primo qui spinge altri browser ad aggiungere una protezione simile, gli appunti diventeranno una corsia un po' meno libera per questo tipo di attacco in tutto il web.",
+   "Non devi cambiare browser per restare al sicuro, perché la regola di fondo è semplice: non incollare mai un comando preso da una pagina web nel tuo terminale, nella finestra di esecuzione o nella console di sviluppo a meno che tu non lo comprenda pienamente e non ti fidi della fonte. Se un sito ti dice di copiare qualcosa ed eseguirlo per riparare un video o per dimostrare di essere umano, consideralo un campanello d'allarme. Una funzione del browser è una rete di sicurezza utile, ma è quell'abitudine la vera difesa."
+  ],
+  "list": [
+   "Opera Paste Protect è stato lanciato il 2 luglio 2026, attivo per impostazione predefinita nel browser desktop",
+   "È presentato come la prima difesa nativa in un grande browser contro gli attacchi tramite appunti",
+   "Prende di mira ClickFix, il clipboard hijacking e il pastejacking",
+   "ClickFix ti inganna facendoti incollare un comando dannoso nel tuo terminale",
+   "Secondo Huntress, ClickFix rappresenta più della metà di questa attività di caricamento di malware",
+   "La difesa universale: non incollare mai un comando preso da un sito web in un terminale di cui non ti fidi"
+  ]
  }
 }

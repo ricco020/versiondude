@@ -509,5 +509,30 @@
    "Push/pull sincronizam o teu trabalho com um remote",
    "O Git é a ferramenta; o GitHub/GitLab alojam os repositórios"
   ]
+ },
+ "opera-paste-protect-clickfix-clipboard-2026": {
+  "title": "Opera Paste Protect: a defesa do navegador contra os ataques ClickFix pela área de transferência",
+  "dek": "A Opera lançou o Paste Protect, apresentado como a primeira defesa nativa num grande navegador contra ataques baseados na área de transferência, como o ClickFix e o pastejacking. O que são esses ataques, o que faz o Paste Protect e como se proteger em qualquer navegador.",
+  "heroAlt": "Uma pessoa a trabalhar num portátil que mostra código-fonte colorido num editor",
+  "bodyCaption": "Um alerta de segurança vermelho por cima de linhas de código num ecrã. O Paste Protect mostra um aviso deste tipo quando bloqueia um comando suspeito da área de transferência.",
+  "paras": [
+   "A Opera lançou uma funcionalidade chamada Paste Protect, que descreve como a primeira defesa nativa num grande navegador contra ataques baseados na área de transferência. Anunciada a 2 de julho de 2026, tem como alvo uma categoria de ataque conhecida como ClickFix, além do clipboard hijacking e do pastejacking, e está integrada nos navegadores de secretária da Opera e ativada por predefinição, de modo que os utilizadores ficam protegidos sem qualquer configuração.",
+   "O ClickFix é um ataque de engenharia social que volta um hábito normal contra si. Costuma começar com algo pequeno e comum: um vídeo que não reproduz, ou um CAPTCHA que não consegue bem confirmar que é humano. Uma janela pop-up oferece então uma solução e diz-lhe para copiar um comando curto e colá-lo no terminal do seu computador ou na caixa de execução.",
+   "O comando, claro, é malicioso, e ao colá-lo e executá-lo infeta a sua própria máquina. O truque funciona porque o passo perigoso parece uma resolução de problemas de rotina, e porque a área de transferência é um ponto cego que os navegadores historicamente não inspecionaram. Segundo a empresa de cibersegurança Huntress, o ClickFix representa agora mais de metade deste tipo de atividade de carregamento de malware, o que torna significativa uma defesa ao nível do navegador.",
+   "O Paste Protect acrescenta aquilo a que a Opera chama injection protection: monitoriza a atividade da área de transferência em tempo real à procura de comandos potencialmente maliciosos, quer os tenha copiado o próprio utilizador, quer tenha sido um site a colocá-los ali. Usa técnicas de deteção adaptadas ao Windows, macOS e Linux para identificar os padrões associados a scripts maliciosos, em vez de depender de uma única regra genérica.",
+   "Por ser nativa e estar ativada por predefinição, a proteção aplica-se sem extensão nem configuração. Isso é importante para as pessoas mais expostas ao ClickFix, que normalmente não são as que vasculham as definições à procura de uma opção de segurança. A defesa vai ao encontro delas onde o ataque acontece, no momento da colagem.",
+   "Quando o Paste Protect deteta uma ameaça, a ação de copiar é bloqueada de imediato, surge um aviso que explica o que aconteceu e aparece um ícone vermelho na barra de endereços. Os utilizadores podem ver os primeiros 120 caracteres do conteúdo bloqueado, obtendo assim contexto em vez de uma recusa em branco.",
+   "A Opera também tem em conta o uso legítimo. Os programadores que trabalham com fontes de confiança, e que copiam habitualmente comandos da documentação ou das suas próprias ferramentas, podem ignorar um bloqueio ou marcar sites específicos como seguros. Isso evita que a funcionalidade se torne um obstáculo para as pessoas cujo trabalho diário consiste em colar comandos reais.",
+   "O significado mais amplo é que um grande navegador está finalmente a tratar a área de transferência como uma superfície de segurança. O copiar e colar gozou de uma confiança implícita durante décadas, e os atacantes exploraram silenciosamente essa confiança. Se o facto de a Opera ser a primeira aqui incentivar outros navegadores a acrescentar uma proteção semelhante, a área de transferência tornar-se-á uma via um pouco menos livre para este tipo de ataque em toda a web.",
+   "Não precisa de trocar de navegador para se manter seguro, porque a regra subjacente é simples: nunca cole um comando de uma página web no seu terminal, caixa de execução ou consola de programação a menos que o compreenda totalmente e confie na fonte. Se um site lhe disser para copiar algo e executá-lo para reparar um vídeo ou provar que é humano, encare isso como um sinal de alerta. Uma funcionalidade do navegador é uma boa rede de segurança, mas é esse hábito a verdadeira defesa."
+  ],
+  "list": [
+   "O Opera Paste Protect foi lançado a 2 de julho de 2026, ativado por predefinição no navegador de secretária",
+   "É apresentado como a primeira defesa nativa num grande navegador contra ataques pela área de transferência",
+   "Tem como alvo o ClickFix, o clipboard hijacking e o pastejacking",
+   "O ClickFix engana-o para que cole um comando malicioso no seu terminal",
+   "Segundo a Huntress, o ClickFix representa mais de metade desta atividade de carregamento de malware",
+   "A defesa universal: nunca cole um comando de um site num terminal em que não confia"
+  ]
  }
 }

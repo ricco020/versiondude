@@ -509,5 +509,30 @@
    "Estilos comunes: REST, GraphQL, SOAP, WebSockets",
    "Protegidas por autenticación y límites de tasa, descritas en la documentación"
   ]
+ },
+ "opera-paste-protect-clickfix-clipboard-2026": {
+  "title": "Opera Paste Protect: la defensa del navegador frente a los ataques ClickFix por portapapeles",
+  "dek": "Opera ha lanzado Paste Protect, presentado como la primera defensa nativa en un navegador importante frente a los ataques basados en el portapapeles como ClickFix y el pastejacking. En qué consisten estos ataques, qué hace Paste Protect y cómo protegerte en cualquier navegador.",
+  "heroAlt": "Una persona trabajando en un portátil que muestra código fuente de colores en un editor",
+  "bodyCaption": "Una alerta de seguridad roja sobre líneas de código en una pantalla. Paste Protect muestra un aviso como este cuando bloquea un comando sospechoso del portapapeles.",
+  "paras": [
+   "Opera ha lanzado una función llamada Paste Protect, que describe como la primera defensa nativa en un navegador importante frente a los ataques basados en el portapapeles. Anunciada el 2 de julio de 2026, apunta a una categoría de ataque conocida como ClickFix, junto con el clipboard hijacking y el pastejacking, y está integrada en los navegadores de escritorio de Opera y activada de forma predeterminada, de modo que los usuarios quedan protegidos sin ninguna configuración.",
+   "ClickFix es un ataque de ingeniería social que vuelve un hábito normal en tu contra. Suele empezar con algo pequeño y corriente: un vídeo que no se reproduce, o un CAPTCHA que no acaba de confirmar que eres humano. Entonces una ventana emergente ofrece una solución y te pide que copies un comando breve y lo pegues en el terminal de tu ordenador o en el cuadro de ejecución.",
+   "El comando, por supuesto, es malicioso, y al pegarlo y ejecutarlo infectas tu propia máquina. El truco funciona porque el paso peligroso parece una resolución de problemas rutinaria, y porque el portapapeles es un punto ciego que los navegadores históricamente no han inspeccionado. Según la empresa de ciberseguridad Huntress, ClickFix representa ya más de la mitad de este tipo de actividad de carga de malware, lo que hace que una defensa a nivel de navegador sea significativa.",
+   "Paste Protect añade lo que Opera llama injection protection: supervisa la actividad del portapapeles en tiempo real en busca de comandos potencialmente maliciosos, tanto si los copiaste tú mismo como si un sitio web los colocó ahí. Utiliza técnicas de detección adaptadas a Windows, macOS y Linux para detectar los patrones asociados a los scripts maliciosos, en lugar de basarse en una única regla genérica.",
+   "Al ser nativa y estar activada de forma predeterminada, la protección se aplica sin extensiones ni configuración. Eso importa para las personas más expuestas a ClickFix, que normalmente no son las que rebuscan entre los ajustes una opción de seguridad. La defensa las encuentra donde ocurre el ataque, en el momento de pegar.",
+   "Cuando Paste Protect detecta una amenaza, la acción de copiar se bloquea de inmediato, aparece un aviso que explica lo ocurrido y surge un icono rojo en la barra de direcciones. Los usuarios pueden ver los primeros 120 caracteres del contenido bloqueado, de modo que obtienen contexto en lugar de un rechazo en blanco.",
+   "Opera también tiene en cuenta el uso legítimo. Los desarrolladores que trabajan con fuentes de confianza, y que copian habitualmente comandos de la documentación o de sus propias herramientas, pueden anular un bloqueo o marcar sitios concretos como seguros. Eso evita que la función se convierta en un obstáculo para las personas cuyo trabajo diario consiste en pegar comandos reales.",
+   "La importancia más amplia es que un navegador importante trate el portapapeles como una superficie de seguridad. Copiar y pegar ha gozado de una confianza implícita durante décadas, y los atacantes han explotado esa confianza en silencio. Si el hecho de que Opera sea el primero aquí anima a otros navegadores a añadir una protección similar, el portapapeles se convertirá en una vía algo menos libre para este tipo de ataque en toda la web.",
+   "No necesitas cambiar de navegador para estar seguro, porque la regla de fondo es sencilla: nunca pegues un comando de una página web en tu terminal, cuadro de ejecución o consola de desarrollo a menos que lo entiendas por completo y confíes en la fuente. Si un sitio te dice que copies algo y lo ejecutes para arreglar un vídeo o demostrar que eres humano, tómalo como una señal de alarma. Una función del navegador es un buen respaldo, pero ese hábito es la verdadera defensa."
+  ],
+  "list": [
+   "Opera Paste Protect se lanzó el 2 de julio de 2026, activado de forma predeterminada en el navegador de escritorio",
+   "Se presenta como la primera defensa nativa en un navegador importante frente a los ataques por portapapeles",
+   "Apunta a ClickFix, el clipboard hijacking y el pastejacking",
+   "ClickFix te engaña para que pegues un comando malicioso en tu terminal",
+   "Según Huntress, ClickFix representa más de la mitad de esta actividad de carga de malware",
+   "La defensa universal: nunca pegues un comando de un sitio web en un terminal en el que no confías"
+  ]
  }
 }
