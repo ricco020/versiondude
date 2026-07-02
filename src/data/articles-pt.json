@@ -485,5 +485,29 @@
    "Estilos comuns: REST, GraphQL, SOAP, WebSockets",
    "Protegidas por autenticação e limites de taxa, descritas em documentação"
   ]
+ },
+ "what-is-git": {
+  "title": "O que é o Git? O controlo de versões explicado",
+  "dek": "O Git é um sistema de controlo de versões distribuído que regista todas as alterações ao teu código e permite que muitas pessoas trabalhem nele em conjunto sem se sobreporem umas às outras. O que é o Git, os conceitos fundamentais, em que difere do GitHub e os comandos básicos.",
+  "heroAlt": "Um editor de código a mostrar um painel lateral do Git com o branch atual, os branches locais e remotos e um histórico de commits com branches integrados",
+  "bodyCaption": "Um programador a trabalhar num computador de secretária, a editar código-fonte do tipo que o Git acompanha.",
+  "paras": [
+   "O Git é um sistema de controlo de versões - uma ferramenta que regista todas as alterações feitas a um conjunto de ficheiros ao longo do tempo, para que possas ver o que mudou, quem o mudou e voltar a qualquer estado anterior. Na prática, esse conjunto de ficheiros costuma ser o código-fonte de um projeto de software. O Git foi criado em 2005 por Linus Torvalds, o fundador do Linux, para gerir o desenvolvimento do kernel do Linux, e desde então tornou-se a forma padrão de os programadores acompanharem e partilharem o seu trabalho.",
+   "O que torna o Git distinto é o facto de ser distribuído. Num sistema mais antigo e centralizado, como o Subversion (SVN), existe um único servidor central que guarda todo o histórico, e cada programador extrai apenas uma cópia instantânea dos ficheiros. O Git funciona de forma diferente: quando clonas um repositório, descarregas o projeto inteiro juntamente com o seu histórico completo para a tua própria máquina.",
+   "Isto significa que cada programador tem uma cópia completa do repositório, e não apenas os ficheiros mais recentes. Podes fazer commit de alterações, inspecionar o histórico e criar branches totalmente offline, sem comunicar com um servidor. Uma cópia central (muitas vezes num serviço como o GitHub) continua a ser útil para partilhar, mas é uma comodidade, não um único ponto de falha - se desaparecesse, cada clone continuaria a conter todo o histórico.",
+   "Para usar o Git precisas de alguns conceitos fundamentais. Um repositório (ou \"repo\") é a pasta do projeto que o Git acompanha, incluindo o seu histórico. Um commit é uma cópia instantânea guardada das tuas alterações num dado momento, cada uma com uma mensagem que descreve o que fizeste. Antes de fazer commit, colocas as alterações numa área de staging, que te permite escolher exatamente o que entra na próxima cópia instantânea, em vez de submeter tudo de uma só vez.",
+   "Os outros conceitos essenciais são os branches e os remotes. Um branch é uma linha de trabalho independente: podes ramificar para desenvolver uma funcionalidade ou corrigir um erro sem mexer no código principal e, depois, integrar (merge) o teu branch quando estiver pronto. Um remote é uma cópia do repositório alojada noutro lugar - envias (push) os teus commits para lá a fim de os partilhar e trazes (pull) os commits dos outros para te manteres sincronizado.",
+   "Os programadores dependem do Git por várias razões concretas. Mantém um histórico completo e revisível de um projeto; permite que uma equipa inteira trabalhe na mesma base de código em paralelo sem se sobreporem uns aos outros; os branches tornam seguro experimentar, porque o código principal fica intacto até fazeres o merge; e se uma alteração estragar alguma coisa, podes reverter para um commit que se sabe estar bom. Para quase qualquer projeto feito de código, estas são necessidades do dia a dia.",
+   "Uma fonte comum de confusão é a diferença entre o Git e o GitHub. O Git é a própria ferramenta de controlo de versões - software que corre no teu computador e gere o histórico. O GitHub é um site que aloja repositórios Git online, acrescentando funcionalidades de colaboração como pull requests, acompanhamento de problemas e controlo de acessos. O GitLab e o Bitbucket são serviços de alojamento semelhantes. Podes usar o Git sem qualquer conta em lado nenhum; os anfitriões são locais opcionais para armazenar e partilhar os teus remotes.",
+   "No uso diário, controlas o Git com um punhado de comandos. Inicias um projeto com git init ou copias um existente com git clone. Colocas as alterações em staging com git add, guardas uma cópia instantânea com git commit, envias os teus commits para um remote com git push e obténs o trabalho dos outros com git pull. À volta destes, git status mostra o que mudou, e git branch e git merge tratam de linhas de trabalho separadas - um pequeno núcleo que cobre a maioria das tarefas do dia a dia.",
+   "Então, precisas do Git? Se escreves código, mesmo sozinho num projeto pequeno, o Git dá-te um histórico fiável, um botão de desfazer para todo o projeto e uma forma segura de experimentar em branches. No momento em que está envolvida mais do que uma pessoa, torna-se essencial. Tem uma curva de aprendizagem, mas é a base sobre a qual quase todas as equipas modernas de software são construídas, e podes alojar os teus próprios remotes num servidor que controlas."
+  ],
+  "list": [
+   "Distribuído: cada clone contém todo o histórico",
+   "Commits = cópias instantâneas guardadas com uma mensagem",
+   "Os branches permitem trabalhar em paralelo com segurança",
+   "Push/pull sincronizam o teu trabalho com um remote",
+   "O Git é a ferramenta; o GitHub/GitLab alojam os repositórios"
+  ]
  }
 }

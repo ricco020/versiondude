@@ -431,7 +431,7 @@ export const ARTICLES = [
     body: '/assets/articles/semantic-web-body.jpg', bodyCaption: 'An abstract pattern of connected nodes and lines.',
     paras: [
       'The semantic web is an extension of the web in which information is given well-defined meaning, so that machines - not just people - can process it. Instead of pages of text, the goal is a web of data, where relationships between things are explicit and queryable.',
-      'It rests on a stack of W3C standards. RDF expresses facts as subject–predicate–object triples; ontologies written in OWL (the Web Ontology Language) describe the classes and relationships in a domain; and SPARQL queries the resulting graphs.',
+      'It rests on a stack of W3C standards. RDF expresses facts as subject-predicate-object triples; ontologies written in OWL (the Web Ontology Language) describe the classes and relationships in a domain; and SPARQL queries the resulting graphs.',
       'Reasoners are the engines that make this powerful. A reasoner such as Pellet takes an OWL ontology and infers new facts that follow logically from the stated ones - checking consistency and answering questions the raw data never spelled out.',
       'You meet the semantic web’s descendants every day: structured data and schema.org markup that power rich search results are a pragmatic slice of the same idea - making the meaning of a page legible to machines.',
     ],
