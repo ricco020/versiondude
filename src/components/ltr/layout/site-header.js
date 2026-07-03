@@ -48,8 +48,8 @@ export default function SiteHeader({ locale = "en" }) {
               ))}
               <li className="nav-item ms-lg-3 d-flex gap-2">
                 {LOCALES.map((l) => (
-                  <Link key={l} href={localeHref(l)}
-                    onClick={() => { document.cookie = `wlocale=${l};path=/;max-age=31536000`; }}
+                  <a key={l} href={localeHref(l)}
+                    onClick={(e) => { e.preventDefault(); document.cookie = `wlocale=${l};path=/;max-age=31536000`; window.location.assign(localeHref(l)); }}
                     className={`small text-uppercase fw-bold text-decoration-none ${l === locale ? "text-danger" : "text-muted"}`}>{l}</Link>
                 ))}
               </li>
