@@ -50,7 +50,7 @@ export default function SiteHeader({ locale = "en" }) {
                 {LOCALES.map((l) => (
                   <a key={l} href={localeHref(l)}
                     onClick={(e) => { e.preventDefault(); document.cookie = `wlocale=${l};path=/;max-age=31536000`; window.location.assign(localeHref(l)); }}
-                    className={`small text-uppercase fw-bold text-decoration-none ${l === locale ? "text-danger" : "text-muted"}`}>{l}</Link>
+                    className={`small text-uppercase fw-bold text-decoration-none ${l === locale ? "text-danger" : "text-muted"}`}>{l}</a>
                 ))}
               </li>
             </ul>
