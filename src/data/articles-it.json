@@ -534,5 +534,31 @@
    "Secondo Huntress, ClickFix rappresenta più della metà di questa attività di caricamento di malware",
    "La difesa universale: non incollare mai un comando preso da un sito web in un terminale di cui non ti fidi"
   ]
+ },
+ "novo-nordisk-breach-client-side-secrets-2026": {
+  "title": "Violazione Novo Nordisk: come i segreti nel JavaScript lato client fanno trapelare tutto",
+  "dek": "A giugno 2026 Novo Nordisk ha confermato una violazione importante. Secondo quanto riferito, gli aggressori sono entrati tramite segreti lasciati nel JavaScript lato client - credenziali Azure e un token GitHub. La lezione per gli sviluppatori: un segreto nel codice front-end e un segreto pubblico.",
+  "heroAlt": "Codice sorgente su uno schermo scuro che mostra tag di inclusione JavaScript e un riferimento ENV",
+  "bodyCaption": "Un cursore del mouse che passa sopra la parola Security su uno schermo. Le credenziali trapelate trasformano il codice stesso di un sito in una porta aperta.",
+  "paras": [
+   "A giugno 2026 il colosso farmaceutico danese Novo Nordisk ha confermato una grave violazione dei dati. Secondo quanto riferito da HIPAA Journal, FiercePharma e Silicon UK, un gruppo di estorsione chiamato FulcrumSec ha affermato di aver sottratto 1,3 TB di dati e ha chiesto un riscatto di 25 milioni di dollari, che Novo Nordisk ha rifiutato di pagare. Per gli sviluppatori, il dettaglio piu importante non e il riscatto - e il modo in cui, secondo quanto riferito, gli aggressori sono entrati.",
+   "Stando al racconto dello stesso gruppo, riportato da Silicon UK e da altri, l'accesso iniziale e derivato da segreti lasciati nel JavaScript lato client. E un errore che qualsiasi team web puo commettere, ed e un errore chiaro ed evitabile. Ecco cosa e successo, perche e importante e come evitare che accada al tuo codice.",
+   "Novo Nordisk ha comunicato l'incidente l'11 giugno 2026 e ha pubblicato un aggiornamento sull'incidente sul proprio sito. Poco dopo, secondo BankInfoSecurity, FulcrumSec ha aggiunto l'azienda al proprio sito di leak sul dark web con dati di esempio del presunto bottino da 1,3 TB. Quando l'azienda ha rifiutato di pagare il riscatto riferito di 25 milioni di dollari, il gruppo ha iniziato a far trapelare i dati sottratti.",
+   "Il materiale sottratto comprenderebbe, secondo Yahoo Finance e FiercePharma, informazioni su sperimentazioni cliniche, proprieta intellettuale e modelli di IA utilizzati per la scoperta di farmaci. FulcrumSec, un gruppo di cyber-estorsione attivo almeno da settembre 2025, ha affermato di stare inoltre perseguendo vendite private della ricerca sottratta. Novo Nordisk non ha confermato in dettaglio le affermazioni tecniche degli aggressori, quindi vanno trattati come il racconto del gruppo i dettagli sul punto di accesso.",
+   "Stando al racconto di FulcrumSec, riportato da Silicon UK, il gruppo ha ottenuto l'accesso a marzo 2026 tramite segreti lasciati nel JavaScript lato client su due distinti sottodomini di Novo Nordisk. In parole semplici: credenziali sensibili sono state inviate al browser all'interno del JavaScript stesso del sito, dove chiunque poteva leggerle.",
+   "Il gruppo ha affermato che tra quei segreti figuravano credenziali di Azure Container Registry e un token di accesso personale GitHub che, secondo quanto riferito, aveva accesso a centinaia di repository. Un singolo token trapelato con ampia portata puo trasformare una riga di codice disattenta in una violazione a livello aziendale. E questo tutto il pericolo di un segreto scritto in modo fisso nel codice: fa esattamente cio per cui e stato creato, per chiunque lo trovi.",
+   "Il JavaScript lato client e, per definizione, pubblico. Il browser di ogni visitatore lo scarica e chiunque puo aprire gli strumenti per sviluppatori o il bundle grezzo e leggerlo. Non esiste un valore nascosto nel codice front-end - minimizzarlo o offuscarlo rallenta soltanto chi legge, non nasconde nulla. Se un segreto arriva al browser, consideralo gia trapelato.",
+   "Lo stesso rischio vale per i token committati in un repository Git, incorporati in un'immagine container o stampati in un log di build. Scanner automatici perlustrano siti pubblici e host di codice 24 ore su 24 alla ricerca esattamente di queste stringhe. Un token che concede un accesso ampio - come un token di accesso personale con centinaia di repository nel suo ambito - e lo scenario peggiore, perche un solo leak espone tutto cio che esso puo raggiungere.",
+   "La soluzione e una disciplina, non un singolo strumento. Tieni ogni segreto lato server, in variabili d'ambiente o in un gestore di segreti dedicato, e non lasciare mai che ne arrivi uno al bundle del browser. Limita l'ambito di ciascun token al minimo necessario, ruota le credenziali regolarmente e ruotale immediatamente se potrebbero essere state esposte. Aggiungi la scansione automatica dei segreti alla tua pipeline, cosi una chiave committata viene intercettata prima di arrivare in produzione.",
+   "Il codice front-end che deve chiamare un servizio protetto dovrebbe passare attraverso il tuo server o una funzione serverless che custodisce il segreto, non trasportare il segreto stesso. Se trovi una credenziale trapelata, l'ordine e semplice: revocala prima, poi indaga. Un token revocato e innocuo, chiunque lo abbia copiato.",
+   "La violazione Novo Nordisk ricorda che i fallimenti piu dannosi sono spesso i piu basilari. Le affermazioni degli aggressori restano il racconto degli aggressori, e Novo Nordisk non ha dettagliato il punto di accesso. Ma la lezione regge da sola: un segreto nel codice lato client e un segreto pubblico. Tieni le credenziali sul server, limitane l'ambito e ruotale, e cercale con scanner prima che arrivino in produzione."
+  ],
+  "list": [
+   "Tieni ogni segreto lato server (variabili d'ambiente o un gestore di segreti)",
+   "Non inviare mai una credenziale nel JavaScript lato client",
+   "Limita ciascun token al minimo accesso di cui ha bisogno",
+   "Ruota le credenziali regolarmente - e immediatamente se esposte",
+   "Aggiungi la scansione automatica dei segreti alla tua pipeline CI"
+  ]
  }
 }

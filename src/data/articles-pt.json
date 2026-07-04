@@ -534,5 +534,31 @@
    "Segundo a Huntress, o ClickFix representa mais de metade desta atividade de carregamento de malware",
    "A defesa universal: nunca cole um comando de um site num terminal em que não confia"
   ]
+ },
+ "novo-nordisk-breach-client-side-secrets-2026": {
+  "title": "Violação na Novo Nordisk: como segredos em JavaScript no lado do cliente vazam tudo",
+  "dek": "Em junho de 2026, a Novo Nordisk confirmou uma grande violação. Segundo o relato, os atacantes entraram através de segredos deixados em JavaScript no lado do cliente - credenciais do Azure e um token do GitHub. A lição para programadores: um segredo em código de front-end é um segredo público.",
+  "heroAlt": "Código-fonte num ecrã escuro mostrando tags de inclusão de JavaScript e uma referência a ENV",
+  "bodyCaption": "Um cursor do rato a pairar sobre a palavra Segurança num ecrã. Credenciais vazadas transformam o próprio código de um site numa porta aberta.",
+  "paras": [
+   "Em junho de 2026, a gigante farmacêutica dinamarquesa Novo Nordisk confirmou uma grande violação de dados. De acordo com relatos do HIPAA Journal, da FiercePharma e da Silicon UK, um grupo de extorsão chamado FulcrumSec afirmou ter roubado 1,3 TB de dados e exigiu um resgate de 25 milhões de dólares, que a Novo Nordisk recusou pagar. Para os programadores, o detalhe mais importante não é o resgate - é a forma como, segundo o relato, os atacantes entraram.",
+   "De acordo com as próprias afirmações do grupo, relatadas pela Silicon UK e outros, o acesso inicial veio de segredos deixados em JavaScript no lado do cliente. É um erro que qualquer equipa web pode cometer, e é um erro claro e evitável. Eis o que aconteceu, por que importa e como evitar que aconteça no seu próprio código.",
+   "A Novo Nordisk divulgou o incidente a 11 de junho de 2026 e publicou uma atualização sobre o incidente no seu próprio site. Pouco depois, segundo a BankInfoSecurity, a FulcrumSec adicionou a empresa ao seu site de fugas na dark web com uma amostra de dados do alegado espólio de 1,3 TB. Quando a empresa recusou pagar o resgate relatado de 25 milhões de dólares, o grupo começou a divulgar os dados roubados.",
+   "O material roubado incluiria, segundo a Yahoo Finance e a FiercePharma, informação de ensaios clínicos, propriedade intelectual e modelos de IA usados na descoberta de medicamentos. A FulcrumSec, um grupo de ciberextorsão ativo desde pelo menos setembro de 2025, afirmou estar também a procurar vendas privadas da investigação roubada. A Novo Nordisk não confirmou em detalhe as afirmações técnicas dos atacantes, por isso trate as especificidades do ponto de entrada como a versão do grupo.",
+   "De acordo com o relato da FulcrumSec, divulgado pela Silicon UK, o grupo obteve acesso em março de 2026 através de segredos deixados em JavaScript no lado do cliente em dois subdomínios distintos da Novo Nordisk. Em termos simples: credenciais sensíveis foram enviadas para o navegador dentro do próprio JavaScript do site, onde qualquer pessoa as podia ler.",
+   "O grupo afirmou que esses segredos incluíam credenciais do Azure Container Registry e um token de acesso pessoal do GitHub que, segundo o relato, tinha acesso a centenas de repositórios. Um único token vazado com um âmbito alargado pode transformar uma linha de código descuidada numa violação à escala de toda a empresa. É esse o perigo total de um segredo colocado diretamente no código: faz exatamente aquilo para que foi construído, para quem quer que o encontre.",
+   "O JavaScript no lado do cliente é, por definição, público. O navegador de cada visitante descarrega-o, e qualquer pessoa pode abrir as ferramentas de programador ou o pacote em bruto e lê-lo. Não existe tal coisa como um valor escondido em código de front-end - minificá-lo ou ofuscá-lo apenas atrasa quem o lê, não esconde nada. Se um segredo for enviado para o navegador, considere-o já vazado.",
+   "O mesmo risco aplica-se a tokens submetidos a um repositório Git, incorporados numa imagem de contentor ou impressos num registo de compilação. Scanners automatizados vasculham sites públicos e plataformas de código a toda a hora, à procura exatamente destas strings. Um token que concede acesso alargado - como um token de acesso pessoal com centenas de repositórios no seu âmbito - é o pior cenário, porque um único vazamento expõe tudo o que ele consegue alcançar.",
+   "A solução é uma disciplina, não uma única ferramenta. Mantenha todos os segredos no lado do servidor, em variáveis de ambiente ou num gestor de segredos dedicado, e nunca deixe que algum chegue ao pacote do navegador. Limite cada token ao mínimo de que precisa, rode as credenciais regularmente, e rode-as de imediato se puderem ter sido expostas. Adicione a análise automatizada de segredos ao seu pipeline, para que uma chave submetida seja detetada antes de ser enviada.",
+   "Código de front-end que precise de chamar um serviço protegido deve passar pelo seu próprio servidor ou por uma função serverless que guarde o segredo, e não transportar o segredo em si. Se encontrar uma credencial vazada, a ordem é simples: revogue-a primeiro, depois investigue. Um token revogado é inofensivo, não importa quem o tenha copiado.",
+   "A violação da Novo Nordisk é um lembrete de que as falhas mais prejudiciais são muitas vezes as mais básicas. As afirmações dos atacantes continuam a ser a versão dos atacantes, e a Novo Nordisk não detalhou o ponto de entrada em si. Mas a lição sustenta-se por si própria: um segredo em código no lado do cliente é um segredo público. Mantenha as credenciais no servidor, limite o seu âmbito e rode-as, e faça a análise à sua procura antes de serem enviadas."
+  ],
+  "list": [
+   "Mantenha todos os segredos no lado do servidor (variáveis de ambiente ou um gestor de segredos)",
+   "Nunca envie uma credencial em JavaScript no lado do cliente",
+   "Limite cada token ao mínimo de acesso de que precisa",
+   "Rode as credenciais regularmente - e de imediato se forem expostas",
+   "Adicione a análise automatizada de segredos ao seu pipeline de CI"
+  ]
  }
 }

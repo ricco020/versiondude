@@ -1315,5 +1315,61 @@
    "pt": "Proteger-se, seja qual for o navegador que usa",
    "n": 1
   }
+ ],
+ "novo-nordisk-breach-client-side-secrets-2026": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "What Novo Nordisk disclosed",
+   "fr": "Ce que Novo Nordisk a divulgué",
+   "es": "Lo que Novo Nordisk reveló",
+   "de": "Was Novo Nordisk offengelegt hat",
+   "it": "Cosa ha rivelato Novo Nordisk",
+   "pt": "O que a Novo Nordisk divulgou",
+   "n": 2
+  },
+  {
+   "en": "How the attackers reportedly got in",
+   "fr": "Comment les attaquants seraient entrés",
+   "es": "Cómo entraron los atacantes, según los informes",
+   "de": "Wie die Angreifer Berichten zufolge eindrangen",
+   "it": "Come sarebbero entrati gli aggressori",
+   "pt": "Como os atacantes terão entrado",
+   "n": 2
+  },
+  {
+   "en": "Why secrets in client code are so dangerous",
+   "fr": "Pourquoi les secrets dans le code client sont si dangereux",
+   "es": "Por qué los secretos en el código cliente son tan peligrosos",
+   "de": "Warum Geheimnisse im Client-Code so gefährlich sind",
+   "it": "Perché i segreti nel codice client sono così pericolosi",
+   "pt": "Porque os segredos no código cliente são tão perigosos",
+   "n": 2
+  },
+  {
+   "en": "How to keep secrets out of your client code",
+   "fr": "Comment garder les secrets hors de votre code client",
+   "es": "Cómo mantener los secretos fuera de tu código cliente",
+   "de": "Wie Sie Geheimnisse aus Ihrem Client-Code heraushalten",
+   "it": "Come tenere i segreti fuori dal codice client",
+   "pt": "Como manter os segredos fora do seu código cliente",
+   "n": 2
+  },
+  {
+   "en": "The honest takeaway",
+   "fr": "Ce qu'il faut vraiment retenir",
+   "es": "La conclusión honesta",
+   "de": "Das ehrliche Fazit",
+   "it": "La lezione onesta",
+   "pt": "A conclusão honesta",
+   "n": 1
+  }
  ]
 }

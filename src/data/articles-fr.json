@@ -534,5 +534,31 @@
    "Selon Huntress, ClickFix représente plus de la moitié de cette activité de chargement de logiciels malveillants",
    "La défense universelle : ne jamais coller une commande issue d'un site web dans un terminal auquel vous ne faites pas confiance"
   ]
+ },
+ "novo-nordisk-breach-client-side-secrets-2026": {
+  "title": "Fuite Novo Nordisk : comment des secrets dans le JavaScript cote client font tout fuiter",
+  "dek": "En juin 2026, Novo Nordisk a confirme une fuite majeure. Les attaquants seraient entres via des secrets laisses dans le JavaScript cote client : des identifiants Azure et un jeton GitHub. La lecon pour les developpeurs : un secret dans le code front-end est un secret public.",
+  "heroAlt": "Code source sur un ecran sombre montrant des balises d'inclusion JavaScript et une reference ENV",
+  "bodyCaption": "Un curseur de souris survolant le mot Security sur un ecran. Des identifiants qui fuient transforment le propre code d'un site en porte ouverte.",
+  "paras": [
+   "En juin 2026, le geant pharmaceutique danois Novo Nordisk a confirme une fuite de donnees majeure. Selon les informations de HIPAA Journal, FiercePharma et Silicon UK, un groupe d'extorsion nomme FulcrumSec a revendique le vol de 1,3 To de donnees et a exige une rancon de 25 millions de dollars, que Novo Nordisk a refuse de payer. Pour les developpeurs, le detail le plus important n'est pas la rancon : c'est la maniere dont les attaquants seraient entres.",
+   "D'apres les propres revendications du groupe, rapportees par Silicon UK et d'autres, l'acces initial provenait de secrets laisses dans le JavaScript cote client. C'est une erreur que n'importe quelle equipe web peut commettre, et elle est claire et evitable. Voici ce qui s'est passe, pourquoi c'est important, et comment eviter que cela n'arrive a votre propre code.",
+   "Novo Nordisk a divulgue l'incident le 11 juin 2026 et publie une mise a jour sur son propre site. Peu apres, selon BankInfoSecurity, FulcrumSec a ajoute l'entreprise a son site de fuite du dark web avec des echantillons de donnees issus du butin revendique de 1,3 To. Lorsque l'entreprise a refuse de payer la rancon annoncee de 25 millions de dollars, le groupe a commence a divulguer les donnees volees.",
+   "Le materiel vole comprendrait des informations d'essais cliniques, de la propriete intellectuelle et des modeles d'IA utilises pour la decouverte de medicaments, selon Yahoo Finance et FiercePharma. FulcrumSec, un groupe de cyber-extorsion actif depuis au moins septembre 2025, a declare qu'il cherchait aussi a vendre en prive la recherche volee. Novo Nordisk n'a pas confirme en detail les affirmations techniques des attaquants : il faut donc traiter les specificites du point d'entree comme le recit du groupe.",
+   "Selon le recit de FulcrumSec, rapporte par Silicon UK, le groupe a obtenu l'acces en mars 2026 grace a des secrets laisses dans le JavaScript cote client sur deux sous-domaines distincts de Novo Nordisk. En clair : des identifiants sensibles ont ete envoyes au navigateur a l'interieur du propre JavaScript du site, ou n'importe qui pouvait les lire.",
+   "Le groupe a declare que ces secrets comprenaient des identifiants Azure Container Registry et un jeton d'acces personnel GitHub qui aurait eu acces a des centaines de depots. Un seul jeton fuite dote d'une portee large peut transformer une ligne de code negligente en fuite a l'echelle de toute l'entreprise. C'est tout le danger d'un secret code en dur : il fait exactement ce pour quoi il a ete concu, pour quiconque le trouve.",
+   "Le JavaScript cote client est, par definition, public. Le navigateur de chaque visiteur le telecharge, et n'importe qui peut ouvrir les outils de developpement ou le bundle brut et le lire. Il n'existe pas de valeur cachee dans le code front-end : minifier ou obfusquer ne fait que ralentir un lecteur, cela ne cache rien. Si un secret est envoye au navigateur, considerez-le comme deja fuite.",
+   "Le meme risque s'applique aux jetons commites dans un depot Git, integres dans une image de conteneur ou affiches dans un journal de build. Des scanners automatises parcourent les sites publics et les hebergeurs de code en permanence, a la recherche exactement de ces chaines. Un jeton qui accorde un acces large - comme un jeton d'acces personnel couvrant des centaines de depots - est le pire des cas, car une seule fuite expose tout ce qu'il peut atteindre.",
+   "La solution est une discipline, pas un simple outil. Gardez chaque secret cote serveur, dans des variables d'environnement ou un gestionnaire de secrets dedie, et ne laissez jamais l'un d'eux atteindre le bundle du navigateur. Limitez chaque jeton au minimum dont il a besoin, faites tourner les identifiants regulierement, et faites-les tourner immediatement s'ils ont pu etre exposes. Ajoutez un scan automatise de secrets a votre pipeline pour qu'une cle commitee soit detectee avant d'etre livree.",
+   "Le code front-end qui doit appeler un service protege devrait passer par votre propre serveur ou une fonction serverless qui detient le secret, plutot que de porter le secret lui-meme. Si vous trouvez un identifiant fuite, l'ordre est simple : revoquez-le d'abord, puis enquetez. Un jeton revoque est inoffensif, peu importe qui l'a copie.",
+   "La fuite Novo Nordisk rappelle que les defaillances les plus dommageables sont souvent les plus elementaires. Les affirmations des attaquants restent le recit des attaquants, et Novo Nordisk n'a pas detaille le point d'entree lui-meme. Mais la lecon tient d'elle-meme : un secret dans le code cote client est un secret public. Gardez les identifiants sur le serveur, limitez-les et faites-les tourner, et scannez-les avant qu'ils ne soient livres."
+  ],
+  "list": [
+   "Gardez chaque secret cote serveur (variables d'environnement ou gestionnaire de secrets)",
+   "N'envoyez jamais un identifiant dans le JavaScript cote client",
+   "Limitez chaque jeton au minimum d'acces dont il a besoin",
+   "Faites tourner les identifiants regulierement - et immediatement en cas d'exposition",
+   "Ajoutez un scan automatise de secrets a votre pipeline CI"
+  ]
  }
 }

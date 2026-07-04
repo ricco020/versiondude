@@ -95,9 +95,37 @@ const GIT_CTA = {
   },
 };
 
+const SECRETS_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: {"en": "See Infomaniak Cloud", "fr": "Voir le cloud Infomaniak", "es": "Ver el cloud de Infomaniak", "de": "Infomaniak Cloud ansehen", "it": "Scopri Infomaniak Cloud", "pt": "Ver o Infomaniak Cloud"},
+  sublabel: {"en": "Secrets belong on the server, never in the browser bundle. Run your app where environment variables stay server-side - Infomaniak, a Swiss, privacy-respecting host, offers VPS and cloud servers with full runtime and network control.", "fr": "Les secrets vivent sur le serveur, jamais dans le bundle du navigateur. Faites tourner votre app là où les variables d'environnement restent côté serveur - Infomaniak, hébergeur suisse respectueux de la vie privée, propose des VPS et serveurs cloud avec un contrôle total du runtime et du réseau.", "es": "Los secretos van en el servidor, nunca en el bundle del navegador. Ejecuta tu app donde las variables de entorno quedan del lado del servidor - Infomaniak, proveedor suizo respetuoso con la privacidad, ofrece VPS y servidores cloud con control total del runtime y la red.", "de": "Geheimnisse gehören auf den Server, nie in das Browser-Bundle. Betreiben Sie Ihre App dort, wo Umgebungsvariablen serverseitig bleiben - Infomaniak, ein schweizerischer, datenschutzfreundlicher Anbieter, bietet VPS und Cloud-Server mit voller Kontrolle über Laufzeit und Netzwerk.", "it": "I segreti stanno sul server, mai nel bundle del browser. Esegui la tua app dove le variabili d'ambiente restano lato server - Infomaniak, provider svizzero attento alla privacy, offre VPS e server cloud con pieno controllo di runtime e rete.", "pt": "Os segredos ficam no servidor, nunca no bundle do navegador. Execute a sua app onde as variáveis de ambiente ficam do lado do servidor - a Infomaniak, fornecedor suíço respeitador da privacidade, oferece VPS e servidores cloud com controlo total do runtime e da rede."},
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
+  a({
+    slug: 'novo-nordisk-breach-client-side-secrets-2026', category: 'tooling', readingMinutes: 6, date: '2026-07-04',
+    title: "Novo Nordisk breach: how secrets in client-side JavaScript leak everything",
+    dek: "In June 2026 Novo Nordisk confirmed a major breach. The attackers reportedly got in through secrets left in client-side JavaScript - Azure credentials and a GitHub token. The developer lesson: a secret in front-end code is a public secret.",
+    hero: '/assets/articles/novo-nordisk-breach-client-side-secrets-2026-hero.jpg', heroAlt: "Source code on a dark screen showing JavaScript include tags and an ENV reference",
+    body: '/assets/articles/novo-nordisk-breach-client-side-secrets-2026-body.jpg', bodyCaption: "A mouse cursor hovering over the word Security on a screen. Leaked credentials turn a site's own code into an open door.",
+    paras: [
+      "In June 2026 the Danish pharmaceutical giant Novo Nordisk confirmed a major data breach. According to reporting from HIPAA Journal, FiercePharma and Silicon UK, an extortion group called FulcrumSec claimed it stole 1.3 TB of data and demanded a 25 million dollar ransom, which Novo Nordisk refused to pay. For developers, the most important detail is not the ransom - it is how the attackers reportedly got in.",
+      "According to the group's own claims, reported by Silicon UK and others, the initial access came from secrets left in client-side JavaScript. That is a mistake any web team can make, and it is a clear, avoidable one. Here is what happened, why it matters, and how to keep it from happening to your own code.",
+      "Novo Nordisk disclosed the incident on 11 June 2026 and published an incident update on its own site. Shortly after, according to BankInfoSecurity, FulcrumSec added the company to its dark-web leak site with sample data from the claimed 1.3 TB haul. When the company refused to pay the reported 25 million dollar ransom, the group began leaking the stolen data.",
+      "The stolen material reportedly includes clinical-trial information, intellectual property, and AI models used for drug discovery, according to Yahoo Finance and FiercePharma. FulcrumSec, a cyber-extortion group active since at least September 2025, said it was also pursuing private sales of the stolen research. Novo Nordisk has not confirmed the attackers' technical claims in detail, so treat the entry-point specifics as the group's account.",
+      "According to FulcrumSec's account, reported by Silicon UK, the group gained access in March 2026 through secrets left in client-side JavaScript on two separate Novo Nordisk subdomains. In plain terms: sensitive credentials were shipped to the browser inside the website's own JavaScript, where anyone could read them.",
+      "The group said those secrets included Azure Container Registry credentials and a GitHub personal access token that reportedly had access to hundreds of repositories. A single leaked token with broad scope can turn one careless line of code into a company-wide breach. That is the whole danger of a hardcoded secret: it does exactly what it was built to do, for whoever finds it.",
+      "Client-side JavaScript is, by definition, public. Every visitor's browser downloads it, and anyone can open developer tools or the raw bundle and read it. There is no such thing as a hidden value in front-end code - minifying or obfuscating it only slows a reader down, it does not hide anything. If a secret ships to the browser, treat it as already leaked.",
+      "The same risk applies to tokens committed to a Git repository, baked into a container image, or printed in a build log. Automated scanners crawl public sites and code hosts around the clock looking for exactly these strings. A token that grants broad access - like a personal access token with hundreds of repositories in scope - is the worst case, because one leak exposes everything it can reach.",
+      "The fix is a discipline, not a single tool. Keep every secret server-side, in environment variables or a dedicated secrets manager, and never let one reach the browser bundle. Scope each token to the minimum it needs, rotate credentials regularly, and rotate them at once if they may have been exposed. Add automated secret scanning to your pipeline so a committed key is caught before it ships.",
+      "Front-end code that needs to call a protected service should go through your own server or a serverless function that holds the secret, not carry the secret itself. If you find a leaked credential, the order is simple: revoke it first, then investigate. A revoked token is harmless no matter who copied it.",
+      "The Novo Nordisk breach is a reminder that the most damaging failures are often the most basic. The attackers' claims are still the attackers' account, and Novo Nordisk has not detailed the entry point itself. But the lesson stands on its own: a secret in client-side code is a public secret. Keep credentials on the server, scope and rotate them, and scan for them before they ship.",
+    ],
+    list: ["Keep every secret server-side (env vars or a secrets manager)", "Never ship a credential in client-side JavaScript", "Scope each token to the minimum access it needs", "Rotate credentials regularly - and at once if exposed", "Add automated secret scanning to your CI pipeline"],
+    cta: SECRETS_CTA,
+  }),
   a({
     slug: 'opera-paste-protect-clickfix-clipboard-2026', category: 'tooling', readingMinutes: 6, date: '2026-07-02',
     title: "Opera Paste Protect: the browser defense against ClickFix clipboard attacks",
@@ -514,6 +542,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "novo-nordisk-breach-client-side-secrets-2026": { fr: "fuite-novo-nordisk-secrets-javascript-client-2026", es: "brecha-novo-nordisk-secretos-javascript-cliente-2026", de: "novo-nordisk-leck-geheimnisse-client-javascript-2026", it: "violazione-novo-nordisk-segreti-javascript-client-2026", pt: "violacao-novo-nordisk-segredos-javascript-cliente-2026" },
   "what-is-an-api": { fr: "qu-est-ce-qu-une-api", es: "que-es-una-api", de: "was-ist-eine-api", it: "che-cos-e-un-api", pt: "o-que-e-uma-api" },
   "opera-paste-protect-clickfix-clipboard-2026": { fr: "opera-paste-protect-attaques-presse-papiers-2026", es: "opera-paste-protect-ataques-portapapeles-2026", de: "opera-paste-protect-zwischenablage-angriffe-2026", it: "opera-paste-protect-attacchi-appunti-2026", pt: "opera-paste-protect-ataques-area-transferencia-2026" },
   "what-is-a-webhook": { fr: "qu-est-ce-qu-un-webhook", es: "que-es-un-webhook", de: "was-ist-ein-webhook", it: "che-cos-e-un-webhook", pt: "o-que-e-um-webhook" },

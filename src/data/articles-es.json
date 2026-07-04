@@ -534,5 +534,31 @@
    "Según Huntress, ClickFix representa más de la mitad de esta actividad de carga de malware",
    "La defensa universal: nunca pegues un comando de un sitio web en un terminal en el que no confías"
   ]
+ },
+ "novo-nordisk-breach-client-side-secrets-2026": {
+  "title": "Brecha de Novo Nordisk: cómo los secretos en el JavaScript del lado del cliente lo filtran todo",
+  "dek": "En junio de 2026 Novo Nordisk confirmó una brecha importante. Según se informó, los atacantes entraron a través de secretos dejados en el JavaScript del lado del cliente: credenciales de Azure y un token de GitHub. La lección para desarrolladores: un secreto en el código de front-end es un secreto público.",
+  "heroAlt": "Código fuente en una pantalla oscura que muestra etiquetas de inclusión de JavaScript y una referencia a ENV",
+  "bodyCaption": "Un cursor del ratón sobre la palabra Seguridad en una pantalla. Las credenciales filtradas convierten el propio código de un sitio en una puerta abierta.",
+  "paras": [
+   "En junio de 2026 el gigante farmacéutico danés Novo Nordisk confirmó una importante brecha de datos. Según la información de HIPAA Journal, FiercePharma y Silicon UK, un grupo de extorsión llamado FulcrumSec afirmó que robó 1,3 TB de datos y exigió un rescate de 25 millones de dólares, que Novo Nordisk se negó a pagar. Para los desarrolladores, el detalle más importante no es el rescate: es cómo entraron los atacantes, según se informó.",
+   "De acuerdo con las propias afirmaciones del grupo, recogidas por Silicon UK y otros medios, el acceso inicial provino de secretos dejados en el JavaScript del lado del cliente. Es un error que cualquier equipo web puede cometer, y es un error claro y evitable. Esto es lo que sucedió, por qué importa y cómo evitar que le pase a tu propio código.",
+   "Novo Nordisk reveló el incidente el 11 de junio de 2026 y publicó una actualización sobre el incidente en su propio sitio. Poco después, según BankInfoSecurity, FulcrumSec añadió a la empresa a su sitio de filtraciones en la dark web con datos de muestra del supuesto botín de 1,3 TB. Cuando la empresa se negó a pagar el rescate reportado de 25 millones de dólares, el grupo empezó a filtrar los datos robados.",
+   "El material robado incluiría, según se informó, información de ensayos clínicos, propiedad intelectual y modelos de IA usados para el descubrimiento de fármacos, de acuerdo con Yahoo Finance y FiercePharma. FulcrumSec, un grupo de ciberextorsión activo desde al menos septiembre de 2025, dijo que también estaba buscando ventas privadas de la investigación robada. Novo Nordisk no ha confirmado en detalle las afirmaciones técnicas de los atacantes, así que trata los detalles del punto de entrada como el relato del grupo.",
+   "Según el relato de FulcrumSec, recogido por Silicon UK, el grupo obtuvo acceso en marzo de 2026 a través de secretos dejados en el JavaScript del lado del cliente en dos subdominios distintos de Novo Nordisk. En términos sencillos: se enviaron credenciales sensibles al navegador dentro del propio JavaScript del sitio web, donde cualquiera podía leerlas.",
+   "El grupo afirmó que esos secretos incluían credenciales de Azure Container Registry y un token de acceso personal de GitHub que, según se informó, tenía acceso a cientos de repositorios. Un único token filtrado con un alcance amplio puede convertir una línea de código descuidada en una brecha que afecta a toda la empresa. Ese es todo el peligro de un secreto codificado en duro: hace exactamente aquello para lo que fue creado, para quienquiera que lo encuentre.",
+   "El JavaScript del lado del cliente es, por definición, público. El navegador de cada visitante lo descarga, y cualquiera puede abrir las herramientas de desarrollo o el paquete sin procesar y leerlo. No existe tal cosa como un valor oculto en el código de front-end: minificarlo u ofuscarlo solo ralentiza a quien lo lee, no oculta nada. Si un secreto se envía al navegador, considéralo ya filtrado.",
+   "El mismo riesgo se aplica a los tokens incluidos en un repositorio Git, integrados en una imagen de contenedor o impresos en un registro de compilación. Escáneres automatizados rastrean sitios públicos y plataformas de código las 24 horas buscando precisamente estas cadenas. Un token que concede un acceso amplio, como un token de acceso personal con cientos de repositorios en su alcance, es el peor caso, porque una sola filtración expone todo lo que puede alcanzar.",
+   "La solución es una disciplina, no una única herramienta. Mantén cada secreto en el lado del servidor, en variables de entorno o en un gestor de secretos dedicado, y nunca dejes que ninguno llegue al paquete del navegador. Limita cada token al mínimo que necesita, rota las credenciales con regularidad y rótalas de inmediato si es posible que hayan quedado expuestas. Añade el escaneo automatizado de secretos a tu pipeline para que una clave incluida en un commit se detecte antes de publicarse.",
+   "El código de front-end que necesite llamar a un servicio protegido debería pasar por tu propio servidor o por una función serverless que guarde el secreto, en lugar de portar el secreto en sí. Si encuentras una credencial filtrada, el orden es sencillo: revócala primero, luego investiga. Un token revocado es inofensivo sin importar quién lo haya copiado.",
+   "La brecha de Novo Nordisk es un recordatorio de que los fallos más dañinos suelen ser los más básicos. Las afirmaciones de los atacantes siguen siendo el relato de los atacantes, y Novo Nordisk no ha detallado por sí misma el punto de entrada. Pero la lección se sostiene por sí sola: un secreto en el código del lado del cliente es un secreto público. Mantén las credenciales en el servidor, limita su alcance y rótalas, y escanéalas antes de publicarlas."
+  ],
+  "list": [
+   "Mantén cada secreto en el lado del servidor (variables de entorno o un gestor de secretos)",
+   "Nunca envíes una credencial en el JavaScript del lado del cliente",
+   "Limita cada token al mínimo acceso que necesita",
+   "Rota las credenciales con regularidad, y de inmediato si quedan expuestas",
+   "Añade el escaneo automatizado de secretos a tu pipeline de CI"
+  ]
  }
 }
