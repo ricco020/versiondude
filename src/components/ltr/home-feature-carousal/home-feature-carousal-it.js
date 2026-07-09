@@ -2,7 +2,7 @@
 import { getArticles, articleHref, categoryLabel } from "@/data/articles";
 const LOCALE = "it";
 const HomeFeatureCarousal = () => {
-  const pool = [...getArticles(LOCALE)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(0, 10);
+  const pool = [...getArticles(LOCALE)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(15, 21); // fenetre distincte (evergreen web-standards), evite de repeter la tete
   const loop = pool.concat(pool);
   const Card = ({ a, priority }) => (
     <div className="feat-card">

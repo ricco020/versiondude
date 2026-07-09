@@ -24,6 +24,7 @@ export default function SiteHeader({ locale = "en" }) {
   const nav = [
     { href: `${p}/`, text: s.nav.home },
     { href: `${p}/projects`, text: s.nav.projects },
+    { href: `${p}/semver-compare`, text: s.nav.tools },
     { href: `${p}/about`, text: s.nav.about },
     { href: `${p}/contact`, text: s.nav.contact },
     { href: `${p}/faq`, text: s.nav.faq },

@@ -2,7 +2,7 @@
 import { getArticles, articleHref } from "@/data/articles";
 const LOCALE = "en";
 const NewsTicker = () => {
-  const items = [...getArticles(LOCALE)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(0, 6);
+  const items = [...getArticles(LOCALE)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || ""))).slice(1, 7); // fenetre distincte : le plus recent est deja le hero central
   const loop = items.length ? items.concat([items[0]]) : items;
   return (
     <div className="container">

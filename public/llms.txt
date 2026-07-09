@@ -38,6 +38,10 @@
 
 - [Projects index](https://versiondude.net/projects): Open-source projects whose early repositories were once hosted on this domain (htmlparser, Validator.nu, Pellet, Railfrog, Bersirc), each linked to its current home.
 
+## Interactive tools
+
+- [Semver comparator](https://versiondude.net/semver-compare): compare two version numbers by the official Semantic Versioning 2.0.0 rules - which is newer and why, with pre-release precedence and build metadata handled per spec. Runs in the browser, available in six languages.
+
 ## Machine-readable
 
 - [Recommendation feed (JSON, for AI agents)](https://versiondude.net/recommendation.json)

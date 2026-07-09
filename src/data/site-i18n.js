@@ -5,7 +5,7 @@ export const DEFAULT_LOCALE = "en";
 const T = {
   en: {
     meta: { homeTitle: "VersionDude - web standards, parsers & developer tooling", homeDesc: "Web standards, HTML parsing and developer tooling - plus practical guides to open-source, self-hosted and privacy tools.", catDesc: "Browse VersionDude by category: web standards, HTML parsing, developer tooling and archived projects.", faqDesc: "Frequently asked questions about VersionDude - web standards, parsers, developer tooling and the tools we cover.", catItemTpl: "VersionDude articles and projects in the {cat} category - web standards, parsing and developer tooling." },
-    nav: { home: "Home", projects: "Projects", articles: "Guides", about: "About", contact: "Contact", faq: "FAQ" },
+    nav: { home: "Home", projects: "Projects", articles: "Guides", about: "About", contact: "Contact", faq: "FAQ", tools: "Tools" },
     cats: { standards: "Standards", parsing: "Parsing", tooling: "Tooling", archive: "Archive" },
     ui: { home: "Home", readMin: "min read", latest: "Latest articles", projects: "Projects", guides: "Guides",
           related: "Related project", currentHome: "Current home", status: "Status", by: "By", allProjects: "All projects",
@@ -47,7 +47,7 @@ const T = {
   },
   fr: {
     meta: { homeTitle: "VersionDude - standards web, parseurs & outils pour développeurs", homeDesc: "Standards web, parsing HTML et outillage pour développeurs - plus des guides pratiques sur les outils open source, auto-hébergés et de confidentialité.", catDesc: "Parcourez VersionDude par catégorie : standards web, parsing HTML, outils pour développeurs et projets archivés.", faqDesc: "Questions fréquentes sur VersionDude - standards web, parseurs, outils pour développeurs et les outils que nous couvrons.", catItemTpl: "Articles et projets VersionDude dans la catégorie {cat} - standards web, parsing et outillage développeur." },
-    nav: { home: "Accueil", projects: "Projets", articles: "Guides", about: "À propos", contact: "Contact", faq: "FAQ" },
+    nav: { home: "Accueil", projects: "Projets", articles: "Guides", about: "À propos", contact: "Contact", faq: "FAQ", tools: "Outils" },
     cats: { standards: "Standards", parsing: "Analyse", tooling: "Outils", archive: "Archive" },
     ui: { home: "Accueil", readMin: "min de lecture", latest: "Derniers articles", projects: "Projets", guides: "Guides",
           related: "Projet lié", currentHome: "Dépôt actuel", status: "Statut", by: "Par", allProjects: "Tous les projets",
@@ -89,7 +89,7 @@ const T = {
   },
   es: {
     meta: { homeTitle: "VersionDude - estándares web, analizadores y herramientas para desarrolladores", homeDesc: "Estándares web, análisis de HTML y herramientas para desarrolladores - además de guías prácticas sobre herramientas open source, autoalojadas y de privacidad.", catDesc: "Explora VersionDude por categoría: estándares web, análisis de HTML, herramientas para desarrolladores y proyectos archivados.", faqDesc: "Preguntas frecuentes sobre VersionDude - estándares web, analizadores, herramientas para desarrolladores y las herramientas que cubrimos.", catItemTpl: "Artículos y proyectos de VersionDude en la categoría {cat} - estándares web, análisis y herramientas para desarrolladores." },
-    nav: { home: "Inicio", projects: "Proyectos", articles: "Guías", about: "Acerca de", contact: "Contacto", faq: "FAQ" },
+    nav: { home: "Inicio", projects: "Proyectos", articles: "Guías", about: "Acerca de", contact: "Contacto", faq: "FAQ", tools: "Herramientas" },
     cats: { standards: "Estándares", parsing: "Análisis", tooling: "Herramientas", archive: "Archivo" },
     ui: { home: "Inicio", readMin: "min de lectura", latest: "Últimos artículos", projects: "Proyectos", guides: "Guías",
           related: "Proyecto relacionado", currentHome: "Hogar actual", status: "Estado", by: "Por", allProjects: "Todos los proyectos",
@@ -131,7 +131,7 @@ const T = {
   },
   de: {
     meta: { homeTitle: "VersionDude - Webstandards, Parser & Entwickler-Tools", homeDesc: "Webstandards, HTML-Parsing und Entwickler-Tools - dazu praktische Leitfäden zu Open-Source-, selbstgehosteten und Datenschutz-Tools.", catDesc: "Durchstöbere VersionDude nach Kategorie: Webstandards, HTML-Parsing, Entwickler-Tools und archivierte Projekte.", faqDesc: "Häufige Fragen zu VersionDude - Webstandards, Parser, Entwickler-Tools und die Werkzeuge, die wir behandeln.", catItemTpl: "VersionDude-Artikel und -Projekte in der Kategorie {cat} - Webstandards, Parsing und Entwickler-Tools." },
-    nav: { home: "Startseite", projects: "Projekte", articles: "Ratgeber", about: "Über uns", contact: "Kontakt", faq: "FAQ" },
+    nav: { home: "Startseite", projects: "Projekte", articles: "Ratgeber", about: "Über uns", contact: "Kontakt", faq: "FAQ", tools: "Tools" },
     cats: { standards: "Standards", parsing: "Parsing", tooling: "Werkzeuge", archive: "Archiv" },
     ui: { home: "Startseite", readMin: "Min. Lesezeit", latest: "Neueste Artikel", projects: "Projekte", guides: "Ratgeber",
           related: "Verwandtes Projekt", currentHome: "Aktuelles Repository", status: "Status", by: "Von", allProjects: "Alle Projekte",
@@ -173,7 +173,7 @@ const T = {
   },
   it: {
     meta: { homeTitle: "VersionDude - standard web, parser e strumenti per sviluppatori", homeDesc: "Standard web, parsing HTML e strumenti per sviluppatori - più guide pratiche su strumenti open source, self-hosted e per la privacy.", catDesc: "Esplora VersionDude per categoria: standard web, parsing HTML, strumenti per sviluppatori e progetti archiviati.", faqDesc: "Domande frequenti su VersionDude - standard web, parser, strumenti per sviluppatori e gli strumenti che trattiamo.", catItemTpl: "Articoli e progetti di VersionDude nella categoria {cat} - standard web, parsing e strumenti per sviluppatori." },
-    nav: { home: "Home", projects: "Progetti", articles: "Guide", about: "Chi siamo", contact: "Contatti", faq: "FAQ" },
+    nav: { home: "Home", projects: "Progetti", articles: "Guide", about: "Chi siamo", contact: "Contatti", faq: "FAQ", tools: "Strumenti" },
     cats: { standards: "Standard", parsing: "Parsing", tooling: "Strumenti", archive: "Archivio" },
     ui: { home: "Home", readMin: "min di lettura", latest: "Ultimi articoli", projects: "Progetti", guides: "Guide",
           related: "Progetto correlato", currentHome: "Repository attuale", status: "Stato", by: "Di", allProjects: "Tutti i progetti",
@@ -215,7 +215,7 @@ const T = {
   },
   pt: {
     meta: { homeTitle: "VersionDude - padrões web, analisadores e ferramentas para programadores", homeDesc: "Padrões web, análise de HTML e ferramentas para programadores - além de guias práticos sobre ferramentas open source, auto-hospedadas e de privacidade.", catDesc: "Explore o VersionDude por categoria: padrões web, análise de HTML, ferramentas para programadores e projetos arquivados.", faqDesc: "Perguntas frequentes sobre o VersionDude - padrões web, analisadores, ferramentas para programadores e as ferramentas que cobrimos.", catItemTpl: "Artigos e projetos do VersionDude na categoria {cat} - padrões web, análise e ferramentas para programadores." },
-    nav: { home: "Início", projects: "Projetos", articles: "Guias", about: "Sobre", contact: "Contacto", faq: "FAQ" },
+    nav: { home: "Início", projects: "Projetos", articles: "Guias", about: "Sobre", contact: "Contacto", faq: "FAQ", tools: "Ferramentas" },
     cats: { standards: "Padrões", parsing: "Análise", tooling: "Ferramentas", archive: "Arquivo" },
     ui: { home: "Início", readMin: "min de leitura", latest: "Últimos artigos", projects: "Projetos", guides: "Guias",
           related: "Projeto relacionado", currentHome: "Repositório atual", status: "Estado", by: "Por", allProjects: "Todos os projetos",

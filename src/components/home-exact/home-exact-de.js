@@ -19,25 +19,29 @@ export default function Home() {
   useRemoveBodyClass(['home-nine'], ['home-six', 'home-seven', 'home-two', 'boxed-layout', 'layout-rtl']);
   useBackgroundImageLoader();
 
-  // Liste COMPLETE triee par date desc : la home pioche dans A a des index/slices DIFFERENTS
-  // par section => le recent circule + un MAXIMUM d'articles distincts est lie (chemins de crawl).
+  // Liste COMPLETE triee par date desc. Chaque section pioche une FENETRE DISTINCTE de A
+  // (quasi-partition) : un article n'apparait au plus que dans UNE section editoriale + la
+  // liste "Latest", au lieu de repeter les 6 memes articles de tete dans toutes les sections.
+  // Tout le catalogue reste couvert (chemins de crawl, majorite a 1 clic).
   const A = [...getArticles(LOC)].sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
-  // POST BLOCK historique : 6 cartes a partir de l'index 6 (decale du hero/feature).
-  const L = A.slice(6);
   const href = (s) => articleHref(s, LOC);
   const cat = (k) => categoryLabel(k, LOC);
 
-  // slices par section (chevauchement minimal pour couvrir le plus d'articles)
-  const topStories  = A.slice(0, 3);                 // Top Stories
-  const mostViewed  = A.slice(0, 5);                 // onglet Most Viewed
-  const popularNews = A.slice(3, 6);                 // onglet Popular news
+  // POST BLOCK : 6 cartes sur une fenetre distincte (decalee du hero / feature / ticker).
+  const L = A.slice(7, 13);
+  // slices editoriales = quasi-partition de A (chaque article dans UNE seule de ces sections)
+  const topStories  = A.slice(1, 4);                 // Top Stories
+  const mostViewed  = A.slice(4, 9);                 // onglet Most Viewed
+  const popularNews = A.slice(9, 12);                // onglet Popular news
   const featured    = A[0];                          // gros article en tete (Popular)
-  const grid        = A.slice(0, 6);                 // news-grid-2
-  const reviews     = A.slice(6, 10);                // Latest Reviews (1 grande + 3 liste)
+  const grid        = A.slice(12, 18);               // news-grid-2
+  const reviews     = A.slice(18, 22);               // Latest Reviews (1 grande + 3 liste)
+  // Tooling & Standards : set distinct (categorie tooling/standards) pris hors des fenetres ci-dessus
   const toolFeed    = A.filter((a) => a.category === "tooling" || a.category === "standards");
-  const toolsStacks = (toolFeed.length ? toolFeed : A).slice(0, 4); // Tooling & Standards
-  const editorPick  = A[A.length - 1];               // Editor's Picks = l'article le plus profond (le fait remonter)
-  const latest      = A;                              // Latest articles = TOUT le catalogue (max chemins de crawl, recent en tete)
+  const toolPick    = [A[13], A[14], A[21], A[22]].filter(Boolean);
+  const toolsStacks = (toolPick.length === 4 ? toolPick : (toolFeed.length ? toolFeed : A).slice(-4));
+  const editorPick  = A[A.length - 1];               // Editor's Picks = l'article le plus profond
+  const latest      = A;                             // Latest = TOUT le catalogue (couverture crawl complete)
 
   return (
     <Layout locale="de">
