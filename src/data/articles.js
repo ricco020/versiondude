@@ -114,6 +114,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'typescript-7-go-compiler-2026', category: 'tooling', readingMinutes: 7, date: '2026-07-10',
+    title: "TypeScript 7.0 is here: the Go-native compiler and what its 10x speed-up means",
+    dek: "TypeScript 7.0 shipped on 8 July 2026 with a compiler rewritten in Go, and Microsoft's benchmarks put builds around 10x faster. What actually changed, why it is faster, and what to check before you migrate.",
+    hero: '/assets/articles/typescript-7-go-compiler-2026-hero.jpg', heroAlt: "Syntax-highlighted JavaScript source code on a dark screen",
+    body: '/assets/articles/typescript-7-go-compiler-2026-body.jpg', bodyCaption: "Source code shown with syntax highlighting and line numbers in a code editor.",
+    paras: ENX['typescript-7-go-compiler-2026'].paras,
+    list: ENX['typescript-7-go-compiler-2026'].list,
+    related: 'what-is-a-parser',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'ghostapproval-ai-coding-assistants-symlink-2026', category: 'tooling', readingMinutes: 6, date: '2026-07-09',
     title: "GhostApproval: how a symlink can hijack your AI coding assistant",
     dek: "In July 2026 Wiz disclosed GhostApproval, a flaw in six AI coding assistants. A malicious repository uses a symbolic link to redirect an approved file edit onto sensitive files like your SSH keys. What the attack is, which tools are affected, and how to stay safe.",
@@ -599,6 +610,7 @@ const ART_SLUG = {
   "ruby-on-rails-cms": { fr: "cms-ruby-on-rails", es: "cms-ruby-on-rails-es", de: "ruby-on-rails-cms", it: "cms-ruby-on-rails", pt: "cms-ruby-on-rails" },
   "character-encoding-utf-8": { fr: "encodage-des-caracteres-utf-8", es: "codificacion-de-caracteres-utf-8", de: "zeichenkodierung-utf-8", it: "codifica-dei-caratteri-utf-8", pt: "codificacao-de-caracteres-utf-8" },
   "self-hosted-cms": { fr: "cms-auto-heberges", es: "cms-autoalojados", de: "selbstgehostete-cms", it: "cms-self-hosted", pt: "cms-auto-hospedados" },
+  "typescript-7-go-compiler-2026": { fr: "typescript-7-compilateur-go", es: "typescript-7-compilador-go", de: "typescript-7-go-compiler", it: "typescript-7-compilatore-go", pt: "typescript-7-compilador-em-go" },
 };
 export function slugFor(enSlug, locale) {
   return locale === "en" ? enSlug : (ART_SLUG[enSlug] && ART_SLUG[enSlug][locale]) || enSlug;

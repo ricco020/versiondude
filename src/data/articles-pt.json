@@ -586,5 +586,29 @@
       "Atualize o seu assistente de codigo IA para a versao corrigida mais recente",
       "Trate cada repositorio clonado como codigo nao fiavel e leia o que aprova"
     ]
+  },
+  "typescript-7-go-compiler-2026": {
+    "title": "TypeScript 7.0 chegou: o compilador nativo em Go e o que sua aceleração de 10x significa",
+    "dek": "O TypeScript 7.0 foi lançado em 8 de julho de 2026 com um compilador reescrito em Go, e os benchmarks da Microsoft colocam as builds cerca de 10x mais rápidas. O que realmente mudou, por que é mais rápido e o que verificar antes de migrar.",
+    "heroAlt": "Código-fonte JavaScript com realce de sintaxe em uma tela escura",
+    "bodyCaption": "Código-fonte exibido com realce de sintaxe e números de linha em um editor de código.",
+    "paras": [
+      "Em 8 de julho de 2026, a Microsoft lançou o TypeScript 7.0, a primeira versão estável construída sobre um compilador escrito em Go em vez de JavaScript. É a maior mudança na história da linguagem: o type checker e o compilador dos quais milhões de projetos dependem agora rodam como código nativo, e os benchmarks publicados pela Microsoft colocam as builds completas cerca de 8 a 12 vezes mais rápidas do que a versão anterior.",
+      "O projeto tem um longo percurso. A Microsoft o anunciou em março de 2025 sob o codinome Project Corsa, referindo-se à base de código existente baseada em JavaScript como Strada. Uma beta chegou em abril de 2026, um release candidate em 18 de junho de 2026, e a versão 7.0 de disponibilidade geral em 8 de julho de 2026. A afirmação principal foi a mesma o tempo todo: uma aceleração de cerca de dez vezes na verificação de tipos e na compilação.",
+      "Os números que a Microsoft publicou são concretos. Compilar a base de código do Visual Studio Code caiu de cerca de 77.8 segundos para 7.5 segundos, uma melhoria de 10.4x, e o Playwright caiu de 11.1 segundos para 1.1 segundos. Projetos reais vão variar, mas o padrão em todo o conjunto de benchmarks da Microsoft se agrupa em torno da marca de dez vezes.",
+      "Duas coisas explicam a velocidade. Cerca de metade vem de rodar como código nativo compilado em vez de JavaScript executado pelo Node. A outra metade vem da concorrência com memória compartilhada: a implementação em Go pode distribuir o trabalho de verificação de tipos entre vários núcleos de CPU usando memória compartilhada, algo que a versão JavaScript de thread único não conseguia fazer de forma limpa.",
+      "É importante notar que isso é um port, não uma reescrita. A Microsoft traduziu a lógica do compilador existente para Go preservando o mesmo comportamento de verificação de tipos, de modo que o objetivo é que seu código passe pela verificação de tipos de forma idêntica, com os mesmos erros nos mesmos lugares, apenas muito mais rápido. A equipe afirmou que Go foi escolhido em parte porque sua sintaxe e estrutura se aproximam do código JavaScript existente, o que tornou viável um port fiel tanto para pessoas quanto para ferramentas.",
+      "Para o trabalho do dia a dia, o benefício é sentido em dois lugares. Os editores ficam mais responsivos em bases de código grandes, porque o language service por trás de recursos como o autocompletar, ir para a definição e o sublinhado de erros faz o mesmo trabalho em uma fração do tempo. E os pipelines de integração contínua que rodam o compilador a cada commit ficam mais curtos, o que importa sobretudo em monorepos grandes onde a verificação de tipos havia se tornado um verdadeiro gargalo.",
+      "Se você está planejando adotá-lo, trate a mudança como uma verificação de compatibilidade em vez de uma reescrita do seu próprio código. Como a semântica é preservada, a maioria dos projetos não deve ver mudança nos erros relatados. Ainda assim, verifique contra a sua build real: confira se suas opções de tsconfig, seus scripts de build e qualquer ferramenta personalizada que se conecte à API do TypeScript se comportam como esperado. Consulte as notas de lançamento oficiais para o caminho exato de adesão e quaisquer ressalvas documentadas antes de trocar um pipeline de produção.",
+      "O lançamento também se encaixa em uma tendência mais ampla. O toolchain de JavaScript passou vários anos movendo ferramentas críticas para o desempenho para linguagens nativas: bundlers e transpiladores escritos em Go e Rust, como o esbuild e a família do SWC e do Biome, estabeleceram a expectativa de que as ferramentas centrais devem ser quase instantâneas. O próprio type checker do TypeScript havia permanecido uma das últimas grandes peças ainda rodando em JavaScript, e o TypeScript 7.0 fecha essa lacuna.",
+      "Em resumo: o TypeScript 7.0 não muda como você escreve TypeScript, mas muda como é a sensação de trabalhar com ele em escala. Se verificações de tipos lentas ou o desempenho lento do editor haviam se tornado um imposto sobre um projeto grande, este lançamento mira diretamente nessa dor, e as acelerações medidas são grandes o suficiente para valer a pena planejar uma migração em torno delas."
+    ],
+    "list": [
+      "Lançado: o TypeScript 7.0 alcançou a disponibilidade geral em 8 de julho de 2026 (release candidate em 18 de junho, beta em abril).",
+      "O que mudou: o compilador e o type checker agora estão escritos em Go em vez de JavaScript (codinome Project Corsa).",
+      "Velocidade: os benchmarks da Microsoft mostram builds cerca de 8 a 12x mais rápidas, por exemplo VS Code de 77.8s para 7.5s e Playwright de 11.1s para 1.1s.",
+      "Por que é mais rápido: cerca de metade do ganho é código nativo, e metade é concorrência multinúcleo com memória compartilhada.",
+      "Compatibilidade: é um port, não uma reescrita, então a semântica de verificação de tipos é preservada, o que significa os mesmos erros, muito mais rápido."
+    ]
   }
 }
