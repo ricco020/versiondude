@@ -114,6 +114,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'what-is-semantic-versioning', category: 'guides', readingMinutes: 7, date: '2026-07-15',
+    title: "What Is Semantic Versioning (SemVer)? MAJOR.MINOR.PATCH, Explained",
+    dek: "Semantic Versioning numbers releases as MAJOR.MINOR.PATCH so the version itself tells you what changed. What each part means, the reset rules, pre-release labels, and how npm ranges like ^1.2.3 rely on it.",
+    hero: '/assets/articles/what-is-semantic-versioning-hero.jpg', heroAlt: "Syntax-highlighted source code on a dark screen in a code editor",
+    body: '/assets/articles/what-is-semantic-versioning-body.jpg', bodyCaption: "Source code open in an editor. Dependency ranges like ^1.2.3 rely on Semantic Versioning to stay safe.",
+    paras: ENX['what-is-semantic-versioning'].paras,
+    list: ENX['what-is-semantic-versioning'].list,
+    related: 'what-is-a-parser',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'typescript-7-go-compiler-2026', category: 'tooling', readingMinutes: 7, date: '2026-07-10',
     title: "TypeScript 7.0 is here: the Go-native compiler and what its 10x speed-up means",
     dek: "TypeScript 7.0 shipped on 8 July 2026 with a compiler rewritten in Go, and Microsoft's benchmarks put builds around 10x faster. What actually changed, why it is faster, and what to check before you migrate.",
@@ -584,6 +595,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-semantic-versioning": { fr: "qu-est-ce-que-le-versionnage-semantique", es: "que-es-el-versionado-semantico", de: "was-ist-semantische-versionierung", it: "cos-e-il-versionamento-semantico", pt: "o-que-e-o-versionamento-semantico" },
   "ghostapproval-ai-coding-assistants-symlink-2026": { fr: "ghostapproval-symlink-assistants-code-ia-2026", es: "ghostapproval-symlink-asistentes-codigo-ia-2026", de: "ghostapproval-symlink-ki-coding-assistenten-2026", it: "ghostapproval-symlink-assistenti-codice-ia-2026", pt: "ghostapproval-symlink-assistentes-codigo-ia-2026" },
   "novo-nordisk-breach-client-side-secrets-2026": { fr: "fuite-novo-nordisk-secrets-javascript-client-2026", es: "brecha-novo-nordisk-secretos-javascript-cliente-2026", de: "novo-nordisk-leck-geheimnisse-client-javascript-2026", it: "violazione-novo-nordisk-segreti-javascript-client-2026", pt: "violacao-novo-nordisk-segredos-javascript-cliente-2026" },
   "what-is-an-api": { fr: "qu-est-ce-qu-une-api", es: "que-es-una-api", de: "was-ist-eine-api", it: "che-cos-e-un-api", pt: "o-que-e-uma-api" },
