@@ -114,6 +114,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'what-is-a-lockfile', category: 'guides', readingMinutes: 7, date: '2026-07-17',
+    title: "What Is a Lockfile? Reproducible Installs, Explained (package-lock, Cargo.lock and more)",
+    dek: "A lockfile records the exact resolved version of every dependency so everyone installs the same thing. Why manifests alone are not enough, how integrity hashes add security, and whether to commit it.",
+    hero: '/assets/articles/what-is-a-lockfile-hero.jpg', heroAlt: "Syntax-highlighted source code on a dark screen in a code editor",
+    body: '/assets/articles/what-is-a-lockfile-body.jpg', bodyCaption: "A package manifest and its lockfile work together: the manifest states ranges, the lockfile pins exact versions.",
+    paras: ENX['what-is-a-lockfile'].paras,
+    list: ENX['what-is-a-lockfile'].list,
+    related: 'what-is-semantic-versioning',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'what-is-semantic-versioning', category: 'guides', readingMinutes: 7, date: '2026-07-15',
     title: "What Is Semantic Versioning (SemVer)? MAJOR.MINOR.PATCH, Explained",
     dek: "Semantic Versioning numbers releases as MAJOR.MINOR.PATCH so the version itself tells you what changed. What each part means, the reset rules, pre-release labels, and how npm ranges like ^1.2.3 rely on it.",
@@ -595,6 +606,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-a-lockfile": { fr: "qu-est-ce-qu-un-lockfile", es: "que-es-un-lockfile", de: "was-ist-eine-lockfile", it: "cos-e-un-lockfile", pt: "o-que-e-um-lockfile" },
   "what-is-semantic-versioning": { fr: "qu-est-ce-que-le-versionnage-semantique", es: "que-es-el-versionado-semantico", de: "was-ist-semantische-versionierung", it: "cos-e-il-versionamento-semantico", pt: "o-que-e-o-versionamento-semantico" },
   "ghostapproval-ai-coding-assistants-symlink-2026": { fr: "ghostapproval-symlink-assistants-code-ia-2026", es: "ghostapproval-symlink-asistentes-codigo-ia-2026", de: "ghostapproval-symlink-ki-coding-assistenten-2026", it: "ghostapproval-symlink-assistenti-codice-ia-2026", pt: "ghostapproval-symlink-assistentes-codigo-ia-2026" },
   "novo-nordisk-breach-client-side-secrets-2026": { fr: "fuite-novo-nordisk-secrets-javascript-client-2026", es: "brecha-novo-nordisk-secretos-javascript-cliente-2026", de: "novo-nordisk-leck-geheimnisse-client-javascript-2026", it: "violazione-novo-nordisk-segreti-javascript-client-2026", pt: "violacao-novo-nordisk-segredos-javascript-cliente-2026" },

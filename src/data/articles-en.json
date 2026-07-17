@@ -280,5 +280,25 @@
 "0.x.y means unstable/early development; 1.0.0 signals a committed, stable public API.",
 "Pre-release labels (1.0.0-rc.1) rank below the release; npm ranges ^1.2.3 and ~1.2.3 rely on SemVer to stay safe."
 ]
+},
+"what-is-a-lockfile": {
+"paras": [
+"A lockfile is a file your package manager writes to record the exact versions of every dependency your project installed - not just the ones you asked for, but the dependencies of those dependencies too. Its whole purpose is reproducibility: it makes sure that you, your teammate and your production server all install byte-for-byte the same set of packages, instead of whatever happens to be newest at install time. If you have ever seen a package-lock.json, yarn.lock or Cargo.lock and wondered what it is for, this is it.",
+"To see why it matters, you have to look at what your manifest actually says. A file like package.json usually pins dependencies as version ranges, not exact versions - for example ^1.2.3, which under Semantic Versioning means any release from 1.2.3 up to but not including 2.0.0. That flexibility is useful, but it has a downside: install the project today and you might get 1.2.4, install it next month and you might get 1.2.9. Same manifest, different actual code.",
+"The lockfile closes that gap. When you first install, the package manager resolves all those ranges down to concrete versions, and writes them into the lockfile along with an integrity hash for each package. From then on, anyone who installs reads the lockfile and gets those exact versions - not the range, the specific resolved version. The result is a deterministic, reproducible install every time, which is what kills a whole class of 'but it works on my machine' bugs.",
+"That integrity hash does a second important job. Each entry in the lockfile records a checksum of the package contents, so when the package manager downloads a dependency it can verify the bytes match what was locked. If a package on the registry were tampered with, the hash would not match and the install would fail. In an era of supply-chain attacks, that verification is a quiet but real security benefit.",
+"Every ecosystem has its own version of the same idea. In JavaScript there is package-lock.json (npm), yarn.lock (Yarn) and pnpm-lock.yaml (pnpm); in Rust, Cargo.lock; in Python, poetry.lock and uv.lock; in Ruby, Gemfile.lock; in PHP, composer.lock. The file format differs, but the job is identical: record the exact resolved dependency tree so it can be reproduced exactly.",
+"A common question is whether you should commit the lockfile to version control. For applications, yes - you want your deployments to install the exact versions you tested, so the lockfile belongs in the repository. For libraries the convention is different: many library authors do not commit a lockfile, because the projects that depend on the library will resolve and lock their own versions anyway.",
+"The lockfile and the manifest are a team, not rivals. The manifest expresses intent with SemVer ranges - 'I want a compatible 1.x of this package' - which keeps you open to safe updates. The lockfile records the reality - 'this exact version is what we actually use' - which keeps installs reproducible. If you want the details of the ranges themselves, see our guide to Semantic Versioning.",
+"How the lockfile updates depends on the command you run. A plain install (like npm install) may update the lockfile if it can find newer versions still allowed by your ranges. A strict, reproducible install (like npm ci) ignores the ranges entirely and installs exactly what the lockfile says, failing if the two disagree - which is what you want in continuous integration and production builds.",
+"A few practical habits keep lockfiles painless. Do not hand-edit them; let the tool regenerate them. When you get a merge conflict in a lockfile - which happens because two branches added dependencies - resolve it by re-running the install rather than editing the file by hand. And always commit the lockfile for an application, so that the version everyone builds is the version you actually tested."
+],
+"list": [
+"What it is: a file recording the exact resolved version of every dependency (and sub-dependency) a project installed.",
+"Why: manifests use SemVer ranges (e.g. ^1.2.3), so without a lock, installs at different times can differ.",
+"How: the package manager resolves ranges to concrete versions plus integrity hashes, for reproducible, verified installs.",
+"Examples: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
+"Commit it for applications; use a strict install (npm ci) in CI; do not hand-edit, regenerate on merge conflicts."
+]
 }
 }
