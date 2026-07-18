@@ -114,6 +114,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'what-is-a-git-tag', category: 'guides', readingMinutes: 7, date: '2026-07-18',
+    title: "What Is a Git Tag? Marking Releases and Versions, Explained",
+    dek: "A git tag is a named reference that points to a specific commit, used above all to mark releases and versions. Lightweight versus annotated tags, how they differ from branches, and how to create and push them.",
+    hero: '/assets/articles/what-is-a-git-tag-hero.jpg', heroAlt: "Syntax-highlighted source code on a dark screen in a code editor",
+    body: '/assets/articles/what-is-a-git-tag-body.jpg', bodyCaption: "Syntax-highlighted source code with a motion-blur effect.",
+    paras: ENX['what-is-a-git-tag'].paras,
+    list: ENX['what-is-a-git-tag'].list,
+    related: 'what-is-semantic-versioning',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'what-is-a-lockfile', category: 'guides', readingMinutes: 7, date: '2026-07-17',
     title: "What Is a Lockfile? Reproducible Installs, Explained (package-lock, Cargo.lock and more)",
     dek: "A lockfile records the exact resolved version of every dependency so everyone installs the same thing. Why manifests alone are not enough, how integrity hashes add security, and whether to commit it.",
@@ -628,6 +639,7 @@ const ART_SLUG = {
   "proton-pass-review": { fr: "test-proton-pass", es: "analisis-proton-pass", de: "proton-pass-test", it: "recensione-proton-pass", pt: "analise-proton-pass" },
   "what-is-the-dom": { fr: "qu-est-ce-que-le-dom", es: "que-es-el-dom", de: "was-ist-das-dom", it: "che-cos-e-il-dom", pt: "o-que-e-o-dom" },
   "html-validator": { fr: "validateur-html", es: "validador-html", de: "html-validator", it: "validatore-html", pt: "validador-html" },
+  "what-is-a-git-tag": { fr: "qu-est-ce-qu-un-tag-git", es: "que-es-una-etiqueta-git", de: "was-ist-ein-git-tag", it: "che-cos-e-un-tag-git", pt: "o-que-e-uma-tag-git" },
   "what-is-a-parser": { fr: "qu-est-ce-qu-un-parseur", es: "que-es-un-analizador", de: "was-ist-ein-parser", it: "che-cos-e-un-parser", pt: "o-que-e-um-analisador" },
   "semantic-web": { fr: "web-semantique", es: "web-semantica", de: "semantisches-web", it: "web-semantico", pt: "web-semantica" },
   "xml-vs-html": { fr: "xml-contre-html", es: "xml-frente-a-html", de: "xml-vs-html", it: "xml-contro-html", pt: "xml-vs-html" },

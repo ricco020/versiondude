@@ -1,1431 +1,1487 @@
 {
-  "open-source-password-managers": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "Three open-source vaults to know",
-      "fr": "Trois coffres open source à connaître",
-      "es": "Tres bóvedas de código abierto que debes conocer",
-      "de": "Drei Open-Source-Tresore, die man kennen sollte",
-      "it": "Tre casseforti open source da conoscere",
-      "pt": "Três cofres de código aberto a conhecer",
-      "n": 3
-    },
-    {
-      "en": "Choosing your spot on the spectrum",
-      "fr": "Trouver sa place sur le spectre",
-      "es": "Elige tu lugar en el espectro",
-      "de": "Den eigenen Platz im Spektrum wählen",
-      "it": "Scegliere la tua posizione nello spettro",
-      "pt": "Escolher o seu lugar no espetro",
-      "n": 1
-    },
-    {
-      "en": "Pitfalls and the limits of open code",
-      "fr": "Pièges et limites du code ouvert",
-      "es": "Trampas y límites del código abierto",
-      "de": "Fallstricke und die Grenzen von offenem Code",
-      "it": "Trappole e i limiti del codice aperto",
-      "pt": "Armadilhas e os limites do código aberto",
-      "n": 2
-    },
-    {
-      "en": "Habits that matter more than the brand",
-      "fr": "Des habitudes qui comptent plus que la marque",
-      "es": "Hábitos que importan más que la marca",
-      "de": "Gewohnheiten, die mehr zählen als die Marke",
-      "it": "Abitudini che contano più del marchio",
-      "pt": "Hábitos que importam mais do que a marca",
-      "n": 2
-    }
-  ],
-  "self-hosted-password-managers": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "Vaultwarden, the popular middle road",
-      "fr": "Vaultwarden, le juste milieu populaire",
-      "es": "Vaultwarden, el popular término medio",
-      "de": "Vaultwarden, der beliebte Mittelweg",
-      "it": "Vaultwarden, la popolare via di mezzo",
-      "pt": "Vaultwarden, o popular meio-termo",
-      "n": 2
-    },
-    {
-      "en": "KeePassXC and the file-based path",
-      "fr": "KeePassXC et l'approche par fichier",
-      "es": "KeePassXC y la vía basada en archivos",
-      "de": "KeePassXC und der dateibasierte Weg",
-      "it": "KeePassXC e la via basata su file",
-      "pt": "KeePassXC e a via baseada em ficheiro",
-      "n": 2
-    },
-    {
-      "en": "The true cost of hosting yourself",
-      "fr": "Le vrai coût de l'auto-hébergement",
-      "es": "El verdadero coste de alojarlo tú mismo",
-      "de": "Die wahren Kosten des Selbsthostings",
-      "it": "Il vero costo dell'auto-ospitaggio",
-      "pt": "O verdadeiro custo do auto-alojamento",
-      "n": 2
-    },
-    {
-      "en": "When a managed service makes more sense",
-      "fr": "Quand un service géré est plus judicieux",
-      "es": "Cuándo tiene más sentido un servicio gestionado",
-      "de": "Wann ein verwalteter Dienst sinnvoller ist",
-      "it": "Quando un servizio gestito ha più senso",
-      "pt": "Quando um serviço gerido faz mais sentido",
-      "n": 2
-    }
-  ],
-  "secrets-management-tools": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "Cheap habits that prevent leaks",
-      "fr": "Des habitudes simples qui évitent les fuites",
-      "es": "Hábitos baratos que previenen las filtraciones",
-      "de": "Günstige Gewohnheiten, die Lecks verhindern",
-      "it": "Abitudini economiche che prevengono le fughe",
-      "pt": "Hábitos baratos que previnem as fugas",
-      "n": 2
-    },
-    {
-      "en": "Rotate first, regret never",
-      "fr": "Renouvelez d'abord, ne regrettez jamais",
-      "es": "Rota primero, no te arrepientas nunca",
-      "de": "Erst rotieren, nie bereuen",
-      "it": "Ruota prima, non pentirti mai",
-      "pt": "Rode primeiro, nunca se arrependa",
-      "n": 1
-    },
-    {
-      "en": "Dedicated stores for teams and production",
-      "fr": "Des coffres dédiés pour les équipes et la production",
-      "es": "Almacenes dedicados para equipos y producción",
-      "de": "Dedizierte Speicher für Teams und Produktion",
-      "it": "Archivi dedicati per team e produzione",
-      "pt": "Armazéns dedicados para equipas e produção",
-      "n": 2
-    },
-    {
-      "en": "Match the tooling to the scale",
-      "fr": "Adapter l'outillage à l'échelle",
-      "es": "Ajusta las herramientas a la escala",
-      "de": "Die Werkzeuge an die Skala anpassen",
-      "it": "Adatta gli strumenti alla scala",
-      "pt": "Adapte as ferramentas à escala",
-      "n": 2
-    },
-    {
-      "en": "A layered discipline, not a product",
-      "fr": "Une discipline en couches, pas un produit",
-      "es": "Una disciplina por capas, no un producto",
-      "de": "Eine geschichtete Disziplin, kein Produkt",
-      "it": "Una disciplina a strati, non un prodotto",
-      "pt": "Uma disciplina em camadas, não um produto",
-      "n": 1
-    }
-  ],
-  "proton-mail-review": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "How it feels day to day",
-      "fr": "Ce que ça donne au quotidien",
-      "es": "Cómo se siente en el día a día",
-      "de": "Wie es sich im Alltag anfühlt",
-      "it": "Come ci si sente nel quotidiano",
-      "pt": "Como é no dia a dia",
-      "n": 1
-    },
-    {
-      "en": "Encryption, plans and the wider suite",
-      "fr": "Chiffrement, abonnements et la suite complète",
-      "es": "Cifrado, planes y la suite completa",
-      "de": "Verschlüsselung, Tarife und die breitere Suite",
-      "it": "Crittografia, piani e la suite più ampia",
-      "pt": "Cifragem, planos e a suite mais ampla",
-      "n": 3
-    },
-    {
-      "en": "The honest trade-offs",
-      "fr": "Les compromis en toute honnêteté",
-      "es": "Las concesiones, sin rodeos",
-      "de": "Die ehrlichen Kompromisse",
-      "it": "I compromessi onesti",
-      "pt": "Os compromissos honestos",
-      "n": 3
-    },
-    {
-      "en": "Who it is really for",
-      "fr": "À qui ça s'adresse vraiment",
-      "es": "Para quién es realmente",
-      "de": "Für wen es wirklich gedacht ist",
-      "it": "Per chi è davvero",
-      "pt": "Para quem é realmente",
-      "n": 1
-    }
-  ],
-  "best-encrypted-email": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Two kinds of encryption to separate",
-      "fr": "Deux types de chiffrement à distinguer",
-      "es": "Dos tipos de cifrado que conviene separar",
-      "de": "Zwei Arten von Verschlüsselung, die man trennen sollte",
-      "it": "Due tipi di crittografia da separare",
-      "pt": "Dois tipos de cifragem a separar",
-      "n": 2
-    },
-    {
-      "en": "The leading auditable providers",
-      "fr": "Les principaux fournisseurs auditables",
-      "es": "Los principales proveedores auditables",
-      "de": "Die führenden auditierbaren Anbieter",
-      "it": "I principali fornitori verificabili",
-      "pt": "Os principais fornecedores auditáveis",
-      "n": 2
-    },
-    {
-      "en": "The limit no provider can cross",
-      "fr": "La limite qu'aucun fournisseur ne peut franchir",
-      "es": "El límite que ningún proveedor puede cruzar",
-      "de": "Die Grenze, die kein Anbieter überschreiten kann",
-      "it": "Il limite che nessun fornitore può superare",
-      "pt": "O limite que nenhum fornecedor pode cruzar",
-      "n": 2
-    },
-    {
-      "en": "What to check before you commit",
-      "fr": "Ce qu'il faut vérifier avant de s'engager",
-      "es": "Qué comprobar antes de decidirte",
-      "de": "Was Sie prüfen sollten, bevor Sie sich festlegen",
-      "it": "Cosa verificare prima di impegnarti",
-      "pt": "O que verificar antes de decidir",
-      "n": 2
-    },
-    {
-      "en": "Picking the right fit",
-      "fr": "Choisir celui qui vous convient",
-      "es": "Elegir la opción adecuada",
-      "de": "Die richtige Wahl treffen",
-      "it": "Scegliere quello giusto per te",
-      "pt": "Escolher a opção certa",
-      "n": 1
-    }
-  ],
-  "proton-pass-review": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "Hide-my-email aliases and the essentials",
-      "fr": "Les alias hide-my-email et l'essentiel",
-      "es": "Los alias hide-my-email y lo esencial",
-      "de": "Hide-my-email-Aliase und das Wesentliche",
-      "it": "Gli alias hide-my-email e l'essenziale",
-      "pt": "Os aliases hide-my-email e o essencial",
-      "n": 2
-    },
-    {
-      "en": "Where it leads and where it lags",
-      "fr": "Là où il brille et là où il pèche",
-      "es": "Dónde destaca y dónde se queda corto",
-      "de": "Wo es führt und wo es hinterherhinkt",
-      "it": "Dove primeggia e dove resta indietro",
-      "pt": "Onde lidera e onde fica atrás",
-      "n": 2
-    },
-    {
-      "en": "Plans and honest caveats",
-      "fr": "Abonnements et réserves en toute franchise",
-      "es": "Planes y advertencias honestas",
-      "de": "Tarife und ehrliche Vorbehalte",
-      "it": "Piani e riserve oneste",
-      "pt": "Planos e reservas honestas",
-      "n": 2
-    },
-    {
-      "en": "Rules no manager can enforce for you",
-      "fr": "Des règles qu'aucun gestionnaire ne peut imposer à votre place",
-      "es": "Reglas que ningún gestor puede imponer por ti",
-      "de": "Regeln, die kein Manager für Sie erzwingen kann",
-      "it": "Regole che nessun gestore può imporre al tuo posto",
-      "pt": "Regras que nenhum gestor pode impor por si",
-      "n": 1
-    },
-    {
-      "en": "The case for choosing it",
-      "fr": "Les arguments pour le choisir",
-      "es": "Razones para elegirlo",
-      "de": "Die Argumente, es zu wählen",
-      "it": "Le ragioni per sceglierlo",
-      "pt": "Os argumentos para o escolher",
-      "n": 1
-    }
-  ],
-  "what-is-the-dom": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "From text to a tree of nodes",
-      "fr": "Du texte à un arbre de nœuds",
-      "es": "Del texto a un árbol de nodos",
-      "de": "Vom Text zu einem Baum von Knoten",
-      "it": "Dal testo a un albero di nodi",
-      "pt": "Do texto a uma árvore de nós",
-      "n": 2
-    },
-    {
-      "en": "Source, DOM and pixels are not the same",
-      "fr": "Source, DOM et pixels ne sont pas la même chose",
-      "es": "El código fuente, el DOM y los píxeles no son lo mismo",
-      "de": "Quellcode, DOM und Pixel sind nicht dasselbe",
-      "it": "Codice sorgente, DOM e pixel non sono la stessa cosa",
-      "pt": "Código-fonte, DOM e píxeis não são a mesma coisa",
-      "n": 2
-    },
-    {
-      "en": "Why the live tree drifts from the file",
-      "fr": "Pourquoi l'arbre vivant s'écarte du fichier",
-      "es": "Por qué el árbol en vivo se aleja del archivo",
-      "de": "Warum der lebendige Baum von der Datei abweicht",
-      "it": "Perché l'albero vivo si discosta dal file",
-      "pt": "Por que a árvore viva se afasta do ficheiro",
-      "n": 1
-    },
-    {
-      "en": "Frameworks build on the same tree",
-      "fr": "Les frameworks reposent sur le même arbre",
-      "es": "Los frameworks se apoyan en el mismo árbol",
-      "de": "Frameworks bauen auf demselben Baum auf",
-      "it": "I framework si basano sullo stesso albero",
-      "pt": "Os frameworks assentam na mesma árvore",
-      "n": 2
-    },
-    {
-      "en": "The keystone of the front-end stack",
-      "fr": "La clé de voûte de la stack front-end",
-      "es": "La piedra angular del stack front-end",
-      "de": "Der Schlussstein des Frontend-Stacks",
-      "it": "La chiave di volta dello stack front-end",
-      "pt": "A chave de abóbada da stack front-end",
-      "n": 2
-    }
-  ],
-  "html-validator": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "The reference tool and its scope",
-      "fr": "L'outil de référence et son périmètre",
-      "es": "La herramienta de referencia y su alcance",
-      "de": "Das Referenzwerkzeug und sein Umfang",
-      "it": "Lo strumento di riferimento e il suo perimetro",
-      "pt": "A ferramenta de referência e o seu âmbito",
-      "n": 2
-    },
-    {
-      "en": "The real payoffs of valid markup",
-      "fr": "Les vrais bénéfices d'un balisage valide",
-      "es": "Las ventajas reales de un marcado válido",
-      "de": "Die echten Vorteile gültigen Markups",
-      "it": "I veri benefici di un markup valido",
-      "pt": "Os verdadeiros benefícios de um markup válido",
-      "n": 3
-    },
-    {
-      "en": "A cheap, high-leverage quality win",
-      "fr": "Un gain de qualité à fort effet de levier et peu coûteux",
-      "es": "Una mejora de calidad barata y de gran impacto",
-      "de": "Ein günstiger Qualitätsgewinn mit großer Hebelwirkung",
-      "it": "Un guadagno di qualità economico e ad alto impatto",
-      "pt": "Um ganho de qualidade barato e de grande alavancagem",
-      "n": 1
-    },
-    {
-      "en": "Make validation part of the workflow",
-      "fr": "Intégrer la validation au workflow",
-      "es": "Haz de la validación parte del flujo de trabajo",
-      "de": "Validierung zum Teil des Arbeitsablaufs machen",
-      "it": "Rendere la validazione parte del flusso di lavoro",
-      "pt": "Fazer da validação parte do fluxo de trabalho",
-      "n": 2
-    }
-  ],
-  "what-is-a-parser": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Two stages: tokenize, then build a tree",
-      "fr": "Deux étapes : tokeniser, puis construire un arbre",
-      "es": "Dos etapas: tokenizar y luego construir un árbol",
-      "de": "Zwei Schritte: tokenisieren, dann einen Baum aufbauen",
-      "it": "Due fasi: tokenizzare, poi costruire un albero",
-      "pt": "Duas etapas: tokenizar, depois construir uma árvore",
-      "n": 2
-    },
-    {
-      "en": "Parsers are everywhere",
-      "fr": "Les parseurs sont partout",
-      "es": "Los parsers están en todas partes",
-      "de": "Parser sind überall",
-      "it": "Gli analizzatori sono ovunque",
-      "pt": "Os analisadores estão por toda a parte",
-      "n": 1
-    },
-    {
-      "en": "Why the output is a tree",
-      "fr": "Pourquoi le résultat est un arbre",
-      "es": "Por qué el resultado es un árbol",
-      "de": "Warum die Ausgabe ein Baum ist",
-      "it": "Perché l'uscita è un albero",
-      "pt": "Por que a saída é uma árvore",
-      "n": 2
-    },
-    {
-      "en": "What makes HTML parsing unusual",
-      "fr": "Ce qui rend le parsing HTML si particulier",
-      "es": "Qué hace que el parsing de HTML sea singular",
-      "de": "Was die HTML-Analyse ungewöhnlich macht",
-      "it": "Cosa rende insolita l'analisi dell'HTML",
-      "pt": "O que torna a análise do HTML invulgar",
-      "n": 2
-    },
-    {
-      "en": "Forgiving versus strict, by design",
-      "fr": "Tolérant ou strict, par conception",
-      "es": "Tolerante frente a estricto, por diseño",
-      "de": "Nachsichtig gegenüber strikt, beabsichtigt",
-      "it": "Tollerante contro rigoroso, per progettazione",
-      "pt": "Indulgente versus rigoroso, por conceção",
-      "n": 1
-    },
-    {
-      "en": "A mental model for the whole stack",
-      "fr": "Un modèle mental pour toute la stack",
-      "es": "Un modelo mental para todo el stack",
-      "de": "Ein mentales Modell für den gesamten Stack",
-      "it": "Un modello mentale per tutto lo stack",
-      "pt": "Um modelo mental para toda a stack",
-      "n": 1
-    }
-  ],
-  "semantic-web": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "The standards stack: RDF, OWL, SPARQL",
-      "fr": "La pile de standards : RDF, OWL, SPARQL",
-      "es": "La pila de estándares: RDF, OWL, SPARQL",
-      "de": "Der Standard-Stack: RDF, OWL, SPARQL",
-      "it": "La pila di standard: RDF, OWL, SPARQL",
-      "pt": "A pilha de padrões: RDF, OWL, SPARQL",
-      "n": 4
-    },
-    {
-      "en": "Reasoners that infer new facts",
-      "fr": "Des raisonneurs qui déduisent de nouveaux faits",
-      "es": "Razonadores que infieren nuevos hechos",
-      "de": "Reasoner, die neue Fakten folgern",
-      "it": "Ragionatori che inferiscono nuovi fatti",
-      "pt": "Raciocinadores que inferem novos factos",
-      "n": 2
-    },
-    {
-      "en": "Why the grand vision stalled",
-      "fr": "Pourquoi la grande vision a calé",
-      "es": "Por qué la gran visión se estancó",
-      "de": "Warum die große Vision ins Stocken geriet",
-      "it": "Perché la grande visione si è arenata",
-      "pt": "Por que a grande visão estagnou",
-      "n": 1
-    },
-    {
-      "en": "The version that quietly succeeded",
-      "fr": "La version qui a réussi sans bruit",
-      "es": "La versión que triunfó en silencio",
-      "de": "Die Version, die still Erfolg hatte",
-      "it": "La versione che ha avuto successo in silenzio",
-      "pt": "A versão que teve sucesso em silêncio",
-      "n": 1
-    }
-  ],
-  "xml-vs-html": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "HTML: a fixed, forgiving vocabulary",
-      "fr": "HTML : un vocabulaire figé et tolérant",
-      "es": "HTML: un vocabulario fijo y tolerante",
-      "de": "HTML: ein festes, nachsichtiges Vokabular",
-      "it": "HTML: un vocabolario fisso e tollerante",
-      "pt": "HTML: um vocabulário fixo e tolerante",
-      "n": 2
-    },
-    {
-      "en": "XML: a strict meta-language",
-      "fr": "XML : un méta-langage strict",
-      "es": "XML: un metalenguaje estricto",
-      "de": "XML: eine strikte Metasprache",
-      "it": "XML: un meta-linguaggio rigoroso",
-      "pt": "XML: uma meta-linguagem rigorosa",
-      "n": 2
-    },
-    {
-      "en": "Two philosophies for two jobs",
-      "fr": "Deux philosophies pour deux usages",
-      "es": "Dos filosofías para dos tareas",
-      "de": "Zwei Philosophien für zwei Aufgaben",
-      "it": "Due filosofie per due compiti",
-      "pt": "Duas filosofias para duas tarefas",
-      "n": 1
-    },
-    {
-      "en": "XHTML and where things settled",
-      "fr": "XHTML et où les choses se sont stabilisées",
-      "es": "XHTML y dónde se asentaron las cosas",
-      "de": "XHTML und wo sich die Dinge einpendelten",
-      "it": "XHTML e dove le cose si sono assestate",
-      "pt": "XHTML e onde as coisas se estabilizaram",
-      "n": 2
-    },
-    {
-      "en": "The wider XML ecosystem",
-      "fr": "L'écosystème XML au sens large",
-      "es": "El ecosistema XML en su conjunto",
-      "de": "Das breitere XML-Ökosystem",
-      "it": "L'ecosistema XML più ampio",
-      "pt": "O ecossistema XML mais amplo",
-      "n": 1
-    },
-    {
-      "en": "A rule of thumb by purpose",
-      "fr": "Une règle empirique selon l'usage",
-      "es": "Una regla práctica según el propósito",
-      "de": "Eine Faustregel nach Zweck",
-      "it": "Una regola empirica secondo lo scopo",
-      "pt": "Uma regra empírica segundo o propósito",
-      "n": 1
-    }
-  ],
-  "ruby-on-rails-cms": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "Railfrog and the early heritage",
-      "fr": "Railfrog et l'héritage des débuts",
-      "es": "Railfrog y el legado de los inicios",
-      "de": "Railfrog und das frühe Erbe",
-      "it": "Railfrog e l'eredità delle origini",
-      "pt": "Railfrog e a herança dos inícios",
-      "n": 2
-    },
-    {
-      "en": "The engine model of today's options",
-      "fr": "Le modèle d'engine des options actuelles",
-      "es": "El modelo de engine de las opciones actuales",
-      "de": "Das Engine-Modell der heutigen Optionen",
-      "it": "Il modello a engine delle opzioni odierne",
-      "pt": "O modelo de engine das opções atuais",
-      "n": 2
-    },
-    {
-      "en": "Content as code, and its trade-off",
-      "fr": "Le contenu comme code, et son compromis",
-      "es": "El contenido como código, y su contrapartida",
-      "de": "Inhalt als Code und sein Kompromiss",
-      "it": "Il contenuto come codice, e il suo compromesso",
-      "pt": "O conteúdo como código, e o seu compromisso",
-      "n": 2
-    },
-    {
-      "en": "Framing the choice for your team",
-      "fr": "Cadrer le choix pour votre équipe",
-      "es": "Plantear la elección para tu equipo",
-      "de": "Die Wahl für Ihr Team einordnen",
-      "it": "Inquadrare la scelta per il tuo team",
-      "pt": "Enquadrar a escolha para a sua equipa",
-      "n": 2
-    }
-  ],
-  "character-encoding-utf-8": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "From ASCII to a patchwork of encodings",
-      "fr": "De l'ASCII à un patchwork d'encodages",
-      "es": "Del ASCII a un mosaico de codificaciones",
-      "de": "Von ASCII zu einem Flickwerk von Kodierungen",
-      "it": "Dall'ASCII a un mosaico di codifiche",
-      "pt": "Do ASCII a um mosaico de codificações",
-      "n": 2
-    },
-    {
-      "en": "How Unicode fixed the root problem",
-      "fr": "Comment Unicode a réglé le problème de fond",
-      "es": "Cómo Unicode resolvió el problema de raíz",
-      "de": "Wie Unicode das Grundproblem löste",
-      "it": "Come Unicode ha risolto il problema di fondo",
-      "pt": "Como o Unicode resolveu o problema de fundo",
-      "n": 2
-    },
-    {
-      "en": "Why UTF-8 won the web",
-      "fr": "Pourquoi UTF-8 a conquis le web",
-      "es": "Por qué UTF-8 conquistó la web",
-      "de": "Warum UTF-8 das Web eroberte",
-      "it": "Perché UTF-8 ha conquistato il web",
-      "pt": "Por que o UTF-8 conquistou a web",
-      "n": 2
-    },
-    {
-      "en": "Where bugs still creep in",
-      "fr": "Là où les bugs se glissent encore",
-      "es": "Dónde se siguen colando los errores",
-      "de": "Wo sich noch immer Fehler einschleichen",
-      "it": "Dove i bug si insinuano ancora",
-      "pt": "Onde os bugs ainda se insinuam",
-      "n": 2
-    }
-  ],
-  "self-hosted-cms": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Ownership and its honest counterweight",
-      "fr": "La maîtrise et son juste contrepoids",
-      "es": "La propiedad y su honesto contrapeso",
-      "de": "Eigentümerschaft und ihr ehrliches Gegengewicht",
-      "it": "La proprietà e il suo onesto contrappeso",
-      "pt": "A propriedade e o seu honesto contrapeso",
-      "n": 2
-    },
-    {
-      "en": "WordPress: ecosystem and upkeep",
-      "fr": "WordPress : écosystème et maintenance",
-      "es": "WordPress: ecosistema y mantenimiento",
-      "de": "WordPress: Ökosystem und Pflege",
-      "it": "WordPress: ecosistema e manutenzione",
-      "pt": "WordPress: ecossistema e manutenção",
-      "n": 2
-    },
-    {
-      "en": "The headless alternative",
-      "fr": "L'alternative headless",
-      "es": "La alternativa headless",
-      "de": "Die Headless-Alternative",
-      "it": "L'alternativa headless",
-      "pt": "A alternativa headless",
-      "n": 2
-    },
-    {
-      "en": "Framework-native content systems",
-      "fr": "Les systèmes de contenu natifs aux frameworks",
-      "es": "Sistemas de contenido nativos del framework",
-      "de": "Framework-native Content-Systeme",
-      "it": "Sistemi di contenuti nativi ai framework",
-      "pt": "Sistemas de conteúdos nativos dos frameworks",
-      "n": 1
-    },
-    {
-      "en": "Matching the tool to your team",
-      "fr": "Adapter l'outil à votre équipe",
-      "es": "Ajustar la herramienta a tu equipo",
-      "de": "Das Werkzeug an Ihr Team anpassen",
-      "it": "Adattare lo strumento al tuo team",
-      "pt": "Adaptar a ferramenta à sua equipa",
-      "n": 2
-    }
-  ],
-  "what-is-a-vps": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "What a VPS actually is",
-      "fr": "Ce qu'est vraiment un VPS",
-      "es": "Qué es realmente un VPS",
-      "de": "Was ein VPS tatsächlich ist",
-      "it": "Cos'è davvero un VPS",
-      "pt": "O que é realmente um VPS",
-      "n": 2
-    },
-    {
-      "en": "VPS vs shared and cloud hosting",
-      "fr": "VPS vs hébergement mutualisé et cloud",
-      "es": "VPS vs alojamiento compartido y cloud",
-      "de": "VPS vs. Shared- und Cloud-Hosting",
-      "it": "VPS vs hosting condiviso e cloud",
-      "pt": "VPS vs alojamento partilhado e na nuvem",
-      "n": 2
-    },
-    {
-      "en": "What developers run on a VPS",
-      "fr": "Ce que les développeurs font tourner sur un VPS",
-      "es": "Qué ejecutan los desarrolladores en un VPS",
-      "de": "Was Entwickler auf einem VPS betreiben",
-      "it": "Cosa fanno girare gli sviluppatori su un VPS",
-      "pt": "O que os programadores põem a correr num VPS",
-      "n": 2
-    },
-    {
-      "en": "Managed vs unmanaged",
-      "fr": "Infogéré ou non infogéré",
-      "es": "Gestionado o no gestionado",
-      "de": "Verwaltet vs. nicht verwaltet",
-      "it": "Gestito vs non gestito",
-      "pt": "Gerido vs não gerido",
-      "n": 1
-    },
-    {
-      "en": "Is a VPS right for you?",
-      "fr": "Un VPS est-il fait pour vous ?",
-      "es": "¿Es un VPS adecuado para ti?",
-      "de": "Ist ein VPS das Richtige für Sie?",
-      "it": "Un VPS è giusto per te?",
-      "pt": "Um VPS é o certo para si?",
-      "n": 1
-    }
-  ],
-  "what-is-a-cdn": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Why a CDN: the distance problem",
-      "fr": "Pourquoi un CDN : le problème de la distance",
-      "es": "Por qué un CDN: el problema de la distancia",
-      "de": "Warum ein CDN: das Entfernungsproblem",
-      "it": "Perché un CDN: il problema della distanza",
-      "pt": "Por que um CDN: o problema da distância",
-      "n": 1
-    },
-    {
-      "en": "How a CDN works",
-      "fr": "Comment fonctionne un CDN",
-      "es": "Cómo funciona un CDN",
-      "de": "Wie ein CDN funktioniert",
-      "it": "Come funziona un CDN",
-      "pt": "Como funciona um CDN",
-      "n": 2
-    },
-    {
-      "en": "More than just speed",
-      "fr": "Plus que la vitesse",
-      "es": "Más que velocidad",
-      "de": "Mehr als nur Geschwindigkeit",
-      "it": "Più della sola velocità",
-      "pt": "Mais do que apenas velocidade",
-      "n": 1
-    },
-    {
-      "en": "When you need a CDN",
-      "fr": "Quand vous avez besoin d'un CDN",
-      "es": "Cuándo necesitas un CDN",
-      "de": "Wann Sie ein CDN brauchen",
-      "it": "Quando hai bisogno di un CDN",
-      "pt": "Quando precisa de um CDN",
-      "n": 1
-    },
-    {
-      "en": "A CDN is not your host",
-      "fr": "Un CDN ne remplace pas l'hébergement",
-      "es": "Un CDN no es tu alojamiento",
-      "de": "Ein CDN ersetzt nicht Ihr Hosting",
-      "it": "Un CDN non sostituisce il tuo hosting",
-      "pt": "Um CDN não substitui o seu alojamento",
-      "n": 2
-    },
-    {
-      "en": "Do you need one?",
-      "fr": "En avez-vous besoin ?",
-      "es": "¿Lo necesitas?",
-      "de": "Brauchen Sie eins?",
-      "it": "Ne hai bisogno?",
-      "pt": "Precisa de um?",
-      "n": 1
-    }
-  ],
-  "what-is-git": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Git is distributed, not centralised",
-      "fr": "Git est distribué, pas centralisé",
-      "es": "Git es distribuido, no centralizado",
-      "de": "Git ist verteilt, nicht zentralisiert",
-      "it": "Git è distribuito, non centralizzato",
-      "pt": "O Git é distribuído, não centralizado",
-      "n": 2
-    },
-    {
-      "en": "The core concepts: commits, branches, remotes",
-      "fr": "Les concepts clés : commits, branches, dépôts distants",
-      "es": "Los conceptos clave: commits, ramas, remotos",
-      "de": "Die Kernkonzepte: Commits, Branches, Remotes",
-      "it": "I concetti chiave: commit, branch, remote",
-      "pt": "Os conceitos centrais: commits, ramos, remotos",
-      "n": 2
-    },
-    {
-      "en": "Why developers rely on Git",
-      "fr": "Pourquoi les développeurs comptent sur Git",
-      "es": "Por qué los desarrolladores confían en Git",
-      "de": "Warum Entwickler auf Git setzen",
-      "it": "Perché gli sviluppatori si affidano a Git",
-      "pt": "Por que os programadores confiam no Git",
-      "n": 1
-    },
-    {
-      "en": "Git is not GitHub",
-      "fr": "Git n'est pas GitHub",
-      "es": "Git no es GitHub",
-      "de": "Git ist nicht GitHub",
-      "it": "Git non è GitHub",
-      "pt": "Git não é o GitHub",
-      "n": 1
-    },
-    {
-      "en": "The basic commands",
-      "fr": "Les commandes de base",
-      "es": "Los comandos básicos",
-      "de": "Die grundlegenden Befehle",
-      "it": "I comandi di base",
-      "pt": "Os comandos básicos",
-      "n": 1
-    },
-    {
-      "en": "Do you need Git?",
-      "fr": "Avez-vous besoin de Git ?",
-      "es": "¿Necesitas Git?",
-      "de": "Brauchen Sie Git?",
-      "it": "Hai bisogno di Git?",
-      "pt": "Precisa do Git?",
-      "n": 1
-    }
-  ],
-  "ssh-key-management": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "How SSH keys actually work",
-      "fr": "Comment fonctionnent vraiment les clés SSH",
-      "es": "Cómo funcionan realmente las claves SSH",
-      "de": "Wie SSH-Schlüssel wirklich funktionieren",
-      "it": "Come funzionano davvero le chiavi SSH",
-      "pt": "Como funcionam realmente as chaves SSH",
-      "n": 2
-    },
-    {
-      "en": "SSH key best practices",
-      "fr": "Bonnes pratiques pour les clés SSH",
-      "es": "Buenas prácticas para las claves SSH",
-      "de": "Bewährte Praktiken für SSH-Schlüssel",
-      "it": "Buone pratiche per le chiavi SSH",
-      "pt": "Boas práticas para as chaves SSH",
-      "n": 3
-    },
-    {
-      "en": "Where to store keys and passphrases",
-      "fr": "Où stocker les clés et les passphrases",
-      "es": "Dónde guardar las claves y las frases de contraseña",
-      "de": "Wo Schlüssel und Passphrasen aufbewahrt werden",
-      "it": "Dove conservare chiavi e passphrase",
-      "pt": "Onde guardar as chaves e as frases-passe",
-      "n": 2
-    }
-  ],
-  "what-is-a-webhook": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Webhook vs API: push, not pull",
-      "fr": "Webhook vs API : push, pas pull",
-      "es": "Webhook vs API: push, no pull",
-      "de": "Webhook vs. API: Push statt Pull",
-      "it": "Webhook vs API: push, non pull",
-      "pt": "Webhook vs API: push, não pull",
-      "n": 2
-    },
-    {
-      "en": "How a webhook works",
-      "fr": "Comment fonctionne un webhook",
-      "es": "Cómo funciona un webhook",
-      "de": "Wie ein Webhook funktioniert",
-      "it": "Come funziona un webhook",
-      "pt": "Como funciona um webhook",
-      "n": 2
-    },
-    {
-      "en": "What webhooks are used for",
-      "fr": "À quoi servent les webhooks",
-      "es": "Para qué sirven los webhooks",
-      "de": "Wofür Webhooks verwendet werden",
-      "it": "A cosa servono i webhook",
-      "pt": "Para que servem os webhooks",
-      "n": 1
-    },
-    {
-      "en": "Receiving a webhook securely",
-      "fr": "Recevoir un webhook en toute sécurité",
-      "es": "Recibir un webhook de forma segura",
-      "de": "Einen Webhook sicher empfangen",
-      "it": "Ricevere un webhook in modo sicuro",
-      "pt": "Receber um webhook em segurança",
-      "n": 2
-    },
-    {
-      "en": "Webhooks need a reachable endpoint",
-      "fr": "Un webhook exige un endpoint accessible",
-      "es": "Un webhook necesita un endpoint accesible",
-      "de": "Webhooks brauchen einen erreichbaren Endpunkt",
-      "it": "Un webhook richiede un endpoint raggiungibile",
-      "pt": "Um webhook precisa de um endpoint acessível",
-      "n": 1
-    }
-  ],
-  "what-is-a-docker-container": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "Container vs virtual machine",
-      "fr": "Conteneur vs machine virtuelle",
-      "es": "Contenedor vs máquina virtual",
-      "de": "Container vs. virtuelle Maschine",
-      "it": "Container vs macchina virtuale",
-      "pt": "Contentor vs máquina virtual",
-      "n": 2
-    },
-    {
-      "en": "Image vs container, and how it works",
-      "fr": "Image vs conteneur, et comment ça marche",
-      "es": "Imagen vs contenedor, y cómo funciona",
-      "de": "Image vs. Container, und wie es funktioniert",
-      "it": "Immagine vs container, e come funziona",
-      "pt": "Imagem vs contentor, e como funciona",
-      "n": 2
-    },
-    {
-      "en": "Why developers use containers",
-      "fr": "Pourquoi les devs utilisent les conteneurs",
-      "es": "Por qué los desarrolladores usan contenedores",
-      "de": "Warum Entwickler Container nutzen",
-      "it": "Perché gli sviluppatori usano i container",
-      "pt": "Porque os programadores usam contentores",
-      "n": 1
-    },
-    {
-      "en": "From one container to many",
-      "fr": "D'un conteneur à plusieurs",
-      "es": "De un contenedor a muchos",
-      "de": "Von einem Container zu vielen",
-      "it": "Da un container a molti",
-      "pt": "De um contentor a muitos",
-      "n": 2
-    },
-    {
-      "en": "Containers need somewhere to run",
-      "fr": "Un conteneur doit s'exécuter quelque part",
-      "es": "Los contenedores necesitan dónde ejecutarse",
-      "de": "Container brauchen einen Ort zum Laufen",
-      "it": "I container hanno bisogno di un posto dove girare",
-      "pt": "Os contentores precisam de onde correr",
-      "n": 1
-    }
-  ],
-  "what-is-devops": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "What DevOps actually is",
-      "fr": "Ce qu'est vraiment le DevOps",
-      "es": "Qué es realmente DevOps",
-      "de": "Was DevOps wirklich ist",
-      "it": "Cos'è davvero il DevOps",
-      "pt": "O que é realmente o DevOps",
-      "n": 2
-    },
-    {
-      "en": "The core practices",
-      "fr": "Les pratiques clés",
-      "es": "Las prácticas clave",
-      "de": "Die Kernpraktiken",
-      "it": "Le pratiche fondamentali",
-      "pt": "As práticas fundamentais",
-      "n": 2
-    },
-    {
-      "en": "A culture, not just tools",
-      "fr": "Une culture, pas que des outils",
-      "es": "Una cultura, no solo herramientas",
-      "de": "Eine Kultur, nicht nur Tools",
-      "it": "Una cultura, non solo strumenti",
-      "pt": "Uma cultura, não só ferramentas",
-      "n": 1
-    },
-    {
-      "en": "The DevOps toolchain",
-      "fr": "La chaîne d'outils DevOps",
-      "es": "La cadena de herramientas DevOps",
-      "de": "Die DevOps-Toolchain",
-      "it": "La toolchain DevOps",
-      "pt": "A cadeia de ferramentas DevOps",
-      "n": 2
-    },
-    {
-      "en": "Where it runs",
-      "fr": "Où ça tourne",
-      "es": "Dónde se ejecuta",
-      "de": "Wo es läuft",
-      "it": "Dove gira",
-      "pt": "Onde corre",
-      "n": 1
-    }
-  ],
-  "what-is-an-api": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "What an API actually is",
-      "fr": "Ce qu'est vraiment une API",
-      "es": "Qué es realmente una API",
-      "de": "Was eine API wirklich ist",
-      "it": "Cos'è davvero un'API",
-      "pt": "O que é realmente uma API",
-      "n": 2
-    },
-    {
-      "en": "How a request and response work",
-      "fr": "Comment fonctionnent requête et réponse",
-      "es": "Cómo funcionan la petición y la respuesta",
-      "de": "Wie Anfrage und Antwort funktionieren",
-      "it": "Come funzionano richiesta e risposta",
-      "pt": "Como funcionam o pedido e a resposta",
-      "n": 2
-    },
-    {
-      "en": "Common API styles",
-      "fr": "Les styles d'API courants",
-      "es": "Los estilos de API más comunes",
-      "de": "Gängige API-Stile",
-      "it": "Gli stili di API più comuni",
-      "pt": "Os estilos de API mais comuns",
-      "n": 2
-    },
-    {
-      "en": "Why developers rely on APIs",
-      "fr": "Pourquoi les développeurs s'appuient sur les API",
-      "es": "Por qué los desarrolladores dependen de las API",
-      "de": "Warum Entwickler auf APIs setzen",
-      "it": "Perché gli sviluppatori si affidano alle API",
-      "pt": "Porque é que os programadores dependem das APIs",
-      "n": 1
-    },
-    {
-      "en": "Where APIs run",
-      "fr": "Où tournent les API",
-      "es": "Dónde se ejecutan las API",
-      "de": "Wo APIs laufen",
-      "it": "Dove girano le API",
-      "pt": "Onde correm as APIs",
-      "n": 1
-    }
-  ],
-  "what-is-a-reverse-proxy": [
-    {
-      "n": 1,
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": ""
-    },
-    {
-      "n": 1,
-      "en": "Reverse proxy vs forward proxy",
-      "fr": "Proxy inverse vs proxy direct",
-      "es": "Proxy inverso vs proxy directo",
-      "de": "Reverse Proxy vs Forward Proxy",
-      "it": "Reverse proxy vs forward proxy",
-      "pt": "Proxy inverso vs proxy direto"
-    },
-    {
-      "n": 2,
-      "en": "What a reverse proxy actually does",
-      "fr": "Ce que fait vraiment un proxy inverse",
-      "es": "Qué hace realmente un proxy inverso",
-      "de": "Was ein Reverse Proxy tatsächlich tut",
-      "it": "Cosa fa davvero un reverse proxy",
-      "pt": "O que um proxy inverso realmente faz"
-    },
-    {
-      "n": 1,
-      "en": "A natural security boundary",
-      "fr": "Une frontière de sécurité naturelle",
-      "es": "Una frontera de seguridad natural",
-      "de": "Eine natürliche Sicherheitsgrenze",
-      "it": "Un confine di sicurezza naturale",
-      "pt": "Uma fronteira de segurança natural"
-    },
-    {
-      "n": 1,
-      "en": "The tools that run reverse proxies",
-      "fr": "Les outils qui font tourner les proxys inverses",
-      "es": "Las herramientas que ejecutan proxys inversos",
-      "de": "Die Tools, die Reverse Proxys betreiben",
-      "it": "Gli strumenti che gestiscono i reverse proxy",
-      "pt": "As ferramentas que executam proxies inversos"
-    },
-    {
-      "n": 1,
-      "en": "Common reverse-proxy setups",
-      "fr": "Cas d'usage courants du proxy inverse",
-      "es": "Configuraciones habituales de proxy inverso",
-      "de": "Typische Reverse-Proxy-Setups",
-      "it": "Configurazioni comuni di reverse proxy",
-      "pt": "Configurações comuns de proxy inverso"
-    },
-    {
-      "n": 1,
-      "en": "Reverse proxy vs load balancer vs API gateway",
-      "fr": "Proxy inverse vs load balancer vs passerelle API",
-      "es": "Proxy inverso vs balanceador de carga vs API gateway",
-      "de": "Reverse Proxy vs Load Balancer vs API-Gateway",
-      "it": "Reverse proxy vs load balancer vs API gateway",
-      "pt": "Proxy inverso vs balanceador de carga vs API gateway"
-    },
-    {
-      "n": 1,
-      "en": "Should you run one yourself?",
-      "fr": "Faut-il en gérer un soi-même ?",
-      "es": "¿Deberías gestionar uno tú mismo?",
-      "de": "Sollten Sie selbst einen betreiben?",
-      "it": "Dovresti gestirne uno tu stesso?",
-      "pt": "Deve gerir um você mesmo?"
-    }
-  ],
-  "opera-paste-protect-clickfix-clipboard-2026": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 1
-    },
-    {
-      "en": "How ClickFix and pastejacking attacks work",
-      "fr": "Comment fonctionnent les attaques ClickFix et pastejacking",
-      "es": "Cómo funcionan los ataques ClickFix y pastejacking",
-      "de": "Wie ClickFix- und Pastejacking-Angriffe funktionieren",
-      "it": "Come funzionano gli attacchi ClickFix e pastejacking",
-      "pt": "Como funcionam os ataques ClickFix e pastejacking",
-      "n": 2
-    },
-    {
-      "en": "What Opera's Paste Protect does",
-      "fr": "Ce que fait le Paste Protect d'Opera",
-      "es": "Qué hace el Paste Protect de Opera",
-      "de": "Was Operas Paste Protect leistet",
-      "it": "Cosa fa il Paste Protect di Opera",
-      "pt": "O que faz o Paste Protect da Opera",
-      "n": 2
-    },
-    {
-      "en": "What happens when a paste is blocked",
-      "fr": "Ce qui se passe quand un collage est bloqué",
-      "es": "Qué ocurre cuando se bloquea un pegado",
-      "de": "Was passiert, wenn ein Einfügen blockiert wird",
-      "it": "Cosa succede quando un incollaggio viene bloccato",
-      "pt": "O que acontece quando uma colagem é bloqueada",
-      "n": 2
-    },
-    {
-      "en": "Why a browser shipping this matters",
-      "fr": "Pourquoi il est important qu'un navigateur propose cela",
-      "es": "Por qué importa que un navegador incorpore esto",
-      "de": "Warum es zählt, dass ein Browser dies mitbringt",
-      "it": "Perché conta che un browser porti tutto questo",
-      "pt": "Por que importa que um navegador traga isto",
-      "n": 1
-    },
-    {
-      "en": "Protecting yourself, whatever browser you use",
-      "fr": "Se protéger, quel que soit le navigateur que vous utilisez",
-      "es": "Protegerte, sea cual sea el navegador que uses",
-      "de": "Sich schützen, egal welchen Browser Sie nutzen",
-      "it": "Proteggerti, qualunque browser tu usi",
-      "pt": "Proteger-se, seja qual for o navegador que usa",
-      "n": 1
-    }
-  ],
-  "novo-nordisk-breach-client-side-secrets-2026": [
-    {
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": "",
-      "n": 2
-    },
-    {
-      "en": "What Novo Nordisk disclosed",
-      "fr": "Ce que Novo Nordisk a divulgué",
-      "es": "Lo que Novo Nordisk reveló",
-      "de": "Was Novo Nordisk offengelegt hat",
-      "it": "Cosa ha rivelato Novo Nordisk",
-      "pt": "O que a Novo Nordisk divulgou",
-      "n": 2
-    },
-    {
-      "en": "How the attackers reportedly got in",
-      "fr": "Comment les attaquants seraient entrés",
-      "es": "Cómo entraron los atacantes, según los informes",
-      "de": "Wie die Angreifer Berichten zufolge eindrangen",
-      "it": "Come sarebbero entrati gli aggressori",
-      "pt": "Como os atacantes terão entrado",
-      "n": 2
-    },
-    {
-      "en": "Why secrets in client code are so dangerous",
-      "fr": "Pourquoi les secrets dans le code client sont si dangereux",
-      "es": "Por qué los secretos en el código cliente son tan peligrosos",
-      "de": "Warum Geheimnisse im Client-Code so gefährlich sind",
-      "it": "Perché i segreti nel codice client sono così pericolosi",
-      "pt": "Porque os segredos no código cliente são tão perigosos",
-      "n": 2
-    },
-    {
-      "en": "How to keep secrets out of your client code",
-      "fr": "Comment garder les secrets hors de votre code client",
-      "es": "Cómo mantener los secretos fuera de tu código cliente",
-      "de": "Wie Sie Geheimnisse aus Ihrem Client-Code heraushalten",
-      "it": "Come tenere i segreti fuori dal codice client",
-      "pt": "Como manter os segredos fora do seu código cliente",
-      "n": 2
-    },
-    {
-      "en": "The honest takeaway",
-      "fr": "Ce qu'il faut vraiment retenir",
-      "es": "La conclusión honesta",
-      "de": "Das ehrliche Fazit",
-      "it": "La lezione onesta",
-      "pt": "A conclusão honesta",
-      "n": 1
-    }
-  ],
-  "ghostapproval-ai-coding-assistants-symlink-2026": [
-    {
-      "n": 2,
-      "en": "",
-      "fr": "",
-      "es": "",
-      "de": "",
-      "it": "",
-      "pt": ""
-    },
-    {
-      "n": 2,
-      "en": "What GhostApproval is",
-      "fr": "Ce qu'est GhostApproval",
-      "es": "Qué es GhostApproval",
-      "de": "Was GhostApproval ist",
-      "it": "Che cos'e GhostApproval",
-      "pt": "O que e o GhostApproval"
-    },
-    {
-      "n": 3,
-      "en": "How the symlink attack works",
-      "fr": "Comment fonctionne l'attaque par symlink",
-      "es": "Como funciona el ataque por symlink",
-      "de": "Wie der Symlink-Angriff funktioniert",
-      "it": "Come funziona l'attacco tramite symlink",
-      "pt": "Como funciona o ataque por symlink"
-    },
-    {
-      "n": 2,
-      "en": "Which tools were affected, and fixed",
-      "fr": "Quels outils sont touches, et corriges",
-      "es": "Que herramientas estan afectadas, y corregidas",
-      "de": "Welche Tools betroffen und behoben sind",
-      "it": "Quali strumenti sono colpiti, e corretti",
-      "pt": "Que ferramentas foram afetadas, e corrigidas"
-    },
-    {
-      "n": 1,
-      "en": "How to protect yourself",
-      "fr": "Comment vous proteger",
-      "es": "Como protegerte",
-      "de": "Wie Sie sich schuetzen",
-      "it": "Come proteggerti",
-      "pt": "Como se proteger"
-    },
-    {
-      "n": 1,
-      "en": "The honest takeaway",
-      "fr": "Ce qu'il faut vraiment retenir",
-      "es": "La conclusion honesta",
-      "de": "Das ehrliche Fazit",
-      "it": "La lezione onesta",
-      "pt": "A conclusao honesta"
-    }
-  ]
+ "what-is-a-git-tag": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "Lightweight versus annotated tags",
+   "fr": "Tags légers ou tags annotés",
+   "es": "Etiquetas ligeras frente a anotadas",
+   "de": "Leichte gegenüber annotierten Tags",
+   "it": "Tag leggeri contro tag annotati",
+   "pt": "Tags leves versus tags anotadas",
+   "n": 2
+  },
+  {
+   "en": "Creating and pushing tags",
+   "fr": "Créer et pousser des tags",
+   "es": "Crear y enviar etiquetas",
+   "de": "Tags erstellen und pushen",
+   "it": "Creare e inviare i tag",
+   "pt": "Criar e enviar tags",
+   "n": 2
+  },
+  {
+   "en": "Tags, versioning, and release automation",
+   "fr": "Tags, versionnage et automatisation des releases",
+   "es": "Etiquetas, versionado y automatización de releases",
+   "de": "Tags, Versionierung und Release-Automatisierung",
+   "it": "Tag, versionamento e automazione delle release",
+   "pt": "Tags, versionamento e automação de releases",
+   "n": 2
+  },
+  {
+   "en": "Working with tags safely",
+   "fr": "Travailler avec les tags en toute sécurité",
+   "es": "Trabajar con etiquetas de forma segura",
+   "de": "Sicher mit Tags arbeiten",
+   "it": "Lavorare con i tag in sicurezza",
+   "pt": "Trabalhar com tags em segurança",
+   "n": 1
+  },
+  {
+   "en": "Summary",
+   "fr": "En résumé",
+   "es": "En resumen",
+   "de": "Zusammenfassung",
+   "it": "In sintesi",
+   "pt": "Em resumo",
+   "n": 1
+  }
+ ],
+ "open-source-password-managers": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "Three open-source vaults to know",
+   "fr": "Trois coffres open source à connaître",
+   "es": "Tres bóvedas de código abierto que debes conocer",
+   "de": "Drei Open-Source-Tresore, die man kennen sollte",
+   "it": "Tre casseforti open source da conoscere",
+   "pt": "Três cofres de código aberto a conhecer",
+   "n": 3
+  },
+  {
+   "en": "Choosing your spot on the spectrum",
+   "fr": "Trouver sa place sur le spectre",
+   "es": "Elige tu lugar en el espectro",
+   "de": "Den eigenen Platz im Spektrum wählen",
+   "it": "Scegliere la tua posizione nello spettro",
+   "pt": "Escolher o seu lugar no espetro",
+   "n": 1
+  },
+  {
+   "en": "Pitfalls and the limits of open code",
+   "fr": "Pièges et limites du code ouvert",
+   "es": "Trampas y límites del código abierto",
+   "de": "Fallstricke und die Grenzen von offenem Code",
+   "it": "Trappole e i limiti del codice aperto",
+   "pt": "Armadilhas e os limites do código aberto",
+   "n": 2
+  },
+  {
+   "en": "Habits that matter more than the brand",
+   "fr": "Des habitudes qui comptent plus que la marque",
+   "es": "Hábitos que importan más que la marca",
+   "de": "Gewohnheiten, die mehr zählen als die Marke",
+   "it": "Abitudini che contano più del marchio",
+   "pt": "Hábitos que importam mais do que a marca",
+   "n": 2
+  }
+ ],
+ "self-hosted-password-managers": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "Vaultwarden, the popular middle road",
+   "fr": "Vaultwarden, le juste milieu populaire",
+   "es": "Vaultwarden, el popular término medio",
+   "de": "Vaultwarden, der beliebte Mittelweg",
+   "it": "Vaultwarden, la popolare via di mezzo",
+   "pt": "Vaultwarden, o popular meio-termo",
+   "n": 2
+  },
+  {
+   "en": "KeePassXC and the file-based path",
+   "fr": "KeePassXC et l'approche par fichier",
+   "es": "KeePassXC y la vía basada en archivos",
+   "de": "KeePassXC und der dateibasierte Weg",
+   "it": "KeePassXC e la via basata su file",
+   "pt": "KeePassXC e a via baseada em ficheiro",
+   "n": 2
+  },
+  {
+   "en": "The true cost of hosting yourself",
+   "fr": "Le vrai coût de l'auto-hébergement",
+   "es": "El verdadero coste de alojarlo tú mismo",
+   "de": "Die wahren Kosten des Selbsthostings",
+   "it": "Il vero costo dell'auto-ospitaggio",
+   "pt": "O verdadeiro custo do auto-alojamento",
+   "n": 2
+  },
+  {
+   "en": "When a managed service makes more sense",
+   "fr": "Quand un service géré est plus judicieux",
+   "es": "Cuándo tiene más sentido un servicio gestionado",
+   "de": "Wann ein verwalteter Dienst sinnvoller ist",
+   "it": "Quando un servizio gestito ha più senso",
+   "pt": "Quando um serviço gerido faz mais sentido",
+   "n": 2
+  }
+ ],
+ "secrets-management-tools": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "Cheap habits that prevent leaks",
+   "fr": "Des habitudes simples qui évitent les fuites",
+   "es": "Hábitos baratos que previenen las filtraciones",
+   "de": "Günstige Gewohnheiten, die Lecks verhindern",
+   "it": "Abitudini economiche che prevengono le fughe",
+   "pt": "Hábitos baratos que previnem as fugas",
+   "n": 2
+  },
+  {
+   "en": "Rotate first, regret never",
+   "fr": "Renouvelez d'abord, ne regrettez jamais",
+   "es": "Rota primero, no te arrepientas nunca",
+   "de": "Erst rotieren, nie bereuen",
+   "it": "Ruota prima, non pentirti mai",
+   "pt": "Rode primeiro, nunca se arrependa",
+   "n": 1
+  },
+  {
+   "en": "Dedicated stores for teams and production",
+   "fr": "Des coffres dédiés pour les équipes et la production",
+   "es": "Almacenes dedicados para equipos y producción",
+   "de": "Dedizierte Speicher für Teams und Produktion",
+   "it": "Archivi dedicati per team e produzione",
+   "pt": "Armazéns dedicados para equipas e produção",
+   "n": 2
+  },
+  {
+   "en": "Match the tooling to the scale",
+   "fr": "Adapter l'outillage à l'échelle",
+   "es": "Ajusta las herramientas a la escala",
+   "de": "Die Werkzeuge an die Skala anpassen",
+   "it": "Adatta gli strumenti alla scala",
+   "pt": "Adapte as ferramentas à escala",
+   "n": 2
+  },
+  {
+   "en": "A layered discipline, not a product",
+   "fr": "Une discipline en couches, pas un produit",
+   "es": "Una disciplina por capas, no un producto",
+   "de": "Eine geschichtete Disziplin, kein Produkt",
+   "it": "Una disciplina a strati, non un prodotto",
+   "pt": "Uma disciplina em camadas, não um produto",
+   "n": 1
+  }
+ ],
+ "proton-mail-review": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "How it feels day to day",
+   "fr": "Ce que ça donne au quotidien",
+   "es": "Cómo se siente en el día a día",
+   "de": "Wie es sich im Alltag anfühlt",
+   "it": "Come ci si sente nel quotidiano",
+   "pt": "Como é no dia a dia",
+   "n": 1
+  },
+  {
+   "en": "Encryption, plans and the wider suite",
+   "fr": "Chiffrement, abonnements et la suite complète",
+   "es": "Cifrado, planes y la suite completa",
+   "de": "Verschlüsselung, Tarife und die breitere Suite",
+   "it": "Crittografia, piani e la suite più ampia",
+   "pt": "Cifragem, planos e a suite mais ampla",
+   "n": 3
+  },
+  {
+   "en": "The honest trade-offs",
+   "fr": "Les compromis en toute honnêteté",
+   "es": "Las concesiones, sin rodeos",
+   "de": "Die ehrlichen Kompromisse",
+   "it": "I compromessi onesti",
+   "pt": "Os compromissos honestos",
+   "n": 3
+  },
+  {
+   "en": "Who it is really for",
+   "fr": "À qui ça s'adresse vraiment",
+   "es": "Para quién es realmente",
+   "de": "Für wen es wirklich gedacht ist",
+   "it": "Per chi è davvero",
+   "pt": "Para quem é realmente",
+   "n": 1
+  }
+ ],
+ "best-encrypted-email": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Two kinds of encryption to separate",
+   "fr": "Deux types de chiffrement à distinguer",
+   "es": "Dos tipos de cifrado que conviene separar",
+   "de": "Zwei Arten von Verschlüsselung, die man trennen sollte",
+   "it": "Due tipi di crittografia da separare",
+   "pt": "Dois tipos de cifragem a separar",
+   "n": 2
+  },
+  {
+   "en": "The leading auditable providers",
+   "fr": "Les principaux fournisseurs auditables",
+   "es": "Los principales proveedores auditables",
+   "de": "Die führenden auditierbaren Anbieter",
+   "it": "I principali fornitori verificabili",
+   "pt": "Os principais fornecedores auditáveis",
+   "n": 2
+  },
+  {
+   "en": "The limit no provider can cross",
+   "fr": "La limite qu'aucun fournisseur ne peut franchir",
+   "es": "El límite que ningún proveedor puede cruzar",
+   "de": "Die Grenze, die kein Anbieter überschreiten kann",
+   "it": "Il limite che nessun fornitore può superare",
+   "pt": "O limite que nenhum fornecedor pode cruzar",
+   "n": 2
+  },
+  {
+   "en": "What to check before you commit",
+   "fr": "Ce qu'il faut vérifier avant de s'engager",
+   "es": "Qué comprobar antes de decidirte",
+   "de": "Was Sie prüfen sollten, bevor Sie sich festlegen",
+   "it": "Cosa verificare prima di impegnarti",
+   "pt": "O que verificar antes de decidir",
+   "n": 2
+  },
+  {
+   "en": "Picking the right fit",
+   "fr": "Choisir celui qui vous convient",
+   "es": "Elegir la opción adecuada",
+   "de": "Die richtige Wahl treffen",
+   "it": "Scegliere quello giusto per te",
+   "pt": "Escolher a opção certa",
+   "n": 1
+  }
+ ],
+ "proton-pass-review": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "Hide-my-email aliases and the essentials",
+   "fr": "Les alias hide-my-email et l'essentiel",
+   "es": "Los alias hide-my-email y lo esencial",
+   "de": "Hide-my-email-Aliase und das Wesentliche",
+   "it": "Gli alias hide-my-email e l'essenziale",
+   "pt": "Os aliases hide-my-email e o essencial",
+   "n": 2
+  },
+  {
+   "en": "Where it leads and where it lags",
+   "fr": "Là où il brille et là où il pèche",
+   "es": "Dónde destaca y dónde se queda corto",
+   "de": "Wo es führt und wo es hinterherhinkt",
+   "it": "Dove primeggia e dove resta indietro",
+   "pt": "Onde lidera e onde fica atrás",
+   "n": 2
+  },
+  {
+   "en": "Plans and honest caveats",
+   "fr": "Abonnements et réserves en toute franchise",
+   "es": "Planes y advertencias honestas",
+   "de": "Tarife und ehrliche Vorbehalte",
+   "it": "Piani e riserve oneste",
+   "pt": "Planos e reservas honestas",
+   "n": 2
+  },
+  {
+   "en": "Rules no manager can enforce for you",
+   "fr": "Des règles qu'aucun gestionnaire ne peut imposer à votre place",
+   "es": "Reglas que ningún gestor puede imponer por ti",
+   "de": "Regeln, die kein Manager für Sie erzwingen kann",
+   "it": "Regole che nessun gestore può imporre al tuo posto",
+   "pt": "Regras que nenhum gestor pode impor por si",
+   "n": 1
+  },
+  {
+   "en": "The case for choosing it",
+   "fr": "Les arguments pour le choisir",
+   "es": "Razones para elegirlo",
+   "de": "Die Argumente, es zu wählen",
+   "it": "Le ragioni per sceglierlo",
+   "pt": "Os argumentos para o escolher",
+   "n": 1
+  }
+ ],
+ "what-is-the-dom": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "From text to a tree of nodes",
+   "fr": "Du texte à un arbre de nœuds",
+   "es": "Del texto a un árbol de nodos",
+   "de": "Vom Text zu einem Baum von Knoten",
+   "it": "Dal testo a un albero di nodi",
+   "pt": "Do texto a uma árvore de nós",
+   "n": 2
+  },
+  {
+   "en": "Source, DOM and pixels are not the same",
+   "fr": "Source, DOM et pixels ne sont pas la même chose",
+   "es": "El código fuente, el DOM y los píxeles no son lo mismo",
+   "de": "Quellcode, DOM und Pixel sind nicht dasselbe",
+   "it": "Codice sorgente, DOM e pixel non sono la stessa cosa",
+   "pt": "Código-fonte, DOM e píxeis não são a mesma coisa",
+   "n": 2
+  },
+  {
+   "en": "Why the live tree drifts from the file",
+   "fr": "Pourquoi l'arbre vivant s'écarte du fichier",
+   "es": "Por qué el árbol en vivo se aleja del archivo",
+   "de": "Warum der lebendige Baum von der Datei abweicht",
+   "it": "Perché l'albero vivo si discosta dal file",
+   "pt": "Por que a árvore viva se afasta do ficheiro",
+   "n": 1
+  },
+  {
+   "en": "Frameworks build on the same tree",
+   "fr": "Les frameworks reposent sur le même arbre",
+   "es": "Los frameworks se apoyan en el mismo árbol",
+   "de": "Frameworks bauen auf demselben Baum auf",
+   "it": "I framework si basano sullo stesso albero",
+   "pt": "Os frameworks assentam na mesma árvore",
+   "n": 2
+  },
+  {
+   "en": "The keystone of the front-end stack",
+   "fr": "La clé de voûte de la stack front-end",
+   "es": "La piedra angular del stack front-end",
+   "de": "Der Schlussstein des Frontend-Stacks",
+   "it": "La chiave di volta dello stack front-end",
+   "pt": "A chave de abóbada da stack front-end",
+   "n": 2
+  }
+ ],
+ "html-validator": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "The reference tool and its scope",
+   "fr": "L'outil de référence et son périmètre",
+   "es": "La herramienta de referencia y su alcance",
+   "de": "Das Referenzwerkzeug und sein Umfang",
+   "it": "Lo strumento di riferimento e il suo perimetro",
+   "pt": "A ferramenta de referência e o seu âmbito",
+   "n": 2
+  },
+  {
+   "en": "The real payoffs of valid markup",
+   "fr": "Les vrais bénéfices d'un balisage valide",
+   "es": "Las ventajas reales de un marcado válido",
+   "de": "Die echten Vorteile gültigen Markups",
+   "it": "I veri benefici di un markup valido",
+   "pt": "Os verdadeiros benefícios de um markup válido",
+   "n": 3
+  },
+  {
+   "en": "A cheap, high-leverage quality win",
+   "fr": "Un gain de qualité à fort effet de levier et peu coûteux",
+   "es": "Una mejora de calidad barata y de gran impacto",
+   "de": "Ein günstiger Qualitätsgewinn mit großer Hebelwirkung",
+   "it": "Un guadagno di qualità economico e ad alto impatto",
+   "pt": "Um ganho de qualidade barato e de grande alavancagem",
+   "n": 1
+  },
+  {
+   "en": "Make validation part of the workflow",
+   "fr": "Intégrer la validation au workflow",
+   "es": "Haz de la validación parte del flujo de trabajo",
+   "de": "Validierung zum Teil des Arbeitsablaufs machen",
+   "it": "Rendere la validazione parte del flusso di lavoro",
+   "pt": "Fazer da validação parte do fluxo de trabalho",
+   "n": 2
+  }
+ ],
+ "what-is-a-parser": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Two stages: tokenize, then build a tree",
+   "fr": "Deux étapes : tokeniser, puis construire un arbre",
+   "es": "Dos etapas: tokenizar y luego construir un árbol",
+   "de": "Zwei Schritte: tokenisieren, dann einen Baum aufbauen",
+   "it": "Due fasi: tokenizzare, poi costruire un albero",
+   "pt": "Duas etapas: tokenizar, depois construir uma árvore",
+   "n": 2
+  },
+  {
+   "en": "Parsers are everywhere",
+   "fr": "Les parseurs sont partout",
+   "es": "Los parsers están en todas partes",
+   "de": "Parser sind überall",
+   "it": "Gli analizzatori sono ovunque",
+   "pt": "Os analisadores estão por toda a parte",
+   "n": 1
+  },
+  {
+   "en": "Why the output is a tree",
+   "fr": "Pourquoi le résultat est un arbre",
+   "es": "Por qué el resultado es un árbol",
+   "de": "Warum die Ausgabe ein Baum ist",
+   "it": "Perché l'uscita è un albero",
+   "pt": "Por que a saída é uma árvore",
+   "n": 2
+  },
+  {
+   "en": "What makes HTML parsing unusual",
+   "fr": "Ce qui rend le parsing HTML si particulier",
+   "es": "Qué hace que el parsing de HTML sea singular",
+   "de": "Was die HTML-Analyse ungewöhnlich macht",
+   "it": "Cosa rende insolita l'analisi dell'HTML",
+   "pt": "O que torna a análise do HTML invulgar",
+   "n": 2
+  },
+  {
+   "en": "Forgiving versus strict, by design",
+   "fr": "Tolérant ou strict, par conception",
+   "es": "Tolerante frente a estricto, por diseño",
+   "de": "Nachsichtig gegenüber strikt, beabsichtigt",
+   "it": "Tollerante contro rigoroso, per progettazione",
+   "pt": "Indulgente versus rigoroso, por conceção",
+   "n": 1
+  },
+  {
+   "en": "A mental model for the whole stack",
+   "fr": "Un modèle mental pour toute la stack",
+   "es": "Un modelo mental para todo el stack",
+   "de": "Ein mentales Modell für den gesamten Stack",
+   "it": "Un modello mentale per tutto lo stack",
+   "pt": "Um modelo mental para toda a stack",
+   "n": 1
+  }
+ ],
+ "semantic-web": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "The standards stack: RDF, OWL, SPARQL",
+   "fr": "La pile de standards : RDF, OWL, SPARQL",
+   "es": "La pila de estándares: RDF, OWL, SPARQL",
+   "de": "Der Standard-Stack: RDF, OWL, SPARQL",
+   "it": "La pila di standard: RDF, OWL, SPARQL",
+   "pt": "A pilha de padrões: RDF, OWL, SPARQL",
+   "n": 4
+  },
+  {
+   "en": "Reasoners that infer new facts",
+   "fr": "Des raisonneurs qui déduisent de nouveaux faits",
+   "es": "Razonadores que infieren nuevos hechos",
+   "de": "Reasoner, die neue Fakten folgern",
+   "it": "Ragionatori che inferiscono nuovi fatti",
+   "pt": "Raciocinadores que inferem novos factos",
+   "n": 2
+  },
+  {
+   "en": "Why the grand vision stalled",
+   "fr": "Pourquoi la grande vision a calé",
+   "es": "Por qué la gran visión se estancó",
+   "de": "Warum die große Vision ins Stocken geriet",
+   "it": "Perché la grande visione si è arenata",
+   "pt": "Por que a grande visão estagnou",
+   "n": 1
+  },
+  {
+   "en": "The version that quietly succeeded",
+   "fr": "La version qui a réussi sans bruit",
+   "es": "La versión que triunfó en silencio",
+   "de": "Die Version, die still Erfolg hatte",
+   "it": "La versione che ha avuto successo in silenzio",
+   "pt": "A versão que teve sucesso em silêncio",
+   "n": 1
+  }
+ ],
+ "xml-vs-html": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "HTML: a fixed, forgiving vocabulary",
+   "fr": "HTML : un vocabulaire figé et tolérant",
+   "es": "HTML: un vocabulario fijo y tolerante",
+   "de": "HTML: ein festes, nachsichtiges Vokabular",
+   "it": "HTML: un vocabolario fisso e tollerante",
+   "pt": "HTML: um vocabulário fixo e tolerante",
+   "n": 2
+  },
+  {
+   "en": "XML: a strict meta-language",
+   "fr": "XML : un méta-langage strict",
+   "es": "XML: un metalenguaje estricto",
+   "de": "XML: eine strikte Metasprache",
+   "it": "XML: un meta-linguaggio rigoroso",
+   "pt": "XML: uma meta-linguagem rigorosa",
+   "n": 2
+  },
+  {
+   "en": "Two philosophies for two jobs",
+   "fr": "Deux philosophies pour deux usages",
+   "es": "Dos filosofías para dos tareas",
+   "de": "Zwei Philosophien für zwei Aufgaben",
+   "it": "Due filosofie per due compiti",
+   "pt": "Duas filosofias para duas tarefas",
+   "n": 1
+  },
+  {
+   "en": "XHTML and where things settled",
+   "fr": "XHTML et où les choses se sont stabilisées",
+   "es": "XHTML y dónde se asentaron las cosas",
+   "de": "XHTML und wo sich die Dinge einpendelten",
+   "it": "XHTML e dove le cose si sono assestate",
+   "pt": "XHTML e onde as coisas se estabilizaram",
+   "n": 2
+  },
+  {
+   "en": "The wider XML ecosystem",
+   "fr": "L'écosystème XML au sens large",
+   "es": "El ecosistema XML en su conjunto",
+   "de": "Das breitere XML-Ökosystem",
+   "it": "L'ecosistema XML più ampio",
+   "pt": "O ecossistema XML mais amplo",
+   "n": 1
+  },
+  {
+   "en": "A rule of thumb by purpose",
+   "fr": "Une règle empirique selon l'usage",
+   "es": "Una regla práctica según el propósito",
+   "de": "Eine Faustregel nach Zweck",
+   "it": "Una regola empirica secondo lo scopo",
+   "pt": "Uma regra empírica segundo o propósito",
+   "n": 1
+  }
+ ],
+ "ruby-on-rails-cms": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "Railfrog and the early heritage",
+   "fr": "Railfrog et l'héritage des débuts",
+   "es": "Railfrog y el legado de los inicios",
+   "de": "Railfrog und das frühe Erbe",
+   "it": "Railfrog e l'eredità delle origini",
+   "pt": "Railfrog e a herança dos inícios",
+   "n": 2
+  },
+  {
+   "en": "The engine model of today's options",
+   "fr": "Le modèle d'engine des options actuelles",
+   "es": "El modelo de engine de las opciones actuales",
+   "de": "Das Engine-Modell der heutigen Optionen",
+   "it": "Il modello a engine delle opzioni odierne",
+   "pt": "O modelo de engine das opções atuais",
+   "n": 2
+  },
+  {
+   "en": "Content as code, and its trade-off",
+   "fr": "Le contenu comme code, et son compromis",
+   "es": "El contenido como código, y su contrapartida",
+   "de": "Inhalt als Code und sein Kompromiss",
+   "it": "Il contenuto come codice, e il suo compromesso",
+   "pt": "O conteúdo como código, e o seu compromisso",
+   "n": 2
+  },
+  {
+   "en": "Framing the choice for your team",
+   "fr": "Cadrer le choix pour votre équipe",
+   "es": "Plantear la elección para tu equipo",
+   "de": "Die Wahl für Ihr Team einordnen",
+   "it": "Inquadrare la scelta per il tuo team",
+   "pt": "Enquadrar a escolha para a sua equipa",
+   "n": 2
+  }
+ ],
+ "character-encoding-utf-8": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "From ASCII to a patchwork of encodings",
+   "fr": "De l'ASCII à un patchwork d'encodages",
+   "es": "Del ASCII a un mosaico de codificaciones",
+   "de": "Von ASCII zu einem Flickwerk von Kodierungen",
+   "it": "Dall'ASCII a un mosaico di codifiche",
+   "pt": "Do ASCII a um mosaico de codificações",
+   "n": 2
+  },
+  {
+   "en": "How Unicode fixed the root problem",
+   "fr": "Comment Unicode a réglé le problème de fond",
+   "es": "Cómo Unicode resolvió el problema de raíz",
+   "de": "Wie Unicode das Grundproblem löste",
+   "it": "Come Unicode ha risolto il problema di fondo",
+   "pt": "Como o Unicode resolveu o problema de fundo",
+   "n": 2
+  },
+  {
+   "en": "Why UTF-8 won the web",
+   "fr": "Pourquoi UTF-8 a conquis le web",
+   "es": "Por qué UTF-8 conquistó la web",
+   "de": "Warum UTF-8 das Web eroberte",
+   "it": "Perché UTF-8 ha conquistato il web",
+   "pt": "Por que o UTF-8 conquistou a web",
+   "n": 2
+  },
+  {
+   "en": "Where bugs still creep in",
+   "fr": "Là où les bugs se glissent encore",
+   "es": "Dónde se siguen colando los errores",
+   "de": "Wo sich noch immer Fehler einschleichen",
+   "it": "Dove i bug si insinuano ancora",
+   "pt": "Onde os bugs ainda se insinuam",
+   "n": 2
+  }
+ ],
+ "self-hosted-cms": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Ownership and its honest counterweight",
+   "fr": "La maîtrise et son juste contrepoids",
+   "es": "La propiedad y su honesto contrapeso",
+   "de": "Eigentümerschaft und ihr ehrliches Gegengewicht",
+   "it": "La proprietà e il suo onesto contrappeso",
+   "pt": "A propriedade e o seu honesto contrapeso",
+   "n": 2
+  },
+  {
+   "en": "WordPress: ecosystem and upkeep",
+   "fr": "WordPress : écosystème et maintenance",
+   "es": "WordPress: ecosistema y mantenimiento",
+   "de": "WordPress: Ökosystem und Pflege",
+   "it": "WordPress: ecosistema e manutenzione",
+   "pt": "WordPress: ecossistema e manutenção",
+   "n": 2
+  },
+  {
+   "en": "The headless alternative",
+   "fr": "L'alternative headless",
+   "es": "La alternativa headless",
+   "de": "Die Headless-Alternative",
+   "it": "L'alternativa headless",
+   "pt": "A alternativa headless",
+   "n": 2
+  },
+  {
+   "en": "Framework-native content systems",
+   "fr": "Les systèmes de contenu natifs aux frameworks",
+   "es": "Sistemas de contenido nativos del framework",
+   "de": "Framework-native Content-Systeme",
+   "it": "Sistemi di contenuti nativi ai framework",
+   "pt": "Sistemas de conteúdos nativos dos frameworks",
+   "n": 1
+  },
+  {
+   "en": "Matching the tool to your team",
+   "fr": "Adapter l'outil à votre équipe",
+   "es": "Ajustar la herramienta a tu equipo",
+   "de": "Das Werkzeug an Ihr Team anpassen",
+   "it": "Adattare lo strumento al tuo team",
+   "pt": "Adaptar a ferramenta à sua equipa",
+   "n": 2
+  }
+ ],
+ "what-is-a-vps": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What a VPS actually is",
+   "fr": "Ce qu'est vraiment un VPS",
+   "es": "Qué es realmente un VPS",
+   "de": "Was ein VPS tatsächlich ist",
+   "it": "Cos'è davvero un VPS",
+   "pt": "O que é realmente um VPS",
+   "n": 2
+  },
+  {
+   "en": "VPS vs shared and cloud hosting",
+   "fr": "VPS vs hébergement mutualisé et cloud",
+   "es": "VPS vs alojamiento compartido y cloud",
+   "de": "VPS vs. Shared- und Cloud-Hosting",
+   "it": "VPS vs hosting condiviso e cloud",
+   "pt": "VPS vs alojamento partilhado e na nuvem",
+   "n": 2
+  },
+  {
+   "en": "What developers run on a VPS",
+   "fr": "Ce que les développeurs font tourner sur un VPS",
+   "es": "Qué ejecutan los desarrolladores en un VPS",
+   "de": "Was Entwickler auf einem VPS betreiben",
+   "it": "Cosa fanno girare gli sviluppatori su un VPS",
+   "pt": "O que os programadores põem a correr num VPS",
+   "n": 2
+  },
+  {
+   "en": "Managed vs unmanaged",
+   "fr": "Infogéré ou non infogéré",
+   "es": "Gestionado o no gestionado",
+   "de": "Verwaltet vs. nicht verwaltet",
+   "it": "Gestito vs non gestito",
+   "pt": "Gerido vs não gerido",
+   "n": 1
+  },
+  {
+   "en": "Is a VPS right for you?",
+   "fr": "Un VPS est-il fait pour vous ?",
+   "es": "¿Es un VPS adecuado para ti?",
+   "de": "Ist ein VPS das Richtige für Sie?",
+   "it": "Un VPS è giusto per te?",
+   "pt": "Um VPS é o certo para si?",
+   "n": 1
+  }
+ ],
+ "what-is-a-cdn": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Why a CDN: the distance problem",
+   "fr": "Pourquoi un CDN : le problème de la distance",
+   "es": "Por qué un CDN: el problema de la distancia",
+   "de": "Warum ein CDN: das Entfernungsproblem",
+   "it": "Perché un CDN: il problema della distanza",
+   "pt": "Por que um CDN: o problema da distância",
+   "n": 1
+  },
+  {
+   "en": "How a CDN works",
+   "fr": "Comment fonctionne un CDN",
+   "es": "Cómo funciona un CDN",
+   "de": "Wie ein CDN funktioniert",
+   "it": "Come funziona un CDN",
+   "pt": "Como funciona um CDN",
+   "n": 2
+  },
+  {
+   "en": "More than just speed",
+   "fr": "Plus que la vitesse",
+   "es": "Más que velocidad",
+   "de": "Mehr als nur Geschwindigkeit",
+   "it": "Più della sola velocità",
+   "pt": "Mais do que apenas velocidade",
+   "n": 1
+  },
+  {
+   "en": "When you need a CDN",
+   "fr": "Quand vous avez besoin d'un CDN",
+   "es": "Cuándo necesitas un CDN",
+   "de": "Wann Sie ein CDN brauchen",
+   "it": "Quando hai bisogno di un CDN",
+   "pt": "Quando precisa de um CDN",
+   "n": 1
+  },
+  {
+   "en": "A CDN is not your host",
+   "fr": "Un CDN ne remplace pas l'hébergement",
+   "es": "Un CDN no es tu alojamiento",
+   "de": "Ein CDN ersetzt nicht Ihr Hosting",
+   "it": "Un CDN non sostituisce il tuo hosting",
+   "pt": "Um CDN não substitui o seu alojamento",
+   "n": 2
+  },
+  {
+   "en": "Do you need one?",
+   "fr": "En avez-vous besoin ?",
+   "es": "¿Lo necesitas?",
+   "de": "Brauchen Sie eins?",
+   "it": "Ne hai bisogno?",
+   "pt": "Precisa de um?",
+   "n": 1
+  }
+ ],
+ "what-is-git": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Git is distributed, not centralised",
+   "fr": "Git est distribué, pas centralisé",
+   "es": "Git es distribuido, no centralizado",
+   "de": "Git ist verteilt, nicht zentralisiert",
+   "it": "Git è distribuito, non centralizzato",
+   "pt": "O Git é distribuído, não centralizado",
+   "n": 2
+  },
+  {
+   "en": "The core concepts: commits, branches, remotes",
+   "fr": "Les concepts clés : commits, branches, dépôts distants",
+   "es": "Los conceptos clave: commits, ramas, remotos",
+   "de": "Die Kernkonzepte: Commits, Branches, Remotes",
+   "it": "I concetti chiave: commit, branch, remote",
+   "pt": "Os conceitos centrais: commits, ramos, remotos",
+   "n": 2
+  },
+  {
+   "en": "Why developers rely on Git",
+   "fr": "Pourquoi les développeurs comptent sur Git",
+   "es": "Por qué los desarrolladores confían en Git",
+   "de": "Warum Entwickler auf Git setzen",
+   "it": "Perché gli sviluppatori si affidano a Git",
+   "pt": "Por que os programadores confiam no Git",
+   "n": 1
+  },
+  {
+   "en": "Git is not GitHub",
+   "fr": "Git n'est pas GitHub",
+   "es": "Git no es GitHub",
+   "de": "Git ist nicht GitHub",
+   "it": "Git non è GitHub",
+   "pt": "Git não é o GitHub",
+   "n": 1
+  },
+  {
+   "en": "The basic commands",
+   "fr": "Les commandes de base",
+   "es": "Los comandos básicos",
+   "de": "Die grundlegenden Befehle",
+   "it": "I comandi di base",
+   "pt": "Os comandos básicos",
+   "n": 1
+  },
+  {
+   "en": "Do you need Git?",
+   "fr": "Avez-vous besoin de Git ?",
+   "es": "¿Necesitas Git?",
+   "de": "Brauchen Sie Git?",
+   "it": "Hai bisogno di Git?",
+   "pt": "Precisa do Git?",
+   "n": 1
+  }
+ ],
+ "ssh-key-management": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "How SSH keys actually work",
+   "fr": "Comment fonctionnent vraiment les clés SSH",
+   "es": "Cómo funcionan realmente las claves SSH",
+   "de": "Wie SSH-Schlüssel wirklich funktionieren",
+   "it": "Come funzionano davvero le chiavi SSH",
+   "pt": "Como funcionam realmente as chaves SSH",
+   "n": 2
+  },
+  {
+   "en": "SSH key best practices",
+   "fr": "Bonnes pratiques pour les clés SSH",
+   "es": "Buenas prácticas para las claves SSH",
+   "de": "Bewährte Praktiken für SSH-Schlüssel",
+   "it": "Buone pratiche per le chiavi SSH",
+   "pt": "Boas práticas para as chaves SSH",
+   "n": 3
+  },
+  {
+   "en": "Where to store keys and passphrases",
+   "fr": "Où stocker les clés et les passphrases",
+   "es": "Dónde guardar las claves y las frases de contraseña",
+   "de": "Wo Schlüssel und Passphrasen aufbewahrt werden",
+   "it": "Dove conservare chiavi e passphrase",
+   "pt": "Onde guardar as chaves e as frases-passe",
+   "n": 2
+  }
+ ],
+ "what-is-a-webhook": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Webhook vs API: push, not pull",
+   "fr": "Webhook vs API : push, pas pull",
+   "es": "Webhook vs API: push, no pull",
+   "de": "Webhook vs. API: Push statt Pull",
+   "it": "Webhook vs API: push, non pull",
+   "pt": "Webhook vs API: push, não pull",
+   "n": 2
+  },
+  {
+   "en": "How a webhook works",
+   "fr": "Comment fonctionne un webhook",
+   "es": "Cómo funciona un webhook",
+   "de": "Wie ein Webhook funktioniert",
+   "it": "Come funziona un webhook",
+   "pt": "Como funciona um webhook",
+   "n": 2
+  },
+  {
+   "en": "What webhooks are used for",
+   "fr": "À quoi servent les webhooks",
+   "es": "Para qué sirven los webhooks",
+   "de": "Wofür Webhooks verwendet werden",
+   "it": "A cosa servono i webhook",
+   "pt": "Para que servem os webhooks",
+   "n": 1
+  },
+  {
+   "en": "Receiving a webhook securely",
+   "fr": "Recevoir un webhook en toute sécurité",
+   "es": "Recibir un webhook de forma segura",
+   "de": "Einen Webhook sicher empfangen",
+   "it": "Ricevere un webhook in modo sicuro",
+   "pt": "Receber um webhook em segurança",
+   "n": 2
+  },
+  {
+   "en": "Webhooks need a reachable endpoint",
+   "fr": "Un webhook exige un endpoint accessible",
+   "es": "Un webhook necesita un endpoint accesible",
+   "de": "Webhooks brauchen einen erreichbaren Endpunkt",
+   "it": "Un webhook richiede un endpoint raggiungibile",
+   "pt": "Um webhook precisa de um endpoint acessível",
+   "n": 1
+  }
+ ],
+ "what-is-a-docker-container": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Container vs virtual machine",
+   "fr": "Conteneur vs machine virtuelle",
+   "es": "Contenedor vs máquina virtual",
+   "de": "Container vs. virtuelle Maschine",
+   "it": "Container vs macchina virtuale",
+   "pt": "Contentor vs máquina virtual",
+   "n": 2
+  },
+  {
+   "en": "Image vs container, and how it works",
+   "fr": "Image vs conteneur, et comment ça marche",
+   "es": "Imagen vs contenedor, y cómo funciona",
+   "de": "Image vs. Container, und wie es funktioniert",
+   "it": "Immagine vs container, e come funziona",
+   "pt": "Imagem vs contentor, e como funciona",
+   "n": 2
+  },
+  {
+   "en": "Why developers use containers",
+   "fr": "Pourquoi les devs utilisent les conteneurs",
+   "es": "Por qué los desarrolladores usan contenedores",
+   "de": "Warum Entwickler Container nutzen",
+   "it": "Perché gli sviluppatori usano i container",
+   "pt": "Porque os programadores usam contentores",
+   "n": 1
+  },
+  {
+   "en": "From one container to many",
+   "fr": "D'un conteneur à plusieurs",
+   "es": "De un contenedor a muchos",
+   "de": "Von einem Container zu vielen",
+   "it": "Da un container a molti",
+   "pt": "De um contentor a muitos",
+   "n": 2
+  },
+  {
+   "en": "Containers need somewhere to run",
+   "fr": "Un conteneur doit s'exécuter quelque part",
+   "es": "Los contenedores necesitan dónde ejecutarse",
+   "de": "Container brauchen einen Ort zum Laufen",
+   "it": "I container hanno bisogno di un posto dove girare",
+   "pt": "Os contentores precisam de onde correr",
+   "n": 1
+  }
+ ],
+ "what-is-devops": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What DevOps actually is",
+   "fr": "Ce qu'est vraiment le DevOps",
+   "es": "Qué es realmente DevOps",
+   "de": "Was DevOps wirklich ist",
+   "it": "Cos'è davvero il DevOps",
+   "pt": "O que é realmente o DevOps",
+   "n": 2
+  },
+  {
+   "en": "The core practices",
+   "fr": "Les pratiques clés",
+   "es": "Las prácticas clave",
+   "de": "Die Kernpraktiken",
+   "it": "Le pratiche fondamentali",
+   "pt": "As práticas fundamentais",
+   "n": 2
+  },
+  {
+   "en": "A culture, not just tools",
+   "fr": "Une culture, pas que des outils",
+   "es": "Una cultura, no solo herramientas",
+   "de": "Eine Kultur, nicht nur Tools",
+   "it": "Una cultura, non solo strumenti",
+   "pt": "Uma cultura, não só ferramentas",
+   "n": 1
+  },
+  {
+   "en": "The DevOps toolchain",
+   "fr": "La chaîne d'outils DevOps",
+   "es": "La cadena de herramientas DevOps",
+   "de": "Die DevOps-Toolchain",
+   "it": "La toolchain DevOps",
+   "pt": "A cadeia de ferramentas DevOps",
+   "n": 2
+  },
+  {
+   "en": "Where it runs",
+   "fr": "Où ça tourne",
+   "es": "Dónde se ejecuta",
+   "de": "Wo es läuft",
+   "it": "Dove gira",
+   "pt": "Onde corre",
+   "n": 1
+  }
+ ],
+ "what-is-an-api": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What an API actually is",
+   "fr": "Ce qu'est vraiment une API",
+   "es": "Qué es realmente una API",
+   "de": "Was eine API wirklich ist",
+   "it": "Cos'è davvero un'API",
+   "pt": "O que é realmente uma API",
+   "n": 2
+  },
+  {
+   "en": "How a request and response work",
+   "fr": "Comment fonctionnent requête et réponse",
+   "es": "Cómo funcionan la petición y la respuesta",
+   "de": "Wie Anfrage und Antwort funktionieren",
+   "it": "Come funzionano richiesta e risposta",
+   "pt": "Como funcionam o pedido e a resposta",
+   "n": 2
+  },
+  {
+   "en": "Common API styles",
+   "fr": "Les styles d'API courants",
+   "es": "Los estilos de API más comunes",
+   "de": "Gängige API-Stile",
+   "it": "Gli stili di API più comuni",
+   "pt": "Os estilos de API mais comuns",
+   "n": 2
+  },
+  {
+   "en": "Why developers rely on APIs",
+   "fr": "Pourquoi les développeurs s'appuient sur les API",
+   "es": "Por qué los desarrolladores dependen de las API",
+   "de": "Warum Entwickler auf APIs setzen",
+   "it": "Perché gli sviluppatori si affidano alle API",
+   "pt": "Porque é que os programadores dependem das APIs",
+   "n": 1
+  },
+  {
+   "en": "Where APIs run",
+   "fr": "Où tournent les API",
+   "es": "Dónde se ejecutan las API",
+   "de": "Wo APIs laufen",
+   "it": "Dove girano le API",
+   "pt": "Onde correm as APIs",
+   "n": 1
+  }
+ ],
+ "what-is-a-reverse-proxy": [
+  {
+   "n": 1,
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": ""
+  },
+  {
+   "n": 1,
+   "en": "Reverse proxy vs forward proxy",
+   "fr": "Proxy inverse vs proxy direct",
+   "es": "Proxy inverso vs proxy directo",
+   "de": "Reverse Proxy vs Forward Proxy",
+   "it": "Reverse proxy vs forward proxy",
+   "pt": "Proxy inverso vs proxy direto"
+  },
+  {
+   "n": 2,
+   "en": "What a reverse proxy actually does",
+   "fr": "Ce que fait vraiment un proxy inverse",
+   "es": "Qué hace realmente un proxy inverso",
+   "de": "Was ein Reverse Proxy tatsächlich tut",
+   "it": "Cosa fa davvero un reverse proxy",
+   "pt": "O que um proxy inverso realmente faz"
+  },
+  {
+   "n": 1,
+   "en": "A natural security boundary",
+   "fr": "Une frontière de sécurité naturelle",
+   "es": "Una frontera de seguridad natural",
+   "de": "Eine natürliche Sicherheitsgrenze",
+   "it": "Un confine di sicurezza naturale",
+   "pt": "Uma fronteira de segurança natural"
+  },
+  {
+   "n": 1,
+   "en": "The tools that run reverse proxies",
+   "fr": "Les outils qui font tourner les proxys inverses",
+   "es": "Las herramientas que ejecutan proxys inversos",
+   "de": "Die Tools, die Reverse Proxys betreiben",
+   "it": "Gli strumenti che gestiscono i reverse proxy",
+   "pt": "As ferramentas que executam proxies inversos"
+  },
+  {
+   "n": 1,
+   "en": "Common reverse-proxy setups",
+   "fr": "Cas d'usage courants du proxy inverse",
+   "es": "Configuraciones habituales de proxy inverso",
+   "de": "Typische Reverse-Proxy-Setups",
+   "it": "Configurazioni comuni di reverse proxy",
+   "pt": "Configurações comuns de proxy inverso"
+  },
+  {
+   "n": 1,
+   "en": "Reverse proxy vs load balancer vs API gateway",
+   "fr": "Proxy inverse vs load balancer vs passerelle API",
+   "es": "Proxy inverso vs balanceador de carga vs API gateway",
+   "de": "Reverse Proxy vs Load Balancer vs API-Gateway",
+   "it": "Reverse proxy vs load balancer vs API gateway",
+   "pt": "Proxy inverso vs balanceador de carga vs API gateway"
+  },
+  {
+   "n": 1,
+   "en": "Should you run one yourself?",
+   "fr": "Faut-il en gérer un soi-même ?",
+   "es": "¿Deberías gestionar uno tú mismo?",
+   "de": "Sollten Sie selbst einen betreiben?",
+   "it": "Dovresti gestirne uno tu stesso?",
+   "pt": "Deve gerir um você mesmo?"
+  }
+ ],
+ "opera-paste-protect-clickfix-clipboard-2026": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "How ClickFix and pastejacking attacks work",
+   "fr": "Comment fonctionnent les attaques ClickFix et pastejacking",
+   "es": "Cómo funcionan los ataques ClickFix y pastejacking",
+   "de": "Wie ClickFix- und Pastejacking-Angriffe funktionieren",
+   "it": "Come funzionano gli attacchi ClickFix e pastejacking",
+   "pt": "Como funcionam os ataques ClickFix e pastejacking",
+   "n": 2
+  },
+  {
+   "en": "What Opera's Paste Protect does",
+   "fr": "Ce que fait le Paste Protect d'Opera",
+   "es": "Qué hace el Paste Protect de Opera",
+   "de": "Was Operas Paste Protect leistet",
+   "it": "Cosa fa il Paste Protect di Opera",
+   "pt": "O que faz o Paste Protect da Opera",
+   "n": 2
+  },
+  {
+   "en": "What happens when a paste is blocked",
+   "fr": "Ce qui se passe quand un collage est bloqué",
+   "es": "Qué ocurre cuando se bloquea un pegado",
+   "de": "Was passiert, wenn ein Einfügen blockiert wird",
+   "it": "Cosa succede quando un incollaggio viene bloccato",
+   "pt": "O que acontece quando uma colagem é bloqueada",
+   "n": 2
+  },
+  {
+   "en": "Why a browser shipping this matters",
+   "fr": "Pourquoi il est important qu'un navigateur propose cela",
+   "es": "Por qué importa que un navegador incorpore esto",
+   "de": "Warum es zählt, dass ein Browser dies mitbringt",
+   "it": "Perché conta che un browser porti tutto questo",
+   "pt": "Por que importa que um navegador traga isto",
+   "n": 1
+  },
+  {
+   "en": "Protecting yourself, whatever browser you use",
+   "fr": "Se protéger, quel que soit le navigateur que vous utilisez",
+   "es": "Protegerte, sea cual sea el navegador que uses",
+   "de": "Sich schützen, egal welchen Browser Sie nutzen",
+   "it": "Proteggerti, qualunque browser tu usi",
+   "pt": "Proteger-se, seja qual for o navegador que usa",
+   "n": 1
+  }
+ ],
+ "novo-nordisk-breach-client-side-secrets-2026": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "What Novo Nordisk disclosed",
+   "fr": "Ce que Novo Nordisk a divulgué",
+   "es": "Lo que Novo Nordisk reveló",
+   "de": "Was Novo Nordisk offengelegt hat",
+   "it": "Cosa ha rivelato Novo Nordisk",
+   "pt": "O que a Novo Nordisk divulgou",
+   "n": 2
+  },
+  {
+   "en": "How the attackers reportedly got in",
+   "fr": "Comment les attaquants seraient entrés",
+   "es": "Cómo entraron los atacantes, según los informes",
+   "de": "Wie die Angreifer Berichten zufolge eindrangen",
+   "it": "Come sarebbero entrati gli aggressori",
+   "pt": "Como os atacantes terão entrado",
+   "n": 2
+  },
+  {
+   "en": "Why secrets in client code are so dangerous",
+   "fr": "Pourquoi les secrets dans le code client sont si dangereux",
+   "es": "Por qué los secretos en el código cliente son tan peligrosos",
+   "de": "Warum Geheimnisse im Client-Code so gefährlich sind",
+   "it": "Perché i segreti nel codice client sono così pericolosi",
+   "pt": "Porque os segredos no código cliente são tão perigosos",
+   "n": 2
+  },
+  {
+   "en": "How to keep secrets out of your client code",
+   "fr": "Comment garder les secrets hors de votre code client",
+   "es": "Cómo mantener los secretos fuera de tu código cliente",
+   "de": "Wie Sie Geheimnisse aus Ihrem Client-Code heraushalten",
+   "it": "Come tenere i segreti fuori dal codice client",
+   "pt": "Como manter os segredos fora do seu código cliente",
+   "n": 2
+  },
+  {
+   "en": "The honest takeaway",
+   "fr": "Ce qu'il faut vraiment retenir",
+   "es": "La conclusión honesta",
+   "de": "Das ehrliche Fazit",
+   "it": "La lezione onesta",
+   "pt": "A conclusão honesta",
+   "n": 1
+  }
+ ],
+ "ghostapproval-ai-coding-assistants-symlink-2026": [
+  {
+   "n": 2,
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": ""
+  },
+  {
+   "n": 2,
+   "en": "What GhostApproval is",
+   "fr": "Ce qu'est GhostApproval",
+   "es": "Qué es GhostApproval",
+   "de": "Was GhostApproval ist",
+   "it": "Che cos'e GhostApproval",
+   "pt": "O que e o GhostApproval"
+  },
+  {
+   "n": 3,
+   "en": "How the symlink attack works",
+   "fr": "Comment fonctionne l'attaque par symlink",
+   "es": "Como funciona el ataque por symlink",
+   "de": "Wie der Symlink-Angriff funktioniert",
+   "it": "Come funziona l'attacco tramite symlink",
+   "pt": "Como funciona o ataque por symlink"
+  },
+  {
+   "n": 2,
+   "en": "Which tools were affected, and fixed",
+   "fr": "Quels outils sont touches, et corriges",
+   "es": "Que herramientas estan afectadas, y corregidas",
+   "de": "Welche Tools betroffen und behoben sind",
+   "it": "Quali strumenti sono colpiti, e corretti",
+   "pt": "Que ferramentas foram afetadas, e corrigidas"
+  },
+  {
+   "n": 1,
+   "en": "How to protect yourself",
+   "fr": "Comment vous proteger",
+   "es": "Como protegerte",
+   "de": "Wie Sie sich schuetzen",
+   "it": "Come proteggerti",
+   "pt": "Como se proteger"
+  },
+  {
+   "n": 1,
+   "en": "The honest takeaway",
+   "fr": "Ce qu'il faut vraiment retenir",
+   "es": "La conclusion honesta",
+   "de": "Das ehrliche Fazit",
+   "it": "La lezione onesta",
+   "pt": "A conclusao honesta"
+  }
+ ]
 }
