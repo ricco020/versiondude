@@ -638,6 +638,10 @@
     ]
   },
   "what-is-semantic-versioning": {
+    "title": "Qu'est-ce que le versionnage sémantique (SemVer) ? MAJOR.MINOR.PATCH expliqué",
+    "dek": "Le versionnage sémantique numérote les releases en MAJOR.MINOR.PATCH pour que le numéro lui-même indique ce qui a changé. Ce que signifie chaque partie, les règles de remise à zéro, les labels pre-release et pourquoi les plages npm comme ^1.2.3 en dépendent.",
+    "heroAlt": "Code source avec coloration syntaxique sur un écran sombre dans un éditeur de code",
+    "bodyCaption": "Code source ouvert dans un éditeur. Les plages de dépendances comme ^1.2.3 s'appuient sur le versionnage sémantique pour rester sûres.",
     "paras": [
       "Le versionnage sémantique, presque toujours abrégé en SemVer, est un ensemble simple de règles pour numéroter les versions logicielles de sorte que le numéro de version lui-même vous dise ce qui a changé. Au lieu d'un compteur dénué de sens, une version SemVer se compose de trois nombres - MAJOR.MINOR.PATCH, comme 2.4.1 - et chaque position a une signification définie. Une fois que vous connaissez les règles, vous pouvez regarder une montée de version et comprendre immédiatement si une mise à jour est sûre, ajoute des fonctionnalités ou risque de casser votre code.",
       "Les trois parties répondent chacune à une question différente. MAJOR (le premier nombre) augmente lorsque vous apportez des changements incompatibles et cassants à l'API publique - la mise à niveau peut vous obliger à modifier votre propre code. MINOR (le deuxième) augmente lorsque vous ajoutez de nouvelles fonctionnalités de manière rétrocompatible - de nouvelles fonctionnalités que vous pouvez adopter ou ignorer. PATCH (le troisième) augmente pour des corrections de bogues rétrocompatibles - des corrections sûres qui ne changent pas la façon dont le logiciel est utilisé.",
@@ -658,6 +662,10 @@
     ]
   },
   "what-is-a-lockfile": {
+    "title": "Qu'est-ce qu'un lockfile ? Les installations reproductibles expliquées (package-lock, Cargo.lock et plus)",
+    "dek": "Un lockfile enregistre la version résolue exacte de chaque dépendance pour que tout le monde installe la même chose. Pourquoi les manifestes seuls ne suffisent pas, comment les hachages d'intégrité ajoutent de la sécurité, et faut-il le committer.",
+    "heroAlt": "Code source avec coloration syntaxique sur un écran sombre dans un éditeur de code",
+    "bodyCaption": "Un manifeste de paquet et son lockfile travaillent ensemble : le manifeste indique des plages, le lockfile fige les versions exactes.",
     "paras": [
       "Un lockfile est un fichier que votre gestionnaire de paquets ecrit pour enregistrer les versions exactes de chaque dependance installee par votre projet, non seulement celles que vous avez demandees, mais aussi les dependances de ces dependances. Sa raison d'etre est la reproductibilite : il garantit que vous, votre collegue et votre serveur de production installez tous, octet pour octet, le meme ensemble de paquets, au lieu de ce qui se trouve etre le plus recent au moment de l'installation. Si vous avez deja vu un package-lock.json, yarn.lock ou Cargo.lock en vous demandant a quoi il sert, c'est cela.",
       "Pour comprendre pourquoi c'est important, il faut regarder ce que dit reellement votre manifeste. Un fichier comme package.json epingle en general les dependances sous forme de plages de versions, et non de versions exactes, par exemple ^1.2.3, ce qui, selon le SemVer, signifie n'importe quelle version depuis 1.2.3 jusqu'a 2.0.0 exclue. Cette souplesse est utile, mais elle a un inconvenient : installez le projet aujourd'hui et vous pourriez obtenir 1.2.4, installez-le le mois prochain et vous pourriez obtenir 1.2.9. Meme manifeste, code reel different.",

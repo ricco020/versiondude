@@ -1483,5 +1483,108 @@
    "it": "La lezione onesta",
    "pt": "A conclusao honesta"
   }
+ ],
+ "what-is-semantic-versioning": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What each part means",
+   "fr": "Ce que signifie chaque partie",
+   "es": "Qué significa cada parte",
+   "de": "Was jeder Teil bedeutet",
+   "it": "Cosa significa ogni parte",
+   "pt": "O que cada parte significa",
+   "n": 2
+  },
+  {
+   "en": "Zero versions and pre-release labels",
+   "fr": "Versions zéro et labels pre-release",
+   "es": "Versiones cero y etiquetas pre-release",
+   "de": "Null-Versionen und Pre-Release-Labels",
+   "it": "Versioni zero ed etichette pre-release",
+   "pt": "Versões zero e rótulos de pré-lançamento",
+   "n": 2
+  },
+  {
+   "en": "Why it matters for dependencies",
+   "fr": "Pourquoi cela compte pour les dépendances",
+   "es": "Por qué importa para las dependencias",
+   "de": "Warum es fuer Abhaengigkeiten wichtig ist",
+   "it": "Perche conta per le dipendenze",
+   "pt": "Por que isso importa para as dependências",
+   "n": 2
+  },
+  {
+   "en": "SemVer in practice",
+   "fr": "SemVer en pratique",
+   "es": "SemVer en la práctica",
+   "de": "SemVer in der Praxis",
+   "it": "SemVer nella pratica",
+   "pt": "SemVer na prática",
+   "n": 2
+  }
+ ],
+ "what-is-a-lockfile": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Why the manifest alone is not enough",
+   "fr": "Pourquoi le manifeste seul ne suffit pas",
+   "es": "Por qué el manifiesto por sí solo no basta",
+   "de": "Warum das Manifest allein nicht genuegt",
+   "it": "Perche il manifest da solo non basta",
+   "pt": "Por que o manifesto sozinho não basta",
+   "n": 2
+  },
+  {
+   "en": "Integrity hashes and security",
+   "fr": "Hachages d'intégrité et sécurité",
+   "es": "Hashes de integridad y seguridad",
+   "de": "Integritaets-Hashes und Sicherheit",
+   "it": "Hash di integrita e sicurezza",
+   "pt": "Hashes de integridade e segurança",
+   "n": 1
+  },
+  {
+   "en": "One idea across every ecosystem",
+   "fr": "Une même idée dans chaque écosystème",
+   "es": "Una misma idea en cada ecosistema",
+   "de": "Eine Idee in jedem Oekosystem",
+   "it": "Una stessa idea in ogni ecosistema",
+   "pt": "Uma mesma ideia em cada ecossistema",
+   "n": 2
+  },
+  {
+   "en": "The lockfile and the manifest together",
+   "fr": "Le lockfile et le manifeste ensemble",
+   "es": "El lockfile y el manifiesto juntos",
+   "de": "Lockfile und Manifest zusammen",
+   "it": "Il lockfile e il manifest insieme",
+   "pt": "O lockfile e o manifesto juntos",
+   "n": 1
+  },
+  {
+   "en": "Updating lockfiles and good habits",
+   "fr": "Mettre à jour les lockfiles et bonnes habitudes",
+   "es": "Actualizar lockfiles y buenos hábitos",
+   "de": "Lockfiles aktualisieren und gute Gewohnheiten",
+   "it": "Aggiornare i lockfile e buone abitudini",
+   "pt": "Atualizar lockfiles e bons hábitos",
+   "n": 2
+  }
  ]
 }

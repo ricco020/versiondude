@@ -638,6 +638,10 @@
     ]
   },
   "what-is-semantic-versioning": {
+    "title": "¿Qué es el versionado semántico (SemVer)? MAJOR.MINOR.PATCH explicado",
+    "dek": "El versionado semántico numera las versiones como MAJOR.MINOR.PATCH para que el propio número te diga qué cambió. Qué significa cada parte, las reglas de reinicio, las etiquetas pre-release y por qué los rangos de npm como ^1.2.3 dependen de él.",
+    "heroAlt": "Código fuente con resaltado de sintaxis en una pantalla oscura dentro de un editor de código",
+    "bodyCaption": "Código fuente abierto en un editor. Los rangos de dependencias como ^1.2.3 se apoyan en el versionado semántico para mantenerse seguros.",
     "paras": [
       "El versionado semántico, casi siempre abreviado como SemVer, es un conjunto simple de reglas para numerar las versiones de software de forma que el propio número de versión te diga qué cambió. En lugar de un contador sin sentido, una versión SemVer son tres números, MAJOR.MINOR.PATCH, como 2.4.1, y cada posición tiene un significado definido. Una vez que conoces las reglas, puedes mirar un incremento de versión y entender de inmediato si una actualización es segura, añade funcionalidades o podría romper tu código.",
       "Cada una de las tres partes responde a una pregunta distinta. MAJOR (el primer número) aumenta cuando haces cambios incompatibles y rompedores en la API pública, actualizar podría obligarte a modificar tu propio código. MINOR (el segundo) aumenta cuando añades nueva funcionalidad de forma retrocompatible, nuevas características que puedes adoptar o ignorar. PATCH (el tercero) aumenta para correcciones de errores retrocompatibles, arreglos seguros que no cambian la forma en que se usa el software.",
@@ -658,6 +662,10 @@
     ]
   },
   "what-is-a-lockfile": {
+    "title": "¿Qué es un lockfile? Instalaciones reproducibles explicadas (package-lock, Cargo.lock y más)",
+    "dek": "Un lockfile registra la versión resuelta exacta de cada dependencia para que todos instalen lo mismo. Por qué los manifiestos por sí solos no bastan, cómo los hashes de integridad añaden seguridad y si conviene incluirlo en el control de versiones.",
+    "heroAlt": "Código fuente con resaltado de sintaxis en una pantalla oscura dentro de un editor de código",
+    "bodyCaption": "Un manifiesto de paquete y su lockfile trabajan juntos: el manifiesto indica rangos, el lockfile fija las versiones exactas.",
     "paras": [
       "Un lockfile es un archivo que tu gestor de paquetes escribe para registrar las versiones exactas de cada dependencia que instalo tu proyecto: no solo las que pediste, sino tambien las dependencias de esas dependencias. Todo su proposito es la reproducibilidad: se asegura de que tu, tu companero de equipo y tu servidor de produccion instalen todos el mismo conjunto de paquetes byte por byte, en lugar de lo que resulte ser mas reciente en el momento de la instalacion. Si alguna vez has visto un package-lock.json, yarn.lock o Cargo.lock y te has preguntado para que sirve, esto es exactamente eso.",
       "Para ver por que importa, tienes que fijarte en lo que tu manifiesto dice realmente. Un archivo como package.json normalmente fija las dependencias como rangos de version, no como versiones exactas: por ejemplo ^1.2.3, que bajo el Versionado Semantico significa cualquier lanzamiento desde 1.2.3 hasta, pero sin incluir, 2.0.0. Esa flexibilidad es util, pero tiene una desventaja: instala el proyecto hoy y podrias obtener 1.2.4, instalalo el mes que viene y podrias obtener 1.2.9. El mismo manifiesto, un codigo real distinto.",
