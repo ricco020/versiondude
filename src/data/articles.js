@@ -114,6 +114,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'what-is-a-changelog', category: 'guides', readingMinutes: 7, date: '2026-07-21',
+    title: "What Is a Changelog? Keep a Changelog and Versioned Release Notes, Explained",
+    dek: "A changelog is a human-readable file listing the notable changes in each version of a project. The Keep a Changelog convention, the standard change groups, and how it ties into Semantic Versioning.",
+    hero: '/assets/articles/what-is-a-changelog-hero.jpg', heroAlt: "Syntax-highlighted source code on a dark screen in a code editor",
+    body: '/assets/articles/what-is-a-changelog-body.jpg', bodyCaption: "A typewriter with a sheet of paper reading Update. A changelog is a written record of what changed in each version.",
+    paras: ENX['what-is-a-changelog'].paras,
+    list: ENX['what-is-a-changelog'].list,
+    related: 'what-is-semantic-versioning',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'what-is-a-git-tag', category: 'guides', readingMinutes: 7, date: '2026-07-18',
     title: "What Is a Git Tag? Marking Releases and Versions, Explained",
     dek: "A git tag is a named reference that points to a specific commit, used above all to mark releases and versions. Lightweight versus annotated tags, how they differ from branches, and how to create and push them.",
@@ -617,6 +628,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-a-changelog": { fr: "qu-est-ce-qu-un-changelog", es: "que-es-un-changelog", de: "was-ist-ein-changelog", it: "che-cos-e-un-changelog", pt: "o-que-e-um-changelog" },
   "what-is-a-lockfile": { fr: "qu-est-ce-qu-un-lockfile", es: "que-es-un-lockfile", de: "was-ist-eine-lockfile", it: "cos-e-un-lockfile", pt: "o-que-e-um-lockfile" },
   "what-is-semantic-versioning": { fr: "qu-est-ce-que-le-versionnage-semantique", es: "que-es-el-versionado-semantico", de: "was-ist-semantische-versionierung", it: "cos-e-il-versionamento-semantico", pt: "o-que-e-o-versionamento-semantico" },
   "ghostapproval-ai-coding-assistants-symlink-2026": { fr: "ghostapproval-symlink-assistants-code-ia-2026", es: "ghostapproval-symlink-asistentes-codigo-ia-2026", de: "ghostapproval-symlink-ki-coding-assistenten-2026", it: "ghostapproval-symlink-assistenti-codice-ia-2026", pt: "ghostapproval-symlink-assistentes-codigo-ia-2026" },
