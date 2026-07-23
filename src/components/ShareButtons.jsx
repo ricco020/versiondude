@@ -40,7 +40,7 @@ export default function ShareButtons({ title = "", locale = "en" }) {
     <div className="share-buttons" style={wrap}>
       <span style={lab}>{L("share")}</span>
       {nets.map((n) => (
-        <button key={n} type="button" onClick={() => open(n)} aria-label={`${L("share")} – ${n}`} title={n} style={b}
+        <button key={n} type="button" onClick={() => open(n)} aria-label={`${L("share")} - ${n}`} title={n} style={b}
           onMouseEnter={(e)=>{e.currentTarget.style.background="rgba(128,128,128,.12)";}} onMouseLeave={(e)=>{e.currentTarget.style.background="transparent";}}>
           <Svg d={ICON[n]} />
         </button>
