@@ -897,6 +897,80 @@
       "n": 1
     }
   ],
+  "what-is-ci-cd": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 1
+    },
+    {
+      "en": "What continuous integration means",
+      "fr": "Ce que signifie l'intégration continue",
+      "es": "Qué significa la integración continua",
+      "de": "Was kontinuierliche Integration bedeutet",
+      "it": "Cosa significa integrazione continua",
+      "pt": "O que significa integração contínua",
+      "n": 2
+    },
+    {
+      "en": "Delivery versus deployment",
+      "fr": "Livraison contre déploiement",
+      "es": "Entrega frente a despliegue",
+      "de": "Delivery gegenüber Deployment",
+      "it": "Delivery contro deployment",
+      "pt": "Entrega contra implantação",
+      "n": 1
+    },
+    {
+      "en": "The pipeline: build, test, deploy",
+      "fr": "Le pipeline : build, test, déploiement",
+      "es": "El pipeline: build, test, despliegue",
+      "de": "Die Pipeline: Build, Test, Deployment",
+      "it": "La pipeline: build, test, deployment",
+      "pt": "O pipeline: build, teste, implantação",
+      "n": 1
+    },
+    {
+      "en": "Common CI/CD tools",
+      "fr": "Outils CI/CD courants",
+      "es": "Herramientas CI/CD habituales",
+      "de": "Gängige CI/CD-Werkzeuge",
+      "it": "Strumenti CI/CD comuni",
+      "pt": "Ferramentas CI/CD comuns",
+      "n": 1
+    },
+    {
+      "en": "The benefits",
+      "fr": "Les bénéfices",
+      "es": "Los beneficios",
+      "de": "Die Vorteile",
+      "it": "I vantaggi",
+      "pt": "Os benefícios",
+      "n": 1
+    },
+    {
+      "en": "Honest trade-offs",
+      "fr": "Compromis honnêtes",
+      "es": "Compromisos honestos",
+      "de": "Ehrliche Kompromisse",
+      "it": "Compromessi onesti",
+      "pt": "Compromissos honestos",
+      "n": 1
+    },
+    {
+      "en": "Is CI/CD worth it?",
+      "fr": "Le CI/CD en vaut-il la peine ?",
+      "es": "¿Merece la pena CI/CD?",
+      "de": "Lohnt sich CI/CD?",
+      "it": "Vale la pena il CI/CD?",
+      "pt": "Vale a pena o CI/CD?",
+      "n": 1
+    }
+  ],
   "what-is-a-cdn": [
     {
       "en": "",

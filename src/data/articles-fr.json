@@ -394,6 +394,30 @@
       "Apprendre l'administration de serveurs Linux"
     ]
   },
+  "what-is-ci-cd": {
+    "title": "Qu'est-ce que le CI/CD ? L'intégration et la livraison continues expliquées",
+    "dek": "Le CI/CD est une façon de construire des logiciels où les changements sont fusionnés, testés et livrés via un pipeline automatisé. Ce que veulent dire intégration continue et livraison continue, comment fonctionne le pipeline, les outils courants, et les compromis honnêtes.",
+    "heroAlt": "Du code coloré à coloration syntaxique sur un écran d'ordinateur sombre",
+    "bodyCaption": "Trois serveurs tour sur une étagère, éclairés en bleu.",
+    "paras": [
+      "CI/CD signifie intégration continue (Continuous Integration) et livraison continue (Continuous Delivery), ou déploiement continu (Continuous Deployment). C'est une façon de construire des logiciels où les changements de code passent par un pipeline automatisé qui les fusionne, les compile, les teste et les livre, au lieu de reposer sur des mises en production manuelles et occasionnelles. Le but est simple : détecter les problèmes tôt et amener rapidement et sûrement les changements qui marchent aux utilisateurs.",
+      "L'intégration continue (CI) est la pratique consistant à fusionner fréquemment les changements de chaque développeur dans une branche principale partagée - souvent plusieurs fois par jour - plutôt que de laisser les branches diverger pendant des semaines. Chaque fusion déclenche une compilation et une suite de tests automatisées. Si la compilation casse ou qu'un test échoue, l'équipe le sait en quelques minutes, sur le changement précis qui l'a causé, au lieu de découvrir bien plus tard un enchevêtrement de conflits.",
+      "L'idée centrale de la CI est qu'intégrer par petits pas fréquents est bien moins pénible qu'une grosse fusion à la fin. Comme le code est compilé et testé à chaque changement, la branche principale reste la plupart du temps dans un état sain connu, et chaque échec pointe vers un petit diff récent, rapide à comprendre et à corriger.",
+      "La livraison continue est l'étape suivante : après que le code a passé la CI, il est automatiquement préparé pour la mise en production, si bien que livrer en production devient une action de routine à faible risque - souvent un simple clic ou une approbation. Le déploiement continu va un cran plus loin et supprime totalement l'étape manuelle : chaque changement qui passe les vérifications automatiques est déployé en production de lui-même. Les deux termes sont liés mais pas identiques, et beaucoup d'équipes utilisent la livraison (avec une approbation humaine) plutôt que le déploiement complet.",
+      "Un pipeline type s'exécute en étapes : compiler l'application, lancer les tests (unitaires, d'intégration, parfois de bout en bout), puis déployer - d'abord peut-être vers un environnement de staging, puis en production. Chaque étape doit réussir avant que la suivante commence, si bien qu'un test qui échoue arrête le pipeline avant que du code cassé n'atteigne les utilisateurs. Les pipelines sont généralement définis sous forme de code dans un fichier de configuration qui vit à côté du projet.",
+      "Plusieurs outils implémentent ces pipelines. GitHub Actions et GitLab CI sont intégrés à leurs plateformes respectives et exécutent des pipelines définis dans des fichiers YAML du dépôt. Jenkins est un serveur d'automatisation open source, auto-hébergé et bien établi. CircleCI est un service hébergé centré sur le CI/CD. Ils diffèrent par leur modèle d'hébergement et leur configuration, mais suivent tous le même schéma compilation-test-déploiement.",
+      "Les bénéfices sont concrets : un retour plus rapide sur chaque changement, moins de bugs qui atteignent la production parce que les tests s'exécutent automatiquement, des mises en production plus petites et plus sûres, et moins de travail manuel sujet aux erreurs au moment du déploiement. Quand l'intégration et le déploiement sont routiniers plutôt que rares, les équipes ont tendance à livrer avec plus de confiance.",
+      "Le CI/CD n'est pas gratuit pour autant. Mettre en place un pipeline fiable demande un vrai effort, et il ne vaut que ce que valent les tests derrière lui - des tests faibles donnent une fausse confiance, tandis que des tests instables qui échouent par intermittence érodent la confiance et finissent ignorés. Les minutes de compilation et l'infrastructure coûtent de l'argent, et maintenir le pipeline est un travail continu. Ce sont des compromis à peser, pas des raisons d'éviter le CI/CD.",
+      "Alors, le CI/CD en vaut-il la peine ? Pour la plupart des équipes qui livrent régulièrement du logiciel, oui : l'automatisation rembourse son coût de mise en place en détectant les problèmes tôt et en rendant les mises en production ennuyeuses au meilleur sens du terme. Commencez petit - automatisez d'abord la compilation et une poignée de tests significatifs - et faites grandir le pipeline à mesure que votre projet et votre confiance en lui grandissent."
+    ],
+    "list": [
+      "CI : fusionner et tester souvent de petits changements",
+      "CD : automatiser le chemin vers la mise en production",
+      "Pipeline : compiler puis tester puis déployer",
+      "Outils : GitHub Actions, GitLab CI, Jenkins, CircleCI",
+      "Retour plus rapide, moins de bugs en production"
+    ]
+  },
   "what-is-a-cdn": {
     "title": "Qu'est-ce qu'un CDN ? Les réseaux de diffusion de contenu expliqués",
     "dek": "Un CDN (réseau de diffusion de contenu) est un réseau mondial de serveurs qui met en cache des copies de votre site au plus près des visiteurs, pour des pages plus rapides et un serveur d'origine protégé. Ce qu'est un CDN, comment il fonctionne, et quand en avoir besoin.",
