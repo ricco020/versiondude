@@ -418,6 +418,30 @@
    "Feedback più rapido, meno bug in produzione"
   ]
  },
+ "what-is-an-environment-variable": {
+  "title": "Che cos'è una variabile d'ambiente? Una guida chiara e pratica",
+  "dek": "Una variabile d'ambiente è una coppia chiave=valore che il sistema operativo fornisce a un processo in esecuzione, tenuta fuori dal codice sorgente. Cosa sono, perché contano per la configurazione e i segreti, come definirle e leggerle, e le buone pratiche che tengono i segreti fuori dal tuo repository.",
+  "heroAlt": "Uno schermo di terminale in stile MS-DOS con testo verde sopra una tastiera retroilluminata",
+  "bodyCaption": "Le mani di una persona che digita su un portatile che mostra del codice, in una stanza buia",
+  "paras": [
+   "Una variabile d'ambiente è un valore con nome molto semplice - una chiave e un valore, come DATABASE_URL=postgres://localhost/app - che il sistema operativo rende disponibile a un programma in esecuzione. Vive nell'ambiente del processo anziché dentro il tuo codice sorgente, così il programma può leggerla a runtime senza che il valore venga mai scritto nel codice stesso. Ogni processo parte con un insieme di queste variabili, ereditate da ciò che lo ha avviato.",
+   "Il senso di tenere un valore nell'ambiente invece di scriverlo fisso nel codice è la separazione: lo stesso codice può comportarsi in modo diverso a seconda di dove gira, e i valori sensibili non devono mai trovarsi nei file che committi. Un programma chiede un'impostazione all'ambiente quando ne ha bisogno, e l'ambiente fornisce ciò che è stato configurato per quella specifica macchina, container o deploy.",
+   "L'uso più comune è la configurazione che cambia in base all'ambiente. La tua applicazione potrebbe parlare con un database locale in sviluppo e con uno gestito in produzione, oppure girare in modalità debug sul tuo portatile ma non sul server. Invece di modificare il codice per ogni posto, leggi una variabile - DATABASE_URL, PORT, LOG_LEVEL - e le dai un valore diverso in ogni ambiente. Il codice resta identico; cambia solo l'ambiente.",
+   "Il secondo uso comune sono i segreti: chiavi API, password dei database, token e altre credenziali che non devono mai finire nel controllo di versione. Poiché le variabili d'ambiente vivono fuori dall'albero dei sorgenti, sono un modo standard per fornire questi valori a un programma senza committarli. Il codice legge API_KEY dall'ambiente; la chiave reale esiste solo sulla macchina che lo esegue, mai nel repository.",
+   "Hai già incontrato le variabili d'ambiente anche se non ne hai mai impostata una. PATH indica alla shell in quali directory cercare i comandi, HOME punta alla tua directory home, e variabili come LANG o TZ descrivono la tua lingua e il tuo fuso orario. Sono impostate dal sistema operativo e dalla shell per ogni sessione, e i programmi vi fanno affidamento in modo silenzioso di continuo.",
+   "Impostarle e leggerle è semplice. In una shell in stile Unix scrivi export VAR=valore per impostarne una per la sessione corrente, e la rileggi come $VAR; su Windows la sintassi è diversa ma l'idea è la stessa. Nel codice raggiungi l'ambiente tramite il tuo linguaggio: process.env.VAR in Node.js, os.environ[\"VAR\"] in Python, e chiamate equivalenti nella maggior parte degli altri linguaggi. Il programma riceve una semplice stringa, che può poi usare come serve.",
+   "Digitare gli export a mano diventa presto tedioso, quindi i progetti tengono comunemente le loro variabili in un file - spesso chiamato .env - con una CHIAVE=valore per riga. Una piccola libreria carica quel file nell'ambiente all'avvio del programma: dotenv è l'opzione molto diffusa nel mondo Node.js, e strumenti come direnv possono caricare e scaricare variabili automaticamente quando ti sposti tra le directory di progetto. Così le impostazioni di un progetto restano insieme in un unico posto.",
+   "Questa comodità arriva con la regola più importante: non committare mai i tuoi segreti. Un file .env che contiene chiavi reali deve essere elencato in .gitignore perché resti fuori dal controllo di versione, e i team di solito versionano un .env.example con i nomi delle variabili ma valori vuoti o fittizi. La metodologia twelve-factor app, una guida molto citata per costruire servizi, fa dell'archiviazione della configurazione nell'ambiente uno dei suoi principi fondamentali, proprio per questo motivo.",
+   "Vale la pena conoscere qualche insidia. Le variabili d'ambiente sono stringhe, quindi un valore come \"false\" o \"0\" è comunque una stringa non vuota e può ingannare i controlli di veridicità. Il loro ambito è il processo e ciò che esso avvia, quindi una variabile impostata in una shell non comparirà in un'altra. E poiché spesso portano segreti, fai attenzione a non stampare l'intero ambiente nei log o nell'output di errore, dove una chiave potrebbe trapelare. Trattale come semplice configurazione, tieni i segreti fuori dal tuo repository, e le variabili d'ambiente diventano uno degli strumenti più semplici e affidabili nella cassetta degli attrezzi dello sviluppatore."
+  ],
+  "list": [
+   "Una coppia chiave=valore che l'OS dà a un processo",
+   "Config che cambia per ambiente (dev/prod)",
+   "Segreti e chiavi API, tenuti fuori dal codice",
+   "Imposta con export VAR=valore; leggi via process.env / os.environ",
+   "Tieni .env in .gitignore - non committare mai i segreti"
+  ]
+ },
  "what-is-a-cdn": {
   "title": "Che cos'è un CDN? Le reti di distribuzione dei contenuti spiegate",
   "dek": "Un CDN (rete di distribuzione dei contenuti) è una rete mondiale di server che mette in cache copie del tuo sito il più vicino possibile ai visitatori, per pagine più veloci e un server d'origine protetto. Cos'è un CDN, come funziona, e quando ne hai bisogno.",

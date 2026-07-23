@@ -418,6 +418,30 @@
    "Retour plus rapide, moins de bugs en production"
   ]
  },
+ "what-is-an-environment-variable": {
+  "title": "Qu'est-ce qu'une variable d'environnement ? Un guide clair et pratique",
+  "dek": "Une variable d'environnement est une paire cle=valeur que le systeme d'exploitation fournit a un processus en cours d'execution, gardee hors du code source. Ce que c'est, pourquoi elle compte pour la config et les secrets, comment la definir et la lire, et les bonnes pratiques qui gardent vos secrets hors du depot.",
+  "heroAlt": "Un ecran de terminal style MS-DOS a texte vert au-dessus d'un clavier retroeclaire",
+  "bodyCaption": "Les mains d'une personne tapant sur un ordinateur portable affichant du code, dans une piece sombre",
+  "paras": [
+   "Une variable d'environnement est une valeur nommee toute simple - une cle et une valeur, comme DATABASE_URL=postgres://localhost/app - que le systeme d'exploitation rend disponible a un programme en cours d'execution. Elle vit dans l'environnement du processus plutot que dans votre code source, si bien que le programme peut la lire a l'execution sans que la valeur ne soit jamais ecrite dans le code lui-meme. Chaque processus demarre avec un ensemble de ces variables, heritees de ce qui l'a lance.",
+   "L'interet de garder une valeur dans l'environnement plutot que de la coder en dur, c'est la separation : le meme code peut se comporter differemment selon l'endroit ou il tourne, et les valeurs sensibles n'ont jamais a figurer dans les fichiers que vous committez. Un programme demande un reglage a l'environnement quand il en a besoin, et l'environnement fournit ce qui a ete configure pour cette machine, ce conteneur ou ce deploiement precis.",
+   "L'usage le plus courant est la configuration qui change selon l'environnement. Votre application peut parler a une base de donnees locale en developpement et a une base geree en production, ou tourner en mode debogage sur votre portable mais pas sur le serveur. Au lieu de modifier le code pour chaque endroit, vous lisez une variable - DATABASE_URL, PORT, LOG_LEVEL - et lui donnez une valeur differente dans chaque environnement. Le code reste identique ; seul l'environnement change.",
+   "Le deuxieme usage courant, ce sont les secrets : cles d'API, mots de passe de base de donnees, jetons et autres identifiants qui ne doivent jamais finir dans le controle de version. Comme les variables d'environnement vivent hors de l'arborescence source, elles sont un moyen standard de fournir ces valeurs a un programme sans les committer. Le code lit API_KEY depuis l'environnement ; la vraie cle n'existe que sur la machine qui l'execute, jamais dans le depot.",
+   "Vous avez deja rencontre des variables d'environnement, meme sans en avoir defini une. PATH indique au shell dans quels dossiers chercher les commandes, HOME pointe vers votre repertoire personnel, et des variables comme LANG ou TZ decrivent votre langue et votre fuseau horaire. Elles sont definies par le systeme d'exploitation et le shell a chaque session, et les programmes s'y fient discretement en permanence.",
+   "Les definir et les lire est simple. Dans un shell de type Unix vous ecrivez export VAR=valeur pour en definir une pour la session en cours, et vous la relisez avec $VAR ; sous Windows la syntaxe differe mais l'idee est la meme. Dans le code, vous atteignez l'environnement via votre langage : process.env.VAR en Node.js, os.environ[\"VAR\"] en Python, et des appels equivalents dans la plupart des autres langages. Le programme recupere une simple chaine de caracteres, qu'il peut ensuite utiliser comme il en a besoin.",
+   "Taper les exports a la main devient vite fastidieux, alors les projets gardent couramment leurs variables dans un fichier - souvent nomme .env - avec une CLE=valeur par ligne. Une petite bibliotheque charge ce fichier dans l'environnement au demarrage du programme : dotenv est l'option tres repandue dans le monde Node.js, et des outils comme direnv peuvent charger et decharger des variables automatiquement quand vous passez d'un dossier de projet a l'autre. Cela regroupe les reglages d'un projet en un seul endroit.",
+   "Cette commodite vient avec la regle la plus importante : ne committez jamais vos secrets. Un fichier .env qui contient de vraies cles doit etre liste dans .gitignore pour rester hors du controle de version, et les equipes versionnent generalement un .env.example avec les noms des variables mais des valeurs vides ou factices a la place. La methodologie twelve-factor app, un guide largement cite pour construire des services, fait du stockage de la configuration dans l'environnement l'un de ses principes fondamentaux, precisement pour cette raison.",
+   "Quelques pieges valent la peine d'etre connus. Les variables d'environnement sont des chaines de caracteres, donc une valeur comme \"false\" ou \"0\" reste une chaine non vide et peut fausser les tests de veracite. Leur portee est le processus et ce qu'il lance, donc une variable definie dans un shell n'apparaitra pas dans un autre. Et comme elles portent souvent des secrets, prenez garde a ne pas afficher tout l'environnement dans les journaux ou les sorties d'erreur, ou une cle pourrait fuiter. Traitez-les comme de la simple configuration, gardez les secrets hors de votre depot, et les variables d'environnement deviennent l'un des outils les plus simples et les plus fiables de la boite du developpeur."
+  ],
+  "list": [
+   "Une paire cle=valeur que l'OS donne a un processus",
+   "Config qui change selon l'environnement (dev/prod)",
+   "Secrets et cles d'API, gardes hors du code",
+   "Definir avec export VAR=valeur ; lire via process.env / os.environ",
+   "Gardez .env dans .gitignore - ne committez jamais de secrets"
+  ]
+ },
  "what-is-a-cdn": {
   "title": "Qu'est-ce qu'un CDN ? Les réseaux de diffusion de contenu expliqués",
   "dek": "Un CDN (réseau de diffusion de contenu) est un réseau mondial de serveurs qui met en cache des copies de votre site au plus près des visiteurs, pour des pages plus rapides et un serveur d'origine protégé. Ce qu'est un CDN, comment il fonctionne, et quand en avoir besoin.",

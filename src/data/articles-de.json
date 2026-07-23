@@ -418,6 +418,30 @@
    "Schnelleres Feedback, weniger Fehler in der Produktion"
   ]
  },
+ "what-is-an-environment-variable": {
+  "title": "Was ist eine Umgebungsvariable? Ein klarer, praktischer Leitfaden",
+  "dek": "Eine Umgebungsvariable ist ein Schlüssel=Wert-Paar, das das Betriebssystem einem laufenden Prozess übergibt und das außerhalb des Quellcodes bleibt. Was sie sind, warum sie für Konfiguration und Geheimnisse wichtig sind, wie man sie setzt und liest, und die guten Praktiken, die Geheimnisse aus deinem Repository heraushalten.",
+  "heroAlt": "Ein Terminalbildschirm im MS-DOS-Stil mit grünem Text über einer hintergrundbeleuchteten Tastatur",
+  "bodyCaption": "Die Hände einer Person tippen auf einem Laptop, der Code anzeigt, in einem dunklen Raum",
+  "paras": [
+   "Eine Umgebungsvariable ist ein ganz einfacher benannter Wert - ein Schlüssel und ein Wert, wie DATABASE_URL=postgres://localhost/app -, den das Betriebssystem einem laufenden Programm zur Verfügung stellt. Sie lebt in der Prozessumgebung statt in deinem Quellcode, sodass das Programm sie zur Laufzeit lesen kann, ohne dass der Wert je in den Code selbst geschrieben wird. Jeder Prozess startet mit einer Reihe dieser Variablen, geerbt von dem, was ihn gestartet hat.",
+   "Der Sinn, einen Wert in der Umgebung statt fest im Code zu halten, ist die Trennung: Derselbe Code kann sich je nach Ausführungsort anders verhalten, und sensible Werte müssen nie in den Dateien stehen, die du commitest. Ein Programm fragt die Umgebung nach einer Einstellung, wenn es eine braucht, und die Umgebung liefert, was für diese bestimmte Maschine, diesen Container oder dieses Deployment konfiguriert wurde.",
+   "Die häufigste Verwendung ist Konfiguration, die sich je nach Umgebung ändert. Deine Anwendung spricht vielleicht in der Entwicklung mit einer lokalen Datenbank und in der Produktion mit einer verwalteten, oder läuft auf deinem Laptop im Debug-Modus, aber nicht auf dem Server. Statt den Code für jeden Ort zu ändern, liest du eine Variable - DATABASE_URL, PORT, LOG_LEVEL - und gibst ihr in jeder Umgebung einen anderen Wert. Der Code bleibt identisch; nur die Umgebung unterscheidet sich.",
+   "Die zweite häufige Verwendung sind Geheimnisse: API-Schlüssel, Datenbankpasswörter, Tokens und andere Zugangsdaten, die niemals in der Versionsverwaltung landen dürfen. Weil Umgebungsvariablen außerhalb des Quellbaums leben, sind sie ein Standardweg, diese Werte einem Programm zu übergeben, ohne sie zu commiten. Der Code liest API_KEY aus der Umgebung; der eigentliche Schlüssel existiert nur auf der Maschine, die ihn ausführt, nie im Repository.",
+   "Du bist Umgebungsvariablen bereits begegnet, auch wenn du keine gesetzt hast. PATH sagt der Shell, in welchen Verzeichnissen sie nach Befehlen suchen soll, HOME zeigt auf dein Home-Verzeichnis, und Variablen wie LANG oder TZ beschreiben deine Sprache und Zeitzone. Sie werden vom Betriebssystem und der Shell für jede Sitzung gesetzt, und Programme verlassen sich ständig unauffällig auf sie.",
+   "Setzen und Lesen ist unkompliziert. In einer Unix-artigen Shell schreibst du export VAR=Wert, um eine für die aktuelle Sitzung zu setzen, und liest sie als $VAR zurück; unter Windows unterscheidet sich die Syntax, aber die Idee ist dieselbe. Im Code erreichst du die Umgebung über deine Sprache: process.env.VAR in Node.js, os.environ[\"VAR\"] in Python, und entsprechende Aufrufe in den meisten anderen Sprachen. Das Programm bekommt eine einfache Zeichenkette zurück, die es dann nach Bedarf verwenden kann.",
+   "Exporte von Hand zu tippen wird schnell mühsam, deshalb halten Projekte ihre Variablen üblicherweise in einer Datei - oft .env genannt - mit einem SCHLÜSSEL=Wert pro Zeile. Eine kleine Bibliothek lädt diese Datei beim Programmstart in die Umgebung: dotenv ist die weit verbreitete Option in der Node.js-Welt, und Werkzeuge wie direnv können Variablen automatisch laden und entladen, wenn du zwischen Projektverzeichnissen wechselst. So bleiben die Einstellungen eines Projekts an einem Ort beisammen.",
+   "Diese Bequemlichkeit kommt mit der wichtigsten Regel: Commite niemals deine Geheimnisse. Eine .env-Datei mit echten Schlüsseln muss in .gitignore aufgeführt sein, damit sie außerhalb der Versionsverwaltung bleibt, und Teams checken üblicherweise eine .env.example mit den Variablennamen, aber leeren oder Platzhalter-Werten ein. Die twelve-factor-app-Methodik, ein viel zitierter Leitfaden zum Bau von Diensten, macht das Speichern der Konfiguration in der Umgebung genau aus diesem Grund zu einem ihrer Kernprinzipien.",
+   "Ein paar Fallstricke sollte man kennen. Umgebungsvariablen sind Zeichenketten, also ist ein Wert wie \"false\" oder \"0\" immer noch eine nicht leere Zeichenkette und kann Wahrheitsprüfungen aushebeln. Ihr Geltungsbereich ist der Prozess und was er startet, sodass eine in einer Shell gesetzte Variable in einer anderen nicht erscheint. Und weil sie oft Geheimnisse tragen, achte darauf, nicht die gesamte Umgebung in Logs oder Fehlerausgaben zu drucken, wo ein Schlüssel durchsickern könnte. Behandle sie als einfache Konfiguration, halte die Geheimnisse aus deinem Repository heraus, und Umgebungsvariablen werden zu einem der einfachsten und zuverlässigsten Werkzeuge im Werkzeugkasten des Entwicklers."
+  ],
+  "list": [
+   "Ein Schlüssel=Wert-Paar, das das OS einem Prozess gibt",
+   "Konfiguration, die sich je Umgebung ändert (dev/prod)",
+   "Geheimnisse und API-Schlüssel, außerhalb des Codes",
+   "Setzen mit export VAR=Wert; lesen via process.env / os.environ",
+   "Halte .env in .gitignore - commite nie Geheimnisse"
+  ]
+ },
  "what-is-a-cdn": {
   "title": "Was ist ein CDN? Content-Delivery-Netzwerke erklärt",
   "dek": "Ein CDN (Content Delivery Network) ist ein weltweites Netzwerk von Servern, das Kopien Ihrer Website möglichst nah bei den Besuchern zwischenspeichert, für schnellere Seiten und einen geschützten Ursprungsserver. Was ein CDN ist, wie es funktioniert und wann Sie eines brauchen.",

@@ -971,6 +971,80 @@
    "n": 1
   }
  ],
+ "what-is-an-environment-variable": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "Why not just hard-code it?",
+   "fr": "Pourquoi ne pas simplement coder la valeur en dur ?",
+   "es": "¿Por qué no codificarlo de forma fija?",
+   "de": "Warum nicht einfach fest im Code?",
+   "it": "Perché non scriverlo fisso nel codice?",
+   "pt": "Porque não escrever fixo no código?",
+   "n": 1
+  },
+  {
+   "en": "Config that changes per environment",
+   "fr": "Une config qui change selon l'environnement",
+   "es": "Configuración que cambia según el entorno",
+   "de": "Konfiguration, die sich je Umgebung ändert",
+   "it": "Configurazione che cambia per ambiente",
+   "pt": "Configuração que muda por ambiente",
+   "n": 1
+  },
+  {
+   "en": "Secrets and API keys",
+   "fr": "Secrets et cles d'API",
+   "es": "Secretos y claves de API",
+   "de": "Geheimnisse und API-Schlüssel",
+   "it": "Segreti e chiavi API",
+   "pt": "Segredos e chaves de API",
+   "n": 1
+  },
+  {
+   "en": "Variables you already use",
+   "fr": "Des variables que vous utilisez deja",
+   "es": "Variables que ya usas",
+   "de": "Variablen, die du bereits nutzt",
+   "it": "Variabili che usi già",
+   "pt": "Variáveis que já usas",
+   "n": 1
+  },
+  {
+   "en": "Setting and reading them",
+   "fr": "Les definir et les lire",
+   "es": "Definirlas y leerlas",
+   "de": "Setzen und lesen",
+   "it": "Impostarle e leggerle",
+   "pt": "Defini-las e lê-las",
+   "n": 2
+  },
+  {
+   "en": "Never commit your secrets",
+   "fr": "Ne committez jamais vos secrets",
+   "es": "Nunca confirmes tus secretos",
+   "de": "Commite niemals deine Geheimnisse",
+   "it": "Non committare mai i tuoi segreti",
+   "pt": "Nunca confirmes os teus segredos",
+   "n": 1
+  },
+  {
+   "en": "Pitfalls to watch for",
+   "fr": "Les pieges a surveiller",
+   "es": "Trampas que vigilar",
+   "de": "Fallstricke, auf die man achten sollte",
+   "it": "Insidie a cui fare attenzione",
+   "pt": "Armadilhas a vigiar",
+   "n": 1
+  }
+ ],
  "what-is-a-cdn": [
   {
    "en": "",
