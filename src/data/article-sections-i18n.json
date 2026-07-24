@@ -1045,6 +1045,80 @@
    "n": 1
   }
  ],
+ "what-is-a-package-manager": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "The problem it solves: dependencies",
+   "fr": "Le probleme qu'il resout : les dependances",
+   "es": "El problema que resuelve: las dependencias",
+   "de": "Das Problem, das er löst: Abhängigkeiten",
+   "it": "Il problema che risolve: le dipendenze",
+   "pt": "O problema que resolve: as dependências",
+   "n": 1
+  },
+  {
+   "en": "Operating-system package managers",
+   "fr": "Les gestionnaires de paquets du systeme",
+   "es": "Gestores de paquetes del sistema operativo",
+   "de": "Paketmanager des Betriebssystems",
+   "it": "I gestori di pacchetti del sistema operativo",
+   "pt": "Gestores de pacotes do sistema operativo",
+   "n": 1
+  },
+  {
+   "en": "Language and project package managers",
+   "fr": "Les gestionnaires de langage et de projet",
+   "es": "Gestores de paquetes de lenguaje y proyecto",
+   "de": "Sprach- und Projekt-Paketmanager",
+   "it": "Gestori di pacchetti di linguaggio e progetto",
+   "pt": "Gestores de pacotes de linguagem e projeto",
+   "n": 1
+  },
+  {
+   "en": "Repositories, registries and version resolution",
+   "fr": "Depots, registres et resolution des versions",
+   "es": "Repositorios, registros y resolución de versiones",
+   "de": "Repositories, Registries und Versionsauflösung",
+   "it": "Repository, registri e risoluzione delle versioni",
+   "pt": "Repositórios, registos e resolução de versões",
+   "n": 1
+  },
+  {
+   "en": "Lockfiles and reproducible installs",
+   "fr": "Lockfiles et installations reproductibles",
+   "es": "Lockfiles e instalaciones reproducibles",
+   "de": "Lockfiles und reproduzierbare Installationen",
+   "it": "Lockfile e installazioni riproducibili",
+   "pt": "Lockfiles e instalações reproduzíveis",
+   "n": 1
+  },
+  {
+   "en": "Good practices",
+   "fr": "Bonnes pratiques",
+   "es": "Buenas prácticas",
+   "de": "Gute Praktiken",
+   "it": "Buone pratiche",
+   "pt": "Boas práticas",
+   "n": 1
+  },
+  {
+   "en": "Pitfalls to watch for",
+   "fr": "Les pieges a surveiller",
+   "es": "Trampas que vigilar",
+   "de": "Fallstricke, auf die man achten sollte",
+   "it": "Insidie a cui fare attenzione",
+   "pt": "Armadilhas a vigiar",
+   "n": 2
+  }
+ ],
  "what-is-a-cdn": [
   {
    "en": "",
