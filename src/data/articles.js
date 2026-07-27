@@ -122,6 +122,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'js-framework-release-cadence-2026', category: 'guides', readingMinutes: 8, date: '2026-07-27',
+    title: "How Often Do JavaScript Frameworks Actually Release? We Measured 1,000 Releases",
+    dek: "We pulled the last 100 GitHub releases of ten front-end projects and split stable versions from prereleases. Next.js turned out to be 88 percent prereleases, Svelte and React Router zero, and stable cadence spans roughly eighty times. Data, method and limits.",
+    hero: '/assets/articles/js-framework-release-cadence-2026-hero.jpg', heroAlt: "Colour-highlighted JavaScript code on a dark screen",
+    body: '/assets/articles/js-framework-release-cadence-2026-body.jpg', bodyCaption: "A spiral-bound paper planner open on mid-April with a pen resting across the page. Release cadence comes down to how often those dates fill up.",
+    paras: ENX['js-framework-release-cadence-2026'].paras,
+    list: ENX['js-framework-release-cadence-2026'].list,
+    related: 'what-is-semantic-versioning',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'what-is-a-changelog', category: 'guides', readingMinutes: 7, date: '2026-07-21',
     title: "What Is a Changelog? Keep a Changelog and Versioned Release Notes, Explained",
     dek: "A changelog is a human-readable file listing the notable changes in each version of a project. The Keep a Changelog convention, the standard change groups, and how it ties into Semantic Versioning.",
@@ -718,6 +729,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "js-framework-release-cadence-2026": { fr: "frequence-publication-frameworks-js-2026", es: "frecuencia-publicacion-frameworks-js-2026", de: "release-frequenz-js-frameworks-2026", it: "frequenza-rilasci-framework-js-2026", pt: "frequencia-lancamentos-frameworks-js-2026" },
   "what-is-a-changelog": { fr: "qu-est-ce-qu-un-changelog", es: "que-es-un-changelog", de: "was-ist-ein-changelog", it: "che-cos-e-un-changelog", pt: "o-que-e-um-changelog" },
   "what-is-a-lockfile": { fr: "qu-est-ce-qu-un-lockfile", es: "que-es-un-lockfile", de: "was-ist-eine-lockfile", it: "cos-e-un-lockfile", pt: "o-que-e-um-lockfile" },
   "what-is-semantic-versioning": { fr: "qu-est-ce-que-le-versionnage-semantique", es: "que-es-el-versionado-semantico", de: "was-ist-semantische-versionierung", it: "cos-e-il-versionamento-semantico", pt: "o-que-e-o-versionamento-semantico" },

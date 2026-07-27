@@ -1902,5 +1902,70 @@
    "pt": "Atualizar lockfiles e bons hábitos",
    "n": 2
   }
+ ],
+ "js-framework-release-cadence-2026": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 2
+  },
+  {
+   "en": "The surprise: Next.js publishes 88 percent prereleases",
+   "fr": "La surprise : Next.js publie 88 % de préversions",
+   "es": "La sorpresa: Next.js publica un 88 % de preversiones",
+   "de": "Die Überraschung: Next.js veröffentlicht 88 Prozent Vorabversionen",
+   "it": "La sorpresa: Next.js pubblica l'88 per cento di prerelease",
+   "pt": "A surpresa: o Next.js publica 88 por cento de pré-lançamentos",
+   "n": 2
+  },
+  {
+   "en": "The opposite approach: zero prereleases",
+   "fr": "L'approche inverse : aucune préversion",
+   "es": "El enfoque opuesto: cero preversiones",
+   "de": "Der umgekehrte Ansatz: keine Vorabversionen",
+   "it": "L'approccio opposto: nessuna prerelease",
+   "pt": "A abordagem oposta: zero pré-lançamentos",
+   "n": 2
+  },
+  {
+   "en": "How often stable versions actually ship",
+   "fr": "À quelle fréquence les versions stables sortent vraiment",
+   "es": "Con qué frecuencia salen realmente las versiones estables",
+   "de": "Wie oft stabile Versionen wirklich erscheinen",
+   "it": "Con quale frequenza escono davvero le versioni stabili",
+   "pt": "Com que frequência saem realmente as versões estáveis",
+   "n": 2
+  },
+  {
+   "en": "Fast is not better than slow",
+   "fr": "Rapide ne veut pas dire meilleur que lent",
+   "es": "Rápido no es mejor que lento",
+   "de": "Schnell ist nicht besser als langsam",
+   "it": "Veloce non significa meglio di lento",
+   "pt": "Rápido não é melhor do que lento",
+   "n": 2
+  },
+  {
+   "en": "The limits of this measurement",
+   "fr": "Les limites de cette mesure",
+   "es": "Los límites de esta medición",
+   "de": "Die Grenzen dieser Messung",
+   "it": "I limiti di questa misurazione",
+   "pt": "Os limites desta medição",
+   "n": 1
+  },
+  {
+   "en": "What to take away",
+   "fr": "Ce qu'il faut en retenir",
+   "es": "Qué conviene retener",
+   "de": "Was Sie mitnehmen sollten",
+   "it": "Che cosa ricordare",
+   "pt": "O que reter",
+   "n": 1
+  }
  ]
 }
