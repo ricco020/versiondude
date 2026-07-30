@@ -835,5 +835,22 @@
    "Beispiele: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
    "Committe sie bei Anwendungen; nutze eine strikte Installation (npm ci) in CI; bearbeite sie nicht von Hand, erzeuge sie bei Merge-Konflikten neu."
   ]
+ },
+ "nu-html-checker": {
+  "title": "Der Nu Html Checker nennt sich selbst ein Experiment. Was das für deinen Build bedeutet",
+  "dek": "Der HTML-Referenzprüfer warnt, dass null Fehler heute keine null Fehler morgen garantieren und dass er keine Pass/Fail-Zertifizierung ist. So bindest du ihn trotzdem sinnvoll ein.",
+  "heroAlt": "Ein Code-Editor, der eine index.html-Datei mit ihrem Doctype und den Metadaten im head zeigt",
+  "bodyCaption": "Eine in einem Editor geöffnete index.html-Datei, die die Meta-Tags, die verlinkten Stylesheets und den Anfang des body zeigt.",
+  "paras": [
+   "Der Nu Html Checker ist das Werkzeug hinter validator.w3.org/nu, und er kommt einer Referenzimplementierung für die Konformitätsprüfung im Web am nächsten. Er ist über sich selbst außerdem deutlich zurückhaltender als die Leute, die sich auf ihn verlassen. Seine eigene Dokumentation beschreibt ihn als ein laufendes Experiment für bessere HTML-Prüfung und ergänzt, dass sein Verhalten weiterhin Änderungen unterliegt.",
+   "Dieser Satz hat eine praktische Folge, mit der die meisten Teams nie planen. Die Dokumentation schreibt es aus: Es gibt keine Garantie dafür, dass der Prüfer, wenn er zu einem Zeitpunkt null Fehler für ein Dokument meldet, später für dasselbe Dokument ebenfalls null Fehler meldet. Mit der Zeit kommen neue Prüfungen hinzu. Eine Seite, die im letzten Quartal durchlief, kann heute durchfallen, ohne dass jemand sie angefasst hat.",
+   "Das Projekt ist ebenso deutlich darin, was es nicht ist. Es hält fest, dass der Prüfer nicht dazu verwendet werden sollte, einseitig eine Pass/Fail-Konformität mit irgendeiner bestimmten Spezifikation durchzusetzen, und dass er ausschließlich als Prüfer gedacht ist, nicht als Pass/Fail-Zertifizierungsmechanismus. Ein grünes Ergebnis als Zertifikat zu behandeln, liest mehr hinein, als seine eigenen Autoren es tun.",
+   "Nichts davon ist ein Argument dafür, die Validierung zu überspringen. Es ist ein Argument dafür, sie mit den richtigen Erwartungen einzubinden. Die nützliche Frage lautet nicht, ob die Site validiert, sondern ob diese Änderung neue Fehler eingeführt hat. Das ist ein Vergleich, kein Urteil.",
+   "Du bist auch nicht verpflichtet, die öffentliche Instanz zu nutzen. Der Prüfer wird als vnu.jar ausgeliefert und läuft von der Kommandozeile aus gegen Dateien, ein Verzeichnis oder eine URL. Er läuft als eigenständiger HTTP-Dienst, der dem öffentlichen entspricht, oder als .war, das in einem Servlet-Container bereitgestellt wird. Docker-Images, ein npm-Paket und eine Homebrew-Formel werden ebenfalls veröffentlicht. Das Projekt steht unter MIT-Lizenz, und das jar benötigt Java 17 oder neuer.",
+   "Eine eigene Instanz zu betreiben löst zwei Probleme auf einmal. Es beseitigt die Abhängigkeit von einem öffentlichen Dienst, den du nicht kontrollierst, und es pinnt die Version, sodass sich der Prüfer nur dann ändert, wenn du dich für ein Upgrade entscheidest. Das beantwortet den Stabilitätsvorbehalt direkt: Dein Build hört auf, sich unter dir zu bewegen.",
+   "Auch der Umfang ist größer, als der Name vermuten lässt. Der Prüfer deckt HTML, CSS und SVG ab, sodass ein einziger Durchlauf Problemklassen erfasst, die Teams sonst häufig auf getrennte Werkzeuge verteilen.",
+   "Daraus ergibt sich ein praktikables Setup. Pinne eine Version in deiner eigenen Infrastruktur. Lass sie über die gebaute Ausgabe laufen statt über die Templates, denn was ausgeliefert wird, ist das, was die Nutzer erhalten. Halte die aktuelle Fehlerzahl als Baseline fest und lass den Build fehlschlagen, wenn diese Zahl steigt, statt schon dann, wenn sie lediglich ungleich null ist. Aktualisiere den Prüfer anschließend bewusst und behandle die dabei auftauchenden Fehler als eigenes Arbeitspaket statt als kaputte Pipeline.",
+   "Das bewahrt den eigentlichen Wert der Validierung, nämlich Regressionen günstig abzufangen, ohne eine Garantie zu behaupten, die das Werkzeug ausdrücklich ablehnt."
+  ]
  }
 }

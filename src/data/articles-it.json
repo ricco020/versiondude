@@ -835,5 +835,22 @@
    "Esempi: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
    "Fai il commit per le applicazioni; usa un'installazione rigorosa (npm ci) in CI; non modificarlo a mano, rigeneralo in caso di conflitti di merge."
   ]
+ },
+ "nu-html-checker": {
+  "title": "Il Nu Html Checker si definisce un esperimento. Che cosa significa per la tua build",
+  "dek": "Il verificatore HTML di riferimento avverte che zero errori oggi non garantisce zero errori domani, e che non è una certificazione pass/fail. Ecco come integrarlo comunque.",
+  "heroAlt": "Un editor di codice che mostra un file index.html con il suo doctype e i metadati del head",
+  "bodyCaption": "Un file index.html aperto in un editor, che mostra i tag meta, i fogli di stile collegati e l'inizio del body.",
+  "paras": [
+   "Il Nu Html Checker è lo strumento dietro validator.w3.org/nu, ed è quanto di più vicino a un'implementazione di riferimento per la verifica di conformità il web possieda. È anche parecchio più modesto su se stesso di quanto lo siano le persone che vi fanno affidamento. La sua stessa documentazione lo descrive come un esperimento in corso per verificare meglio l'HTML, e aggiunge che il suo comportamento resta soggetto a cambiamenti.",
+   "Quella frase ha una conseguenza pratica che la maggior parte dei team non mette mai in conto. La documentazione lo scrive nero su bianco: non c'è alcuna garanzia che, se il verificatore segnala zero errori per un documento in un dato momento, segnalerà zero errori per lo stesso documento più avanti. Nuovi controlli vengono aggiunti nel tempo. Una pagina che passava il trimestre scorso può fallire oggi senza che nessuno l'abbia toccata.",
+   "Il progetto è altrettanto esplicito su ciò che non è. Afferma che il verificatore non dovrebbe essere usato per imporre unilateralmente una conformità pass/fail a una particolare specifica, e che è pensato unicamente come verificatore, non come meccanismo di certificazione pass/fail. Trattare un esito verde come un certificato significa leggerci dentro più di quanto facciano i suoi stessi autori.",
+   "Nulla di tutto ciò è un argomento per saltare la validazione. È un argomento per integrarla con le aspettative giuste. La domanda utile non è se il sito valida, ma se questa modifica ha introdotto nuovi errori. Questo è un confronto, non un verdetto.",
+   "Non sei nemmeno obbligato a usare l'istanza pubblica. Il verificatore viene distribuito come vnu.jar e si esegue da riga di comando su file, una directory o un URL. Funziona come servizio HTTP autonomo equivalente a quello pubblico, oppure come .war distribuito in un container di servlet. Vengono pubblicate anche immagini Docker, un pacchetto npm e una formula Homebrew. Il progetto è rilasciato con licenza MIT, e il jar richiede Java 17 o successivo.",
+   "Eseguire la propria istanza risolve due problemi in un colpo solo. Elimina una dipendenza da un servizio pubblico che non controlli, e blocca la versione, così il verificatore cambia solo quando decidi tu di aggiornarlo. Questo risponde direttamente all'avvertenza sulla stabilità: la tua build smette di muoversi sotto i tuoi piedi.",
+   "Anche il perimetro è più ampio di quanto suggerisca il nome. Il verificatore copre HTML, CSS e SVG, quindi un solo passaggio intercetta classi di problemi che i team spesso distribuiscono su strumenti separati.",
+   "Da tutto questo discende una configurazione praticabile. Blocca una versione nella tua infrastruttura. Eseguila sull'output costruito anziché sui template, dato che ciò che viene pubblicato è ciò che gli utenti ricevono. Registra il numero di errori attuale come baseline e fai fallire la build quando quel numero sale, invece che quando è semplicemente diverso da zero. Poi aggiorna il verificatore in modo deliberato, e tratta gli errori che emergono come un lavoro a sé stante anziché come una pipeline rotta.",
+   "Questo preserva il valore reale della validazione, cioè intercettare le regressioni a basso costo, senza rivendicare una garanzia che lo strumento dichiara esplicitamente di non dare."
+  ]
  }
 }

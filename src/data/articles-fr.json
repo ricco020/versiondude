@@ -835,5 +835,22 @@
    "Exemples : package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
    "Committez-le pour les applications ; utilisez une installation stricte (npm ci) en CI ; ne l'editez pas a la main, regenerez-le en cas de conflit de fusion."
   ]
+ },
+ "nu-html-checker": {
+  "title": "Le Nu Html Checker se qualifie lui-même d'expérience. Ce que cela implique pour votre build",
+  "dek": "Le vérificateur HTML de référence prévient que zéro erreur aujourd'hui ne garantit pas zéro erreur demain, et qu'il n'est pas une certification pass/fail. Voici comment l'intégrer malgré tout.",
+  "heroAlt": "Un éditeur de code affichant un fichier index.html avec son doctype et les métadonnées de son head",
+  "bodyCaption": "Un fichier index.html ouvert dans un éditeur, montrant les balises meta, les feuilles de style liées et le début du body.",
+  "paras": [
+   "Le Nu Html Checker est l'outil derrière validator.w3.org/nu, et c'est ce qui se rapproche le plus d'une implémentation de référence pour la vérification de conformité sur le web. Il est aussi nettement plus modeste à son propre sujet que les personnes qui s'appuient sur lui. Sa propre documentation le décrit comme une expérience en cours pour mieux vérifier le HTML, et ajoute que son comportement reste susceptible de changer.",
+   "Cette phrase a une conséquence pratique que la plupart des équipes n'anticipent jamais. La documentation l'énonce clairement : il n'y a aucune garantie que si le vérificateur ne signale aucune erreur pour un document à un instant donné, il n'en signalera aucune pour ce même document plus tard. De nouvelles vérifications sont ajoutées au fil du temps. Une page qui passait le trimestre dernier peut échouer aujourd'hui sans que personne n'y ait touché.",
+   "Le projet est tout aussi explicite sur ce qu'il n'est pas. Il indique que le vérificateur ne devrait pas être utilisé pour imposer unilatéralement une conformité pass/fail à une spécification particulière, et qu'il est conçu uniquement comme un vérificateur, non comme un mécanisme de certification pass/fail. Traiter un résultat au vert comme un certificat, c'est y lire davantage que ce que ses propres auteurs y mettent.",
+   "Rien de tout cela n'est un argument pour sauter la validation. C'est un argument pour l'intégrer avec les bonnes attentes. La question utile n'est pas de savoir si le site se valide, mais si ce changement a introduit de nouvelles erreurs. C'est une comparaison, pas un verdict.",
+   "Vous n'êtes pas non plus obligé d'utiliser l'instance publique. Le vérificateur est distribué sous forme de vnu.jar et s'exécute en ligne de commande sur des fichiers, un répertoire ou une URL. Il fonctionne comme service HTTP autonome équivalent au service public, ou comme un .war déployé dans un conteneur de servlets. Des images Docker, un paquet npm et une formule Homebrew sont également publiés. Le projet est sous licence MIT, et le jar nécessite Java 17 ou une version ultérieure.",
+   "Exécuter votre propre instance résout deux problèmes à la fois. Cela supprime une dépendance à un service public que vous ne contrôlez pas, et cela fige la version, de sorte que le vérificateur ne change que lorsque vous décidez de le mettre à jour. Cela répond directement à la réserve sur la stabilité : votre build cesse de bouger sous vos pieds.",
+   "Le périmètre est aussi plus large que le nom ne le laisse penser. Le vérificateur couvre HTML, CSS et SVG, si bien qu'un seul passage attrape des catégories de problèmes que les équipes répartissent souvent entre plusieurs outils distincts.",
+   "Une mise en place viable découle de tout cela. Figez une version dans votre propre infrastructure. Exécutez-la sur la sortie construite plutôt que sur les gabarits, puisque ce qui est livré est ce que les utilisateurs reçoivent. Enregistrez le nombre d'erreurs actuel comme baseline et faites échouer le build quand ce nombre augmente, plutôt que quand il est simplement non nul. Ensuite, mettez le vérificateur à jour délibérément, et traitez les erreurs qui apparaissent comme un travail à part entière plutôt que comme un pipeline cassé.",
+   "Cela préserve la vraie valeur de la validation, qui est d'attraper les régressions à moindre coût, sans revendiquer une garantie que l'outil décline explicitement."
+  ]
  }
 }

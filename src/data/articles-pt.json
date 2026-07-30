@@ -835,5 +835,22 @@
    "Exemplos: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
    "Commite-o para aplicacoes; use uma instalacao estrita (npm ci) em CI; nao edite a mao, regenere em conflitos de merge."
   ]
+ },
+ "nu-html-checker": {
+  "title": "O Nu Html Checker define-se a si próprio como uma experiência. O que isso significa para a sua build",
+  "dek": "O verificador de HTML de referência avisa que zero erros hoje não garante zero erros amanhã, e que não é uma certificação pass/fail. Eis como integrá-lo mesmo assim.",
+  "heroAlt": "Um editor de código a mostrar um ficheiro index.html com o seu doctype e os metadados do head",
+  "bodyCaption": "Um ficheiro index.html aberto num editor, a mostrar as etiquetas meta, as folhas de estilo ligadas e o início do body.",
+  "paras": [
+   "O Nu Html Checker é a ferramenta por trás de validator.w3.org/nu, e é o que a web tem de mais próximo de uma implementação de referência para a verificação de conformidade. É também bastante mais modesto acerca de si próprio do que as pessoas que dele dependem. A sua própria documentação descreve-o como uma experiência em curso para melhor verificar HTML, e acrescenta que o seu comportamento continua sujeito a alterações.",
+   "Essa frase tem uma consequência prática que a maioria das equipas nunca planeia. A documentação di-lo por escrito: não há qualquer garantia de que, se o verificador não reportar erros para um documento num dado momento, venha a não reportar erros para esse mesmo documento mais tarde. Ao longo do tempo são acrescentadas novas verificações. Uma página que passou no trimestre passado pode falhar hoje sem que ninguém lhe tenha tocado.",
+   "O projeto é igualmente explícito sobre aquilo que não é. Afirma que o verificador não deve ser usado para impor unilateralmente uma conformidade pass/fail com qualquer especificação em particular, e que se destina unicamente a ser um verificador, não um mecanismo de certificação pass/fail. Tratar um resultado verde como um certificado é ler nele mais do que leem os seus próprios autores.",
+   "Nada disto é um argumento para saltar a validação. É um argumento para a integrar com as expectativas certas. A pergunta útil não é se o site valida, mas se esta alteração introduziu novos erros. Isso é uma comparação, não um veredicto.",
+   "Também não é obrigado a usar a instância pública. O verificador é distribuído como vnu.jar e corre a partir da linha de comandos sobre ficheiros, um diretório ou um URL. Funciona como serviço HTTP autónomo equivalente ao público, ou como um .war implementado num contentor de servlets. São publicadas também imagens Docker, um pacote npm e uma fórmula Homebrew. O projeto tem licença MIT, e o jar requer Java 17 ou posterior.",
+   "Correr a sua própria instância resolve dois problemas ao mesmo tempo. Elimina uma dependência de um serviço público que não controla, e fixa a versão, pelo que o verificador só muda quando decidir atualizá-lo. Isso responde diretamente à ressalva sobre a estabilidade: a sua build deixa de se mexer debaixo dos seus pés.",
+   "O âmbito é igualmente mais largo do que o nome sugere. O verificador abrange HTML, CSS e SVG, pelo que uma única passagem apanha classes de problemas que as equipas costumam repartir por ferramentas separadas.",
+   "De tudo isto decorre uma configuração viável. Fixe uma versão na sua própria infraestrutura. Corra-a sobre o output construído em vez dos templates, já que o que é publicado é o que os utilizadores recebem. Registe o número de erros atual como baseline e faça a build falhar quando esse número subir, em vez de quando for meramente diferente de zero. Depois atualize o verificador de forma deliberada, e trate os erros que surgirem como um trabalho próprio em vez de um pipeline avariado.",
+   "Isso preserva o verdadeiro valor da validação, que é apanhar regressões de forma barata, sem reclamar uma garantia que a ferramenta explicitamente recusa dar."
+  ]
  }
 }

@@ -1,4 +1,51 @@
 {
+ "nu-html-checker": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "What the tool says about itself",
+   "fr": "Ce que l'outil dit de lui-même",
+   "es": "Lo que la herramienta dice de sí misma",
+   "de": "Was das Werkzeug über sich selbst sagt",
+   "it": "Che cosa dice lo strumento di se stesso",
+   "pt": "O que a ferramenta diz de si própria",
+   "n": 2
+  },
+  {
+   "en": "Ask a different question",
+   "fr": "Poser une autre question",
+   "es": "Hacer otra pregunta",
+   "de": "Eine andere Frage stellen",
+   "it": "Porre una domanda diversa",
+   "pt": "Fazer outra pergunta",
+   "n": 1
+  },
+  {
+   "en": "Running your own instance",
+   "fr": "Faire tourner sa propre instance",
+   "es": "Ejecutar tu propia instancia",
+   "de": "Eine eigene Instanz betreiben",
+   "it": "Eseguire la propria istanza",
+   "pt": "Executar a sua própria instância",
+   "n": 3
+  },
+  {
+   "en": "A workable setup",
+   "fr": "Une mise en place praticable",
+   "es": "Una configuración viable",
+   "de": "Ein praktikables Setup",
+   "it": "Una configurazione praticabile",
+   "pt": "Uma configuração viável",
+   "n": 2
+  }
+ ],
  "what-is-a-changelog": [
   {
    "en": "",

@@ -835,5 +835,22 @@
    "Ejemplos: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
    "Incluyelo en el control de versiones para aplicaciones; usa una instalacion estricta (npm ci) en CI; no lo edites a mano, regeneralo en los conflictos de fusion."
   ]
+ },
+ "nu-html-checker": {
+  "title": "El Nu Html Checker se define a sí mismo como un experimento. Qué significa eso para tu build",
+  "dek": "El verificador de HTML de referencia advierte de que cero errores hoy no garantiza cero errores mañana, y de que no es una certificación pass/fail. Así se integra igualmente.",
+  "heroAlt": "Un editor de código mostrando un archivo index.html con su doctype y los metadatos de su head",
+  "bodyCaption": "Un archivo index.html abierto en un editor, mostrando las etiquetas meta, las hojas de estilo enlazadas y el comienzo del body.",
+  "paras": [
+   "El Nu Html Checker es la herramienta que hay detrás de validator.w3.org/nu, y es lo más parecido a una implementación de referencia para la verificación de conformidad que tiene la web. También es bastante más modesto consigo mismo que quienes dependen de él. Su propia documentación lo describe como un experimento en curso para verificar mejor el HTML, y añade que su comportamiento sigue estando sujeto a cambios.",
+   "Esa frase tiene una consecuencia práctica que la mayoría de los equipos nunca prevé. La documentación lo deja por escrito: no hay ninguna garantía de que si el verificador no informa de errores para un documento en un momento dado, tampoco informe de errores para ese mismo documento más adelante. Con el tiempo se añaden verificaciones nuevas. Una página que pasaba el trimestre pasado puede fallar hoy sin que nadie la haya tocado.",
+   "El proyecto es igual de explícito sobre lo que no es. Afirma que el verificador no debería usarse para imponer unilateralmente una conformidad pass/fail con ninguna especificación concreta, y que está pensado únicamente como verificador, no como un mecanismo de certificación pass/fail. Tratar un resultado en verde como un certificado es leer en él más de lo que leen sus propios autores.",
+   "Nada de esto es un argumento para saltarse la validación. Es un argumento para integrarla con las expectativas correctas. La pregunta útil no es si el sitio valida, sino si este cambio ha introducido errores nuevos. Eso es una comparación, no un veredicto.",
+   "Tampoco estás obligado a usar la instancia pública. El verificador se distribuye como vnu.jar y se ejecuta desde la línea de comandos sobre archivos, un directorio o una URL. Funciona como servicio HTTP autónomo equivalente al público, o como un .war desplegado en un contenedor de servlets. También se publican imágenes Docker, un paquete npm y una fórmula de Homebrew. El proyecto tiene licencia MIT, y el jar requiere Java 17 o posterior.",
+   "Ejecutar tu propia instancia resuelve dos problemas a la vez. Elimina una dependencia de un servicio público que no controlas, y fija la versión, de modo que el verificador solo cambia cuando tú decides actualizarlo. Eso responde directamente a la advertencia sobre la estabilidad: tu build deja de moverse bajo tus pies.",
+   "El alcance también es más amplio de lo que sugiere el nombre. El verificador cubre HTML, CSS y SVG, así que una sola pasada detecta clases de problemas que los equipos suelen repartir entre herramientas separadas.",
+   "De todo esto se deriva una configuración viable. Fija una versión en tu propia infraestructura. Ejecútala sobre la salida construida en lugar de sobre las plantillas, ya que lo que se publica es lo que reciben los usuarios. Registra el número actual de errores como baseline y haz que el build falle cuando ese número suba, en lugar de cuando simplemente sea distinto de cero. Después actualiza el verificador de forma deliberada, y trata los errores que afloren como un trabajo propio en vez de como un pipeline roto.",
+   "Eso conserva el valor real de la validación, que es detectar regresiones de forma barata, sin reclamar una garantía que la herramienta declina dar explícitamente."
+  ]
  }
 }
