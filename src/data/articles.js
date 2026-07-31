@@ -122,6 +122,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'conventional-commits', category: 'guides', readingMinutes: 7, date: '2026-07-31',
+    title: "Conventional Commits: The Missing Link Between Your Commits and Your Version Number",
+    dek: "A fixed shape for commit messages that ties fix to PATCH and feat to MINOR, so the next version number follows from the log. The two breaking-change notations, and what the spec deliberately does not do.",
+    hero: '/assets/articles/conventional-commits-hero.jpg', heroAlt: "An IDE with its Git log panel open, showing branch history and commit messages",
+    body: '/assets/articles/conventional-commits-body.jpg', bodyCaption: "A hand typing on a laptop, the screen showing CSS rules. Every change here becomes a commit message that has to say what it did.",
+    paras: ENX['conventional-commits'].paras,
+    list: ENX['conventional-commits'].list,
+    related: 'what-is-semantic-versioning',
+    cta: GIT_CTA,
+  }),
+  a({
     slug: 'js-framework-release-cadence-2026', category: 'guides', readingMinutes: 8, date: '2026-07-27',
     title: "How Often Do JavaScript Frameworks Actually Release? We Measured 1,000 Releases",
     dek: "We pulled the last 100 GitHub releases of ten front-end projects and split stable versions from prereleases. Next.js turned out to be 88 percent prereleases, Svelte and React Router zero, and stable cadence spans roughly eighty times. Data, method and limits.",
@@ -748,6 +759,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "conventional-commits": { fr: "conventional-commits-messages-de-commit", es: "conventional-commits-mensajes-de-commit", de: "conventional-commits-commit-nachrichten", it: "conventional-commits-messaggi-di-commit", pt: "conventional-commits-mensagens-de-commit" },
   "js-framework-release-cadence-2026": { fr: "frequence-publication-frameworks-js-2026", es: "frecuencia-publicacion-frameworks-js-2026", de: "release-frequenz-js-frameworks-2026", it: "frequenza-rilasci-framework-js-2026", pt: "frequencia-lancamentos-frameworks-js-2026" },
   "what-is-a-changelog": { fr: "qu-est-ce-qu-un-changelog", es: "que-es-un-changelog", de: "was-ist-ein-changelog", it: "che-cos-e-un-changelog", pt: "o-que-e-um-changelog" },
   "what-is-a-lockfile": { fr: "qu-est-ce-qu-un-lockfile", es: "que-es-un-lockfile", de: "was-ist-eine-lockfile", it: "cos-e-un-lockfile", pt: "o-que-e-um-lockfile" },

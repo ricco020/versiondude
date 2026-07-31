@@ -2014,5 +2014,61 @@
    "pt": "O que reter",
    "n": 1
   }
+ ],
+ "conventional-commits": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 1
+  },
+  {
+   "en": "The shape of the message",
+   "fr": "La forme du message",
+   "es": "La forma del mensaje",
+   "de": "Der Aufbau der Nachricht",
+   "it": "La forma del messaggio",
+   "pt": "A forma da mensagem",
+   "n": 2
+  },
+  {
+   "en": "How the types map to SemVer",
+   "fr": "Comment les types se relient a SemVer",
+   "es": "Como los tipos se relacionan con SemVer",
+   "de": "Wie die Typen auf SemVer abbilden",
+   "it": "Come i tipi si collegano a SemVer",
+   "pt": "Como os tipos se ligam ao SemVer",
+   "n": 2
+  },
+  {
+   "en": "Two ways to mark a breaking change",
+   "fr": "Deux facons de signaler une rupture",
+   "es": "Dos formas de marcar un cambio incompatible",
+   "de": "Zwei Wege, einen Breaking Change zu markieren",
+   "it": "Due modi per segnalare un breaking change",
+   "pt": "Duas formas de assinalar uma quebra",
+   "n": 2
+  },
+  {
+   "en": "What it does not do for you",
+   "fr": "Ce que la specification ne fait pas",
+   "es": "Lo que la especificacion no hace",
+   "de": "Was die Spezifikation nicht leistet",
+   "it": "Cosa la specifica non fa",
+   "pt": "O que a especificacao nao faz",
+   "n": 2
+  },
+  {
+   "en": "Adopting it without ceremony",
+   "fr": "L adopter sans ceremonie",
+   "es": "Adoptarla sin ceremonias",
+   "de": "Einfuehrung ohne Zeremonie",
+   "it": "Adottarla senza cerimonie",
+   "pt": "Adota-la sem cerimonia",
+   "n": 2
+  }
  ]
 }

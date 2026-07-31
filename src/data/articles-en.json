@@ -367,5 +367,27 @@
    "Examples: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
    "Commit it for applications; use a strict install (npm ci) in CI; do not hand-edit, regenerate on merge conflicts."
   ]
+ },
+ "conventional-commits": {
+  "paras": [
+   "If you already number releases with Semantic Versioning and keep a changelog, there is a gap between the two that most teams fill by hand: someone has to read the commits since the last release and decide whether the next version is a patch, a minor or a major. Conventional Commits is a specification that closes that gap by putting the answer in the commit message itself, at the moment the change is made.",
+   "The specification defines a fixed shape for the first line, with an optional body and footers below it. Written out, the structure is: type, then an optional scope in parentheses, then a colon and a space, then a short description. A blank line separates the body, and further blank lines separate any footers.",
+   "So a bug fix in the parser becomes fix(parser): handle empty attribute values, and a new capability becomes feat(api): add pagination to the search endpoint. The scope is optional, and the description is a summary rather than an essay. Everything longer belongs in the body underneath.",
+   "The reason for the fixed shape is what the types unlock. The specification ties two of them directly to Semantic Versioning: a fix commit correlates with PATCH, and a feat commit correlates with MINOR. A commit that introduces a breaking API change correlates with MAJOR.",
+   "That single mapping is what allows tooling to compute the next version number without a human reading the log. It also means the decision moves to the person best placed to make it, which is whoever wrote the change, at the moment they wrote it, rather than a release manager reconstructing intent weeks later.",
+   "Breaking changes have two accepted notations, and knowing both matters because you will meet both in real repositories. The first is a footer that begins with BREAKING CHANGE: followed by a description. The second is an exclamation mark placed immediately before the colon, as in feat(api)!: drop support for v1 tokens.",
+   "The two are not merely stylistic alternatives. The specification states that if the exclamation mark is used, the BREAKING CHANGE: footer may be omitted, and the commit description itself will then serve as the description of the breaking change. In other words the short form is complete on its own, which is why it is the one you see most often in practice.",
+   "It is worth being precise about what this specification does and does not give you. It is a convention for writing messages, not a release tool. The specification says the types correlate with the SemVer levels; it does not compute versions, generate changelogs or publish anything by itself. Those are jobs for tooling that reads the convention, and that tooling is a separate decision.",
+   "The benefit that survives even without any tooling is the one teams underestimate. Requiring a type on every commit forces a small judgement at the moment of writing: is this a fix, a feature, or something that will break a consumer? A team that answers that question eleven hundred times a year has a far more accurate sense of its own release surface than one that answers it four times a year while preparing a release.",
+   "Adoption does not need ceremony. The convention applies from the commit you decide to apply it to, and a repository with a mixed history is perfectly workable, because the tooling that reads the convention simply ignores what it cannot parse. Starting on a Monday with no migration and no rewritten history is a legitimate way to adopt it.",
+   "If you want the guardrail rather than the discipline, a commit-message hook that rejects a non-conforming first line is enough, and it costs one configuration file. But start with the convention itself. The specification is short, the two SemVer correlations are the part that pays, and the exclamation mark notation is the detail most people miss on the first read."
+  ],
+  "list": [
+   "Structure: type, optional scope in parentheses, then a colon and space, then the description. Body and footers go below, each separated by a blank line.",
+   "fix correlates with PATCH in Semantic Versioning, and feat correlates with MINOR.",
+   "A breaking API change correlates with MAJOR, and is marked either with a BREAKING CHANGE: footer or with an exclamation mark before the colon.",
+   "If the exclamation mark is used, the BREAKING CHANGE: footer may be omitted and the description covers it.",
+   "The specification is a message convention, not a release tool: it correlates with SemVer levels but computes nothing on its own."
+  ]
  }
 }

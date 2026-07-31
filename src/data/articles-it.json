@@ -852,5 +852,31 @@
    "Da tutto questo discende una configurazione praticabile. Blocca una versione nella tua infrastruttura. Eseguila sull'output costruito anziché sui template, dato che ciò che viene pubblicato è ciò che gli utenti ricevono. Registra il numero di errori attuale come baseline e fai fallire la build quando quel numero sale, invece che quando è semplicemente diverso da zero. Poi aggiorna il verificatore in modo deliberato, e tratta gli errori che emergono come un lavoro a sé stante anziché come una pipeline rotta.",
    "Questo preserva il valore reale della validazione, cioè intercettare le regressioni a basso costo, senza rivendicare una garanzia che lo strumento dichiara esplicitamente di non dare."
   ]
+ },
+ "conventional-commits": {
+  "title": "Conventional Commits: l'anello mancante tra i tuoi commit e il numero di versione",
+  "dek": "Una forma fissa per i messaggi di commit che collega fix a PATCH e feat a MINOR, così il numero di versione successivo discende dal log. Le due notazioni per i breaking change, e ciò che la specifica deliberatamente non fa.",
+  "heroAlt": "Un IDE con il pannello del log Git aperto, che mostra la cronologia dei branch e i messaggi di commit",
+  "bodyCaption": "Una mano digita su un portatile, lo schermo mostra regole CSS. Ogni modifica qui diventa un messaggio di commit che deve dire che cosa ha fatto.",
+  "paras": [
+   "Se numeri già le release con il versionamento semantico e tieni un changelog, tra i due resta uno spazio vuoto che la maggior parte dei team colma a mano: qualcuno deve leggere i commit fatti dall'ultima release e decidere se la versione successiva è una patch, una minor o una major. Conventional Commits è una specifica che chiude questo spazio mettendo la risposta nel messaggio di commit stesso, nel momento in cui la modifica viene fatta.",
+   "La specifica definisce una forma fissa per la prima riga, con un corpo e dei footer opzionali al di sotto. Esplicitata, la struttura è: il tipo, poi uno scope opzionale tra parentesi, poi due punti e uno spazio, poi una breve descrizione. Una riga vuota separa il corpo, e altre righe vuote separano gli eventuali footer.",
+   "Così la correzione di un bug nel parser diventa fix(parser): handle empty attribute values, e una nuova funzionalità diventa feat(api): add pagination to the search endpoint. Lo scope è opzionale, e la descrizione è una sintesi, non un tema. Tutto ciò che è più lungo va nel corpo sottostante.",
+   "La ragione di questa forma fissa sta in ciò che i tipi rendono possibile. La specifica ne lega due direttamente al versionamento semantico: un commit fix corrisponde a PATCH, e un commit feat corrisponde a MINOR. Un commit che introduce una modifica incompatibile dell'API corrisponde a MAJOR.",
+   "È questa sola corrispondenza a permettere agli strumenti di calcolare il numero di versione successivo senza che un essere umano legga il log. Significa anche che la decisione si sposta sulla persona meglio collocata per prenderla, cioè chi ha scritto la modifica, nel momento in cui l'ha scritta, invece che su un release manager che ricostruisce le intenzioni settimane dopo.",
+   "I breaking change hanno due notazioni accettate, e conoscerle entrambe conta perché le incontrerai entrambe nei repository reali. La prima è un footer che inizia con BREAKING CHANGE: seguito da una descrizione. La seconda è un punto esclamativo posto immediatamente prima dei due punti, come in feat(api)!: drop support for v1 tokens.",
+   "Le due non sono semplici alternative stilistiche. La specifica afferma che, se si usa il punto esclamativo, il footer BREAKING CHANGE: può essere omesso, e sarà allora la descrizione stessa del commit a fare da descrizione del breaking change. In altre parole la forma breve è completa di per sé, ed è per questo che è quella che si incontra più spesso nella pratica.",
+   "Vale la pena essere precisi su ciò che questa specifica ti dà e su ciò che non ti dà. È una convenzione di scrittura dei messaggi, non uno strumento di release. La specifica dice che i tipi corrispondono ai livelli SemVer; non calcola versioni, non genera changelog e non pubblica nulla da sé. Sono compiti per gli strumenti che leggono la convenzione, e quegli strumenti sono una decisione a parte.",
+   "Il beneficio che sopravvive anche senza alcuno strumento è quello che i team sottovalutano. Richiedere un tipo su ogni commit impone un piccolo giudizio nel momento della scrittura: è una correzione, una funzionalità, o qualcosa che romperà un consumatore? Un team che risponde a questa domanda millecento volte l'anno ha una percezione molto più accurata della propria superficie di release rispetto a uno che vi risponde quattro volte l'anno mentre prepara una release.",
+   "L'adozione non richiede cerimonie. La convenzione si applica a partire dal commit a cui decidi di applicarla, e un repository con una cronologia mista è perfettamente praticabile, perché gli strumenti che leggono la convenzione semplicemente ignorano ciò che non riescono ad analizzare. Cominciare un lunedì senza migrazione e senza riscrivere la cronologia è un modo legittimo di adottarla.",
+   "Se vuoi la protezione automatica piuttosto che la disciplina, basta un hook sul messaggio di commit che rifiuti una prima riga non conforme, e costa un solo file di configurazione. Ma parti dalla convenzione in sé. La specifica è breve, le due corrispondenze con SemVer sono la parte che ripaga, e la notazione con il punto esclamativo è il dettaglio che sfugge alla maggior parte delle persone alla prima lettura."
+  ],
+  "list": [
+   "Struttura: il tipo, uno scope opzionale tra parentesi, poi due punti e uno spazio, poi la descrizione. Corpo e footer vanno sotto, separati ciascuno da una riga vuota.",
+   "fix corrisponde a PATCH nel versionamento semantico, e feat corrisponde a MINOR.",
+   "Una modifica incompatibile dell'API corrisponde a MAJOR, e si segnala con un footer BREAKING CHANGE: oppure con un punto esclamativo prima dei due punti.",
+   "Se si usa il punto esclamativo, il footer BREAKING CHANGE: può essere omesso e la descrizione lo copre.",
+   "La specifica è una convenzione per i messaggi, non uno strumento di release: corrisponde ai livelli SemVer ma non calcola nulla da sé."
+  ]
  }
 }

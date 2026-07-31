@@ -852,5 +852,31 @@
    "De tudo isto decorre uma configuração viável. Fixe uma versão na sua própria infraestrutura. Corra-a sobre o output construído em vez dos templates, já que o que é publicado é o que os utilizadores recebem. Registe o número de erros atual como baseline e faça a build falhar quando esse número subir, em vez de quando for meramente diferente de zero. Depois atualize o verificador de forma deliberada, e trate os erros que surgirem como um trabalho próprio em vez de um pipeline avariado.",
    "Isso preserva o verdadeiro valor da validação, que é apanhar regressões de forma barata, sem reclamar uma garantia que a ferramenta explicitamente recusa dar."
   ]
+ },
+ "conventional-commits": {
+  "title": "Conventional Commits: o elo em falta entre os teus commits e o teu número de versão",
+  "dek": "Um formato fixo para as mensagens de commit que associa fix a PATCH e feat a MINOR, para que o próximo número de versão decorra do log. As duas notações de alteração disruptiva e o que a especificação deliberadamente não faz.",
+  "heroAlt": "Um IDE com o painel do log do Git aberto, a mostrar o histórico de ramos e as mensagens de commit",
+  "bodyCaption": "Uma mão a escrever num portátil, com o ecrã a mostrar regras CSS. Cada alteração feita aqui torna-se uma mensagem de commit que tem de dizer o que fez.",
+  "paras": [
+   "Se já numeras as tuas versões com o Versionamento Semântico e manténs um changelog, existe entre os dois uma lacuna que a maioria das equipas preenche à mão: alguém tem de ler os commits desde a última versão e decidir se a próxima é um patch, uma minor ou uma major. O Conventional Commits é uma especificação que fecha essa lacuna colocando a resposta na própria mensagem de commit, no momento em que a alteração é feita.",
+   "A especificação define um formato fixo para a primeira linha, com um corpo e rodapés opcionais por baixo. Escrita por extenso, a estrutura é: o tipo, depois um scope opcional entre parênteses, depois dois pontos e um espaço, depois uma descrição curta. Uma linha em branco separa o corpo, e outras linhas em branco separam os eventuais rodapés.",
+   "Assim, a correção de um bug no parser torna-se fix(parser): handle empty attribute values, e uma nova funcionalidade torna-se feat(api): add pagination to the search endpoint. O scope é opcional, e a descrição é um resumo e não uma dissertação. Tudo o que for mais longo pertence ao corpo, por baixo.",
+   "A razão de ser deste formato fixo está naquilo que os tipos desbloqueiam. A especificação liga dois deles diretamente ao Versionamento Semântico: um commit fix corresponde a PATCH, e um commit feat corresponde a MINOR. Um commit que introduza uma alteração disruptiva na API corresponde a MAJOR.",
+   "É essa única correspondência que permite às ferramentas calcular o próximo número de versão sem que um humano leia o log. Significa também que a decisão passa para quem está em melhor posição para a tomar, ou seja, quem escreveu a alteração, no momento em que a escreveu, em vez de um gestor de versões a reconstituir a intenção semanas mais tarde.",
+   "As alterações disruptivas têm duas notações aceites, e vale a pena conhecer ambas porque vais encontrar as duas em repositórios reais. A primeira é um rodapé que começa por BREAKING CHANGE: seguido de uma descrição. A segunda é um ponto de exclamação colocado imediatamente antes dos dois pontos, como em feat(api)!: drop support for v1 tokens.",
+   "As duas não são meras alternativas de estilo. A especificação indica que, se o ponto de exclamação for usado, o rodapé BREAKING CHANGE: pode ser omitido, e a própria descrição do commit passa então a servir de descrição da alteração disruptiva. Por outras palavras, a forma curta basta-se a si própria, e é por isso que é a que se vê com mais frequência na prática.",
+   "Vale a pena ser preciso sobre o que esta especificação te dá e o que não te dá. É uma convenção para escrever mensagens, não uma ferramenta de lançamento. A especificação diz que os tipos correspondem aos níveis do SemVer; não calcula versões, não gera changelogs nem publica seja o que for por si só. Essas são tarefas para ferramentas que leiam a convenção, e essa escolha de ferramentas é uma decisão à parte.",
+   "O benefício que subsiste mesmo sem ferramenta nenhuma é aquele que as equipas subestimam. Exigir um tipo em cada commit obriga a um pequeno juízo no momento da escrita: isto é uma correção, uma funcionalidade, ou algo que vai quebrar um consumidor? Uma equipa que responde a essa pergunta mil e cem vezes por ano tem uma noção bem mais rigorosa da sua própria superfície de lançamento do que uma que lhe responde quatro vezes por ano enquanto prepara uma versão.",
+   "A adoção não exige cerimónia. A convenção aplica-se a partir do commit em que decidires aplicá-la, e um repositório com um histórico misto funciona perfeitamente, porque as ferramentas que leem a convenção limitam-se a ignorar aquilo que não conseguem interpretar. Começar numa segunda-feira, sem migração e sem reescrever o histórico, é uma forma legítima de a adotar.",
+   "Se preferires a barreira de proteção em vez da disciplina, basta um hook de mensagem de commit que rejeite uma primeira linha não conforme, e isso custa um ficheiro de configuração. Mas começa pela convenção em si. A especificação é curta, as duas correspondências com o SemVer são a parte que compensa, e a notação com ponto de exclamação é o detalhe que a maioria das pessoas não repara à primeira leitura."
+  ],
+  "list": [
+   "Estrutura: o tipo, um scope opcional entre parênteses, depois dois pontos e um espaço, depois a descrição. O corpo e os rodapés ficam por baixo, cada um separado por uma linha em branco.",
+   "fix corresponde a PATCH no Versionamento Semântico, e feat corresponde a MINOR.",
+   "Uma alteração disruptiva na API corresponde a MAJOR e é assinalada com um rodapé BREAKING CHANGE: ou com um ponto de exclamação antes dos dois pontos.",
+   "Se o ponto de exclamação for usado, o rodapé BREAKING CHANGE: pode ser omitido e a descrição encarrega-se disso.",
+   "A especificação é uma convenção de mensagens, não uma ferramenta de lançamento: corresponde aos níveis do SemVer mas não calcula nada por si só."
+  ]
  }
 }
