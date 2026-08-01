@@ -1,4 +1,30 @@
 {
+ "peer-dependencies": {
+  "title": "peerDependencies explicadas: porque é que o npm recusa de repente a tua instalação",
+  "dek": "As peerDependencies exprimem compatibilidade com um package anfitrião em vez de o exigirem. O npm v7 passou a instalá-las por predefinição, e é por isso que os erros ERESOLVE parecem novos. O que são, porque é que os intervalos amplos são melhores do que os fixados, e quando marcar um peer como opcional.",
+  "heroAlt": "Uma mão a segurar um autocolante branco com a palavra json, com uma figura desfocada por trás",
+  "bodyCaption": "Um painel de projeto de um IDE a mostrar pastas Dependencies na árvore de uma solution. O código visível aqui é C#, mas a ideia de uma árvore de dependências que tem de ser resolvida é a mesma em todos os ecossistemas.",
+  "paras": [
+   "Qualquer programador de JavaScript já passou por isto: uma instalação que ontem funcionava para agora em ERESOLVE, queixando-se de um conflito de peer dependency por causa de um package que nunca pediste diretamente. O erro confunde porque as peerDependencies são o único tipo de dependência que descreve uma relação em vez de uma necessidade.",
+   "A documentação do npm define-as com precisão. As peerDependencies permitem a um package exprimir a sua compatibilidade com uma ferramenta ou biblioteca anfitriã, sem necessariamente fazer um require desse anfitrião. O caso típico é o de um plugin: espera que o anfitrião exista na mesma árvore, foi construído para um intervalo de versões específico deste, mas não o arrasta consigo como código próprio.",
+   "É aí que está a distinção que importa. Uma dependency normal é código de que o teu package precisa e que vai instalar. Uma devDependency é uma ferramenta de build ou de testes de que precisas durante o desenvolvimento. Uma peerDependency não é nem uma coisa nem outra: é uma afirmação sobre com que versão de um package separado o teu código foi concebido para funcionar lado a lado.",
+   "Estes erros parecem recentes porque o comportamento mudou mesmo, e este é o facto mais útil a saber sobre eles.",
+   "Do npm v3 ao v6, as peerDependencies não eram instaladas automaticamente. Se fosse encontrada uma versão inválida na árvore, o npm emitia um aviso e continuava. Podias publicar durante meses com um peer incompatível sem dar por isso.",
+   "A partir do npm v7, as peerDependencies são instaladas por predefinição. O que antes era um aviso passou a ser algo que o npm tenta ativamente resolver e, quando não consegue, falha. Não é forçoso que algo se tenha partido no teu projeto: foi a ferramenta que deixou de tolerar um conflito que já lá estava.",
+   "O npm é explícito quanto ao que acontece quando dois plugins não concordam. Tentar instalar outro plugin com um requisito conflituoso pode provocar um erro se a árvore não puder ser resolvida corretamente. Aqui não há nenhuma resolução engenhosa possível, porque ambos os plugins declararam genuinamente expectativas incompatíveis sobre o mesmo anfitrião.",
+   "O conselho documentado vai contra o instinto de um mantenedor prudente. Em vez de fixares o intervalo de um peer estritamente na versão que testaste, o npm recomenda manter os intervalos das peer dependencies tão amplos quanto possível. Um intervalo estreito não torna o teu package mais seguro: torna-o mais difícil de instalar ao lado de qualquer outra coisa e converte cada atualização do anfitrião num conflito.",
+   "Existe também um meio-termo que muitos mantenedores ignoram. O campo peerDependenciesMeta permite marcar um peer como opcional, e o npm não instala automaticamente as peer dependencies opcionais. É assim que um package se integra com vários anfitriões possíveis sem exigir que todos estejam presentes, que é exatamente a situação em que uma simples lista de peerDependencies se torna impraticável.",
+   "Juntando tudo, obtém-se uma regra de decisão. Se o teu código o importa, é uma dependency. Se só os teus testes ou o teu build precisam dele, é uma devDependency. Se o teu código espera que o consumidor já o tenha, e estás a desenvolver sobre a sua interface, é uma peerDependency, e o intervalo deve ser generoso. Se for um de vários anfitriões intercambiáveis, marca-o como opcional.",
+   "E quando o erro aparecer mesmo, lê-o como informação e não como um obstáculo. Um conflito ERESOLVE é o npm a dizer-te que dois packages da tua árvore têm expectativas genuinamente incompatíveis sobre um terceiro. Passar à força deixa essa incompatibilidade no lugar, em silêncio, que é precisamente a situação que o npm v6 permitia e que o v7 deixou de permitir."
+  ],
+  "list": [
+   "As peerDependencies exprimem compatibilidade com um package anfitrião, sem o exigirem como código próprio.",
+   "O npm v3 ao v6 não as instalava e apenas avisava em caso de incompatibilidade; o npm v7 e seguintes instalam-nas por predefinição.",
+   "É essa mudança que faz os erros de peer dependency parecerem novos: o conflito é muitas vezes anterior ao erro.",
+   "O npm recomenda manter os intervalos dos peers tão amplos quanto possível em vez de os fixar numa versão testada.",
+   "peerDependenciesMeta pode marcar um peer como opcional, e os peers opcionais não são instalados automaticamente."
+  ]
+ },
  "js-framework-release-cadence-2026": {
   "title": "Com que frequência os frameworks JavaScript lançam realmente? Medimos 1000 versões",
   "dek": "Recolhemos as últimas 100 versões do GitHub de dez projetos front-end e separámos as versões estáveis das pré-versões. O Next.js revelou-se com 88 por cento de pré-versões, o Svelte e o React Router com zero, e a cadência estável abrange um fator de cerca de oitenta vezes. Dados, método e limites.",

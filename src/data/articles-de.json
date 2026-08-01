@@ -1,4 +1,30 @@
 {
+ "peer-dependencies": {
+  "title": "peerDependencies erklärt: Warum npm Ihre Installation plötzlich verweigert",
+  "dek": "peerDependencies drücken die Kompatibilität mit einem Host-Package aus, statt es vorauszusetzen. npm v7 begann, sie standardmäßig zu installieren, weshalb ERESOLVE-Fehler neu wirken. Was sie sind, warum breite Bereiche besser sind als festgenagelte, und wann ein Peer als optional zu markieren ist.",
+  "heroAlt": "Eine Hand hält einen weißen Aufkleber mit dem Wort json, dahinter eine unscharfe Person",
+  "bodyCaption": "Ein Projektbereich in einer IDE, der Dependencies-Ordner im Baum einer Solution zeigt. Der hier sichtbare Code ist C#, aber die Vorstellung eines Abhängigkeitsbaums, der aufgelöst werden muss, ist in jedem Ökosystem dieselbe.",
+  "paras": [
+   "Jede JavaScript-Entwicklerin und jeder JavaScript-Entwickler kennt das: Eine Installation, die gestern noch lief, bricht heute mit ERESOLVE ab und beklagt einen Peer-Dependency-Konflikt für ein Package, das man nie direkt angefordert hat. Der Fehler verwirrt, weil peerDependencies der einzige Abhängigkeitstyp sind, der eine Beziehung beschreibt statt eines Bedarfs.",
+   "Die Dokumentation von npm definiert sie präzise. peerDependencies erlauben es einem Package, seine Kompatibilität mit einem Host-Werkzeug oder einer Host-Bibliothek auszudrücken, ohne dabei zwingend ein require auf diesen Host auszuführen. Der typische Fall ist ein Plugin: Es erwartet, dass der Host im selben Baum vorhanden ist, es ist gegen einen bestimmten Versionsbereich davon gebaut, aber es zieht diesen Host nicht als eigenen Code herein.",
+   "Genau darin liegt der entscheidende Unterschied. Eine gewöhnliche dependency ist Code, den Ihr Package braucht und installieren wird. Eine devDependency ist ein Build- oder Testwerkzeug, das Sie während der Entwicklung benötigen. Eine peerDependency ist weder das eine noch das andere: Sie ist eine Aussage darüber, mit welcher Version eines separaten Packages Ihr Code zusammenarbeiten soll.",
+   "Dass diese Fehler neu wirken, liegt daran, dass sich das Verhalten tatsächlich geändert hat, und das ist die mit Abstand nützlichste Tatsache über sie.",
+   "Unter npm v3 bis v6 wurden peerDependencies nicht automatisch installiert. Wurde eine ungültige Version im Baum gefunden, gab npm eine Warnung aus und machte weiter. Man konnte monatelang mit einem unpassenden Peer ausliefern, ohne es zu bemerken.",
+   "Ab npm v7 werden peerDependencies standardmäßig installiert. Was früher eine Warnung war, ist zu etwas geworden, das npm aktiv aufzulösen versucht, und wenn es das nicht kann, schlägt es fehl. An Ihrem Projekt ist nicht zwangsläufig etwas kaputtgegangen: Das Werkzeug hat aufgehört, einen Konflikt zu tolerieren, der bereits vorhanden war.",
+   "npm sagt deutlich, was passiert, wenn zwei Plugins nicht übereinstimmen. Der Versuch, ein weiteres Plugin mit einer widersprüchlichen Anforderung zu installieren, kann einen Fehler verursachen, wenn der Baum nicht korrekt aufgelöst werden kann. Eine geschickte Auflösung gibt es hier nicht, denn beide Plugins haben tatsächlich unvereinbare Erwartungen an denselben Host deklariert.",
+   "Der dokumentierte Rat läuft dem Instinkt einer umsichtigen Maintainerin zuwider. Statt einen Peer-Bereich eng auf die von Ihnen getestete Version festzunageln, empfiehlt npm, die Versionsbereiche der Peer Dependencies so breit wie möglich zu halten. Ein enger Bereich macht Ihr Package nicht sicherer, er macht es schwerer neben irgendetwas anderem installierbar und verwandelt jedes Upgrade des Hosts in einen Konflikt.",
+   "Es gibt außerdem einen Mittelweg, den viele Maintainer übersehen. Das Feld peerDependenciesMeta erlaubt es, einen Peer als optional zu markieren, und npm installiert optionale Peer Dependencies nicht automatisch. So lässt sich ein Package in mehrere mögliche Hosts integrieren, ohne zu verlangen, dass alle davon vorhanden sind, und genau das ist die Situation, in der eine schlichte Liste von peerDependencies unbrauchbar wird.",
+   "Zusammengenommen ergibt das eine Entscheidungsregel. Importiert Ihr Code es, ist es eine dependency. Brauchen es nur Ihre Tests oder Ihr Build, ist es eine devDependency. Erwartet Ihr Code, dass der Konsument es bereits hat, und entwickeln Sie gegen dessen Schnittstelle, dann ist es eine peerDependency, und der Bereich sollte großzügig sein. Ist es einer von mehreren austauschbaren Hosts, markieren Sie es als optional.",
+   "Und wenn der Fehler dann doch auftaucht, lesen Sie ihn als Information und nicht als Hindernis. Ein ERESOLVE-Konflikt ist npms Art, Ihnen mitzuteilen, dass zwei Packages in Ihrem Baum wirklich unvereinbare Erwartungen an ein drittes haben. Sich darüber hinwegzusetzen lässt diese Unvereinbarkeit stillschweigend bestehen, und genau das war die Situation, die npm v6 zuließ und v7 nicht mehr zulässt."
+  ],
+  "list": [
+   "peerDependencies drücken Kompatibilität mit einem Host-Package aus, ohne es als eigenen Code vorauszusetzen.",
+   "npm v3 bis v6 installierte sie nicht und warnte bei einer Abweichung nur; npm v7 und neuer installieren sie standardmäßig.",
+   "Diese Änderung ist der Grund, warum Peer-Dependency-Fehler neu erscheinen: Der Konflikt ist oft älter als der Fehler.",
+   "npm empfiehlt, Peer-Bereiche so breit wie möglich zu halten, statt sie auf eine getestete Version festzulegen.",
+   "peerDependenciesMeta kann einen Peer als optional markieren, und optionale Peers werden nicht automatisch installiert."
+  ]
+ },
  "js-framework-release-cadence-2026": {
   "title": "Wie oft veröffentlichen JavaScript-Frameworks tatsächlich? Wir haben 1000 Releases gemessen",
   "dek": "Wir haben die letzten 100 GitHub-Releases von zehn Front-End-Projekten abgerufen und stabile Versionen von Vorabversionen getrennt. Bei Next.js waren 88 Prozent Vorabversionen, bei Svelte und React Router null, und die stabile Taktung erstreckt sich über rund das Achtzigfache. Daten, Methode und Grenzen.",
