@@ -1,4 +1,26 @@
 {
+ "peer-dependencies": {
+  "paras": [
+   "Every JavaScript developer has hit it: an install that worked yesterday now stops on ERESOLVE, complaining about a peer dependency conflict for a package you never asked for directly. The error is confusing because peerDependencies are the one dependency type that describes a relationship rather than a requirement.",
+   "npm's documentation defines them precisely. peerDependencies let a package express its compatibility with a host tool or library, while not necessarily doing a require of that host. The typical case is a plugin: it expects the host to exist in the same tree, it is built against a particular range of it, but it does not pull that host in as its own code.",
+   "That is the distinction that matters. A regular dependency is code your package needs and will install. A devDependency is a build or test tool you need while developing. A peerDependency is neither: it is a statement about which version of a separate package your code was designed to work alongside.",
+   "The reason these errors feel recent is that the behaviour genuinely changed, and this is the single most useful fact to know about them.",
+   "Under npm v3 to v6, peerDependencies were not installed automatically. If an invalid version was found in the tree, npm raised a warning and carried on. You could ship with a mismatched peer for months without noticing.",
+   "From npm v7 onward, peerDependencies are installed by default. What used to be a warning became something npm actively tries to resolve, and when it cannot, it fails. Nothing about your project necessarily broke: the tool stopped tolerating a conflict that was already there.",
+   "npm is explicit about what happens when two plugins disagree. Trying to install another plugin with a conflicting requirement may cause an error if the tree cannot be resolved correctly. There is no clever resolution here, because both plugins genuinely declared incompatible expectations about the same host.",
+   "The documented advice runs against the instinct of a careful maintainer. Rather than pinning a peer range tightly to the version you tested, npm recommends keeping peer dependency ranges as broad as possible. A narrow range does not make your package safer; it makes it harder to install alongside anything else, and it converts every host upgrade into a conflict.",
+   "There is also a middle ground that many maintainers overlook. The peerDependenciesMeta field lets you mark a peer as optional, and npm will not automatically install optional peer dependencies. This is how a package integrates with several possible hosts without demanding that all of them be present, which is exactly the situation where a plain peerDependencies list becomes unworkable.",
+   "Putting it together gives a decision rule. If your code imports it, it is a dependency. If only your tests or build need it, it is a devDependency. If your code expects the consumer to already have it, and you are building against its interface, it is a peerDependency, and the range should be generous. If it is one of several interchangeable hosts, mark it optional.",
+   "And when the error does appear, read it as information rather than an obstacle. An ERESOLVE conflict is npm telling you that two packages in your tree hold genuinely incompatible expectations about a third. Forcing past it leaves that incompatibility in place, silently, which is precisely the situation npm v6 used to allow and v7 stopped allowing."
+  ],
+  "list": [
+   "peerDependencies express compatibility with a host package, without requiring it as your own code.",
+   "npm v3 to v6 did not install them and only warned on a mismatch; npm v7 and later install them by default.",
+   "That change is why peer dependency errors appear to be new: the conflict often predates the error.",
+   "npm recommends keeping peer ranges as broad as possible rather than pinning them to a tested version.",
+   "peerDependenciesMeta can mark a peer as optional, and optional peers are not installed automatically."
+  ]
+ },
  "js-framework-release-cadence-2026": {
   "paras": [
    "If you maintain a JavaScript project, one practical question keeps coming back: how often will the tools you depend on actually ship a new version? We measured it rather than guessed. Using the public GitHub Releases API, we pulled the last 100 releases of ten widely used front-end projects and separated genuine stable releases from prereleases. The spread turned out to be far wider than expected, and one project stands out in a way that changes how you should read its version numbers.",

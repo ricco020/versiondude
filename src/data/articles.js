@@ -122,6 +122,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'peer-dependencies', category: 'guides', readingMinutes: 7, date: '2026-08-01',
+    title: "peerDependencies Explained: Why npm Suddenly Refuses Your Install",
+    dek: "peerDependencies express compatibility with a host package rather than requiring it. npm v7 started installing them by default, which is why ERESOLVE errors feel new. What they are, why broad ranges beat pinned ones, and when to mark a peer optional.",
+    hero: '/assets/articles/peer-dependencies-hero.jpg', heroAlt: 'A hand holding a white sticker reading json, with a blurred figure behind',
+    body: '/assets/articles/peer-dependencies-body.jpg', bodyCaption: 'An IDE project panel showing Dependencies folders in a solution tree. The code here is C#, but the idea of a dependency tree that has to resolve is the same in every ecosystem.',
+    paras: ENX['peer-dependencies'].paras,
+    list: ENX['peer-dependencies'].list,
+    related: 'what-is-semantic-versioning',
+    cta: GIT_CTA,
+  }),
+  a({
     slug: 'conventional-commits', category: 'guides', readingMinutes: 7, date: '2026-07-31',
     title: "Conventional Commits: The Missing Link Between Your Commits and Your Version Number",
     dek: "A fixed shape for commit messages that ties fix to PATCH and feat to MINOR, so the next version number follows from the log. The two breaking-change notations, and what the spec deliberately does not do.",
@@ -759,6 +770,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "peer-dependencies": { fr: "dependances-peer-npm", es: "dependencias-peer-npm", de: "peer-dependencies-npm", it: "dipendenze-peer-npm", pt: "dependencias-peer-npm" },
   "conventional-commits": { fr: "conventional-commits-messages-de-commit", es: "conventional-commits-mensajes-de-commit", de: "conventional-commits-commit-nachrichten", it: "conventional-commits-messaggi-di-commit", pt: "conventional-commits-mensagens-de-commit" },
   "js-framework-release-cadence-2026": { fr: "frequence-publication-frameworks-js-2026", es: "frecuencia-publicacion-frameworks-js-2026", de: "release-frequenz-js-frameworks-2026", it: "frequenza-rilasci-framework-js-2026", pt: "frequencia-lancamentos-frameworks-js-2026" },
   "what-is-a-changelog": { fr: "qu-est-ce-qu-un-changelog", es: "que-es-un-changelog", de: "was-ist-ein-changelog", it: "che-cos-e-un-changelog", pt: "o-que-e-um-changelog" },

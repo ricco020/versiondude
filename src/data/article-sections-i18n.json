@@ -1,4 +1,51 @@
 {
+ "peer-dependencies": [
+  {
+   "en": "",
+   "fr": "",
+   "es": "",
+   "de": "",
+   "it": "",
+   "pt": "",
+   "n": 3
+  },
+  {
+   "en": "Why the error feels new",
+   "fr": "Pourquoi l erreur semble recente",
+   "es": "Por que el error parece reciente",
+   "de": "Warum der Fehler neu wirkt",
+   "it": "Perche l errore sembra recente",
+   "pt": "Porque o erro parece recente",
+   "n": 3
+  },
+  {
+   "en": "When two plugins disagree",
+   "fr": "Quand deux plugins se contredisent",
+   "es": "Cuando dos plugins se contradicen",
+   "de": "Wenn zwei Plugins sich widersprechen",
+   "it": "Quando due plugin si contraddicono",
+   "pt": "Quando dois plugins se contradizem",
+   "n": 2
+  },
+  {
+   "en": "The option most maintainers miss",
+   "fr": "L option que la plupart des mainteneurs ignorent",
+   "es": "La opcion que la mayoria de mantenedores ignora",
+   "de": "Die Option, die die meisten Maintainer uebersehen",
+   "it": "L opzione che quasi tutti i manutentori ignorano",
+   "pt": "A opcao que a maioria dos mantenedores ignora",
+   "n": 1
+  },
+  {
+   "en": "A rule you can apply",
+   "fr": "Une regle applicable",
+   "es": "Una regla aplicable",
+   "de": "Eine anwendbare Regel",
+   "it": "Una regola applicabile",
+   "pt": "Uma regra aplicavel",
+   "n": 2
+  }
+ ],
  "nu-html-checker": [
   {
    "en": "",
