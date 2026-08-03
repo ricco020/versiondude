@@ -908,5 +908,23 @@
       "Se o ponto de exclamação for usado, o rodapé BREAKING CHANGE: pode ser omitido e a descrição encarrega-se disso.",
       "A especificação é uma convenção de mensagens, não uma ferramenta de lançamento: corresponde aos níveis do SemVer mas não calcula nada por si só."
     ]
+  },
+  "ruby-on-rails-crm": {
+    "title": "Opções de CRM em Ruby on Rails",
+    "dek": "O Fat Free CRM é o único projeto que corresponde realmente à descrição. A maior parte do que aparece listado ao seu lado está escrita em PHP ou Python.",
+    "heroAlt": "Um programador visto de costas, com auscultadores, a trabalhar num monitor que mostra código numa sala iluminada a azul escuro",
+    "bodyCaption": "Código-fonte HTML com realce de sintaxe para um menu de navegação, mostrado de perto num ecrã.",
+    "paras": [
+      "O Rails construiu a sua reputação com a rapidez: predefinições sensatas, convenções em vez de configuração, e aplicações apoiadas numa base de dados a ficarem de pé em dias em vez de meses. Um CRM é exatamente o tipo de aplicação a que essa forma se adequa. É sobretudo registos, as relações entre eles, e um fluxo de trabalho colocado por cima.",
+      "Por isso a pergunta surge regularmente: se uma empresa já funciona sobre Rails, o seu CRM pode funcionar também aí? A resposta honesta é que o campo é muito mais estreito do que os resultados de pesquisa sugerem, e que a maior parte do que aparece listado como um \"Rails CRM\" não está sequer escrita em Ruby.",
+      "O único projeto que responde genuinamente à descrição é o Fat Free CRM. O seu README chama-lhe \"an open source, Ruby on Rails customer relationship management platform (CRM)\", e tem sido a resposta por omissão a esta pergunta há anos. Cobre a colaboração em grupo, a gestão de campanhas e de leads, as listas de contactos e o acompanhamento de oportunidades.",
+      "De origem, oferece também campos personalizados, etiquetas e organização em grupos e equipas, com plugins para webhooks, fusão de registos e contabilização de tempo. É distribuído sob a licença MIT, recomenda o Ruby 3.1 ou posterior, e funciona sobre MySQL, SQLite ou PostgreSQL. À data em que isto é escrito, o seu repositório mostra cerca de 3600 estrelas e 1300 forks, com um número modesto de issues e pull requests abertos: estável em vez de acelerado.",
+      "Pesquise por um CRM em Rails e vai encontrar listas que colocam o SuiteCRM, o EspoCRM e o Odoo ao lado do Fat Free CRM. Esse agrupamento é enganador. O SuiteCRM e o EspoCRM são aplicações PHP apoiadas em MySQL ou MariaDB, e o Odoo é construído em Python e funciona sobre PostgreSQL.",
+      "Os três são CRM open-source perfeitamente bons. Nenhum deles é um CRM em Rails. Se a razão da pergunta era «quero isto dentro da minha stack Ruby», esses três não lhe respondem, e nenhuma quantidade de ferramentas de deployment compatíveis com Rails muda a linguagem em que a base de código está escrita.",
+      "Portanto a pergunta útil não é qual o melhor CRM em Rails, mas porque é que precisa de ser Rails de todo. Há boas respostas para isso. Partilhar modelos e uma base de dados com uma aplicação existente, reutilizar a mesma autenticação, fazer o deployment através de um único pipeline, e ter a sua própria equipa capaz de ler e alterar o código são vantagens reais.",
+      "Se nenhuma delas se aplica, a restrição está a custar-lhe alguma coisa. Abandoná-la abre um campo muito maior e mais bem mantido, e a linguagem em que um CRM está escrito deixa de importar no momento em que interage com ele através de um browser e de uma API.",
+      "Se a exigência de Rails for real, o Fat Free CRM é o ponto de partida, e é melhor tratá-lo como uma base a estender do que como um produto acabado que basta ligar. Isso significa contar com orçamento para a personalização e para o manter atualizado, da mesma forma que faria para qualquer aplicação que lhe pertence.",
+      "De uma maneira ou de outra vai alojá-lo você mesmo, o que significa que o CRM precisa de um sítio fiável onde viver, com controlo sobre o runtime, a base de dados e a rede. É essa a parte que as equipas subestimam: o código é gratuito, as operações não são."
+    ]
   }
 }

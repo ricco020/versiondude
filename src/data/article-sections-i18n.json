@@ -2126,5 +2126,52 @@
       "pt": "Adota-la sem cerimonia",
       "n": 2
     }
+  ],
+  "ruby-on-rails-crm": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 2
+    },
+    {
+      "en": "Fat Free CRM, the reference point",
+      "fr": "Fat Free CRM, le point de référence",
+      "es": "Fat Free CRM, el punto de referencia",
+      "de": "Fat Free CRM, der Bezugspunkt",
+      "it": "Fat Free CRM, il punto di riferimento",
+      "pt": "O Fat Free CRM, o ponto de referência",
+      "n": 2
+    },
+    {
+      "en": "What most Rails CRM lists get wrong",
+      "fr": "L'erreur que commettent la plupart des listes de CRM Rails",
+      "es": "En qué se equivocan la mayoría de las listas de CRM para Rails",
+      "de": "Was die meisten Rails-CRM-Listen falsch machen",
+      "it": "Ciò che la maggior parte degli elenchi di CRM Rails sbaglia",
+      "pt": "O que a maioria das listas de CRM em Rails erra",
+      "n": 2
+    },
+    {
+      "en": "The question that actually decides it",
+      "fr": "La question qui tranche vraiment",
+      "es": "La pregunta que realmente lo decide",
+      "de": "Die Frage, die es tatsächlich entscheidet",
+      "it": "La domanda che decide davvero",
+      "pt": "A pergunta que decide realmente",
+      "n": 2
+    },
+    {
+      "en": "Where that leaves you",
+      "fr": "Ce que cela implique pour vous",
+      "es": "En qué punto te deja eso",
+      "de": "Was das für Sie bedeutet",
+      "it": "A che punto ti lascia",
+      "pt": "Onde é que isso o deixa",
+      "n": 2
+    }
   ]
 }

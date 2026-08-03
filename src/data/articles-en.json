@@ -415,5 +415,19 @@
       "If the exclamation mark is used, the BREAKING CHANGE: footer may be omitted and the description covers it.",
       "The specification is a message convention, not a release tool: it correlates with SemVer levels but computes nothing on its own."
     ]
+  },
+  "ruby-on-rails-crm": {
+    "paras": [
+      "Rails earned its reputation on speed: sensible defaults, conventions over configuration, and database-backed applications standing up in days rather than months. A CRM is exactly the kind of application that shape suits. It is mostly records, the relationships between them, and a workflow laid over the top.",
+      "So the question comes up regularly: if a company already runs on Rails, can its CRM run there too? The honest answer is that the field is far narrower than the search results suggest, and that most of what gets listed as a \"Rails CRM\" is not written in Ruby at all.",
+      "The one project that genuinely answers the description is Fat Free CRM. Its README calls it \"an open source, Ruby on Rails customer relationship management platform (CRM)\", and it has been the default answer to this question for years. It covers group collaboration, campaign and lead management, contact lists, and opportunity tracking.",
+      "Out of the box it also offers custom fields, tags, and organisation into groups and teams, with plugins for webhooks, record merging, and time tracking. It is released under the MIT licence, recommends Ruby 3.1 or later, and runs on MySQL, SQLite or PostgreSQL. At the time of writing its repository shows roughly 3,600 stars and 1,300 forks, with a modest number of open issues and pull requests: steady rather than fast-moving.",
+      "Search for a Rails CRM and you will find lists that put SuiteCRM, EspoCRM and Odoo alongside Fat Free CRM. That grouping is misleading. SuiteCRM and EspoCRM are PHP applications backed by MySQL or MariaDB, and Odoo is built in Python and runs on PostgreSQL.",
+      "All three are perfectly good open-source CRMs. None of them is a Rails CRM. If the reason for asking was \"I want this inside my Ruby stack\", those three do not answer it, and no amount of Rails-friendly deployment tooling changes what the codebase is written in.",
+      "So the useful question is not which Rails CRM is best, but why it needs to be Rails at all. There are good answers to that. Sharing models and a database with an existing application, reusing the same authentication, deploying through one pipeline, and having your own team able to read and change the code are real advantages.",
+      "If none of those apply, the constraint is costing you something. Dropping it opens up a much larger and better-maintained field, and the language a CRM is written in stops mattering the moment you interact with it through a browser and an API.",
+      "If the Rails requirement is real, Fat Free CRM is where to start, and it is best treated as a foundation to extend rather than a finished product to switch on. That means budgeting for customisation and for keeping it current, in the same way you would for any application you own.",
+      "Either way you are self-hosting, which means the CRM needs somewhere reliable to live, with control over the runtime, the database and the network. That is the part teams underestimate: the code is free, the operations are not."
+    ]
   }
 }

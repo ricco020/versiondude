@@ -349,6 +349,24 @@
       "Rails non è mai stato la prima scelta ovvia per un CMS come lo è per le applicazioni web, e vale la pena enunciarlo chiaramente. Ma per i team già investiti nel framework, le opzioni basate su motori offrono un modo coerente di aggiungere la gestione dei contenuti senza lasciare l'ecosistema in cui sono produttivi. Conoscere la stirpe - dai primi sforzi come Railfrog ai motori mantenuti di oggi - ti aiuta a prendere questa decisione con una visione d'insieme completa."
     ]
   },
+  "ruby-on-rails-crm": {
+    "title": "Opzioni di CRM su Ruby on Rails",
+    "dek": "Fat Free CRM è l'unico progetto che corrisponde davvero alla descrizione. La maggior parte di ciò che viene elencato accanto a esso è scritta in PHP o in Python.",
+    "heroAlt": "Uno sviluppatore visto di spalle, con le cuffie, al lavoro davanti a un monitor che mostra del codice in una stanza dalla luce blu scura",
+    "bodyCaption": "Codice sorgente HTML di un menu di navigazione con evidenziazione della sintassi, mostrato da vicino su uno schermo.",
+    "paras": [
+      "Rails si è costruito la sua reputazione sulla rapidità: impostazioni predefinite sensate, convenzioni anziché configurazione, e applicazioni basate su database messe in piedi in giorni anziché in mesi. Un CRM è esattamente il tipo di applicazione a cui questa forma si addice. È fatto soprattutto di record, delle relazioni fra di essi, e di un flusso di lavoro disteso al di sopra.",
+      "La domanda torna quindi con regolarità: se un'azienda gira già su Rails, può girare lì anche il suo CRM? La risposta onesta è che il campo è molto più ristretto di quanto i risultati di ricerca lascino intendere, e che la maggior parte di ciò che viene elencato come un \"CRM Rails\" non è affatto scritta in Ruby.",
+      "L'unico progetto che risponde davvero alla descrizione è Fat Free CRM. Il suo README lo definisce \"an open source, Ruby on Rails customer relationship management platform (CRM)\", ed è da anni la risposta predefinita a questa domanda. Copre la collaborazione di gruppo, la gestione delle campagne e dei lead, gli elenchi di contatti e il monitoraggio delle opportunità.",
+      "Da subito offre anche campi personalizzati, tag e l'organizzazione in gruppi e team, con plugin per i webhook, la fusione dei record e il monitoraggio del tempo. È distribuito sotto licenza MIT, raccomanda Ruby 3.1 o successivo, e funziona su MySQL, SQLite o PostgreSQL. Al momento in cui scriviamo il suo repository mostra circa 3.600 stelle e 1.300 fork, con un numero contenuto di issue e pull request aperte: costante anziché in rapido movimento.",
+      "Cerca un CRM Rails e troverai elenchi che mettono SuiteCRM, EspoCRM e Odoo accanto a Fat Free CRM. Questo raggruppamento è fuorviante. SuiteCRM ed EspoCRM sono applicazioni PHP appoggiate a MySQL o MariaDB, e Odoo è costruito in Python e gira su PostgreSQL.",
+      "Tutti e tre sono ottimi CRM open source. Nessuno di loro è un CRM Rails. Se il motivo della domanda era \"lo voglio dentro il mio stack Ruby\", quei tre non vi rispondono, e nessuna quantità di strumenti di deployment compatibili con Rails cambia il linguaggio in cui è scritta la base di codice.",
+      "La domanda utile non è dunque quale sia il miglior CRM Rails, ma perché debba essere Rails. A questo esistono buone risposte. Condividere modelli e database con un'applicazione esistente, riutilizzare la stessa autenticazione, effettuare il deployment attraverso un'unica pipeline, e avere un proprio team in grado di leggere e modificare il codice sono vantaggi reali.",
+      "Se nessuno di questi elementi vale nel tuo caso, il vincolo ti sta costando qualcosa. Lasciarlo cadere apre un campo molto più ampio e mantenuto meglio, e il linguaggio in cui è scritto un CRM smette di contare nel momento in cui vi interagisci attraverso un browser e un'API.",
+      "Se il requisito Rails è reale, Fat Free CRM è il punto da cui partire, ed è meglio trattarlo come una base da estendere anziché come un prodotto finito da accendere. Questo significa mettere in conto la personalizzazione e il mantenerlo aggiornato, allo stesso modo in cui faresti per qualsiasi applicazione che ti appartiene.",
+      "In un caso come nell'altro sei tu a ospitarlo, il che significa che il CRM ha bisogno di un posto affidabile dove vivere, con il controllo sul runtime, sul database e sulla rete. È questa la parte che i team sottovalutano: il codice è gratuito, le operazioni no."
+    ]
+  },
   "character-encoding-utf-8": {
     "title": "La codifica dei caratteri e perché UTF-8 ha prevalso",
     "dek": "Il mojibake, gli accenti rotti e i simboli «» si riconducono tutti alla codifica. Ecco cos'è UTF-8 e perché è lo standard predefinito del web moderno.",

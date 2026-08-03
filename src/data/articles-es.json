@@ -908,5 +908,23 @@
       "Si se usa el signo de exclamación, el pie BREAKING CHANGE: puede omitirse y la descripción lo cubre.",
       "La especificación es una convención de mensajes, no una herramienta de publicación: se corresponde con los niveles de SemVer pero no calcula nada por sí sola."
     ]
+  },
+  "ruby-on-rails-crm": {
+    "title": "Opciones de CRM en Ruby on Rails",
+    "dek": "Fat Free CRM es el único proyecto que responde de verdad a esa descripción. La mayoría de lo que aparece listado a su lado está escrito en PHP o en Python.",
+    "heroAlt": "Un desarrollador visto de espaldas, con auriculares, trabajando frente a un monitor que muestra código en una habitación con luz azul tenue",
+    "bodyCaption": "Código fuente HTML con resaltado de sintaxis para un menú de navegación, mostrado en primer plano en una pantalla.",
+    "paras": [
+      "Rails se ganó su reputación por la velocidad: valores predeterminados sensatos, convenciones por encima de la configuración y aplicaciones respaldadas por bases de datos que se ponen en pie en días en lugar de meses. Un CRM es exactamente el tipo de aplicación al que le sienta bien esa forma. Es sobre todo registros, las relaciones entre ellos y un flujo de trabajo superpuesto por encima.",
+      "Así que la pregunta surge con regularidad: si una empresa ya funciona sobre Rails, ¿puede su CRM funcionar también ahí? La respuesta honesta es que el campo es mucho más estrecho de lo que sugieren los resultados de búsqueda, y que la mayoría de lo que se lista como un \"CRM de Rails\" no está escrito en Ruby en absoluto.",
+      "El único proyecto que responde genuinamente a esa descripción es Fat Free CRM. Su README lo define como \"an open source, Ruby on Rails customer relationship management platform (CRM)\", y ha sido la respuesta por defecto a esta pregunta durante años. Cubre la colaboración en grupo, la gestión de campañas y de leads, las listas de contactos y el seguimiento de oportunidades.",
+      "Nada más instalarlo ofrece además campos personalizados, etiquetas y organización en grupos y equipos, con plugins para webhooks, fusión de registros y control de tiempo. Se publica bajo la licencia MIT, recomienda Ruby 3.1 o posterior y funciona sobre MySQL, SQLite o PostgreSQL. En el momento de escribir esto su repositorio muestra alrededor de 3.600 estrellas y 1.300 forks, con un número modesto de issues y pull requests abiertos: constante más que veloz.",
+      "Busca un CRM de Rails y encontrarás listas que ponen SuiteCRM, EspoCRM y Odoo junto a Fat Free CRM. Esa agrupación induce a error. SuiteCRM y EspoCRM son aplicaciones PHP respaldadas por MySQL o MariaDB, y Odoo está construido en Python y funciona sobre PostgreSQL.",
+      "Los tres son CRM de código abierto perfectamente buenos. Ninguno de ellos es un CRM de Rails. Si el motivo de la pregunta era \"quiero esto dentro de mi stack de Ruby\", esos tres no la responden, y ninguna cantidad de herramientas de despliegue afines a Rails cambia el lenguaje en el que está escrita la base de código.",
+      "Así que la pregunta útil no es cuál es el mejor CRM de Rails, sino por qué tiene que ser Rails siquiera. Hay buenas respuestas a eso. Compartir modelos y una base de datos con una aplicación existente, reutilizar la misma autenticación, desplegar a través de un único pipeline y que tu propio equipo pueda leer y modificar el código son ventajas reales.",
+      "Si ninguna de ellas se aplica, la restricción te está costando algo. Abandonarla abre un campo mucho más amplio y mejor mantenido, y el lenguaje en el que está escrito un CRM deja de importar en el momento en que interactúas con él a través de un navegador y una API.",
+      "Si el requisito de Rails es real, Fat Free CRM es por donde empezar, y conviene tratarlo como una base que extender más que como un producto acabado que simplemente enciendes. Eso significa presupuestar la personalización y el mantenerlo al día, del mismo modo que harías con cualquier aplicación que sea tuya.",
+      "En cualquiera de los dos casos vas a autoalojarlo, lo que significa que el CRM necesita un sitio fiable donde vivir, con control sobre el entorno de ejecución, la base de datos y la red. Esa es la parte que los equipos subestiman: el código es gratis, las operaciones no."
+    ]
   }
 }
