@@ -926,5 +926,31 @@
       "Ist die Rails-Anforderung real, dann ist Fat Free CRM der Ausgangspunkt, und man behandelt es am besten als Fundament zum Erweitern statt als fertiges Produkt zum Einschalten. Das bedeutet, Aufwand für Anpassungen und für die Aktualisierung einzuplanen, so wie Sie es für jede Anwendung tun würden, die Ihnen gehört.",
       "So oder so hosten Sie selbst, und das heißt, das CRM braucht einen verlässlichen Ort zum Laufen, mit Kontrolle über die Laufzeitumgebung, die Datenbank und das Netzwerk. Das ist der Teil, den Teams unterschätzen: Der Code ist kostenlos, der Betrieb ist es nicht."
     ]
+  },
+  "cra-sbom-eclipse-owasp": {
+    "title": "Eclipse und OWASP haben einen Sicherheitspakt unterzeichnet. Das entscheidende Datum ist der 11. September 2026",
+    "dek": "Die beiden Stiftungen kündigten am 30. Juli eine Absichtserklärung an. Die Vereinbarung selbst ändert diese Woche nichts; die dahinterliegende Frist des Cyber Resilience Act schon. Was in Kraft tritt, warum der CRA Open-Source-Stewards benennt, und warum eine SBOM ein Versionierungsproblem ist.",
+    "heroAlt": "Die Flagge der Europäischen Union weht vor klarem blauem Himmel, ihre zwölf gelben Sterne auf dunkelblauem Grund",
+    "bodyCaption": "Ein Gang zwischen hohen Lagerregalen voller Kartons, der sich in die Tiefe zieht. Eine SBOM ist für Software genau das: ein Inventar, das sagt, was in welchem Regal liegt und in welcher Version.",
+    "paras": [
+      "Am **30. Juli 2026** kündigten die **Eclipse Foundation** und **OWASP** eine Absichtserklärung an, bei der Open-Source-Sicherheit zusammenzuarbeiten. Eine Absichtserklärung ist weder ein Standard noch ein Werkzeug noch eine Frist. Für sich genommen ändert sie an Ihrem Build in dieser Woche nichts.",
+      "Notieren sollte man das Datum dahinter. Nach dem EU-**Cyber Resilience Act** treten die **Melde-pflichten für Schwachstellen und Vorfälle für Hersteller am 11. September 2026 in Kraft**. Das sind zum Zeitpunkt dieses Textes rund fünf Wochen, und anders als eine Absichtserklärung ist es eine gesetzliche Frist.",
+      "Der CRA ist eine europäische Verordnung, die verbindliche Cybersicherheitsanforderungen an Produkte mit digitalen Elementen stellt, die in der EU bereitgestellt werden. Die Formulierung *Produkte mit digitalen Elementen* ist bewusst weit gefasst: Es ist keine Regel über Sicherheitssoftware, sondern über alles, was mit Code ausgeliefert wird.",
+      "Der für diese Seite entscheidende Teil ist leiser und struktureller. Der CRA **erkennt Open-Source-Software-Stewards ausdrücklich als wichtige Beteiligte der Software-Lieferkette an**. Das ist eine Statusänderung. Stiftungen und die Menschen, die vielgenutzte Komponenten pflegen, sind nicht länger unsichtbares Upstream, sondern benannte Beteiligte mit eigener Verantwortung.",
+      "Damit zum Akronym im Zentrum der Ankündigung: **SBOM**, die Software-Stückliste. Zu den genannten Anfangsprioritäten gehören Ressourcen zur Förderung der SBOM-Einführung und zur Sicherheit der Software-Lieferkette.",
+      "Eine SBOM versteht man am besten als **Versionierungsproblem**, denn genau das ist sie. Sie ist ein Inventar jeder Komponente in einer Software und vor allem **welcher Version davon**. Nicht „wir verwenden OpenSSL\", sondern „wir liefern OpenSSL 3.2.1 aus\". Der Unterschied zwischen diesen beiden Sätzen ist der Unterschied zwischen „vielleicht betroffen\" und „betroffen oder nicht\".",
+      "Deshalb ist diese Datei schwerer zu erzeugen, als es klingt, und deshalb scheitert sie genau dort, wo Abhängigkeitsverwaltung scheitert: bei transitiven Abhängigkeiten, die niemand direkt gewählt hat, bei Versionsbereichen, die letzten Dienstag etwas anderes aufgelöst haben, bei einkopierten Beständen ohne Manifest und bei Lockfiles, die nie eingecheckt wurden. Wer je nicht beantworten konnte, *welche Version davon eigentlich läuft*, kennt die Form des Problems bereits.",
+      "Die weiteren genannten Prioritäten sind eher praktisch als technisch, und sie sagen etwas darüber, wen die beiden Stiftungen für überfordert halten. Sie stehen unten.",
+      "Es lohnt sich, genau zu sagen, was diese Vereinbarung nicht ist. Sie ist keine Zertifizierung, sie macht niemanden CRA-konform, und sie verschiebt keine rechtliche Verantwortung. Beide Geschäftsführer stellten sie als Übersetzungsaufgabe dar, nicht als Autorität. Mike Milinkovich von der Eclipse Foundation merkte an, Open Source sei kritische digitale Infrastruktur, doch die Verantwortung für ihre Absicherung sei über ein komplexes globales Ökosystem verteilt. Andrew van der Stock von OWASP formulierte denselben Punkt vom anderen Ende her: Sicherheitsleitlinien machen nur dann einen Unterschied, wenn Entwickler, Maintainer und Organisationen sie in die Praxis umsetzen können.",
+      "Die ehrliche Zusammenfassung für alle, die Software in die EU liefern: Die Absichtserklärung ist ein organisatorisches Signal, und organisatorische Signale sind langsam. Die Pflicht zum 11. September ist es nicht. Wer heute keine belastbare Liste dessen erzeugen kann, was er ausliefert und in welchen Versionen, hat dort seine Arbeit, und sie ist Versionierungsarbeit, bevor sie Compliance-Arbeit ist."
+    ],
+    "list": [
+      "Praktische Leitlinien für Open-Source-Stewards, die Rolle, die der CRA neu anerkennt",
+      "Gemeinsame Webinare zur CRA-Vorbereitung",
+      "Ressourcen zur Förderung der SBOM-Einführung",
+      "Ressourcen zur Sicherheit der Software-Lieferkette",
+      "Community-Veranstaltungen und Workshops",
+      "Maintainer-Roundtables"
+    ]
   }
 }

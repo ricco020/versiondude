@@ -2173,5 +2173,43 @@
       "pt": "Onde é que isso o deixa",
       "n": 2
     }
+  ],
+  "cra-sbom-eclipse-owasp": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 2
+    },
+    {
+      "en": "What the CRA actually requires",
+      "fr": "Ce que le CRA exige réellement",
+      "es": "Qué exige realmente el CRA",
+      "de": "Was der CRA tatsächlich verlangt",
+      "it": "Cosa impone davvero il CRA",
+      "pt": "O que o CRA exige realmente",
+      "n": 3
+    },
+    {
+      "en": "An SBOM is a versioning problem",
+      "fr": "Un SBOM est un problème de versions",
+      "es": "Un SBOM es un problema de versiones",
+      "de": "Eine SBOM ist ein Versionierungsproblem",
+      "it": "Un SBOM è un problema di versioni",
+      "pt": "Um SBOM é um problema de versões",
+      "n": 5
+    },
+    {
+      "en": "What the agreement is not",
+      "fr": "Ce que l'accord n'est pas",
+      "es": "Lo que el acuerdo no es",
+      "de": "Was die Vereinbarung nicht ist",
+      "it": "Cosa l'accordo non è",
+      "pt": "O que o acordo não é",
+      "n": 8
+    }
   ]
 }

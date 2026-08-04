@@ -429,5 +429,31 @@
       "If the Rails requirement is real, Fat Free CRM is where to start, and it is best treated as a foundation to extend rather than a finished product to switch on. That means budgeting for customisation and for keeping it current, in the same way you would for any application you own.",
       "Either way you are self-hosting, which means the CRM needs somewhere reliable to live, with control over the runtime, the database and the network. That is the part teams underestimate: the code is free, the operations are not."
     ]
+  },
+  "cra-sbom-eclipse-owasp": {
+    "title": "Eclipse and OWASP Signed a Security Pact. The Date That Matters Is 11 September 2026",
+    "dek": "The two foundations announced a memorandum of understanding on 30 July. The agreement itself changes nothing this week; the EU Cyber Resilience Act deadline behind it does. What takes effect, why the CRA names open source stewards, and why an SBOM is a versioning problem.",
+    "heroAlt": "The European Union flag flying against a clear blue sky, its twelve yellow stars on dark blue",
+    "bodyCaption": "An aisle between tall warehouse racks stacked with boxes, receding into the distance. An SBOM is this, for software: an inventory that says exactly what is on every shelf, and in which version.",
+    "paras": [
+      "On **30 July 2026**, the **Eclipse Foundation** and **OWASP** announced a memorandum of understanding to work together on open source security. A memorandum of understanding is not a standard, not a tool, and not a deadline. On its own it changes nothing about your build this week.",
+      "The date worth writing down is the one behind it. Under the EU **Cyber Resilience Act**, the regulation's **vulnerability and incident reporting obligations for manufacturers take effect on 11 September 2026**. That is roughly five weeks out at the time of writing, and unlike a memorandum, it is a legal deadline.",
+      "The CRA is a European regulation that imposes mandatory cybersecurity requirements on products with digital elements made available in the EU. The phrase *products with digital elements* is deliberately broad: it is not a rule about security software, it is a rule about anything shipping with code in it.",
+      "The part that concerns this site is quieter and more structural. The CRA **formally recognises open source software stewards as important participants in the software supply chain**. That is a change in status. Foundations, and the people who maintain widely-used components, stop being invisible upstream and become named participants with responsibilities of their own.",
+      "Which brings us to the acronym in the middle of the announcement: **SBOM**, software bill of materials. Among the initial priorities the two foundations listed are resources supporting SBOM adoption and software supply chain security.",
+      "An SBOM is worth understanding as a **versioning problem**, because that is what it is. It is an inventory of every component inside a piece of software, and crucially of **which version of each one**. Not \"we use OpenSSL\" but \"we ship OpenSSL 3.2.1\". The difference between those two sentences is the difference between knowing you might be affected by a vulnerability and knowing whether you are.",
+      "That is why this file is harder to produce than it sounds, and why it fails in the same places dependency management fails: transitive dependencies nobody chose directly, ranges that resolved to something different last Tuesday, vendored copies with no manifest, and lockfiles that were never committed. If you have ever been unable to answer *which version of this is actually running*, you already know the shape of the problem.",
+      "The other listed priorities are practical rather than technical, and they say something about who the two foundations think is struggling. They are set out below.",
+      "It is worth being precise about what this agreement is not. It is not a certification, it does not make anyone CRA-compliant, and it does not shift legal responsibility. Both executive directors framed it as a matter of translation rather than authority. Mike Milinkovich of the Eclipse Foundation noted that open source is critical digital infrastructure but that responsibility for securing it is distributed across a complex global ecosystem. Andrew van der Stock of OWASP put the same point from the other end: security guidance only makes a difference when developers, maintainers, and organisations can put it into practice.",
+      "The honest summary for anyone shipping software into the EU: the memorandum is an organisational signal, and organisational signals are slow. The 11 September obligation is not. If you cannot currently produce an accurate list of what you ship and in which versions, that is the work, and it is versioning work before it is compliance work."
+    ],
+    "list": [
+      "Practical guidance for open source stewards, the role the CRA newly recognises",
+      "Joint CRA readiness webinars",
+      "Resources supporting SBOM adoption",
+      "Resources on software supply chain security",
+      "Community events and workshops",
+      "Maintainer roundtables"
+    ]
   }
 }

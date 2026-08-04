@@ -926,5 +926,31 @@
       "Se si usa il punto esclamativo, il footer BREAKING CHANGE: può essere omesso e la descrizione lo copre.",
       "La specifica è una convenzione per i messaggi, non uno strumento di release: corrisponde ai livelli SemVer ma non calcola nulla da sé."
     ]
+  },
+  "cra-sbom-eclipse-owasp": {
+    "title": "Eclipse e OWASP hanno firmato un patto sulla sicurezza. La data che conta è l'11 settembre 2026",
+    "dek": "Le due fondazioni hanno annunciato un memorandum d'intesa il 30 luglio. L'accordo in sé non cambia nulla questa settimana; la scadenza del Cyber Resilience Act che gli sta dietro sì. Cosa entra in vigore, perché il CRA nomina gli steward open source e perché un SBOM è un problema di versioni.",
+    "heroAlt": "La bandiera dell'Unione europea che sventola contro un cielo azzurro limpido, con le sue dodici stelle gialle su fondo blu scuro",
+    "bodyCaption": "Un corridoio fra alti scaffali di magazzino carichi di scatole, che si allontana sul fondo. Un SBOM è questo per il software: un inventario che dice esattamente cosa c'è su ogni scaffale, e in quale versione.",
+    "paras": [
+      "Il **30 luglio 2026** la **Eclipse Foundation** e **OWASP** hanno annunciato un memorandum d'intesa per lavorare insieme sulla sicurezza dell'open source. Un memorandum d'intesa non è uno standard, non è uno strumento e non è una scadenza. Da solo non cambia nulla nella tua build di questa settimana.",
+      "La data da segnare è quella che gli sta dietro. In base al **Cyber Resilience Act** dell'UE, gli **obblighi di segnalazione di vulnerabilità e incidenti per i fabbricanti entrano in vigore l'11 settembre 2026**. Sono circa cinque settimane nel momento in cui scriviamo e, a differenza di un memorandum, è una scadenza giuridica.",
+      "Il CRA è un regolamento europeo che impone requisiti obbligatori di cibersicurezza ai prodotti con elementi digitali messi a disposizione nell'UE. L'espressione *prodotti con elementi digitali* è volutamente ampia: non è una regola sul software di sicurezza, è una regola su tutto ciò che viene consegnato con del codice dentro.",
+      "La parte che riguarda questo sito è più sommessa e più strutturale. Il CRA **riconosce formalmente gli steward di software open source come partecipanti importanti della catena di fornitura del software**. È un cambio di status. Le fondazioni, e chi mantiene componenti molto usati, smettono di essere un upstream invisibile e diventano partecipanti con un nome e responsabilità proprie.",
+      "Il che ci porta all'acronimo al centro dell'annuncio: **SBOM**, la distinta base del software. Fra le priorità iniziali elencate dalle due fondazioni figurano risorse a sostegno dell'adozione dell'SBOM e della sicurezza della catena di fornitura del software.",
+      "Un SBOM si capisce meglio come **problema di versioni**, perché è esattamente questo. È l'inventario di ogni componente presente in un software e, soprattutto, di **quale versione di ciascuno**. Non «usiamo OpenSSL» ma «distribuiamo OpenSSL 3.2.1». La differenza fra queste due frasi è quella fra sapere di poter essere colpiti da una vulnerabilità e sapere se lo si è.",
+      "Per questo il file è più difficile da produrre di quanto sembri, e fallisce esattamente dove fallisce la gestione delle dipendenze: dipendenze transitive che nessuno ha scelto direttamente, intervalli che martedì scorso hanno risolto qualcos'altro, copie incorporate senza manifest e lockfile mai committati. Se ti è già capitato di non saper rispondere a *quale versione di questo sta girando davvero*, conosci già la forma del problema.",
+      "Le altre priorità annunciate sono pratiche più che tecniche, e dicono qualcosa su chi, secondo le due fondazioni, è in difficoltà. Eccole.",
+      "Vale la pena essere precisi su cosa questo accordo non è. Non è una certificazione, non rende nessuno conforme al CRA e non sposta alcuna responsabilità giuridica. Entrambi i direttori esecutivi l'hanno presentato come una questione di traduzione più che di autorità. Mike Milinkovich della Eclipse Foundation ha osservato che l'open source è infrastruttura digitale critica ma che la responsabilità di metterlo in sicurezza è distribuita su un ecosistema globale complesso. Andrew van der Stock di OWASP ha detto la stessa cosa dall'altro capo: le linee guida di sicurezza fanno la differenza solo quando sviluppatori, manutentori e organizzazioni possono metterle in pratica.",
+      "Il riassunto onesto per chi consegna software nell'UE: il memorandum è un segnale organizzativo, e i segnali organizzativi sono lenti. L'obbligo dell'11 settembre non lo è. Se oggi non riesci a produrre un elenco esatto di ciò che consegni e in quali versioni, il lavoro è lì, ed è lavoro di versionamento prima che di conformità."
+    ],
+    "list": [
+      "Linee guida pratiche per gli steward open source, il ruolo che il CRA ha appena riconosciuto",
+      "Webinar congiunti di preparazione al CRA",
+      "Risorse a sostegno dell'adozione dell'SBOM",
+      "Risorse sulla sicurezza della catena di fornitura del software",
+      "Eventi e workshop per la comunità",
+      "Tavole rotonde fra manutentori"
+    ]
   }
 }

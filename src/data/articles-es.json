@@ -926,5 +926,31 @@
       "Si el requisito de Rails es real, Fat Free CRM es por donde empezar, y conviene tratarlo como una base que extender más que como un producto acabado que simplemente enciendes. Eso significa presupuestar la personalización y el mantenerlo al día, del mismo modo que harías con cualquier aplicación que sea tuya.",
       "En cualquiera de los dos casos vas a autoalojarlo, lo que significa que el CRM necesita un sitio fiable donde vivir, con control sobre el entorno de ejecución, la base de datos y la red. Esa es la parte que los equipos subestiman: el código es gratis, las operaciones no."
     ]
+  },
+  "cra-sbom-eclipse-owasp": {
+    "title": "Eclipse y OWASP firmaron un pacto de seguridad. La fecha que importa es el 11 de septiembre de 2026",
+    "dek": "Las dos fundaciones anunciaron un memorando de entendimiento el 30 de julio. El acuerdo en sí no cambia nada esta semana; el plazo del Cyber Resilience Act que hay detrás, sí. Qué entra en vigor, por qué el CRA nombra a los administradores de open source y por qué un SBOM es un problema de versiones.",
+    "heroAlt": "La bandera de la Unión Europea ondeando sobre un cielo azul despejado, con sus doce estrellas amarillas sobre fondo azul oscuro",
+    "bodyCaption": "Un pasillo entre altas estanterías de almacén cargadas de cajas, que se aleja hacia el fondo. Un SBOM es eso para el software: un inventario que dice exactamente qué hay en cada estante, y en qué versión.",
+    "paras": [
+      "El **30 de julio de 2026**, la **Fundación Eclipse** y **OWASP** anunciaron un memorando de entendimiento para trabajar juntas en la seguridad del open source. Un memorando de entendimiento no es una norma, ni una herramienta, ni un plazo. Por sí solo no cambia nada en tu build esta semana.",
+      "La fecha que conviene anotar es la que hay detrás. Bajo el **Cyber Resilience Act** de la UE, las **obligaciones de notificación de vulnerabilidades e incidentes para los fabricantes entran en vigor el 11 de septiembre de 2026**. Son unas cinco semanas en el momento de escribir esto y, a diferencia de un memorando, es un plazo legal.",
+      "El CRA es un reglamento europeo que impone requisitos obligatorios de ciberseguridad a los productos con elementos digitales puestos a disposición en la UE. La expresión *productos con elementos digitales* es deliberadamente amplia: no es una norma sobre software de seguridad, es una norma sobre todo lo que se entrega con código dentro.",
+      "La parte que atañe a este sitio es más discreta y más estructural. El CRA **reconoce formalmente a los administradores de software open source como participantes importantes de la cadena de suministro de software**. Es un cambio de estatus. Las fundaciones, y quienes mantienen componentes muy usados, dejan de ser un upstream invisible para convertirse en participantes con nombre y responsabilidades propias.",
+      "Lo que nos lleva al acrónimo en el centro del anuncio: **SBOM**, la lista de materiales de software. Entre las prioridades iniciales que enumeran las dos fundaciones figuran recursos para apoyar la adopción del SBOM y la seguridad de la cadena de suministro de software.",
+      "Un SBOM se entiende mejor como un **problema de versiones**, porque eso es. Es el inventario de cada componente dentro de un software y, sobre todo, de **qué versión de cada uno**. No «usamos OpenSSL» sino «entregamos OpenSSL 3.2.1». La diferencia entre esas dos frases es la que separa saber que quizá te afecta una vulnerabilidad de saber si te afecta.",
+      "Por eso este archivo es más difícil de producir de lo que parece, y falla exactamente donde falla la gestión de dependencias: dependencias transitivas que nadie eligió directamente, rangos que el martes pasado resolvieron otra cosa, copias incrustadas sin manifiesto y lockfiles que nunca se subieron. Si alguna vez no has podido responder a *qué versión de esto está corriendo de verdad*, ya conoces la forma del problema.",
+      "Las demás prioridades anunciadas son prácticas más que técnicas, y dicen algo sobre quién cree cada fundación que está en apuros. Están abajo.",
+      "Conviene ser preciso sobre lo que este acuerdo no es. No es una certificación, no hace a nadie conforme al CRA y no desplaza ninguna responsabilidad legal. Los dos directores ejecutivos lo plantearon como una cuestión de traducción más que de autoridad. Mike Milinkovich, de la Fundación Eclipse, señaló que el open source es infraestructura digital crítica pero que la responsabilidad de asegurarlo está repartida por un ecosistema global complejo. Andrew van der Stock, de OWASP, formuló lo mismo desde el otro extremo: las guías de seguridad solo marcan la diferencia cuando desarrolladores, mantenedores y organizaciones pueden llevarlas a la práctica.",
+      "El resumen honesto para quien entrega software en la UE: el memorando es una señal organizativa, y las señales organizativas son lentas. La obligación del 11 de septiembre no lo es. Si hoy no puedes producir una lista exacta de lo que entregas y en qué versiones, ahí está el trabajo, y es trabajo de versionado antes que de cumplimiento."
+    ],
+    "list": [
+      "Guías prácticas para los administradores de open source, el papel que el CRA acaba de reconocer",
+      "Webinarios conjuntos de preparación para el CRA",
+      "Recursos para apoyar la adopción del SBOM",
+      "Recursos sobre seguridad de la cadena de suministro de software",
+      "Eventos y talleres comunitarios",
+      "Mesas redondas de mantenedores"
+    ]
   }
 }

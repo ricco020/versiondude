@@ -122,6 +122,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'cra-sbom-eclipse-owasp', category: 'news', readingMinutes: 8, date: '2026-08-04',
+    title: ENX['cra-sbom-eclipse-owasp'].title,
+    dek: ENX['cra-sbom-eclipse-owasp'].dek,
+    hero: '/assets/articles/cra-sbom-eclipse-owasp-hero.jpg', heroAlt: ENX['cra-sbom-eclipse-owasp'].heroAlt,
+    body: '/assets/articles/cra-sbom-eclipse-owasp-body.jpg', bodyCaption: ENX['cra-sbom-eclipse-owasp'].bodyCaption,
+    paras: ENX['cra-sbom-eclipse-owasp'].paras,
+    list: ENX['cra-sbom-eclipse-owasp'].list,
+    related: 'what-is-semantic-versioning',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'peer-dependencies', category: 'guides', readingMinutes: 7, date: '2026-08-01',
     title: "peerDependencies Explained: Why npm Suddenly Refuses Your Install",
     dek: "peerDependencies express compatibility with a host package rather than requiring it. npm v7 started installing them by default, which is why ERESOLVE errors feel new. What they are, why broad ranges beat pinned ones, and when to mark a peer optional.",
@@ -785,6 +796,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "cra-sbom-eclipse-owasp": { fr: "cra-sbom-eclipse-owasp-echeance", es: "cra-sbom-eclipse-owasp-plazo", de: "cra-sbom-eclipse-owasp-frist", it: "cra-sbom-eclipse-owasp-scadenza", pt: "cra-sbom-eclipse-owasp-prazo" },
   "peer-dependencies": { fr: "dependances-peer-npm", es: "dependencias-peer-npm", de: "peer-dependencies-npm", it: "dipendenze-peer-npm", pt: "dependencias-peer-npm" },
   "conventional-commits": { fr: "conventional-commits-messages-de-commit", es: "conventional-commits-mensajes-de-commit", de: "conventional-commits-commit-nachrichten", it: "conventional-commits-messaggi-di-commit", pt: "conventional-commits-mensagens-de-commit" },
   "js-framework-release-cadence-2026": { fr: "frequence-publication-frameworks-js-2026", es: "frecuencia-publicacion-frameworks-js-2026", de: "release-frequenz-js-frameworks-2026", it: "frequenza-rilasci-framework-js-2026", pt: "frequencia-lancamentos-frameworks-js-2026" },
