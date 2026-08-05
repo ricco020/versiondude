@@ -155,6 +155,18 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'what-is-a-nightly-build', category: 'guides', readingMinutes: 7, date: '2026-08-06',
+    title: ENX['what-is-a-nightly-build'].title,
+    dek: ENX['what-is-a-nightly-build'].dek,
+    hero: '/assets/articles/what-is-a-nightly-build-hero.jpg', heroAlt: ENX['what-is-a-nightly-build'].heroAlt,
+    body: '/assets/articles/what-is-a-nightly-build-body.jpg', bodyCaption: ENX['what-is-a-nightly-build'].bodyCaption,
+    paras: ENX['what-is-a-nightly-build'].paras,
+    list: ENX['what-is-a-nightly-build'].list,
+    faq: ENX['what-is-a-nightly-build'].faq,
+    related: 'what-is-a-release-candidate',
+    cta: RC_THROWAWAY_CTA,
+  }),
+  a({
     slug: 'what-is-a-release-candidate', category: 'guides', readingMinutes: 7, date: '2026-08-05',
     title: ENX['what-is-a-release-candidate'].title,
     dek: ENX['what-is-a-release-candidate'].dek,
@@ -853,6 +865,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-a-nightly-build": { fr: "qu-est-ce-qu-un-build-nightly", es: "que-es-una-nightly-build", de: "was-ist-ein-nightly-build", it: "cos-e-una-nightly-build", pt: "o-que-e-uma-nightly-build" },
   "what-is-a-release-candidate": { fr: "qu-est-ce-qu-une-release-candidate", es: "que-es-una-release-candidate", de: "was-ist-ein-release-candidate", it: "release-candidate-cosa-significa", pt: "o-que-e-uma-release-candidate" },
   "what-is-an-lts-version": { fr: "qu-est-ce-qu-une-version-lts", es: "que-es-una-version-lts", de: "was-ist-eine-lts-version", it: "cos-e-una-versione-lts", pt: "o-que-e-uma-versao-lts" },
   "cra-sbom-eclipse-owasp": { fr: "cra-sbom-eclipse-owasp-echeance", es: "cra-sbom-eclipse-owasp-plazo", de: "cra-sbom-eclipse-owasp-frist", it: "cra-sbom-eclipse-owasp-scadenza", pt: "cra-sbom-eclipse-owasp-prazo" },

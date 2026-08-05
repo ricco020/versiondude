@@ -2314,5 +2314,52 @@
       "pt": "O que fazer com uma",
       "n": 1
     }
+  ],
+  "what-is-a-nightly-build": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 2
+    },
+    {
+      "en": "Stage versus channel",
+      "fr": "Étape contre canal",
+      "es": "Etapa frente a canal",
+      "de": "Stufe gegen Kanal",
+      "it": "Tappa contro canale",
+      "pt": "Etapa contra canal",
+      "n": 2
+    },
+    {
+      "en": "What Rust's channels make visible",
+      "fr": "Ce que les canaux de Rust rendent visible",
+      "es": "Lo que hacen visible los canales de Rust",
+      "de": "Was Rusts Kanäle sichtbar machen",
+      "it": "Che cosa rendono visibile i canali di Rust",
+      "pt": "O que os canais do Rust tornam visíveis",
+      "n": 3
+    },
+    {
+      "en": "What follows in practice",
+      "fr": "Ce qui en découle en pratique",
+      "es": "Qué se sigue en la práctica",
+      "de": "Was daraus praktisch folgt",
+      "it": "Che cosa ne segue in pratica",
+      "pt": "O que daí decorre na prática",
+      "n": 2
+    },
+    {
+      "en": "If you wanted the opposite",
+      "fr": "Si vous vouliez l'inverse",
+      "es": "Si querías lo contrario",
+      "de": "Wenn Sie das Gegenteil wollten",
+      "it": "Se volevi il contrario",
+      "pt": "Se queria o contrário",
+      "n": 2
+    }
   ]
 }

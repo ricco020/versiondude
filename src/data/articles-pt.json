@@ -1,4 +1,50 @@
 {
+  "what-is-a-nightly-build": {
+    "title": "O que é uma nightly build? O canal que não chega a lado nenhum",
+    "dek": "Alpha, beta e release candidate são etapas rumo a uma publicação. Uma nightly não é uma etapa: é um instantâneo do ramo principal, produzido a hora fixa, sem promessa de que alguma em concreto venha a ser algo.",
+    "heroAlt": "Rastos de estrelas a girar sobre uma encosta escura, com uma torre de vigia de madeira à direita e sacos de areia no chão",
+    "bodyCaption": "Uma linha transportadora industrial que atravessa uma fábrica, com filas de peças metálicas escuras nela, elementos de tampa azul à esquerda e maquinaria desfocada ao fundo. Um canal nightly é isto e não uma contagem decrescente: produz, e continua a produzir.",
+    "paras": [
+      "Os nomes à volta do software de pré-versão sugerem uma única escada, e quase todas as explicações põem a nightly no seu degrau mais baixo. A imagem é falsa, e é por isso que surpreende quando uma nightly de que se gostava simplesmente desaparece.",
+      "Uma nightly build é um instantâneo do que estava no ramo principal quando o relógio soou. É produzida automaticamente, por calendário e não por decisão, e ninguém a julgou pronta para nada.",
+      "A distinção que importa é entre uma **etapa** e um **canal**. Uma [alpha, uma beta ou uma release candidate](/pt/articles/o-que-e-uma-release-candidate) é uma etapa: existe porque se prepara uma publicação precisa, e termina quando essa sai. Um canal nightly não tem destino. Produziu uma build esta noite, produzirá outra logo, e continuará a produzi-las muito depois de a versão que espera ter saído e sido esquecida.",
+      "É por isso que uma nightly não tem número de versão no sentido corrente, e por isso fixar-se a uma é fixar-se a uma data e não a uma promessa.",
+      "O Rust torna o arranjo invulgarmente legível, e vale a pena lê-lo à letra. A sua documentação descreve uma nova versão nightly produzida **todas as noites**, criada automaticamente pela infraestrutura de publicação. De seis em seis semanas o ramo beta separa-se desse mesmo ramo principal, e seis semanas depois é produzida uma versão estável a partir de beta.",
+      "O mesmo commit viaja, portanto: aterra na nightly no dia em que é integrado, chega a beta no corte de seis semanas seguinte e torna-se estável seis semanas mais tarde. O canal nightly é a porta de entrada, não uma edição de menor qualidade do produto acabado.",
+      "O Rust usa-o ainda para algo que um número de versão não consegue exprimir. As funcionalidades em desenvolvimento estão atrás de **feature flags** disponíveis apenas na nightly; em beta ou estável não podem ser usadas de todo. O canal é assim uma fronteira de capacidades tanto quanto de frescura, e é por isso que alguns projetos exigem mesmo nightly em vez de apenas beneficiarem dela.",
+      "As consequências práticas decorrem do calendário. Uma nightly pode estar partida de um modo que nenhuma versão publicada estaria, porque nada a filtrou. Duas pessoas a correr \"a nightly\" em dias diferentes correm software diferente, pelo que um relato de erro sobre uma nada significa sem a data ou o commit. E uma correção vista numa nightly pode levar semanas a chegar ao canal estável, ou ser revertida antes.",
+      "Nada disto torna as nightlies más. Torna-as uma ferramenta diferente: a certa para reproduzir um erro contra o ramo principal atual, verificar se algo já está corrigido, ou usar uma funcionalidade ainda não publicada. A errada para tudo o que tenha de manter a funcionar.",
+      "Se o que quer na verdade é estabilidade com horizonte longo, a [via LTS](/pt/articles/o-que-e-uma-versao-lts) é o extremo oposto do mesmo eixo, e o [versionamento semântico](/pt/articles/o-que-e-o-versionamento-semantico) explica o que os números do lado estável prometem.",
+      "O resumo honesto é que nightly não é um rótulo de qualidade. É uma afirmação sobre quando o código foi tirado, e todo o resto, incluindo se funciona, fica deliberadamente por dizer."
+    ],
+    "list": [
+      "Etapa (alpha, beta, rc): existe para preparar uma publicação precisa e termina quando ela sai",
+      "Canal (nightly): produz por calendário, não tem destino, nunca termina",
+      "Consequência: uma nightly identifica uma data ou um commit, não uma versão com uma promessa"
+    ],
+    "faq": [
+      {
+        "q": "O que é uma nightly build?",
+        "a": "Uma build produzida automaticamente por calendário a partir do que estiver no ramo principal, tipicamente uma vez por dia. Ninguém a julgou pronta: existe porque o relógio o disse, não porque um marco tenha sido atingido. É isso que a separa de uma alpha, uma beta ou uma release candidate."
+      },
+      {
+        "q": "Uma nightly é o mesmo que uma alpha?",
+        "a": "Não, e a diferença é estrutural. Uma alpha é uma etapa na preparação de uma publicação precisa e termina quando esta sai. Uma nightly é um canal que produz indefinidamente e não tem destino. Um projeto pode ter nightlies durante anos sem que nenhuma seja a alpha do que quer que seja."
+      },
+      {
+        "q": "Posso usar uma nightly em produção?",
+        "a": "Considere que não. Nada a filtrou, duas máquinas a correr \"a nightly\" em dias diferentes correm código diferente, e uma alteração de que dependa pode ser revertida antes de chegar a estável. A exceção estreita é uma funcionalidade de que precise existir apenas na nightly: aí aceita essa troca conscientemente e não por acidente."
+      },
+      {
+        "q": "Porque é que alguns projetos exigem nightly?",
+        "a": "Porque um canal pode delimitar capacidades e não apenas frescura. No Rust, as funcionalidades em desenvolvimento estão atrás de feature flags disponíveis apenas na nightly; em beta ou estável não podem ser usadas. Um projeto que dependa de uma delas realmente não consegue compilar em estável enquanto ela lá não chegar."
+      },
+      {
+        "q": "Como reporto um erro numa nightly?",
+        "a": "Dê a data ou o hash do commit, não a palavra nightly. Como é produzida uma nova todas as noites, \"a nightly\" por si só nada identifica, e quem mantém o projeto não pode reproduzir o que não consegue fixar. Verificar se o mesmo comportamento persiste na build de hoje é de qualquer modo a pergunta seguinte."
+      }
+    ]
+  },
   "what-is-a-release-candidate": {
     "title": "O que é uma release candidate? A build que sai se ninguém encontrar nada",
     "dek": "Uma RC não é uma beta com um nome mais sério. É a build que a equipa tenciona publicar tal como está, a menos que alguém encontre um bloqueador. O que a escada alpha, beta, rc promete de facto, como o SemVer ordena as pré-versões, e porque o seu gestor de pacotes se recusa a instalar uma por acidente.",
