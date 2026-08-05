@@ -1,4 +1,50 @@
 {
+  "what-is-a-release-candidate": {
+    "title": "What Is a Release Candidate? The Build That Ships If Nobody Finds Anything",
+    "dek": "An RC is not a beta with a nicer name. It is the build the team intends to release as-is unless someone finds a blocker. What the ladder from alpha to rc actually promises, how SemVer orders prereleases, and why your package manager refuses to install one by accident.",
+    "heroAlt": "An empty theatre with a red curtain lit by spotlights, rows of empty seats in the foreground",
+    "bodyCaption": "Two people rehearsing on a stage in an empty theatre, coloured tape marking positions on the floor and a single person watching from the stalls. A release candidate is the run-through: everything is in place, and someone is still taking notes.",
+    "paras": [
+      "A release candidate is not a beta with a more serious name. It is a specific claim: this is the build we intend to ship, and unless somebody finds a blocking problem, it becomes the final release without further changes. On some projects the RC and the release are the same bytes with a different label.",
+      "That claim is what makes the label useful, and it is also what makes it easy to misread. An RC does not mean the software is bug-free. It means the team has stopped adding things and no longer knows of a reason not to ship.",
+      "Two consequences follow. The first is that an RC is the last moment when reporting a problem still changes the outcome, which is exactly why vendors publish them. The second is that a rising RC number is a signal in itself: if you see rc.4, three previous candidates were rejected, and the release is less settled than the word suggests.",
+      "It is also worth knowing that the term is a convention rather than a standard. Nothing enforces what a vendor means by it. Some ship an RC that becomes generally available unchanged; others keep patching after the label appears. The word alone guarantees nothing, and the project's own release notes are the only thing that settles it.",
+      "The ladder below it is a ladder of completeness, not of quality, and the distinction is the part people get wrong.",
+      "An **alpha** is incomplete. Features are missing, interfaces will still change, and breakage is expected rather than reported. A **beta** is feature-complete: everything that will be in the release is present, and what remains is finding out what is wrong with it. A **release candidate** adds one more claim on top, that nothing known is blocking. The three stages differ in what has been finished, not in how carefully it was written:",
+      "Semantic versioning encodes exactly this ordering, and reading it literally answers most of the questions. Prerelease identifiers hang off the version with a hyphen, and a prerelease always sorts **before** the release it belongs to, so 1.2.0-rc.1 comes before 1.2.0.",
+      "Within the prerelease part, dot-separated identifiers are compared one by one. Numeric identifiers are compared numerically and rank lower than alphanumeric ones, which is why 1.2.0-alpha.1 precedes 1.2.0-alpha.beta, and why rc.2 correctly follows rc.10 only if you remember they are numbers. Our note on [semantic versioning](/articles/what-is-semantic-versioning) covers the rest of the grammar.",
+      "Here is the practical part that surprises people, and it is a safety feature rather than a bug. A normal version range does **not** match a prerelease. If your manifest asks for ^1.2.0, it will not pick up 1.3.0-rc.1, even though the number is higher. You have to name the prerelease explicitly, or use a range that already contains one at the same major.minor.patch.",
+      "That rule is why an RC never lands in your build by accident, and it is also why testing one is a deliberate act: you pin it, on purpose, in an environment where you can afford the answer.",
+      "Which leads to the honest guidance. Run release candidates in CI and on a staging machine, not in production, unless the RC contains a fix you specifically need and you have accepted what that costs. If you do run one, report what you find, because that is the entire purpose of the exercise and the window closes when the release ships. And read the [changelog](/articles/what-is-a-changelog) between the last RC and the final build: if it is empty, the candidate you tested is the release you will get, which is the best news this process can give you. For long-lived systems where you would rather not be near the edge at all, the [LTS route](/articles/what-is-an-lts-version) exists precisely to avoid this decision."
+    ],
+    "list": [
+      "alpha - incomplete, interfaces may still change, breakage expected",
+      "beta - feature-complete, bugs still being found",
+      "rc - nothing known is blocking, ships as-is if nothing new appears"
+    ],
+    "faq": [
+      {
+        "q": "What is a release candidate?",
+        "a": "A build the team intends to release as it stands, unless someone finds a blocking problem before the release date. On many projects the release candidate and the final release are identical, with only the label changed. It is a statement about intent and readiness rather than a promise that no bugs remain."
+      },
+      {
+        "q": "Is a release candidate safe to use in production?",
+        "a": "Usually not, and the reason is not that the code is bad but that the guarantee is missing. An RC has not been through the exposure a general release gets, and if a blocker is found it will be replaced. Run it in CI and on staging. The exception is when the RC contains a fix you specifically need, in which case you are trading a known problem for an unknown one, deliberately."
+      },
+      {
+        "q": "What is the difference between alpha, beta and rc?",
+        "a": "Completeness, not quality. An alpha is incomplete and its interfaces may still change. A beta is feature-complete and is being tested for defects. A release candidate adds the claim that nothing known is blocking, so it ships as-is unless something new appears. Moving up the ladder tells you what has been finished, not how carefully it was written."
+      },
+      {
+        "q": "Why will npm not install a release candidate?",
+        "a": "Because a normal version range does not match a prerelease. A range like ^1.2.0 will not select 1.3.0-rc.1 even though the number is higher; you have to name the prerelease explicitly or use a range that already contains a prerelease at the same major, minor and patch. That is deliberate: it stops an RC from landing in a build by accident."
+      },
+      {
+        "q": "Does rc.3 mean the release is nearly ready?",
+        "a": "It means the opposite of what people assume. Each new candidate exists because the previous one was rejected, so a high number tells you the release has been reset several times. A first candidate that becomes the release unchanged is the smooth case; rc.4 is a project still finding blockers late."
+      }
+    ]
+  },
   "what-is-an-lts-version": {
     "title": "What Is an LTS Version? The Only Number That Matters Is the End Date",
     "dek": "LTS means Long Term Support: a release line that keeps getting security fixes for a period announced in advance. How Node.js, Ubuntu and Java define it, what you give up by choosing it, and why the support window matters more than the version number.",

@@ -134,9 +134,38 @@ const LTS_SERVER_CTA = {
   },
 };
 
+// RC: l angle honnete est l environnement JETABLE. L article dit explicitement de
+// ne pas tester une release candidate en production, ce qui cree un besoin reel de
+// machine qu on peut reconstruire. Ne pas reutiliser LTS_SERVER_CTA, dont l angle
+// (garder une machine longtemps) est l exact oppose de celui-ci.
+const RC_THROWAWAY_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'A machine you can throw away', fr: 'Une machine que vous pouvez jeter', es: 'Una máquina que puedes tirar', de: 'Eine Maschine zum Wegwerfen', it: 'Una macchina che puoi buttare', pt: 'Uma máquina que pode deitar fora' },
+  sublabel: {
+    en: 'Testing a release candidate is worth doing somewhere you can rebuild in minutes rather than on the machine that serves your users. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers with full root access.',
+    fr: "Tester une release candidate se fait quelque part que vous pouvez reconstruire en quelques minutes, pas sur la machine qui sert vos utilisateurs. Infomaniak - hébergeur suisse, respectueux de la vie privée - propose des VPS et serveurs cloud avec accès root complet.",
+    es: 'Probar una release candidate se hace en algún sitio que puedas reconstruir en minutos, no en la máquina que sirve a tus usuarios. Infomaniak - proveedor suizo, respetuoso con la privacidad - ofrece VPS y servidores cloud con acceso root completo.',
+    de: 'Einen Release Candidate testet man dort, wo man in Minuten neu aufsetzen kann, nicht auf der Maschine, die Ihre Nutzer bedient. Infomaniak - ein schweizerischer, datenschutzfreundlicher Anbieter - bietet VPS und Cloud-Server mit vollem Root-Zugang.',
+    it: "Provare una release candidate va fatto dove puoi ricostruire in pochi minuti, non sulla macchina che serve i tuoi utenti. Infomaniak - provider svizzero attento alla privacy - offre VPS e server cloud con accesso root completo.",
+    pt: 'Testar uma release candidate faz-se num sítio que possa reconstruir em minutos, não na máquina que serve os seus utilizadores. A Infomaniak - fornecedor suíço, respeitador da privacidade - oferece VPS e servidores cloud com acesso root completo.',
+  },
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
+  a({
+    slug: 'what-is-a-release-candidate', category: 'guides', readingMinutes: 7, date: '2026-08-05',
+    title: ENX['what-is-a-release-candidate'].title,
+    dek: ENX['what-is-a-release-candidate'].dek,
+    hero: '/assets/articles/what-is-a-release-candidate-hero.jpg', heroAlt: ENX['what-is-a-release-candidate'].heroAlt,
+    body: '/assets/articles/what-is-a-release-candidate-body.jpg', bodyCaption: ENX['what-is-a-release-candidate'].bodyCaption,
+    paras: ENX['what-is-a-release-candidate'].paras,
+    list: ENX['what-is-a-release-candidate'].list,
+    faq: ENX['what-is-a-release-candidate'].faq,
+    related: 'what-is-semantic-versioning',
+    cta: RC_THROWAWAY_CTA,
+  }),
   a({
     slug: 'what-is-an-lts-version', category: 'guides', readingMinutes: 7, date: '2026-08-05',
     title: ENX['what-is-an-lts-version'].title,
@@ -824,6 +853,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-a-release-candidate": { fr: "qu-est-ce-qu-une-release-candidate", es: "que-es-una-release-candidate", de: "was-ist-ein-release-candidate", it: "release-candidate-cosa-significa", pt: "o-que-e-uma-release-candidate" },
   "what-is-an-lts-version": { fr: "qu-est-ce-qu-une-version-lts", es: "que-es-una-version-lts", de: "was-ist-eine-lts-version", it: "cos-e-una-versione-lts", pt: "o-que-e-uma-versao-lts" },
   "cra-sbom-eclipse-owasp": { fr: "cra-sbom-eclipse-owasp-echeance", es: "cra-sbom-eclipse-owasp-plazo", de: "cra-sbom-eclipse-owasp-frist", it: "cra-sbom-eclipse-owasp-scadenza", pt: "cra-sbom-eclipse-owasp-prazo" },
   "peer-dependencies": { fr: "dependances-peer-npm", es: "dependencias-peer-npm", de: "peer-dependencies-npm", it: "dipendenze-peer-npm", pt: "dependencias-peer-npm" },

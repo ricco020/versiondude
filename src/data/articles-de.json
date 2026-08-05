@@ -1,4 +1,50 @@
 {
+  "what-is-a-release-candidate": {
+    "title": "Was ist ein Release Candidate? Der Build, der erscheint, wenn niemand etwas findet",
+    "dek": "Ein RC ist keine Beta mit ernsterem Namen. Es ist der Build, den das Team unverändert veröffentlichen will, sofern niemand einen Blocker findet. Was die Leiter von Alpha über Beta zu RC wirklich verspricht, wie SemVer Vorabversionen ordnet, und warum Ihr Paketmanager keinen davon versehentlich installiert.",
+    "heroAlt": "Ein leeres Theater mit rotem, von Scheinwerfern beleuchtetem Vorhang und leeren Sitzreihen im Vordergrund",
+    "bodyCaption": "Zwei Personen proben auf der Bühne eines leeren Theaters, farbige Klebemarkierungen auf dem Boden und eine einzelne Person, die aus dem Parkett zusieht. Ein Release Candidate ist genau diese Probe: alles steht, und jemand macht sich noch Notizen.",
+    "paras": [
+      "Ein Release Candidate ist keine Beta mit ernsterem Namen. Er ist eine präzise Aussage: das ist der Build, den wir veröffentlichen wollen, und sofern niemand ein blockierendes Problem findet, wird er ohne weitere Änderung zur finalen Version. In manchen Projekten sind RC und Release dieselben Bytes mit einem anderen Etikett.",
+      "Diese Aussage macht das Etikett nützlich, und sie macht es zugleich leicht misszuverstehen. Ein RC bedeutet nicht, dass die Software fehlerfrei ist. Er bedeutet, dass das Team aufgehört hat, Dinge hinzuzufügen, und keinen Grund mehr kennt, nicht zu veröffentlichen.",
+      "Daraus folgen zwei Dinge. Erstens ist ein RC der letzte Moment, in dem eine Fehlermeldung das Ergebnis noch ändert, und genau deshalb veröffentlichen Anbieter sie. Zweitens ist eine steigende RC-Nummer selbst ein Signal: sehen Sie rc.4, wurden drei Kandidaten zuvor verworfen, und die Veröffentlichung ist weniger gefestigt, als das Wort nahelegt.",
+      "Ebenso wissenswert: der Begriff ist eine Konvention, keine Norm. Nichts schreibt vor, was ein Anbieter damit meint. Manche liefern einen RC, der unverändert allgemein verfügbar wird, andere patchen nach dem Erscheinen des Etiketts weiter. Das Wort allein garantiert nichts, und nur die Release Notes des Projekts klären es.",
+      "Die Leiter darunter ist eine Leiter der Vollständigkeit, nicht der Qualität, und diese Unterscheidung wird am häufigsten falsch verstanden.",
+      "Eine **Alpha** ist unvollständig. Funktionen fehlen, Schnittstellen werden sich noch ändern, und Brüche werden erwartet statt gemeldet. Eine **Beta** ist funktionsvollständig: alles, was im Release sein wird, ist da, und es bleibt herauszufinden, was daran nicht stimmt. Ein **Release Candidate** legt eine Aussage darüber: dass nichts Bekanntes blockiert. Die drei Stufen unterscheiden sich darin, was fertig ist, nicht darin, wie sorgfältig es geschrieben wurde:",
+      "Semantische Versionierung kodiert genau diese Ordnung, und sie wörtlich zu lesen beantwortet die meisten Fragen. Vorabversions-Bezeichner hängen mit einem Bindestrich an der Version, und eine Vorabversion sortiert immer **vor** der Version, zu der sie gehört: 1.2.0-rc.1 kommt also vor 1.2.0.",
+      "Innerhalb des Vorabversionsteils werden die durch Punkte getrennten Bezeichner einzeln verglichen. Numerische werden numerisch verglichen und rangieren unter alphanumerischen, weshalb 1.2.0-alpha.1 vor 1.2.0-alpha.beta liegt und rc.2 nur dann korrekt auf rc.10 folgt, wenn man sich erinnert, dass es Zahlen sind. Unser Beitrag zur [semantischen Versionierung](/de/articles/was-ist-semantische-versionierung) behandelt den Rest der Grammatik.",
+      "Hier ist der praktische Teil, der überrascht, und er ist eine Schutzmaßnahme und kein Fehler. Ein normaler Versionsbereich passt **nicht** auf eine Vorabversion. Verlangt Ihr Manifest ^1.2.0, greift es 1.3.0-rc.1 nicht auf, obwohl die Nummer höher ist. Sie müssen die Vorabversion ausdrücklich nennen oder einen Bereich verwenden, der bereits eine mit gleicher Major-, Minor- und Patch-Nummer enthält.",
+      "Diese Regel verhindert, dass ein RC versehentlich in Ihrem Build landet, und sie macht das Testen eines RC zu einer bewussten Handlung: Sie pinnen ihn absichtlich, in einer Umgebung, in der Sie sich die Antwort leisten können.",
+      "Daraus folgt der ehrliche Rat. Lassen Sie Release Candidates in der CI und auf einer Staging-Maschine laufen, nicht in Produktion, es sei denn, der RC enthält eine Korrektur, die Sie konkret brauchen, und Sie haben den Preis dafür akzeptiert. Wenn Sie einen laufen lassen, melden Sie, was Sie finden, denn das ist der ganze Zweck der Übung, und das Fenster schließt sich mit dem Release. Und lesen Sie das [Changelog](/de/articles/was-ist-ein-changelog) zwischen dem letzten RC und dem finalen Build: ist es leer, ist der getestete Kandidat genau die Version, die Sie bekommen, und das ist die beste Nachricht, die dieser Prozess geben kann. Für langlebige Systeme, bei denen Sie lieber nicht am Rand stehen, existiert der [LTS-Weg](/de/articles/was-ist-eine-lts-version) genau dafür, diese Entscheidung zu vermeiden."
+    ],
+    "list": [
+      "Alpha - unvollständig, Schnittstellen können sich noch ändern, Brüche erwartet",
+      "Beta - funktionsvollständig, Fehler werden noch gefunden",
+      "RC - nichts Bekanntes blockiert, erscheint unverändert, wenn nichts Neues auftaucht"
+    ],
+    "faq": [
+      {
+        "q": "Was ist ein Release Candidate?",
+        "a": "Ein Build, den das Team so wie er ist veröffentlichen will, sofern niemand vor dem Termin ein blockierendes Problem findet. In vielen Projekten sind Release Candidate und finale Version identisch, nur das Etikett ändert sich. Es ist eine Aussage über Absicht und Reife, nicht das Versprechen, dass keine Fehler mehr da sind."
+      },
+      {
+        "q": "Kann man einen Release Candidate produktiv einsetzen?",
+        "a": "Meist nicht, und der Grund ist nicht schlechter Code, sondern die fehlende Zusage. Ein RC hatte nicht die Verbreitung eines allgemeinen Releases, und wird ein Blocker gefunden, wird er ersetzt. Lassen Sie ihn in der CI und im Staging laufen. Die Ausnahme ist ein RC mit einer Korrektur, die Sie konkret brauchen: dann tauschen Sie bewusst ein bekanntes Problem gegen ein unbekanntes."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen Alpha, Beta und RC?",
+        "a": "Vollständigkeit, nicht Qualität. Eine Alpha ist unvollständig, ihre Schnittstellen können sich ändern. Eine Beta ist funktionsvollständig und wird auf Fehler geprüft. Ein Release Candidate ergänzt die Aussage, dass nichts Bekanntes blockiert, und erscheint unverändert, wenn nichts Neues auftaucht. Die Leiter sagt, was fertig ist, nicht wie sorgfältig es geschrieben wurde."
+      },
+      {
+        "q": "Warum installiert npm keinen Release Candidate?",
+        "a": "Weil ein normaler Versionsbereich nicht auf eine Vorabversion passt. Ein Bereich wie ^1.2.0 wählt 1.3.0-rc.1 nicht aus, auch wenn die Nummer höher ist; Sie müssen die Vorabversion ausdrücklich nennen oder einen Bereich verwenden, der bereits eine Vorabversion mit gleicher Major-, Minor- und Patch-Nummer enthält. Das ist Absicht und verhindert, dass ein RC versehentlich in einem Build landet."
+      },
+      {
+        "q": "Heißt rc.3, dass das Release fast fertig ist?",
+        "a": "Es heißt das Gegenteil dessen, was man annimmt. Jeder neue Kandidat existiert, weil der vorige verworfen wurde, eine hohe Nummer sagt also, dass das Release mehrfach zurückgesetzt wurde. Ein erster Kandidat, der unverändert zum Release wird, ist der ruhige Fall; rc.4 ist ein Projekt, das spät noch Blocker findet."
+      }
+    ]
+  },
   "what-is-an-lts-version": {
     "title": "Was ist eine LTS-Version? Die einzige Zahl, die zählt, ist das Enddatum",
     "dek": "LTS heißt Long Term Support: eine Release-Linie, die für einen vorab angekündigten Zeitraum weiter Sicherheitsupdates erhält. Wie Node.js, Ubuntu und Java das definieren, worauf Sie dafür verzichten, und warum das Support-Fenster wichtiger ist als die Versionsnummer.",

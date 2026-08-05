@@ -2258,5 +2258,61 @@
       "pt": "A data que realmente conta",
       "n": 2
     }
+  ],
+  "what-is-a-release-candidate": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 1
+    },
+    {
+      "en": "What the label actually claims",
+      "fr": "Ce que l'étiquette affirme vraiment",
+      "es": "Qué afirma realmente la etiqueta",
+      "de": "Was das Etikett tatsächlich behauptet",
+      "it": "Che cosa afferma davvero l'etichetta",
+      "pt": "O que a etiqueta afirma realmente",
+      "n": 3
+    },
+    {
+      "en": "Alpha, beta, rc: a ladder of completeness",
+      "fr": "Alpha, bêta, rc : une échelle d'achèvement",
+      "es": "Alpha, beta, rc: una escalera de completitud",
+      "de": "Alpha, Beta, RC: eine Leiter der Vollständigkeit",
+      "it": "Alpha, beta, rc: una scala di completezza",
+      "pt": "Alpha, beta, rc: uma escada de completude",
+      "n": 2
+    },
+    {
+      "en": "How SemVer orders a prerelease",
+      "fr": "Comment SemVer ordonne une préversion",
+      "es": "Cómo ordena SemVer una preversión",
+      "de": "Wie SemVer eine Vorabversion ordnet",
+      "it": "Come SemVer ordina una preversione",
+      "pt": "Como o SemVer ordena uma pré-versão",
+      "n": 2
+    },
+    {
+      "en": "Your package manager will not take one by accident",
+      "fr": "Votre gestionnaire de paquets n'en prendra pas une par accident",
+      "es": "Tu gestor de paquetes no cogerá una por accidente",
+      "de": "Ihr Paketmanager nimmt keinen versehentlich",
+      "it": "Il tuo gestore di pacchetti non ne prenderà una per sbaglio",
+      "pt": "O seu gestor de pacotes não vai buscar uma por acidente",
+      "n": 2
+    },
+    {
+      "en": "What to do with one",
+      "fr": "Qu'en faire",
+      "es": "Qué hacer con una",
+      "de": "Was man damit tut",
+      "it": "Che cosa farne",
+      "pt": "O que fazer com uma",
+      "n": 1
+    }
   ]
 }

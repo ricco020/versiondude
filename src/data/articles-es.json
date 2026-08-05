@@ -1,4 +1,50 @@
 {
+  "what-is-a-release-candidate": {
+    "title": "¿Qué es una release candidate? La versión que sale si nadie encuentra nada",
+    "dek": "Una RC no es una beta con un nombre más serio. Es la versión que el equipo piensa publicar tal cual, salvo que alguien encuentre un bloqueante. Qué promete de verdad la escalera alpha, beta, rc, cómo ordena SemVer las preversiones, y por qué tu gestor de paquetes se niega a instalar una por accidente.",
+    "heroAlt": "Un teatro vacío con un telón rojo iluminado por focos y filas de butacas vacías en primer plano",
+    "bodyCaption": "Dos personas ensayan en el escenario de un teatro vacío, con marcas de cinta de colores en el suelo y una sola persona mirando desde la platea. Una release candidate es ese ensayo: todo está en su sitio y alguien sigue tomando notas.",
+    "paras": [
+      "Una release candidate no es una beta con un nombre más serio. Es una afirmación concreta: esta es la versión que pensamos publicar y, salvo que alguien encuentre un problema bloqueante, se convierte en la versión final sin más cambios. En algunos proyectos la RC y la versión publicada son los mismos bytes con otra etiqueta.",
+      "Esa afirmación es lo que hace útil la etiqueta, y también lo que la hace fácil de malinterpretar. Una RC no significa que el software no tenga fallos. Significa que el equipo ha dejado de añadir cosas y ya no conoce ningún motivo para no publicar.",
+      "De ahí salen dos consecuencias. La primera es que una RC es el último momento en que informar de un problema todavía cambia el resultado, y por eso justamente los fabricantes las publican. La segunda es que un número de RC que sube es una señal en sí misma: si ves rc.4, tres candidatas anteriores fueron rechazadas y la publicación está menos asentada de lo que la palabra sugiere.",
+      "Conviene saber además que el término es una convención y no una norma. Nada obliga a lo que un fabricante entienda por ello. Algunos publican una RC que pasa a disponibilidad general sin cambios; otros siguen parcheando después de que aparezca la etiqueta. La palabra por sí sola no garantiza nada, y las notas de versión del propio proyecto son lo único que lo aclara.",
+      "La escalera que lleva hasta ella es una escalera de completitud, no de calidad, y esa distinción es la que se entiende mal.",
+      "Una **alpha** está incompleta. Faltan funciones, las interfaces todavía cambiarán y las roturas se esperan más que se reportan. Una **beta** está completa en funciones: todo lo que estará en la versión publicada ya está, y queda averiguar qué falla. Una **release candidate** añade una afirmación más, la de que no se conoce ningún bloqueante. Las tres etapas se diferencian en lo que está terminado, no en el cuidado con que se escribió:",
+      "El versionado semántico codifica exactamente ese orden, y leerlo al pie de la letra responde a casi todas las preguntas. Los identificadores de preversión cuelgan de la versión con un guion, y una preversión siempre se ordena **antes** de la versión a la que pertenece: 1.2.0-rc.1 va antes que 1.2.0.",
+      "Dentro de la parte de preversión, los identificadores separados por puntos se comparan uno a uno. Los numéricos se comparan numéricamente y quedan por debajo de los alfanuméricos, y por eso 1.2.0-alpha.1 precede a 1.2.0-alpha.beta, y rc.2 solo sigue correctamente a rc.10 si recuerdas que son números. Nuestro artículo sobre [versionado semántico](/es/articles/que-es-el-versionado-semantico) cubre el resto de la gramática.",
+      "Aquí está la parte práctica que sorprende, y es una protección más que un defecto. Un rango de versiones normal **no** coincide con una preversión. Si tu manifiesto pide ^1.2.0, no cogerá 1.3.0-rc.1 aunque el número sea mayor. Hay que nombrar la preversión explícitamente, o usar un rango que ya contenga una con los mismos mayor, menor y parche.",
+      "Esa regla es lo que impide que una RC aterrice en tu build por accidente, y también lo que convierte probar una en un acto deliberado: la fijas, a propósito, en un entorno donde puedes asumir la respuesta.",
+      "De ahí el consejo honesto. Ejecuta las release candidates en integración continua y en una máquina de preproducción, no en producción, salvo que la RC contenga una corrección que necesites en concreto y hayas aceptado lo que cuesta. Si ejecutas una, informa de lo que encuentres, porque ese es todo el sentido del ejercicio y la ventana se cierra al publicar. Y lee el [changelog](/es/articles/que-es-un-changelog) entre la última RC y la versión final: si está vacío, la candidata que probaste es la versión que vas a recibir, y es la mejor noticia que este proceso puede dar. Para sistemas de larga vida en los que prefieres no estar cerca del borde, la [vía LTS](/es/articles/que-es-una-version-lts) existe justamente para evitar esta decisión."
+    ],
+    "list": [
+      "alpha - incompleta, las interfaces aún pueden cambiar, se esperan roturas",
+      "beta - completa en funciones, todavía se están encontrando defectos",
+      "rc - no se conoce ningún bloqueante, sale tal cual si no aparece nada nuevo"
+    ],
+    "faq": [
+      {
+        "q": "¿Qué es una release candidate?",
+        "a": "Una versión que el equipo piensa publicar tal como está, salvo que alguien encuentre un problema bloqueante antes de la fecha de salida. En muchos proyectos la release candidate y la versión final son idénticas y solo cambia la etiqueta. Es una declaración de intención y de madurez, no una promesa de que no queden fallos."
+      },
+      {
+        "q": "¿Se puede usar una release candidate en producción?",
+        "a": "Normalmente no, y el motivo no es que el código sea malo sino que falta la garantía. Una RC no ha pasado por la exposición que recibe una versión general, y si se encuentra un bloqueante será sustituida. Ejecútala en integración continua y en preproducción. La excepción es que la RC traiga una corrección que necesites en concreto: entonces cambias a sabiendas un problema conocido por uno desconocido."
+      },
+      {
+        "q": "¿Qué diferencia hay entre alpha, beta y rc?",
+        "a": "La completitud, no la calidad. Una alpha está incompleta y sus interfaces pueden cambiar. Una beta está completa en funciones y se está probando en busca de defectos. Una release candidate añade la afirmación de que no se conoce ningún bloqueante, así que sale tal cual si no aparece nada nuevo. Subir en la escalera dice qué está terminado, no con cuánto cuidado se escribió."
+      },
+      {
+        "q": "¿Por qué npm no instala una release candidate?",
+        "a": "Porque un rango de versiones normal no coincide con una preversión. Un rango como ^1.2.0 no seleccionará 1.3.0-rc.1 aunque el número sea mayor; hay que nombrar la preversión explícitamente o usar un rango que ya contenga una preversión con los mismos mayor, menor y parche. Es deliberado: evita que una RC entre en un build por accidente."
+      },
+      {
+        "q": "¿rc.3 significa que la publicación está casi lista?",
+        "a": "Significa lo contrario de lo que se supone. Cada nueva candidata existe porque la anterior fue rechazada, así que un número alto indica que la publicación se ha reiniciado varias veces. Una primera candidata que se convierte en la versión publicada sin cambios es el caso tranquilo; rc.4 es un proyecto que sigue encontrando bloqueantes tarde."
+      }
+    ]
+  },
   "what-is-an-lts-version": {
     "title": "¿Qué es una versión LTS? El único número que importa es la fecha de fin",
     "dek": "LTS significa Long Term Support: una línea de versión que sigue recibiendo parches de seguridad durante un periodo anunciado de antemano. Cómo la definen Node.js, Ubuntu y Java, a qué renuncias al elegirla, y por qué la ventana de soporte importa más que el número de versión.",
