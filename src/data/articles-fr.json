@@ -1,4 +1,50 @@
 {
+  "what-is-an-lts-version": {
+    "title": "Qu'est-ce qu'une version LTS ? Le seul chiffre qui compte est la date de fin",
+    "dek": "LTS veut dire Long Term Support : une ligne de version qui continue de recevoir des correctifs de sécurité pendant une durée annoncée à l'avance. Comment Node.js, Ubuntu et Java la définissent, ce qu'on abandonne en la choisissant, et pourquoi la fenêtre de support compte plus que le numéro de version.",
+    "heroAlt": "Un calendrier mural vu de biais, avec plusieurs rangées de dates surlignées en jaune",
+    "bodyCaption": "Des engrenages métalliques imbriqués dans une vieille machine, photographiés en noir et blanc. Une ligne LTS en maintenance est une mécanique qu'on maintient en rotation : les correctifs entrent, rien de neuf n'entre.",
+    "paras": [
+      "LTS signifie Long Term Support, et c'est l'un des rares termes de jargon de publication qui veut dire exactement ce qu'il dit. Une version LTS est une ligne de version qui continuera de recevoir des correctifs de sécurité et de bogues pendant une durée annoncée à l'avance, au lieu d'être remplacée dès que la version suivante sort.",
+      "La promesse est une date, pas une qualité. Une version LTS n'est pas forcément plus stable au moment où elle paraît, et elle est certainement moins riche en fonctionnalités. Ce qu'elle vous donne, c'est une fenêtre de support sur laquelle vous pouvez planifier : vous savez quand les correctifs s'arrêtent, et vous le savez avant de déployer.",
+      "Cette distinction se perd en permanence. Des équipes choisissent une version LTS en croyant avoir choisi la version sûre, puis la font tourner des années sans jamais regarder la date de fin de vie. Une LTS à trois mois de sa fin de vie est un plus mauvais choix pour un nouveau projet qu'une version non-LTS qui vient de sortir, parce que le compte à rebours sur lequel vous comptiez est presque terminé.",
+      "La plupart des lignes LTS ont aussi deux phases. La phase active accepte encore des améliorations rétroportées. La phase de maintenance n'accepte que les correctifs critiques et les correctifs de sécurité. Les deux comptent comme supportées, et ce sont deux endroits très différents.",
+      "Les règles diffèrent selon les projets, et lire la politique réelle prend deux minutes et épargne des mois. Trois des plus courantes :",
+      "Node.js est celle que les développeurs croisent en premier. Seules les versions majeures paires deviennent LTS. Une majeure démarre en Current, et si elle est paire elle passe en Active LTS puis en Maintenance, ce qui totalise environ trente mois de support depuis sa sortie. Les majeures impaires ne deviennent jamais LTS, ce qui explique pourquoi faire tourner Node 21 en production n'a jamais été le plan.",
+      "Ubuntu publie une LTS tous les deux ans, en avril des années paires, avec cinq ans de support standard pour le bureau et le serveur ; l'abonnement Ubuntu Pro allonge nettement cette fenêtre pour ceux qui en ont besoin. Les versions intermédiaires entre deux LTS ont neuf mois, ce qui convient à un portable et rarement à un serveur. Java suit une troisième approche : Oracle désigne certaines versions comme LTS, et depuis Java 17 cela s'est stabilisé sur une cadence de deux ans.",
+      "Le coût d'une LTS se paie au moment de la migration, et il est réel. Un projet qui suit chaque version avance par petits pas et absorbe les ruptures au fil de l'eau. Un projet qui saute de LTS en LTS économise cet effort pendant des années puis le paie d'un coup, en migrant à travers tout ce qui a changé entre-temps.",
+      "Il existe un second coût, plus facile à manquer. Rester sur une vieille LTS signifie que ce sont vos dépendances qui vous lâchent en premier. Les bibliothèques fixent leur runtime minimum d'après ce qui est courant, pas d'après ce qui reçoit encore des correctifs de sécurité : vous arrivez à un point où la plateforme est supportée et où l'écosystème autour ne l'est plus. C'est en général la vraie échéance, et elle arrive avant l'officielle.",
+      "La règle pratique est donc simple, et ce n'est pas celle qu'on applique. Ne demandez pas si une version est LTS. Demandez quand son support s'arrête, et comparez cette date à la durée pendant laquelle ce projet va réellement vivre sans qu'on y touche.",
+      "Si la réponse est que le support s'arrête avant votre prochaine fenêtre de mise à jour prévue, vous n'avez pas choisi la stabilité. Vous avez choisi un système de production non corrigé avec une date dessus, et la date est déjà au calendrier."
+    ],
+    "list": [
+      "Node.js - majeures paires uniquement, environ 30 mois de support depuis la sortie",
+      "Ubuntu - tous les deux ans en avril, cinq ans de support standard, extensible avec Ubuntu Pro",
+      "Java - certaines versions désignées LTS, sur une cadence de deux ans depuis Java 17"
+    ],
+    "faq": [
+      {
+        "q": "Que veut dire LTS ?",
+        "a": "Long Term Support, soit support à long terme. Cela désigne une ligne de version qui continuera de recevoir des correctifs de sécurité et de bogues pendant une durée annoncée à l'avance, au lieu d'être abandonnée dès la sortie de la version suivante. La promesse est une fenêtre de support avec une date de fin connue, pas une affirmation que le logiciel est plus stable ou plus complet."
+      },
+      {
+        "q": "Faut-il toujours utiliser la version LTS ?",
+        "a": "En production, généralement oui, mais ce n'est pas l'étiquette qu'il faut vérifier. Vérifiez la date de fin de vie. Une LTS proche de sa fin de vie est un plus mauvais choix pour un nouveau projet qu'une version fraîche, parce que la fenêtre de support sur laquelle vous comptiez est presque écoulée."
+      },
+      {
+        "q": "Quelles versions de Node.js sont LTS ?",
+        "a": "Uniquement les versions majeures paires. Une majeure démarre en Current, et si elle est paire elle passe en Active LTS puis en Maintenance, pour un total d'environ trente mois de support depuis sa sortie. Les majeures impaires ne deviennent jamais LTS : elles servent à tester ce qui arrive, pas à faire tourner de la production."
+      },
+      {
+        "q": "Quelle est la différence entre Active LTS et Maintenance LTS ?",
+        "a": "L'Active LTS accepte encore des améliorations rétroportées en plus des correctifs. La Maintenance LTS n'accepte que les correctifs critiques et de sécurité. Les deux sont décrites comme supportées, donc un tableau de bord qui affiche une coche verte ne vous dit rien sur celle des deux où vous êtes."
+      },
+      {
+        "q": "Quel est le risque de rester sur une vieille LTS ?",
+        "a": "Vos dépendances vous lâchent avant la plateforme. Les bibliothèques fixent en général leur runtime minimum d'après ce qui est courant, pas d'après ce qui reçoit encore des correctifs de sécurité : vous arrivez à un point où la plateforme est officiellement supportée et où l'écosystème autour est passé à autre chose. Cette échéance informelle arrive normalement bien avant la date de fin de vie officielle."
+      }
+    ]
+  },
   "peer-dependencies": {
     "title": "peerDependencies expliquées : pourquoi npm refuse soudain votre install",
     "dek": "Les peerDependencies expriment une compatibilité avec un package hôte plutôt qu'elles ne l'exigent. npm v7 a commencé à les installer par défaut, et c'est pour cela que les erreurs ERESOLVE semblent nouvelles. Ce qu'elles sont, pourquoi les plages larges valent mieux que les plages figées, et quand marquer un peer comme optionnel.",

@@ -1,4 +1,50 @@
 {
+  "what-is-an-lts-version": {
+    "title": "What Is an LTS Version? The Only Number That Matters Is the End Date",
+    "dek": "LTS means Long Term Support: a release line that keeps getting security fixes for a period announced in advance. How Node.js, Ubuntu and Java define it, what you give up by choosing it, and why the support window matters more than the version number.",
+    "heroAlt": "A wall calendar seen at an angle, with several date rows highlighted in yellow",
+    "bodyCaption": "Interlocking metal gears inside an old machine, photographed in black and white. A maintenance LTS line is machinery kept turning: fixes go in, nothing new does.",
+    "paras": [
+      "LTS stands for Long Term Support, and it is one of the few pieces of release jargon that means exactly what it says. An LTS version is a release line that will keep receiving security and bug fixes for a period announced in advance, instead of being superseded the moment the next version ships.",
+      "The promise is a date, not a quality. An LTS release is not necessarily more stable at the moment it appears, and it is certainly not more featureful. What it gives you is a support window you can plan against: you know when the patches stop, and you know it before you deploy.",
+      "That distinction gets lost constantly. Teams pick an LTS version believing they have picked the safe one, then run it for years without ever looking at the end-of-life date. An LTS release three months from EOL is a worse choice for a new project than a non-LTS release that has just shipped, because the clock you were relying on has almost run out.",
+      "Most LTS lines also have two phases. The active phase still accepts backported improvements. The maintenance phase accepts critical fixes and security patches only. Both count as supported, and they are very different places to be.",
+      "The rules differ per project, and reading the actual policy takes about two minutes and saves months. Three of the most common:",
+      "Node.js is the one developers meet first. Only even-numbered major versions become LTS. A major starts as Current, and if it is even-numbered it moves to Active LTS and then to Maintenance, adding up to roughly thirty months of support from release. Odd-numbered majors never become LTS at all, which is why running Node 21 in production was never the plan.",
+      "Ubuntu ships an LTS every two years, in April of even years, with five years of standard support for desktop and server; the Ubuntu Pro subscription extends that window considerably for those who need it. Interim releases in between get nine months, which is fine for a laptop and rarely right for a server. Java takes a third approach: Oracle designates specific feature releases as LTS, and since Java 17 that has settled into a two-year cadence.",
+      "The cost of LTS is paid at migration time, and it is real. A project that follows every release moves in small steps and absorbs breaking changes as they arrive. A project that hops between LTS versions saves that effort for years and then pays it in one lump, upgrading across everything that changed in between.",
+      "There is a second cost that is easier to miss. Staying on an old LTS means your dependencies start dropping you first. Libraries set their minimum supported runtime by what is current, not by what is still receiving security patches, so you reach a point where the platform is supported and the ecosystem around it is not. That is usually the real deadline, and it arrives before the official one.",
+      "So the practical rule is simple, and it is not the one people follow. Do not ask whether a version is LTS. Ask when its support ends, and compare that date to how long this project will realistically live untouched.",
+      "If the answer is that support ends before your next planned upgrade window, you have not chosen stability. You have chosen an unpatched production system with a date on it, and the date is already in the calendar."
+    ],
+    "list": [
+      "Node.js - even-numbered majors only, roughly 30 months of support from release",
+      "Ubuntu - every two years in April, five years of standard support, extendable with Ubuntu Pro",
+      "Java - specific feature releases designated LTS, on a two-year cadence since Java 17"
+    ],
+    "faq": [
+      {
+        "q": "What does LTS mean?",
+        "a": "Long Term Support. It marks a release line that will keep receiving security and bug fixes for a period announced in advance, rather than being dropped as soon as the next version ships. The promise is a support window with a known end date, not a claim that the software is more stable or more complete."
+      },
+      {
+        "q": "Should I always use the LTS version?",
+        "a": "For production, usually yes, but the version label is not what you should be checking. Check the end-of-life date. An LTS release close to its EOL is a worse choice for a new project than a fresh release, because the support window you were counting on is nearly over."
+      },
+      {
+        "q": "Which Node.js versions are LTS?",
+        "a": "Only even-numbered major versions. A major starts as Current, and if it is even-numbered it moves to Active LTS and then to Maintenance, totalling roughly thirty months of support from release. Odd-numbered majors never become LTS, so they are meant for testing what is coming rather than for running production."
+      },
+      {
+        "q": "What is the difference between Active LTS and Maintenance LTS?",
+        "a": "Active LTS still accepts backported improvements alongside fixes. Maintenance LTS accepts critical bug fixes and security patches only. Both are described as supported, so a dashboard that shows a green tick tells you nothing about which of the two you are on."
+      },
+      {
+        "q": "What is the risk of staying on an old LTS?",
+        "a": "Your dependencies drop you before the platform does. Libraries usually set their minimum supported runtime by what is current, not by what is still getting security patches, so you reach a point where the platform is officially supported and the ecosystem around it has moved on. That informal deadline normally arrives well before the official end-of-life date."
+      }
+    ]
+  },
   "peer-dependencies": {
     "paras": [
       "Every JavaScript developer has hit it: an install that worked yesterday now stops on ERESOLVE, complaining about a peer dependency conflict for a package you never asked for directly. The error is confusing because peerDependencies are the one dependency type that describes a relationship rather than a requirement.",

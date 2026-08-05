@@ -118,9 +118,37 @@ const PASSKEYS_CTA = {
   sublabel: {"en": "Passkeys need somewhere to live. Proton Pass - an open-source, end-to-end encrypted manager from the makers of Proton Mail - stores and syncs passkeys across your devices so you can move to phishing-resistant login.", "fr": "Les passkeys ont besoin d'un endroit ou vivre. Proton Pass - gestionnaire open source, chiffre de bout en bout, par les createurs de Proton Mail - stocke et synchronise vos passkeys sur tous vos appareils pour passer a une connexion resistante au phishing.", "es": "Las passkeys necesitan un lugar donde vivir. Proton Pass - gestor open source, cifrado de extremo a extremo, de los creadores de Proton Mail - almacena y sincroniza tus passkeys en todos tus dispositivos para pasar a un inicio de sesion resistente al phishing.", "de": "Passkeys brauchen einen Ort zum Leben. Proton Pass - ein Open-Source-Manager mit Ende-zu-Ende-Verschlusselung von den Machern von Proton Mail - speichert und synchronisiert Passkeys uber Ihre Gerate hinweg, damit Sie zu phishing-resistenter Anmeldung wechseln konnen.", "it": "Le passkey hanno bisogno di un posto dove vivere. Proton Pass - gestore open source con cifratura end-to-end, dai creatori di Proton Mail - archivia e sincronizza le passkey su tutti i tuoi dispositivi per passare a un accesso resistente al phishing.", "pt": "As passkeys precisam de um lugar onde viver. O Proton Pass - gestor open source com cifragem ponta a ponta, dos criadores do Proton Mail - guarda e sincroniza passkeys em todos os seus dispositivos para passar a um inicio de sessao resistente ao phishing."},
 };
 
+// Article LTS : l'angle est la fenêtre de support d'un serveur qu'on laisse tourner
+// des années. C'est une décision d'hébergement autant que de version, d'où un CTA propre
+// à ce contenu plutôt que le CTA self-hosting générique.
+const LTS_SERVER_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'Choosing an LTS only pays off if you control the machine it runs on, and can still upgrade it when the support window closes. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers with full root access.',
+    fr: "Choisir une LTS ne paie que si vous contrôlez la machine qui la fait tourner, et que vous pouvez encore la mettre à jour quand la fenêtre de support se referme. Infomaniak - hébergeur suisse, respectueux de la vie privée - propose des VPS et serveurs cloud avec accès root complet.",
+    es: 'Elegir una LTS solo compensa si controlas la máquina en la que corre y puedes actualizarla cuando se cierre la ventana de soporte. Infomaniak - proveedor suizo, respetuoso con la privacidad - ofrece VPS y servidores cloud con acceso root completo.',
+    de: 'Eine LTS zu wählen zahlt sich nur aus, wenn Sie die Maschine kontrollieren, auf der sie läuft, und sie noch aktualisieren können, wenn das Support-Fenster schließt. Infomaniak - ein schweizerischer, datenschutzfreundlicher Anbieter - bietet VPS und Cloud-Server mit vollem Root-Zugang.',
+    it: "Scegliere una LTS conviene solo se controlli la macchina su cui gira e puoi ancora aggiornarla quando la finestra di supporto si chiude. Infomaniak - provider svizzero attento alla privacy - offre VPS e server cloud con accesso root completo.",
+    pt: 'Escolher uma LTS só compensa se controlar a máquina onde ela corre e ainda a puder atualizar quando a janela de suporte fechar. A Infomaniak - fornecedor suíço, respeitador da privacidade - oferece VPS e servidores cloud com acesso root completo.',
+  },
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
+  a({
+    slug: 'what-is-an-lts-version', category: 'guides', readingMinutes: 7, date: '2026-08-05',
+    title: ENX['what-is-an-lts-version'].title,
+    dek: ENX['what-is-an-lts-version'].dek,
+    hero: '/assets/articles/what-is-an-lts-version-hero.jpg', heroAlt: ENX['what-is-an-lts-version'].heroAlt,
+    body: '/assets/articles/what-is-an-lts-version-body.jpg', bodyCaption: ENX['what-is-an-lts-version'].bodyCaption,
+    paras: ENX['what-is-an-lts-version'].paras,
+    list: ENX['what-is-an-lts-version'].list,
+    faq: ENX['what-is-an-lts-version'].faq,
+    related: 'what-is-semantic-versioning',
+    cta: LTS_SERVER_CTA,
+  }),
   a({
     slug: 'cra-sbom-eclipse-owasp', category: 'news', readingMinutes: 8, date: '2026-08-04',
     title: ENX['cra-sbom-eclipse-owasp'].title,
@@ -796,6 +824,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "what-is-an-lts-version": { fr: "qu-est-ce-qu-une-version-lts", es: "que-es-una-version-lts", de: "was-ist-eine-lts-version", it: "cos-e-una-versione-lts", pt: "o-que-e-uma-versao-lts" },
   "cra-sbom-eclipse-owasp": { fr: "cra-sbom-eclipse-owasp-echeance", es: "cra-sbom-eclipse-owasp-plazo", de: "cra-sbom-eclipse-owasp-frist", it: "cra-sbom-eclipse-owasp-scadenza", pt: "cra-sbom-eclipse-owasp-prazo" },
   "peer-dependencies": { fr: "dependances-peer-npm", es: "dependencias-peer-npm", de: "peer-dependencies-npm", it: "dipendenze-peer-npm", pt: "dependencias-peer-npm" },
   "conventional-commits": { fr: "conventional-commits-messages-de-commit", es: "conventional-commits-mensajes-de-commit", de: "conventional-commits-commit-nachrichten", it: "conventional-commits-messaggi-di-commit", pt: "conventional-commits-mensagens-de-commit" },

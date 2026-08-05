@@ -2211,5 +2211,52 @@
       "pt": "O que o acordo não é",
       "n": 8
     }
+  ],
+  "what-is-an-lts-version": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 1
+    },
+    {
+      "en": "What LTS actually promises",
+      "fr": "Ce que la LTS promet vraiment",
+      "es": "Qué promete realmente la LTS",
+      "de": "Was LTS tatsächlich verspricht",
+      "it": "Che cosa promette davvero l'LTS",
+      "pt": "O que a LTS promete realmente",
+      "n": 3
+    },
+    {
+      "en": "How the big projects define it",
+      "fr": "Comment les gros projets la définissent",
+      "es": "Cómo la definen los grandes proyectos",
+      "de": "Wie die großen Projekte es definieren",
+      "it": "Come la definiscono i grandi progetti",
+      "pt": "Como os grandes projetos a definem",
+      "n": 3
+    },
+    {
+      "en": "What you give up",
+      "fr": "Ce que vous abandonnez",
+      "es": "A qué renuncias",
+      "de": "Worauf Sie verzichten",
+      "it": "A che cosa rinunci",
+      "pt": "A que renuncia",
+      "n": 2
+    },
+    {
+      "en": "The date that actually matters",
+      "fr": "La date qui compte vraiment",
+      "es": "La fecha que de verdad importa",
+      "de": "Das Datum, auf das es ankommt",
+      "it": "La data che conta davvero",
+      "pt": "A data que realmente conta",
+      "n": 2
+    }
   ]
 }
