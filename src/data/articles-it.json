@@ -1,4 +1,25 @@
 {
+  "semver-ranges-caret-tilde": {
+    "paras": [
+      "Il versionamento semantico ti dice che cosa significa un numero di rilascio. Non ti dice quali rilasci il tuo progetto accetterà la prossima volta che qualcuno lancia un'installazione. Quello lo decide l'**intervallo** che hai scritto, ed è nella sintassi degli intervalli che si annidano quasi tutte le sorprese.",
+      "Due caratteri fanno quasi tutto il lavoro: la **tilde** `~` e il **caret** `^`.",
+      "**La tilde permette modifiche di livello patch.** Nella notazione della documentazione semver stessa, `~1.2.3` significa `>=1.2.3 <1.3.0-0`. Accetti 1.2.4 e 1.2.9, non accetti 1.3.0. Scritta con meno parti si allarga: `~1.2` equivale a `1.2.x`, e `~1` a `>=1.0.0 <2.0.0-0`.",
+      "**Il caret permette tutto ciò che non modifica il numero diverso da zero più a sinistra.** Per un rilascio normale significa che `^1.2.3` vale `>=1.2.3 <2.0.0-0`: tutti gli aggiornamenti minori e di patch fino alla major successiva. È l'impostazione predefinita di npm all'installazione, ed è per questo che quasi tutti i file di dipendenze sono pieni di caret.",
+      "Fin qui i due sembrano una semplice scelta tra prudente e permissivo. Poi si scende sotto la versione 1.0.0, e il caret cambia in silenzio la propria regola.",
+      "**`^0.2.3` significa `>=0.2.3 <0.3.0-0`.** Non `<1.0.0`. Poiché l'elemento diverso da zero più a sinistra è ora il minore, il caret tratta un incremento di minore come il cambiamento che rompe: su un pacchetto 0.x, un caret si comporta come una tilde.",
+      "**`^0.0.3` significa `>=0.0.3 <0.0.4-0`.** Cioè nessun aggiornamento. Con i primi due numeri a zero, la patch diventa l'elemento diverso da zero più a sinistra, e il caret ti inchioda a un solo rilascio.",
+      "Non è una stranezza da aggirare, è deliberato. Semver dice che un pacchetto 0.x non promette alcuna stabilità, quindi gli strumenti si rifiutano di presumere una compatibilità mai concessa. La conseguenza pratica è quella che conta: **lo stesso caret ti dà tre livelli di libertà diversi a seconda di come è numerato il pacchetto**, e un file di dipendenze pieno di caret non è uniformemente permissivo.",
+      "La seconda cosa da sapere è che un intervallo è un permesso, non una decisione. Ciò che viene davvero installato è registrato nel file di lock, e l'intervallo definisce soltanto dove un aggiornamento può spostarsi. Una squadra che legge l'intervallo e dimentica il lockfile finisce per cercare bug su due macchine con due versioni diverse che soddisfano entrambe la stessa riga.",
+      "Per scegliere, la regola onesta è breve. Il caret per le librerie di cui ti fidi che rispettino semver e che vuoi tenere aggiornate. La tilde quando un incremento di minore ti è già costato caro. Il blocco esatto quando davvero non puoi assorbire una sorpresa, accettando che gli aggiornamenti diventino un tuo compito. E verifica a che cosa si espande un intervallo prima di fidartene, perché `^0.x` non significa ciò che lo stesso simbolo significa una major più avanti."
+    ],
+    "list": [
+      "~1.2.3 := >=1.2.3 <1.3.0-0 - solo patch",
+      "^1.2.3 := >=1.2.3 <2.0.0-0 - minori e patch, predefinito di npm",
+      "^0.2.3 := >=0.2.3 <0.3.0-0 - su 0.x il caret si comporta come una tilde",
+      "^0.0.3 := >=0.0.3 <0.0.4-0 - nessun aggiornamento",
+      "L'intervallo è un permesso; il lockfile registra ciò che è stato installato"
+    ]
+  },
   "what-is-a-nightly-build": {
     "title": "Che cos'è una nightly build? Il canale che non arriva da nessuna parte",
     "dek": "Alpha, beta e release candidate sono tappe verso una pubblicazione. Una nightly non è una tappa: è un'istantanea del ramo principale, prodotta a orario fisso, senza promessa che una in particolare diventi qualcosa.",

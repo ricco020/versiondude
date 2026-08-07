@@ -1,4 +1,25 @@
 {
+  "semver-ranges-caret-tilde": {
+    "paras": [
+      "Semantische Versionierung sagt Ihnen, was eine Release-Nummer bedeutet. Sie sagt Ihnen nicht, welche Releases Ihr Projekt beim nächsten Installationslauf akzeptieren wird. Das entscheidet der **Bereich**, den Sie geschrieben haben, und in der Bereichssyntax stecken die meisten Überraschungen.",
+      "Zwei Zeichen erledigen fast die ganze Arbeit: die **Tilde** `~` und das **Caret** `^`.",
+      "**Die Tilde erlaubt Änderungen auf Patch-Ebene.** In der Notation der Semver-Dokumentation selbst bedeutet `~1.2.3` so viel wie `>=1.2.3 <1.3.0-0`. Sie akzeptieren 1.2.4 und 1.2.9, nicht aber 1.3.0. Mit weniger Teilen geschrieben wird sie breiter: `~1.2` entspricht `1.2.x`, und `~1` ist `>=1.0.0 <2.0.0-0`.",
+      "**Das Caret erlaubt alles, was die am weitesten links stehende Zahl ungleich null nicht verändert.** Für ein normales Release heißt das: `^1.2.3` ist `>=1.2.3 <2.0.0-0` - alle Minor- und Patch-Updates bis zum nächsten Major. Das ist npms Voreinstellung beim Installieren, weshalb die meisten Abhängigkeitsdateien voller Carets stehen.",
+      "Bis hierhin wirken beide wie eine schlichte Wahl zwischen vorsichtig und großzügig. Dann unterschreitet man Version 1.0.0, und das Caret ändert still seine eigene Regel.",
+      "**`^0.2.3` bedeutet `>=0.2.3 <0.3.0-0`.** Nicht `<1.0.0`. Da die am weitesten links stehende Zahl ungleich null nun die Minor ist, behandelt das Caret einen Minor-Sprung als den brechenden Wechsel - bei einem 0.x-Paket verhält es sich also wie eine Tilde.",
+      "**`^0.0.3` bedeutet `>=0.0.3 <0.0.4-0`.** Also überhaupt keine Updates. Stehen beide führenden Zahlen auf null, wird der Patch zur am weitesten links stehenden Zahl ungleich null, und das Caret nagelt Sie auf ein einziges Release fest.",
+      "Das ist keine Marotte, die man umgehen müsste, sondern Absicht. Semver sagt, ein 0.x-Paket gibt kein Stabilitätsversprechen; die Werkzeuge weigern sich daher, eine Kompatibilität anzunehmen, die nie zugesagt wurde. Entscheidend ist die praktische Folge: **dasselbe Caret gibt Ihnen drei verschiedene Freiheitsgrade, je nachdem wie das Paket nummeriert ist**, und eine Abhängigkeitsdatei voller Carets ist nicht gleichmäßig großzügig.",
+      "Das Zweite, was man wissen sollte: Ein Bereich ist eine Erlaubnis, keine Entscheidung. Was tatsächlich installiert wurde, hält die Lockfile fest; der Bereich legt nur fest, wohin ein Update gehen darf. Ein Team, das den Bereich liest und die Lockfile vergisst, sucht am Ende Fehler auf zwei Rechnern mit zwei verschiedenen Versionen, die beide dieselbe Zeile erfüllen.",
+      "Zur Wahl reicht eine kurze, ehrliche Regel. Das Caret für Bibliotheken, denen Sie zutrauen, Semver einzuhalten, und die Sie aktuell halten wollen. Die Tilde, wenn ein Minor-Sprung Sie schon einmal teuer zu stehen kam. Exaktes Festnageln, wenn Sie eine Überraschung wirklich nicht verkraften - und mit der Einsicht, dass die Updates damit Ihre Arbeit werden. Und prüfen Sie, worauf sich ein Bereich ausdehnt, bevor Sie ihm trauen, denn `^0.x` bedeutet nicht das, was dasselbe Zeichen eine Hauptversion später bedeutet."
+    ],
+    "list": [
+      "~1.2.3 := >=1.2.3 <1.3.0-0 - nur Patch-Updates",
+      "^1.2.3 := >=1.2.3 <2.0.0-0 - Minor und Patch, npms Voreinstellung",
+      "^0.2.3 := >=0.2.3 <0.3.0-0 - bei 0.x verhält sich das Caret wie eine Tilde",
+      "^0.0.3 := >=0.0.3 <0.0.4-0 - gar keine Updates",
+      "Der Bereich ist eine Erlaubnis; die Lockfile hält fest, was installiert wurde"
+    ]
+  },
   "what-is-a-nightly-build": {
     "title": "Was ist ein Nightly Build? Der Kanal, der nirgendwo ankommt",
     "dek": "Alpha, Beta und Release Candidate sind Stufen auf dem Weg zu einer Veröffentlichung. Ein Nightly ist gar keine Stufe: es ist eine Momentaufnahme des Hauptzweigs, nach Zeitplan erzeugt, ohne Zusage, dass ein bestimmtes je etwas wird.",

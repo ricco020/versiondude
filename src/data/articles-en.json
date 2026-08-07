@@ -1,4 +1,25 @@
 {
+  "semver-ranges-caret-tilde": {
+    "paras": [
+      "Semantic versioning tells you what a release number means. It does not tell you which releases your project will accept the next time someone runs an install. That is decided by the **range** you wrote, and the range syntax is where most surprises live.",
+      "Two characters do almost all the work: the **tilde** `~` and the **caret** `^`.",
+      "**The tilde allows patch-level changes.** In the semver documentation's own notation, `~1.2.3` means `>=1.2.3 <1.3.0-0`. You accept 1.2.4 and 1.2.9, you do not accept 1.3.0. Written with fewer parts it widens: `~1.2` is the same as `1.2.x`, and `~1` is `>=1.0.0 <2.0.0-0`.",
+      "**The caret allows anything that does not change the leftmost non-zero number.** For a normal release that means `^1.2.3` is `>=1.2.3 <2.0.0-0` - every minor and patch update up to the next major. This is npm's default when you install a package, which is why most dependency files are full of carets.",
+      "So far the two look like a simple choice between cautious and permissive. Then you cross below version 1.0.0, and the caret quietly changes its own rule.",
+      "**`^0.2.3` means `>=0.2.3 <0.3.0-0`.** Not `<1.0.0`. Because the leftmost non-zero element is now the minor, the caret treats a minor bump as the breaking change - so on a 0.x package, a caret behaves like a tilde.",
+      "**`^0.0.3` means `>=0.0.3 <0.0.4-0`.** That is no updates at all. With both leading numbers at zero, the patch becomes the leftmost non-zero element, and the caret pins you to a single release.",
+      "This is not a quirk to work around; it is deliberate. Semver says a 0.x package makes no stability promise, so the tooling refuses to assume compatibility it was never given. The practical consequence is what matters: **the same caret gives you three different levels of freedom depending on how the package is numbered**, and a dependency file full of carets is not uniformly permissive.",
+      "The second thing worth knowing is that a range is a permission, not a decision. What actually gets installed is recorded in the lockfile, and the range only defines what an update is allowed to move to. A team that reads the range and forgets the lockfile ends up debugging two different machines running two different versions that both satisfy the same line.",
+      "For choosing, the honest rule is short. Use the caret for libraries you trust to respect semver and want to keep current. Use the tilde when a minor bump has burned you before. Pin exactly when you genuinely cannot absorb a surprise - and accept that you now own the upgrades. And check what a range expands to before trusting it, because `^0.x` does not mean what the same symbol means one major version later."
+    ],
+    "list": [
+      "~1.2.3 := >=1.2.3 <1.3.0-0 - patch updates only",
+      "^1.2.3 := >=1.2.3 <2.0.0-0 - minor and patch, npm's default",
+      "^0.2.3 := >=0.2.3 <0.3.0-0 - on 0.x, the caret behaves like a tilde",
+      "^0.0.3 := >=0.0.3 <0.0.4-0 - no updates at all",
+      "The range is a permission; the lockfile records what was actually installed"
+    ]
+  },
   "what-is-a-nightly-build": {
     "title": "What Is a Nightly Build? The Channel That Never Arrives Anywhere",
     "dek": "Alpha, beta and release candidate are stages on the way to a release. A nightly is not a stage at all: it is a snapshot of the main branch, produced on a schedule, with no promise that any particular one becomes anything.",

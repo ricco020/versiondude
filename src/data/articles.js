@@ -155,6 +155,17 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'semver-ranges-caret-tilde', category: 'guides', readingMinutes: 7, date: '2026-08-07',
+    title: "Caret vs Tilde: What ^1.2.3 and ~1.2.3 Actually Allow (2026)",
+    dek: "Semantic versioning explains what a version number means. The range syntax decides which versions you accept without asking. The two are not the same, and the caret changes its own rules below 1.0.0.",
+    hero: '/assets/articles/semver-ranges-caret-tilde-hero.jpg', heroAlt: "A red circular maximum height road sign photographed against a bright sky",
+    body: '/assets/articles/semver-ranges-caret-tilde-body.jpg', bodyCaption: "Four nesting dolls lined up from largest to smallest, the smallest in sharp focus at the front. Version ranges nest the same way: a caret contains a tilde, which contains a single exact version.",
+    paras: ENX['semver-ranges-caret-tilde'].paras,
+    list: ENX['semver-ranges-caret-tilde'].list,
+    related: 'what-is-semantic-versioning',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'what-is-a-nightly-build', category: 'guides', readingMinutes: 7, date: '2026-08-06',
     title: ENX['what-is-a-nightly-build'].title,
     dek: ENX['what-is-a-nightly-build'].dek,
@@ -865,6 +876,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "semver-ranges-caret-tilde": { fr: "plages-semver-caret-tilde", es: "rangos-semver-caret-tilde", de: "semver-bereiche-caret-tilde", it: "intervalli-semver-caret-tilde", pt: "intervalos-semver-caret-til" },
   "what-is-a-nightly-build": { fr: "qu-est-ce-qu-un-build-nightly", es: "que-es-una-nightly-build", de: "was-ist-ein-nightly-build", it: "cos-e-una-nightly-build", pt: "o-que-e-uma-nightly-build" },
   "what-is-a-release-candidate": { fr: "qu-est-ce-qu-une-release-candidate", es: "que-es-una-release-candidate", de: "was-ist-ein-release-candidate", it: "release-candidate-cosa-significa", pt: "o-que-e-uma-release-candidate" },
   "what-is-an-lts-version": { fr: "qu-est-ce-qu-une-version-lts", es: "que-es-una-version-lts", de: "was-ist-eine-lts-version", it: "cos-e-una-versione-lts", pt: "o-que-e-uma-versao-lts" },

@@ -1,4 +1,25 @@
 {
+  "semver-ranges-caret-tilde": {
+    "paras": [
+      "Le versionnage sémantique vous dit ce que signifie un numéro de publication. Il ne vous dit pas quelles publications votre projet acceptera la prochaine fois que quelqu'un lancera une installation. Cela, c'est la **plage** que vous avez écrite qui le décide, et c'est dans la syntaxe des plages que se logent la plupart des surprises.",
+      "Deux caractères font presque tout le travail : le **tilde** `~` et le **caret** `^`.",
+      "**Le tilde autorise les changements de niveau patch.** Dans la notation de la documentation semver elle-même, `~1.2.3` signifie `>=1.2.3 <1.3.0-0`. Vous acceptez 1.2.4 et 1.2.9, vous n'acceptez pas 1.3.0. Écrit avec moins de parties, il s'élargit : `~1.2` équivaut à `1.2.x`, et `~1` à `>=1.0.0 <2.0.0-0`.",
+      "**Le caret autorise tout ce qui ne modifie pas le nombre non nul le plus à gauche.** Pour une publication normale, cela veut dire que `^1.2.3` vaut `>=1.2.3 <2.0.0-0` : toutes les mises à jour mineures et correctives jusqu'à la majeure suivante. C'est la valeur par défaut de npm à l'installation d'un paquet, ce qui explique que la plupart des fichiers de dépendances soient remplis de carets.",
+      "Jusqu'ici, les deux ressemblent à un simple choix entre prudent et permissif. Puis on passe sous la version 1.0.0, et le caret change discrètement sa propre règle.",
+      "**`^0.2.3` signifie `>=0.2.3 <0.3.0-0`.** Pas `<1.0.0`. Comme l'élément non nul le plus à gauche est désormais le mineur, le caret traite une montée de mineur comme le changement cassant : sur un paquet en 0.x, un caret se comporte comme un tilde.",
+      "**`^0.0.3` signifie `>=0.0.3 <0.0.4-0`.** C'est-à-dire aucune mise à jour du tout. Les deux premiers nombres étant à zéro, le patch devient l'élément non nul le plus à gauche, et le caret vous épingle à une publication unique.",
+      "Ce n'est pas une bizarrerie à contourner, c'est délibéré. Semver dit qu'un paquet en 0.x ne promet aucune stabilité : l'outillage refuse donc de supposer une compatibilité qu'on ne lui a jamais donnée. La conséquence pratique est celle qui compte : **le même caret vous donne trois niveaux de liberté différents selon la numérotation du paquet**, et un fichier de dépendances plein de carets n'est pas uniformément permissif.",
+      "La seconde chose à savoir, c'est qu'une plage est une permission, pas une décision. Ce qui est réellement installé est consigné dans le fichier de verrouillage, et la plage ne définit que ce vers quoi une mise à jour a le droit d'aller. Une équipe qui lit la plage et oublie le lockfile finit par déboguer deux machines qui font tourner deux versions différentes satisfaisant toutes deux la même ligne.",
+      "Pour choisir, la règle honnête est courte. Le caret pour les bibliothèques dont vous pensez qu'elles respectent semver et que vous voulez garder à jour. Le tilde quand une montée de mineur vous a déjà coûté cher. L'épinglage exact quand vous ne pouvez vraiment pas encaisser une surprise, en acceptant que les mises à jour deviennent votre travail. Et vérifiez ce qu'une plage recouvre avant de lui faire confiance, parce que `^0.x` ne veut pas dire ce que le même symbole veut dire une version majeure plus loin."
+    ],
+    "list": [
+      "~1.2.3 := >=1.2.3 <1.3.0-0 - correctifs uniquement",
+      "^1.2.3 := >=1.2.3 <2.0.0-0 - mineures et correctifs, valeur par défaut de npm",
+      "^0.2.3 := >=0.2.3 <0.3.0-0 - en 0.x, le caret se comporte comme un tilde",
+      "^0.0.3 := >=0.0.3 <0.0.4-0 - aucune mise à jour",
+      "La plage est une permission ; le lockfile enregistre ce qui a été installé"
+    ]
+  },
   "what-is-a-nightly-build": {
     "title": "Qu'est-ce qu'un build nightly ? Le canal qui n'arrive nulle part",
     "dek": "Alpha, bêta et release candidate sont des étapes vers une version. Un nightly n'est pas une étape : c'est un instantané de la branche principale, produit à heure fixe, sans promesse qu'un exemplaire précis devienne quoi que ce soit.",
