@@ -614,5 +614,51 @@
       "Community events and workshops",
       "Maintainer roundtables"
     ]
+  },
+  "package-lock-vs-package-json": {
+    "title": "package-lock.json vs package.json: Which File Decides What You Install",
+    "dek": "One states what you accept, as ranges. The other records what was actually resolved, down to the packages you never named. Treating them as two views of the same thing is why “it works on my machine” is still alive in 2026.",
+    "heroAlt": "A white technical drawing sheet photographed at an angle, showing black and magenta cross-sections annotated with dimensions and labelled 2-2, 3-3, 4-4",
+    "bodyCaption": "A brass padlock closed around twisted rusty wire strung between two concrete posts, blurred greenery behind. The manifest is the drawing; the lockfile is the moment something got fixed in place.",
+    "paras": [
+      "Two files sit next to each other in almost every JavaScript project, and the distance between them is the distance between what you asked for and what you got. package.json states intent: the dependency ranges you accept, your own name and version, your scripts. package-lock.json states outcome: the exact version of every package that was resolved, including the ones you never named, each with the registry URL it came from and an integrity hash of its contents.",
+      "The confusion is not academic. It is the mechanism that keeps “it works on my machine” alive: two developers with byte-identical package.json files can end up with different trees in node_modules, because a range such as ^4.17.0 accepts anything below 5.0.0 and the answer depends on what the registry held on the day each of them ran the install.",
+      "package.json carries ranges, and a range is a permission rather than a decision. ^1.2.3 accepts patch and minor updates below 2.0.0, ~1.2.3 accepts patch updates only, and a bare 1.2.3 accepts nothing else. What the manifest never carries is your transitive tree: the dependencies of your dependencies are absent from it, and they declare ranges of their own, which is where most of the version drift actually happens.",
+      "package-lock.json carries the resolution. Every package in the tree gets an entry with the version that was chosen, the tarball URL it was fetched from, and an integrity string that the installer verifies against the bytes it downloads. That hash is what makes the lockfile a supply-chain artefact rather than a convenience: a tarball republished under the same version number with different content fails the check instead of installing quietly.",
+      "The two files also have different authors. You edit package.json. You do not edit package-lock.json — npm writes it, and editing it by hand is a dependable way to produce a lockfile that no longer corresponds to any resolution npm would actually perform.",
+      "For an application, commit it. Without the lockfile in version control your CI resolves the tree afresh on every run, and a patch release published upstream between two builds changes what you ship without a single line of your own code changing.",
+      "For a library the answer is the same, but the reason is different, and this is the part most often misread. A published library's lockfile is not used by the people who install it — npm ignores the lockfiles of dependencies and resolves the whole tree from their manifests. Committing it still pays off, because it makes your own contributors and your own CI reproducible. It simply does nothing for your consumers.",
+      "Putting package-lock.json in .gitignore therefore has exactly one defensible use: a repository that deliberately wants to resolve the newest satisfying versions on every run, in order to find out early when an upstream release breaks it. That is a trade accepted on purpose, with a known cost. It is not a default.",
+      "npm install reads the manifest, may update the lockfile, and will write new entries into it without complaint. npm ci reads the lockfile, refuses to modify it, removes node_modules before installing, and stops with an error when the lockfile and the manifest disagree. In continuous integration you want the second, and the error is the feature: a mismatch means a range was changed without regenerating the lock.",
+      "This is also why a pull request that touches package.json and leaves package-lock.json untouched deserves a second look. Either the manifest was edited by hand, or the lockfile was regenerated and never staged. Both leave the repository in a state where npm ci fails for everyone else.",
+      "When the two do disagree, the repair is not to patch the lockfile by hand. Run the command that regenerates it — npm install, or npm install --package-lock-only when you want the lockfile refreshed without rebuilding node_modules — and commit the result. The lockfile is a build output that happens to be tracked in version control, and it should be treated like one."
+    ],
+    "list": [
+      "package.json - states intent: the ranges you accept, your scripts, your own metadata",
+      "package-lock.json - states outcome: every resolved version, its tarball URL and its integrity hash",
+      "Consequence - npm ci fails when the two disagree, and that failure is the whole point"
+    ],
+    "faq": [
+      {
+        "q": "Should package-lock.json be committed to git?",
+        "a": "Yes, in almost every case. For an application it is what makes a build reproducible: without it, CI resolves the tree again on every run and an upstream patch release can change what you ship. For a library it still pays off for your own contributors and your own CI, even though the people who install your package never read it. The only defensible reason to ignore it is a repository that deliberately wants to resolve fresh versions on every run in order to catch upstream breakage early."
+      },
+      {
+        "q": "What is the actual difference between package.json and package-lock.json?",
+        "a": "package.json states what you accept, expressed as ranges, and lists only your direct dependencies. package-lock.json records what was actually resolved: an exact version for every package in the tree, including transitive dependencies you never named, each with the tarball URL it came from and an integrity hash of its contents."
+      },
+      {
+        "q": "Can I edit package-lock.json by hand?",
+        "a": "You can, and it is a reliable way to end up with a lockfile that does not correspond to any resolution npm would perform. Regenerate it instead: npm install, or npm install --package-lock-only if you want the lockfile updated without rebuilding node_modules."
+      },
+      {
+        "q": "Why does npm ci fail when npm install works?",
+        "a": "Because the two commands treat a disagreement differently. npm install quietly updates the lockfile so it fits the manifest; npm ci refuses to reconcile them and stops. A failing npm ci almost always means package.json was changed without regenerating the lock, which is exactly the situation it exists to catch."
+      },
+      {
+        "q": "Does the lockfile of a package I install affect my project?",
+        "a": "No. npm ignores the lockfiles of your dependencies and resolves the whole tree from their manifests. Only the lockfile at the root of your own project is read, which is why a library's committed lockfile serves its maintainers rather than its users."
+      }
+    ]
   }
 }

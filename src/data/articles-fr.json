@@ -1111,5 +1111,51 @@
       "Des événements et ateliers communautaires",
       "Des tables rondes de mainteneurs"
     ]
+  },
+  "package-lock-vs-package-json": {
+    "title": "package-lock.json contre package.json : quel fichier décide de ce que vous installez",
+    "dek": "L'un déclare ce que vous acceptez, sous forme d'intervalles. L'autre enregistre ce qui a réellement été résolu, jusqu'aux paquets que vous n'avez jamais nommés. Les confondre, c'est pourquoi « ça marche sur ma machine » est toujours vivant en 2026.",
+    "heroAlt": "Une planche de dessin technique blanche photographiée en biais, montrant des coupes noires et magenta cotées et repérées 2-2, 3-3, 4-4",
+    "bodyCaption": "Un cadenas en laiton fermé sur du fil de fer rouillé torsadé, tendu entre deux poteaux en béton, verdure floue à l'arrière-plan. Le manifeste est le dessin ; le lockfile est le moment où quelque chose a été figé.",
+    "paras": [
+      "Deux fichiers cohabitent dans presque tous les projets JavaScript, et l'écart entre eux est celui qui sépare ce que vous avez demandé de ce que vous avez obtenu. package.json déclare une intention : les intervalles de dépendances que vous acceptez, votre propre nom et version, vos scripts. package-lock.json déclare un résultat : la version exacte de chaque paquet résolu, y compris ceux que vous n'avez jamais nommés, chacun avec l'URL du registre dont il provient et une empreinte d'intégrité de son contenu.",
+      "La confusion n'a rien d'académique. C'est le mécanisme qui maintient « ça marche sur ma machine » en vie : deux développeurs dont les package.json sont identiques à l'octet près peuvent se retrouver avec des arbres différents dans node_modules, parce qu'un intervalle comme ^4.17.0 accepte tout ce qui reste sous 5.0.0 et que la réponse dépend de ce que le registre contenait le jour où chacun a lancé l'installation.",
+      "package.json porte des intervalles, et un intervalle est une permission plutôt qu'une décision. ^1.2.3 accepte les mises à jour de correctif et mineures sous 2.0.0, ~1.2.3 n'accepte que les correctifs, et un 1.2.3 nu n'accepte rien d'autre. Ce que le manifeste ne porte jamais, c'est votre arbre transitif : les dépendances de vos dépendances n'y figurent pas, et elles déclarent leurs propres intervalles — c'est là que se produit l'essentiel de la dérive de versions.",
+      "package-lock.json porte la résolution. Chaque paquet de l'arbre reçoit une entrée avec la version retenue, l'URL de l'archive téléchargée et une chaîne d'intégrité que l'installateur vérifie contre les octets reçus. Cette empreinte est ce qui fait du lockfile un artefact de chaîne d'approvisionnement et pas un simple confort : une archive republiée sous le même numéro de version avec un contenu différent échoue au contrôle au lieu de s'installer en silence.",
+      "Les deux fichiers n'ont pas non plus le même auteur. Vous éditez package.json. Vous n'éditez pas package-lock.json — c'est npm qui l'écrit, et le modifier à la main est un moyen fiable de produire un lockfile qui ne correspond plus à aucune résolution que npm effectuerait réellement.",
+      "Pour une application, versionnez-le. Sans le lockfile dans le dépôt, votre intégration continue résout l'arbre à neuf à chaque exécution, et une version de correctif publiée en amont entre deux builds change ce que vous livrez sans qu'une seule ligne de votre code ait bougé.",
+      "Pour une bibliothèque, la réponse est la même mais la raison diffère, et c'est le point le plus souvent mal lu. Le lockfile d'une bibliothèque publiée n'est pas utilisé par ceux qui l'installent — npm ignore les lockfiles des dépendances et résout tout l'arbre à partir de leurs manifestes. Le versionner reste payant, parce que cela rend vos propres contributeurs et votre propre CI reproductibles. Cela n'apporte simplement rien à vos utilisateurs.",
+      "Mettre package-lock.json dans .gitignore n'a donc qu'un seul usage défendable : un dépôt qui veut délibérément résoudre les versions les plus récentes acceptables à chaque exécution, afin de découvrir tôt qu'une publication amont le casse. C'est un arbitrage assumé, avec un coût connu. Ce n'est pas une valeur par défaut.",
+      "npm install lit le manifeste, peut mettre à jour le lockfile, et y écrira de nouvelles entrées sans broncher. npm ci lit le lockfile, refuse de le modifier, supprime node_modules avant d'installer, et s'arrête sur une erreur quand le lockfile et le manifeste divergent. En intégration continue, c'est la seconde commande que vous voulez, et l'erreur est la fonctionnalité : une divergence signifie qu'un intervalle a été changé sans régénérer le verrou.",
+      "C'est aussi pourquoi une pull request qui touche package.json en laissant package-lock.json intact mérite un second regard. Soit le manifeste a été édité à la main, soit le lockfile a été régénéré puis jamais indexé. Dans les deux cas, le dépôt reste dans un état où npm ci échoue pour tous les autres.",
+      "Quand les deux divergent vraiment, la réparation ne consiste pas à rapiécer le lockfile à la main. Lancez la commande qui le régénère — npm install, ou npm install --package-lock-only si vous voulez rafraîchir le lockfile sans reconstruire node_modules — et versionnez le résultat. Le lockfile est une sortie de build qui se trouve être suivie par le gestionnaire de versions, et c'est ainsi qu'il faut le traiter."
+    ],
+    "list": [
+      "package.json - déclare l'intention : les intervalles que vous acceptez, vos scripts, vos propres métadonnées",
+      "package-lock.json - déclare le résultat : chaque version résolue, son URL d'archive et son empreinte d'intégrité",
+      "Conséquence - npm ci échoue quand les deux divergent, et cet échec est précisément le but"
+    ],
+    "faq": [
+      {
+        "q": "Faut-il versionner package-lock.json dans git ?",
+        "a": "Oui, dans presque tous les cas. Pour une application, c'est ce qui rend un build reproductible : sans lui, la CI résout l'arbre à nouveau à chaque exécution et une version de correctif publiée en amont peut changer ce que vous livrez. Pour une bibliothèque, cela reste payant pour vos propres contributeurs et votre propre CI, même si ceux qui installent votre paquet ne le lisent jamais. La seule raison défendable de l'ignorer est un dépôt qui veut délibérément résoudre des versions fraîches à chaque exécution pour détecter tôt une rupture amont."
+      },
+      {
+        "q": "Quelle est la différence réelle entre package.json et package-lock.json ?",
+        "a": "package.json déclare ce que vous acceptez, sous forme d'intervalles, et ne liste que vos dépendances directes. package-lock.json enregistre ce qui a réellement été résolu : une version exacte pour chaque paquet de l'arbre, y compris les dépendances transitives que vous n'avez jamais nommées, chacune avec l'URL de l'archive dont elle provient et une empreinte d'intégrité de son contenu."
+      },
+      {
+        "q": "Puis-je éditer package-lock.json à la main ?",
+        "a": "Vous le pouvez, et c'est un moyen fiable d'obtenir un lockfile qui ne correspond à aucune résolution que npm effectuerait. Régénérez-le plutôt : npm install, ou npm install --package-lock-only si vous voulez mettre à jour le lockfile sans reconstruire node_modules."
+      },
+      {
+        "q": "Pourquoi npm ci échoue-t-il alors que npm install fonctionne ?",
+        "a": "Parce que les deux commandes traitent une divergence différemment. npm install met discrètement le lockfile à jour pour qu'il colle au manifeste ; npm ci refuse de les réconcilier et s'arrête. Un npm ci en échec signifie presque toujours que package.json a été modifié sans régénérer le verrou, ce qui est exactement la situation qu'il existe pour attraper."
+      },
+      {
+        "q": "Le lockfile d'un paquet que j'installe influence-t-il mon projet ?",
+        "a": "Non. npm ignore les lockfiles de vos dépendances et résout tout l'arbre à partir de leurs manifestes. Seul le lockfile à la racine de votre propre projet est lu, et c'est pourquoi le lockfile versionné d'une bibliothèque sert ses mainteneurs plutôt que ses utilisateurs."
+      }
+    ]
   }
 }

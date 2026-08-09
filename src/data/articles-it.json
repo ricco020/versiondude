@@ -1111,5 +1111,51 @@
       "Eventi e workshop per la comunità",
       "Tavole rotonde fra manutentori"
     ]
+  },
+  "package-lock-vs-package-json": {
+    "title": "package-lock.json contro package.json: quale file decide che cosa installi",
+    "dek": "Uno dichiara ciò che accetti, sotto forma di intervalli. L'altro registra ciò che è stato davvero risolto, fino ai pacchetti che non hai mai nominato. Confonderli è il motivo per cui «sulla mia macchina funziona» è ancora vivo nel 2026.",
+    "heroAlt": "Una tavola di disegno tecnico bianca fotografata di sbieco, con sezioni nere e magenta quotate e siglate 2-2, 3-3, 4-4",
+    "bodyCaption": "Un lucchetto di ottone chiuso su filo di ferro arrugginito attorcigliato, teso fra due pali di cemento, con vegetazione sfocata sullo sfondo. Il manifesto è il disegno; il lockfile è il momento in cui qualcosa è stato fissato.",
+    "paras": [
+      "Due file convivono in quasi tutti i progetti JavaScript, e la distanza fra loro è quella che separa ciò che hai chiesto da ciò che hai ottenuto. package.json dichiara un'intenzione: gli intervalli di dipendenze che accetti, il tuo nome e la tua versione, i tuoi script. package-lock.json dichiara un risultato: la versione esatta di ogni pacchetto risolto, compresi quelli che non hai mai nominato, ciascuno con l'URL del registro da cui proviene e un'impronta di integrità del suo contenuto.",
+      "La confusione non è accademica. È il meccanismo che tiene in vita «sulla mia macchina funziona»: due sviluppatori con package.json identici byte per byte possono ritrovarsi alberi diversi in node_modules, perché un intervallo come ^4.17.0 accetta tutto ciò che resta sotto 5.0.0 e la risposta dipende da che cosa conteneva il registro il giorno in cui ciascuno ha lanciato l'installazione.",
+      "package.json porta intervalli, e un intervallo è un permesso più che una decisione. ^1.2.3 accetta aggiornamenti di patch e minori sotto 2.0.0, ~1.2.3 accetta solo patch, e un 1.2.3 nudo non accetta nient'altro. Ciò che il manifesto non porta mai è il tuo albero transitivo: le dipendenze delle tue dipendenze non vi figurano e dichiarano intervalli propri, ed è lì che avviene gran parte della deriva di versione.",
+      "package-lock.json porta la risoluzione. Ogni pacchetto dell'albero riceve una voce con la versione scelta, l'URL dell'archivio scaricato e una stringa di integrità che l'installatore verifica contro i byte ricevuti. Quell'impronta è ciò che rende il lockfile un artefatto di catena di fornitura e non una semplice comodità: un archivio ripubblicato con lo stesso numero di versione e contenuto diverso fallisce il controllo invece di installarsi in silenzio.",
+      "I due file non hanno nemmeno lo stesso autore. Tu modifichi package.json. Non modifichi package-lock.json: lo scrive npm, e cambiarlo a mano è un modo affidabile per produrre un lockfile che non corrisponde più ad alcuna risoluzione che npm eseguirebbe davvero.",
+      "Per un'applicazione, mettilo sotto controllo di versione. Senza il lockfile nel repository la tua integrazione continua risolve l'albero da capo a ogni esecuzione, e una versione di patch pubblicata a monte fra due build cambia ciò che consegni senza che una sola riga del tuo codice si sia mossa.",
+      "Per una libreria la risposta è la stessa ma il motivo è diverso, ed è il punto più spesso frainteso. Il lockfile di una libreria pubblicata non è usato da chi la installa: npm ignora i lockfile delle dipendenze e risolve tutto l'albero a partire dai loro manifesti. Versionarlo conviene comunque, perché rende riproducibili i tuoi collaboratori e la tua CI. Semplicemente non porta nulla ai tuoi utenti.",
+      "Mettere package-lock.json in .gitignore ha quindi un solo uso difendibile: un repository che vuole deliberatamente risolvere le versioni più recenti ammissibili a ogni esecuzione, per scoprire presto che una pubblicazione a monte lo rompe. È un compromesso assunto, con un costo noto. Non è un valore predefinito.",
+      "npm install legge il manifesto, può aggiornare il lockfile e vi scriverà nuove voci senza obiezioni. npm ci legge il lockfile, si rifiuta di modificarlo, rimuove node_modules prima di installare e si ferma con un errore quando lockfile e manifesto divergono. In integrazione continua vuoi il secondo, e l'errore è la funzionalità: una divergenza significa che un intervallo è stato cambiato senza rigenerare il blocco.",
+      "È anche per questo che una pull request che tocca package.json e lascia package-lock.json intatto merita un secondo sguardo. O il manifesto è stato modificato a mano, o il lockfile è stato rigenerato e mai aggiunto al commit. In entrambi i casi il repository resta in uno stato in cui npm ci fallisce per tutti gli altri.",
+      "Quando i due divergono davvero, la riparazione non consiste nel rattoppare il lockfile a mano. Lancia il comando che lo rigenera — npm install, oppure npm install --package-lock-only se vuoi aggiornare il lockfile senza ricostruire node_modules — e versiona il risultato. Il lockfile è un output di build che si trova a essere tracciato dal controllo di versione, e va trattato come tale."
+    ],
+    "list": [
+      "package.json - dichiara l'intenzione: gli intervalli che accetti, i tuoi script, i tuoi metadati",
+      "package-lock.json - dichiara il risultato: ogni versione risolta, il suo URL di archivio e la sua impronta di integrità",
+      "Conseguenza - npm ci fallisce quando i due divergono, e quel fallimento è esattamente lo scopo"
+    ],
+    "faq": [
+      {
+        "q": "Bisogna versionare package-lock.json in git?",
+        "a": "Sì, in quasi tutti i casi. Per un'applicazione è ciò che rende riproducibile una build: senza, la CI risolve l'albero da capo a ogni esecuzione e una versione di patch pubblicata a monte può cambiare ciò che consegni. Per una libreria conviene comunque per i tuoi collaboratori e la tua CI, anche se chi installa il tuo pacchetto non lo legge mai. L'unico motivo difendibile per ignorarlo è un repository che vuole deliberatamente risolvere versioni fresche a ogni esecuzione per intercettare presto una rottura a monte."
+      },
+      {
+        "q": "Qual è la differenza reale fra package.json e package-lock.json?",
+        "a": "package.json dichiara ciò che accetti, espresso come intervalli, ed elenca solo le tue dipendenze dirette. package-lock.json registra ciò che è stato davvero risolto: una versione esatta per ogni pacchetto dell'albero, comprese le dipendenze transitive che non hai mai nominato, ciascuna con l'URL dell'archivio da cui proviene e un'impronta di integrità del suo contenuto."
+      },
+      {
+        "q": "Posso modificare package-lock.json a mano?",
+        "a": "Puoi, ed è un modo affidabile per ritrovarti con un lockfile che non corrisponde ad alcuna risoluzione che npm eseguirebbe. Rigeneralo invece: npm install, oppure npm install --package-lock-only se vuoi aggiornare il lockfile senza ricostruire node_modules."
+      },
+      {
+        "q": "Perché npm ci fallisce mentre npm install funziona?",
+        "a": "Perché i due comandi trattano una divergenza in modo diverso. npm install aggiorna in silenzio il lockfile perché combaci con il manifesto; npm ci si rifiuta di riconciliarli e si ferma. Un npm ci che fallisce significa quasi sempre che package.json è stato cambiato senza rigenerare il blocco, che è esattamente la situazione che esiste per intercettare."
+      },
+      {
+        "q": "Il lockfile di un pacchetto che installo influenza il mio progetto?",
+        "a": "No. npm ignora i lockfile delle tue dipendenze e risolve tutto l'albero a partire dai loro manifesti. Viene letto solo il lockfile alla radice del tuo progetto, ed è per questo che il lockfile versionato di una libreria serve ai suoi manutentori più che ai suoi utenti."
+      }
+    ]
   }
 }

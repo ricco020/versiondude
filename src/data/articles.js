@@ -95,6 +95,21 @@ const GIT_CTA = {
   },
 };
 
+// Lockfile article: same Infomaniak offer, angle tuned to the topic (a reproducible
+// install is only worth as much as the machine that runs it).
+const LOCKFILE_CI_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'A committed lockfile pins the tree; the machine that installs it is the other half. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers to run your own build and CI machines.',
+    fr: "Un lockfile versionné fige l'arbre ; la machine qui l'installe est l'autre moitié. Infomaniak - hébergeur suisse, respectueux de la vie privée - propose des VPS et serveurs cloud pour faire tourner vos propres machines de build et d'intégration continue.",
+    es: 'Un lockfile versionado fija el árbol; la máquina que lo instala es la otra mitad. Infomaniak - proveedor suizo, respetuoso con la privacidad - ofrece VPS y servidores cloud para ejecutar tus propias máquinas de build e integración continua.',
+    de: 'Eine eingecheckte Lockfile fixiert den Baum; die Maschine, die sie installiert, ist die andere Hälfte. Infomaniak - ein schweizerischer, datenschutzfreundlicher Anbieter - bietet VPS und Cloud-Server, um eigene Build- und CI-Maschinen zu betreiben.',
+    it: "Un lockfile versionato fissa l'albero; la macchina che lo installa è l'altra metà. Infomaniak - provider svizzero attento alla privacy - offre VPS e server cloud per eseguire le tue macchine di build e integrazione continua.",
+    pt: 'Um lockfile versionado fixa a árvore; a máquina que o instala é a outra metade. A Infomaniak - fornecedor suíço, respeitador da privacidade - oferece VPS e servidores cloud para correr as suas próprias máquinas de build e integração contínua.',
+  },
+};
+
 const SECRETS_CTA = {
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: {"en": "See Infomaniak Cloud", "fr": "Voir le cloud Infomaniak", "es": "Ver el cloud de Infomaniak", "de": "Infomaniak Cloud ansehen", "it": "Scopri Infomaniak Cloud", "pt": "Ver o Infomaniak Cloud"},
@@ -154,6 +169,18 @@ const RC_THROWAWAY_CTA = {
 const a = (o) => o;
 
 export const ARTICLES = [
+  a({
+    slug: 'package-lock-vs-package-json', category: 'guides', readingMinutes: 8, date: '2026-08-09',
+    title: ENX['package-lock-vs-package-json'].title,
+    dek: ENX['package-lock-vs-package-json'].dek,
+    hero: '/assets/articles/package-lock-vs-package-json-hero.jpg', heroAlt: ENX['package-lock-vs-package-json'].heroAlt,
+    body: '/assets/articles/package-lock-vs-package-json-body.jpg', bodyCaption: ENX['package-lock-vs-package-json'].bodyCaption,
+    paras: ENX['package-lock-vs-package-json'].paras,
+    list: ENX['package-lock-vs-package-json'].list,
+    faq: ENX['package-lock-vs-package-json'].faq,
+    related: 'what-is-a-lockfile',
+    cta: LOCKFILE_CI_CTA,
+  }),
   a({
     slug: 'semver-ranges-caret-tilde', category: 'guides', readingMinutes: 7, date: '2026-08-07',
     title: "Caret vs Tilde: What ^1.2.3 and ~1.2.3 Actually Allow (2026)",
@@ -885,6 +912,7 @@ const ART_SLUG = {
   "conventional-commits": { fr: "conventional-commits-messages-de-commit", es: "conventional-commits-mensajes-de-commit", de: "conventional-commits-commit-nachrichten", it: "conventional-commits-messaggi-di-commit", pt: "conventional-commits-mensagens-de-commit" },
   "js-framework-release-cadence-2026": { fr: "frequence-publication-frameworks-js-2026", es: "frecuencia-publicacion-frameworks-js-2026", de: "release-frequenz-js-frameworks-2026", it: "frequenza-rilasci-framework-js-2026", pt: "frequencia-lancamentos-frameworks-js-2026" },
   "what-is-a-changelog": { fr: "qu-est-ce-qu-un-changelog", es: "que-es-un-changelog", de: "was-ist-ein-changelog", it: "che-cos-e-un-changelog", pt: "o-que-e-um-changelog" },
+  "package-lock-vs-package-json": { fr: "package-lock-json-contre-package-json", es: "package-lock-json-frente-a-package-json", de: "package-lock-json-gegen-package-json", it: "package-lock-json-contro-package-json", pt: "package-lock-json-contra-package-json" },
   "what-is-a-lockfile": { fr: "qu-est-ce-qu-un-lockfile", es: "que-es-un-lockfile", de: "was-ist-eine-lockfile", it: "cos-e-un-lockfile", pt: "o-que-e-um-lockfile" },
   "what-is-semantic-versioning": { fr: "qu-est-ce-que-le-versionnage-semantique", es: "que-es-el-versionado-semantico", de: "was-ist-semantische-versionierung", it: "cos-e-il-versionamento-semantico", pt: "o-que-e-o-versionamento-semantico" },
   "ghostapproval-ai-coding-assistants-symlink-2026": { fr: "ghostapproval-symlink-assistants-code-ia-2026", es: "ghostapproval-symlink-asistentes-codigo-ia-2026", de: "ghostapproval-symlink-ki-coding-assistenten-2026", it: "ghostapproval-symlink-assistenti-codice-ia-2026", pt: "ghostapproval-symlink-assistentes-codigo-ia-2026" },

@@ -2361,5 +2361,43 @@
       "pt": "Se queria o contrário",
       "n": 2
     }
+  ],
+  "package-lock-vs-package-json": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 2
+    },
+    {
+      "en": "What each file actually states",
+      "fr": "Ce que chaque fichier déclare réellement",
+      "es": "Lo que declara realmente cada archivo",
+      "de": "Was jede Datei tatsächlich erklärt",
+      "it": "Che cosa dichiara davvero ciascun file",
+      "pt": "O que cada ficheiro declara realmente",
+      "n": 3
+    },
+    {
+      "en": "Committing the lockfile",
+      "fr": "Versionner le lockfile",
+      "es": "Versionar el lockfile",
+      "de": "Die Lockfile einchecken",
+      "it": "Versionare il lockfile",
+      "pt": "Versionar o lockfile",
+      "n": 3
+    },
+    {
+      "en": "npm install and npm ci are not the same command",
+      "fr": "npm install et npm ci ne sont pas la même commande",
+      "es": "npm install y npm ci no son el mismo comando",
+      "de": "npm install und npm ci sind nicht derselbe Befehl",
+      "it": "npm install e npm ci non sono lo stesso comando",
+      "pt": "npm install e npm ci não são o mesmo comando",
+      "n": 3
+    }
   ]
 }
