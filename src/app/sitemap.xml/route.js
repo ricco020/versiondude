@@ -20,7 +20,13 @@ function urlFor(path, locale) {
   const pre = locale === "en" ? "" : `/${locale}`;
   const m = path.match(/^\/articles\/(.+)$/);
   if (m) return `${BASE}${pre}/articles/${slugFor(m[1], locale)}`;
-  return `${BASE}${pre}${path || "/"}`;
+  // Racine : le slash final ne vaut QUE pour l'anglais, qui n'a pas de prefixe.
+  // Avec un prefixe, `path || "/"` produisait /fr/, /es/, /de/, /it/, /pt/, alors
+  // que le site sert /fr sans slash et repond 308. On declarait donc 5 URLs qui
+  // redirigent : c'est le mail GSC « Page avec redirection » du 2026-08-09 pour
+  // versiondude. Meme fonction pour les hreflang, qui pointaient eux aussi vers
+  // des redirections.
+  return `${BASE}${pre}${path || (pre ? "" : "/")}`;
 }
 
 export function GET() {
