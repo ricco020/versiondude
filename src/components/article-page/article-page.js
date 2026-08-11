@@ -4,6 +4,28 @@ import StickyBox from "react-sticky-box";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 import { getArticles, categoryLabel, getSections, articleHref } from "@/data/articles";
+
+// Rend les liens markdown [texte](/chemin) ecrits dans les paragraphes.
+// AVANT le 2026-08-11, <p>{para}</p> les affichait LITTERALEMENT au lecteur, crochets
+// et parentheses compris — 25 occurrences sur les 3 sites I-News, depuis leur
+// publication. Invisible tant qu'on ne lisait pas le TEXTE servi de ces paragraphes:
+// le <a> du bloc « articles lies » suffisait a faire croire que le markdown etait rendu.
+// Volontairement SANS dangerouslySetInnerHTML: on decoupe et on rend du JSX, donc rien
+// de ce qui vient des donnees n'est interprete comme du HTML.
+const MD_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+function renderPara(text) {
+  if (typeof text !== "string" || text.indexOf("](") === -1) return text;
+  const out = [];
+  let last = 0, m, i = 0;
+  MD_LINK.lastIndex = 0;
+  while ((m = MD_LINK.exec(text)) !== null) {
+    if (m.index > last) out.push(text.slice(last, m.index));
+    out.push(<Link key={`md${i++}`} href={m[2]}>{m[1]}</Link>);
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out.length ? out : text;
+}
 import ShareButtons from "@/components/ShareButtons";
 
 // Article fidèle au post-template démo + structure éditoriale magazine (chapô lettrine, intertitres H2,
@@ -113,7 +135,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                         {sec.heading ? <h2>{sec.heading}</h2> : null}
                         {sec.paras.map((para, pi) => {
                           pIndex++;
-                          const blocks = [<p key={pi}>{para}</p>];
+                          const blocks = [<p key={pi}>{renderPara(para)}</p>];
                           // image in-body après la 1re section
                           if (si === 1 && pi === 0) {
                             blocks.unshift(
