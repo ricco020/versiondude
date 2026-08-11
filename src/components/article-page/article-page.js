@@ -12,15 +12,21 @@ import { getArticles, categoryLabel, getSections, articleHref } from "@/data/art
 // le <a> du bloc « articles lies » suffisait a faire croire que le markdown etait rendu.
 // Volontairement SANS dangerouslySetInnerHTML: on decoupe et on rend du JSX, donc rien
 // de ce qui vient des donnees n'est interprete comme du HTML.
-const MD_LINK = /\[([^\]]+)\]\((\/[^)\s]*)\)/g;
+// Un seul balayage pour les DEUX syntaxes: [texte](/chemin) et **gras**. Le gras
+// s'affichait lui aussi litteralement — 132 marqueurs sur ce site, 444 sur les 3 sites
+// I-News, toutes locales confondues. Mesure du 2026-08-11 sur la page servie:
+// « **stage** », « **channel** », « **every night** » visibles tels quels.
+const MD_TOKEN = /\[([^\]]+)\]\((\/[^)\s]*)\)|\*\*([^*]+)\*\*/g;
 function renderPara(text) {
-  if (typeof text !== "string" || text.indexOf("](") === -1) return text;
+  if (typeof text !== "string") return text;
+  if (text.indexOf("](") === -1 && text.indexOf("**") === -1) return text;
   const out = [];
   let last = 0, m, i = 0;
-  MD_LINK.lastIndex = 0;
-  while ((m = MD_LINK.exec(text)) !== null) {
+  MD_TOKEN.lastIndex = 0;
+  while ((m = MD_TOKEN.exec(text)) !== null) {
     if (m.index > last) out.push(text.slice(last, m.index));
-    out.push(<Link key={`md${i++}`} href={m[2]}>{m[1]}</Link>);
+    if (m[1] !== undefined) out.push(<Link key={`md${i++}`} href={m[2]}>{m[1]}</Link>);
+    else out.push(<strong key={`md${i++}`}>{m[3]}</strong>);
     last = m.index + m[0].length;
   }
   if (last < text.length) out.push(text.slice(last));
