@@ -97,6 +97,22 @@ const GIT_CTA = {
 
 // Lockfile article: same Infomaniak offer, angle tuned to the topic (a reproducible
 // install is only worth as much as the machine that runs it).
+// Renovate est le SEUL des deux qui s auto-heberge - c est meme un de ses vrais
+// differenciateurs face a Dependabot, qui n existe que dans GitHub. Le seul besoin
+// concret que cree l article est donc une machine pour l heberger.
+const RENOVATE_SELFHOST_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'Renovate is the one of the two you can self-host, and self-hosting it needs a machine that runs on a schedule. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers for exactly that kind of small persistent job.',
+    fr: "Renovate est celui des deux qu'on peut auto-heberger, et l'auto-heberger demande une machine qui tourne a intervalles reguliers. Infomaniak - hebergeur suisse, respectueux de la vie privee - propose des VPS et serveurs cloud pour ce genre de petite tache persistante.",
+    es: 'Renovate es el que se puede autoalojar de los dos, y autoalojarlo exige una maquina que se ejecute de forma programada. Infomaniak - proveedor suizo, respetuoso con la privacidad - ofrece VPS y servidores cloud para ese tipo de tarea pequena y persistente.',
+    de: 'Renovate ist von beiden das selbst hostbare, und Selbst-Hosting braucht eine Maschine, die planmaessig laeuft. Infomaniak - ein schweizerischer, datenschutzfreundlicher Anbieter - bietet VPS und Cloud-Server fuer genau solche kleinen Daueraufgaben.',
+    it: "Renovate e quello dei due che si puo auto-ospitare, e auto-ospitarlo richiede una macchina che giri a intervalli regolari. Infomaniak - provider svizzero attento alla privacy - offre VPS e server cloud per questo tipo di piccolo compito persistente.",
+    pt: 'O Renovate e o que dos dois se pode auto-alojar, e auto-aloja-lo exige uma maquina que corra de forma agendada. A Infomaniak - fornecedor suico, respeitador da privacidade - oferece VPS e servidores cloud para esse tipo de pequena tarefa persistente.',
+  },
+};
+
 const LOCKFILE_CI_CTA = {
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
@@ -180,6 +196,17 @@ export const ARTICLES = [
     faq: ENX['package-lock-vs-package-json'].faq,
     related: 'what-is-a-lockfile',
     cta: LOCKFILE_CI_CTA,
+  }),
+  a({
+    slug: 'renovate-vs-dependabot', category: 'guides', readingMinutes: 8, date: '2026-08-12',
+    title: "Renovate vs Dependabot: The Choice Is About Pull Request Number Twenty",
+    dek: "Both watch your dependencies and open a PR. That part is identical, so it cannot be what you choose on. What separates them is grouping, scheduling and where they run - and one of them is already switched on in your repository.",
+    hero: '/assets/articles/renovate-vs-dependabot-hero.jpg', heroAlt: "A row of glossy red apartment letterboxes on a beige wall, several stuffed so full that magazines stick out of the top",
+    body: '/assets/articles/renovate-vs-dependabot-body.jpg', bodyCaption: "An industrial control panel: two rows of dark green indicator lamps above rows of black rotary selector switches, each labelled with an abbreviation, and red, orange and green pushbuttons along the bottom.",
+    paras: ENX['renovate-vs-dependabot'].paras,
+    list: ENX['renovate-vs-dependabot'].list,
+    related: 'what-is-a-lockfile',
+    cta: RENOVATE_SELFHOST_CTA,
   }),
   a({
     slug: 'semver-ranges-caret-tilde', category: 'guides', readingMinutes: 7, date: '2026-08-07',
