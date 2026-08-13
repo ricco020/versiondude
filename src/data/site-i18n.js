@@ -31,7 +31,7 @@ const T = {
     contact: {
       title: "Contact", lead: "Questions, corrections or suggestions? Get in touch.",
       intro: "If you spot an inaccuracy in a project page or a guide, we want to fix it. Email is the fastest way to reach us.",
-      emailLabel: "Email", email: "hello@versiondude.net",
+      emailLabel: "Email", email: "referencement.frb@gmail.com",
       form: { name: "Your name", email: "Your email", message: "Your message", send: "Send message" },
       note: "We read every message but cannot always reply individually.",
     },
@@ -73,7 +73,7 @@ const T = {
     contact: {
       title: "Contact", lead: "Questions, corrections ou suggestions ? Écrivez-nous.",
       intro: "Si vous repérez une inexactitude dans une page projet ou un guide, nous voulons la corriger. L'email est le moyen le plus rapide de nous joindre.",
-      emailLabel: "Email", email: "hello@versiondude.net",
+      emailLabel: "Email", email: "referencement.frb@gmail.com",
       form: { name: "Votre nom", email: "Votre email", message: "Votre message", send: "Envoyer le message" },
       note: "Nous lisons chaque message mais ne pouvons pas toujours répondre individuellement.",
     },
@@ -115,7 +115,7 @@ const T = {
     contact: {
       title: "Contacto", lead: "¿Preguntas, correcciones o sugerencias? Escríbenos.",
       intro: "Si detectas una inexactitud en una página de proyecto o en una guía, queremos corregirla. El correo es la forma más rápida de contactarnos.",
-      emailLabel: "Correo", email: "hello@versiondude.net",
+      emailLabel: "Correo", email: "referencement.frb@gmail.com",
       form: { name: "Tu nombre", email: "Tu correo", message: "Tu mensaje", send: "Enviar mensaje" },
       note: "Leemos todos los mensajes pero no siempre podemos responder individualmente.",
     },
@@ -157,7 +157,7 @@ const T = {
     contact: {
       title: "Kontakt", lead: "Fragen, Korrekturen oder Anregungen? Schreiben Sie uns.",
       intro: "Wenn Sie eine Ungenauigkeit auf einer Projektseite oder in einem Leitfaden entdecken, möchten wir sie beheben. Per E-Mail erreichen Sie uns am schnellsten.",
-      emailLabel: "E-Mail", email: "hello@versiondude.net",
+      emailLabel: "E-Mail", email: "referencement.frb@gmail.com",
       form: { name: "Ihr Name", email: "Ihre E-Mail", message: "Ihre Nachricht", send: "Nachricht senden" },
       note: "Wir lesen jede Nachricht, können aber nicht immer einzeln antworten.",
     },
@@ -199,7 +199,7 @@ const T = {
     contact: {
       title: "Contatti", lead: "Domande, correzioni o suggerimenti? Scrivici.",
       intro: "Se noti un'inesattezza in una pagina di progetto o in una guida, vogliamo correggerla. L'email è il modo più rapido per contattarci.",
-      emailLabel: "Email", email: "hello@versiondude.net",
+      emailLabel: "Email", email: "referencement.frb@gmail.com",
       form: { name: "Il tuo nome", email: "La tua email", message: "Il tuo messaggio", send: "Invia messaggio" },
       note: "Leggiamo ogni messaggio ma non sempre possiamo rispondere singolarmente.",
     },
@@ -241,7 +241,7 @@ const T = {
     contact: {
       title: "Contacto", lead: "Dúvidas, correções ou sugestões? Fale connosco.",
       intro: "Se detetar uma imprecisão numa página de projeto ou num guia, queremos corrigi-la. O email é a forma mais rápida de nos contactar.",
-      emailLabel: "Email", email: "hello@versiondude.net",
+      emailLabel: "Email", email: "referencement.frb@gmail.com",
       form: { name: "O seu nome", email: "O seu email", message: "A sua mensagem", send: "Enviar mensagem" },
       note: "Lemos todas as mensagens, mas nem sempre conseguimos responder individualmente.",
     },
