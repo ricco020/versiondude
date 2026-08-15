@@ -186,6 +186,40 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'web-components-shadow-dom', category: 'guides', readingMinutes: 8, date: '2026-08-15',
+    title: "Web Components and the Shadow DOM: What the Boundary Actually Blocks",
+    dek: "The shadow DOM is sold as encapsulation, which suggests a wall. It is more precise than that: some things stop at the boundary, others cross it freely, and knowing which is the whole difference between a component that behaves and one that fights your design system.",
+    hero: '/assets/articles/web-components-shadow-dom-hero.jpg', heroAlt: "A modern building facade seen at an angle: vertical white metal fins stepping across a blue-tinted glass curtain wall, a diagonal edge cutting the frame",
+    body: '/assets/articles/web-components-shadow-dom-body.jpg', bodyCaption: "A glazed facade of green and grey panels set in diagonal rows, each pane framed in pale metal, repeating across the whole frame.",
+    paras: [
+      "The shadow DOM is usually introduced with the word encapsulation, which makes people picture a wall. That picture causes most of the confusion, because the boundary is selective rather than solid. Some things stop at it. Others pass straight through, by design. Learning which is which is most of what there is to learn.",
+      "Attaching a shadow root takes one line inside a custom element: this.attachShadow({ mode: 'open' }). From that point the markup you put inside it is no longer reachable by ordinary document queries, and the styles you define inside it no longer apply outside. That is the part everyone expects.",
+      "What surprises people is the other direction. Your page's global stylesheet does not reach inside the shadow root either. A component that looked fine in a demo can arrive in your application ignoring every rule your design system sets, because those rules stop at the boundary just as firmly as the component's own styles stop coming out.",
+      "Three things do cross, and they are the ones you design around. Inherited CSS properties - font-family, color, line-height and their relatives - pass through unless the component resets them, which is why a well-built component usually looks approximately right without any work. Custom properties cross too, and deliberately: a component that exposes --button-bg as a hook is telling you that this is the supported way to restyle it. And events bubble out, though composed events are retargeted so that the listener on the outside sees the host element rather than the internal node that fired them.",
+      "That retargeting is worth pausing on. It is not an inconvenience; it is what keeps the abstraction honest. If your click handler received an internal button element that the component's author renames next week, you would be depending on an implementation detail. Retargeting hands you the public thing instead.",
+      "The open and closed modes are less symmetrical than they look. Open means element.shadowRoot returns the root, so anyone can walk into it from outside. Closed returns null, which sounds like a security boundary and is not one - the code inside the component still holds the reference, and anything running in the page can reach it by other means. Closed mode discourages coupling; it does not enforce privacy. Choose it to communicate intent, never to protect anything.",
+      "Slots are how you let content in without giving up the structure. A <slot> element inside the shadow root marks a place where markup from the light DOM will be displayed - the content stays owned by the page, styled by the page's stylesheet, and merely rendered in the component's layout. This is the part that makes web components composable rather than opaque, and it is also where the styling rules feel strangest: slotted content is styled by the outside, except for the narrow adjustments the component can make with ::slotted().",
+      "For styling from outside, the modern surface is ::part(). A component author marks an internal element with part=\"label\", and the page can then style ::part(label) without knowing anything else about the internals. It is a deliberate, versionable contract - the opposite of reaching in with a descendant selector and hoping the structure never changes.",
+      "The honest summary is that the shadow DOM trades convenience for stability. You give up the ability to restyle anything from anywhere, and you get components that keep working when the page around them changes. On a small application built by one team, that trade is often not worth making. On a component library used by teams you will never meet, it is precisely the point.",
+    ],
+    list: [
+      "Styles do not cross the boundary in EITHER direction - your global stylesheet does not reach inside",
+      "Inherited properties (font, color) and custom properties DO cross - that is the intended styling hook",
+      "Events bubble out but are retargeted: you see the host element, not the internal node",
+      "Closed mode is not privacy - it discourages coupling, it does not enforce anything",
+      "Use ::part() and custom properties for a versionable styling contract, never descendant selectors",
+    ],
+    faq: [
+      { q: "Why does my global CSS not apply inside a web component?", a: "Because the shadow boundary blocks styles in both directions. Your page stylesheet stops at the shadow root exactly as the component's internal styles stop at it going out. This is intentional: it is what makes a component look the same wherever it is placed. To style it from outside, use the hooks the component exposes - custom properties, or ::part() selectors - rather than trying to reach in." },
+      { q: "What is the difference between open and closed shadow roots?", a: "With mode 'open', element.shadowRoot returns the root and outside code can traverse it. With 'closed', that property returns null. The important point is that closed is not a security feature: the component's own code still holds a reference, and page scripts have other ways in. Closed mode communicates that internals are not a supported API; it does not protect them." },
+      { q: "Do events escape the shadow DOM?", a: "Composed events do, and they are retargeted as they cross the boundary: a listener outside sees the host custom element as the target rather than the internal element that fired the event. That is deliberate - it means your handler depends on the component's public identity instead of its internal structure, which can change without warning." },
+      { q: "How do I let page content into a component?", a: "With slots. A <slot> element inside the shadow root marks where light-DOM content will be rendered. That content remains owned and styled by the page, which is usually what you want: the component controls layout, the page controls the words. The component can make limited adjustments with ::slotted(), but it does not take ownership." },
+      { q: "Do I actually need the shadow DOM?", a: "Not always. It buys isolation at the cost of convenience, and on a single application built by one team the isolation may solve a problem you do not have. It becomes clearly worth it when your component will be used in pages you do not control, by people who should not have to know how it is built." },
+    ],
+    related: 'package-lock-vs-package-json',
+    cta: DEV_CLOUD,
+  }),
+  a({
     slug: 'package-lock-vs-package-json', category: 'guides', readingMinutes: 8, date: '2026-08-09',
     title: ENX['package-lock-vs-package-json'].title,
     dek: ENX['package-lock-vs-package-json'].dek,
