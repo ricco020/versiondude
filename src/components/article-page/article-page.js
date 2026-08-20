@@ -7,13 +7,13 @@ import { getArticles, categoryLabel, getSections, articleHref } from "@/data/art
 
 // Rend les liens markdown [texte](/chemin) ecrits dans les paragraphes.
 // AVANT le 2026-08-11, <p>{para}</p> les affichait LITTERALEMENT au lecteur, crochets
-// et parentheses compris — 25 occurrences sur les 3 sites I-News, depuis leur
+// et parentheses compris, 25 occurrences sur les 3 sites I-News, depuis leur
 // publication. Invisible tant qu'on ne lisait pas le TEXTE servi de ces paragraphes:
 // le <a> du bloc « articles lies » suffisait a faire croire que le markdown etait rendu.
 // Volontairement SANS dangerouslySetInnerHTML: on decoupe et on rend du JSX, donc rien
 // de ce qui vient des donnees n'est interprete comme du HTML.
 // Un seul balayage pour les DEUX syntaxes: [texte](/chemin) et **gras**. Le gras
-// s'affichait lui aussi litteralement — 132 marqueurs sur ce site, 444 sur les 3 sites
+// s'affichait lui aussi litteralement, 132 marqueurs sur ce site, 444 sur les 3 sites
 // I-News, toutes locales confondues. Mesure du 2026-08-11 sur la page servie:
 // « **stage** », « **channel** », « **every night** » visibles tels quels.
 const MD_TOKEN = /\[([^\]]+)\]\((\/[^)\s]*)\)|\*\*([^*]+)\*\*/g;
