@@ -232,6 +232,18 @@ export const ARTICLES = [
     cta: LOCKFILE_CI_CTA,
   }),
   a({
+    slug: 'npm-ci-vs-npm-install', category: 'guides', readingMinutes: 7, date: '2026-09-05',
+    title: ENX['npm-ci-vs-npm-install'].title,
+    dek: ENX['npm-ci-vs-npm-install'].dek,
+    hero: '/assets/articles/npm-ci-vs-npm-install-hero.jpg', heroAlt: ENX['npm-ci-vs-npm-install'].heroAlt,
+    body: '/assets/articles/npm-ci-vs-npm-install-body.jpg', bodyCaption: ENX['npm-ci-vs-npm-install'].bodyCaption,
+    paras: ENX['npm-ci-vs-npm-install'].paras,
+    list: ENX['npm-ci-vs-npm-install'].list,
+    faq: ENX['npm-ci-vs-npm-install'].faq,
+    related: 'package-lock-vs-package-json',
+    cta: LOCKFILE_CI_CTA,
+  }),
+  a({
     slug: 'renovate-vs-dependabot', category: 'guides', readingMinutes: 8, date: '2026-08-12',
     title: "Renovate vs Dependabot: The Choice Is About Pull Request Number Twenty",
     dek: "Both watch your dependencies and open a PR. That part is identical, so it cannot be what you choose on. What separates them is grouping, scheduling and where they run - and one of them is already switched on in your repository.",
