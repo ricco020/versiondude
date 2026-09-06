@@ -2201,15 +2201,6 @@
       "it": "Un SBOM è un problema di versioni",
       "pt": "Um SBOM é um problema de versões",
       "n": 5
-    },
-    {
-      "en": "What the agreement is not",
-      "fr": "Ce que l'accord n'est pas",
-      "es": "Lo que el acuerdo no es",
-      "de": "Was die Vereinbarung nicht ist",
-      "it": "Cosa l'accordo non è",
-      "pt": "O que o acordo não é",
-      "n": 8
     }
   ],
   "what-is-an-lts-version": [
