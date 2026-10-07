@@ -2437,5 +2437,52 @@
       "pt": "O resumo honesto",
       "n": 1
     }
+  ],
+  "npm-overrides-transitive-dependency": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 1
+    },
+    {
+      "en": "The flat override: one version, everywhere in the tree",
+      "fr": "L'override à plat : une version, partout dans l'arbre",
+      "es": "El override plano: una versión, en todo el árbol",
+      "de": "Der flache Override: eine Version, überall im Baum",
+      "it": "L'override piatto: una versione, in tutto l'albero",
+      "pt": "O override plano: uma versão, em toda a árvore",
+      "n": 3
+    },
+    {
+      "en": "Scoping the override to a single parent",
+      "fr": "Limiter l'override à un seul parent",
+      "es": "Limitar el override a un solo padre",
+      "de": "Den Override auf ein einziges Elternpaket begrenzen",
+      "it": "Limitare l'override a un solo genitore",
+      "pt": "Limitar o override a um único pai",
+      "n": 3
+    },
+    {
+      "en": "When the override seems to do nothing",
+      "fr": "Quand l'override semble ne rien faire",
+      "es": "Cuando el override parece no hacer nada",
+      "de": "Wenn der Override scheinbar nichts bewirkt",
+      "it": "Quando l'override sembra non fare nulla",
+      "pt": "Quando o override parece não fazer nada",
+      "n": 3
+    },
+    {
+      "en": "Yarn and pnpm use a different field",
+      "fr": "Yarn et pnpm utilisent un autre champ",
+      "es": "Yarn y pnpm usan otro campo",
+      "de": "Yarn und pnpm nutzen ein anderes Feld",
+      "it": "Yarn e pnpm usano un altro campo",
+      "pt": "O Yarn e o pnpm usam outro campo",
+      "n": 2
+    }
   ]
 }

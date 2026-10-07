@@ -194,7 +194,7 @@
       "The documented advice runs against the instinct of a careful maintainer. Rather than pinning a peer range tightly to the version you tested, npm recommends keeping peer dependency ranges as broad as possible. A narrow range does not make your package safer; it makes it harder to install alongside anything else, and it converts every host upgrade into a conflict.",
       "There is also a middle ground that many maintainers overlook. The peerDependenciesMeta field, which takes one entry per package with a single optional boolean, lets you mark a peer as optional, and npm will not automatically install optional peer dependencies. This is how a package integrates with several possible hosts without demanding that all of them be present, which is exactly the situation where a plain peerDependencies list becomes unworkable.",
       "Putting it together gives a decision rule. If your code imports it, it is a dependency. If only your tests or build need it, it is a devDependency. If your code expects the consumer to already have it, and you are building against its interface, it is a peerDependency, and the range should be generous. If it is one of several interchangeable hosts, mark it optional.",
-      "And when the error does appear, read it as information rather than an obstacle. An ERESOLVE conflict is npm telling you that two packages in your tree hold genuinely incompatible expectations about a third. Forcing past it leaves that incompatibility in place, silently, which is precisely the situation npm v6 used to allow and v7 stopped allowing."
+      "And when the error does appear, read it as information rather than an obstacle. An ERESOLVE conflict is npm telling you that two packages in your tree hold genuinely incompatible expectations about a third. Forcing past it leaves that incompatibility in place, silently, which is precisely the situation npm v6 used to allow and v7 stopped allowing. When the conflict comes from a package deeper in the tree that you cannot upgrade, the supported tool is an override scoped to that package: see [npm overrides](/articles/npm-overrides-transitive-dependency)."
     ],
     "list": [
       "peerDependencies express compatibility with a host package, without requiring it as your own code.",
@@ -648,7 +648,7 @@
     "paras": [
       "Two files sit next to each other in almost every JavaScript project, and the distance between them is the distance between what you asked for and what you got. package.json states intent: the dependency ranges you accept, your own name and version, your scripts. package-lock.json states outcome: the exact version of every package that was resolved, including the ones you never named, each with the registry URL it came from and an integrity hash of its contents.",
       "The confusion is not academic. It is the mechanism that keeps “it works on my machine” alive: two developers with byte-identical package.json files can end up with different trees in node_modules, because a range such as ^4.17.0 accepts anything below 5.0.0 and the answer depends on what the registry held on the day each of them ran the install.",
-      "package.json carries ranges, and a range is a permission rather than a decision. ^1.2.3 accepts patch and minor updates below 2.0.0, ~1.2.3 accepts patch updates only, and a bare 1.2.3 accepts nothing else. What the manifest never carries is your transitive tree: the dependencies of your dependencies are absent from it, and they declare ranges of their own, which is where most of the version drift actually happens.",
+      "package.json carries ranges, and a range is a permission rather than a decision. ^1.2.3 accepts patch and minor updates below 2.0.0, ~1.2.3 accepts patch updates only, and a bare 1.2.3 accepts nothing else. What the manifest never carries is your transitive tree: the dependencies of your dependencies are absent from it, and they declare ranges of their own, which is where most of the version drift actually happens. The one field in the manifest that does reach into that tree is overrides: [npm overrides](/articles/npm-overrides-transitive-dependency) shows how to force the version of a transitive dependency.",
       "package-lock.json carries the resolution. Every package in the tree gets an entry with the version that was chosen, the tarball URL it was fetched from, and an integrity string that the installer verifies against the bytes it downloads. That hash is what makes the lockfile a supply-chain artefact rather than a convenience: a tarball republished under the same version number with different content fails the check instead of installing quietly.",
       "The two files also have different authors. You edit package.json. You do not edit package-lock.json, npm writes it, and editing it by hand is a dependable way to produce a lockfile that no longer corresponds to any resolution npm would actually perform.",
       "For an application, commit it. Without the lockfile in version control your CI resolves the tree afresh on every run, and a patch release published upstream between two builds changes what you ship without a single line of your own code changing.",
@@ -732,6 +732,55 @@
       {
         "q": "Why did my CI build break without any code change?",
         "a": "The most common cause is npm install in the pipeline combined with a caret or tilde range: an upstream package published a new version your range permits, and it was installed. npm ci removes this by construction, because it installs only what the lockfile pins."
+      }
+    ]
+  },
+  "npm-overrides-transitive-dependency": {
+    "title": "npm overrides: How to Force the Version of a Transitive Dependency",
+    "dek": "A vulnerable package three levels down, and a parent that has not released a fix. The overrides field in your root package.json lets you choose the version yourself, for the whole tree or for one parent only. It also has three rules that explain most of the cases where it appears to do nothing.",
+    "heroAlt": "A railway switch seen from track level: two rust-coloured tracks on concrete sleepers converge into one over pale gravel, with a grey equipment cabinet, stacked concrete sleepers and a mountain on the horizon",
+    "bodyCaption": "A rectangular orange road sign reading DETOUR, with a black pedestrian pictogram above the word and a black arrow pointing left, fixed to a black post in front of a blurred chain-link fence. An override does the same thing to one dependency: same destination, another route.",
+    "paras": [
+      "A vulnerability report names a package you never installed. It sits three levels down, pulled in by a dependency of a dependency, and the package in the middle has not published a release that moves past it. You cannot edit a `package.json` you do not own. What you can do is declare an `overrides` field in your own root `package.json` and tell npm which version to install instead.",
+      "**The shortest form names the package and the version.** Writing `\"overrides\": { \"foo\": \"1.2.4\" }` makes npm install `foo` at 1.2.4 wherever it appears, no matter what version the packages that depend on it asked for. npm's documentation lists the three intended uses: replacing a version that has a known security issue, replacing a dependency with a fork, and making sure the same version of a package is used everywhere.",
+      "**The value does not have to be an exact version.** According to the documentation it can be any specifier npm accepts for a dependency: an exact version, a semver range, a dist-tag, or a replacement such as `npm:`, `file:` or a Git URL. A range is often the better choice for a security fix. `\"foo\": \"^1.2.4\"` enforces the patched release as a minimum and still lets later patches in, where an exact pin freezes the package until someone remembers to remove the line. If the difference between the two operators is hazy, [caret vs tilde](/articles/semver-ranges-caret-tilde) covers what each one allows.",
+      "**Before writing the override, find out who is asking for the package.** `npm explain foo` prints the chain of dependencies that causes `foo` to be installed, one block per copy in the tree, each one traced back to the root project. That output gives you the two facts you need: which parent is responsible, and whether one copy or several are involved. A flat override changes all of them, which is not always what you want.",
+      "**Nest the key to limit the override to one branch of the tree.** `\"overrides\": { \"bar\": { \"foo\": \"1.2.4\" } }` replaces `foo` only when it is a child of `bar`, or a grandchild, or anything deeper below it. Every other package that depends on `foo` keeps the version it resolved on its own. This is the form to reach for when one parent is stuck on a vulnerable release and the rest of the tree is fine.",
+      "**Keys can carry a version, and they can nest as deep as needed.** `\"bar@2.0.0\": { \"foo\": \"1.2.4\" }` applies only when `foo` sits below that exact version of `bar`, so the override stops applying by itself the day `bar` is upgraded. Keys can be nested to any length to describe a longer path. And when you need to override a package and one of its children at the same time, the object form takes a `.` key for the package itself, next to the keys for its children.",
+      "**A direct dependency is the one case npm refuses.** You may not override a package you depend on directly unless the override and the dependency carry exactly the same spec; anything else stops the install with an `EOVERRIDE` error. The documented way around it is a reference: `\"foo\": \"$foo\"` tells npm to reuse whatever spec your own `dependencies` entry for `foo` declares, at every depth. Change the version in one place and the whole tree follows.",
+      "**Overrides are read from the root `package.json` only.** npm's documentation is explicit: overrides in installed dependencies, workspaces included, are not considered when the tree is resolved. Two consequences follow. In a monorepo the field belongs in the root manifest, not in the package where the problem shows up. And an `overrides` block in a library you publish does nothing for the people who install it; the documentation points library authors to pinning the dependency or to `bundleDependencies` instead.",
+      "**Then check the result instead of assuming it.** Run `npm install` so the tree is resolved again, then run `npm explain foo` a second time: the version printed at the head of each block is the one now installed. Commit `package.json` and `package-lock.json` together, because the lockfile is what carries the resolved version to every other machine. [package-lock.json vs package.json](/articles/package-lock-vs-package-json) explains why the two files have to move as a pair.",
+      "An override installs a version the parent package never said it could work with. That is the whole point when the declared range only contains a vulnerable release, and it is also the risk: npm will not stop you from forcing a major version the parent was not written for. Treat the line as a patch with an expiry date. When the parent publishes a release that accepts the fixed version, delete the override.",
+      "**The same idea exists in the other two package managers, under other names.** Yarn reads a `resolutions` field, described in its manifest documentation as a way to use a specific resolution instead of anything the resolver would normally pick; its keys take one level of specificity, written `parent/child`. pnpm calls the setting `overrides` as npm does, places it in `pnpm-workspace.yaml` in its current documentation, and scopes it with a `>` separator, as in `bar@1>foo`. Both restrict the field to the root of the project, as npm does. The syntax does not transfer from one tool to the next, so a project that changes package manager has to rewrite the block.",
+      "**The decision order is short.** If the parent already has a release that accepts the fixed version, upgrade the parent and write no override at all. If it does not, scope the override to that parent instead of the whole tree. If the same package has to be identical everywhere, use the flat form, with a range when a minimum is enough. And if the install stops on a peer dependency conflict and not on a vulnerable version, the problem is a different one: [peer dependencies](/articles/peer-dependencies) covers it."
+    ],
+    "list": [
+      "\"foo\": \"1.2.4\" : foo at 1.2.4 everywhere in the tree",
+      "\"bar\": { \"foo\": \"1.2.4\" } : foo at 1.2.4 only below bar, at any depth",
+      "\"bar@2.0.0\": { \"foo\": \"1.2.4\" } : only below that exact version of bar",
+      "\"foo\": \"$foo\" : reuse the spec of your own direct dependency foo",
+      "\"foo\": \"npm:@scope/fork@1.2.4\" : replace foo with another package"
+    ],
+    "faq": [
+      {
+        "q": "Do npm overrides work in a workspace package.json?",
+        "a": "No. npm only considers overrides declared in the root package.json of the project. Its documentation states that overrides in installed dependencies, workspaces included, are not considered in dependency tree resolution, so the field belongs in the root manifest."
+      },
+      {
+        "q": "What does the EOVERRIDE error mean?",
+        "a": "It means an override targets a package you depend on directly with a spec that differs from the one in your dependencies. npm allows that override only when both specs are identical. Either align them, or write the override as a reference such as \"foo\": \"$foo\", which reuses the spec of your direct dependency."
+      },
+      {
+        "q": "Can an override use a range instead of an exact version?",
+        "a": "Yes. The npm documentation says an override value can be any specifier npm accepts for a dependency: an exact version, a semver range, a dist-tag, or a replacement such as npm:, file: or a Git URL. A range like ^1.2.4 enforces a minimum patched release without freezing the package."
+      },
+      {
+        "q": "How do I find which package pulls in a transitive dependency?",
+        "a": "Run npm explain followed by the package name. The command prints the chain of dependencies that causes the package to be installed, one block per copy present in the tree, each traced back to the root project."
+      },
+      {
+        "q": "Is npm overrides the same as Yarn resolutions?",
+        "a": "The purpose is the same and the syntax is not. npm uses an overrides field with nested objects, Yarn uses a resolutions field with keys written parent/child, and pnpm uses an overrides setting with a > separator. All three restrict the field to the root of the project."
       }
     ]
   }

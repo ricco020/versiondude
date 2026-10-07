@@ -186,6 +186,18 @@ const a = (o) => o;
 
 export const ARTICLES = [
   a({
+    slug: 'npm-overrides-transitive-dependency', category: 'guides', readingMinutes: 7, date: '2026-10-07',
+    title: ENX['npm-overrides-transitive-dependency'].title,
+    dek: ENX['npm-overrides-transitive-dependency'].dek,
+    hero: '/assets/articles/npm-overrides-transitive-dependency-hero.jpg', heroAlt: ENX['npm-overrides-transitive-dependency'].heroAlt,
+    body: '/assets/articles/npm-overrides-transitive-dependency-body.jpg', bodyCaption: ENX['npm-overrides-transitive-dependency'].bodyCaption,
+    paras: ENX['npm-overrides-transitive-dependency'].paras,
+    list: ENX['npm-overrides-transitive-dependency'].list,
+    faq: ENX['npm-overrides-transitive-dependency'].faq,
+    related: 'package-lock-vs-package-json',
+    cta: LOCKFILE_CI_CTA,
+  }),
+  a({
     slug: 'web-components-shadow-dom', category: 'guides', readingMinutes: 8, date: '2026-08-15',
     title: "Web Components and the Shadow DOM: What the Boundary Actually Blocks",
     dek: "The shadow DOM is sold as encapsulation, which suggests a wall. It is more precise than that: some things stop at the boundary, others cross it freely, and knowing which is the whole difference between a component that behaves and one that fights your design system.",
@@ -976,6 +988,7 @@ const TR = { fr: FR, es: ES, de: DE, it: IT, pt: PT };
 
 // Slugs localisés par langue (EN = id canonique). FR/ES ont leurs propres slugs.
 const ART_SLUG = {
+  "npm-overrides-transitive-dependency": { fr: "npm-overrides-dependance-transitive", es: "npm-overrides-dependencia-transitiva", de: "npm-overrides-transitive-abhaengigkeit", it: "npm-overrides-dipendenza-transitiva", pt: "npm-overrides-dependencia-transitiva" },
   "semver-ranges-caret-tilde": { fr: "plages-semver-caret-tilde", es: "rangos-semver-caret-tilde", de: "semver-bereiche-caret-tilde", it: "intervalli-semver-caret-tilde", pt: "intervalos-semver-caret-til" },
   "what-is-a-nightly-build": { fr: "qu-est-ce-qu-un-build-nightly", es: "que-es-una-nightly-build", de: "was-ist-ein-nightly-build", it: "cos-e-una-nightly-build", pt: "o-que-e-uma-nightly-build" },
   "what-is-a-release-candidate": { fr: "qu-est-ce-qu-une-release-candidate", es: "que-es-una-release-candidate", de: "was-ist-ein-release-candidate", it: "release-candidate-cosa-significa", pt: "o-que-e-uma-release-candidate" },
