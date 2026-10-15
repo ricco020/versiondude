@@ -1,4 +1,51 @@
 {
+  "mediawiki-parser-functions": [
+    {
+      "en": "",
+      "fr": "",
+      "es": "",
+      "de": "",
+      "it": "",
+      "pt": "",
+      "n": 1
+    },
+    {
+      "en": "Installation and syntax",
+      "fr": "Installation et syntaxe",
+      "es": "Instalación y sintaxis",
+      "de": "Installation und Syntax",
+      "it": "Installazione e sintassi",
+      "pt": "Instalação e sintaxe",
+      "n": 2
+    },
+    {
+      "en": "The conditional functions",
+      "fr": "Les fonctions conditionnelles",
+      "es": "Las funciones condicionales",
+      "de": "Die Bedingungsfunktionen",
+      "it": "Le funzioni condizionali",
+      "pt": "As funções condicionais",
+      "n": 3
+    },
+    {
+      "en": "Arithmetic, dates and page checks",
+      "fr": "Calcul, dates et vérification de pages",
+      "es": "Cálculo, fechas y comprobación de páginas",
+      "de": "Rechnen, Datum und Seitenprüfung",
+      "it": "Calcoli, date e verifica delle pagine",
+      "pt": "Cálculo, datas e verificação de páginas",
+      "n": 2
+    },
+    {
+      "en": "The two traps that break templates",
+      "fr": "Les deux pièges qui cassent les modèles",
+      "es": "Las dos trampas que rompen las plantillas",
+      "de": "Die zwei Fallen, die Vorlagen zerlegen",
+      "it": "Le due trappole che rompono i template",
+      "pt": "As duas armadilhas que partem as predefinições",
+      "n": 2
+    }
+  ],
   "peer-dependencies": [
     {
       "en": "",

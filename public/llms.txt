@@ -26,6 +26,7 @@
 - [What is a reverse proxy?](https://versiondude.net/articles/what-is-a-reverse-proxy): A plain-English guide - how a reverse proxy routes requests, terminates HTTPS, caches and secures, and how it differs from a forward proxy, a load balancer and an API gateway.
 - [Renovate vs Dependabot](https://versiondude.net/articles/renovate-vs-dependabot): The two dependency-update bots compared on what differs day to day - how each groups updates, what it does with lockfiles and monorepos, how noisy the pull requests become at scale, and what each one costs to run.
 - [npm overrides: force the version of a transitive dependency](https://versiondude.net/articles/npm-overrides-transitive-dependency): How the overrides field in the root package.json replaces a nested dependency, how to scope it to one parent, the EOVERRIDE rule for direct dependencies, why it is ignored outside the root manifest, and the Yarn and pnpm equivalents.
+- [MediaWiki ParserFunctions: #if, #ifeq, #switch, #expr](https://versiondude.net/articles/mediawiki-parser-functions): What each function of the ParserFunctions extension does, why #if treats whitespace and 0 as it does, the #ifexist expensive-function limit, the {{!}} fix for tables, and why the string functions are off by default and never enabled on Wikimedia wikis.
 
 ## Guides - developer privacy & secrets
 

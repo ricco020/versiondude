@@ -1,4 +1,52 @@
 {
+  "mediawiki-parser-functions": {
+    "title": "ParserFunctions de MediaWiki : #if, #ifeq, #switch, #expr et les pièges qui vont avec",
+    "dek": "ParserFunctions est l'extension qui donne de la logique au wikitexte : conditions, comparaisons, calcul et dates. Elle est livrée avec MediaWiki, mais trois de ses comportements surprennent presque tout le monde : les espaces comptent comme du vide, les barres verticales cassent les tableaux, et les fonctions de chaînes sont désactivées par défaut.",
+    "heroAlt": "Dans un parc boisé, un chemin goudronné se sépare en deux autour d'une petite pelouse, avec au centre un poteau indicateur blanc à trois panneaux et deux personnes qui lisent une carte sur la branche de droite",
+    "bodyCaption": "Une rangée d'encyclopédies reliées de cuir rouge, étiquettes noires et lettres dorées (T, INDEX, WX YZ, UV), sur une étagère, avec une faible profondeur de champ. L'essentiel de la logique des modèles d'un grand wiki s'écrit avec les fonctions décrites ici.",
+    "paras": [
+      "Chaque infobox qui masque une ligne vide, chaque modèle qui affiche un libellé différent selon un paramètre, chaque page de wiki qui calcule un âge à partir d'une date repose sur la même extension : **ParserFunctions**. Elle ajoute de la logique au wikitexte, qui à lui seul ne sait que substituer du texte. Ce guide couvre les fonctions que vous utiliserez vraiment, et les trois comportements qui expliquent la plupart des questions qu'on se pose à leur sujet. Tout ce qui suit a été vérifié dans la documentation de l'extension sur mediawiki.org le 15 octobre 2026.",
+      "**ParserFunctions est livrée avec MediaWiki.** Elle fait partie de l'archive de MediaWiki depuis la version 1.18 : sur un wiki auto-hébergé, il suffit en général de l'activer avec `wfLoadExtension( 'ParserFunctions' );` dans `LocalSettings.php`. Aucune mise à jour de la base n'est nécessaire. Sur un wiki hébergé par un tiers, vous ne pouvez pas modifier ce fichier, ce qui compte pour les options de configuration plus bas.",
+      "**Toutes les fonctions ont la même forme.** On écrit `{{#nom: premier | deuxième | troisième }}` : un dièse, le nom de la fonction, deux-points, puis les paramètres séparés par des barres verticales. La documentation précise que les espaces, retours à la ligne compris, sont retirés au début et à la fin de chaque paramètre. C'est pratique pour la mise en page, et c'est l'origine du premier piège.",
+      "**`#if` teste si une chaîne est vide, rien d'autre.** `{{#if: test | valeur si non vide | valeur si vide }}` renvoie le deuxième paramètre quand le premier contient quoi que ce soit, et le troisième quand il est vide ou ne contient que des espaces. Il n'évalue pas le test : `{{#if: 1==2 | oui | non }}` renvoie oui, car « 1==2 » est une chaîne non vide, et `{{#if: 0 | oui | non }}` renvoie aussi oui. Pour une condition arithmétique, utilisez `#ifexpr`.",
+      "**`#ifeq` compare deux chaînes, et les nombres comme des nombres.** `{{#ifeq: a | b | identiques | différentes }}` renvoie le troisième ou le quatrième paramètre. Quand les deux valeurs sont des nombres valides, la comparaison est numérique : `01` vaut `1` et `1e3` vaut `1000`. Pour comparer plus de deux valeurs, `#switch` est l'outil adapté.",
+      "**`#switch` choisit un résultat parmi plusieurs.** `{{#switch: valeur | cas1 = résultat1 | cas2 = résultat2 | défaut }}` renvoie le résultat du premier cas qui correspond, et le dernier paramètre sans signe égal quand aucun ne correspond. Plusieurs cas peuvent partager un résultat en les listant à la suite, le résultat n'étant écrit que sur le dernier. Il remplace une cascade de `#ifeq` imbriqués qui devient illisible au-delà de trois niveaux.",
+      "**`#expr` fait du calcul, pas du traitement de texte.** `{{#expr: 1 + 1 }}` renvoie 2, et la fonction accepte les opérateurs logiques, `round`, `trunc`, `ceil` et `floor`. Une expression invalide renvoie un message d'erreur que `#iferror` peut intercepter. La documentation est explicite : les expressions ne fonctionnent qu'avec des valeurs numériques et ne peuvent pas comparer des chaînes ; utilisez `#ifeq` pour cela. Pour les dates, `#time` met en forme une date, et la documentation suggère le format `xNU` pour la convertir en secondes depuis le 1er janvier 1970, que l'on peut ensuite additionner et soustraire avec `#expr`.",
+      "**`#ifexist` est une fonction coûteuse, et elle échoue sans bruit au-delà d'une limite.** Elle vérifie qu'une page existe. Chaque page cible distincte compte dans `$wgExpensiveParserFunctionLimit`, y compris les vérifications faites dans les modèles inclus. Une fois la limite atteinte, tout `#ifexist` suivant renvoie faux, que la page existe ou non, et la page est ajoutée à une catégorie de suivi. Si un modèle affiche soudain des liens rouges vers des pages qui existent, c'est la première chose à vérifier.",
+      "**Les barres verticales brutes cassent les tableaux.** Comme chaque barre est lue comme un séparateur de paramètres, un tableau wiki écrit dans un `#if` ou un `#switch` se désagrège. Depuis MediaWiki 1.24, le mot magique `{{!}}` produit une barre que l'analyseur ne voit qu'après l'exécution de la fonction ; avant, la plupart des wikis utilisaient un modèle nommé `!` pour le même usage. Pour afficher une barre littérale, utilisez `&#124;`.",
+      "**Les fonctions de chaînes sont désactivées par défaut.** `#len`, `#pos`, `#sub`, `#replace`, `#explode` et leurs voisines n'existent que si `$wgPFEnableStringFunctions` vaut true, et sa valeur par défaut est false ; `$wgPFStringLengthLimit` limite par défaut les chaînes acceptées à 1 000 caractères. La documentation ajoute qu'en 2013 il a été décidé qu'elles ne seraient jamais activées sur aucun wiki Wikimedia, parce qu'elles sont inefficaces à grande échelle. Sur Wikipédia et ses projets frères, le traitement des chaînes passe par des modules Lua, comme `{{#invoke:String|len|...}}` fourni par Scribunto."
+    ],
+    "list": [
+      "#if : chaîne non vide ou non (les espaces comptent comme vide)",
+      "#ifeq : deux valeurs identiques ou non (numérique si ce sont deux nombres)",
+      "#iferror : une autre fonction a-t-elle renvoyé une erreur",
+      "#ifexpr : résultat vrai ou faux d'une expression arithmétique",
+      "#ifexist : une page existe-t-elle (coûteuse, limitée par page)",
+      "#switch : un résultat parmi plusieurs cas, avec une valeur par défaut",
+      "#expr : calcul, arrondi, logique",
+      "#time / #timel : mise en forme d'une date (UTC ou locale)",
+      "#titleparts : découper un titre de page sur ses barres obliques",
+      "#rel2abs : transformer un chemin de page relatif en chemin absolu"
+    ],
+    "faq": [
+      {
+        "q": "ParserFunctions est-elle installée par défaut dans MediaWiki ?",
+        "a": "Elle est livrée dans l'archive de MediaWiki depuis la version 1.18, les fichiers sont donc déjà là. Sur un wiki auto-hébergé, on l'active en ajoutant wfLoadExtension( 'ParserFunctions' ); dans LocalSettings.php. Aucune mise à jour de la base n'est nécessaire."
+      },
+      {
+        "q": "Pourquoi {{#if: 0 | oui | non }} renvoie-t-il oui ?",
+        "a": "Parce que #if vérifie seulement si son premier paramètre est vide. « 0 » est une chaîne non vide, donc le résultat est oui. #if n'évalue jamais le test comme une expression ; c'est le rôle de #ifexpr."
+      },
+      {
+        "q": "Comment faire fonctionner #len ou #replace ?",
+        "a": "Sur votre propre wiki, ajoutez $wgPFEnableStringFunctions = true; dans LocalSettings.php, sous la ligne qui charge l'extension. Sur les wikis Wikimedia, ces fonctions ne seront jamais activées selon la documentation de l'extension ; passez par le module Lua String avec #invoke."
+      },
+      {
+        "q": "Comment mettre un tableau dans un #if ou un #switch ?",
+        "a": "Remplacez chaque barre verticale qui appartient au tableau par le mot magique {{!}}, disponible depuis MediaWiki 1.24. L'analyseur ne voit alors la barre qu'après l'exécution de la fonction, et ne la prend pas pour un séparateur de paramètres."
+      }
+    ]
+  },
   "semver-ranges-caret-tilde": {
     "paras": [
       "Le versionnage sémantique vous dit ce que signifie un numéro de publication. Il ne vous dit pas quelles publications votre projet acceptera la prochaine fois que quelqu'un lancera une installation. Cela, c'est la **plage** que vous avez écrite qui le décide, et c'est dans la syntaxe des plages que se logent la plupart des surprises.",

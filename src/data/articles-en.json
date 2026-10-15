@@ -1,4 +1,52 @@
 {
+  "mediawiki-parser-functions": {
+    "title": "MediaWiki ParserFunctions: #if, #ifeq, #switch, #expr and the Traps Behind Them",
+    "dek": "ParserFunctions is the extension that gives wikitext its logic: conditions, comparisons, arithmetic and dates. It ships with MediaWiki, but three of its behaviours surprise almost everyone: whitespace counts as empty, pipes break tables, and the string functions are switched off by default.",
+    "heroAlt": "A paved path in a wooded park splits in two around a small lawn, with a white signpost carrying three direction boards in the middle and two people reading a map on the right-hand branch",
+    "bodyCaption": "A row of red leather-bound encyclopedia volumes with black labels and gold lettering (T, INDEX, WX YZ, UV) on a shelf, in shallow focus. Most of the logic inside the templates of a large wiki is written with the functions described here.",
+    "paras": [
+      "Every infobox that hides an empty row, every template that prints a different label depending on a parameter, every wiki page that computes an age from a date relies on the same extension: **ParserFunctions**. It adds logic to wikitext, which on its own can only substitute text. This guide covers the functions you will actually use, and the three behaviours that explain most of the questions people ask about them. Everything below was checked against the extension's documentation on mediawiki.org on 15 October 2026.",
+      "**ParserFunctions ships with MediaWiki.** It has been bundled with the MediaWiki tarball since version 1.18, so on a self-hosted wiki you usually only need to enable it with `wfLoadExtension( 'ParserFunctions' );` in `LocalSettings.php`. It needs no database update. On a hosted wiki you cannot change this file, which matters for the configuration options below.",
+      "**Every function has the same shape.** You write `{{#name: first | second | third }}`: a hash, the function name, a colon, then parameters separated by pipes. The documentation states that whitespace, including newlines, is stripped from the beginning and end of every parameter. That is convenient for layout, and it is the source of the first trap.",
+      "**`#if` tests whether a string is empty, nothing else.** `{{#if: test | value if not empty | value if empty }}` returns the second parameter when the first contains anything, and the third when it is empty or only contains whitespace. It does not evaluate the test: `{{#if: 1==2 | yes | no }}` returns yes, because \"1==2\" is a non-empty string, and `{{#if: 0 | yes | no }}` also returns yes. For arithmetic conditions, use `#ifexpr`.",
+      "**`#ifeq` compares two strings, and numbers as numbers.** `{{#ifeq: a | b | same | different }}` returns the third or fourth parameter. When both values are valid numbers, the comparison is numeric, so `01` equals `1` and `1e3` equals `1000`. If you need to compare more than two values, `#switch` is the better tool.",
+      "**`#switch` picks one result among many.** `{{#switch: value | case1 = result1 | case2 = result2 | default }}` returns the result of the first matching case, and the last parameter without an equals sign when nothing matches. Several cases can share one result by listing them one after another, with the result only on the last. It replaces a chain of nested `#ifeq` that becomes unreadable after three levels.",
+      "**`#expr` does arithmetic, not string work.** `{{#expr: 1 + 1 }}` returns 2, and the function supports logic operators, `round`, `trunc`, `ceil` and `floor`. An invalid expression returns an error message that `#iferror` can catch. The documentation is explicit that expressions only work with number-like values and cannot compare strings; use `#ifeq` for that. For dates, `#time` formats a date, and the documentation suggests the `xNU` format to turn it into seconds since 1 January 1970, which you can then add and subtract with `#expr`.",
+      "**`#ifexist` is an expensive function, and it fails silently past a limit.** It checks whether a page exists. Each distinct target page it checks counts against `$wgExpensiveParserFunctionLimit`, including checks made inside transcluded templates. Once the limit is reached, every further `#ifexist` returns false whether the page exists or not, and the page is added to a tracking category. If a template suddenly shows red links for pages that exist, this is the first thing to check.",
+      "**Raw pipes break tables.** Because every pipe is read as a parameter separator, a wikitable written inside `#if` or `#switch` falls apart. Since MediaWiki 1.24, the `{{!}}` magic word outputs a pipe that the parser only sees after the function has run; before that, most wikis used a template named `!` for the same purpose. To display a literal pipe, use `&#124;`.",
+      "**The string functions are off by default.** `#len`, `#pos`, `#sub`, `#replace`, `#explode` and their siblings only exist when `$wgPFEnableStringFunctions` is set to true, and its default is false; `$wgPFStringLengthLimit` caps the strings they accept at 1,000 characters by default. The documentation adds that in 2013 it was decided they will never be enabled on any Wikimedia wiki, because they are inefficient at scale. On Wikipedia and its sister projects, string handling goes through Lua modules instead, such as `{{#invoke:String|len|...}}` provided by Scribunto."
+    ],
+    "list": [
+      "#if : non-empty string or not (whitespace counts as empty)",
+      "#ifeq : two values identical or not (numeric if both are numbers)",
+      "#iferror : did another function return an error",
+      "#ifexpr : true or false result of an arithmetic expression",
+      "#ifexist : does a page exist (expensive, limited per page)",
+      "#switch : one result among several cases, with a default",
+      "#expr : arithmetic, rounding, logic",
+      "#time / #timel : format a date (UTC or local)",
+      "#titleparts : split a page title on its slashes",
+      "#rel2abs : turn a relative page path into an absolute one"
+    ],
+    "faq": [
+      {
+        "q": "Is ParserFunctions installed by default in MediaWiki?",
+        "a": "It is bundled with the MediaWiki tarball since version 1.18, so the files are already there. On a self-hosted wiki you enable it by adding wfLoadExtension( 'ParserFunctions' ); to LocalSettings.php. It does not need a database update."
+      },
+      {
+        "q": "Why does {{#if: 0 | yes | no }} return yes?",
+        "a": "Because #if only checks whether its first parameter is empty. \"0\" is a non-empty string, so the result is yes. #if never evaluates the test as an expression; #ifexpr does."
+      },
+      {
+        "q": "How do I get #len or #replace to work?",
+        "a": "On your own wiki, set $wgPFEnableStringFunctions = true; in LocalSettings.php, below the line that loads the extension. On Wikimedia wikis these functions will never be enabled, according to the extension's documentation; use the Lua module String through #invoke instead."
+      },
+      {
+        "q": "How do I put a table inside #if or #switch?",
+        "a": "Replace every pipe that belongs to the table with the {{!}} magic word, available since MediaWiki 1.24. The parser then only sees the pipe after the function has run, so it does not take it for a parameter separator."
+      }
+    ]
+  },
   "renovate-vs-dependabot": {
     "paras": [
       "Both tools do the same visible thing: they watch your dependencies, notice a new version, and open a pull request. If that were the whole story the choice would not matter. It matters because of what happens **after** you have twenty of those pull requests open, and the two tools take opposite positions on that problem.",

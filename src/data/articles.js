@@ -165,6 +165,22 @@ const LTS_SERVER_CTA = {
   },
 };
 
+// MediaWiki : l angle honnete est l HEBERGEMENT. Activer les fonctions de chaines ou relever
+// $wgExpensiveParserFunctionLimit demande de modifier LocalSettings.php, donc un wiki que l on
+// heberge soi-meme. Meme programme qu LTS_SERVER_CTA, angle propre a l article.
+const MEDIAWIKI_HOST_CTA = {
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'Enabling the string functions or raising the expensive-function limit means editing LocalSettings.php, which only works on a wiki you host yourself. Infomaniak, a Swiss provider, offers VPS and cloud servers with full root access.',
+    fr: "Activer les fonctions de chaînes ou relever la limite des fonctions coûteuses oblige à modifier LocalSettings.php, ce qui n'est possible que sur un wiki que vous hébergez vous-même. Infomaniak, hébergeur suisse, propose des VPS et serveurs cloud avec accès root complet.",
+    es: 'Activar las funciones de cadenas o subir el límite de funciones costosas obliga a modificar LocalSettings.php, algo que solo es posible en un wiki que alojas tú mismo. Infomaniak, proveedor suizo, ofrece VPS y servidores cloud con acceso root completo.',
+    de: 'Die Zeichenkettenfunktionen einzuschalten oder das Limit für teure Funktionen anzuheben heißt, LocalSettings.php zu ändern, und das geht nur auf einem Wiki, das Sie selbst hosten. Infomaniak, ein Schweizer Anbieter, bietet VPS und Cloud-Server mit vollem Root-Zugang.',
+    it: "Attivare le funzioni sulle stringhe o alzare il limite delle funzioni costose significa modificare LocalSettings.php, cosa possibile solo su un wiki che ospiti tu stesso. Infomaniak, provider svizzero, offre VPS e server cloud con accesso root completo.",
+    pt: 'Ativar as funções de cadeias ou subir o limite das funções dispendiosas obriga a alterar LocalSettings.php, o que só é possível num wiki alojado por si. A Infomaniak, fornecedor suíço, oferece VPS e servidores cloud com acesso root completo.',
+  },
+};
+
 // RC: l angle honnete est l environnement JETABLE. L article dit explicitement de
 // ne pas tester une release candidate en production, ce qui cree un besoin reel de
 // machine qu on peut reconstruire. Ne pas reutiliser LTS_SERVER_CTA, dont l angle
@@ -185,6 +201,18 @@ const RC_THROWAWAY_CTA = {
 const a = (o) => o;
 
 export const ARTICLES = [
+  a({
+    slug: 'mediawiki-parser-functions', category: 'parsing', readingMinutes: 7, date: '2026-10-15',
+    title: ENX['mediawiki-parser-functions'].title,
+    dek: ENX['mediawiki-parser-functions'].dek,
+    hero: '/assets/articles/mediawiki-parser-functions-hero.jpg', heroAlt: ENX['mediawiki-parser-functions'].heroAlt,
+    body: '/assets/articles/mediawiki-parser-functions-body.jpg', bodyCaption: ENX['mediawiki-parser-functions'].bodyCaption,
+    paras: ENX['mediawiki-parser-functions'].paras,
+    list: ENX['mediawiki-parser-functions'].list,
+    faq: ENX['mediawiki-parser-functions'].faq,
+    related: 'what-is-a-parser',
+    cta: MEDIAWIKI_HOST_CTA,
+  }),
   a({
     slug: 'npm-overrides-transitive-dependency', category: 'guides', readingMinutes: 7, date: '2026-10-07',
     title: ENX['npm-overrides-transitive-dependency'].title,

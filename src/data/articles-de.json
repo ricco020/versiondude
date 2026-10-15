@@ -1,4 +1,52 @@
 {
+  "mediawiki-parser-functions": {
+    "title": "MediaWiki ParserFunctions: #if, #ifeq, #switch, #expr und ihre Fallen",
+    "dek": "ParserFunctions ist die Erweiterung, die Wikitext Logik gibt: Bedingungen, Vergleiche, Rechnen und Datumsangaben. Sie wird mit MediaWiki ausgeliefert, doch drei ihrer Verhaltensweisen überraschen fast alle: Leerraum gilt als leer, senkrechte Striche zerlegen Tabellen, und die Zeichenkettenfunktionen sind standardmäßig abgeschaltet.",
+    "heroAlt": "In einem bewaldeten Park teilt sich ein asphaltierter Weg um eine kleine Rasenfläche in zwei Richtungen, in der Mitte ein weißer Wegweiser mit drei Schildern, auf dem rechten Weg lesen zwei Personen eine Karte",
+    "bodyCaption": "Eine Reihe in rotes Leder gebundener Lexikonbände mit schwarzen Etiketten und goldener Schrift (T, INDEX, WX YZ, UV) auf einem Regal, mit geringer Schärfentiefe. Der Großteil der Logik in den Vorlagen eines großen Wikis wird mit den hier beschriebenen Funktionen geschrieben.",
+    "paras": [
+      "Jede Infobox, die eine leere Zeile ausblendet, jede Vorlage, die je nach Parameter eine andere Beschriftung zeigt, jede Wikiseite, die aus einem Datum ein Alter berechnet, beruht auf derselben Erweiterung: **ParserFunctions**. Sie fügt dem Wikitext Logik hinzu, der allein nur Text ersetzen kann. Dieser Leitfaden behandelt die Funktionen, die Sie tatsächlich nutzen werden, und die drei Verhaltensweisen, die die meisten Fragen dazu erklären. Alles Folgende wurde am 15. Oktober 2026 in der Dokumentation der Erweiterung auf mediawiki.org geprüft.",
+      "**ParserFunctions wird mit MediaWiki ausgeliefert.** Die Erweiterung gehört seit Version 1.18 zum MediaWiki-Paket, auf einem selbst gehosteten Wiki genügt daher meist `wfLoadExtension( 'ParserFunctions' );` in der `LocalSettings.php`. Eine Datenbankaktualisierung ist nicht nötig. Auf einem fremd gehosteten Wiki können Sie diese Datei nicht ändern, was für die Konfigurationsoptionen weiter unten wichtig ist.",
+      "**Alle Funktionen haben dieselbe Form.** Man schreibt `{{#name: erster | zweiter | dritter }}`: eine Raute, den Funktionsnamen, einen Doppelpunkt, dann die Parameter, getrennt durch senkrechte Striche. Die Dokumentation hält fest, dass Leerraum einschließlich Zeilenumbrüchen am Anfang und Ende jedes Parameters entfernt wird. Das ist praktisch für das Layout und zugleich die Ursache der ersten Falle.",
+      "**`#if` prüft nur, ob eine Zeichenkette leer ist.** `{{#if: Test | Wert wenn nicht leer | Wert wenn leer }}` liefert den zweiten Parameter, sobald der erste irgendetwas enthält, und den dritten, wenn er leer ist oder nur Leerraum enthält. Der Test wird nicht ausgewertet: `{{#if: 1==2 | ja | nein }}` liefert ja, weil „1==2“ eine nicht leere Zeichenkette ist, und `{{#if: 0 | ja | nein }}` liefert ebenfalls ja. Für arithmetische Bedingungen ist `#ifexpr` da.",
+      "**`#ifeq` vergleicht zwei Zeichenketten, und Zahlen als Zahlen.** `{{#ifeq: a | b | gleich | verschieden }}` liefert den dritten oder vierten Parameter. Sind beide Werte gültige Zahlen, wird numerisch verglichen: `01` ist gleich `1` und `1e3` gleich `1000`. Für mehr als zwei Werte ist `#switch` das bessere Werkzeug.",
+      "**`#switch` wählt ein Ergebnis unter vielen.** `{{#switch: Wert | Fall1 = Ergebnis1 | Fall2 = Ergebnis2 | Standard }}` liefert das Ergebnis des ersten passenden Falls und den letzten Parameter ohne Gleichheitszeichen, wenn keiner passt. Mehrere Fälle können sich ein Ergebnis teilen, indem man sie hintereinander schreibt und das Ergebnis nur beim letzten angibt. Das ersetzt eine Kette verschachtelter `#ifeq`, die ab drei Ebenen unlesbar wird.",
+      "**`#expr` rechnet, es verarbeitet keinen Text.** `{{#expr: 1 + 1 }}` liefert 2, und die Funktion kennt logische Operatoren, `round`, `trunc`, `ceil` und `floor`. Ein ungültiger Ausdruck liefert eine Fehlermeldung, die `#iferror` abfangen kann. Die Dokumentation sagt ausdrücklich, dass Ausdrücke nur mit zahlenartigen Werten funktionieren und keine Zeichenketten vergleichen können; dafür gibt es `#ifeq`. Für Datumsangaben formatiert `#time` ein Datum, und die Dokumentation empfiehlt das Format `xNU`, um es in Sekunden seit dem 1. Januar 1970 umzuwandeln, die man dann mit `#expr` addieren und subtrahieren kann.",
+      "**`#ifexist` ist eine teure Funktion und scheitert ab einer Grenze lautlos.** Sie prüft, ob eine Seite existiert. Jede unterschiedliche Zielseite zählt gegen `$wgExpensiveParserFunctionLimit`, auch Prüfungen innerhalb eingebundener Vorlagen. Ist die Grenze erreicht, liefert jedes weitere `#ifexist` falsch, ob die Seite existiert oder nicht, und die Seite landet in einer Wartungskategorie. Zeigt eine Vorlage plötzlich rote Links auf Seiten, die existieren, ist das das Erste, was man prüfen sollte.",
+      "**Ungeschützte senkrechte Striche zerlegen Tabellen.** Weil jeder Strich als Parametertrenner gelesen wird, fällt eine Wikitabelle innerhalb von `#if` oder `#switch` auseinander. Seit MediaWiki 1.24 erzeugt das magische Wort `{{!}}` einen Strich, den der Parser erst nach Ausführung der Funktion sieht; vorher nutzten die meisten Wikis dafür eine Vorlage namens `!`. Für einen wörtlichen Strich verwenden Sie `&#124;`.",
+      "**Die Zeichenkettenfunktionen sind standardmäßig aus.** `#len`, `#pos`, `#sub`, `#replace`, `#explode` und ihre Geschwister existieren nur, wenn `$wgPFEnableStringFunctions` auf true steht, und der Standardwert ist false; `$wgPFStringLengthLimit` begrenzt die Zeichenketten standardmäßig auf 1.000 Zeichen. Die Dokumentation ergänzt, dass 2013 beschlossen wurde, sie auf keinem Wikimedia-Wiki je zu aktivieren, weil sie in großem Maßstab ineffizient sind. In Wikipedia und ihren Schwesterprojekten läuft die Textverarbeitung stattdessen über Lua-Module, etwa `{{#invoke:String|len|...}}` aus Scribunto."
+    ],
+    "list": [
+      "#if : Zeichenkette nicht leer oder doch (Leerraum gilt als leer)",
+      "#ifeq : zwei Werte gleich oder nicht (numerisch, wenn beides Zahlen sind)",
+      "#iferror : hat eine andere Funktion einen Fehler geliefert",
+      "#ifexpr : wahres oder falsches Ergebnis eines arithmetischen Ausdrucks",
+      "#ifexist : existiert eine Seite (teuer, pro Seite begrenzt)",
+      "#switch : ein Ergebnis aus mehreren Fällen, mit Standardwert",
+      "#expr : Rechnen, Runden, Logik",
+      "#time / #timel : ein Datum formatieren (UTC oder lokal)",
+      "#titleparts : einen Seitentitel an seinen Schrägstrichen teilen",
+      "#rel2abs : einen relativen Seitenpfad in einen absoluten umwandeln"
+    ],
+    "faq": [
+      {
+        "q": "Ist ParserFunctions in MediaWiki standardmäßig installiert?",
+        "a": "Sie gehört seit Version 1.18 zum MediaWiki-Paket, die Dateien sind also schon vorhanden. Auf einem selbst gehosteten Wiki aktiviert man sie mit wfLoadExtension( 'ParserFunctions' ); in der LocalSettings.php. Eine Datenbankaktualisierung ist nicht nötig."
+      },
+      {
+        "q": "Warum liefert {{#if: 0 | ja | nein }} ja?",
+        "a": "Weil #if nur prüft, ob der erste Parameter leer ist. „0“ ist eine nicht leere Zeichenkette, also lautet das Ergebnis ja. #if wertet den Test nie als Ausdruck aus; das macht #ifexpr."
+      },
+      {
+        "q": "Wie bringe ich #len oder #replace zum Laufen?",
+        "a": "Auf Ihrem eigenen Wiki setzen Sie $wgPFEnableStringFunctions = true; in der LocalSettings.php, unter der Zeile, die die Erweiterung lädt. Auf Wikimedia-Wikis werden diese Funktionen laut Dokumentation nie aktiviert; nutzen Sie dort das Lua-Modul String über #invoke."
+      },
+      {
+        "q": "Wie setze ich eine Tabelle in #if oder #switch?",
+        "a": "Ersetzen Sie jeden senkrechten Strich, der zur Tabelle gehört, durch das magische Wort {{!}}, verfügbar seit MediaWiki 1.24. Der Parser sieht den Strich dann erst nach Ausführung der Funktion und hält ihn nicht für einen Parametertrenner."
+      }
+    ]
+  },
   "semver-ranges-caret-tilde": {
     "paras": [
       "Semantische Versionierung sagt Ihnen, was eine Release-Nummer bedeutet. Sie sagt Ihnen nicht, welche Releases Ihr Projekt beim nächsten Installationslauf akzeptieren wird. Das entscheidet der **Bereich**, den Sie geschrieben haben, und in der Bereichssyntax stecken die meisten Überraschungen.",
