@@ -2450,8 +2450,8 @@
     },
     {
       "en": "What each command actually does",
-      "fr": "Ce que fait reellement chaque commande",
-      "es": "Que hace realmente cada comando",
+      "fr": "Ce que fait réellement chaque commande",
+      "es": "Qué hace realmente cada comando",
       "de": "Was jeder Befehl wirklich tut",
       "it": "Cosa fa davvero ogni comando",
       "pt": "O que cada comando faz realmente",
@@ -2459,25 +2459,25 @@
     },
     {
       "en": "Getting it backwards, and what it costs",
-      "fr": "Les inverser, et ce que cela coute",
+      "fr": "Les inverser, et ce que cela coûte",
       "es": "Invertirlos, y lo que cuesta",
       "de": "Sie zu vertauschen, und was das kostet",
       "it": "Invertirli, e quanto costa",
-      "pt": "Troca-los, e o que isso custa",
+      "pt": "Trocá-los, e o que isso custa",
       "n": 3
     },
     {
       "en": "Docker, and the layer that keeps being rebuilt",
       "fr": "Docker, et la couche sans cesse reconstruite",
       "es": "Docker, y la capa que se reconstruye siempre",
-      "de": "Docker, und die staendig neu gebaute Schicht",
+      "de": "Docker, und die ständig neu gebaute Schicht",
       "it": "Docker, e il layer ricostruito ogni volta",
-      "pt": "Docker, e a camada sempre reconstruida",
+      "pt": "Docker, e a camada sempre reconstruída",
       "n": 2
     },
     {
       "en": "The honest summary",
-      "fr": "Le resume honnete",
+      "fr": "Le résumé honnête",
       "es": "El resumen honesto",
       "de": "Die ehrliche Zusammenfassung",
       "it": "Il riassunto onesto",

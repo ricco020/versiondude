@@ -1254,5 +1254,53 @@
         "a": "El propósito es el mismo y la sintaxis no. npm usa un campo overrides con objetos anidados, Yarn un campo resolutions con claves escritas padre/hijo y pnpm un ajuste overrides con un separador >. Los tres reservan el campo a la raíz del proyecto."
       }
     ]
+  },
+  "npm-ci-vs-npm-install": {
+    "title": "npm ci vs npm install: uno lee tu lockfile, el otro lo reescribe",
+    "dek": "Parecen intercambiables y no lo son. npm install puede modificar package-lock.json para satisfacer tus rangos; npm ci se niega a hacerlo y borra node_modules antes. Esa única diferencia decide cuál va en la CI y cuál en tu máquina.",
+    "heroAlt": "Pilas de contenedores marítimos azul oscuro idénticos vistos de frente contra un cielo despejado, con las puertas cerradas y precintadas, cada uno con su propio número de serie",
+    "bodyCaption": "Un brazo robótico industrial amarillo en una línea de fábrica, con sus segmentos articulados y el botón rojo de parada de emergencia enfocados, y dos operarios desenfocados al fondo detrás del vallado de seguridad.",
+    "paras": [
+      "Los dos comandos instalan dependencias y terminan con una carpeta `node_modules`, así que es razonable suponer que son lo mismo con nombres distintos. No lo son, y la diferencia no tiene que ver con la velocidad, aunque `npm ci` suela ser más rápido.",
+      "**`npm install` trata `package.json` como la fuente de verdad y el lockfile como una sugerencia.** Si tu `package.json` permite `^4.17.0` y existe la versión `4.18.2`, install tiene derecho a descargarla y a reescribir `package-lock.json` en consecuencia. No es un error, es la función documentada del comando: conciliar lo que dice el lockfile con lo que permite el manifiesto.",
+      "**`npm ci` trata el lockfile como la fuente de verdad y se niega a tocarlo.** Lee `package-lock.json`, instala exactamente esas versiones y, si el lockfile y el manifiesto no coinciden, se detiene con un error en lugar de resolver el desacuerdo. Además borra por completo `node_modules` antes de empezar, en vez de conciliar lo que ya hay.",
+      "Ese último detalle es el que se subestima. Un `node_modules` parcialmente desfasado, que queda tras un cambio de rama o una instalación interrumpida, produce fallos que sobreviven a un reintento y desaparecen cuando un compañero clona el repositorio desde cero. `npm ci` elimina toda esa categoría al no partir nunca de un árbol existente.",
+      "**Por eso la regla es aburrida y merece la pena seguirla:** `npm ci` en integración continua y en builds de Docker, `npm install` en tu propia máquina cuando añades o actualizas una dependencia a propósito.",
+      "Invertirlos produce un fallo muy concreto. Ejecutar `npm install` en la CI significa que tu pipeline puede instalar en silencio una versión que nadie eligió, un martes, porque un paquete del que dependes publicó un parche que tu rango permite. La build que pasaba esta mañana y falla esta tarde con el mismo código es casi siempre esto.",
+      "Ejecutar `npm ci` en local no hace daño pero a veces molesta, porque borra `node_modules` cada vez y se niega a continuar si has editado `package.json` sin regenerar el lock. Esa negativa es la funcionalidad: te está diciendo que los dos archivos ya no coinciden.",
+      "**`npm ci` exige un lockfile y no lo crea.** En un repositorio donde falta `package-lock.json` o está ignorado por git, el comando falla de inmediato. Si es tu caso, el problema no es el comando, es que el lockfile no está commiteado, y ninguna de tus builds es reproducible hasta que lo esté.",
+      "Una consecuencia práctica para Docker: como `npm ci` solo necesita `package.json` y `package-lock.json`, copiar únicamente esos dos archivos antes de ejecutarlo permite que la caché de capas sobreviva a cualquier cambio en tu código fuente. Copia todo el proyecto primero y cada edición invalida la capa de instalación.",
+      "Una palabra sobre `--omit=dev`, que sustituyó a `--production`. Se aplica a ambos comandos y quita las dependencias de desarrollo del árbol instalado. En una build de Docker multietapa va en la etapa final, no en la que ejecuta tus tests, que obviamente necesitan el ejecutor de tests.",
+      "**El resumen honesto es que no es una cuestión de rendimiento.** `npm ci` es más rápido en la mayoría de los pipelines, pero la razón para usarlo es que produce el mismo árbol hoy y dentro de seis meses a partir del mismo lockfile. La velocidad es un efecto secundario de hacer menos trabajo, y hacer menos trabajo es justo lo que lo vuelve reproducible."
+    ],
+    "list": [
+      "npm ci necesita un package-lock.json commiteado y falla sin él",
+      "npm ci borra node_modules antes de instalar, npm install lo concilia",
+      "npm install puede reescribir el lockfile, npm ci nunca",
+      "Un lockfile y un manifiesto que no coinciden detienen npm ci y npm install los corrige en silencio",
+      "En Docker, copia package.json y package-lock.json antes de ejecutar npm ci para mantener la capa en caché"
+    ],
+    "faq": [
+      {
+        "q": "¿npm ci es más rápido que npm install?",
+        "a": "Normalmente sí, porque se salta por completo la resolución de dependencias e instala exactamente el árbol que describe el lockfile. La diferencia es mayor en la CI, donde node_modules empieza vacío de todos modos. La velocidad es consecuencia de hacer menos trabajo, no la razón para preferirlo."
+      },
+      {
+        "q": "¿Puedo usar npm ci sin package-lock.json?",
+        "a": "No. El comando existe para instalar lo que dice el lockfile; sin lockfile no hay nada desde lo que instalar y falla de inmediato. Si tu repositorio no tiene un lockfile commiteado, eso es lo primero que hay que arreglar, porque ninguna build es reproducible sin él."
+      },
+      {
+        "q": "¿npm install modifica siempre package-lock.json?",
+        "a": "No, solo cuando lo necesita. Si cada versión instalada ya cumple el manifiesto y coincide con el lockfile, no cambia nada. Modifica el lockfile cuando tus rangos permiten una versión más reciente que la fijada, o cuando package.json se ha editado desde que se generó el lock."
+      },
+      {
+        "q": "¿Cuál uso en un Dockerfile?",
+        "a": "npm ci, y copia solo package.json y package-lock.json antes de ejecutarlo para que la capa de instalación se mantenga en caché cuando cambie tu código. Añade --omit=dev en la etapa final, nunca en una etapa que ejecute tests."
+      },
+      {
+        "q": "¿Por qué se rompió mi build de CI sin ningún cambio de código?",
+        "a": "La causa más común es npm install en el pipeline combinado con un rango con acento circunflejo o virgulilla: un paquete del que dependes publicó una nueva versión que tu rango permite, y se instaló. npm ci lo elimina por construcción, porque solo instala lo que fija el lockfile."
+      }
+    ]
   }
 }
