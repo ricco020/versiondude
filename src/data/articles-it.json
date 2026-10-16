@@ -48,6 +48,8 @@
     ]
   },
   "semver-ranges-caret-tilde": {
+    "title": "Caret o tilde: cosa consentono davvero ^1.2.3 e ~1.2.3 (2026)",
+    "dek": "Il versionamento semantico spiega cosa significa un numero di versione. La sintassi degli intervalli decide quali versioni accettate senza che vi venga chiesto. Non sono la stessa cosa, e il caret cambia le proprie regole sotto la 1.0.0.",
     "paras": [
       "Il versionamento semantico ti dice che cosa significa un numero di rilascio. Non ti dice quali rilasci il tuo progetto accetterà la prossima volta che qualcuno lancia un'installazione. Quello lo decide l'**intervallo** che hai scritto, ed è nella sintassi degli intervalli che si annidano quasi tutte le sorprese.",
       "Due caratteri fanno quasi tutto il lavoro: la **tilde** `~` e il **caret** `^`.",
@@ -66,7 +68,9 @@
       "^0.2.3 := >=0.2.3 <0.3.0-0 - su 0.x il caret si comporta come una tilde",
       "^0.0.3 := >=0.0.3 <0.0.4-0 - nessun aggiornamento",
       "L'intervallo è un permesso; il lockfile registra ciò che è stato installato"
-    ]
+    ],
+    "heroAlt": "Un cartello stradale rotondo bordato di rosso di altezza massima, fotografato contro un cielo luminoso",
+    "bodyCaption": "Quattro matrioske allineate dalla più grande alla più piccola, la più piccola a fuoco in primo piano. Gli intervalli di versione si annidano allo stesso modo: un caret contiene una tilde, che contiene una sola versione esatta."
   },
   "what-is-a-nightly-build": {
     "title": "Che cos'è una nightly build? Il canale che non arriva da nessuna parte",
@@ -1328,6 +1332,52 @@
       "Il punto di forza di Dependabot: avvisi di sicurezza collegati al database di GitHub, attivabili separatamente dagli aggiornamenti di versione.",
       "Il punto di forza di Renovate: packageRules, calendari per gruppo, regole di merge automatico e una issue Dependency Dashboard che mostra tutto insieme.",
       "Scelta sensata: prima Dependabot; cambiate quando sapete nominare il fastidio. Migrare costa poco, configurare troppo presto no."
+    ]
+  },
+  "web-components-shadow-dom": {
+    "title": "Web Components e Shadow DOM: cosa blocca davvero il confine",
+    "dek": "Lo shadow DOM viene presentato come incapsulamento, il che fa pensare a un muro. È più preciso di così: alcune cose si fermano al confine, altre lo attraversano liberamente, e sapere quali fa tutta la differenza tra un componente che si comporta bene e uno che combatte il vostro design system.",
+    "heroAlt": "La facciata di un edificio moderno vista di sbieco: alette verticali di metallo bianco scaglionate su una facciata continua di vetro dalla tinta azzurra, uno spigolo diagonale che taglia l'inquadratura",
+    "bodyCaption": "Una facciata vetrata di pannelli verdi e grigi disposti in file diagonali, ogni lastra incorniciata di metallo chiaro, ripetuta su tutta l'inquadratura.",
+    "paras": [
+      "Lo shadow DOM viene di solito introdotto con la parola incapsulamento, che fa immaginare un muro. Quell'immagine causa gran parte della confusione, perché il confine è selettivo e non pieno. Alcune cose si fermano lì. Altre lo attraversano direttamente, per progetto. Imparare quali è quasi tutto ciò che c'è da imparare.",
+      "Collegare una shadow root richiede una riga dentro un custom element: this.attachShadow({ mode: 'open' }). Da quel momento il markup che ci mettete non è più raggiungibile dalle normali query sul documento, e gli stili definiti all'interno non valgono più all'esterno. È la parte che tutti si aspettano.",
+      "Ciò che sorprende è l'altra direzione. Nemmeno il foglio di stile globale della pagina entra nella shadow root. Un componente che sembrava perfetto in una demo può arrivare nella vostra applicazione ignorando ogni regola del design system, perché quelle regole si fermano al confine con la stessa fermezza con cui gli stili interni del componente smettono di uscire.",
+      "Tre cose attraversano, ed è attorno a loro che si progetta. Le proprietà CSS ereditate (font-family, color, line-height e simili) passano a meno che il componente non le reimposti, ed è per questo che un componente ben fatto di solito appare più o meno giusto senza alcuno sforzo. Anche le custom property attraversano, e di proposito: un componente che espone --button-bg come aggancio vi sta dicendo che quello è il modo supportato per ridefinirne lo stile. E gli eventi risalgono verso l'esterno, ma gli eventi composed vengono reindirizzati, così il listener esterno vede l'elemento host invece del nodo interno che li ha generati.",
+      "Questo reindirizzamento merita una pausa. Non è un fastidio; è ciò che mantiene onesta l'astrazione. Se il vostro gestore di clic ricevesse un pulsante interno che l'autore del componente rinominerà la settimana prossima, dipendereste da un dettaglio di implementazione. Il reindirizzamento vi consegna invece l'oggetto pubblico.",
+      "Le modalità open e closed sono meno simmetriche di quanto sembri. Open significa che element.shadowRoot restituisce la radice, quindi chiunque può entrarci dall'esterno. Closed restituisce null, il che sembra un confine di sicurezza e non lo è: il codice del componente conserva il riferimento, e qualsiasi cosa giri nella pagina può raggiungerlo per altre vie. La modalità closed scoraggia l'accoppiamento; non impone riservatezza. Sceglietela per comunicare un'intenzione, mai per proteggere qualcosa.",
+      "Gli slot sono il modo per far entrare contenuto senza rinunciare alla struttura. Un elemento <slot> dentro la shadow root segna un punto in cui verrà mostrato markup del light DOM: il contenuto resta della pagina, stilizzato dal suo foglio di stile, e viene solo reso nel layout del componente. È ciò che rende i web component componibili anziché opachi, ed è anche dove le regole di stile sembrano più strane: il contenuto inserito in uno slot è stilizzato dall'esterno, tranne i ritocchi limitati che il componente può fare con ::slotted().",
+      "Per lo stile dall'esterno, la superficie moderna è ::part(). L'autore di un componente marca un elemento interno con part=\"label\", e la pagina può allora stilizzare ::part(label) senza sapere nient'altro dell'interno. È un contratto deliberato e versionabile, l'opposto di un selettore discendente che entra sperando che la struttura non cambi mai.",
+      "Il riassunto onesto è che lo shadow DOM scambia comodità con stabilità. Rinunciate a poter ridefinire lo stile di qualsiasi cosa da qualsiasi punto, e ottenete componenti che continuano a funzionare quando la pagina intorno cambia. In una piccola applicazione costruita da un solo team, lo scambio spesso non conviene. In una libreria di componenti usata da team che non incontrerete mai, è esattamente lo scopo."
+    ],
+    "list": [
+      "Gli stili non attraversano il confine in NESSUNA direzione: il vostro foglio di stile globale non entra",
+      "Le proprietà ereditate (font, colore) e le custom property ATTRAVERSANO: è l'aggancio di stile previsto",
+      "Gli eventi risalgono ma vengono reindirizzati: vedete l'elemento host, non il nodo interno",
+      "La modalità closed non è riservatezza: scoraggia l'accoppiamento, non impone nulla",
+      "Usate ::part() e le custom property come contratto di stile versionabile, mai selettori discendenti"
+    ],
+    "faq": [
+      {
+        "q": "Perché il mio CSS globale non si applica dentro un web component?",
+        "a": "Perché il confine dello shadow DOM blocca gli stili in entrambe le direzioni. Il foglio di stile della pagina si ferma alla shadow root esattamente come gli stili interni del componente si fermano lì uscendo. È voluto: è ciò che fa apparire un componente uguale ovunque venga inserito. Per stilizzarlo dall'esterno, usate gli agganci che espone, custom property o selettori ::part(), invece di cercare di entrare."
+      },
+      {
+        "q": "Che differenza c'è tra shadow root open e closed?",
+        "a": "Con mode 'open', element.shadowRoot restituisce la radice e il codice esterno può percorrerla. Con 'closed', quella proprietà restituisce null. Il punto importante è che closed non è una funzione di sicurezza: il codice del componente conserva un riferimento e gli script della pagina hanno altre vie d'accesso. La modalità closed comunica che l'interno non è un'API supportata; non lo protegge."
+      },
+      {
+        "q": "Gli eventi escono dallo shadow DOM?",
+        "a": "Gli eventi composed sì, e vengono reindirizzati attraversando il confine: un listener esterno vede come target il custom element host invece dell'elemento interno che ha generato l'evento. È deliberato: il vostro gestore dipende dall'identità pubblica del componente e non dalla sua struttura interna, che può cambiare senza preavviso."
+      },
+      {
+        "q": "Come faccio entrare contenuto della pagina in un componente?",
+        "a": "Con gli slot. Un elemento <slot> dentro la shadow root indica dove verrà reso il contenuto del light DOM. Quel contenuto resta della pagina e stilizzato da essa, che di solito è ciò che volete: il componente controlla il layout, la pagina controlla le parole. Il componente può fare ritocchi limitati con ::slotted(), ma non se ne appropria."
+      },
+      {
+        "q": "Mi serve davvero lo shadow DOM?",
+        "a": "Non sempre. Compra isolamento a scapito della comodità, e in una singola applicazione costruita da un solo team l'isolamento può risolvere un problema che non avete. Diventa chiaramente conveniente quando il vostro componente sarà usato in pagine che non controllate, da persone che non dovrebbero dover sapere come è fatto."
+      }
     ]
   }
 }
