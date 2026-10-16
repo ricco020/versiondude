@@ -1302,5 +1302,32 @@
         "a": "La causa más común es npm install en el pipeline combinado con un rango con acento circunflejo o virgulilla: un paquete del que dependes publicó una nueva versión que tu rango permite, y se instaló. npm ci lo elimina por construcción, porque solo instala lo que fija el lockfile."
       }
     ]
+  },
+  "renovate-vs-dependabot": {
+    "title": "Renovate vs Dependabot: la elección se decide en la pull request número veinte",
+    "dek": "Los dos vigilan tus dependencias y abren una PR. Esa parte es idéntica, así que no puede ser el criterio. Lo que los separa es la agrupación, la programación y dónde se ejecutan; y uno de los dos ya está activado en tu repositorio.",
+    "heroAlt": "Una fila de buzones de edificio rojos y brillantes en una pared beige, varios tan llenos que asoman revistas por arriba",
+    "bodyCaption": "Un panel de control industrial: dos filas de pilotos verde oscuro sobre filas de selectores rotativos negros, cada uno con una abreviatura, y pulsadores rojos, naranjas y verdes en la parte inferior.",
+    "paras": [
+      "Las dos herramientas hacen lo mismo a la vista: vigilan tus dependencias, detectan una versión nueva y abren una pull request. Si eso fuera todo, la elección daría igual. Importa por lo que pasa **después**, cuando tienes veinte de esas pull requests abiertas, y las dos herramientas adoptan posturas opuestas ante ese problema.",
+      "**Dependabot es la que ya tienes.** Está integrada en GitHub, no cuesta nada y activarla es un archivo `.github/dependabot.yml` de unas seis líneas. No hay cuenta que crear, ni aplicación que instalar, ni runner que alojar. Para un repositorio sin ninguna automatización hoy, es el camino más corto para tener alguna.",
+      "**Renovate es a la que te pasas cuando las pull requests se convierten en el problema.** Es de código abierto, funciona como aplicación alojada, autoalojada o en tu propia CI, y trabaja con GitLab, Bitbucket y Azure DevOps además de GitHub. Su configuración es un motor de reglas más que un archivo de ajustes, y eso es a la vez su ventaja y su coste.",
+      "**La verdadera línea divisoria es la agrupación y el ruido.** Un proyecto con cuarenta dependencias produce muchas subidas de versión individuales, y revisarlas una a una es un trabajo que parece mantenimiento sin serlo. Dependabot ha añadido actualizaciones agrupadas, y ayudan. Las `packageRules` de Renovate siguen siendo bastante más expresivas: agrupar por patrón de paquete, por tipo de actualización, por directorio, aplicar calendarios distintos a cada grupo, fusionar automáticamente los parches de las dependencias de desarrollo y retener las versiones mayores para revisión. Si tu queja es el *volumen*, esa expresividad es lo que compras.",
+      "**La programación es la segunda diferencia que se nota.** Renovate te deja decir cuándo pueden aparecer las actualizaciones (fuera del horario laboral, un día concreto, como máximo cada cierto tiempo) con reglas distintas por grupo. La programación de Dependabot es más sencilla. En un repositorio pequeño, lo sencillo es una virtud; en uno con mucha actividad, significa que las PR llegan cuando llegan.",
+      "**El Dependency Dashboard es la función infravalorada de Renovate.** Abre una única issue en el repositorio con todo lo que quiere hacer, incluido aquello para lo que deliberadamente no ha abierto PR. Ves el estado de tu deuda de dependencias en una sola página en lugar de deducirlo de una bandeja de entrada. Nada en Dependabot se le corresponde.",
+      "**Donde Dependabot va realmente por delante: las alertas de seguridad.** Su parte de actualizaciones de versión es solo la mitad del producto. La otra mitad está conectada a la base de avisos de seguridad de GitHub y muestra las dependencias vulnerables como alertas, con actualizaciones de seguridad que se pueden activar independientemente de las de versión. Renovate también puede actuar sobre vulnerabilidades, pero si tu prioridad es *la postura de seguridad dentro de GitHub*, Dependabot es la vía nativa y lleva minutos.",
+      "**La plataforma es la respuesta cuando es la respuesta.** Si tu código no está en GitHub, la comparación termina ahí: Renovate es la herramienta que funciona donde estás. Y si necesitas actualizaciones gestionadas desde tu propia infraestructura en lugar de una aplicación de terceros, Renovate se autoaloja; esa opción no existe en el otro lado.",
+      "**El coste de configuración es real y conviene decirlo claro.** La flexibilidad de Renovate viene de un esquema tan amplio que la mayoría parte de un preset y lo ajusta. Cuenta con una tarde para que se comporte como quieres, y cuenta con volver sobre ello. Dependabot se configura bien a la primera porque hay menos cosas que hacer mal. Es un argumento real a su favor, no un premio de consolación.",
+      "**Una opción por defecto razonable:** empieza con Dependabot, sobre todo para las actualizaciones de seguridad. Pasa a Renovate cuando puedas nombrar exactamente lo que te molesta: demasiadas PR, mal momento, sin agrupación, fuera de GitHub, necesidad de reglas de fusión automática. Migrar después cuesta poco. Configurar un motor de reglas antes de tener el problema que resuelve es la manera de acabar manteniendo tu automatización de dependencias en lugar de tu proyecto.",
+      "Elijas la que elijas, la herramienta solo propone. Lo que de verdad te protege es lo mismo que hizo posibles estas herramientas: un lockfile commiteado, para que la versión que propuso el robot sea la que instaló tu CI, y una batería de tests lo bastante buena como para que una pull request en verde signifique algo."
+    ],
+    "list": [
+      "Misma tarea visible: vigilar dependencias, abrir una PR. La diferencia empieza en la PR número veinte.",
+      "Dependabot: nativo de GitHub, gratuito, unas 6 líneas de YAML, nada que alojar. El camino más corto desde cero.",
+      "Renovate: código abierto, autoalojable, funciona en GitLab, Bitbucket y Azure DevOps, motor de reglas para agrupar y programar.",
+      "La ventaja de Dependabot: alertas de seguridad conectadas a la base de avisos de GitHub, activables por separado de las actualizaciones de versión.",
+      "La ventaja de Renovate: packageRules, calendarios por grupo, políticas de fusión automática y una issue Dependency Dashboard que lo muestra todo a la vez.",
+      "Opción sensata por defecto: Dependabot primero; cambia cuando puedas nombrar la molestia. Migrar cuesta poco, configurar antes de tiempo no."
+    ]
   }
 }
