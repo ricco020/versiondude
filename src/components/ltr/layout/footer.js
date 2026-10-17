@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 
+/* Lien vers les mentions legales (LCEN art. 6-III). */
+const LEGAL_LABEL = { en: "Legal notice", fr: "Mentions légales", de: "Impressum", es: "Aviso legal", it: "Note legali", pt: "Aviso legal" };
+
 export default function Footer({ locale = "en" }) {
   const s = t(locale);
   const p = locale === "en" ? "" : `/${locale}`;
@@ -27,6 +30,7 @@ export default function Footer({ locale = "en" }) {
             <ul className="list-unstyled">
               <li><Link href={`${p}/about`} className="text-white-50">{s.nav.about}</Link></li>
               <li><Link href={`${p}/contact`} className="text-white-50">{s.nav.contact}</Link></li>
+              <li><Link href={`${p}/legal`} className="text-white-50">{LEGAL_LABEL[locale] || LEGAL_LABEL.en}</Link></li>
               <li><Link href={`${p}/faq`} className="text-white-50">{s.nav.faq}</Link></li>
               <li><Link href={`${p}/projects`} className="text-white-50">{s.ui.allProjects}</Link></li>
             </ul>
