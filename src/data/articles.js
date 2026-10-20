@@ -69,6 +69,7 @@ const DEV_CLOUD = {
 
 // Reverse-proxy article: same Infomaniak offer, angle tuned to the topic (run Nginx/Caddy/Traefik on a server you control).
 const REVERSE_PROXY_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
@@ -83,6 +84,7 @@ const REVERSE_PROXY_CTA = {
 
 // Git article: same Infomaniak offer, angle tuned to self-hosting a Git server / remote repos.
 const GIT_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
@@ -101,6 +103,7 @@ const GIT_CTA = {
 // differenciateurs face a Dependabot, qui n existe que dans GitHub. Le seul besoin
 // concret que cree l article est donc une machine pour l heberger.
 const RENOVATE_SELFHOST_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
@@ -114,6 +117,7 @@ const RENOVATE_SELFHOST_CTA = {
 };
 
 const LOCKFILE_CI_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
@@ -153,6 +157,7 @@ const PASSKEYS_CTA = {
 // des années. C'est une décision d'hébergement autant que de version, d'où un CTA propre
 // à ce contenu plutôt que le CTA self-hosting générique.
 const LTS_SERVER_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
@@ -169,6 +174,7 @@ const LTS_SERVER_CTA = {
 // $wgExpensiveParserFunctionLimit demande de modifier LocalSettings.php, donc un wiki que l on
 // heberge soi-meme. Meme programme qu LTS_SERVER_CTA, angle propre a l article.
 const MEDIAWIKI_HOST_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
@@ -186,6 +192,7 @@ const MEDIAWIKI_HOST_CTA = {
 // machine qu on peut reconstruire. Ne pas reutiliser LTS_SERVER_CTA, dont l angle
 // (garder une machine longtemps) est l exact oppose de celui-ci.
 const RC_THROWAWAY_CTA = {
+  contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
   label: { en: 'A machine you can throw away', fr: 'Une machine que vous pouvez jeter', es: 'Una máquina que puedes tirar', de: 'Eine Maschine zum Wegwerfen', it: 'Una macchina che puoi buttare', pt: 'Uma máquina que pode deitar fora' },
   sublabel: {
