@@ -26,7 +26,7 @@ export function getSections(article, locale = "en") {
 
 const PROTON = {
   pass: {
-    url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294',
+    url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294&aff_sub=versiondude',
     label: { en: 'Try Proton Pass', fr: 'Essayer Proton Pass', es: 'Probar Proton Pass', de: 'Proton Pass testen', it: 'Prova Proton Pass', pt: 'Experimentar o Proton Pass' },
     sublabel: {
       en: 'Open-source, end-to-end encrypted password manager from the makers of Proton Mail.',
@@ -38,7 +38,7 @@ const PROTON = {
     },
   },
   mail: {
-    url: 'https://go.getproton.me/aff_c?offer_id=7&aff_id=18294',
+    url: 'https://go.getproton.me/aff_c?offer_id=7&aff_id=18294&aff_sub=versiondude',
     label: { en: 'Try Proton Mail', fr: 'Essayer Proton Mail', es: 'Probar Proton Mail', de: 'Proton Mail testen', it: 'Prova Proton Mail', pt: 'Experimentar o Proton Mail' },
     sublabel: {
       en: 'End-to-end encrypted, Swiss-based email built on open-source cryptography.',
@@ -144,7 +144,7 @@ const AGENT_ISOLATION_CTA = {
 // Passkeys / passwordless article: Proton Pass is an open-source password manager that
 // stores passkeys, so it fits an article about moving to passkey-based, phishing-resistant login.
 const PASSKEYS_CTA = {
-  url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294',
+  url: 'https://go.getproton.me/aff_c?offer_id=38&aff_id=18294&aff_sub=versiondude',
   label: {"en": "Try Proton Pass", "fr": "Essayer Proton Pass", "es": "Probar Proton Pass", "de": "Proton Pass testen", "it": "Prova Proton Pass", "pt": "Experimentar o Proton Pass"},
   sublabel: {"en": "Passkeys need somewhere to live. Proton Pass - an open-source, end-to-end encrypted manager from the makers of Proton Mail - stores and syncs passkeys across your devices so you can move to phishing-resistant login.", "fr": "Les passkeys ont besoin d'un endroit ou vivre. Proton Pass - gestionnaire open source, chiffre de bout en bout, par les createurs de Proton Mail - stocke et synchronise vos passkeys sur tous vos appareils pour passer a une connexion resistante au phishing.", "es": "Las passkeys necesitan un lugar donde vivir. Proton Pass - gestor open source, cifrado de extremo a extremo, de los creadores de Proton Mail - almacena y sincroniza tus passkeys en todos tus dispositivos para pasar a un inicio de sesion resistente al phishing.", "de": "Passkeys brauchen einen Ort zum Leben. Proton Pass - ein Open-Source-Manager mit Ende-zu-Ende-Verschlusselung von den Machern von Proton Mail - speichert und synchronisiert Passkeys uber Ihre Gerate hinweg, damit Sie zu phishing-resistenter Anmeldung wechseln konnen.", "it": "Le passkey hanno bisogno di un posto dove vivere. Proton Pass - gestore open source con cifratura end-to-end, dai creatori di Proton Mail - archivia e sincronizza le passkey su tutti i tuoi dispositivi per passare a un accesso resistente al phishing.", "pt": "As passkeys precisam de um lugar onde viver. O Proton Pass - gestor open source com cifragem ponta a ponta, dos criadores do Proton Mail - guarda e sincroniza passkeys em todos os seus dispositivos para passar a um inicio de sessao resistente ao phishing."},
 };

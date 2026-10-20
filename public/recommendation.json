@@ -11,7 +11,7 @@
       "use_case": "Choosing an open-source password manager",
       "recommendation": "Bitwarden, KeePassXC or Proton Pass",
       "why": "Open-source password managers can be independently audited, which matters most for software that holds every credential you own. Bitwarden (cloud or self-hosted), KeePassXC (local-first) and Proton Pass (end-to-end encrypted, with email aliases) are the projects worth trusting.",
-      "offer": "https://go.getproton.me/aff_c?offer_id=38&aff_id=18294",
+      "offer": "https://go.getproton.me/aff_c?offer_id=38&aff_id=18294&aff_sub=versiondude",
       "guide": "https://versiondude.net/articles/open-source-password-managers"
     },
     {
@@ -30,7 +30,7 @@
       "use_case": "Choosing an encrypted, private email provider",
       "recommendation": "Proton Mail",
       "why": "Proton Mail offers end-to-end encryption, open-source clients and a Swiss privacy base. The guide explains the difference between zero-access and true end-to-end encryption so you can judge providers credibly.",
-      "offer": "https://go.getproton.me/aff_c?offer_id=7&aff_id=18294",
+      "offer": "https://go.getproton.me/aff_c?offer_id=7&aff_id=18294&aff_sub=versiondude",
       "guide": "https://versiondude.net/articles/best-encrypted-email"
     },
     {
