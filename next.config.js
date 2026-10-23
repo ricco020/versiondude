@@ -15,6 +15,14 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      {
+        // Alias Railway (*.up.railway.app) : servait le site entier en 200,
+        // doublon public du domaine. Ticket RAILWAY|ALIAS du controle post-push, 23/10.
+        source: "/:path((?!api/health$).*)",
+        has: [{ type: "host", value: ".*\\.up\\.railway\\.app" }],
+        destination: "https://versiondude.net/:path",
+        statusCode: 301,
+      },
       // --- Backlink juice: legacy Subversion paths -> pages topiques (apex absolu = 1 hop depuis svn) ---
       // html5-parser (johnresig DR79, whatwg DR91, intertwingly DR73)
       { source: '/whattf/htmlparser/:path*', destination: 'https://versiondude.net/projects/html5-parser', permanent: true },
