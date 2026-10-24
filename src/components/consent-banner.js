@@ -79,13 +79,23 @@ export default function ConsentBanner({ locale = "en" }) {
   }, []);
   if (!show) return null;
   const choose = (val) => { localStorage.setItem("vd_consent", val); if (val === "accept") loadGA(); setShow(false); };
+  const legal = locale === "en" ? "/legal" : `/${locale}/legal`;
+  const btn = { flex: 1, minHeight: 44, borderRadius: 6, border: "1.5px solid #242038", fontSize: 15, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" };
   return (
-    <div style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 1080, background: "#1a1a1a", color: "#fff", padding: "14px 18px", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", justifyContent: "center", boxShadow: "0 -2px 12px rgba(0,0,0,.25)" }}>
-      <span style={{ fontSize: 14, maxWidth: 760 }}>{c.text}</span>
-      <span style={{ display: "flex", gap: 10 }}>
-        <button onClick={() => choose("decline")} style={{ background: "transparent", color: "#fff", border: "1px solid #777", borderRadius: 7, padding: "8px 16px", cursor: "pointer", fontWeight: 600 }}>{c.decline}</button>
-        <button onClick={() => choose("accept")} style={{ background: "#e63329", color: "#fff", border: "none", borderRadius: 7, padding: "8px 18px", cursor: "pointer", fontWeight: 700 }}>{c.accept}</button>
-      </span>
+    <div className="vd-consent" role="dialog" aria-labelledby="vd-consent-title" aria-describedby="vd-consent-text">
+      <style>{`.vd-consent{position:fixed;right:24px;bottom:24px;z-index:1080;width:min(420px,calc(100vw - 24px));box-sizing:border-box;background:#fff;color:#242038;border:1px solid #D9D3F2;border-left:4px solid #6543D6;border-radius:8px;padding:16px 18px;box-shadow:0 8px 28px rgba(36,32,56,.16);font-family:var(--font-source-sans),system-ui,sans-serif}
+.vd-consent p{margin:0}
+.vd-consent .vd-t{font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#6543D6;margin-bottom:6px}
+.vd-consent .vd-x{font-size:14px;line-height:20px;color:#3A3550}
+.vd-consent a{color:#242038;text-decoration:underline;text-underline-offset:2px}
+.vd-consent button:focus-visible,.vd-consent a:focus-visible{outline:2px solid #6543D6;outline-offset:2px}
+@media (max-width:640px){.vd-consent{right:12px;left:12px;bottom:calc(12px + env(safe-area-inset-bottom));width:auto;padding:14px 16px}}`}</style>
+      <p className="vd-t" id="vd-consent-title">{c.title}</p>
+      <p className="vd-x" id="vd-consent-text">{c.text} <a href={legal}>{c.more}</a></p>
+      <div style={{ display: "flex", gap: 10, marginTop: 12 }}>
+        <button onClick={() => choose("decline")} style={{ ...btn, background: "#fff", color: "#242038" }}>{c.decline}</button>
+        <button onClick={() => choose("accept")} style={{ ...btn, background: "#fff", color: "#242038" }}>{c.accept}</button>
+      </div>
     </div>
   );
 }

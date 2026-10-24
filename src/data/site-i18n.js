@@ -260,10 +260,10 @@ const T = {
 export function t(locale) { return T[locale] || T.en; }
 
 export const CONSENT = {
-  en: { text: "We use cookies and analytics to understand how this site is used. You can accept or decline.", accept: "Accept", decline: "Decline", more: "Privacy" },
-  fr: { text: "Nous utilisons des cookies et des statistiques pour comprendre l'usage du site. Vous pouvez accepter ou refuser.", accept: "Accepter", decline: "Refuser", more: "Confidentialité" },
-  es: { text: "Usamos cookies y analítica para entender cómo se usa el sitio. Puedes aceptar o rechazar.", accept: "Aceptar", decline: "Rechazar", more: "Privacidad" },
-  de: { text: "Wir verwenden Cookies und Analyse, um zu verstehen, wie diese Website genutzt wird. Sie können zustimmen oder ablehnen.", accept: "Zustimmen", decline: "Ablehnen", more: "Datenschutz" },
-  it: { text: "Usiamo cookie e strumenti di analisi per capire come viene utilizzato il sito. Puoi accettare o rifiutare.", accept: "Accetta", decline: "Rifiuta", more: "Privacy" },
-  pt: { text: "Usamos cookies e estatísticas para perceber como o site é utilizado. Pode aceitar ou recusar.", accept: "Aceitar", decline: "Recusar", more: "Privacidade" },
+  en: { title: "Audience measurement", text: "With your consent, this site loads Google Analytics 4 to count visits and clicks on partner links. Nothing is loaded if you decline, and the site works the same.", accept: "Accept", decline: "Decline", more: "Legal notice" },
+  fr: { title: "Mesure d'audience", text: "Avec votre accord, ce site charge Google Analytics 4 pour compter les visites et les clics vers nos partenaires. Rien n'est chargé si vous refusez, et le site fonctionne de la même façon.", accept: "Accepter", decline: "Refuser", more: "Mentions légales" },
+  es: { title: "Medición de audiencia", text: "Con tu consentimiento, este sitio carga Google Analytics 4 para contar visitas y clics en enlaces de socios. Si lo rechazas no se carga nada y el sitio funciona igual.", accept: "Aceptar", decline: "Rechazar", more: "Aviso legal" },
+  de: { title: "Reichweitenmessung", text: "Mit Ihrer Zustimmung lädt diese Website Google Analytics 4, um Besuche und Klicks auf Partnerlinks zu zählen. Lehnen Sie ab, wird nichts geladen und die Website funktioniert genauso.", accept: "Zustimmen", decline: "Ablehnen", more: "Impressum" },
+  it: { title: "Misurazione del pubblico", text: "Con il tuo consenso questo sito carica Google Analytics 4 per contare visite e clic sui link dei partner. Se rifiuti non viene caricato nulla e il sito funziona allo stesso modo.", accept: "Accetta", decline: "Rifiuta", more: "Note legali" },
+  pt: { title: "Medição de audiência", text: "Com o seu consentimento, este site carrega o Google Analytics 4 para contar visitas e cliques em links de parceiros. Se recusar, nada é carregado e o site funciona da mesma forma.", accept: "Aceitar", decline: "Recusar", more: "Aviso legal" },
 };
