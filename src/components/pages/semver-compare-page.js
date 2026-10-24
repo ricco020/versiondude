@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 // Semantic Versioning 2.0.0 precedence, implemented to the public spec (semver.org).
 // Honest, verifiable logic - no invented behaviour.
@@ -36,6 +37,15 @@ function compare(a, b) {
   if (p !== 0) return { cmp: p, level: "pre" };
   return { cmp: 0, level: "equal" };
 }
+
+const RANGE_LINK = {
+  en: "Checking a range like ^1.2.3 instead? Use the npm semver range checker.",
+  fr: "Vous vérifiez plutôt une plage comme ^1.2.3 ? Utilisez le vérificateur de plages semver npm.",
+  es: "¿Quieres comprobar un rango como ^1.2.3? Usa el comprobador de rangos semver de npm.",
+  de: "Sie prüfen eher einen Bereich wie ^1.2.3? Nutzen Sie den npm-Semver-Bereichsprüfer.",
+  it: "Devi verificare un intervallo come ^1.2.3? Usa il verificatore di intervalli semver npm.",
+  pt: "Quer verificar um intervalo como ^1.2.3? Use o verificador de intervalos semver do npm.",
+};
 
 const STR = {
   en: { h1: "Semver comparator", lead: "Compare two version numbers using the official Semantic Versioning 2.0.0 rules. Enter two versions to see which is newer and why - build metadata is ignored, as the spec requires.",
@@ -115,6 +125,7 @@ export default function SemverComparePage({ locale = "en" }) {
         {s.pts.map((p, i) => <li key={i}>{p}</li>)}
       </ul>
       <p className="text-secondary small mt-3">{s.note}</p>
+      <p className="mt-4 fw-semibold"><Link href={`${locale === "en" ? "" : `/${locale}`}/semver-range-checker`}>{RANGE_LINK[locale] || RANGE_LINK.en}</Link></p>
     </div>
   );
 }

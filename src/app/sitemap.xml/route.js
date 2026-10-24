@@ -7,7 +7,9 @@ const CATS = ["standards", "parsing", "tooling", "archive"];
 export const dynamic = "force-static";
 
 function paths() {
-  const p = ["", "/projects", "/categories", "/about", "/contact", "/faq"];
+  // Les deux outils manquaient : /semver-compare existait en 6 langues depuis juillet
+  // sans figurer au sitemap (0 impression GSC au 18/10/2026).
+  const p = ["", "/projects", "/categories", "/about", "/contact", "/faq", "/semver-compare", "/semver-range-checker"];
   PROJECT_SLUGS.forEach((s) => p.push(`/projects/${s}`));
   ARTICLE_SLUGS.forEach((s) => p.push(`/articles/${s}`));
   CATS.forEach((c) => p.push(`/categories/${c}`));

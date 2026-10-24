@@ -8,6 +8,11 @@
 - Editorial policy: all content is original and fact-checked. We do not fabricate statistics, studies, test results or quotes. Tool guides are editorial opinions, not paid placements.
 - Affiliate disclosure: a small number of guides link to Proton (Proton Pass, Proton Mail) via affiliate links. These are open-source, end-to-end-encrypted tools we genuinely recommend; the recommendation is editorial and is not changed by the affiliate relationship.
 
+## Free tools
+
+- [npm semver range checker](https://versiondude.net/semver-range-checker): Paste an npm range (^1.2.3, ~1.2.3, 1.x, >=1.0.0 <2.0.0, ||), load the real version list of any package from the npm registry, and see the expanded bounds, which versions match, the highest match and which pre-releases are skipped. Logic follows node-semver 7.
+- [Semver comparator](https://versiondude.net/semver-compare): Compare two semantic versions by the SemVer 2.0.0 precedence rules, pre-release and build metadata included.
+
 ## Explainers - web standards & parsing
 
 - [What is the DOM?](https://versiondude.net/articles/what-is-the-dom): The Document Object Model - the tree a browser builds from HTML and what JavaScript actually talks to.
