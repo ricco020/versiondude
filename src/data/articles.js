@@ -67,6 +67,10 @@ const DEV_CLOUD = {
   },
 };
 
+// Articles DEV_CLOUD ou le lecteur doit louer un serveur (VPS, conteneur, CMS/CRM auto-heberge, webhook, origine CDN) :
+// meme encart Infomaniak + Contabo en second lien (seul programme du reseau qui vend, 27/10/2026).
+const DEV_CLOUD_SERVER = { ...DEV_CLOUD, contaboAlt: true };
+
 // Reverse-proxy article: same Infomaniak offer, angle tuned to the topic (run Nginx/Caddy/Traefik on a server you control).
 const REVERSE_PROXY_CTA = {
   contaboAlt: true,
@@ -541,7 +545,7 @@ export const ARTICLES = [
       'So do you need a CDN? If your audience is local and your traffic is light, your host alone may be enough. If you serve users across regions, host media, or care about speed and resilience, a CDN is one of the highest-impact, lowest-effort upgrades - and it pairs naturally with a well-chosen origin host.',
     ],
     list: ['Faster loads via nearby edge servers', 'Less load on your origin (caching)', 'Absorbs traffic spikes & DDoS', 'HTTPS termination + asset optimisation', 'Better Core Web Vitals / SEO'],
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
   a({
     slug: 'what-is-ci-cd', category: 'tooling', readingMinutes: 6, date: '2026-07-23',
@@ -621,7 +625,7 @@ export const ARTICLES = [
       'So is a VPS right for you? If you need root, guaranteed resources, or to run something shared hosting forbids - and you are comfortable maintaining a Linux box - a VPS is the natural step up, at a predictable cost. If you just want a simple site live with minimal fuss, managed hosting may still fit better.',
     ],
     list: ['Web apps & APIs that need full control', 'Databases (PostgreSQL, MySQL, Redis)', 'Self-hosted tools, bots and cron jobs', 'Staging environments and side projects', 'Learning Linux server administration'],
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
   a({
     slug: 'what-is-a-reverse-proxy', category: 'tooling', readingMinutes: 6, date: '2026-06-26',
@@ -693,7 +697,7 @@ export const ARTICLES = [
       'One catch ties it all together: a webhook only works if your endpoint is publicly reachable and reliably online. The sender cannot reach a script on your laptop or a server that sleeps. Receiving webhooks in production means running an always-on server you control - which is exactly where a dependable host comes in.',
     ],
     list: ['Event-driven: the server pushes, you do not poll', 'Delivered as an HTTP POST with a JSON payload', 'Verify each request with a signed secret over HTTPS', 'Reply 2xx fast; handle retries idempotently', 'Needs a public, always-on endpoint to receive them'],
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
   a({
     slug: 'what-is-a-docker-container', category: 'tooling', readingMinutes: 6, date: '2026-06-23',
@@ -713,7 +717,7 @@ export const ARTICLES = [
       'Finally, a container has to run somewhere. On your own machine for development that is Docker Desktop, but in production it needs a reliable server you control - a VPS or cloud host where your containers stay up. A solid host is the foundation the whole setup sits on.',
     ],
     list: ['Bundles an app with all its dependencies', 'Shares the host OS kernel - far lighter than a VM', 'Image = blueprint, container = running instance', 'Consistent from laptop to production', 'Orchestrated at scale with Kubernetes'],
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
   a({
     slug: 'what-is-devops', category: 'tooling', readingMinutes: 6, date: '2026-06-23',
@@ -967,7 +971,7 @@ export const ARTICLES = [
       'If you are choosing today, weigh how much you need a turnkey editorial interface versus the freedom to treat content as just another part of your Rails codebase.',
     ],
     related: 'railfrog',
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
   a({
     slug: 'ruby-on-rails-crm', category: 'tooling', readingMinutes: 5, date: '2026-08-03',
@@ -982,7 +986,7 @@ export const ARTICLES = [
       'So the useful question is not which Rails CRM is best, but why it needs to be Rails at all. Sharing models with an existing app, one deploy pipeline and a team that can read the code are real reasons. Without one of them, the constraint is only narrowing your options.',
     ],
     related: 'ruby-on-rails-cms',
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
   a({
     slug: 'character-encoding-utf-8', category: 'standards', readingMinutes: 5, date: '2026-06-17',
@@ -1011,7 +1015,7 @@ export const ARTICLES = [
       'Whichever you pick, budget for the operational basics: automated backups, timely security updates, and a plan for scaling. Self-hosting rewards control with responsibility.',
     ],
     related: 'railfrog',
-    cta: DEV_CLOUD,
+    cta: DEV_CLOUD_SERVER,
   }),
 ];
 

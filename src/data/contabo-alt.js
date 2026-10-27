@@ -19,5 +19,6 @@ export const CONTABO_ALT_LABEL = {
 };
 
 // Seuls les encarts marques contaboAlt (angle « serveur que vous controlez » : LTS, MediaWiki, RC, reverse proxy,
-// Git, Renovate, CI) le portent ; pas DEV_CLOUD, encart generique pose sur des articles sans besoin de serveur.
+// Git, Renovate, CI, et DEV_CLOUD_SERVER : VPS, Docker, CMS/CRM auto-heberges, webhook, CDN) le portent ;
+// pas DEV_CLOUD seul, encart generique pose sur des articles sans besoin de serveur.
 export const hasContaboAlt = (cta) => !!(cta && cta.contaboAlt);
