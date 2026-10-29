@@ -681,7 +681,7 @@ export const ARTICLES = [
   }),
   a({
     slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6, date: '2026-06-22',
-    title: 'What is a webhook? Event-driven HTTP, explained',
+    title: 'What is a webhook? Endpoints and event-driven HTTP, explained',
     dek: 'A webhook is an automated HTTP request one service sends to another the moment an event happens - a push instead of a poll. What a webhook is, how it differs from a normal API, how it works, and how to receive one securely.',
     hero: '/assets/articles/what-is-a-webhook-hero.jpg', heroAlt: 'Lines of source code shown on a dark computer screen',
     body: '/assets/articles/what-is-a-webhook-body.jpg', bodyCaption: 'Coloured light trails streaming from a smartphone, suggesting data sent between services.',
