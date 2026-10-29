@@ -186,7 +186,7 @@
     ]
   },
   "what-is-an-lts-version": {
-    "title": "What Is an LTS Version? The Only Number That Matters Is the End Date",
+    "title": "What Is an LTS Version? LTS Meaning and the End Date That Matters",
     "dek": "LTS means Long Term Support: a release line that keeps getting security fixes for a period announced in advance. How Node.js, Ubuntu and Java define it, what you give up by choosing it, and why the support window matters more than the version number.",
     "heroAlt": "A wall calendar seen at an angle, with several date rows highlighted in yellow",
     "bodyCaption": "Interlocking metal gears inside an old machine, photographed in black and white. A maintenance LTS line is machinery kept turning: fixes go in, nothing new does.",
