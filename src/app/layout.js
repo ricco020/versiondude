@@ -1,7 +1,7 @@
 import './globals.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "@icon/themify-icons/themify-icons.css"
-import { Cormorant_Garamond, Roboto, Source_Sans_3 } from 'next/font/google'
+import localFont from 'next/font/local'
 import Script from 'next/script'
 
 import ImportJs from '@/components/ltr/import-js/import-js';
@@ -10,22 +10,24 @@ import Providers from './theme-providers';
 const GA_ID = 'G-EGDNJHLQ0J';
 
 {/* *** START FONT DECLARATION *** */ }
-export const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
+// Self-hosted latin variable fonts (same files Google Fonts serves): next/font/google downloads them during
+// next build and a network hiccup on the Railway builder fails the whole build.
+export const cormorant = localFont({
+  src: './fonts/cormorant-garamond-latin.woff2',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: '300 700',
   variable: '--font-cormorant-garamond',
 })
-export const roboto = Roboto({
-  subsets: ['latin'],
+export const roboto = localFont({
+  src: './fonts/roboto-latin.woff2',
   display: 'swap',
-  weight: ['100', '300', '400', '500', '700', '900',],
+  weight: '100 900',
   variable: '--font-roboto',
 })
-export const sourceSans = Source_Sans_3({
-  subsets: ['latin'],
+export const sourceSans = localFont({
+  src: './fonts/source-sans-3-latin.woff2',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: '300 700',
   variable: '--font-source-sans',
 })
 export const metadata = {
