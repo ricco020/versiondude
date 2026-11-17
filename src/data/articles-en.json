@@ -94,8 +94,8 @@
     ]
   },
   "what-is-a-nightly-build": {
-    "title": "What Is a Nightly Build? The Channel That Never Arrives Anywhere",
-    "dek": "Alpha, beta and release candidate are stages on the way to a release. A nightly is not a stage at all: it is a snapshot of the main branch, produced on a schedule, with no promise that any particular one becomes anything.",
+    "title": "Nightly Build Meaning: What Is a Nightly Release?",
+    "dek": "A nightly build is an automatic snapshot of the main branch, produced on a schedule (usually once a night) with no promise that it becomes a release. How it differs from alpha, beta and release candidate, and why a nightly you rely on can simply disappear.",
     "heroAlt": "Star trails circling above a dark hillside, with a wooden watchtower on the right and sandbags on the ground",
     "bodyCaption": "An industrial conveyor line running the length of a factory, rows of dark metal parts carried along it, blue-capped items on the left and machinery blurred behind. A nightly channel is this rather than a countdown: it produces, and it keeps producing.",
     "paras": [
@@ -140,8 +140,8 @@
     ]
   },
   "what-is-a-release-candidate": {
-    "title": "What Is a Release Candidate? The Build That Ships If Nobody Finds Anything",
-    "dek": "An RC is not a beta with a nicer name. It is the build the team intends to release as-is unless someone finds a blocker. What the ladder from alpha to rc actually promises, how SemVer orders prereleases, and why your package manager refuses to install one by accident.",
+    "title": "What Is a Release Candidate? RC Meaning vs Beta and Final",
+    "dek": "A release candidate (RC) is the build a team intends to ship unchanged unless someone finds a blocking bug. How it differs from a beta, how SemVer orders prereleases like 2.0.0-rc.1, and why your package manager will not install one by accident.",
     "heroAlt": "An empty theatre with a red curtain lit by spotlights, rows of empty seats in the foreground",
     "bodyCaption": "Two people rehearsing on a stage in an empty theatre, coloured tape marking positions on the floor and a single person watching from the stalls. A release candidate is the run-through: everything is in place, and someone is still taking notes.",
     "paras": [
