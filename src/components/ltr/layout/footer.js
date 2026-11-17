@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
 
+/* Les deux outils gratuits : semver-range-checker n avait aucun lien depuis l accueil (inconnu de Google au 17/11/2026). */
+const TOOL_LABELS = {
+  en: ["Semver version comparator", "npm semver range checker"],
+  fr: ["Comparateur de versions semver", "Vérificateur de plages semver npm"],
+  es: ["Comparador de versiones semver", "Comprobador de rangos semver de npm"],
+  de: ["Semver-Versionsvergleich", "npm-Semver-Bereichsprüfer"],
+  it: ["Confronto di versioni semver", "Verificatore di intervalli semver npm"],
+  pt: ["Comparador de versões semver", "Verificador de intervalos semver npm"],
+};
 /* Lien vers les mentions legales (LCEN art. 6-III). */
 const LEGAL_LABEL = { en: "Legal notice", fr: "Mentions légales", de: "Impressum", es: "Aviso legal", it: "Note legali", pt: "Aviso legal" };
 
@@ -32,6 +41,8 @@ export default function Footer({ locale = "en" }) {
               <li><Link href={`${p}/contact`} className="text-white-50">{s.nav.contact}</Link></li>
               <li><Link href={`${p}/legal`} className="text-white-50">{LEGAL_LABEL[locale] || LEGAL_LABEL.en}</Link></li>
               <li><Link href={`${p}/faq`} className="text-white-50">{s.nav.faq}</Link></li>
+              <li><Link href={`${p}/semver-compare`} className="text-white-50">{(TOOL_LABELS[locale] || TOOL_LABELS.en)[0]}</Link></li>
+              <li><Link href={`${p}/semver-range-checker`} className="text-white-50">{(TOOL_LABELS[locale] || TOOL_LABELS.en)[1]}</Link></li>
               <li><Link href={`${p}/projects`} className="text-white-50">{s.ui.allProjects}</Link></li>
             </ul>
           </div>

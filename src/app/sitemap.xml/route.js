@@ -1,6 +1,13 @@
 import { ARTICLE_SLUGS, slugFor } from "@/data/articles";
 import { PROJECT_SLUGS } from "@/data/content";
 import { LOCALES } from "@/data/site-i18n";
+// Dates ecrites par scripts/gen-lastmod.py avant commit (le build n a pas l historique git).
+import LASTMOD from "@/data/lastmod.json";
+
+function lastmod(path) {
+  const e = LASTMOD[path] || LASTMOD[path.replace(/\/[^/]+$/, "/*")];
+  return e ? `<lastmod>${e.date}</lastmod>` : "";
+}
 
 const BASE = "https://versiondude.net";
 const CATS = ["standards", "parsing", "tooling", "archive"];
@@ -37,7 +44,7 @@ export function GET() {
     const alts = [...LOCALES.map((l) => [l, urlFor(path, l)]), ["x-default", en]]
       .map(([l, u]) => `<xhtml:link rel="alternate" hreflang="${l}" href="${u}"/>`).join("");
     return LOCALES.map((l) => urlFor(path, l)).map((u) =>
-      `<url><loc>${u}</loc>${alts}<changefreq>weekly</changefreq><priority>${path === "" ? "1.0" : "0.7"}</priority></url>`
+      `<url><loc>${u}</loc>${lastmod(path)}${alts}<changefreq>weekly</changefreq><priority>${path === "" ? "1.0" : "0.7"}</priority></url>`
     ).join("");
   }).join("");
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${body}</urlset>`;
