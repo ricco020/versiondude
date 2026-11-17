@@ -4,10 +4,17 @@
 // (DE 17058456, ES 17248464), sinon EN 12454592. Aucun prix cite : les tarifs tiers perimient.
 const AID = { en: 12454592, de: 17058456, es: 17248464 };
 
-export function contaboAltUrl(loc, slug) {
+export function contaboAltUrl(loc, slug, pos) {
   const aid = AID[loc] || AID.en;
-  return `https://www.tkqlhce.com/click-101807053-${aid}?sid=versiondude-${slug}`;
+  return `https://www.tkqlhce.com/click-101807053-${aid}?sid=versiondude-${slug}${pos ? '-' + pos : ''}`;
 }
+
+// 17/11/2026 : Contabo passe en bouton principal de ces encarts (ventes CJ 60 j du reseau : Contabo seul,
+// Infomaniak 154 clics et 0 vente en 90 j) ; Infomaniak reste en second bouton. SID du bouton : -btn.
+export const CONTABO_BTN_LABEL = {
+  en: 'See Contabo Cloud VPS', fr: 'Voir les Cloud VPS Contabo', es: 'Ver los Cloud VPS de Contabo',
+  de: 'Contabo Cloud VPS ansehen', it: 'Scopri i Cloud VPS di Contabo', pt: 'Ver os Cloud VPS da Contabo',
+};
 
 export const CONTABO_ALT_LABEL = {
   en: { pre: 'Another option:', link: 'Contabo Cloud VPS', post: ', with data centres in Europe, the US and Asia, full root access and its own public IPv4 (affiliate link).' },

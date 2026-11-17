@@ -7265,6 +7265,8 @@ body.layout-rtl .style-settings-content ul li select {
 .post_details_block .vd-cta{border-left:4px solid #6d4aff;background:#f6f4ff;padding:1.15rem 1.35rem;margin:1.9rem 0;border-radius:0 8px 8px 0;}
 .post_details_block .vd-cta p{font-weight:600;margin-bottom:.8rem;font-style:normal;}
 .post_details_block .vd-cta .btn{margin:0;}
+.post_details_block .vd-cta .vd-cta-btns{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;}
+.post_details_block .vd-cta .vd-cta-alt{font-weight:400;}
 
 /* ===== Uniformisation images cartes/grilles/listes + retrait icônes photo/vidéo =====
    NB : on NE touche PAS au hero (.slider-post / .slider-right-post) : ses hauteurs

@@ -33,7 +33,7 @@ function renderPara(text) {
   return out.length ? out : text;
 }
 import ShareButtons from "@/components/ShareButtons";
-import { contaboAltUrl, CONTABO_ALT_LABEL, hasContaboAlt } from "@/data/contabo-alt";
+import { contaboAltUrl, CONTABO_ALT_LABEL, CONTABO_BTN_LABEL, hasContaboAlt } from "@/data/contabo-alt";
 
 // Article fidèle au post-template démo + structure éditoriale magazine (chapô lettrine, intertitres H2,
 // citation, image légendée, sidebar onglets). Contenu réel, sans fake.
@@ -175,10 +175,17 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                     {article.cta && (
                       <aside className="vd-cta">
                         <p>{article.cta.sublabel[loc] || article.cta.sublabel.en}</p>
-                        <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{article.cta.label[loc] || article.cta.label.en} &rarr;</a>
-                        {hasContaboAlt(article.cta) && (() => { const ca = CONTABO_ALT_LABEL[loc] || CONTABO_ALT_LABEL.en; return (
-                          <p className="vd-cta-alt mt-2 mb-0 small">{ca.pre} <a href={contaboAltUrl(loc, article.slug)} target="_blank" rel="noopener noreferrer nofollow sponsored">{ca.link}</a>{ca.post}</p>
-                        ); })()}
+                        {hasContaboAlt(article.cta) ? (() => { const ca = CONTABO_ALT_LABEL[loc] || CONTABO_ALT_LABEL.en; return (
+                          <>
+                            <p className="vd-cta-alt small">{ca.pre} <a href={contaboAltUrl(loc, article.slug)} target="_blank" rel="noopener noreferrer nofollow sponsored">{ca.link}</a>{ca.post}</p>
+                            <div className="vd-cta-btns">
+                              <a href={contaboAltUrl(loc, article.slug, "btn")} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{CONTABO_BTN_LABEL[loc] || CONTABO_BTN_LABEL.en} &rarr;</a>
+                              <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-outline-primary">{article.cta.label[loc] || article.cta.label.en}</a>
+                            </div>
+                          </>
+                        ); })() : (
+                          <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary">{article.cta.label[loc] || article.cta.label.en} &rarr;</a>
+                        )}
                       </aside>
                     )}
 
