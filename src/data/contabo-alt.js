@@ -29,3 +29,14 @@ export const CONTABO_ALT_LABEL = {
 // Git, Renovate, CI, et DEV_CLOUD_SERVER : VPS, Docker, CMS/CRM auto-heberges, webhook, CDN) le portent ;
 // pas DEV_CLOUD seul, encart generique pose sur des articles sans besoin de serveur.
 export const hasContaboAlt = (cta) => !!(cta && cta.contaboAlt);
+
+// 17/11/2026 : rappel court apres la 1re section (le bouton n etait qu en fin d article, sous toutes les sections).
+// Meme lien CJ, SID -top, mention affiliee visible.
+export const CONTABO_EARLY_LABEL = {
+  en: { pre: 'Want to try this on a server you control?', link: 'Contabo Cloud VPS', post: ' gives you full root access and a public IPv4 (affiliate link).' },
+  fr: { pre: 'Envie de tester sur un serveur que vous contrôlez ?', link: 'Cloud VPS Contabo', post: ' : accès root complet et IPv4 publique (lien affilié).' },
+  es: { pre: '¿Quieres probarlo en un servidor que controles?', link: 'Cloud VPS de Contabo', post: ': acceso root completo e IPv4 pública (enlace de afiliado).' },
+  de: { pre: 'Sie möchten das auf einem eigenen Server ausprobieren?', link: 'Contabo Cloud VPS', post: ' bietet vollen Root-Zugriff und eine öffentliche IPv4 (Affiliate-Link).' },
+  it: { pre: 'Vuoi provarlo su un server che controlli?', link: 'Cloud VPS di Contabo', post: ': accesso root completo e IPv4 pubblico (link di affiliazione).' },
+  pt: { pre: 'Quer testar num servidor que controla?', link: 'Cloud VPS da Contabo', post: ': acesso root completo e IPv4 pública (link de afiliado).' },
+};

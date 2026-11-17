@@ -33,7 +33,7 @@ function renderPara(text) {
   return out.length ? out : text;
 }
 import ShareButtons from "@/components/ShareButtons";
-import { contaboAltUrl, CONTABO_ALT_LABEL, CONTABO_BTN_LABEL, hasContaboAlt } from "@/data/contabo-alt";
+import { contaboAltUrl, CONTABO_ALT_LABEL, CONTABO_BTN_LABEL, CONTABO_EARLY_LABEL, hasContaboAlt } from "@/data/contabo-alt";
 
 // Article fidèle au post-template démo + structure éditoriale magazine (chapô lettrine, intertitres H2,
 // citation, image légendée, sidebar onglets). Contenu réel, sans fake.
@@ -169,6 +169,9 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                             <div className="customers">- VersionDude</div>
                           </div>
                         ) : null}
+                        {si === 0 && sections.length > 2 && hasContaboAlt(article.cta) ? (() => { const ce = CONTABO_EARLY_LABEL[loc] || CONTABO_EARLY_LABEL.en; return (
+                          <p className="vd-cta-alt small vd-cta-early">{ce.pre} <a href={contaboAltUrl(loc, article.slug, "top")} target="_blank" rel="noopener noreferrer nofollow sponsored">{ce.link}</a>{ce.post}</p>
+                        ); })() : null}
                       </div>
                     ))}
 
