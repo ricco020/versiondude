@@ -195,6 +195,21 @@ const MEDIAWIKI_HOST_CTA = {
 // ne pas tester une release candidate en production, ce qui cree un besoin reel de
 // machine qu on peut reconstruire. Ne pas reutiliser LTS_SERVER_CTA, dont l angle
 // (garder une machine longtemps) est l exact oppose de celui-ci.
+// CI/CD et DevOps : angle runner auto-heberge (minutes de CI hebergee limitees, machine de build sous votre controle).
+const CI_RUNNER_CTA = {
+  contaboAlt: true,
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'When hosted CI minutes run out or builds need more cores, a self-hosted runner (GitHub Actions, GitLab Runner, Jenkins agent) on a server you control is the usual next step. Infomaniak, a Swiss privacy-respecting provider, offers VPS and cloud servers for it.',
+    fr: "Quand les minutes de CI hébergée ne suffisent plus ou que les builds réclament plus de cœurs, un runner auto-hébergé (GitHub Actions, GitLab Runner, agent Jenkins) sur un serveur que vous contrôlez est l'étape suivante habituelle. Infomaniak, hébergeur suisse respectueux de la vie privée, propose des VPS et serveurs cloud pour cela.",
+    es: 'Cuando los minutos de CI alojada se agotan o los builds piden más núcleos, un runner autoalojado (GitHub Actions, GitLab Runner, agente de Jenkins) en un servidor que controlas es el paso habitual. Infomaniak, proveedor suizo respetuoso con la privacidad, ofrece VPS y servidores cloud para ello.',
+    de: 'Wenn die Minuten der gehosteten CI nicht mehr reichen oder Builds mehr Kerne brauchen, ist ein selbst gehosteter Runner (GitHub Actions, GitLab Runner, Jenkins-Agent) auf einem eigenen Server der übliche nächste Schritt. Infomaniak, ein schweizerischer, datenschutzfreundlicher Anbieter, bietet dafür VPS und Cloud-Server.',
+    it: "Quando i minuti di CI ospitata finiscono o le build chiedono più core, un runner self-hosted (GitHub Actions, GitLab Runner, agente Jenkins) su un server che controlli è il passo abituale. Infomaniak, provider svizzero attento alla privacy, offre VPS e server cloud per questo.",
+    pt: 'Quando os minutos de CI alojada acabam ou os builds pedem mais núcleos, um runner auto-alojado (GitHub Actions, GitLab Runner, agente Jenkins) num servidor que controla é o passo habitual. A Infomaniak, fornecedor suíço respeitador da privacidade, oferece VPS e servidores cloud para isso.',
+  },
+};
+
 const RC_THROWAWAY_CTA = {
   contaboAlt: true,
   url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
@@ -427,7 +442,7 @@ export const ARTICLES = [
     paras: ENX['what-is-a-lockfile'].paras,
     list: ENX['what-is-a-lockfile'].list,
     related: 'what-is-semantic-versioning',
-    cta: DEV_CLOUD,
+    cta: LOCKFILE_CI_CTA,
   }),
   a({
     slug: 'what-is-semantic-versioning', category: 'guides', readingMinutes: 7, date: '2026-07-15',
@@ -565,7 +580,7 @@ export const ARTICLES = [
       'So is CI/CD worth it? For most teams shipping software regularly, yes: the automation pays back the setup cost by catching problems early and making releases boring in the best sense. Start small - automate the build and a handful of meaningful tests first - and grow the pipeline as your project and your confidence in it grow.',
     ],
     list: ['CI: merge and test small changes often', 'CD: automate the path to release', 'Pipeline: build then test then deploy', 'Tools: GitHub Actions, GitLab CI, Jenkins, CircleCI', 'Faster feedback, fewer bugs in production'],
-    cta: DEV_CLOUD,
+    cta: CI_RUNNER_CTA,
   }),
   a({
     slug: 'what-is-an-environment-variable', category: 'tooling', readingMinutes: 6, date: '2026-07-23',
@@ -737,7 +752,7 @@ export const ARTICLES = [
       'Finally, all of this runs on infrastructure. CI/CD pipelines need build runners, and your deployed app needs a reliable, always-on server. A solid host - a VPS or cloud server you control - is the ground the whole DevOps workflow stands on.',
     ],
     list: ['Combines development and operations into one workflow', 'CI/CD automates build, test and deploy', 'Infrastructure as code + continuous monitoring', 'A culture of shared ownership, not just tools', 'Faster, more frequent, more reliable releases'],
-    cta: DEV_CLOUD,
+    cta: CI_RUNNER_CTA,
   }),
   a({
     slug: 'what-is-an-api', category: 'tooling', readingMinutes: 6, date: '2026-06-24',
