@@ -238,8 +238,17 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
               <StickyBox offsetTop={20}>
                 {article.cta && (
                   <div className="add-inner text-center p-4 mb-3" style={{ background: "#f6f4ff", borderRadius: 12 }}>
-                    <p className="fw-semibold mb-2">{article.cta.sublabel[loc] || article.cta.sublabel.en}</p>
-                    <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary btn-sm">{article.cta.label[loc] || article.cta.label.en}</a>
+                    {hasContaboAlt(article.cta) ? (() => { const ca = CONTABO_ALT_LABEL[loc] || CONTABO_ALT_LABEL.en; return (
+                      <>
+                        <p className="fw-semibold mb-2">{ca.link}{ca.post}</p>
+                        <a href={contaboAltUrl(loc, article.slug, "side")} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary btn-sm">{CONTABO_BTN_LABEL[loc] || CONTABO_BTN_LABEL.en}</a>
+                      </>
+                    ); })() : (
+                      <>
+                        <p className="fw-semibold mb-2">{article.cta.sublabel[loc] || article.cta.sublabel.en}</p>
+                        <a href={article.cta.url} target="_blank" rel="noopener noreferrer nofollow sponsored" className="btn btn-primary btn-sm">{article.cta.label[loc] || article.cta.label.en}</a>
+                      </>
+                    )}
                   </div>
                 )}
                 <div className="tabs-wrapper">
