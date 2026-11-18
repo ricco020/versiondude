@@ -3,7 +3,7 @@ import LayoutTwo from "@/components/ltr/layout/layout-two";
 import StickyBox from "react-sticky-box";
 import Link from "next/link";
 import { t } from "@/data/site-i18n";
-import { getArticles, categoryLabel, getSections, articleHref } from "@/data/articles";
+import { getArticles, categoryLabel, getSections, articleHref, RELATED_ARTICLES } from "@/data/articles";
 
 // Rend les liens markdown [texte](/chemin) ecrits dans les paragraphes.
 // AVANT le 2026-08-11, <p>{para}</p> les affichait LITTERALEMENT au lecteur, crochets
@@ -44,7 +44,8 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
   const all = getArticles(loc).filter((x) => x.slug !== article.slug);
   const sideA = all.slice(0, 5);
   const sideB = all.slice(5, 10);
-  const related = all.slice(0, 3);
+  const pick = (RELATED_ARTICLES[article.slug] || []).map((sl) => all.find((x) => x.slug === sl)).filter(Boolean);
+  const related = [...pick, ...all.filter((x) => !pick.includes(x))].slice(0, 3);
   const sections = getSections(article, loc);
   const tags = [catLabel, "open source", "web", "VersionDude"];
   let pIndex = 0; // pour placer image + liste + citation à des endroits variés

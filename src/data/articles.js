@@ -1118,6 +1118,19 @@ function localize(a, locale) {
     list: o.list || a.list, heroAlt: o.heroAlt || a.heroAlt, bodyCaption: o.bodyCaption || a.bodyCaption,
     faq: o.faq || a.faq };
 }
+// Articles lies par sujet (bloc « articles lies » en bas d article, toutes langues).
+// Avant le 18/11 le bloc montrait les 3 memes articles partout, et le champ related (projet) n en ajoutait aucun.
+export const RELATED_ARTICLES = {
+  'proton-mail-review': ['best-encrypted-email', 'proton-pass-review'],
+  'best-encrypted-email': ['proton-mail-review', 'proton-pass-review'],
+  'proton-pass-review': ['microsoft-entra-passkeys-default-2026', 'best-encrypted-email'],
+  'microsoft-entra-passkeys-default-2026': ['proton-pass-review', 'best-encrypted-email'],
+  'what-is-a-vps': ['self-hosted-cms', 'what-is-a-docker-container', 'what-is-a-reverse-proxy'],
+  'self-hosted-cms': ['what-is-a-vps', 'what-is-a-reverse-proxy', 'what-is-a-docker-container'],
+  'what-is-a-docker-container': ['what-is-a-reverse-proxy', 'what-is-a-vps', 'self-hosted-cms'],
+  'what-is-a-reverse-proxy': ['what-is-a-docker-container', 'self-hosted-cms', 'what-is-a-vps'],
+};
+
 export function getArticles(locale = "en") {
   // GARDE-FOU anti-mélange de langues : sur une locale non-EN, on EXCLUT les articles
   // non traduits (pas de title dans TR[locale]) - un article EN-only ne doit jamais
