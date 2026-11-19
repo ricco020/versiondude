@@ -186,8 +186,8 @@
     ]
   },
   "what-is-an-lts-version": {
-    "title": "What Is an LTS Version? LTS Meaning and the End Date That Matters",
-    "dek": "LTS means Long Term Support: a release line that keeps getting security fixes for a period announced in advance. How Node.js, Ubuntu and Java define it, what you give up by choosing it, and why the support window matters more than the version number.",
+    "title": "LTS Version Meaning: Long Term Support and the Real End Dates (Node, Ubuntu, Java)",
+    "dek": "LTS means Long Term Support: a release line that gets security fixes until a date announced in advance. Current end dates checked on 19 November 2026: Node.js 24 until 30 April 2028, Ubuntu 24.04 until May 2029, Oracle Java 21 until September 2028.",
     "heroAlt": "A wall calendar seen at an angle, with several date rows highlighted in yellow",
     "bodyCaption": "Interlocking metal gears inside an old machine, photographed in black and white. A maintenance LTS line is machinery kept turning: fixes go in, nothing new does.",
     "paras": [
@@ -212,6 +212,10 @@
       {
         "q": "What does LTS mean?",
         "a": "Long Term Support. It marks a release line that will keep receiving security and bug fixes for a period announced in advance, rather than being dropped as soon as the next version ships. The promise is a support window with a known end date, not a claim that the software is more stable or more complete."
+      },
+      {
+        "q": "When do the current LTS versions reach end of life?",
+        "a": "Checked on 19 November 2026 against endoflife.date and each project's own policy. Node.js: 20 ended on 30 April 2026, 22 ends on 30 April 2027, 24 on 30 April 2028, and 26 (LTS since 28 October 2026) on 30 April 2029. Ubuntu: 24.04 LTS keeps standard support until 31 May 2029, 26.04 LTS until May 2031, with Ubuntu Pro extending each by five more years. Oracle Java: 21 has Premier Support until September 2028 and 25 until September 2030. If your server still runs Node.js 20, it already gets no security fixes."
       },
       {
         "q": "Should I always use the LTS version?",

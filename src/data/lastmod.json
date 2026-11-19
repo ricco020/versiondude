@@ -1,6 +1,6 @@
 {
  "": {
-  "date": "2026-10-29"
+  "date": "2026-11-18"
  },
  "/about": {
   "date": "2026-06-17"
@@ -74,8 +74,8 @@
   "hash": "f7649c03c5f2"
  },
  "/articles/proton-mail-review": {
-  "date": "2026-09-05",
-  "hash": "3ff6b6b8df1d"
+  "date": "2026-11-19",
+  "hash": "ccfd3d8ca1d5"
  },
  "/articles/proton-pass-review": {
   "date": "2026-09-05",
@@ -142,12 +142,12 @@
   "hash": "548bf1c8fb1b"
  },
  "/articles/what-is-a-lockfile": {
-  "date": "2026-09-05",
-  "hash": "efdacda72859"
+  "date": "2026-11-19",
+  "hash": "73b80d4c4c30"
  },
  "/articles/what-is-a-nightly-build": {
-  "date": "2026-09-05",
-  "hash": "dcd7f9ac8ad8"
+  "date": "2026-11-19",
+  "hash": "625deb5aacc8"
  },
  "/articles/what-is-a-package-manager": {
   "date": "2026-08-02",
@@ -158,8 +158,8 @@
   "hash": "cde80a451421"
  },
  "/articles/what-is-a-release-candidate": {
-  "date": "2026-09-05",
-  "hash": "834366cc272a"
+  "date": "2026-11-19",
+  "hash": "3f9e1f1b1a35"
  },
  "/articles/what-is-a-reverse-proxy": {
   "date": "2026-08-02",
@@ -182,16 +182,16 @@
   "hash": "b5917dc73387"
  },
  "/articles/what-is-an-lts-version": {
-  "date": "2026-09-05",
-  "hash": "a3b67c69f9d4"
+  "date": "2026-11-19",
+  "hash": "9a948efa26a1"
  },
  "/articles/what-is-ci-cd": {
-  "date": "2026-08-02",
-  "hash": "f5af71e7b047"
+  "date": "2026-11-19",
+  "hash": "9f88a997ed98"
  },
  "/articles/what-is-devops": {
-  "date": "2026-08-02",
-  "hash": "6168486da13b"
+  "date": "2026-11-19",
+  "hash": "94d75445c3d3"
  },
  "/articles/what-is-git": {
   "date": "2026-08-02",
@@ -210,10 +210,10 @@
   "hash": "e11f154d35a9"
  },
  "/categories": {
-  "date": "2026-10-29"
+  "date": "2026-11-18"
  },
  "/categories/*": {
-  "date": "2026-10-29"
+  "date": "2026-11-18"
  },
  "/contact": {
   "date": "2026-06-17"
