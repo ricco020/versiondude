@@ -127,7 +127,7 @@ export default function ArticlePage({ article, catLabel, relatedHref, relatedLab
                       </div>
                     </figure>
 
-                    <h2 style={{ borderLeft: "none", paddingLeft: 0, fontSize: "2.2rem" }}>{article.title}</h2>
+                    <h2 style={{ borderLeft: "none", paddingLeft: 0, fontSize: "clamp(1.55rem, 6.2vw, 2.2rem)", overflowWrap: "anywhere", hyphens: "auto" }}>{article.title}</h2>
                     <ul className="authar-info d-flex flex-wrap">
                       <li><span className="link">VersionDude</span></li>
                       <li>{catLabel}</li>
