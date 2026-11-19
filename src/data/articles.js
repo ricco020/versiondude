@@ -656,9 +656,9 @@ export const ARTICLES = [
     cta: PKG_REGISTRY_CTA,
   }),
   a({
-    slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 6, date: '2026-06-20',
-    title: 'What is a VPS? A plain-English guide for developers',
-    dek: 'A VPS (Virtual Private Server) gives you a private slice of a real server - your own OS, root access and guaranteed resources. What that means, how it differs from shared and cloud hosting, and when you need one.',
+    slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 8, date: '2026-06-20',
+    title: 'What Is a VPS Server? Meaning, Specs to Pick and When You Need One',
+    dek: 'A VPS server is a virtual machine on a shared physical host, with its own OS, root access and a fixed share of CPU, RAM and disk. What it means, how much RAM a site, an app with a database or a Docker stack really needs, and what to check on a plan before you pay.',
     hero: '/assets/articles/what-is-a-vps-hero.jpg', heroAlt: 'A hand inserting a server module into a blue-lit data-centre rack',
     body: '/assets/articles/what-is-a-vps-body.jpg', bodyCaption: 'A close-up of a server circuit board with CPU and memory chips.',
     paras: [
@@ -668,11 +668,20 @@ export const ARTICLES = [
       'Compared with shared hosting, a VPS gives you dedicated, guaranteed resources and root access instead of a locked-down control panel on a server crowded with other sites. Shared hosting is cheaper and simpler, but you cannot install system packages, tune the stack, or escape a noisy neighbour.',
       'Compared with cloud hosting, the line is blurrier: a cloud server is essentially a VPS you can resize and bill by the hour, often with extra managed services around it. A traditional VPS is usually a fixed plan at a fixed price. For most small projects a straightforward VPS is simpler and cheaper than a sprawling cloud account.',
       'Developers reach for a VPS when they have outgrown shared hosting or want full control. Common uses include hosting web apps and APIs, running a database, self-hosting tools, staging environments, bots and cron jobs, or learning Linux server administration hands-on.',
+      'Sizing a first VPS server is mostly a memory question. A static site behind Nginx or Caddy runs in 512 MB to 1 GB of RAM. A Node.js, Python or PHP app with PostgreSQL or MySQL on the same machine is comfortable at 2 to 4 GB, because the database keeps its own cache in memory and swaps badly when starved. Several Docker containers, a self-hosted Git server or a CI runner that builds on every push want 4 to 8 GB and at least 2 vCPU, since a build can hold the CPU at 100 % for minutes. For disk, take SSD or NVMe: 25 to 50 GB covers the OS, a few apps and their logs, but database growth and old Docker images fill a disk faster than most people expect.',
+      'Three lines on a plan page matter more than the headline price. First, a dedicated public IPv4 address: you need one to receive webhooks, point a domain straight at the server or run a mail server, and some low-cost plans are IPv6-only or charge extra for it. Second, the data-centre location: every request pays the round trip, so pick a region close to your users. Third, how snapshots and backups are sold: a VPS you cannot restore after a bad upgrade is a single point of failure, so check whether a snapshot is included before you depend on the box.',
       'The trade-off is maintenance: with root access you also own updates, security hardening, backups and uptime. A VPS rewards control with responsibility, so it suits people comfortable on the command line - or willing to learn.',
       'That responsibility is why providers offer managed and unmanaged plans. Unmanaged is cheaper and gives you a bare server to run yourself; managed adds support, updates and sometimes a control panel, for a higher price. Pick based on how much server administration you want to do.',
       'So is a VPS right for you? If you need root, guaranteed resources, or to run something shared hosting forbids - and you are comfortable maintaining a Linux box - a VPS is the natural step up, at a predictable cost. If you just want a simple site live with minimal fuss, managed hosting may still fit better.',
     ],
     list: ['Web apps & APIs that need full control', 'Databases (PostgreSQL, MySQL, Redis)', 'Self-hosted tools, bots and cron jobs', 'Staging environments and side projects', 'Learning Linux server administration'],
+    faq: [
+      { q: "Is a VPS the same as a server?", a: "For the software you run, yes: a VPS has its own operating system, its own users and root access, and you install and run services exactly as on a physical server. The difference is underneath. The physical machine is shared with other customers through virtualization, and you get a fixed slice of its CPU, memory and disk rather than the whole box." },
+      { q: "Is a VPS the same as a VPN?", a: "No. A VPN is an encrypted tunnel that carries your internet traffic through another network. A VPS is a computer you rent in a data centre. The two meet only when you install a VPN server such as WireGuard on a VPS, which is one of the common reasons people rent one." },
+      { q: "How much RAM does a VPS need?", a: "1 GB is enough for a static site or a small reverse proxy. 2 to 4 GB suits a typical web app with its database on the same server. Plan 4 to 8 GB for several Docker containers, a CI runner or anything that compiles code on the server." },
+      { q: "Can I host several websites on one VPS?", a: "Yes. A reverse proxy such as Nginx, Caddy or Traefik receives every request on ports 80 and 443 and routes it by domain name to the right app or container, so one server and one IPv4 address can serve many sites." },
+      { q: "Should I choose a managed or an unmanaged VPS?", a: "Unmanaged is cheaper and gives you a bare server: you handle updates, the firewall, backups and anything that breaks. Managed adds that work for a higher monthly price. If you are not comfortable reading logs over SSH, managed hosting or a platform service will cost you less time." },
+    ],
     cta: DEV_CLOUD_SERVER,
   }),
   a({

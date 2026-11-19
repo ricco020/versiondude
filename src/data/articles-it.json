@@ -683,7 +683,8 @@
       "Strumenti auto-ospitati, bot e task cron",
       "Ambienti di staging e progetti personali",
       "Imparare l'amministrazione di server Linux"
-    ]
+    ],
+    "faq": []
   },
   "what-is-ci-cd": {
     "title": "Che cos'è il CI/CD? Integrazione e delivery continue spiegate",

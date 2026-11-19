@@ -665,7 +665,8 @@
       "Outils auto-hébergés, bots et tâches cron",
       "Environnements de préproduction et projets perso",
       "Apprendre l'administration de serveurs Linux"
-    ]
+    ],
+    "faq": []
   },
   "what-is-ci-cd": {
     "title": "Qu'est-ce que le CI/CD ? L'intégration et la livraison continues expliquées",

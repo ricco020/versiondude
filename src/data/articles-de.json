@@ -665,7 +665,8 @@
       "Selbstgehostete Werkzeuge, Bots und Cron-Jobs",
       "Staging-Umgebungen und persönliche Projekte",
       "Die Linux-Serveradministration lernen"
-    ]
+    ],
+    "faq": []
   },
   "what-is-ci-cd": {
     "title": "Was ist CI/CD? Continuous Integration und Delivery erklärt",

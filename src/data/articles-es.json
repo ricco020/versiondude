@@ -665,7 +665,8 @@
       "Herramientas autoalojadas, bots y tareas cron",
       "Entornos de staging y proyectos personales",
       "Aprender administración de servidores Linux"
-    ]
+    ],
+    "faq": []
   },
   "what-is-ci-cd": {
     "title": "¿Qué es CI/CD? La integración y la entrega continuas explicadas",
