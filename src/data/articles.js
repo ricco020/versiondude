@@ -224,6 +224,39 @@ const RC_THROWAWAY_CTA = {
   },
 };
 
+// 19/11 : semver et changelog (Bing EN 85 + ES 54 + IT 14 impr., FR changelog 37 impr. 2 clics, pos 5-8) n avaient
+// que DEV_CLOUD (Infomaniak, 0 vente) sans Contabo. Besoin reel cree par l article : un MAJOR annonce un changement
+// cassant, on le teste sur une machine de preproduction jetable avant la production.
+const UPGRADE_STAGING_CTA = {
+  contaboAlt: true,
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-upgrade-staging-cta',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'A MAJOR bump or a "Breaking changes" line in the changelog means the upgrade can break your app. Run it first on a staging server you can rebuild in minutes, then on the machine your users hit. Infomaniak, a Swiss privacy-respecting provider, offers VPS and cloud servers for that.',
+    fr: "Une version MAJEURE ou une ligne « Breaking changes » dans le changelog signifie que la mise à jour peut casser votre application. Passez-la d'abord sur un serveur de préproduction que vous reconstruisez en quelques minutes, puis sur la machine de vos utilisateurs. Infomaniak, hébergeur suisse respectueux de la vie privée, propose des VPS et serveurs cloud pour cela.",
+    es: 'Un salto MAJOR o una línea «Breaking changes» en el changelog significa que la actualización puede romper tu aplicación. Pruébala primero en un servidor de preproducción que puedas reconstruir en minutos y después en la máquina de tus usuarios. Infomaniak, proveedor suizo respetuoso con la privacidad, ofrece VPS y servidores cloud para ello.',
+    de: 'Ein MAJOR-Sprung oder eine Zeile „Breaking changes“ im Changelog heißt: Das Update kann Ihre Anwendung brechen. Spielen Sie es zuerst auf einem Staging-Server ein, den Sie in Minuten neu aufsetzen, danach auf der Maschine Ihrer Nutzer. Infomaniak, ein schweizerischer, datenschutzfreundlicher Anbieter, bietet dafür VPS und Cloud-Server.',
+    it: "Un salto MAJOR o una riga «Breaking changes» nel changelog significa che l'aggiornamento può rompere la tua applicazione. Provalo prima su un server di staging che ricostruisci in pochi minuti, poi sulla macchina dei tuoi utenti. Infomaniak, provider svizzero attento alla privacy, offre VPS e server cloud per questo.",
+    pt: 'Um salto MAJOR ou uma linha «Breaking changes» no changelog significa que a atualização pode partir a sua aplicação. Teste-a primeiro num servidor de pré-produção que reconstrói em minutos e só depois na máquina dos seus utilizadores. A Infomaniak, fornecedor suíço respeitador da privacidade, oferece VPS e servidores cloud para isso.',
+  },
+};
+
+// 19/11 : gestionnaire de paquets (Bing ES 58 impr. 1 clic, pos 5) : besoin reel = registre prive ou cache
+// (Verdaccio, Nexus, Artifactory) qui garde les installs possibles quand le registre public tombe.
+const PKG_REGISTRY_CTA = {
+  contaboAlt: true,
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-pkg-registry-cta',
+  label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
+  sublabel: {
+    en: 'Teams that publish internal packages, or want installs to keep working when the public registry is down, run a private registry or cache such as Verdaccio or Nexus on a small server they control. Infomaniak, a Swiss privacy-respecting provider, offers VPS and cloud servers for it.',
+    fr: "Les équipes qui publient des paquets internes, ou qui veulent que les installations continuent quand le registre public tombe, font tourner un registre privé ou un cache (Verdaccio, Nexus) sur un petit serveur qu'elles contrôlent. Infomaniak, hébergeur suisse respectueux de la vie privée, propose des VPS et serveurs cloud pour cela.",
+    es: 'Los equipos que publican paquetes internos, o que quieren que las instalaciones sigan funcionando cuando el registro público cae, ejecutan un registro privado o una caché como Verdaccio o Nexus en un servidor pequeño que controlan. Infomaniak, proveedor suizo respetuoso con la privacidad, ofrece VPS y servidores cloud para ello.',
+    de: 'Teams, die interne Pakete veröffentlichen oder auch bei einem Ausfall der öffentlichen Registry installieren wollen, betreiben eine private Registry oder einen Cache wie Verdaccio oder Nexus auf einem kleinen eigenen Server. Infomaniak, ein schweizerischer, datenschutzfreundlicher Anbieter, bietet dafür VPS und Cloud-Server.',
+    it: "I team che pubblicano pacchetti interni, o che vogliono installare anche quando il registro pubblico è giù, gestiscono un registro privato o una cache come Verdaccio o Nexus su un piccolo server che controllano. Infomaniak, provider svizzero attento alla privacy, offre VPS e server cloud per questo.",
+    pt: 'As equipas que publicam pacotes internos, ou que querem que as instalações continuem quando o registo público cai, correm um registo privado ou uma cache como Verdaccio ou Nexus num pequeno servidor que controlam. A Infomaniak, fornecedor suíço respeitador da privacidade, oferece VPS e servidores cloud para isso.',
+  },
+};
+
 const a = (o) => o;
 
 export const ARTICLES = [
@@ -420,7 +453,7 @@ export const ARTICLES = [
     paras: ENX['what-is-a-changelog'].paras,
     list: ENX['what-is-a-changelog'].list,
     related: 'what-is-semantic-versioning',
-    cta: DEV_CLOUD,
+    cta: UPGRADE_STAGING_CTA,
   }),
   a({
     slug: 'what-is-a-git-tag', category: 'guides', readingMinutes: 7, date: '2026-07-18',
@@ -453,7 +486,7 @@ export const ARTICLES = [
     paras: ENX['what-is-semantic-versioning'].paras,
     list: ENX['what-is-semantic-versioning'].list,
     related: 'what-is-a-parser',
-    cta: DEV_CLOUD,
+    cta: UPGRADE_STAGING_CTA,
   }),
   a({
     slug: 'typescript-7-go-compiler-2026', category: 'tooling', readingMinutes: 7, date: '2026-07-10',
@@ -620,7 +653,7 @@ export const ARTICLES = [
       'Taken together, a package manager is one of the most useful tools a developer has: it turns the tangle of finding, versioning and installing software into a couple of commands, and its lockfile makes the result repeatable across machines. Learn the one your operating system and your language use, commit your lockfile, audit your dependencies, and installing software becomes a routine, reliable step rather than a source of surprises.',
     ],
     list: ['Installs, updates and removes software plus its dependencies', 'OS managers: apt, dnf, Homebrew, winget', 'Language managers: npm, pip, cargo, Composer', 'Version resolution + lockfiles make installs reproducible', 'Commit the lockfile and audit for vulnerabilities'],
-    cta: DEV_CLOUD,
+    cta: PKG_REGISTRY_CTA,
   }),
   a({
     slug: 'what-is-a-vps', category: 'tooling', readingMinutes: 6, date: '2026-06-20',
