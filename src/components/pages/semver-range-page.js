@@ -7,7 +7,7 @@ import { parseRange, parseVersion, matchSet, formatSet, compare } from "@/lib/se
 // src/lib/semver-range.js, verifiee contre node-semver 7. Les versions viennent
 // du registre npm (CORS ouvert, document abrege) ou d'une liste collee a la main.
 // CTA : Infomaniak (Awin, valide reseau), angle lockfile/CI comme LOCKFILE_CI_CTA.
-const CTA_URL = "https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469";
+const CTA_URL = "https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=semver-range-page-cta";
 const SAMPLE = "1.1.9\n1.2.0\n1.2.3-beta.2\n1.2.3\n1.2.4\n1.3.0\n1.9.9\n2.0.0-rc.1\n2.0.0";
 const EXAMPLES = ["^1.2.3", "~1.2.3", "^0.2.3", "^0.0.3", "1.x", ">=1.2.0 <1.9.0", "^1.0.0 || ^2.0.0", "1.2.3 - 2.0.0"];
 const SHOWN = 60;

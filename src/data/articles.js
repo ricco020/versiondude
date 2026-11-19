@@ -55,7 +55,7 @@ const PROTON = {
 // publisher 979469 / merchant 19231, validé réseau). Branché uniquement sur les articles
 // où l'hébergement est réellement pertinent (self-hosting / déploiement), jamais en générique.
 const DEV_CLOUD = {
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-dev-cloud-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Self-hosting needs a reliable home with full runtime and network control. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers to host your CMS or app.',
@@ -74,7 +74,7 @@ const DEV_CLOUD_SERVER = { ...DEV_CLOUD, contaboAlt: true };
 // Reverse-proxy article: same Infomaniak offer, angle tuned to the topic (run Nginx/Caddy/Traefik on a server you control).
 const REVERSE_PROXY_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-reverse-proxy-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Running your own reverse proxy (Nginx, Caddy, Traefik) means running a server you fully control. Infomaniak - a Swiss, privacy-respecting host - offers VPS and cloud servers to put one in front of your apps.',
@@ -89,7 +89,7 @@ const REVERSE_PROXY_CTA = {
 // Git article: same Infomaniak offer, angle tuned to self-hosting a Git server / remote repos.
 const GIT_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-git-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Want your own remote instead of relying on GitHub? Self-hosting Git (with Gitea or GitLab) needs a server you control. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers to host your repositories.',
@@ -108,7 +108,7 @@ const GIT_CTA = {
 // concret que cree l article est donc une machine pour l heberger.
 const RENOVATE_SELFHOST_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-renovate-selfhost-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Renovate is the one of the two you can self-host, and self-hosting it needs a machine that runs on a schedule. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers for exactly that kind of small persistent job.',
@@ -122,7 +122,7 @@ const RENOVATE_SELFHOST_CTA = {
 
 const LOCKFILE_CI_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-lockfile-ci-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'A committed lockfile pins the tree; the machine that installs it is the other half. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers to run your own build and CI machines.',
@@ -135,7 +135,7 @@ const LOCKFILE_CI_CTA = {
 };
 
 const SECRETS_CTA = {
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-secrets-cta',
   label: {"en": "See Infomaniak Cloud", "fr": "Voir le cloud Infomaniak", "es": "Ver el cloud de Infomaniak", "de": "Infomaniak Cloud ansehen", "it": "Scopri Infomaniak Cloud", "pt": "Ver o Infomaniak Cloud"},
   sublabel: {"en": "Secrets belong on the server, never in the browser bundle. Run your app where environment variables stay server-side - Infomaniak, a Swiss, privacy-respecting host, offers VPS and cloud servers with full runtime and network control.", "fr": "Les secrets vivent sur le serveur, jamais dans le bundle du navigateur. Faites tourner votre app là où les variables d'environnement restent côté serveur - Infomaniak, hébergeur suisse respectueux de la vie privée, propose des VPS et serveurs cloud avec un contrôle total du runtime et du réseau.", "es": "Los secretos van en el servidor, nunca en el bundle del navegador. Ejecuta tu app donde las variables de entorno quedan del lado del servidor - Infomaniak, proveedor suizo respetuoso con la privacidad, ofrece VPS y servidores cloud con control total del runtime y la red.", "de": "Geheimnisse gehören auf den Server, nie in das Browser-Bundle. Betreiben Sie Ihre App dort, wo Umgebungsvariablen serverseitig bleiben - Infomaniak, ein schweizerischer, datenschutzfreundlicher Anbieter, bietet VPS und Cloud-Server mit voller Kontrolle über Laufzeit und Netzwerk.", "it": "I segreti stanno sul server, mai nel bundle del browser. Esegui la tua app dove le variabili d'ambiente restano lato server - Infomaniak, provider svizzero attento alla privacy, offre VPS e server cloud con pieno controllo di runtime e rete.", "pt": "Os segredos ficam no servidor, nunca no bundle do navegador. Execute a sua app onde as variáveis de ambiente ficam do lado do servidor - a Infomaniak, fornecedor suíço respeitador da privacidade, oferece VPS e servidores cloud com controlo total do runtime e da rede."},
 };
@@ -144,7 +144,7 @@ const SECRETS_CTA = {
 // Angle honnête : faire tourner du code non fiable (repos clonés, agents) sur un
 // serveur isolé plutôt que sur la machine où vivent vos clés SSH. Infomaniak (Awin, validé réseau).
 const AGENT_ISOLATION_CTA = {
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-agent-isolation-cta',
   label: {"en": "See Infomaniak Cloud", "fr": "Voir le cloud Infomaniak", "es": "Ver el cloud de Infomaniak", "de": "Infomaniak Cloud ansehen", "it": "Scopri Infomaniak Cloud", "pt": "Ver o Infomaniak Cloud"},
   sublabel: {"en": "Run untrusted repositories and AI coding agents on an isolated server, not on the machine that holds your SSH keys. Infomaniak, a Swiss, privacy-respecting host, offers VPS and cloud servers you can wipe and rebuild - a clean sandbox for code you do not fully trust.", "fr": "Faites tourner les dépôts non fiables et les agents de code IA sur un serveur isolé, pas sur la machine qui détient vos clés SSH. Infomaniak, hébergeur suisse respectueux de la vie privée, propose des VPS et serveurs cloud que vous pouvez effacer et reconstruire - un bac à sable propre pour le code auquel vous ne faites pas entièrement confiance.", "es": "Ejecuta los repositorios no fiables y los agentes de código IA en un servidor aislado, no en la máquina que guarda tus claves SSH. Infomaniak, proveedor suizo respetuoso con la privacidad, ofrece VPS y servidores cloud que puedes borrar y reconstruir - un entorno limpio para el código en el que no confías del todo.", "de": "Betreiben Sie nicht vertrauenswürdige Repositories und KI-Coding-Agenten auf einem isolierten Server, nicht auf der Maschine, die Ihre SSH-Schlüssel speichert. Infomaniak, ein schweizerischer, datenschutzfreundlicher Anbieter, bietet VPS und Cloud-Server, die Sie löschen und neu aufsetzen können - eine saubere Sandbox für Code, dem Sie nicht voll vertrauen.", "it": "Esegui i repository non affidabili e gli agenti di codice IA su un server isolato, non sulla macchina che custodisce le tue chiavi SSH. Infomaniak, provider svizzero attento alla privacy, offre VPS e server cloud che puoi cancellare e ricostruire - una sandbox pulita per il codice di cui non ti fidi del tutto.", "pt": "Execute os repositórios não fiáveis e os agentes de código IA num servidor isolado, não na máquina que guarda as suas chaves SSH. A Infomaniak, fornecedor suíço respeitador da privacidade, oferece VPS e servidores cloud que pode apagar e reconstruir - uma sandbox limpa para código em que não confia totalmente."},
 };
@@ -162,7 +162,7 @@ const PASSKEYS_CTA = {
 // à ce contenu plutôt que le CTA self-hosting générique.
 const LTS_SERVER_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-lts-server-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Choosing an LTS only pays off if you control the machine it runs on, and can still upgrade it when the support window closes. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers with full root access.',
@@ -179,7 +179,7 @@ const LTS_SERVER_CTA = {
 // heberge soi-meme. Meme programme qu LTS_SERVER_CTA, angle propre a l article.
 const MEDIAWIKI_HOST_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-mediawiki-host-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'Enabling the string functions or raising the expensive-function limit means editing LocalSettings.php, which only works on a wiki you host yourself. Infomaniak, a Swiss provider, offers VPS and cloud servers with full root access.',
@@ -198,7 +198,7 @@ const MEDIAWIKI_HOST_CTA = {
 // CI/CD et DevOps : angle runner auto-heberge (minutes de CI hebergee limitees, machine de build sous votre controle).
 const CI_RUNNER_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-ci-runner-cta',
   label: { en: 'See Infomaniak Cloud', fr: 'Voir le cloud Infomaniak', es: 'Ver el cloud de Infomaniak', de: 'Infomaniak Cloud ansehen', it: 'Scopri Infomaniak Cloud', pt: 'Ver o Infomaniak Cloud' },
   sublabel: {
     en: 'When hosted CI minutes run out or builds need more cores, a self-hosted runner (GitHub Actions, GitLab Runner, Jenkins agent) on a server you control is the usual next step. Infomaniak, a Swiss privacy-respecting provider, offers VPS and cloud servers for it.',
@@ -212,7 +212,7 @@ const CI_RUNNER_CTA = {
 
 const RC_THROWAWAY_CTA = {
   contaboAlt: true,
-  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469',
+  url: 'https://www.awin1.com/cread.php?awinmid=19231&awinaffid=979469&clickref=versiondude-rc-throwaway-cta',
   label: { en: 'A machine you can throw away', fr: 'Une machine que vous pouvez jeter', es: 'Una máquina que puedes tirar', de: 'Eine Maschine zum Wegwerfen', it: 'Una macchina che puoi buttare', pt: 'Uma máquina que pode deitar fora' },
   sublabel: {
     en: 'Testing a release candidate is worth doing somewhere you can rebuild in minutes rather than on the machine that serves your users. Infomaniak - a Swiss, privacy-respecting provider - offers VPS and cloud servers with full root access.',
