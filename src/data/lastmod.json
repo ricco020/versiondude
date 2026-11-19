@@ -1,6 +1,6 @@
 {
  "": {
-  "date": "2026-11-18"
+  "date": "2026-11-19"
  },
  "/about": {
   "date": "2026-06-17"
@@ -130,8 +130,8 @@
   "hash": "5be43155a86b"
  },
  "/articles/what-is-a-changelog": {
-  "date": "2026-09-05",
-  "hash": "9c283cfac39f"
+  "date": "2026-11-19",
+  "hash": "334c11c0e020"
  },
  "/articles/what-is-a-docker-container": {
   "date": "2026-08-02",
@@ -150,8 +150,8 @@
   "hash": "625deb5aacc8"
  },
  "/articles/what-is-a-package-manager": {
-  "date": "2026-08-02",
-  "hash": "e2a7e5663f3d"
+  "date": "2026-11-19",
+  "hash": "e6a4b1920b89"
  },
  "/articles/what-is-a-parser": {
   "date": "2026-10-15",
@@ -183,7 +183,7 @@
  },
  "/articles/what-is-an-lts-version": {
   "date": "2026-11-19",
-  "hash": "9a948efa26a1"
+  "hash": "15da090c252a"
  },
  "/articles/what-is-ci-cd": {
   "date": "2026-11-19",
@@ -198,8 +198,8 @@
   "hash": "1ec24f85d067"
  },
  "/articles/what-is-semantic-versioning": {
-  "date": "2026-09-06",
-  "hash": "b4240bb0cb13"
+  "date": "2026-11-19",
+  "hash": "caead9ebd832"
  },
  "/articles/what-is-the-dom": {
   "date": "2026-09-05",
@@ -210,10 +210,10 @@
   "hash": "e11f154d35a9"
  },
  "/categories": {
-  "date": "2026-11-18"
+  "date": "2026-11-19"
  },
  "/categories/*": {
-  "date": "2026-11-18"
+  "date": "2026-11-19"
  },
  "/contact": {
   "date": "2026-06-17"
@@ -231,6 +231,6 @@
   "date": "2026-10-24"
  },
  "/semver-range-checker": {
-  "date": "2026-10-24"
+  "date": "2026-11-19"
  }
 }

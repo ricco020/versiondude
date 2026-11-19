@@ -166,8 +166,8 @@
     ]
   },
   "what-is-an-lts-version": {
-    "title": "Che cos'è una versione LTS? L'unico numero che conta è la data di fine",
-    "dek": "LTS significa Long Term Support: una linea di versione che continua a ricevere correzioni di sicurezza per un periodo annunciato in anticipo. Come la definiscono Node.js, Ubuntu e Java, a che cosa rinunci scegliendola, e perché la finestra di supporto conta più del numero di versione.",
+    "title": "Cosa significa LTS? Versione LTS e date di fine reali (Node, Ubuntu, Java)",
+    "dek": "LTS significa Long Term Support: una linea di versione che riceve correzioni di sicurezza fino a una data annunciata in anticipo. Date di fine verificate il 19 novembre 2026: Node.js 24 fino al 30 aprile 2028, Ubuntu 24.04 fino a maggio 2029, Oracle Java 21 fino a settembre 2028.",
     "heroAlt": "Un calendario da parete ripreso di sbieco, con diverse righe di date evidenziate in giallo",
     "bodyCaption": "Ingranaggi metallici incastrati dentro una vecchia macchina, fotografati in bianco e nero. Una linea LTS in manutenzione è meccanica tenuta in rotazione: le correzioni entrano, il nuovo no.",
     "paras": [
@@ -192,6 +192,10 @@
       {
         "q": "Che cosa significa LTS?",
         "a": "Long Term Support, supporto a lungo termine. Indica una linea di versione che continuerà a ricevere correzioni di sicurezza e di bug per un periodo annunciato in anticipo, invece di essere abbandonata appena esce la versione successiva. La promessa è una finestra di supporto con una data di fine nota, non l'affermazione che il software sia più stabile o più completo."
+      },
+      {
+        "q": "Quando finisce il supporto delle versioni LTS attuali?",
+        "a": "Verificato il 19 novembre 2026 su endoflife.date e nella policy di ogni progetto. Node.js: la 20 è terminata il 30 aprile 2026, la 22 termina il 30 aprile 2027, la 24 il 30 aprile 2028 e la 26 (LTS dal 28 ottobre 2026) il 30 aprile 2029. Ubuntu: 24.04 LTS mantiene il supporto standard fino al 31 maggio 2029 e 26.04 LTS fino a maggio 2031, con Ubuntu Pro che allunga ciascuna di altri cinque anni. Oracle Java: la 21 ha Premier Support fino a settembre 2028 e la 25 fino a settembre 2030. Se il tuo server usa ancora Node.js 20, non riceve già più correzioni di sicurezza."
       },
       {
         "q": "Bisogna usare sempre la versione LTS?",
