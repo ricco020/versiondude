@@ -828,7 +828,8 @@
       "Verifica ogni richiesta con un secret firmato, su HTTPS",
       "Rispondi in fretta con un 2xx; gestisci i tentativi ripetuti in modo idempotente",
       "Richiede un endpoint pubblico e sempre attivo per riceverli"
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-docker-container": {
     "title": "Che cos'è un container Docker? Una spiegazione chiara e concreta",

@@ -834,7 +834,8 @@
       "Vérifiez chaque requête avec un secret signé, en HTTPS",
       "Répondez 2xx rapidement ; gérez les réessais de façon idempotente",
       "Nécessite un endpoint public et toujours en ligne pour les recevoir"
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-docker-container": {
     "title": "Qu'est-ce qu'un conteneur Docker ? Une explication claire et concrète",

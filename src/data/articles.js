@@ -739,7 +739,7 @@ export const ARTICLES = [
   a({
     slug: 'what-is-a-webhook', category: 'tooling', readingMinutes: 6, date: '2026-06-22',
     title: 'What is a webhook? Endpoints and event-driven HTTP, explained',
-    dek: 'A webhook is an automated HTTP request one service sends to another the moment an event happens - a push instead of a poll. What a webhook is, how it differs from a normal API, how it works, and how to receive one securely.',
+    dek: 'A webhook is an automated HTTP request one service sends to another the moment an event happens - a push instead of a poll. What a webhook endpoint is, what it must answer, how GitHub and Stripe sign and retry deliveries, and how to test one on your own machine.',
     hero: '/assets/articles/what-is-a-webhook-hero.jpg', heroAlt: 'Lines of source code shown on a dark computer screen',
     body: '/assets/articles/what-is-a-webhook-body.jpg', bodyCaption: 'Coloured light trails streaming from a smartphone, suggesting data sent between services.',
     paras: [
@@ -754,6 +754,13 @@ export const ARTICLES = [
       'One catch ties it all together: a webhook only works if your endpoint is publicly reachable and reliably online. The sender cannot reach a script on your laptop or a server that sleeps. Receiving webhooks in production means running an always-on server you control - which is exactly where a dependable host comes in.',
     ],
     list: ['Event-driven: the server pushes, you do not poll', 'Delivered as an HTTP POST with a JSON payload', 'Verify each request with a signed secret over HTTPS', 'Reply 2xx fast; handle retries idempotently', 'Needs a public, always-on endpoint to receive them'],
+    faq: [
+      { q: "What is a webhook endpoint?", a: "It is the URL on your side that receives webhook deliveries, for example https://api.example.com/webhooks/stripe. Behind it sits a route in your app that accepts an HTTP POST, checks the signature, stores or queues the event and answers with a 2xx status. You give that URL to the provider and choose which events it should send there." },
+      { q: "How fast must a webhook endpoint respond?", a: "Fast enough that the provider does not count the delivery as failed. GitHub, for instance, expects a response within 10 seconds. The safe pattern is to verify the request, save the event, reply 200 at once and do the slow work in a background job." },
+      { q: "How do providers sign webhook requests?", a: "With an HMAC of the raw request body computed from a secret you share with them. GitHub sends it in the X-Hub-Signature-256 header (HMAC SHA-256), Stripe in the Stripe-Signature header along with a timestamp. Recompute it on the raw bytes before any JSON parsing and compare with a constant-time function." },
+      { q: "What happens if my endpoint is down?", a: "It depends on the provider. Stripe retries a failed live-mode delivery with exponential backoff for up to three days. GitHub does not retry automatically: a failed delivery stays in the webhook log until someone redelivers it by hand. That difference is why an endpoint should run on a server that stays online." },
+      { q: "How can I test a webhook endpoint on my own machine?", a: "The provider cannot reach localhost, so you need a forwarder. A tunnel such as ngrok or Cloudflare Tunnel gives your local port a temporary public URL. Stripe also ships a CLI command, stripe listen --forward-to localhost:4242/webhook, that relays test events to your local route." },
+    ],
     cta: DEV_CLOUD_SERVER,
   }),
   a({

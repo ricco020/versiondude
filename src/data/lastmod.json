@@ -1,6 +1,6 @@
 {
  "": {
-  "date": "2026-11-19"
+  "date": "2026-11-20"
  },
  "/about": {
   "date": "2026-06-17"
@@ -170,8 +170,8 @@
   "hash": "b43251ea750d"
  },
  "/articles/what-is-a-webhook": {
-  "date": "2026-08-02",
-  "hash": "3c312c45c46d"
+  "date": "2026-11-20",
+  "hash": "fac8988b4e78"
  },
  "/articles/what-is-an-api": {
   "date": "2026-08-02",
@@ -210,10 +210,10 @@
   "hash": "e11f154d35a9"
  },
  "/categories": {
-  "date": "2026-11-19"
+  "date": "2026-11-20"
  },
  "/categories/*": {
-  "date": "2026-11-19"
+  "date": "2026-11-20"
  },
  "/contact": {
   "date": "2026-06-17"

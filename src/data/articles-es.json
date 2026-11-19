@@ -834,7 +834,8 @@
       "Verifica cada petición con un secreto firmado sobre HTTPS",
       "Responde 2xx rápido; gestiona los reintentos de forma idempotente",
       "Necesita un endpoint público y siempre activo para recibirlos"
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-docker-container": {
     "title": "¿Qué es un contenedor Docker? Una explicación clara y práctica",

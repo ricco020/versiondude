@@ -810,7 +810,8 @@
       "Verifique cada pedido com um segredo assinado por HTTPS",
       "Responda 2xx depressa; trate as repetições de forma idempotente",
       "Precisa de um endpoint público e sempre online para os receber"
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-docker-container": {
     "title": "O que é um contentor Docker? Uma explicação clara e prática",

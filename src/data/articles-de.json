@@ -810,7 +810,8 @@
       "Jede Anfrage per signiertem Secret über HTTPS verifizieren",
       "Schnell mit 2xx antworten; erneute Zustellungen idempotent behandeln",
       "Braucht einen öffentlichen, ständig erreichbaren Endpoint zum Empfangen"
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-docker-container": {
     "title": "Was ist ein Docker-Container? Eine klare, praxisnahe Erklärung",
