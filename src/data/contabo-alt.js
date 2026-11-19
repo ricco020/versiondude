@@ -6,7 +6,10 @@ const AID = { en: 12454592, de: 17058456, es: 17248464 };
 
 export function contaboAltUrl(loc, slug, pos) {
   const aid = AID[loc] || AID.en;
-  return `https://www.tkqlhce.com/click-101807053-${aid}?sid=versiondude-${slug}${pos ? '-' + pos : ''}`;
+  // 19/11 : la langue termine le SID. Le slug est celui de l article EN, donc fr, it, pt et en partageaient
+  // le meme SID et le meme lien 12454592 : une vente CJ ne disait pas quelle langue l avait faite.
+  const l = ['en', 'fr', 'es', 'de', 'it', 'pt'].includes(loc) ? loc : 'en';
+  return `https://www.tkqlhce.com/click-101807053-${aid}?sid=versiondude-${slug}${pos ? '-' + pos : ''}-${l}`;
 }
 
 // 17/11/2026 : Contabo passe en bouton principal de ces encarts (ventes CJ 60 j du reseau : Contabo seul,
