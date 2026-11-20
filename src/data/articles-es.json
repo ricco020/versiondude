@@ -838,8 +838,8 @@
     "faq": []
   },
   "what-is-a-docker-container": {
-    "title": "¿Qué es un contenedor Docker? Una explicación clara y práctica",
-    "dek": "Un contenedor Docker empaqueta una aplicación con todo lo que necesita para ejecutarse, de modo que se comporta igual en cualquier máquina. Qué es un contenedor, en qué se diferencia de una máquina virtual, imagen frente a contenedor, y dónde encajan los contenedores en proyectos reales.",
+    "title": "¿Qué es un contenedor Docker y para qué sirve? Contenedor frente a VM e imagen",
+    "dek": "Un contenedor Docker es una instancia en ejecución de una imagen: tu aplicación y sus dependencias, aisladas sobre el núcleo Linux compartido. Qué es dockerizar, contenedor frente a máquina virtual, los comandos docker run y docker ps, dónde quedan los datos y qué servidor necesitas.",
     "heroAlt": "Pilas de contenedores de transporte de colores, una metáfora visual de los contenedores de software",
     "bodyCaption": "Servidores en un centro de datos: donde los contenedores se ejecutan realmente en producción.",
     "paras": [
@@ -859,6 +859,28 @@
       "Imagen = plano, contenedor = instancia en ejecución",
       "Coherente desde el portátil hasta producción",
       "Orquestado a gran escala con Kubernetes"
+    ],
+    "faq": [
+      {
+        "q": "¿Qué es un contenedor Docker, en una frase?",
+        "a": "Una instancia en ejecución de una imagen Docker: uno o varios procesos que ven su propio sistema de archivos, su red y su lista de procesos, gracias a los namespaces de Linux y limitados por los cgroups, mientras comparten el núcleo del anfitrión. La imagen es la plantilla de solo lectura, el contenedor es lo que obtienes al arrancarla."
+      },
+      {
+        "q": "¿Qué significa dockerizar una aplicación?",
+        "a": "Escribir un Dockerfile que describe cómo construir su imagen (imagen base, dependencias, archivos copiados, comando de arranque), construirla con docker build -t miapp . y ejecutarla con docker run. A partir de ahí la aplicación se despliega igual en tu portátil, en un servidor de pruebas o en producción."
+      },
+      {
+        "q": "¿Cómo arranco mi primer contenedor?",
+        "a": "docker run -d -p 8080:80 nginx descarga la imagen oficial de nginx si no la tienes, la arranca en segundo plano (-d) y asocia el puerto 80 del contenedor al puerto 8080 de tu máquina (-p anfitrión:contenedor), así que http://localhost:8080 responde. docker ps lista los contenedores en marcha, docker ps -a también los detenidos, y docker stop seguido del nombre o del ID lo para."
+      },
+      {
+        "q": "¿Pierdo los datos cuando se detiene un contenedor?",
+        "a": "No al detenerlo: lo escrito dentro sobrevive a docker stop y docker start. Desaparece al eliminarlo con docker rm, algo habitual al actualizar a una imagen nueva. Lo que quieras conservar (una base de datos, archivos subidos) va en un volumen, por ejemplo -v dbdata:/var/lib/postgresql/data, que vive fuera del contenedor y se vuelve a montar en el siguiente."
+      },
+      {
+        "q": "¿Qué necesito para ejecutar contenedores en producción?",
+        "a": "Una máquina Linux de 64 bits con acceso root para instalar Docker Engine, es decir, en la práctica un VPS o un servidor dedicado. El alojamiento web compartido no lo permite. Dimensiónalo según los contenedores previstos: la memoria suele ser el primer límite, porque cada contenedor de base de datos o de aplicación mantiene sus procesos en RAM."
+      }
     ]
   },
   "what-is-devops": {

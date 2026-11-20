@@ -853,7 +853,8 @@
       "Immagine = progetto, container = istanza in esecuzione",
       "Coerente dal portatile alla produzione",
       "Orchestrato su larga scala con Kubernetes"
-    ]
+    ],
+    "faq": []
   },
   "what-is-devops": {
     "title": "Cos'è il DevOps? Cultura, pratiche e strumenti spiegati",

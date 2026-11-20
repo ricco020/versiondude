@@ -835,7 +835,8 @@
       "Imagem = modelo, contentor = instância em execução",
       "Coerente do portátil até à produção",
       "Orquestrado em grande escala com o Kubernetes"
-    ]
+    ],
+    "faq": []
   },
   "what-is-devops": {
     "title": "O que é o DevOps? A cultura, as práticas e as ferramentas explicadas",

@@ -765,8 +765,8 @@ export const ARTICLES = [
   }),
   a({
     slug: 'what-is-a-docker-container', category: 'tooling', readingMinutes: 6, date: '2026-06-23',
-    title: 'What is a Docker container? A clear, practical explainer',
-    dek: 'A Docker container packages an app with everything it needs to run, so it behaves the same on any machine. What a container is, how it differs from a virtual machine, image vs container, and where containers fit in real projects.',
+    title: 'What Is a Docker Container? Container vs VM, Image and First Commands',
+    dek: 'A Docker container is a running instance of an image: your app plus its dependencies, isolated on a shared Linux kernel. Container vs VM, image vs container, the docker run and docker ps commands, where data goes, and what a server needs to run containers.',
     hero: '/assets/articles/what-is-a-docker-container-hero.jpg', heroAlt: 'Stacks of colourful shipping containers, a visual metaphor for software containers',
     body: '/assets/articles/what-is-a-docker-container-body.jpg', bodyCaption: 'Servers in a data centre - where containers actually run in production.',
     paras: [
@@ -781,6 +781,13 @@ export const ARTICLES = [
       'Finally, a container has to run somewhere. On your own machine for development that is Docker Desktop, but in production it needs a reliable server you control - a VPS or cloud host where your containers stay up. A solid host is the foundation the whole setup sits on.',
     ],
     list: ['Bundles an app with all its dependencies', 'Shares the host OS kernel - far lighter than a VM', 'Image = blueprint, container = running instance', 'Consistent from laptop to production', 'Orchestrated at scale with Kubernetes'],
+    faq: [
+      { q: "What is a Docker container in one sentence?", a: "A running instance of a Docker image: one or more processes that see their own filesystem, network and process list, built with Linux namespaces and limited by cgroups, while sharing the host's kernel. The image is the read-only template, the container is what you get when you start it." },
+      { q: "How do I start my first container?", a: "docker run -d -p 8080:80 nginx downloads the official nginx image if it is missing, starts it in the background (-d) and maps port 80 inside the container to port 8080 on your machine (-p host:container), so http://localhost:8080 answers. docker ps lists running containers, docker ps -a also shows stopped ones, and docker stop followed by the name or ID stops it." },
+      { q: "Do I lose my data when a container stops?", a: "Not when it stops: files written inside it survive docker stop and docker start. They disappear when the container is removed with docker rm, which is routine when you update to a new image. Anything you want to keep (a database, uploads) belongs in a volume, for example -v dbdata:/var/lib/postgresql/data, which lives outside the container and is reattached to the next one." },
+      { q: "Is a Docker container a virtual machine?", a: "No. A VM boots its own full operating system on a hypervisor, a container is only isolated processes on the host's kernel. That is why a container starts in about a second and an image such as alpine weighs under 10 MB. On Windows and macOS, Docker Desktop runs Linux containers inside one small Linux VM (WSL 2 on Windows), which is the only VM involved." },
+      { q: "What do I need to run Docker containers in production?", a: "A 64-bit Linux machine where you have root access to install Docker Engine, which in practice means a VPS or a dedicated server. Shared web hosting does not allow it. Size it on the containers you plan to run: memory is usually the first limit, since each database or app container keeps its own processes in RAM." },
+    ],
     cta: DEV_CLOUD_SERVER,
   }),
   a({

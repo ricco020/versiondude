@@ -835,7 +835,8 @@
       "Image = Vorlage, Container = laufende Instanz",
       "Einheitlich vom Laptop bis zur Produktion",
       "In großem Maßstab mit Kubernetes orchestriert"
-    ]
+    ],
+    "faq": []
   },
   "what-is-devops": {
     "title": "Was ist DevOps? Kultur, Praktiken und Werkzeuge erklärt",
