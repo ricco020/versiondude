@@ -717,8 +717,8 @@
     ]
   },
   "what-is-a-package-manager": {
-    "title": "¿Qué es un gestor de paquetes? Una guía clara y práctica",
-    "dek": "Un gestor de paquetes es una herramienta que instala, actualiza y elimina software y sus dependencias desde un repositorio, para que no tengas que rastrear y conectar cada pieza a mano. Qué son, los tipos principales, cómo funcionan la resolución de versiones y los lockfiles, y las prácticas que hacen las instalaciones seguras y reproducibles.",
+    "title": "¿Qué es un gestor de paquetes? Ejemplos (apt, npm, pip) y cómo funciona",
+    "dek": "Un gestor de paquetes instala, actualiza y elimina software y sus dependencias desde un repositorio. Para qué sirve, ejemplos por sistema (apt, dnf, pacman, Homebrew, winget) y por lenguaje (npm, pip, cargo), de dónde descarga los paquetes, cómo funcionan los lockfiles y cuándo montar un registro privado.",
     "heroAlt": "Cajas de cartón marcadas FRAGILE sobre una carretilla, en el exterior",
     "bodyCaption": "Código fuente HTML abierto en un editor de código",
     "paras": [
@@ -738,6 +738,28 @@
       "Gestores de lenguaje: npm, pip, cargo, Composer",
       "Resolución de versiones + lockfiles hacen las instalaciones reproducibles",
       "Confirma el lockfile y audita las vulnerabilidades"
+    ],
+    "faq": [
+      {
+        "q": "¿Qué es un gestor de paquetes y para qué sirve?",
+        "a": "Es la herramienta que descarga un programa o una librería desde un repositorio, instala también todo aquello de lo que depende y anota qué versión quedó instalada, para poder actualizarla o desinstalarla después con una sola orden. Sin él tendrías que buscar cada dependencia a mano y comprobar que las versiones encajan entre sí."
+      },
+      {
+        "q": "¿Qué ejemplos de gestores de paquetes hay?",
+        "a": "De sistema: apt en Debian y Ubuntu, dnf en Fedora y Red Hat, pacman en Arch, apk en Alpine, Homebrew en macOS y winget en Windows. De lenguaje: npm, pnpm y Yarn para JavaScript, pip para Python, cargo para Rust, Composer para PHP y Maven o Gradle para Java. Los primeros instalan software para toda la máquina, los segundos las librerías de un proyecto concreto."
+      },
+      {
+        "q": "¿Qué gestor de paquetes usa Linux?",
+        "a": "Depende de la distribución, no de Linux en sí. Debian y Ubuntu usan apt con paquetes .deb, Fedora y Red Hat usan dnf con paquetes .rpm, Arch usa pacman y Alpine, muy habitual en imágenes Docker, usa apk. Por eso una guía de instalación da a menudo un comando distinto para cada familia."
+      },
+      {
+        "q": "¿De dónde descarga los paquetes?",
+        "a": "De un repositorio o registro configurado de antemano. apt lee los repositorios de la distribución (en Ubuntu, archive.ubuntu.com y sus espejos), npm descarga de registry.npmjs.org y pip de pypi.org. Si ese servicio cae o un paquete se retira, la instalación falla, y ese es uno de los motivos para tener un registro propio."
+      },
+      {
+        "q": "¿Se puede tener un registro de paquetes privado?",
+        "a": "Sí. Verdaccio es un registro npm de código abierto que guarda en caché los paquetes públicos y aloja los privados de tu equipo, y Nexus Repository hace lo mismo para npm, PyPI, Maven y otros formatos. Ambos se instalan en un servidor propio, por ejemplo un VPS, y basta con apuntar el gestor a su dirección (npm config set registry o el archivo .npmrc)."
+      }
     ]
   },
   "what-is-a-cdn": {
