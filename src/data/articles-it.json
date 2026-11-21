@@ -1004,7 +1004,8 @@
       "Le passkey usano FIDO2/WebAuthn e resistono al phishing - la chiave privata non lascia mai il tuo dispositivo",
       "Microsoft dice che i codici via SMS e vocali non possono fermare gli attacchi moderni assistiti dall'IA",
       "Hai ancora bisogno di SMS o voce? Microsoft dice che userai fornitori terzi a pagamento (dettagli intorno al 18 settembre 2026)"
-    ]
+    ],
+    "faq": []
   },
   "ghostapproval-ai-coding-assistants-symlink-2026": {
     "title": "GhostApproval: come un symlink puo dirottare il tuo assistente di codice IA",

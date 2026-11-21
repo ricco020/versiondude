@@ -1025,7 +1025,8 @@
       "Passkeys nutzen FIDO2/WebAuthn und sind phishing-resistent - der private Schlussel verlasst nie Ihr Gerat",
       "Microsoft sagt, dass SMS- und Sprach-Codes moderne, KI-gestutzte Angriffe nicht stoppen konnen",
       "Noch SMS oder Sprache notig? Microsoft sagt, Sie nutzen kostenpflichtige Drittanbieter (Details um den 18. September 2026)"
-    ]
+    ],
+    "faq": []
   },
   "ghostapproval-ai-coding-assistants-symlink-2026": {
     "title": "GhostApproval: Wie ein Symlink Ihren KI-Coding-Assistenten kapern kann",

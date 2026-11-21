@@ -1046,6 +1046,24 @@
       "Las passkeys usan FIDO2/WebAuthn y resisten al phishing - la clave privada nunca sale de tu dispositivo",
       "Microsoft dice que los codigos por SMS y por voz no pueden detener los ataques modernos asistidos por IA",
       "Aun necesitas SMS o voz? Microsoft dice que usaras proveedores externos de pago (detalles alrededor del 18 de septiembre de 2026)"
+    ],
+    "faq": [
+      {
+        "q": "¿Puedo seguir usando SMS u otros métodos después del 1 de septiembre de 2026?",
+        "a": "Sí, durante un tiempo. Desde el 1 de septiembre de 2026, a medida que el despliegue llega a cada organización, los usuarios habilitados para SMS o voz quedan habilitados automáticamente para passkeys y se les pide registrar una en su siguiente inicio de sesión con MFA. El SMS sigue funcionando hasta el 1 de febrero de 2027, cuando Microsoft deja de enviar los códigos por SMS y voz. A partir de esa fecha, según Microsoft, la solicitud de passkey se aplica a todos los usuarios de todos los tenants sin opción de exclusión, y una organización que quiera seguir con códigos por SMS o llamada debe pagar a un socio de telecomunicaciones del Microsoft Security Store (disponible desde el 30 de octubre de 2026). Estas fechas valen para la nube pública."
+      },
+      {
+        "q": "¿Por qué Microsoft me pide una y otra vez configurar una passkey?",
+        "a": "Por la campaña de registro que se muestra al iniciar sesión con MFA. En el modo administrado por Microsoft se puede posponer 1 día, sin límite de veces. Si el administrador ha puesto la campaña en Habilitado, elige un aplazamiento de 0 a 14 días y puedes omitirla tres veces, después debes registrarla. Hasta febrero de 2027 el administrador también puede excluir usuarios o grupos o desactivar la campaña."
+      },
+      {
+        "q": "¿Dónde puedo guardar la passkey de una cuenta Entra ID?",
+        "a": "Ligadas al dispositivo: Microsoft Authenticator, una passkey de Windows o una llave de seguridad FIDO2. Las passkeys sincronizadas (Llavero de iCloud, Gestor de contraseñas de Google o un proveedor externo como 1Password o Bitwarden) solo funcionan si el administrador las permite en un perfil de passkey. Un gestor de contraseñas que guarda passkeys, como Proton Pass, las mantiene disponibles en todos tus dispositivos y no en un solo teléfono."
+      },
+      {
+        "q": "¿Una passkey es más segura que un código por SMS?",
+        "a": "Sí, frente al phishing. La passkey firma un desafío con una clave privada que nunca sale del dispositivo, y la firma está ligada al dominio real, así que una página de inicio de sesión falsa no obtiene nada reutilizable. Un código por SMS o llamada se puede escribir en una página falsa o dictar a un estafador y reenviarse en tiempo real, que es la debilidad que Microsoft cita para retirarlo."
+      }
     ]
   },
   "ghostapproval-ai-coding-assistants-symlink-2026": {
