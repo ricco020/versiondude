@@ -292,6 +292,24 @@
       "Las versiones suelen seguir el versionado semántico (MAYOR.MENOR.PARCHE), cada una con su fecha de publicación.",
       "Las entradas van en orden cronológico inverso, a menudo con una sección Unreleased arriba.",
       "Puedes generar las entradas desde los commits (por ejemplo Conventional Commits), pero un changelog escrito a mano suele ser más claro."
+    ],
+    "faq": [
+      {
+        "q": "¿Qué es un changelog, en pocas palabras?",
+        "a": "Un archivo, normalmente CHANGELOG.md en la raíz del repositorio, que lista los cambios notables de cada versión publicada, la más reciente arriba. Una entrada típica es un encabezado como ## [2.4.1] - 2026-03-02 seguido de líneas cortas agrupadas en Added, Changed o Fixed. Está escrito para quienes usan el software, no para quienes escribieron los commits."
+      },
+      {
+        "q": "¿Qué secciones usa Keep a Changelog?",
+        "a": "Seis grupos de cambios: Added, Changed, Deprecated, Removed, Fixed y Security. Por encima de las versiones publicadas va una sección Unreleased que recoge los cambios a medida que entran. Las fechas se escriben AAAA-MM-DD (ISO 8601), y una versión retirada tras publicarse lleva la marca [YANKED] junto a su encabezado."
+      },
+      {
+        "q": "¿Qué diferencia hay entre changelog, notas de versión y git log?",
+        "a": "git log lista cada commit, incluidas erratas y fusiones. El changelog solo conserva los cambios notables, agrupados por versión, y queda en el repositorio con todo el historial. Las notas de versión describen una sola publicación, a menudo en una página de release de GitHub o en un blog, con más contexto como los pasos de actualización."
+      },
+      {
+        "q": "¿Se puede generar un changelog automáticamente?",
+        "a": "Sí, si los mensajes de commit siguen una convención como Conventional Commits: feat: equivale a un MINOR, fix: a un PATCH, y un ! o un pie BREAKING CHANGE a un MAJOR. Herramientas como release-please, semantic-release o git-cliff generan entonces el changelog y el número de versión. Revisa el resultado: un mensaje de commit no siempre es una frase útil para el usuario."
+      }
     ]
   },
   "what-is-a-git-tag": {

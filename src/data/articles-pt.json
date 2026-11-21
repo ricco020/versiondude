@@ -292,7 +292,8 @@
       "As versões seguem normalmente o versionamento semântico (MAIOR.MENOR.CORREÇÃO), cada uma com a sua data de publicação.",
       "As entradas vão em ordem cronológica inversa, muitas vezes com uma secção Unreleased no topo.",
       "Podes gerar as entradas a partir dos commits (por exemplo Conventional Commits), mas um changelog escrito à mão é muitas vezes mais claro."
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-git-tag": {
     "title": "O que é uma tag do Git?",

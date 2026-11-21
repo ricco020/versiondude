@@ -292,6 +292,24 @@
       "Versionen folgen meist der Semantischen Versionierung (MAJOR.MINOR.PATCH), jede mit ihrem Veröffentlichungsdatum.",
       "Einträge stehen in umgekehrter chronologischer Reihenfolge, oft mit einem Unreleased-Abschnitt oben.",
       "Einträge lassen sich aus Commits erzeugen (etwa Conventional Commits), doch ein von Hand geschriebenes Changelog ist oft klarer."
+    ],
+    "faq": [
+      {
+        "q": "Was ist ein Changelog, kurz erklärt?",
+        "a": "Eine Datei, meist CHANGELOG.md im Wurzelverzeichnis des Repositorys, die die wichtigen Änderungen jeder veröffentlichten Version auflistet, die neueste oben. Ein typischer Eintrag ist eine Überschrift wie ## [2.4.1] - 2026-03-02, darunter kurze Zeilen in den Gruppen Added, Changed oder Fixed. Er richtet sich an die Nutzer der Software, nicht an die Autoren der Commits."
+      },
+      {
+        "q": "Welche Abschnitte nutzt Keep a Changelog?",
+        "a": "Sechs Änderungsgruppen: Added, Changed, Deprecated, Removed, Fixed und Security. Über den veröffentlichten Versionen steht ein Abschnitt Unreleased, der Änderungen sammelt, sobald sie eingehen. Datumsangaben folgen JJJJ-MM-TT (ISO 8601), und eine nach der Veröffentlichung zurückgezogene Version trägt neben ihrer Überschrift den Vermerk [YANKED]."
+      },
+      {
+        "q": "Was unterscheidet Changelog, Release Notes und git log?",
+        "a": "git log listet jeden Commit auf, auch Tippfehler-Korrekturen und Merges. Das Changelog behält nur die wichtigen Änderungen, nach Version geordnet, und bleibt mit der ganzen Historie im Repository. Release Notes beschreiben eine einzelne Veröffentlichung, oft auf einer GitHub-Release-Seite oder in einem Blog, mit mehr Kontext wie Upgrade-Schritten."
+      },
+      {
+        "q": "Kann man ein Changelog automatisch erzeugen?",
+        "a": "Ja, wenn die Commit-Nachrichten einer Konvention wie Conventional Commits folgen: feat: ergibt ein MINOR, fix: ein PATCH, und ein ! oder eine Fußzeile BREAKING CHANGE ein MAJOR. Werkzeuge wie release-please, semantic-release oder git-cliff erzeugen daraus Changelog und Versionsnummer. Das Ergebnis gegenlesen: eine Commit-Nachricht ist nicht immer ein hilfreicher Satz für Nutzer."
+      }
     ]
   },
   "what-is-a-git-tag": {

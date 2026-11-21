@@ -447,11 +447,17 @@ export const ARTICLES = [
   a({
     slug: 'what-is-a-changelog', category: 'guides', readingMinutes: 7, date: '2026-07-21',
     title: "What Is a Changelog? Keep a Changelog and Versioned Release Notes, Explained",
-    dek: "A changelog is a human-readable file listing the notable changes in each version of a project. The Keep a Changelog convention, the standard change groups, and how it ties into Semantic Versioning.",
+    dek: "A changelog is a human-readable file listing the notable changes in each version of a project. The Keep a Changelog sections, how it differs from release notes and git log, and how to generate one from Conventional Commits.",
     hero: '/assets/articles/what-is-a-changelog-hero.jpg', heroAlt: "Syntax-highlighted source code on a dark screen in a code editor",
     body: '/assets/articles/what-is-a-changelog-body.jpg', bodyCaption: "A typewriter with a sheet of paper reading Update. A changelog is a written record of what changed in each version.",
     paras: ENX['what-is-a-changelog'].paras,
     list: ENX['what-is-a-changelog'].list,
+    faq: [
+      { q: "What is a changelog in simple terms?", a: "A file, usually CHANGELOG.md at the root of a repository, that lists the notable changes of each released version, newest first. A typical entry is a heading such as ## [2.4.1] - 2026-03-02 followed by short lines grouped under Added, Changed or Fixed. It is written for the people who use the software, not for the people who wrote the commits." },
+      { q: "What sections does Keep a Changelog use?", a: "Six change groups: Added, Changed, Deprecated, Removed, Fixed and Security. Above the released versions sits an Unreleased section that collects changes as they land. Dates are written as YYYY-MM-DD (ISO 8601), and a version that was pulled after release is marked [YANKED] next to its heading." },
+      { q: "What is the difference between a changelog, release notes and git log?", a: "git log lists every commit, typo fixes and merges included. A changelog keeps only the notable changes, grouped by version, and stays in the repository for the whole history. Release notes describe one release, often on a GitHub release page or a blog, with more context such as upgrade steps." },
+      { q: "Can a changelog be generated automatically?", a: "Yes, if commit messages follow a convention such as Conventional Commits: feat: maps to a MINOR bump, fix: to a PATCH, and a ! or a BREAKING CHANGE footer to a MAJOR. Tools like release-please, semantic-release or git-cliff then build the changelog and the version number. Reread the result: a commit message is not always a useful sentence for a user." },
+    ],
     related: 'what-is-semantic-versioning',
     cta: UPGRADE_STAGING_CTA,
   }),

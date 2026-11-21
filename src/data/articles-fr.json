@@ -292,6 +292,24 @@
       "Les versions suivent en général le versionnage sémantique (MAJEUR.MINEUR.CORRECTIF), chacune avec sa date de publication.",
       "Les entrées vont dans l'ordre chronologique inverse, souvent avec une section Unreleased en haut.",
       "On peut générer les entrées depuis les commits (par exemple Conventional Commits), mais un changelog écrit à la main est souvent plus clair."
+    ],
+    "faq": [
+      {
+        "q": "Qu'est-ce qu'un changelog, en clair ?",
+        "a": "Un fichier, en général CHANGELOG.md à la racine du dépôt, qui liste les changements notables de chaque version publiée, la plus récente en haut. Une entrée type est un titre comme ## [2.4.1] - 2026-03-02 suivi de lignes courtes rangées sous Added, Changed ou Fixed. Il s'adresse à ceux qui utilisent le logiciel, pas à ceux qui ont écrit les commits."
+      },
+      {
+        "q": "Quelles rubriques utilise Keep a Changelog ?",
+        "a": "Six groupes de changements : Added, Changed, Deprecated, Removed, Fixed et Security. Au-dessus des versions publiées se trouve une section Unreleased qui recueille les changements au fil de l'eau. Les dates s'écrivent AAAA-MM-JJ (ISO 8601), et une version retirée après publication porte la mention [YANKED] à côté de son titre."
+      },
+      {
+        "q": "Quelle différence entre changelog, notes de version et git log ?",
+        "a": "git log liste chaque commit, corrections de coquilles et fusions comprises. Le changelog ne garde que les changements notables, rangés par version, et reste dans le dépôt pour tout l'historique. Les notes de version décrivent une seule publication, souvent sur une page de release GitHub ou un blog, avec plus de contexte comme les étapes de mise à jour."
+      },
+      {
+        "q": "Peut-on générer un changelog automatiquement ?",
+        "a": "Oui, si les messages de commit suivent une convention comme Conventional Commits : feat: donne un MINOR, fix: un PATCH, et un ! ou un pied BREAKING CHANGE un MAJOR. Des outils comme release-please, semantic-release ou git-cliff produisent alors le changelog et le numéro de version. Relisez le résultat : un message de commit n'est pas toujours une phrase utile pour un utilisateur."
+      }
     ]
   },
   "what-is-a-git-tag": {

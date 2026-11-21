@@ -292,7 +292,8 @@
       "Le versioni seguono di solito il versionamento semantico (MAJOR.MINOR.PATCH), ognuna con la sua data di rilascio.",
       "Le voci vanno in ordine cronologico inverso, spesso con una sezione Unreleased in cima.",
       "Puoi generare le voci dai commit (per esempio Conventional Commits), ma un changelog scritto a mano è spesso più chiaro."
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-git-tag": {
     "title": "Che cos'è un tag Git?",

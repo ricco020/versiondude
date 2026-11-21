@@ -1,6 +1,6 @@
 {
  "": {
-  "date": "2026-11-20"
+  "date": "2026-11-21"
  },
  "/about": {
   "date": "2026-06-17"
@@ -130,8 +130,8 @@
   "hash": "5be43155a86b"
  },
  "/articles/what-is-a-changelog": {
-  "date": "2026-11-19",
-  "hash": "334c11c0e020"
+  "date": "2026-11-21",
+  "hash": "6463b95d2cf8"
  },
  "/articles/what-is-a-docker-container": {
   "date": "2026-11-21",
@@ -210,10 +210,10 @@
   "hash": "e11f154d35a9"
  },
  "/categories": {
-  "date": "2026-11-20"
+  "date": "2026-11-21"
  },
  "/categories/*": {
-  "date": "2026-11-20"
+  "date": "2026-11-21"
  },
  "/contact": {
   "date": "2026-06-17"
