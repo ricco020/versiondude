@@ -426,6 +426,28 @@
       "Die verschlüsselte Suche ist ein konkretes Beispiel für den Kompromiss am Werk. Weil der Server Ihre gespeicherte Post nicht lesen kann, müssen einige Operationen, die andere Anbieter serverseitig erledigen, anders angegangen werden, was das Verhalten mancher Funktionen gegenüber dem verändern kann, was intensive Gmail-Nutzer gewohnt sind. Das sind weniger Mängel als die natürlichen Folgen eines Designs, das in den Vordergrund stellt, dass der Anbieter Ihre Daten nicht lesen kann.",
       "Es lohnt sich auch, realistische Erwartungen bezüglich Metadaten und Empfängern zu setzen. Den Inhalt von Nachrichten zu verschlüsseln, verschlüsselt nicht die Tatsache, dass eine E-Mail gesendet wurde, und eine Nachricht an einen externen Anbieter ist nur so privat, wie dieser Anbieter und Empfänger sie machen. Proton Mail schützt, was es kann, innerhalb der Zwänge des E-Mail-Systems; es kann die andere Seite eines Gesprächs nicht rückwirkend sichern, und über diese Grenze klar zu sein, gehört zum guten Gebrauch.",
       "Für jeden, der einen E-Mail-Dienst will, den der Anbieter nicht auswerten kann, sind diese Kompromisse meist die Sache wert. Proton Mail ist eine der glaubwürdigsten und offen auditierbaren Optionen für Menschen, die sich von werbefinanzierter E-Mail abwenden, und es gelingt ihm, starken Datenschutz zu bieten, ohne tiefes technisches Wissen zu verlangen. Wenn Ihr Ziel ein Postfach mit Mainstream-Anmutung ist, dessen Inhalt wirklich privat bleibt, ist es einer der einfachsten glaubwürdigen Ausgangspunkte, die Sie wählen können."
+    ],
+    "faq": [
+      {
+        "q": "Wie verschlüsselt Proton Mail meine E-Mails?",
+        "a": "Proton Mail nutzt OpenPGP. Nachrichten zwischen zwei Proton-Konten sind automatisch Ende-zu-Ende verschlüsselt, ohne dass Sie etwas einstellen müssen. Alle übrigen gespeicherten Nachrichten, auch die von Gmail oder Outlook eingehenden, liegen mit Zero-Access-Verschlüsselung auf den Servern: Sie werden mit Ihrem Schlüssel verschlüsselt, den Proton nicht besitzt."
+      },
+      {
+        "q": "Ist auch die Betreffzeile verschlüsselt?",
+        "a": "Nicht Ende-zu-Ende. Betreff, Absender, Empfänger und Zeitstempel sind Metadaten, die der E-Mail-Standard für die Zustellung braucht. Proton speichert den Betreff mit Zero-Access-Verschlüsselung, er reist aber nicht Ende-zu-Ende verschlüsselt. Schreiben Sie Vertrauliches deshalb in den Text, nicht in den Betreff."
+      },
+      {
+        "q": "Kann ich verschlüsselte E-Mails an Gmail- oder GMX-Adressen schicken?",
+        "a": "Ja, auf zwei Wegen. Mit einer passwortgeschützten Nachricht bekommt der Empfänger einen Link und öffnet die Mail mit einem Passwort, das Sie ihm auf anderem Weg mitteilen. Die Nachricht läuft standardmäßig nach 28 Tagen ab. Nutzt der Empfänger selbst PGP, können Sie seinen öffentlichen Schlüssel importieren, dann verschlüsselt Proton automatisch. Eine normale Mail an Gmail ist nur auf dem Transportweg per TLS geschützt und liegt bei Google lesbar."
+      },
+      {
+        "q": "Kann Proton meine E-Mails lesen oder an Behörden herausgeben?",
+        "a": "Den Inhalt gespeicherter Nachrichten kann Proton nicht lesen, also auch nicht herausgeben. Was Proton auf Anordnung eines Schweizer Gerichts herausgeben kann, sind Metadaten wie Absender, Empfänger, Zeitpunkte und gegebenenfalls die IP-Adresse. Wer auch die IP verbergen will, verbindet sich über ein VPN oder Tor."
+      },
+      {
+        "q": "Kann ich Proton Mail in Thunderbird oder Outlook nutzen?",
+        "a": "Ja, über Proton Mail Bridge, eine Desktop-App, die lokal IMAP und SMTP bereitstellt und die Verschlüsselung auf Ihrem Rechner übernimmt. Bridge gibt es nur in den kostenpflichtigen Tarifen. Im Gratis-Tarif nutzen Sie die Web-App sowie die Apps für Android, iOS und Desktop."
+      }
     ]
   },
   "best-encrypted-email": {
