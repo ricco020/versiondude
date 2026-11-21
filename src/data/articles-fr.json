@@ -1083,7 +1083,8 @@
       "Comment : le gestionnaire de paquets resout les plages en versions concretes plus des hash d'integrite, pour des installations reproductibles et verifiees.",
       "Exemples : package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
       "Committez-le pour les applications ; utilisez une installation stricte (npm ci) en CI ; ne l'editez pas a la main, regenerez-le en cas de conflit de fusion."
-    ]
+    ],
+    "faq": []
   },
   "nu-html-checker": {
     "title": "Le Nu Html Checker se qualifie lui-même d'expérience. Ce que cela implique pour votre build",

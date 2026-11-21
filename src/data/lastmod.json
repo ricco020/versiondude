@@ -134,24 +134,24 @@
   "hash": "334c11c0e020"
  },
  "/articles/what-is-a-docker-container": {
-  "date": "2026-08-02",
-  "hash": "15cd4a5670bb"
+  "date": "2026-11-21",
+  "hash": "0d20595fe699"
  },
  "/articles/what-is-a-git-tag": {
   "date": "2026-09-05",
   "hash": "548bf1c8fb1b"
  },
  "/articles/what-is-a-lockfile": {
-  "date": "2026-11-19",
-  "hash": "73b80d4c4c30"
+  "date": "2026-11-21",
+  "hash": "beca2d477507"
  },
  "/articles/what-is-a-nightly-build": {
   "date": "2026-11-19",
   "hash": "625deb5aacc8"
  },
  "/articles/what-is-a-package-manager": {
-  "date": "2026-11-19",
-  "hash": "e6a4b1920b89"
+  "date": "2026-11-21",
+  "hash": "dfd17e5d0f9f"
  },
  "/articles/what-is-a-parser": {
   "date": "2026-10-15",

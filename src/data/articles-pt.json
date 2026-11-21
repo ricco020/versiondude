@@ -1083,7 +1083,8 @@
       "Como: o gerenciador de pacotes resolve as faixas em versoes concretas mais hashes de integridade, para instalacoes reproduziveis e verificadas.",
       "Exemplos: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
       "Commite-o para aplicacoes; use uma instalacao estrita (npm ci) em CI; nao edite a mao, regenere em conflitos de merge."
-    ]
+    ],
+    "faq": []
   },
   "nu-html-checker": {
     "title": "O Nu Html Checker define-se a si próprio como uma experiência. O que isso significa para a sua build",

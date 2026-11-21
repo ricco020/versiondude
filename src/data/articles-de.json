@@ -1083,7 +1083,8 @@
       "Wie: der Paketmanager loest Bereiche in konkrete Versionen plus Integritats-Hashes auf, fuer reproduzierbare, verifizierte Installationen.",
       "Beispiele: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
       "Committe sie bei Anwendungen; nutze eine strikte Installation (npm ci) in CI; bearbeite sie nicht von Hand, erzeuge sie bei Merge-Konflikten neu."
-    ]
+    ],
+    "faq": []
   },
   "nu-html-checker": {
     "title": "Der Nu Html Checker nennt sich selbst ein Experiment. Was das für deinen Build bedeutet",

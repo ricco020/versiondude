@@ -1106,7 +1106,7 @@
   },
   "what-is-a-lockfile": {
     "title": "¿Qué es un lockfile? Instalaciones reproducibles explicadas (package-lock, Cargo.lock y más)",
-    "dek": "Un lockfile registra la versión resuelta exacta de cada dependencia para que todos instalen lo mismo. Por qué los manifiestos por sí solos no bastan, cómo los hashes de integridad añaden seguridad y si conviene incluirlo en el control de versiones.",
+    "dek": "Un lockfile registra la versión resuelta exacta de cada dependencia para que todos instalen lo mismo. Por qué el manifiesto no basta, si conviene subir o borrar package-lock.json, por qué npm ci falla cuando no está sincronizado y en qué se diferencia de un archivo .lock como index.lock.",
     "heroAlt": "Código fuente con resaltado de sintaxis en una pantalla oscura dentro de un editor de código",
     "bodyCaption": "Un manifiesto de paquete y su lockfile trabajan juntos: el manifiesto indica rangos, el lockfile fija las versiones exactas.",
     "paras": [
@@ -1126,6 +1126,28 @@
       "Como: el gestor de paquetes resuelve los rangos a versiones concretas mas hashes de integridad, para instalaciones reproducibles y verificadas.",
       "Ejemplos: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
       "Incluyelo en el control de versiones para aplicaciones; usa una instalacion estricta (npm ci) en CI; no lo edites a mano, regeneralo en los conflictos de fusion."
+    ],
+    "faq": [
+      {
+        "q": "¿Qué es un lockfile en pocas palabras?",
+        "a": "Un archivo que el gestor de paquetes escribe tras una instalación para registrar la versión exacta de cada paquete instalado, incluidas las dependencias de tus dependencias, con un checksum por paquete. La siguiente instalación lo lee y obtiene el mismo árbol. Ejemplos: package-lock.json en npm, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, composer.lock."
+      },
+      {
+        "q": "¿Un lockfile de dependencias es lo mismo que un archivo .lock como .git/index.lock?",
+        "a": "No. Un archivo como .git/index.lock es un bloqueo en el sentido del sistema operativo: un proceso lo crea para indicar que usa un recurso y lo borra al terminar. Si Git avisa de que index.lock existe, comprueba que no haya otro comando de Git en marcha antes de borrarlo. El lockfile de dependencias forma parte del proyecto, se sube al repositorio y se lee en cada instalación."
+      },
+      {
+        "q": "¿Puedo borrar package-lock.json?",
+        "a": "Puedes, pero el siguiente npm install vuelve a resolver todos los rangos y puede traer subdependencias más nuevas que las que probaste: así se rompe un proyecto sin que nadie toque package.json. Para actualizar un solo paquete, usa npm update <nombre> o npm install <nombre>@<versión> y deja que npm reescriba el lockfile."
+      },
+      {
+        "q": "¿Una librería debe subir su lockfile al repositorio?",
+        "a": "En npm, el package-lock.json de una librería no lo usan los proyectos que la instalan: solo cuenta el lockfile de la aplicación (npm-shrinkwrap.json es la excepción publicada). Subirlo sigue dando ejecuciones reproducibles en la CI de la librería. En Rust, el equipo de Cargo cambió su recomendación en agosto de 2023: subir Cargo.lock por defecto, también en librerías."
+      },
+      {
+        "q": "¿Por qué npm ci falla con 'package.json and package-lock.json are not in sync'?",
+        "a": "npm ci instala solo lo que dice el lockfile y se niega a empezar si package.json declara una dependencia o un rango que el lockfile no refleja, casi siempre porque alguien editó package.json sin ejecutar npm install. Ejecuta npm install en local, sube el package-lock.json actualizado y la CI pasará."
+      }
     ]
   },
   "nu-html-checker": {

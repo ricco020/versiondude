@@ -1101,7 +1101,8 @@
       "Come: il package manager risolve gli intervalli in versioni concrete piu hash di integrita, per installazioni riproducibili e verificate.",
       "Esempi: package-lock.json, yarn.lock, pnpm-lock.yaml, Cargo.lock, poetry.lock, uv.lock, Gemfile.lock, composer.lock.",
       "Fai il commit per le applicazioni; usa un'installazione rigorosa (npm ci) in CI; non modificarlo a mano, rigeneralo in caso di conflitti di merge."
-    ]
+    ],
+    "faq": []
   },
   "nu-html-checker": {
     "title": "Il Nu Html Checker si definisce un esperimento. Che cosa significa per la tua build",
