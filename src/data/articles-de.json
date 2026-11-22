@@ -1100,7 +1100,8 @@
       "Reset-Regel: das Erhoehen von MAJOR nullt MINOR und PATCH; das Erhoehen von MINOR nullt PATCH.",
       "0.x.y bedeutet instabile/fruehe Entwicklung; 1.0.0 signalisiert eine festgelegte, stabile oeffentliche API.",
       "Pre-Release-Kennungen (1.0.0-rc.1) rangieren unter dem Release; npm-Bereiche ^1.2.3 und ~1.2.3 verlassen sich auf SemVer, um sicher zu bleiben."
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-lockfile": {
     "title": "Was ist eine Lockfile? Reproduzierbare Installationen erklaert (package-lock, Cargo.lock und mehr)",

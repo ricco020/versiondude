@@ -498,6 +498,13 @@ export const ARTICLES = [
     body: '/assets/articles/what-is-semantic-versioning-body.jpg', bodyCaption: "Source code open in an editor. Dependency ranges like ^1.2.3 rely on Semantic Versioning to stay safe.",
     paras: ENX['what-is-semantic-versioning'].paras,
     list: ENX['what-is-semantic-versioning'].list,
+    faq: [
+      { q: "What do major, minor and patch mean in a version number?", a: "In 4.17.2 the 4 is MAJOR, the 17 is MINOR and the 2 is PATCH. Semantic Versioning 2.0.0 says you raise MAJOR for a change that breaks the public API, MINOR when you add functionality in a backward compatible way, and PATCH for backward compatible bug fixes. Raising one resets everything to its right: 1.4.7 becomes 2.0.0 after a breaking change and 1.5.0 after a new feature." },
+      { q: "Is a 0.x version like 0.9.3 stable?", a: "Not by the rules of the spec. Major version zero is for initial development: anything may change at any time and the public API should not be considered stable. Version 1.0.0 is the point where the API is declared public. In practice npm reflects this: ^0.9.3 only accepts 0.9.x, because a 0.10.0 is allowed to break you." },
+      { q: "What do the caret ^ and tilde ~ mean in package.json?", a: "They are ranges built on SemVer. ^1.2.3 means >=1.2.3 and <2.0.0, so new minors and patches are accepted but not a new major. ~1.2.3 means >=1.2.3 and <1.3.0, so only patches. With a leading zero the caret narrows: ^0.2.3 means >=0.2.3 and <0.3.0. The semver range checker on this site shows which versions a range accepts." },
+      { q: "How do alpha, beta and rc versions sort?", a: "A pre-release is written after a hyphen, as in 2.0.0-rc.1, and it sorts before the plain version: 2.0.0-rc.1 comes before 2.0.0. Identifiers are compared one by one, numbers numerically and labels alphabetically, which gives 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0. Anything after a plus sign, such as +build.5, is build metadata and is ignored when ordering." },
+      { q: "What if a breaking change was released as a minor or a patch?", a: "Do not edit or republish the version that is out, because people may already depend on it. The spec's advice is to fix it and publish a new minor version that restores backward compatibility, then document the mistake. If the break was intended, it belongs in the next major. For consumers this is why a MAJOR bump, or a Breaking changes line in the changelog, is the moment to test the upgrade on a staging server first." },
+    ],
     related: 'what-is-a-parser',
     cta: UPGRADE_STAGING_CTA,
   }),

@@ -1078,7 +1078,8 @@
       "Règle de remise à zéro : augmenter MAJOR met MINOR et PATCH à zéro ; augmenter MINOR met PATCH à zéro.",
       "0.x.y signifie instable/développement initial ; 1.0.0 signale une API publique stable et engagée.",
       "Les étiquettes de pré-version (1.0.0-rc.1) se classent sous la version finale ; les plages npm ^1.2.3 et ~1.2.3 s'appuient sur SemVer pour rester sûres."
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-lockfile": {
     "title": "Qu'est-ce qu'un lockfile ? Les installations reproductibles expliquées (package-lock, Cargo.lock et plus)",

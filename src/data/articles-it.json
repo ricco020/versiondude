@@ -1079,7 +1079,8 @@
       "Regola di azzeramento: aumentare MAJOR azzera MINOR e PATCH; aumentare MINOR azzera PATCH.",
       "0.x.y indica sviluppo instabile o iniziale; 1.0.0 segnala un'API pubblica stabile e su cui ci si impegna.",
       "Le etichette di pre-release (1.0.0-rc.1) hanno precedenza inferiore rispetto alla release; gli intervalli npm ^1.2.3 e ~1.2.3 si basano su SemVer per restare sicuri."
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-lockfile": {
     "title": "Cos'e un lockfile? Installazioni riproducibili spiegate (package-lock, Cargo.lock e altro)",

@@ -1061,7 +1061,8 @@
       "Regra de reset: aumentar o MAJOR zera MINOR e PATCH; aumentar o MINOR zera o PATCH.",
       "0.x.y significa instável/desenvolvimento inicial; 1.0.0 sinaliza uma API pública estável e assumida como compromisso.",
       "Rótulos de pré-lançamento (1.0.0-rc.1) ficam abaixo do lançamento; os intervalos ^1.2.3 e ~1.2.3 do npm dependem do SemVer para permanecerem seguros."
-    ]
+    ],
+    "faq": []
   },
   "what-is-a-lockfile": {
     "title": "O que e um lockfile? Instalações reproduzíveis explicadas (package-lock, Cargo.lock e mais)",
