@@ -688,7 +688,7 @@
   },
   "what-is-ci-cd": {
     "title": "¿Qué es CI/CD? La integración y la entrega continuas explicadas",
-    "dek": "CI/CD es una forma de construir software en la que los cambios se fusionan, se prueban y se despliegan a través de un pipeline automatizado. Qué significan integración continua y entrega continua, cómo funciona el pipeline, las herramientas habituales y las contrapartidas honestas.",
+    "dek": "CI/CD significa integración continua y entrega (o despliegue) continuo: cada cambio se fusiona, se prueba y se publica por un pipeline automatizado. Qué significa cada sigla, las etapas del pipeline, las herramientas y cuántos minutos gratuitos dan GitHub Actions y GitLab CI.",
     "heroAlt": "Código colorido con resaltado de sintaxis en una pantalla de ordenador oscura",
     "bodyCaption": "Tres servidores torre en un estante, iluminados en azul.",
     "paras": [
@@ -708,6 +708,28 @@
       "Pipeline: compilar, luego probar, luego desplegar",
       "Herramientas: GitHub Actions, GitLab CI, Jenkins, CircleCI",
       "Retroalimentación más rápida, menos errores en producción"
+    ],
+    "faq": [
+      {
+        "q": "¿Qué es CI/CD y qué significa?",
+        "a": "Son las siglas en inglés de Continuous Integration (integración continua) y Continuous Delivery o Continuous Deployment (entrega o despliegue continuo). CI es la parte que fusiona cada cambio en la rama principal y lo compila y prueba automáticamente. CD es la parte que lleva ese cambio ya probado hasta producción sin pasos manuales propensos a errores."
+      },
+      {
+        "q": "¿La CD de CI/CD es entrega continua o despliegue continuo?",
+        "a": "Puede ser cualquiera de las dos, y la diferencia es una sola puerta. En la entrega continua (Continuous Delivery) cada cambio que pasa las pruebas queda listo para publicarse, pero una persona aprueba el paso a producción. En el despliegue continuo (Continuous Deployment) no hay aprobación: todo lo que pasa las comprobaciones automáticas llega a producción solo. Muchos equipos empiezan con entrega y pasan a despliegue cuando confían en sus pruebas."
+      },
+      {
+        "q": "¿Qué es un pipeline de CI y qué etapas tiene?",
+        "a": "Es la secuencia de trabajos que se ejecuta en cada cambio, definida en un archivo del propio repositorio (por ejemplo .github/workflows/*.yml en GitHub Actions o .gitlab-ci.yml en GitLab). Las etapas habituales son compilar, ejecutar las pruebas unitarias y de integración, empaquetar el artefacto o la imagen Docker y desplegar, primero en staging y luego en producción. Si una etapa falla, las siguientes no se ejecutan."
+      },
+      {
+        "q": "¿Qué diferencia hay entre CI/CD y DevOps?",
+        "a": "DevOps es la forma de trabajar: desarrollo y operaciones comparten la responsabilidad de construir, publicar y mantener el software. CI/CD es una de sus prácticas concretas, la que automatiza el camino del código hasta producción. Se puede tener un pipeline de CI/CD sin cambiar nada más en la organización, pero no se suele hablar de DevOps sin CI/CD."
+      },
+      {
+        "q": "¿Cuánto cuesta CI/CD? ¿Cuántos minutos gratis dan GitHub Actions y GitLab?",
+        "a": "Comprobado el 23 de noviembre de 2026 en la documentación de cada plataforma. GitHub Actions es gratuito en repositorios públicos con los runners estándar; en repositorios privados, el plan GitHub Free incluye 12 USD de cómputo al mes, unos 2.000 minutos de Linux a 0,006 USD por minuto. GitLab.com da 400 minutos de cómputo al mes en el plan Free. En ambos casos, los runners autoalojados en un servidor propio no consumen ese cupo, por eso un VPS es el paso habitual cuando los builds crecen."
+      }
     ]
   },
   "what-is-an-environment-variable": {
