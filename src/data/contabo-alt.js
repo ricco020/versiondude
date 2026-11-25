@@ -3,9 +3,16 @@
 // PID CJ versiondude 101807053 ; lien texte CJ dans la langue du lecteur quand Contabo en publie un
 // (DE 17058456, ES 17248464), sinon EN 12454592. Aucun prix cite : les tarifs tiers perimient.
 const AID = { en: 12454592, de: 17058456, es: 17248464 };
+// 25/11 : vente Black Friday Contabo ouverte (contabo.com/en/black-friday/, Core VPS des 4,40, VPS Plus 2 -20 %) :
+// lien CJ 17389597 a la place du lien EN pendant la fenetre, evalue au build, retour seul a 12454592 apres le 03/12 00h.
+const BF = { aid: 17389597, from: Date.parse('2026-11-25T00:00:00+01:00'), until: Date.parse('2026-12-03T00:00:00+01:00') };
+function enAid() {
+  const t = Date.now();
+  return t >= BF.from && t < BF.until ? BF.aid : AID.en;
+}
 
 export function contaboAltUrl(loc, slug, pos) {
-  const aid = AID[loc] || AID.en;
+  const aid = (loc !== 'en' && AID[loc]) || enAid();
   // 19/11 : la langue termine le SID. Le slug est celui de l article EN, donc fr, it, pt et en partageaient
   // le meme SID et le meme lien 12454592 : une vente CJ ne disait pas quelle langue l avait faite.
   const l = ['en', 'fr', 'es', 'de', 'it', 'pt'].includes(loc) ? loc : 'en';
